@@ -1,0 +1,42 @@
+### docker build
+#8 exporting attestation manifest sha256:fe7045da104cf5a795f8bcc2b2d78f9d5d622bd29e94483519b731b654213e8a 0.0s done
+#8 exporting manifest list sha256:6d66745be812083ec4b33677d7fe767bfa587a963a8682a82ac2269940e3bd86 0.0s done
+#8 naming to docker.io/library/sportorg-dev-verify:latest
+#8 naming to docker.io/library/sportorg-dev-verify:latest done
+#8 unpacking to docker.io/library/sportorg-dev-verify:latest done
+#8 DONE 0.1s
+
+real	0m2.864s
+user	0m0.121s
+sys	0m0.106s
+[build exit 0]
+### run: clone, postCreateCommand, check.py
+user=vscode uv=uv 0.13.5 (x86_64-unknown-linux-musl) os=Ubuntu 24.04.3 LTS
+head=aeb0d35
+--- postCreateCommand: uv sync && uvx pre-commit install
+ + sportorg-ng==0.0.1 (from file:///home/vscode/app)
+ + typing-extensions==4.16.0
+ + wcwidth==0.9.3
+[uv sync exit 0]
+pre-commit installed at .git/hooks/pre-commit
+pre-commit installed at .git/hooks/pre-push
+[pre-commit install exit 0]
+--- check.py
+23 passed in 0.05s
+
+== summary
+ok   format     0.01s
+ok   lint       0.01s
+ok   types      2.07s
+ok   imports    0.43s
+ok   tests      0.70s
+[check.py exit 0]
+--- pre-commit run --all-files
+ruff format --check......................................................Passed
+ruff check...............................................................Failed
+basedpyright (changed files).............................................Passed
+import-linter contracts..................................................Passed
+uv.lock is up to date....................................................Passed
+[pre-commit run exit 1]
+cpython-3.14.9-linux-x86_64-gnu    /home/vscode/.local/share/uv/python/cpython-3.14-linux-x86_64-gnu/bin/python3.14
+[docker run exit 0]

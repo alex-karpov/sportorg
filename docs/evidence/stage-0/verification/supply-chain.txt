@@ -1,0 +1,34 @@
+# 2026-10-24T22:01:20+07:00 | clone aeb0d35 | hooks: pre-commit pre-push 
+
+######## canary: add a dependency to pyproject.toml without `uv lock`, then git commit
+ pyproject.toml | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ruff format --check..................................(no files to check)Skipped
+ruff check...........................................(no files to check)Skipped
+basedpyright (changed files).........................(no files to check)Skipped
+import-linter contracts..................................................Passed
+uv.lock is up to date....................................................Failed
+- hook id: uv-lock
+- exit code: 1
+Resolved 25 packages in 22ms
+error: The lockfile at `uv.lock` needs to be updated, but `--check` was provided.
+hint: To update the lockfile, run `uv lock`.
+[commit exit 1] HEAD after: aeb0d35 docs(stage-0): record CI result in the stage report
+--- what CI runs (uv sync --locked):
+
+hint: To update the lockfile, run `uv lock`.
+[exit 1]
+reverted: tracked files clean
+
+######## refs in CI and devcontainer
+20:      - uses: actions/checkout@v5
+21:      - uses: astral-sh/setup-uv@v10.3.2
+39:    container: ubuntu:24.04
+44:        run: curl -LsSf https://astral.sh/uv/install.sh | sh
+3:FROM mcr.microsoft.com/devcontainers/base:ubuntu-24.04
+4:COPY --from=ghcr.io/astral-sh/uv:0.13.5 /uv /uvx /usr/local/bin/
+actions/checkout       v5       commit fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+astral-sh/setup-uv     v10.3.2  commit 07a047e608db84b3d8c06cd9a7c7dcc9c355c18e
+astral-sh/setup-uv     v10      {"message":"Not Found","documentation_url":"https://docs.github.com/rest/git/refs#get-a-reference","status":"404"}gh: Not Found (HTTP 404)
+setup-uv latest release: v10.3.2 2026-10-22T08:47:11Z
+uv.lock: 20 packages, 129 sha256 hashes

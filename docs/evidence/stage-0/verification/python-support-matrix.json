@@ -1,0 +1,2671 @@
+{
+  "fetched_at": "2026-10-24T13:09:56+00:00",
+  "packages": [
+    {
+      "name": "PySide6",
+      "url": "https://pypi.org/pypi/PySide6/json",
+      "sha256": "77f1014e142d19f00bcb3776897bfc94ba915c39e5b0ad69bd5384a95a2d35be",
+      "latest": "6.12.0",
+      "info_version": "6.12.0",
+      "released": "2026-10-08",
+      "requires_python": "<3.16,>=3.10",
+      "classifiers": {
+        "3.12": true,
+        "3.13": true,
+        "3.14": true,
+        "3.15": true
+      },
+      "license": "LGPL-3.0-only OR GPL-2.0-only OR GPL-3.0-only",
+      "wheel_count": 5,
+      "sdist": false,
+      "wheels": {
+        "312": {
+          "win": "abi3>=cp310",
+          "linux": "abi3>=cp310",
+          "mac": "abi3>=cp310"
+        },
+        "313": {
+          "win": "abi3>=cp310",
+          "linux": "abi3>=cp310",
+          "mac": "abi3>=cp310"
+        },
+        "314": {
+          "win": "abi3>=cp310",
+          "linux": "abi3>=cp310",
+          "mac": "abi3>=cp310"
+        },
+        "315": {
+          "win": "abi3>=cp310",
+          "linux": "abi3>=cp310",
+          "mac": "abi3>=cp310"
+        }
+      }
+    },
+    {
+      "name": "PyQt6",
+      "url": "https://pypi.org/pypi/PyQt6/json",
+      "sha256": "49c7375b54892ca5ad667791581b05905b6d9868af656a89b5cf2cfa68a052b0",
+      "latest": "6.11.0",
+      "info_version": "6.11.0",
+      "released": "2026-03-30",
+      "requires_python": ">=3.10",
+      "classifiers": {
+        "3.12": false,
+        "3.13": false,
+        "3.14": false,
+        "3.15": false
+      },
+      "license": "GPL-3.0-only",
+      "wheel_count": 5,
+      "sdist": true,
+      "wheels": {
+        "312": {
+          "win": "abi3>=cp310",
+          "linux": "abi3>=cp310",
+          "mac": "abi3>=cp310"
+        },
+        "313": {
+          "win": "abi3>=cp310",
+          "linux": "abi3>=cp310",
+          "mac": "abi3>=cp310"
+        },
+        "314": {
+          "win": "abi3>=cp310",
+          "linux": "abi3>=cp310",
+          "mac": "abi3>=cp310"
+        },
+        "315": {
+          "win": "abi3>=cp310",
+          "linux": "abi3>=cp310",
+          "mac": "abi3>=cp310"
+        }
+      }
+    },
+    {
+      "name": "wxPython",
+      "url": "https://pypi.org/pypi/wxPython/json",
+      "sha256": "d0f51d43a9f1af2f1b4a6d722eab2884df5e07e5381628b9a144c17be64a16bd",
+      "latest": "4.3.2",
+      "info_version": "4.3.2",
+      "released": "2026-10-16",
+      "requires_python": ">=3.10",
+      "classifiers": {
+        "3.12": true,
+        "3.13": true,
+        "3.14": true,
+        "3.15": true
+      },
+      "license": "LGPL-2.0-or-later WITH WxWindows-exception-3.1",
+      "wheel_count": 29,
+      "sdist": true,
+      "wheels": {
+        "312": {
+          "win": "cp312",
+          "linux": null,
+          "mac": "cp312"
+        },
+        "313": {
+          "win": "cp313",
+          "linux": null,
+          "mac": "cp313"
+        },
+        "314": {
+          "win": "cp314",
+          "linux": null,
+          "mac": "cp314"
+        },
+        "315": {
+          "win": "cp315",
+          "linux": null,
+          "mac": "cp315"
+        }
+      }
+    },
+    {
+      "name": "pywebview",
+      "url": "https://pypi.org/pypi/pywebview/json",
+      "sha256": "0cece938a4cf3c2ee2222af6712110f8c60d15770a48d093b3527f35fd260854",
+      "latest": "6.2.1",
+      "info_version": "6.2.1",
+      "released": "2026-04-15",
+      "requires_python": ">=3.8",
+      "classifiers": {
+        "3.12": true,
+        "3.13": true,
+        "3.14": false,
+        "3.15": false
+      },
+      "license": "BSD License",
+      "wheel_count": 1,
+      "sdist": true,
+      "wheels": {
+        "312": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "313": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "314": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "315": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        }
+      }
+    },
+    {
+      "name": "flet",
+      "url": "https://pypi.org/pypi/flet/json",
+      "sha256": "ff9738cf1929c5335f6c0cba82c34182509b281655657b5a4e1f4f13a38e9c6c",
+      "latest": "1.0.5",
+      "info_version": "1.0.5",
+      "released": "2026-10-21",
+      "requires_python": ">=3.10",
+      "classifiers": {
+        "3.12": false,
+        "3.13": false,
+        "3.14": false,
+        "3.15": false
+      },
+      "license": "Apache-2.0",
+      "wheel_count": 1,
+      "sdist": true,
+      "wheels": {
+        "312": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "313": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "314": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "315": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        }
+      }
+    },
+    {
+      "name": "toga",
+      "url": "https://pypi.org/pypi/toga/json",
+      "sha256": "89b00db15d60758fa0027286a6c6f9299a11d776ec812149b19cd12b2ab71c23",
+      "latest": "0.5.7",
+      "info_version": "0.5.7",
+      "released": "2026-10-01",
+      "requires_python": ">=3.11",
+      "classifiers": {
+        "3.12": true,
+        "3.13": true,
+        "3.14": true,
+        "3.15": true
+      },
+      "license": "BSD-3-Clause",
+      "wheel_count": 1,
+      "sdist": true,
+      "wheels": {
+        "312": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "313": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "314": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "315": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        }
+      }
+    },
+    {
+      "name": "textual",
+      "url": "https://pypi.org/pypi/textual/json",
+      "sha256": "6f24f7a980c1d67be322e0e198fe57bee223a1dc03fc4090a81436ce3ed7d0a9",
+      "latest": "8.2.8",
+      "info_version": "8.2.8",
+      "released": "2026-06-30",
+      "requires_python": "<4.0,>=3.9",
+      "classifiers": {
+        "3.12": true,
+        "3.13": true,
+        "3.14": true,
+        "3.15": false
+      },
+      "license": "MIT",
+      "wheel_count": 1,
+      "sdist": true,
+      "wheels": {
+        "312": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "313": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "314": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "315": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        }
+      }
+    },
+    {
+      "name": "pyserial",
+      "url": "https://pypi.org/pypi/pyserial/json",
+      "sha256": "08f89f674b0a835782b08152ee1ebb3667b474b4905f4ac0a4c5794bbd8bf04e",
+      "latest": "3.5",
+      "info_version": "3.5",
+      "released": "2020-11-23",
+      "requires_python": null,
+      "classifiers": {
+        "3.12": false,
+        "3.13": false,
+        "3.14": false,
+        "3.15": false
+      },
+      "license": "BSD",
+      "wheel_count": 1,
+      "sdist": true,
+      "wheels": {
+        "312": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "313": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "314": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "315": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        }
+      }
+    },
+    {
+      "name": "cryptography",
+      "url": "https://pypi.org/pypi/cryptography/json",
+      "sha256": "32975256deff83cfe92bfcb93233debf77ddc6e8222b2227dec5f45094173d66",
+      "latest": "50.0.2",
+      "info_version": "50.0.2",
+      "released": "2026-09-30",
+      "requires_python": "!=3.9.0,!=3.9.1,>=3.9",
+      "classifiers": {
+        "3.12": true,
+        "3.13": true,
+        "3.14": true,
+        "3.15": true
+      },
+      "license": "Apache-2.0 OR BSD-3-Clause",
+      "wheel_count": 58,
+      "sdist": true,
+      "wheels": {
+        "312": {
+          "win": "abi3>=cp311",
+          "linux": "abi3>=cp311",
+          "mac": "abi3>=cp311"
+        },
+        "313": {
+          "win": "abi3>=cp311",
+          "linux": "abi3>=cp311",
+          "mac": "abi3>=cp311"
+        },
+        "314": {
+          "win": "abi3>=cp311",
+          "linux": "abi3>=cp311",
+          "mac": "abi3>=cp311"
+        },
+        "315": {
+          "win": "abi3>=cp311",
+          "linux": "abi3>=cp311",
+          "mac": "abi3>=cp311"
+        }
+      }
+    },
+    {
+      "name": "orjson",
+      "url": "https://pypi.org/pypi/orjson/json",
+      "sha256": "2f32024b4f416576a4374cf0d6cad7f23799b571c08167f1af793690d49999d8",
+      "latest": "3.13.0",
+      "info_version": "3.13.0",
+      "released": "2026-10-07",
+      "requires_python": ">=3.10",
+      "classifiers": {
+        "3.12": true,
+        "3.13": true,
+        "3.14": true,
+        "3.15": true
+      },
+      "license": "MPL-2.0 AND (Apache-2.0 OR MIT)",
+      "wheel_count": 58,
+      "sdist": true,
+      "wheels": {
+        "312": {
+          "win": "cp312",
+          "linux": "cp312",
+          "mac": "cp312"
+        },
+        "313": {
+          "win": "cp313",
+          "linux": "cp313",
+          "mac": "cp313"
+        },
+        "314": {
+          "win": "cp314",
+          "linux": "cp314",
+          "mac": "cp314"
+        },
+        "315": {
+          "win": "cp315",
+          "linux": "cp315",
+          "mac": "cp315"
+        }
+      }
+    },
+    {
+      "name": "msgspec",
+      "url": "https://pypi.org/pypi/msgspec/json",
+      "sha256": "e87906c8e97e8d96dfd691bf22f670f9fbec03f5230336d65f89216faeb98f0e",
+      "latest": "0.22.0",
+      "info_version": "0.22.0",
+      "released": "2026-09-29",
+      "requires_python": ">=3.10",
+      "classifiers": {
+        "3.12": true,
+        "3.13": true,
+        "3.14": true,
+        "3.15": true
+      },
+      "license": "BSD-3-Clause",
+      "wheel_count": 81,
+      "sdist": true,
+      "wheels": {
+        "312": {
+          "win": "cp312",
+          "linux": "cp312",
+          "mac": "cp312"
+        },
+        "313": {
+          "win": "cp313",
+          "linux": "cp313",
+          "mac": "cp313"
+        },
+        "314": {
+          "win": "cp314",
+          "linux": "cp314",
+          "mac": "cp314"
+        },
+        "315": {
+          "win": "cp315",
+          "linux": "cp315",
+          "mac": "cp315"
+        }
+      }
+    },
+    {
+      "name": "pydantic",
+      "url": "https://pypi.org/pypi/pydantic/json",
+      "sha256": "1a4aab1e7e64c5f341717f2d3f3e863dcd7cc53cfe704addd053b738368e6b34",
+      "latest": "2.14.1",
+      "info_version": "2.14.1",
+      "released": "2026-10-11",
+      "requires_python": ">=3.10",
+      "classifiers": {
+        "3.12": true,
+        "3.13": true,
+        "3.14": true,
+        "3.15": true
+      },
+      "license": "MIT",
+      "wheel_count": 1,
+      "sdist": true,
+      "wheels": {
+        "312": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "313": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "314": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "315": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        }
+      }
+    },
+    {
+      "name": "aiohttp",
+      "url": "https://pypi.org/pypi/aiohttp/json",
+      "sha256": "cfcf228e6b87f966a0c34e2eb65ae8fc372fe22df276ada678c266c6501ad796",
+      "latest": "3.14.5",
+      "info_version": "3.14.5",
+      "released": "2026-10-11",
+      "requires_python": ">=3.10",
+      "classifiers": {
+        "3.12": true,
+        "3.13": true,
+        "3.14": true,
+        "3.15": false
+      },
+      "license": "Apache-2.0 AND MIT",
+      "wheel_count": 160,
+      "sdist": true,
+      "wheels": {
+        "312": {
+          "win": "cp312",
+          "linux": "cp312",
+          "mac": "cp312"
+        },
+        "313": {
+          "win": "cp313",
+          "linux": "cp313",
+          "mac": "cp313"
+        },
+        "314": {
+          "win": "cp314",
+          "linux": "cp314",
+          "mac": "cp314"
+        },
+        "315": {
+          "win": "cp315",
+          "linux": "cp315",
+          "mac": "cp315"
+        }
+      }
+    },
+    {
+      "name": "httpx",
+      "url": "https://pypi.org/pypi/httpx/json",
+      "sha256": "bb69a37ba295d008ec1ae05b324c4f5e64fba48b7276189ebf2a2920dd2f1fc8",
+      "latest": "0.28.1",
+      "info_version": "0.28.1",
+      "released": "2024-12-06",
+      "requires_python": ">=3.8",
+      "classifiers": {
+        "3.12": true,
+        "3.13": false,
+        "3.14": false,
+        "3.15": false
+      },
+      "license": "BSD-3-Clause",
+      "wheel_count": 1,
+      "sdist": true,
+      "wheels": {
+        "312": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "313": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "314": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "315": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        }
+      }
+    },
+    {
+      "name": "requests",
+      "url": "https://pypi.org/pypi/requests/json",
+      "sha256": "bcfc6a202592e4e90f5a28ff002694eaa7c58ba741b76077f432b8bee1480111",
+      "latest": "2.34.2",
+      "info_version": "2.34.2",
+      "released": "2026-05-14",
+      "requires_python": ">=3.10",
+      "classifiers": {
+        "3.12": true,
+        "3.13": true,
+        "3.14": true,
+        "3.15": true
+      },
+      "license": "Apache-2.0",
+      "wheel_count": 1,
+      "sdist": true,
+      "wheels": {
+        "312": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "313": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "314": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "315": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        }
+      }
+    },
+    {
+      "name": "jinja2",
+      "url": "https://pypi.org/pypi/jinja2/json",
+      "sha256": "f944a0ab4808f42bd0523158b2a78d2638eee650f664ccd9a9a3d6630a298bd4",
+      "latest": "3.1.6",
+      "info_version": "3.1.6",
+      "released": "2025-03-05",
+      "requires_python": ">=3.7",
+      "classifiers": {
+        "3.12": false,
+        "3.13": false,
+        "3.14": false,
+        "3.15": false
+      },
+      "license": "BSD License",
+      "wheel_count": 1,
+      "sdist": true,
+      "wheels": {
+        "312": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "313": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "314": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "315": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        }
+      }
+    },
+    {
+      "name": "docxtpl",
+      "url": "https://pypi.org/pypi/docxtpl/json",
+      "sha256": "250cb7959c5427c9c9b007d663e2f5a99bf3ee596f77bfcb8c00594b6fb501eb",
+      "latest": "0.20.2",
+      "info_version": "0.20.2",
+      "released": "2025-11-13",
+      "requires_python": ">=3.7",
+      "classifiers": {
+        "3.12": true,
+        "3.13": true,
+        "3.14": false,
+        "3.15": false
+      },
+      "license": "LGPL-2.1-only",
+      "wheel_count": 1,
+      "sdist": true,
+      "wheels": {
+        "312": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "313": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "314": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "315": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        }
+      }
+    },
+    {
+      "name": "python-docx",
+      "url": "https://pypi.org/pypi/python-docx/json",
+      "sha256": "95eecaefd9734330d53f53a862847578a0deed24a16df2a261fdd828f7e50597",
+      "latest": "1.2.0",
+      "info_version": "1.2.0",
+      "released": "2025-06-16",
+      "requires_python": ">=3.9",
+      "classifiers": {
+        "3.12": false,
+        "3.13": false,
+        "3.14": false,
+        "3.15": false
+      },
+      "license": "MIT",
+      "wheel_count": 1,
+      "sdist": true,
+      "wheels": {
+        "312": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "313": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "314": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "315": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        }
+      }
+    },
+    {
+      "name": "lxml",
+      "url": "https://pypi.org/pypi/lxml/json",
+      "sha256": "30dda8543e22202de5603da9e688a856cec2169ea89bce5a38a5f11705029adf",
+      "latest": "6.1.3",
+      "info_version": "6.1.3",
+      "released": "2026-09-03",
+      "requires_python": ">=3.8",
+      "classifiers": {
+        "3.12": true,
+        "3.13": true,
+        "3.14": true,
+        "3.15": true
+      },
+      "license": "BSD-3-Clause",
+      "wheel_count": 175,
+      "sdist": true,
+      "wheels": {
+        "312": {
+          "win": "cp312",
+          "linux": "cp312",
+          "mac": "cp312"
+        },
+        "313": {
+          "win": "cp313",
+          "linux": "cp313",
+          "mac": "cp313"
+        },
+        "314": {
+          "win": "cp314",
+          "linux": "cp314",
+          "mac": "cp314"
+        },
+        "315": {
+          "win": "cp315",
+          "linux": "cp315",
+          "mac": "cp315"
+        }
+      }
+    },
+    {
+      "name": "pywin32",
+      "url": "https://pypi.org/pypi/pywin32/json",
+      "sha256": "64c570ae8818f0291836502978f044ed64ab27f85c16b00855dfc9ed1016d68e",
+      "latest": "312",
+      "info_version": "312",
+      "released": "2026-06-04",
+      "requires_python": ">=3.9",
+      "classifiers": {
+        "3.12": true,
+        "3.13": true,
+        "3.14": true,
+        "3.15": true
+      },
+      "license": "PSF",
+      "wheel_count": 21,
+      "sdist": false,
+      "wheels": {
+        "312": {
+          "win": "cp312",
+          "linux": null,
+          "mac": null
+        },
+        "313": {
+          "win": "cp313",
+          "linux": null,
+          "mac": null
+        },
+        "314": {
+          "win": "cp314",
+          "linux": null,
+          "mac": null
+        },
+        "315": {
+          "win": "cp315",
+          "linux": null,
+          "mac": null
+        }
+      }
+    },
+    {
+      "name": "psutil",
+      "url": "https://pypi.org/pypi/psutil/json",
+      "sha256": "3afe72fc20f2a965118da21efa973e1ff79fedcb46c6709557d2ee858b7aa015",
+      "latest": "7.2.2",
+      "info_version": "7.2.2",
+      "released": "2026-01-28",
+      "requires_python": ">=3.6",
+      "classifiers": {
+        "3.12": false,
+        "3.13": false,
+        "3.14": false,
+        "3.15": false
+      },
+      "license": "BSD-3-Clause",
+      "wheel_count": 20,
+      "sdist": true,
+      "wheels": {
+        "312": {
+          "win": "abi3>=cp37",
+          "linux": "abi3>=cp36",
+          "mac": "abi3>=cp36"
+        },
+        "313": {
+          "win": "abi3>=cp37",
+          "linux": "abi3>=cp36",
+          "mac": "abi3>=cp36"
+        },
+        "314": {
+          "win": "abi3>=cp37",
+          "linux": "abi3>=cp36",
+          "mac": "abi3>=cp36"
+        },
+        "315": {
+          "win": "abi3>=cp37",
+          "linux": "abi3>=cp36",
+          "mac": "abi3>=cp36"
+        }
+      }
+    },
+    {
+      "name": "playsound3",
+      "url": "https://pypi.org/pypi/playsound3/json",
+      "sha256": "234d84d88fde81efdaa32b6bc17115e552453a218a94f48a5c7351b2cf34cb87",
+      "latest": "3.3.2",
+      "info_version": "3.3.2",
+      "released": "2026-07-18",
+      "requires_python": ">=3.10",
+      "classifiers": {
+        "3.12": true,
+        "3.13": true,
+        "3.14": true,
+        "3.15": false
+      },
+      "license": "MIT License",
+      "wheel_count": 1,
+      "sdist": true,
+      "wheels": {
+        "312": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "313": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "314": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "315": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        }
+      }
+    },
+    {
+      "name": "polib",
+      "url": "https://pypi.org/pypi/polib/json",
+      "sha256": "59fa225cc62bcb261e31ed17bf2748efd4130f67fa23c948dd1cb99a0e4c903a",
+      "latest": "1.2.0",
+      "info_version": "1.2.0",
+      "released": "2023-02-23",
+      "requires_python": null,
+      "classifiers": {
+        "3.12": false,
+        "3.13": false,
+        "3.14": false,
+        "3.15": false
+      },
+      "license": "MIT",
+      "wheel_count": 1,
+      "sdist": true,
+      "wheels": {
+        "312": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "313": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "314": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "315": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        }
+      }
+    },
+    {
+      "name": "python-dateutil",
+      "url": "https://pypi.org/pypi/python-dateutil/json",
+      "sha256": "796189127a97a6e230415b15e295ca241d8bc0c4278298b7948648c03dcb5d8a",
+      "latest": "3.0.0",
+      "info_version": "3.0.0",
+      "released": "2026-10-21",
+      "requires_python": "!=3.0.*,!=3.1.*,!=3.2.*,>=2.7",
+      "classifiers": {
+        "3.12": true,
+        "3.13": true,
+        "3.14": true,
+        "3.15": true
+      },
+      "license": "Dual License",
+      "wheel_count": 1,
+      "sdist": true,
+      "wheels": {
+        "312": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "313": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "314": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "315": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        }
+      }
+    },
+    {
+      "name": "chardet",
+      "url": "https://pypi.org/pypi/chardet/json",
+      "sha256": "41a2872954fc14eaac0096ddf7af631faa9900fb599ecee2da1921576647ab11",
+      "latest": "7.7.0",
+      "info_version": "7.7.0",
+      "released": "2026-10-18",
+      "requires_python": ">=3.10",
+      "classifiers": {
+        "3.12": true,
+        "3.13": true,
+        "3.14": true,
+        "3.15": false
+      },
+      "license": "0BSD",
+      "wheel_count": 45,
+      "sdist": true,
+      "wheels": {
+        "312": {
+          "win": "cp312",
+          "linux": "cp312",
+          "mac": "cp312"
+        },
+        "313": {
+          "win": "cp313",
+          "linux": "cp313",
+          "mac": "cp313"
+        },
+        "314": {
+          "win": "cp314",
+          "linux": "cp314",
+          "mac": "cp314"
+        },
+        "315": {
+          "win": "cp315",
+          "linux": "cp315",
+          "mac": "cp315"
+        }
+      }
+    },
+    {
+      "name": "sportident",
+      "url": "https://pypi.org/pypi/sportident/json",
+      "sha256": "04680c4cd4b35ec3f7f9b2b84eafe636cdf7552125b11af3a974531659c626ad",
+      "latest": "1.2.8",
+      "info_version": "1.2.8",
+      "released": "2024-06-01",
+      "requires_python": "<4.0.0,>=3.8.1",
+      "classifiers": {
+        "3.12": true,
+        "3.13": false,
+        "3.14": false,
+        "3.15": false
+      },
+      "license": "GPLv3+",
+      "wheel_count": 1,
+      "sdist": true,
+      "wheels": {
+        "312": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "313": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "314": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "315": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        }
+      }
+    },
+    {
+      "name": "boltons",
+      "url": "https://pypi.org/pypi/boltons/json",
+      "sha256": "a0ac8549ea2bfae024222939cee65195a899946bec6f804a2dec973bdfbfa3b9",
+      "latest": "26.2.0",
+      "info_version": "26.2.0",
+      "released": "2026-09-07",
+      "requires_python": ">=3.7",
+      "classifiers": {
+        "3.12": true,
+        "3.13": true,
+        "3.14": true,
+        "3.15": false
+      },
+      "license": "BSD License",
+      "wheel_count": 1,
+      "sdist": true,
+      "wheels": {
+        "312": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "313": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "314": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "315": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        }
+      }
+    },
+    {
+      "name": "pyusb",
+      "url": "https://pypi.org/pypi/pyusb/json",
+      "sha256": "aaa1fad66c8cab75e60126726aed37537f4565955021ded97b0003127f988a2b",
+      "latest": "1.3.1",
+      "info_version": "1.3.1",
+      "released": "2025-01-08",
+      "requires_python": ">=3.9.0",
+      "classifiers": {
+        "3.12": true,
+        "3.13": true,
+        "3.14": false,
+        "3.15": false
+      },
+      "license": "BSD License",
+      "wheel_count": 1,
+      "sdist": true,
+      "wheels": {
+        "312": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "313": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "314": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "315": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        }
+      }
+    },
+    {
+      "name": "pywinusb",
+      "url": "https://pypi.org/pypi/pywinusb/json",
+      "sha256": "d8d98ee23318ae5e18671a8a8a83ca90f50e4842d828f78d9d3c76e8d22757cb",
+      "latest": "0.4.2",
+      "info_version": "0.4.2",
+      "released": "2016-12-12",
+      "requires_python": null,
+      "classifiers": {
+        "3.12": false,
+        "3.13": false,
+        "3.14": false,
+        "3.15": false
+      },
+      "license": "BSD",
+      "wheel_count": 0,
+      "sdist": true,
+      "wheels": {
+        "312": {
+          "win": null,
+          "linux": null,
+          "mac": null
+        },
+        "313": {
+          "win": null,
+          "linux": null,
+          "mac": null
+        },
+        "314": {
+          "win": null,
+          "linux": null,
+          "mac": null
+        },
+        "315": {
+          "win": null,
+          "linux": null,
+          "mac": null
+        }
+      }
+    },
+    {
+      "name": "hidapi",
+      "url": "https://pypi.org/pypi/hidapi/json",
+      "sha256": "b584eab2091a1d9fefbe4e29c1547ccfcd7b6716b9067597bcd086406a9d650f",
+      "latest": "0.15.0",
+      "info_version": "0.15.0",
+      "released": "2025-12-09",
+      "requires_python": null,
+      "classifiers": {
+        "3.12": true,
+        "3.13": true,
+        "3.14": true,
+        "3.15": false
+      },
+      "license": "BSD License; GNU General Public License v3 (GPLv3)",
+      "wheel_count": 80,
+      "sdist": true,
+      "wheels": {
+        "312": {
+          "win": "cp312",
+          "linux": "cp312",
+          "mac": "cp312"
+        },
+        "313": {
+          "win": "cp313",
+          "linux": "cp313",
+          "mac": "cp313"
+        },
+        "314": {
+          "win": "cp314",
+          "linux": "cp314",
+          "mac": "cp314"
+        },
+        "315": {
+          "win": null,
+          "linux": null,
+          "mac": null
+        }
+      }
+    },
+    {
+      "name": "pytest",
+      "url": "https://pypi.org/pypi/pytest/json",
+      "sha256": "203f15ce63523ec5dbbf3462328c7e26d9903240a5f7b1782d36b8f9f388bfac",
+      "latest": "9.1.1",
+      "info_version": "9.1.1",
+      "released": "2026-06-19",
+      "requires_python": ">=3.10",
+      "classifiers": {
+        "3.12": true,
+        "3.13": true,
+        "3.14": true,
+        "3.15": true
+      },
+      "license": "MIT",
+      "wheel_count": 1,
+      "sdist": true,
+      "wheels": {
+        "312": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "313": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "314": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "315": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        }
+      }
+    },
+    {
+      "name": "hypothesis",
+      "url": "https://pypi.org/pypi/hypothesis/json",
+      "sha256": "dac6da635ec84bd7f9b837a17c33a10fe1a5d9c7b9d02a89f1364233c3b651a1",
+      "latest": "6.170.9",
+      "info_version": "6.170.9",
+      "released": "2026-10-23",
+      "requires_python": ">=3.11",
+      "classifiers": {
+        "3.12": true,
+        "3.13": true,
+        "3.14": true,
+        "3.15": true
+      },
+      "license": "MPL-2.0",
+      "wheel_count": 82,
+      "sdist": true,
+      "wheels": {
+        "312": {
+          "win": "cp312",
+          "linux": "cp312",
+          "mac": "cp312"
+        },
+        "313": {
+          "win": "cp313",
+          "linux": "cp313",
+          "mac": "cp313"
+        },
+        "314": {
+          "win": "cp314",
+          "linux": "cp314",
+          "mac": "cp314"
+        },
+        "315": {
+          "win": "abi3>=cp311",
+          "linux": "abi3>=cp311",
+          "mac": "abi3>=cp311"
+        }
+      }
+    },
+    {
+      "name": "pytest-cov",
+      "url": "https://pypi.org/pypi/pytest-cov/json",
+      "sha256": "948eef18f1b95bc13a3467c4328bb4246bd698225e42a01107edd1f5d89fae15",
+      "latest": "7.1.0",
+      "info_version": "7.1.0",
+      "released": "2026-03-21",
+      "requires_python": ">=3.9",
+      "classifiers": {
+        "3.12": true,
+        "3.13": true,
+        "3.14": true,
+        "3.15": false
+      },
+      "license": "MIT",
+      "wheel_count": 1,
+      "sdist": true,
+      "wheels": {
+        "312": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "313": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "314": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "315": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        }
+      }
+    },
+    {
+      "name": "pytest-xdist",
+      "url": "https://pypi.org/pypi/pytest-xdist/json",
+      "sha256": "c28c9a15d09e34325c70ed89e833ddb5fe1bd0a2989361544c92239f3efebbf4",
+      "latest": "3.8.0",
+      "info_version": "3.8.0",
+      "released": "2025-07-01",
+      "requires_python": ">=3.9",
+      "classifiers": {
+        "3.12": true,
+        "3.13": true,
+        "3.14": false,
+        "3.15": false
+      },
+      "license": "MIT",
+      "wheel_count": 1,
+      "sdist": true,
+      "wheels": {
+        "312": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "313": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "314": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "315": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        }
+      }
+    },
+    {
+      "name": "mutmut",
+      "url": "https://pypi.org/pypi/mutmut/json",
+      "sha256": "a8dd008df97c94314bb7d4087cb79a2fc1edcb3c918e02c2f5aee331ef556369",
+      "latest": "3.8.0",
+      "info_version": "3.8.0",
+      "released": "2026-09-12",
+      "requires_python": ">=3.10",
+      "classifiers": {
+        "3.12": true,
+        "3.13": true,
+        "3.14": true,
+        "3.15": true
+      },
+      "license": "BSD-3-Clause",
+      "wheel_count": 1,
+      "sdist": true,
+      "wheels": {
+        "312": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "313": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "314": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "315": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        }
+      }
+    },
+    {
+      "name": "coverage",
+      "url": "https://pypi.org/pypi/coverage/json",
+      "sha256": "f1ef6286e3b282f9748f2912b9bbb71a0504e14ec04de458145762e81ff1cda0",
+      "latest": "7.17.0",
+      "info_version": "7.17.0",
+      "released": "2026-10-22",
+      "requires_python": ">=3.11",
+      "classifiers": {
+        "3.12": true,
+        "3.13": true,
+        "3.14": true,
+        "3.15": true
+      },
+      "license": "Apache-2.0",
+      "wheel_count": 118,
+      "sdist": true,
+      "wheels": {
+        "312": {
+          "win": "cp312",
+          "linux": "cp312",
+          "mac": "cp312"
+        },
+        "313": {
+          "win": "cp313",
+          "linux": "cp313",
+          "mac": "cp313"
+        },
+        "314": {
+          "win": "cp314",
+          "linux": "cp314",
+          "mac": "cp314"
+        },
+        "315": {
+          "win": "cp315",
+          "linux": "cp315",
+          "mac": "cp315"
+        }
+      }
+    },
+    {
+      "name": "ruff",
+      "url": "https://pypi.org/pypi/ruff/json",
+      "sha256": "a0bfa6c63b7aa65599c7087ea5e3d27e166fa3dabc6c80ffbdd3d4d12924fefe",
+      "latest": "0.17.2",
+      "info_version": "0.17.2",
+      "released": "2026-10-22",
+      "requires_python": ">=3.7",
+      "classifiers": {
+        "3.12": true,
+        "3.13": true,
+        "3.14": true,
+        "3.15": true
+      },
+      "license": "MIT",
+      "wheel_count": 17,
+      "sdist": true,
+      "wheels": {
+        "312": {
+          "win": "py3-none",
+          "linux": "py3-none",
+          "mac": "py3-none"
+        },
+        "313": {
+          "win": "py3-none",
+          "linux": "py3-none",
+          "mac": "py3-none"
+        },
+        "314": {
+          "win": "py3-none",
+          "linux": "py3-none",
+          "mac": "py3-none"
+        },
+        "315": {
+          "win": "py3-none",
+          "linux": "py3-none",
+          "mac": "py3-none"
+        }
+      }
+    },
+    {
+      "name": "mypy",
+      "url": "https://pypi.org/pypi/mypy/json",
+      "sha256": "cf63265f0d69012dc57d2efd3d39f45ba00e9ee2e36c70b11a71dd21a5967fea",
+      "latest": "2.4.0",
+      "info_version": "2.4.0",
+      "released": "2026-10-01",
+      "requires_python": ">=3.10",
+      "classifiers": {
+        "3.12": true,
+        "3.13": true,
+        "3.14": true,
+        "3.15": true
+      },
+      "license": "MIT",
+      "wheel_count": 51,
+      "sdist": true,
+      "wheels": {
+        "312": {
+          "win": "cp312",
+          "linux": "cp312",
+          "mac": "cp312"
+        },
+        "313": {
+          "win": "cp313",
+          "linux": "cp313",
+          "mac": "cp313"
+        },
+        "314": {
+          "win": "cp314",
+          "linux": "cp314",
+          "mac": "cp314"
+        },
+        "315": {
+          "win": "cp315",
+          "linux": "cp315",
+          "mac": "cp315"
+        }
+      }
+    },
+    {
+      "name": "pyright",
+      "url": "https://pypi.org/pypi/pyright/json",
+      "sha256": "8c7dfa76905c04e1c89b1d716b4b7aefc6b4d4217d59700f380722bf3aed1b96",
+      "latest": "1.1.414",
+      "info_version": "1.1.414",
+      "released": "2026-09-10",
+      "requires_python": ">=3.7",
+      "classifiers": {
+        "3.12": true,
+        "3.13": false,
+        "3.14": false,
+        "3.15": false
+      },
+      "license": "MIT",
+      "wheel_count": 1,
+      "sdist": true,
+      "wheels": {
+        "312": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "313": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "314": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "315": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        }
+      }
+    },
+    {
+      "name": "basedpyright",
+      "url": "https://pypi.org/pypi/basedpyright/json",
+      "sha256": "8e4ca9a5bc1860eba99807a258d072d2d6b27f11c699e0c5a32a478b175addaf",
+      "latest": "1.40.2",
+      "info_version": "1.40.2",
+      "released": "2026-10-04",
+      "requires_python": ">=3.10",
+      "classifiers": {
+        "3.12": true,
+        "3.13": true,
+        "3.14": true,
+        "3.15": true
+      },
+      "license": "MIT License",
+      "wheel_count": 1,
+      "sdist": true,
+      "wheels": {
+        "312": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "313": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "314": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "315": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        }
+      }
+    },
+    {
+      "name": "ty",
+      "url": "https://pypi.org/pypi/ty/json",
+      "sha256": "0f78797380e26f84ab62b9bd22f3a2ce7e4eabafb8a7db3b39d365fc4288aa31",
+      "latest": "0.0.91",
+      "info_version": "0.0.91",
+      "released": "2026-10-22",
+      "requires_python": ">=3.8",
+      "classifiers": {
+        "3.12": true,
+        "3.13": true,
+        "3.14": true,
+        "3.15": true
+      },
+      "license": "MIT License",
+      "wheel_count": 17,
+      "sdist": true,
+      "wheels": {
+        "312": {
+          "win": "py3-none",
+          "linux": "py3-none",
+          "mac": "py3-none"
+        },
+        "313": {
+          "win": "py3-none",
+          "linux": "py3-none",
+          "mac": "py3-none"
+        },
+        "314": {
+          "win": "py3-none",
+          "linux": "py3-none",
+          "mac": "py3-none"
+        },
+        "315": {
+          "win": "py3-none",
+          "linux": "py3-none",
+          "mac": "py3-none"
+        }
+      }
+    },
+    {
+      "name": "pyrefly",
+      "url": "https://pypi.org/pypi/pyrefly/json",
+      "sha256": "ebe7ff16cb22108d62f5370b5ae6fd0be71930452441900211faa3cdc1dd72ab",
+      "latest": "1.4.0",
+      "info_version": "1.4.0",
+      "released": "2026-10-15",
+      "requires_python": ">=3.8",
+      "classifiers": {
+        "3.12": false,
+        "3.13": false,
+        "3.14": false,
+        "3.15": false
+      },
+      "license": "MIT License",
+      "wheel_count": 11,
+      "sdist": true,
+      "wheels": {
+        "312": {
+          "win": "py3-none",
+          "linux": "py3-none",
+          "mac": "py3-none"
+        },
+        "313": {
+          "win": "py3-none",
+          "linux": "py3-none",
+          "mac": "py3-none"
+        },
+        "314": {
+          "win": "py3-none",
+          "linux": "py3-none",
+          "mac": "py3-none"
+        },
+        "315": {
+          "win": "py3-none",
+          "linux": "py3-none",
+          "mac": "py3-none"
+        }
+      }
+    },
+    {
+      "name": "zuban",
+      "url": "https://pypi.org/pypi/zuban/json",
+      "sha256": "88daa0ea67b485bc50a0efb231a5053474fe5262799547315dbb61f2b4dc913d",
+      "latest": "0.10.1",
+      "info_version": "0.10.1",
+      "released": "2026-10-11",
+      "requires_python": ">=3.7",
+      "classifiers": {
+        "3.12": true,
+        "3.13": true,
+        "3.14": true,
+        "3.15": true
+      },
+      "license": "AGPL-3.0-only",
+      "wheel_count": 12,
+      "sdist": false,
+      "wheels": {
+        "312": {
+          "win": "py3-none",
+          "linux": "py3-none",
+          "mac": "py3-none"
+        },
+        "313": {
+          "win": "py3-none",
+          "linux": "py3-none",
+          "mac": "py3-none"
+        },
+        "314": {
+          "win": "py3-none",
+          "linux": "py3-none",
+          "mac": "py3-none"
+        },
+        "315": {
+          "win": "py3-none",
+          "linux": "py3-none",
+          "mac": "py3-none"
+        }
+      }
+    },
+    {
+      "name": "import-linter",
+      "url": "https://pypi.org/pypi/import-linter/json",
+      "sha256": "467a8478f7d4eafd3c6eb5c8ad422d995053b6deb515fe145f145eee36bdb20d",
+      "latest": "2.15",
+      "info_version": "2.15",
+      "released": "2026-09-04",
+      "requires_python": ">=3.10",
+      "classifiers": {
+        "3.12": true,
+        "3.13": true,
+        "3.14": true,
+        "3.15": false
+      },
+      "license": "BSD 2-Clause License",
+      "wheel_count": 1,
+      "sdist": true,
+      "wheels": {
+        "312": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "313": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "314": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "315": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        }
+      }
+    },
+    {
+      "name": "pre-commit",
+      "url": "https://pypi.org/pypi/pre-commit/json",
+      "sha256": "a8db99faeecaef1cc0b230e789e4e797058815dd4a0357f54b4b4c4c9558fc5f",
+      "latest": "4.7.0",
+      "info_version": "4.7.0",
+      "released": "2026-10-12",
+      "requires_python": ">=3.11",
+      "classifiers": {
+        "3.12": false,
+        "3.13": false,
+        "3.14": false,
+        "3.15": false
+      },
+      "license": "MIT",
+      "wheel_count": 1,
+      "sdist": true,
+      "wheels": {
+        "312": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "313": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "314": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "315": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        }
+      }
+    },
+    {
+      "name": "pip-audit",
+      "url": "https://pypi.org/pypi/pip-audit/json",
+      "sha256": "6eab39a220f58874f5c1576e73d18e399ad6cabc836d24e0dea5d70258ec24c9",
+      "latest": "2.10.1",
+      "info_version": "2.10.1",
+      "released": "2026-06-10",
+      "requires_python": ">=3.10",
+      "classifiers": {
+        "3.12": true,
+        "3.13": true,
+        "3.14": true,
+        "3.15": false
+      },
+      "license": "Apache Software License",
+      "wheel_count": 1,
+      "sdist": true,
+      "wheels": {
+        "312": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "313": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "314": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "315": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        }
+      }
+    },
+    {
+      "name": "pip-licenses",
+      "url": "https://pypi.org/pypi/pip-licenses/json",
+      "sha256": "4f67bd89e5d75b452e03ca8704ed8d9d666e29f902f940782215fb0177b5fc3d",
+      "latest": "5.5.5",
+      "info_version": "5.5.5",
+      "released": "2026-03-28",
+      "requires_python": ">=3.9",
+      "classifiers": {
+        "3.12": true,
+        "3.13": true,
+        "3.14": true,
+        "3.15": false
+      },
+      "license": "MIT",
+      "wheel_count": 1,
+      "sdist": true,
+      "wheels": {
+        "312": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "313": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "314": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "315": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        }
+      }
+    },
+    {
+      "name": "licensecheck",
+      "url": "https://pypi.org/pypi/licensecheck/json",
+      "sha256": "d6f02af05c4fd0ee0a86ff739e9f3807c8957384112e48af3d66bbdaf95242fd",
+      "latest": "2026.0.8",
+      "info_version": "2026.0.8",
+      "released": "2026-06-18",
+      "requires_python": ">=3.12",
+      "classifiers": {
+        "3.12": false,
+        "3.13": false,
+        "3.14": false,
+        "3.15": false
+      },
+      "license": "MIT",
+      "wheel_count": 1,
+      "sdist": true,
+      "wheels": {
+        "312": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "313": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "314": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "315": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        }
+      }
+    },
+    {
+      "name": "liccheck",
+      "url": "https://pypi.org/pypi/liccheck/json",
+      "sha256": "c339d7a92bc60b88ecc7e690e72623167c4801c376f6867afadc1861728b08a9",
+      "latest": "0.9.2",
+      "info_version": "0.9.2",
+      "released": "2023-09-22",
+      "requires_python": ">=3.5",
+      "classifiers": {
+        "3.12": false,
+        "3.13": false,
+        "3.14": false,
+        "3.15": false
+      },
+      "license": "Apache Software License",
+      "wheel_count": 1,
+      "sdist": true,
+      "wheels": {
+        "312": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "313": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "314": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "315": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        }
+      }
+    },
+    {
+      "name": "cyclonedx-bom",
+      "url": "https://pypi.org/pypi/cyclonedx-bom/json",
+      "sha256": "fd2c6595e2701c6290d29fac40eb4bc81b90b6cd1d6136c470a1cb97e63a4b4a",
+      "latest": "7.5.0",
+      "info_version": "7.5.0",
+      "released": "2026-09-29",
+      "requires_python": "<4,>=3.9",
+      "classifiers": {
+        "3.12": true,
+        "3.13": true,
+        "3.14": true,
+        "3.15": true
+      },
+      "license": "Apache-2.0",
+      "wheel_count": 1,
+      "sdist": true,
+      "wheels": {
+        "312": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "313": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "314": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "315": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        }
+      }
+    },
+    {
+      "name": "cx_Freeze",
+      "url": "https://pypi.org/pypi/cx_Freeze/json",
+      "sha256": "3ae59c02019b1dc9953014274e767525c5737b8e6e23e76bd072e3337dd68761",
+      "latest": "8.7.3",
+      "info_version": "8.7.3",
+      "released": "2026-10-23",
+      "requires_python": "<3.16,>=3.10",
+      "classifiers": {
+        "3.12": true,
+        "3.13": true,
+        "3.14": true,
+        "3.15": true
+      },
+      "license": "PSF-2.0",
+      "wheel_count": 1,
+      "sdist": true,
+      "wheels": {
+        "312": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "313": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "314": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "315": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        }
+      }
+    },
+    {
+      "name": "pyinstaller",
+      "url": "https://pypi.org/pypi/pyinstaller/json",
+      "sha256": "d89a305e68655755bd5428eb5d73533c114c0999abfa02712948b46f840f517c",
+      "latest": "6.22.3",
+      "info_version": "6.22.3",
+      "released": "2026-09-12",
+      "requires_python": "<3.16,>=3.8",
+      "classifiers": {
+        "3.12": true,
+        "3.13": true,
+        "3.14": true,
+        "3.15": true
+      },
+      "license": "GNU General Public License v2 (GPLv2)",
+      "wheel_count": 11,
+      "sdist": true,
+      "wheels": {
+        "312": {
+          "win": "py3-none",
+          "linux": "py3-none",
+          "mac": "py3-none"
+        },
+        "313": {
+          "win": "py3-none",
+          "linux": "py3-none",
+          "mac": "py3-none"
+        },
+        "314": {
+          "win": "py3-none",
+          "linux": "py3-none",
+          "mac": "py3-none"
+        },
+        "315": {
+          "win": "py3-none",
+          "linux": "py3-none",
+          "mac": "py3-none"
+        }
+      }
+    },
+    {
+      "name": "nuitka",
+      "url": "https://pypi.org/pypi/nuitka/json",
+      "sha256": "36ba841d5b01bb721fc98d37cf59d91bb6a1b95507c6a36475d25f85a49e1a8d",
+      "latest": "4.3.1",
+      "info_version": "4.3.1",
+      "released": "2026-10-17",
+      "requires_python": null,
+      "classifiers": {
+        "3.12": true,
+        "3.13": true,
+        "3.14": true,
+        "3.15": false
+      },
+      "license": "GNU Affero General Public License v3",
+      "wheel_count": 0,
+      "sdist": true,
+      "wheels": {
+        "312": {
+          "win": null,
+          "linux": null,
+          "mac": null
+        },
+        "313": {
+          "win": null,
+          "linux": null,
+          "mac": null
+        },
+        "314": {
+          "win": null,
+          "linux": null,
+          "mac": null
+        },
+        "315": {
+          "win": null,
+          "linux": null,
+          "mac": null
+        }
+      }
+    },
+    {
+      "name": "briefcase",
+      "url": "https://pypi.org/pypi/briefcase/json",
+      "sha256": "45f0a7c844c11c3ef3d7d6f1a6bcbfed50ca3cba29801e9db9a813d1ff18c925",
+      "latest": "0.4.6",
+      "info_version": "0.4.6",
+      "released": "2026-10-13",
+      "requires_python": ">=3.11",
+      "classifiers": {
+        "3.12": true,
+        "3.13": true,
+        "3.14": true,
+        "3.15": true
+      },
+      "license": "BSD-3-Clause",
+      "wheel_count": 1,
+      "sdist": true,
+      "wheels": {
+        "312": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "313": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "314": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "315": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        }
+      }
+    },
+    {
+      "name": "uv",
+      "url": "https://pypi.org/pypi/uv/json",
+      "sha256": "27e7b529380679a714d280fc6e7a7be06e0b7ad88fef31fd05bd2904247ac893",
+      "latest": "0.13.5",
+      "info_version": "0.13.5",
+      "released": "2026-10-22",
+      "requires_python": ">=3.8",
+      "classifiers": {
+        "3.12": true,
+        "3.13": true,
+        "3.14": true,
+        "3.15": true
+      },
+      "license": "MIT OR Apache-2.0",
+      "wheel_count": 18,
+      "sdist": true,
+      "wheels": {
+        "312": {
+          "win": "py3-none",
+          "linux": "py3-none",
+          "mac": "py3-none"
+        },
+        "313": {
+          "win": "py3-none",
+          "linux": "py3-none",
+          "mac": "py3-none"
+        },
+        "314": {
+          "win": "py3-none",
+          "linux": "py3-none",
+          "mac": "py3-none"
+        },
+        "315": {
+          "win": "py3-none",
+          "linux": "py3-none",
+          "mac": "py3-none"
+        }
+      }
+    },
+    {
+      "name": "poethepoet",
+      "url": "https://pypi.org/pypi/poethepoet/json",
+      "sha256": "832955764e1cf942f575024abcfe6575ee26b18c469e4d6c2f0593ac3a201df3",
+      "latest": "0.49.0",
+      "info_version": "0.49.0",
+      "released": "2026-10-15",
+      "requires_python": ">=3.10",
+      "classifiers": {
+        "3.12": true,
+        "3.13": true,
+        "3.14": true,
+        "3.15": false
+      },
+      "license": "MIT",
+      "wheel_count": 1,
+      "sdist": true,
+      "wheels": {
+        "312": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "313": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "314": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "315": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        }
+      }
+    },
+    {
+      "name": "nox",
+      "url": "https://pypi.org/pypi/nox/json",
+      "sha256": "b912b2fad18525aa05b77e63b501cec36c50797dc0baf465afec10bc74504335",
+      "latest": "2026.10.20",
+      "info_version": "2026.10.20",
+      "released": "2026-10-20",
+      "requires_python": ">=3.10",
+      "classifiers": {
+        "3.12": true,
+        "3.13": true,
+        "3.14": true,
+        "3.15": true
+      },
+      "license": "Apache-2.0",
+      "wheel_count": 1,
+      "sdist": true,
+      "wheels": {
+        "312": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "313": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "314": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "315": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        }
+      }
+    },
+    {
+      "name": "tox",
+      "url": "https://pypi.org/pypi/tox/json",
+      "sha256": "970c88e3ec4be9553a147e1134a52096ac73bc6a689b02e814aa141775123206",
+      "latest": "4.67.1",
+      "info_version": "4.67.1",
+      "released": "2026-10-18",
+      "requires_python": ">=3.11",
+      "classifiers": {
+        "3.12": true,
+        "3.13": true,
+        "3.14": true,
+        "3.15": true
+      },
+      "license": "MIT",
+      "wheel_count": 1,
+      "sdist": true,
+      "wheels": {
+        "312": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "313": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "314": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "315": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        }
+      }
+    },
+    {
+      "name": "deptry",
+      "url": "https://pypi.org/pypi/deptry/json",
+      "sha256": "e2957072b70964f48d423ed3c7d9a55d8ba6f316ab109d9413be64fc6ba4ba4f",
+      "latest": "0.25.1",
+      "info_version": "0.25.1",
+      "released": "2026-03-18",
+      "requires_python": ">=3.10",
+      "classifiers": {
+        "3.12": true,
+        "3.13": true,
+        "3.14": true,
+        "3.15": false
+      },
+      "license": "MIT",
+      "wheel_count": 15,
+      "sdist": true,
+      "wheels": {
+        "312": {
+          "win": "abi3>=cp310",
+          "linux": "abi3>=cp310",
+          "mac": "abi3>=cp310"
+        },
+        "313": {
+          "win": "abi3>=cp310",
+          "linux": "abi3>=cp310",
+          "mac": "abi3>=cp310"
+        },
+        "314": {
+          "win": "abi3>=cp310",
+          "linux": "abi3>=cp310",
+          "mac": "abi3>=cp310"
+        },
+        "315": {
+          "win": "abi3>=cp310",
+          "linux": "abi3>=cp310",
+          "mac": "abi3>=cp310"
+        }
+      }
+    },
+    {
+      "name": "vulture",
+      "url": "https://pypi.org/pypi/vulture/json",
+      "sha256": "ef4e841fb45dd2be52f9272da9271f730b6a176a3cf521ab5d634a66f83bc240",
+      "latest": "2.16",
+      "info_version": "2.16",
+      "released": "2026-03-25",
+      "requires_python": ">=3.9",
+      "classifiers": {
+        "3.12": true,
+        "3.13": true,
+        "3.14": true,
+        "3.15": false
+      },
+      "license": "MIT License",
+      "wheel_count": 1,
+      "sdist": true,
+      "wheels": {
+        "312": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "313": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "314": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "315": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        }
+      }
+    },
+    {
+      "name": "bandit",
+      "url": "https://pypi.org/pypi/bandit/json",
+      "sha256": "f1f726a4f44baeec9405de3a4f542d17788ac0ad28fe86e6298af95fabbd9121",
+      "latest": "1.9.4",
+      "info_version": "1.9.4",
+      "released": "2026-02-25",
+      "requires_python": ">=3.10",
+      "classifiers": {
+        "3.12": true,
+        "3.13": true,
+        "3.14": true,
+        "3.15": false
+      },
+      "license": "Apache-2.0",
+      "wheel_count": 1,
+      "sdist": true,
+      "wheels": {
+        "312": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "313": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "314": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "315": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        }
+      }
+    },
+    {
+      "name": "pydocstyle",
+      "url": "https://pypi.org/pypi/pydocstyle/json",
+      "sha256": "5f6947e00f3b423fbd531e2e87f88075f730db9122137f5cceb38485af38e341",
+      "latest": "6.3.0",
+      "info_version": "6.3.0",
+      "released": "2023-01-17",
+      "requires_python": ">=3.6",
+      "classifiers": {
+        "3.12": false,
+        "3.13": false,
+        "3.14": false,
+        "3.15": false
+      },
+      "license": "MIT",
+      "wheel_count": 1,
+      "sdist": true,
+      "wheels": {
+        "312": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "313": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "314": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        },
+        "315": {
+          "win": "py3-none-any",
+          "linux": "py3-none-any",
+          "mac": "py3-none-any"
+        }
+      }
+    }
+  ],
+  "endoflife": {
+    "url": "https://endoflife.date/api/python.json",
+    "sha256": "1d2801284210273fd1233f066d4d0f3bc81bfc7117c958775cdfdd3ba39d0810",
+    "data": [
+      {
+        "cycle": "3.15",
+        "releaseDate": "2026-10-09",
+        "eol": "2031-10-31",
+        "latest": "3.15.1",
+        "latestReleaseDate": "2026-10-21",
+        "pep": "PEP-0790",
+        "lts": false,
+        "support": "2028-10-09"
+      },
+      {
+        "cycle": "3.14",
+        "releaseDate": "2025-10-07",
+        "eol": "2030-10-31",
+        "latest": "3.14.9",
+        "latestReleaseDate": "2026-10-21",
+        "pep": "PEP-0745",
+        "lts": false,
+        "support": "2027-10-01"
+      },
+      {
+        "cycle": "3.13",
+        "releaseDate": "2024-10-07",
+        "eol": "2029-10-31",
+        "latest": "3.13.17",
+        "latestReleaseDate": "2026-10-21",
+        "pep": "PEP-0719",
+        "lts": false,
+        "support": "2026-10-01"
+      },
+      {
+        "cycle": "3.12",
+        "releaseDate": "2023-10-02",
+        "eol": "2028-10-31",
+        "latest": "3.12.15",
+        "latestReleaseDate": "2026-10-01",
+        "pep": "PEP-0693",
+        "lts": false,
+        "support": "2025-04-02"
+      },
+      {
+        "cycle": "3.11",
+        "releaseDate": "2022-10-24",
+        "eol": "2027-10-31",
+        "latest": "3.11.17",
+        "latestReleaseDate": "2026-10-01",
+        "pep": "PEP-0664",
+        "lts": false,
+        "support": "2024-04-01"
+      },
+      {
+        "cycle": "3.10",
+        "releaseDate": "2021-10-04",
+        "eol": "2026-10-01",
+        "latest": "3.10.22",
+        "latestReleaseDate": "2026-10-01",
+        "pep": "PEP-0619",
+        "lts": false,
+        "support": "2023-04-05"
+      },
+      {
+        "cycle": "3.9",
+        "releaseDate": "2020-10-05",
+        "eol": "2025-10-31",
+        "latest": "3.9.25",
+        "latestReleaseDate": "2025-10-31",
+        "pep": "PEP-0596",
+        "lts": false,
+        "support": "2022-05-17"
+      },
+      {
+        "cycle": "3.8",
+        "releaseDate": "2019-10-14",
+        "eol": "2024-10-07",
+        "latest": "3.8.20",
+        "latestReleaseDate": "2024-09-06",
+        "pep": "PEP-0569",
+        "lts": false,
+        "support": "2021-05-03"
+      },
+      {
+        "cycle": "3.7",
+        "releaseDate": "2018-06-27",
+        "eol": "2023-06-27",
+        "latest": "3.7.17",
+        "latestReleaseDate": "2023-06-05",
+        "pep": "PEP-0537",
+        "lts": false,
+        "support": "2020-06-27"
+      },
+      {
+        "cycle": "3.6",
+        "releaseDate": "2016-12-23",
+        "eol": "2021-12-23",
+        "latest": "3.6.15",
+        "latestReleaseDate": "2021-09-03",
+        "pep": "PEP-0494",
+        "lts": false,
+        "support": "2018-12-24"
+      },
+      {
+        "cycle": "3.5",
+        "releaseDate": "2015-09-13",
+        "eol": "2020-09-30",
+        "latest": "3.5.10",
+        "latestReleaseDate": "2020-09-05",
+        "pep": "PEP-0478",
+        "lts": false,
+        "support": false
+      },
+      {
+        "cycle": "3.4",
+        "releaseDate": "2014-03-16",
+        "eol": "2019-03-18",
+        "latest": "3.4.10",
+        "latestReleaseDate": "2019-03-18",
+        "pep": "PEP-0429",
+        "lts": false,
+        "support": false
+      },
+      {
+        "cycle": "3.3",
+        "releaseDate": "2012-09-29",
+        "eol": "2017-09-29",
+        "latest": "3.3.7",
+        "latestReleaseDate": "2017-09-19",
+        "pep": "PEP-0398",
+        "lts": false,
+        "support": false
+      },
+      {
+        "cycle": "3.2",
+        "releaseDate": "2011-02-20",
+        "eol": "2016-02-20",
+        "latest": "3.2.6",
+        "latestReleaseDate": "2014-10-12",
+        "pep": "PEP-0392",
+        "lts": false,
+        "support": false
+      },
+      {
+        "cycle": "2.7",
+        "releaseDate": "2010-07-03",
+        "eol": "2020-01-01",
+        "latest": "2.7.18",
+        "latestReleaseDate": "2020-04-19",
+        "pep": "PEP-0373",
+        "lts": false,
+        "support": false
+      },
+      {
+        "cycle": "3.1",
+        "releaseDate": "2009-06-27",
+        "eol": "2012-04-09",
+        "latest": "3.1.5",
+        "latestReleaseDate": "2012-04-06",
+        "pep": "PEP-0375",
+        "lts": false,
+        "support": false
+      },
+      {
+        "cycle": "3.0",
+        "releaseDate": "2008-12-03",
+        "eol": "2009-06-27",
+        "latest": "3.0.1",
+        "latestReleaseDate": "2009-02-12",
+        "pep": "PEP-0361",
+        "lts": false,
+        "support": false
+      },
+      {
+        "cycle": "2.6",
+        "releaseDate": "2008-10-01",
+        "eol": "2013-10-29",
+        "latest": "2.6.9",
+        "latestReleaseDate": "2013-10-29",
+        "pep": "PEP-0361",
+        "lts": false,
+        "support": false
+      }
+    ]
+  }
+}

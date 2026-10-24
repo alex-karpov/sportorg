@@ -1,0 +1,203 @@
+### native Windows (Git Bash), copy C:/Users/ank/AppData/Local/Temp/claude/C--Users-ank-Prog-Orient-sportorg/468d4e66-c0b1-4013-a35c-dc100817b3a3/scratchpad/v2/envb-win
+# uv: uv 0.13.1 (62faed335 2026-10-13 x86_64-pc-windows-msvc)
++ uv sync --no-cache --python 3.14
+Using CPython 3.14.8
+Creating virtual environment at: .venv
+Resolved 20 packages in 1ms
+   Building sportorg-ng @ file:///C:/Users/ank/AppData/Local/Temp/claude/C--Users-ank-Prog-Orient-sportorg/468d4e66-c0b1-4013-a35c-dc100817b3a3/scratchpad/v2/envb-win
+      Built sportorg-ng @ file:///C:/Users/ank/AppData/Local/Temp/claude/C--Users-ank-Prog-Orient-sportorg/468d4e66-c0b1-4013-a35c-dc100817b3a3/scratchpad/v2/envb-win
+Downloading pygments (1.2MiB)
+Downloading ruff (9.8MiB)
+Downloading basedpyright (13.1MiB)
+Downloading grimp (1.9MiB)
+Downloading nodejs-wheel-binaries (40.5MiB)
+ Downloaded pygments
+ Downloaded grimp
+ Downloaded ruff
+ Downloaded nodejs-wheel-binaries
+ Downloaded basedpyright
+Prepared 20 packages in 11.02s
+Installed 20 packages in 8.68s
+ + basedpyright==1.40.2
+ + click==8.5.0
+ + colorama==0.4.6
+ + grimp==3.17
+ + import-linter==2.15
+ + iniconfig==2.3.1
+ + markdown-it-py==4.2.0
+ + mdurl==0.1.2
+ + nodejs-wheel-binaries==24.19.0
+ + packaging==26.3
+ + pip-licenses==5.5.5
+ + pluggy==1.7.0
+ + prettytable==3.18.0
+ + pygments==2.21.0
+ + pytest==9.1.1
+ + rich==15.0.0
+ + ruff==0.17.2
+ + sportorg-ng==0.0.1 (from file:///C:/Users/ank/AppData/Local/Temp/claude/C--Users-ank-Prog-Orient-sportorg/468d4e66-c0b1-4013-a35c-dc100817b3a3/scratchpad/v2/envb-win)
+ + typing-extensions==4.16.0
+ + wcwidth==0.9.3
++ uv sync
+Resolved 20 packages in 1ms
+Checked 20 packages in 3ms
++ uv run --no-sync pytest -q
+.......................                                                  [100%]
+23 passed in 0.17s
++ uv run --no-sync pytest -q
+.......................                                                  [100%]
+23 passed in 0.08s
++ uv run --no-sync pytest -q
+.......................                                                  [100%]
+23 passed in 0.08s
+runs: 1.38 0.67 0.63
++ uv run --no-sync ruff check src tests
+All checks passed!
++ uv run --no-sync ruff check src tests
+All checks passed!
++ uv run --no-sync ruff check src tests
+All checks passed!
+runs: 0.60 0.14 0.12
++ uv run --no-sync basedpyright src tests
+0 errors, 0 warnings, 0 notes
++ uv run --no-sync basedpyright src tests
+0 errors, 0 warnings, 0 notes
++ uv run --no-sync basedpyright src tests
+0 errors, 0 warnings, 0 notes
+runs: 1.75 1.08 1.09
+| native-ntfs | MINGW64_NT-10.0-26300 3.6.10-710e5275.x86_64 | ntfs | 21.58 | 0.28 | 0.67 | 0.14 | 1.09 |
+[native exit 0]
+### WSL
+# uv: uv 0.13.5 (x86_64-unknown-linux-gnu)
++ uv sync --no-cache --python 3.14
+Using CPython 3.14.4 interpreter at: /usr/bin/python3.14
+Creating virtual environment at: .venv
+Resolved 20 packages in 0.95ms
+   Building sportorg-ng @ file:///home/ank/verify-envb-ext4
+      Built sportorg-ng @ fil| wsl-ext4 | Linux 6.18.33.2-microsoft-standard-WSL2 | ext4 | 10.65 | 0.05 | 0.22 | 0.02 | 0.86 |
+| wsl-9p | Linux 6.18.33.2-microsoft-standard-WSL2 | 9p | 59.44 | 0.24 | 1.78 | 0.29 | 3.18 |
+[wsl exit 0]
+ pygments
+ Downloaded grimp
+ Downloaded ruff
+ Downloaded basedpyright
+ Downloaded nodejs-wheel-binaries
+Prepared 19 packages in 9.44s
+warning: Failed to hardlink files; falling back to full copy. This may lead to degraded performance.
+         If the cache and target directories are on different filesystems, hardlinking may not be supported.
+         If this is intentional, set `export UV_LINK_MODE=copy` or use `--link-mode=copy` to suppress this warning.
+Installed 19 packages in 1.03s
+ + basedpyright==1.40.2
+ + click==8.5.0
+ + grimp==3.17
+ + import-linter==2.15
+ + iniconfig==2.3.1
+ + markdown-it-py==4.2.0
+ + mdurl==0.1.2
+ + nodejs-wheel-binaries==24.19.0
+ + packaging==26.3
+ + pip-licenses==5.5.5
+ + pluggy==1.7.0
+ + prettytable==3.18.0
+ + pygments==2.21.0
+ + pytest==9.1.1
+ + rich==15.0.0
+ + ruff==0.17.2
+ + sportorg-ng==0.0.1 (from file:///home/ank/verify-envb-ext4)
+ + typing-extensions==4.16.0
+ + wcwidth==0.9.3
++ uv sync
+Resolved 20 packages in 0.89ms
+Checked 19 packages in 0.33ms
++ uv run --no-sync pytest -q
+.......................                                                  [100%]
+23 passed in 0.04s
++ uv run --no-sync pytest -q
+.......................                                                  [100%]
+23 passed in 0.03s
++ uv run --no-sync pytest -q
+.......................                                                  [100%]
+23 passed in 0.03s
+runs: 0.46 0.21 0.22
++ uv run --no-sync ruff check src tests
+All checks passed!
++ uv run --no-sync ruff check src tests
+All checks passed!
++ uv run --no-sync ruff check src tests
+All checks passed!
+runs: 0.02 0.02 0.02
++ uv run --no-sync basedpyright src tests
+0 errors, 0 warnings, 0 notes
++ uv run --no-sync basedpyright src tests
+0 errors, 0 warnings, 0 notes
++ uv run --no-sync basedpyright src tests
+0 errors, 0 warnings, 0 notes
+runs: 0.85 0.88 0.86
+# uv: uv 0.13.5 (x86_64-unknown-linux-gnu)
++ uv sync --no-cache --python 3.14
+Using CPython 3.14.4 interpreter at: /usr/bin/python3.14
+Creating virtual environment at: .venv
+Resolved 20 packages in 2ms
+   Building sportorg-ng @ file:///mnt/c/Users/ank/AppData/Local/Temp/claude/C--Users-ank-Prog-Orient-sportorg/468d4e66-c0b1-4013-a35c-dc100817b3a3/scratchpad/v2/envb-9p
+      Built sportorg-ng @ file:///mnt/c/Users/ank/AppData/Local/Temp/claude/C--Users-ank-Prog-Orient-sportorg/468d4e66-c0b1-4013-a35c-dc100817b3a3/scratchpad/v2/envb-9p
+Downloading pygments (1.2MiB)
+Downloading ruff (10.0MiB)
+Downloading basedpyright (13.1MiB)
+Downloading nodejs-wheel-binaries (58.3MiB)
+Downloading grimp (2.2MiB)
+ Downloaded pygments
+ Downloaded grimp
+ Downloaded ruff
+ Downloaded basedpyright
+ Downloaded nodejs-wheel-binaries
+Prepared 19 packages in 10.27s
+warning: Failed to hardlink files; falling back to full copy. This may lead to degraded performance.
+         If the cache and target directories are on different filesystems, hardlinking may not be supported.
+         If this is intentional, set `export UV_LINK_MODE=copy` or use `--link-mode=copy` to suppress this warning.
+Installed 19 packages in 48.91s
+ + basedpyright==1.40.2
+ + click==8.5.0
+ + grimp==3.17
+ + import-linter==2.15
+ + iniconfig==2.3.1
+ + markdown-it-py==4.2.0
+ + mdurl==0.1.2
+ + nodejs-wheel-binaries==24.19.0
+ + packaging==26.3
+ + pip-licenses==5.5.5
+ + pluggy==1.7.0
+ + prettytable==3.18.0
+ + pygments==2.21.0
+ + pytest==9.1.1
+ + rich==15.0.0
+ + ruff==0.17.2
+ + sportorg-ng==0.0.1 (from file:///mnt/c/Users/ank/AppData/Local/Temp/claude/C--Users-ank-Prog-Orient-sportorg/468d4e66-c0b1-4013-a35c-dc100817b3a3/scratchpad/v2/envb-9p)
+ + typing-extensions==4.16.0
+ + wcwidth==0.9.3
++ uv sync
+Resolved 20 packages in 2ms
+Checked 19 packages in 44ms
++ uv run --no-sync pytest -q
+.......................                                                  [100%]
+23 passed in 0.43s
++ uv run --no-sync pytest -q
+.......................                                                  [100%]
+23 passed in 0.23s
++ uv run --no-sync pytest -q
+.......................                                                  [100%]
+23 passed in 0.22s
+runs: 3.95 1.77 1.78
++ uv run --no-sync ruff check src tests
+All checks passed!
++ uv run --no-sync ruff check src tests
+All checks passed!
++ uv run --no-sync ruff check src tests
+All checks passed!
+runs: 0.29 0.23 0.33
++ uv run --no-sync basedpyright src tests
+0 errors, 0 warnings, 0 notes
++ uv run --no-sync basedpyright src tests
+0 errors, 0 warnings, 0 notes
++ uv run --no-sync basedpyright src tests
+0 errors, 0 warnings, 0 notes
+runs: 3.20 3.12 3.18

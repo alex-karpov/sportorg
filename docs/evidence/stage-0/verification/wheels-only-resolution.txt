@@ -1,0 +1,45 @@
+# 2026-10-24T21:57:55+07:00 | uv 0.13.1 (62faed335 2026-10-13 x86_64-pc-windows-msvc)
+
+######## per package, with dependencies: uv pip compile --only-binary :all: (23 packages x {3.14,3.15} x 3 platforms)
+ok: 122 of 138
+hidapi 3.15 aarch64-apple-darwin FAIL Because all versions of hidapi have no usable wheels and you require hidapi
+hidapi 3.15 x86_64-manylinux_2_28 FAIL Because all versions of hidapi have no usable wheels and you require hidapi
+hidapi 3.15 x86_64-pc-windows-msvc FAIL Because all versions of hidapi have no usable wheels and you require hidapi
+nuitka 3.14 aarch64-apple-darwin FAIL Because all versions of nuitka have no usable wheels and you require nuitka
+nuitka 3.14 x86_64-manylinux_2_28 FAIL Because all versions of nuitka have no usable wheels and you require nuitka
+nuitka 3.14 x86_64-pc-windows-msvc FAIL Because all versions of nuitka have no usable wheels and you require nuitka
+nuitka 3.15 aarch64-apple-darwin FAIL Because all versions of nuitka have no usable wheels and you require nuitka
+nuitka 3.15 x86_64-manylinux_2_28 FAIL Because all versions of nuitka have no usable wheels and you require nuitka
+nuitka 3.15 x86_64-pc-windows-msvc FAIL Because all versions of nuitka have no usable wheels and you require nuitka
+orjson 3.15 x86_64-manylinux_2_28 FAIL Because orjson<=2.0.6 has no wheels with a matching Python ABI tag (e.g.
+pre-commit 3.15 aarch64-apple-darwin FAIL Because pre-commit<=0.6.8 has no usable wheels and only the following versions of pre-commit are available:
+pre-commit 3.15 x86_64-manylinux_2_28 FAIL Because pre-commit<=0.6.8 has no usable wheels and only the following versions of pre-commit are available:
+pre-commit 3.15 x86_64-pc-windows-msvc FAIL Because pre-commit<=0.6.8 has no usable wheels and only the following versions of pre-commit are available:
+pyyaml 3.15 aarch64-apple-darwin FAIL Because all of:
+pyyaml 3.15 x86_64-manylinux_2_28 FAIL Because all of:
+pyyaml 3.15 x86_64-pc-windows-msvc FAIL Because all of:
+
+######## the project's own lock (uv export --frozen --all-groups), wheels only
+pins: 19
+3.14 x86_64-pc-windows-msvc   ok
+3.14 x86_64-manylinux_2_28    ok
+3.14 aarch64-apple-darwin     ok
+3.15 x86_64-pc-windows-msvc   ok
+3.15 x86_64-manylinux_2_28    ok
+3.15 aarch64-apple-darwin     FAIL: cause: Because grimp==3.17 has no usable wheels and you require grimp==3.17, we can conclude that your requirements are unsatisfiable.
+
+######## grimp 3.17 files on PyPI for macOS and cp315
+  grimp-3.17-cp314-cp314-macosx_10_12_x86_64.whl
+  grimp-3.17-cp314-cp314-macosx_11_0_arm64.whl
+  grimp-3.17-cp314-cp314t-macosx_10_12_x86_64.whl
+  grimp-3.17-cp314-cp314t-macosx_11_0_arm64.whl
+  grimp-3.17-cp315-cp315t-macosx_10_12_x86_64.whl
+  grimp-3.17-cp315-cp315t-macosx_11_0_arm64.whl
+
+######## orjson cp315 Linux x86_64 wheels on PyPI, and resolution per glibc floor
+  latest 3.13.0
+  orjson-3.13.0-cp315-cp315-manylinux_2_39_x86_64.whl
+  orjson-3.13.0-cp315-cp315-musllinux_1_2_x86_64.whl
+  x86_64-manylinux_2_28    FAIL
+  x86_64-manylinux_2_34    FAIL
+  x86_64-manylinux_2_40    ok

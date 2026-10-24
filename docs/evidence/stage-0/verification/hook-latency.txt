@@ -1,0 +1,5 @@
+# PostToolUse hook command from .claude/settings.json via Git Bash, CLAUDE_PROJECT_DIR = clone at aeb0d35; 2026-10-24T21:55:31+07:00
+version.py       runs=10 exit codes=[0] first=1.09s median=1.08s min=1.04s max=1.16s
+test_version.py  runs=10 exit codes=[0] first=1.17s median=1.28s min=1.17s max=1.37s
+check.py         runs=10 exit codes=[0] first=1.24s median=1.26s min=1.24s max=1.41s
+README.md        runs=10 exit codes=[0] first=0.24s median=0.26s min=0.23s max=0.28s
