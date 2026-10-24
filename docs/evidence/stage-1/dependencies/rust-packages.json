@@ -1,0 +1,324 @@
+[
+ {
+  "dependencies": [],
+  "licence": {
+   "source": "crates.io",
+   "spdx": "MIT OR Apache-2.0",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 Cargo.lock:6]",
+  "name": "heck",
+  "released": "2024-03-12",
+  "source": "registry+https://github.com/rust-lang/crates.io-index",
+  "version": "0.5.0",
+  "vulnerabilities": []
+ },
+ {
+  "dependencies": [],
+  "licence": {
+   "source": "crates.io",
+   "spdx": "MIT OR Apache-2.0",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 Cargo.lock:12]",
+  "name": "libc",
+  "released": "2026-04-23",
+  "source": "registry+https://github.com/rust-lang/crates.io-index",
+  "version": "0.2.186",
+  "vulnerabilities": []
+ },
+ {
+  "dependencies": [],
+  "licence": {
+   "source": "crates.io",
+   "spdx": "MIT OR Apache-2.0",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 Cargo.lock:18]",
+  "name": "once_cell",
+  "released": "2026-03-12",
+  "source": "registry+https://github.com/rust-lang/crates.io-index",
+  "version": "1.21.4",
+  "vulnerabilities": []
+ },
+ {
+  "dependencies": [],
+  "licence": {
+   "source": "crates.io",
+   "spdx": "Apache-2.0 OR MIT",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 Cargo.lock:24]",
+  "name": "portable-atomic",
+  "released": "2026-01-31",
+  "source": "registry+https://github.com/rust-lang/crates.io-index",
+  "version": "1.13.1",
+  "vulnerabilities": []
+ },
+ {
+  "dependencies": [
+   "unicode-ident"
+  ],
+  "licence": {
+   "source": "crates.io",
+   "spdx": "MIT OR Apache-2.0",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 Cargo.lock:30]",
+  "name": "proc-macro2",
+  "released": "2026-01-21",
+  "source": "registry+https://github.com/rust-lang/crates.io-index",
+  "version": "1.0.106",
+  "vulnerabilities": []
+ },
+ {
+  "dependencies": [
+   "libc",
+   "once_cell",
+   "portable-atomic",
+   "pyo3-build-config",
+   "pyo3-ffi",
+   "pyo3-macros"
+  ],
+  "licence": {
+   "source": "crates.io",
+   "spdx": "MIT OR Apache-2.0",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 Cargo.lock:39]",
+  "name": "pyo3",
+  "released": "2026-04-02",
+  "source": "registry+https://github.com/rust-lang/crates.io-index",
+  "version": "0.28.3",
+  "vulnerabilities": [
+   {
+    "aliases": [
+     "RUSTSEC-2026-0176"
+    ],
+    "fixed": [
+     "0.29.0"
+    ],
+    "id": "GHSA-36hh-v3qg-5jq4",
+    "label": "HIGH",
+    "severity": [
+     {
+      "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N",
+      "type": "CVSS_V4"
+     }
+    ],
+    "summary": "PyO3 has an Out-of-bounds Read in `nth` / `nth_back` for `PyList` and `PyTuple` iterators",
+    "withdrawn": false
+   },
+   {
+    "aliases": [
+     "RUSTSEC-2026-0177"
+    ],
+    "fixed": [
+     "0.29.0"
+    ],
+    "id": "GHSA-chgr-c6px-7xpp",
+    "label": "MODERATE",
+    "severity": [
+     {
+      "score": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N",
+      "type": "CVSS_V4"
+     }
+    ],
+    "summary": "PyO3 has a missing `Sync` bound on `PyCFunction::new_closure` closures",
+    "withdrawn": false
+   },
+   {
+    "aliases": [
+     "GHSA-36hh-v3qg-5jq4"
+    ],
+    "fixed": [
+     "0.29.0"
+    ],
+    "id": "RUSTSEC-2026-0176",
+    "label": "",
+    "severity": [],
+    "summary": "Out-of-bounds read in `nth` / `nth_back` for `PyList` and `PyTuple` iterators",
+    "withdrawn": false
+   },
+   {
+    "aliases": [
+     "GHSA-chgr-c6px-7xpp"
+    ],
+    "fixed": [
+     "0.29.0"
+    ],
+    "id": "RUSTSEC-2026-0177",
+    "label": "",
+    "severity": [],
+    "summary": "Missing `Sync` bound on `PyCFunction::new_closure` closures",
+    "withdrawn": false
+   }
+  ]
+ },
+ {
+  "dependencies": [
+   "target-lexicon"
+  ],
+  "licence": {
+   "source": "crates.io",
+   "spdx": "MIT OR Apache-2.0",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 Cargo.lock:53]",
+  "name": "pyo3-build-config",
+  "released": "2026-04-02",
+  "source": "registry+https://github.com/rust-lang/crates.io-index",
+  "version": "0.28.3",
+  "vulnerabilities": []
+ },
+ {
+  "dependencies": [
+   "libc",
+   "pyo3-build-config"
+  ],
+  "licence": {
+   "source": "crates.io",
+   "spdx": "MIT OR Apache-2.0",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 Cargo.lock:62]",
+  "name": "pyo3-ffi",
+  "released": "2026-04-02",
+  "source": "registry+https://github.com/rust-lang/crates.io-index",
+  "version": "0.28.3",
+  "vulnerabilities": []
+ },
+ {
+  "dependencies": [
+   "proc-macro2",
+   "pyo3-macros-backend",
+   "quote",
+   "syn"
+  ],
+  "licence": {
+   "source": "crates.io",
+   "spdx": "MIT OR Apache-2.0",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 Cargo.lock:72]",
+  "name": "pyo3-macros",
+  "released": "2026-04-02",
+  "source": "registry+https://github.com/rust-lang/crates.io-index",
+  "version": "0.28.3",
+  "vulnerabilities": []
+ },
+ {
+  "dependencies": [
+   "heck",
+   "proc-macro2",
+   "pyo3-build-config",
+   "quote",
+   "syn"
+  ],
+  "licence": {
+   "source": "crates.io",
+   "spdx": "MIT OR Apache-2.0",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 Cargo.lock:84]",
+  "name": "pyo3-macros-backend",
+  "released": "2026-04-02",
+  "source": "registry+https://github.com/rust-lang/crates.io-index",
+  "version": "0.28.3",
+  "vulnerabilities": []
+ },
+ {
+  "dependencies": [
+   "proc-macro2"
+  ],
+  "licence": {
+   "source": "crates.io",
+   "spdx": "MIT OR Apache-2.0",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 Cargo.lock:97]",
+  "name": "quote",
+  "released": "2026-03-03",
+  "source": "registry+https://github.com/rust-lang/crates.io-index",
+  "version": "1.0.45",
+  "vulnerabilities": []
+ },
+ {
+  "dependencies": [
+   "pyo3"
+  ],
+  "licence": {
+   "source": "local crate",
+   "spdx": "",
+   "verdict": "unknown"
+  },
+  "lock": "[код: pysport@b548c35 Cargo.lock:106]",
+  "name": "sportorg-core",
+  "released": "",
+  "source": "local",
+  "version": "0.1.0",
+  "vulnerabilities": []
+ },
+ {
+  "dependencies": [
+   "pyo3"
+  ],
+  "licence": {
+   "source": "local crate",
+   "spdx": "",
+   "verdict": "unknown"
+  },
+  "lock": "[код: pysport@b548c35 Cargo.lock:113]",
+  "name": "sportorg-rust-example",
+  "released": "",
+  "source": "local",
+  "version": "0.1.0",
+  "vulnerabilities": []
+ },
+ {
+  "dependencies": [
+   "proc-macro2",
+   "quote",
+   "unicode-ident"
+  ],
+  "licence": {
+   "source": "crates.io",
+   "spdx": "MIT OR Apache-2.0",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 Cargo.lock:120]",
+  "name": "syn",
+  "released": "2026-02-20",
+  "source": "registry+https://github.com/rust-lang/crates.io-index",
+  "version": "2.0.117",
+  "vulnerabilities": []
+ },
+ {
+  "dependencies": [],
+  "licence": {
+   "source": "crates.io",
+   "spdx": "Apache-2.0 WITH LLVM-exception",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 Cargo.lock:131]",
+  "name": "target-lexicon",
+  "released": "2026-02-15",
+  "source": "registry+https://github.com/rust-lang/crates.io-index",
+  "version": "0.13.5",
+  "vulnerabilities": []
+ },
+ {
+  "dependencies": [],
+  "licence": {
+   "source": "crates.io",
+   "spdx": "(MIT OR Apache-2.0) AND Unicode-3.0",
+   "verdict": "unknown"
+  },
+  "lock": "[код: pysport@b548c35 Cargo.lock:137]",
+  "name": "unicode-ident",
+  "released": "2026-02-16",
+  "source": "registry+https://github.com/rust-lang/crates.io-index",
+  "version": "1.0.24",
+  "vulnerabilities": []
+ }
+]

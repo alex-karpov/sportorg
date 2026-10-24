@@ -1,0 +1,6 @@
+# Run from the repository root; offline (lock files through git, network data from the cache).
+PYTHONDONTWRITEBYTECODE=1 uv run python -m scripts.archaeology.dependencies \
+    --out docs/evidence/stage-1/dependencies
+PYTHONDONTWRITEBYTECODE=1 uv run python -m scripts.archaeology.verify_locs \
+    --evidence docs/evidence/stage-1/dependencies --sample 10 --seed 1
+uv run python -m scripts.legacy verify
