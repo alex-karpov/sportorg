@@ -1,0 +1,130 @@
+# Key numbers
+
+Legacy pin: pysport@b548c35. Produced by `scripts/archaeology/structure.py` (command in `commands.txt`). Collected from the files.
+
+```json
+{
+ "dead_code": {
+  "by_confidence": {
+   "100": 4,
+   "60": 278
+  },
+  "by_kind": {
+   "redundant if-condition": 2,
+   "unreachable code": 1,
+   "unused attribute": 41,
+   "unused class": 92,
+   "unused function": 12,
+   "unused method": 81,
+   "unused property": 3,
+   "unused variable": 50
+  },
+  "findings": 282,
+  "name_in_string": 109,
+  "name_in_string_by_kind": {
+   "unused class": 86,
+   "unused property": 2,
+   "unused variable": 21
+  },
+  "name_is_string": 108
+ },
+ "hotspots": {
+  "files_with_functions": 176,
+  "functions": 2333,
+  "py_files": 220,
+  "sloc": 33086,
+  "spearman_commits_vs_total_cc": {
+   "all_files": 0.6433,
+   "files_with_functions": 0.4764
+  },
+  "top10": [
+   "sportorg/models/memory.py",
+   "sportorg/gui/main_window.py",
+   "sportorg/gui/menu/actions.py",
+   "sportorg/models/result/result_calculation.py",
+   "sportorg/gui/tabs/memory_model.py",
+   "sportorg/models/start/start_preparation.py",
+   "sportorg/models/result/result_checker.py",
+   "sportorg/gui/dialogs/timekeeping_properties.py",
+   "sportorg/modules/live/orgeo.py",
+   "sportorg/gui/dialogs/settings.py"
+  ],
+  "total_cc": 6108
+ },
+ "imports": {
+  "edges_both": 588,
+  "edges_grimp": 588,
+  "edges_only_grimp": 0,
+  "edges_only_own": 15,
+  "edges_own": 603,
+  "modules": 177,
+  "statements": 613,
+  "statements_local": 7,
+  "statements_module_level": 606,
+  "syntax_warnings": 1,
+  "unparsed": 0
+ },
+ "rust": {
+  "cargo_lines": 171,
+  "crates": {
+   "crates.sportorg-core": 327,
+   "crates.sportorg-rust-example": 9,
+   "workspace": 0
+  },
+  "rust_files": 3,
+  "rust_lines": 336
+ },
+ "violations": {
+  "core_third_party_not_listed": {
+   "chardet": 1,
+   "dateutil": 2,
+   "importlib_resources": 1,
+   "jinja2": 1,
+   "lxml": 2,
+   "pip": 1,
+   "polib": 1,
+   "six": 2,
+   "sportorg_core": 1
+  },
+  "counts": {
+   "V1": {
+    "local": 1,
+    "module_level": 16
+   },
+   "V2": {
+    "local": 0,
+    "module_level": 13
+   },
+   "V3": {
+    "local": 0,
+    "module_level": 12
+   }
+  },
+  "linter": {
+   "both": 16,
+   "dependencies_analysed": 588,
+   "entries": 16,
+   "exit": 1,
+   "files_analysed": 173,
+   "linter_direct_pairs": 16,
+   "linter_indirect_entries": 0,
+   "only_linter": [],
+   "only_v1": [],
+   "v1_pairs": 16
+  },
+  "modules_outside_model": [
+   "sportorg.data"
+  ],
+  "v1_by_layer_pair": {
+   "application -> ui": 3,
+   "foundation -> application": 1,
+   "vendored -> domain": 5,
+   "vendored -> foundation": 8
+  },
+  "v1_excluding_vendored": {
+   "local": 1,
+   "module_level": 3
+  }
+ }
+}
+```

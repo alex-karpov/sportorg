@@ -1,0 +1,605 @@
+{
+ "libraries": [
+  {
+   "category": "gui",
+   "pattern": "PySide6",
+   "reason": "Qt 6 GUI toolkit"
+  },
+  {
+   "category": "gui",
+   "pattern": "PySide2",
+   "reason": "Qt 5 GUI toolkit (fallback binding of the Windows 7 build)"
+  },
+  {
+   "category": "gui",
+   "pattern": "PyQt5",
+   "reason": "Qt 5 GUI toolkit, alternative binding"
+  },
+  {
+   "category": "gui",
+   "pattern": "PyQt6",
+   "reason": "Qt 6 GUI toolkit, alternative binding"
+  },
+  {
+   "category": "device",
+   "pattern": "serial",
+   "reason": "pySerial: COM ports of SPORTident and other stations"
+  },
+  {
+   "category": "device",
+   "pattern": "pywinusb",
+   "reason": "USB HID devices on Windows (card readers)"
+  },
+  {
+   "category": "device",
+   "pattern": "pyImpinj",
+   "reason": "client of Impinj RFID readers"
+  },
+  {
+   "category": "device",
+   "pattern": "sportident",
+   "reason": "SPORTident reader library, talks to stations over serial"
+  },
+  {
+   "category": "network",
+   "pattern": "requests",
+   "reason": "HTTP client"
+  },
+  {
+   "category": "network",
+   "pattern": "aiohttp",
+   "reason": "asynchronous HTTP client and server"
+  },
+  {
+   "category": "network",
+   "pattern": "socket",
+   "reason": "raw sockets (TCP/UDP exchange with devices and clients)"
+  },
+  {
+   "category": "os-api",
+   "pattern": "win32*",
+   "reason": "pywin32 modules (win32api, win32print, win32ui, ...): Windows API"
+  },
+  {
+   "category": "os-api",
+   "pattern": "pywintypes",
+   "reason": "pywin32 support module"
+  },
+  {
+   "category": "os-api",
+   "pattern": "winreg",
+   "reason": "Windows registry"
+  },
+  {
+   "category": "os-api",
+   "pattern": "psutil",
+   "reason": "process and system information"
+  },
+  {
+   "category": "os-api",
+   "pattern": "webbrowser",
+   "reason": "starts the system browser"
+  },
+  {
+   "category": "audio",
+   "pattern": "playsound3",
+   "reason": "plays sound files through the OS audio system"
+  }
+ ],
+ "summary": {
+  "core_third_party_not_listed": {
+   "chardet": 1,
+   "dateutil": 2,
+   "importlib_resources": 1,
+   "jinja2": 1,
+   "lxml": 2,
+   "pip": 1,
+   "polib": 1,
+   "six": 2,
+   "sportorg_core": 1
+  },
+  "counts": {
+   "V1": {
+    "local": 1,
+    "module_level": 16
+   },
+   "V2": {
+    "local": 0,
+    "module_level": 13
+   },
+   "V3": {
+    "local": 0,
+    "module_level": 12
+   }
+  },
+  "linter": {
+   "both": 16,
+   "dependencies_analysed": 588,
+   "entries": 16,
+   "exit": 1,
+   "files_analysed": 173,
+   "linter_direct_pairs": 16,
+   "linter_indirect_entries": 0,
+   "only_linter": [],
+   "only_v1": [],
+   "v1_pairs": 16
+  },
+  "modules_outside_model": [
+   "sportorg.data"
+  ],
+  "v1_by_layer_pair": {
+   "application -> ui": 3,
+   "foundation -> application": 1,
+   "vendored -> domain": 5,
+   "vendored -> foundation": 8
+  },
+  "v1_excluding_vendored": {
+   "local": 1,
+   "module_level": 3
+  }
+ },
+ "violations": [
+  {
+   "dst": "sportorg.common.otime",
+   "dst_layer": "foundation",
+   "kind": "V1",
+   "line": 25,
+   "local": false,
+   "path": "sportorg/libs/huichang/huichang.py",
+   "src": "sportorg.libs.huichang.huichang",
+   "src_layer": "vendored",
+   "tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:25]"
+  },
+  {
+   "dst": "sportorg.language",
+   "dst_layer": "foundation",
+   "kind": "V1",
+   "line": 24,
+   "local": false,
+   "path": "sportorg/libs/huichang/huichang.py",
+   "src": "sportorg.libs.huichang.huichang",
+   "src_layer": "vendored",
+   "tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:24]"
+  },
+  {
+   "dst": "sportorg.common.otime",
+   "dst_layer": "foundation",
+   "kind": "V1",
+   "line": 7,
+   "local": false,
+   "path": "sportorg/libs/iof/generator.py",
+   "src": "sportorg.libs.iof.generator",
+   "src_layer": "vendored",
+   "tag": "[код: pysport@b548c35 sportorg/libs/iof/generator.py:7]"
+  },
+  {
+   "dst": "sportorg.models.memory",
+   "dst_layer": "domain",
+   "kind": "V1",
+   "line": 8,
+   "local": false,
+   "path": "sportorg/libs/iof/generator.py",
+   "src": "sportorg.libs.iof.generator",
+   "src_layer": "vendored",
+   "tag": "[код: pysport@b548c35 sportorg/libs/iof/generator.py:8]"
+  },
+  {
+   "dst": "sportorg.models.result.result_calculation",
+   "dst_layer": "domain",
+   "kind": "V1",
+   "line": 9,
+   "local": false,
+   "path": "sportorg/libs/iof/generator.py",
+   "src": "sportorg.libs.iof.generator",
+   "src_layer": "vendored",
+   "tag": "[код: pysport@b548c35 sportorg/libs/iof/generator.py:9]"
+  },
+  {
+   "dst": "sportorg.utils.text",
+   "dst_layer": "foundation",
+   "kind": "V1",
+   "line": 4,
+   "local": false,
+   "path": "sportorg/libs/ocad/ocad.py",
+   "src": "sportorg.libs.ocad.ocad",
+   "src_layer": "vendored",
+   "tag": "[код: pysport@b548c35 sportorg/libs/ocad/ocad.py:4]"
+  },
+  {
+   "dst": "sportorg.language",
+   "dst_layer": "foundation",
+   "kind": "V1",
+   "line": 4,
+   "local": false,
+   "path": "sportorg/libs/sfr/sfrximporter.py",
+   "src": "sportorg.libs.sfr.sfrximporter",
+   "src_layer": "vendored",
+   "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrximporter.py:4]"
+  },
+  {
+   "dst": "sportorg.models.memory",
+   "dst_layer": "domain",
+   "kind": "V1",
+   "line": 6,
+   "local": false,
+   "path": "sportorg/libs/sfr/sfrximporter.py",
+   "src": "sportorg.libs.sfr.sfrximporter",
+   "src_layer": "vendored",
+   "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrximporter.py:6]"
+  },
+  {
+   "dst": "sportorg.models.memory",
+   "dst_layer": "domain",
+   "kind": "V1",
+   "line": 7,
+   "local": false,
+   "path": "sportorg/libs/sfr/sfrximporter.py",
+   "src": "sportorg.libs.sfr.sfrximporter",
+   "src_layer": "vendored",
+   "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrximporter.py:7]"
+  },
+  {
+   "dst": "sportorg.utils.time",
+   "dst_layer": "foundation",
+   "kind": "V1",
+   "line": 17,
+   "local": false,
+   "path": "sportorg/libs/sfr/sfrximporter.py",
+   "src": "sportorg.libs.sfr.sfrximporter",
+   "src_layer": "vendored",
+   "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrximporter.py:17]"
+  },
+  {
+   "dst": "sportorg.models.memory",
+   "dst_layer": "domain",
+   "kind": "V1",
+   "line": 3,
+   "local": false,
+   "path": "sportorg/libs/sfr/sfrxparser.py",
+   "src": "sportorg.libs.sfr.sfrxparser",
+   "src_layer": "vendored",
+   "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrxparser.py:3]"
+  },
+  {
+   "dst": "sportorg.common.otime",
+   "dst_layer": "foundation",
+   "kind": "V1",
+   "line": 8,
+   "local": false,
+   "path": "sportorg/libs/winorient/wdb_online_sender.py",
+   "src": "sportorg.libs.winorient.wdb_online_sender",
+   "src_layer": "vendored",
+   "tag": "[код: pysport@b548c35 sportorg/libs/winorient/wdb_online_sender.py:8]"
+  },
+  {
+   "dst": "sportorg.utils.time",
+   "dst_layer": "foundation",
+   "kind": "V1",
+   "line": 10,
+   "local": false,
+   "path": "sportorg/libs/winorient/wdb_online_sender.py",
+   "src": "sportorg.libs.winorient.wdb_online_sender",
+   "src_layer": "vendored",
+   "tag": "[код: pysport@b548c35 sportorg/libs/winorient/wdb_online_sender.py:10]"
+  },
+  {
+   "dst": "sportorg.gui.global_access",
+   "dst_layer": "ui",
+   "kind": "V1",
+   "line": 21,
+   "local": false,
+   "path": "sportorg/modules/printing/printing.py",
+   "src": "sportorg.modules.printing.printing",
+   "src_layer": "application",
+   "tag": "[код: pysport@b548c35 sportorg/modules/printing/printing.py:21]"
+  },
+  {
+   "dst": "sportorg.gui.dialogs.bib_dialog",
+   "dst_layer": "ui",
+   "kind": "V1",
+   "line": 7,
+   "local": false,
+   "path": "sportorg/modules/sportident/result_generation.py",
+   "src": "sportorg.modules.sportident.result_generation",
+   "src_layer": "application",
+   "tag": "[код: pysport@b548c35 sportorg/modules/sportident/result_generation.py:7]"
+  },
+  {
+   "dst": "sportorg.gui.dialogs.file_dialog",
+   "dst_layer": "ui",
+   "kind": "V1",
+   "line": 6,
+   "local": false,
+   "path": "sportorg/modules/winorient/wdb_number_setter.py",
+   "src": "sportorg.modules.winorient.wdb_number_setter",
+   "src_layer": "application",
+   "tag": "[код: pysport@b548c35 sportorg/modules/winorient/wdb_number_setter.py:6]"
+  },
+  {
+   "dst": "sportorg.modules.configs.configs",
+   "dst_layer": "application",
+   "kind": "V1",
+   "line": 257,
+   "local": true,
+   "path": "sportorg/settings.py",
+   "src": "sportorg.settings",
+   "src_layer": "foundation",
+   "tag": "[код: pysport@b548c35 sportorg/settings.py:257]"
+  },
+  {
+   "dst": "sportorg.common.otime",
+   "dst_layer": "foundation",
+   "kind": "V2",
+   "line": 25,
+   "local": false,
+   "path": "sportorg/libs/huichang/huichang.py",
+   "src": "sportorg.libs.huichang.huichang",
+   "src_layer": "vendored",
+   "tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:25]"
+  },
+  {
+   "dst": "sportorg.language",
+   "dst_layer": "foundation",
+   "kind": "V2",
+   "line": 24,
+   "local": false,
+   "path": "sportorg/libs/huichang/huichang.py",
+   "src": "sportorg.libs.huichang.huichang",
+   "src_layer": "vendored",
+   "tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:24]"
+  },
+  {
+   "dst": "sportorg.common.otime",
+   "dst_layer": "foundation",
+   "kind": "V2",
+   "line": 7,
+   "local": false,
+   "path": "sportorg/libs/iof/generator.py",
+   "src": "sportorg.libs.iof.generator",
+   "src_layer": "vendored",
+   "tag": "[код: pysport@b548c35 sportorg/libs/iof/generator.py:7]"
+  },
+  {
+   "dst": "sportorg.models.memory",
+   "dst_layer": "domain",
+   "kind": "V2",
+   "line": 8,
+   "local": false,
+   "path": "sportorg/libs/iof/generator.py",
+   "src": "sportorg.libs.iof.generator",
+   "src_layer": "vendored",
+   "tag": "[код: pysport@b548c35 sportorg/libs/iof/generator.py:8]"
+  },
+  {
+   "dst": "sportorg.models.result.result_calculation",
+   "dst_layer": "domain",
+   "kind": "V2",
+   "line": 9,
+   "local": false,
+   "path": "sportorg/libs/iof/generator.py",
+   "src": "sportorg.libs.iof.generator",
+   "src_layer": "vendored",
+   "tag": "[код: pysport@b548c35 sportorg/libs/iof/generator.py:9]"
+  },
+  {
+   "dst": "sportorg.utils.text",
+   "dst_layer": "foundation",
+   "kind": "V2",
+   "line": 4,
+   "local": false,
+   "path": "sportorg/libs/ocad/ocad.py",
+   "src": "sportorg.libs.ocad.ocad",
+   "src_layer": "vendored",
+   "tag": "[код: pysport@b548c35 sportorg/libs/ocad/ocad.py:4]"
+  },
+  {
+   "dst": "sportorg.language",
+   "dst_layer": "foundation",
+   "kind": "V2",
+   "line": 4,
+   "local": false,
+   "path": "sportorg/libs/sfr/sfrximporter.py",
+   "src": "sportorg.libs.sfr.sfrximporter",
+   "src_layer": "vendored",
+   "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrximporter.py:4]"
+  },
+  {
+   "dst": "sportorg.models.memory",
+   "dst_layer": "domain",
+   "kind": "V2",
+   "line": 6,
+   "local": false,
+   "path": "sportorg/libs/sfr/sfrximporter.py",
+   "src": "sportorg.libs.sfr.sfrximporter",
+   "src_layer": "vendored",
+   "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrximporter.py:6]"
+  },
+  {
+   "dst": "sportorg.models.memory",
+   "dst_layer": "domain",
+   "kind": "V2",
+   "line": 7,
+   "local": false,
+   "path": "sportorg/libs/sfr/sfrximporter.py",
+   "src": "sportorg.libs.sfr.sfrximporter",
+   "src_layer": "vendored",
+   "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrximporter.py:7]"
+  },
+  {
+   "dst": "sportorg.utils.time",
+   "dst_layer": "foundation",
+   "kind": "V2",
+   "line": 17,
+   "local": false,
+   "path": "sportorg/libs/sfr/sfrximporter.py",
+   "src": "sportorg.libs.sfr.sfrximporter",
+   "src_layer": "vendored",
+   "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrximporter.py:17]"
+  },
+  {
+   "dst": "sportorg.models.memory",
+   "dst_layer": "domain",
+   "kind": "V2",
+   "line": 3,
+   "local": false,
+   "path": "sportorg/libs/sfr/sfrxparser.py",
+   "src": "sportorg.libs.sfr.sfrxparser",
+   "src_layer": "vendored",
+   "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrxparser.py:3]"
+  },
+  {
+   "dst": "sportorg.common.otime",
+   "dst_layer": "foundation",
+   "kind": "V2",
+   "line": 8,
+   "local": false,
+   "path": "sportorg/libs/winorient/wdb_online_sender.py",
+   "src": "sportorg.libs.winorient.wdb_online_sender",
+   "src_layer": "vendored",
+   "tag": "[код: pysport@b548c35 sportorg/libs/winorient/wdb_online_sender.py:8]"
+  },
+  {
+   "dst": "sportorg.utils.time",
+   "dst_layer": "foundation",
+   "kind": "V2",
+   "line": 10,
+   "local": false,
+   "path": "sportorg/libs/winorient/wdb_online_sender.py",
+   "src": "sportorg.libs.winorient.wdb_online_sender",
+   "src_layer": "vendored",
+   "tag": "[код: pysport@b548c35 sportorg/libs/winorient/wdb_online_sender.py:10]"
+  },
+  {
+   "dst": "playsound3",
+   "dst_layer": "external audio",
+   "kind": "V3",
+   "line": 7,
+   "local": false,
+   "path": "sportorg/common/audio.py",
+   "src": "sportorg.common.audio",
+   "src_layer": "foundation",
+   "tag": "[код: pysport@b548c35 sportorg/common/audio.py:7]"
+  },
+  {
+   "dst": "serial",
+   "dst_layer": "external device",
+   "kind": "V3",
+   "line": 21,
+   "local": false,
+   "path": "sportorg/libs/huichang/huichang.py",
+   "src": "sportorg.libs.huichang.huichang",
+   "src_layer": "vendored",
+   "tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:21]"
+  },
+  {
+   "dst": "serial.serialutil",
+   "dst_layer": "external device",
+   "kind": "V3",
+   "line": 22,
+   "local": false,
+   "path": "sportorg/libs/huichang/huichang.py",
+   "src": "sportorg.libs.huichang.huichang",
+   "src_layer": "vendored",
+   "tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:22]"
+  },
+  {
+   "dst": "pywinusb.hid",
+   "dst_layer": "external device",
+   "kind": "V3",
+   "line": 31,
+   "local": false,
+   "path": "sportorg/libs/sfr/sfrreader.py",
+   "src": "sportorg.libs.sfr.sfrreader",
+   "src_layer": "vendored",
+   "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:31]"
+  },
+  {
+   "dst": "serial",
+   "dst_layer": "external device",
+   "kind": "V3",
+   "line": 29,
+   "local": false,
+   "path": "sportorg/libs/sportiduino/sportiduino.py",
+   "src": "sportorg.libs.sportiduino.sportiduino",
+   "src_layer": "vendored",
+   "tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:29]"
+  },
+  {
+   "dst": "serial.serialutil",
+   "dst_layer": "external device",
+   "kind": "V3",
+   "line": 30,
+   "local": false,
+   "path": "sportorg/libs/sportiduino/sportiduino.py",
+   "src": "sportorg.libs.sportiduino.sportiduino",
+   "src_layer": "vendored",
+   "tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:30]"
+  },
+  {
+   "dst": "serial",
+   "dst_layer": "external device",
+   "kind": "V3",
+   "line": 22,
+   "local": false,
+   "path": "sportorg/libs/srpid/srpid.py",
+   "src": "sportorg.libs.srpid.srpid",
+   "src_layer": "vendored",
+   "tag": "[код: pysport@b548c35 sportorg/libs/srpid/srpid.py:22]"
+  },
+  {
+   "dst": "serial.serialutil",
+   "dst_layer": "external device",
+   "kind": "V3",
+   "line": 23,
+   "local": false,
+   "path": "sportorg/libs/srpid/srpid.py",
+   "src": "sportorg.libs.srpid.srpid",
+   "src_layer": "vendored",
+   "tag": "[код: pysport@b548c35 sportorg/libs/srpid/srpid.py:23]"
+  },
+  {
+   "dst": "requests",
+   "dst_layer": "external network",
+   "kind": "V3",
+   "line": 1,
+   "local": false,
+   "path": "sportorg/libs/telegram/telegram.py",
+   "src": "sportorg.libs.telegram.telegram",
+   "src_layer": "vendored",
+   "tag": "[код: pysport@b548c35 sportorg/libs/telegram/telegram.py:1]"
+  },
+  {
+   "dst": "PySide6.QtWidgets",
+   "dst_layer": "external gui",
+   "kind": "V3",
+   "line": 4,
+   "local": false,
+   "path": "sportorg/libs/winorient/wdb_online_sender_dialog.py",
+   "src": "sportorg.libs.winorient.wdb_online_sender_dialog",
+   "src_layer": "vendored",
+   "tag": "[код: pysport@b548c35 sportorg/libs/winorient/wdb_online_sender_dialog.py:4]"
+  },
+  {
+   "dst": "PySide2.QtCore",
+   "dst_layer": "external gui",
+   "kind": "V3",
+   "line": 5,
+   "local": false,
+   "path": "sportorg/utils/time.py",
+   "src": "sportorg.utils.time",
+   "src_layer": "foundation",
+   "tag": "[код: pysport@b548c35 sportorg/utils/time.py:5]"
+  },
+  {
+   "dst": "PySide6.QtCore",
+   "dst_layer": "external gui",
+   "kind": "V3",
+   "line": 2,
+   "local": false,
+   "path": "sportorg/utils/time.py",
+   "src": "sportorg.utils.time",
+   "src_layer": "foundation",
+   "tag": "[код: pysport@b548c35 sportorg/utils/time.py:2]"
+  }
+ ]
+}

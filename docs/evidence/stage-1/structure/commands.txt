@@ -1,0 +1,12 @@
+# Run from the repository root; offline (reads .legacy/pysport at the pin through git and static tools with caches off).
+PYTHONDONTWRITEBYTECODE=1 uv run python -m scripts.archaeology.structure --out docs/evidence/stage-1/structure
+PYTHONDONTWRITEBYTECODE=1 uv run python -m scripts.archaeology.verify_locs --evidence docs/evidence/stage-1/structure --sample 10 --seed 1
+uv run python -m scripts.legacy verify
+# Reproducibility: a second run into a scratch directory and `cmp` of every file.
+PYTHONDONTWRITEBYTECODE=1 uv run python -m scripts.archaeology.structure --out "$TMPDIR/structure2"
+for f in docs/evidence/stage-1/structure/*; do cmp "$f" "$TMPDIR/structure2/$(basename "$f")"; done
+# Tools run inside the script (project venv, versions from uv.lock):
+#   ruff check --no-cache --isolated --select C901 --config 'lint.mccabe.max-complexity=0' --output-format json .legacy/pysport
+#   vulture .legacy/pysport/sportorg --min-confidence 0
+#   grimp.build_graph("sportorg", cache_dir=None) with .legacy/pysport on sys.path
+#   PYTHONPATH=.legacy/pysport lint-imports --config <temporary file in $TMPDIR> --no-cache --no-logo

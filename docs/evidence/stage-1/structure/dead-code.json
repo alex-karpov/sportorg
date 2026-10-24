@@ -1,0 +1,2848 @@
+{
+ "findings": [
+  {
+   "confidence": 60,
+   "kind": "unused method",
+   "line": 141,
+   "name": "to_minute_str",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/common/otime.py",
+   "tag": "[код: pysport@b548c35 sportorg/common/otime.py:141]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused function",
+   "line": 24,
+   "name": "module_path",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/config.py",
+   "tag": "[код: pysport@b548c35 sportorg/config.py:24]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused variable",
+   "line": 28,
+   "name": "BASE_DIR",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/config.py",
+   "tag": "[код: pysport@b548c35 sportorg/config.py:28]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused variable",
+   "line": 53,
+   "name": "LOG_DIR",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/config.py",
+   "tag": "[код: pysport@b548c35 sportorg/config.py:53]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused variable",
+   "line": 60,
+   "name": "DATA_DIR",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/config.py",
+   "tag": "[код: pysport@b548c35 sportorg/config.py:60]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused function",
+   "line": 75,
+   "name": "style_dir",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/config.py",
+   "tag": "[код: pysport@b548c35 sportorg/config.py:75]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused method",
+   "line": 118,
+   "name": "found_person",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/gui/dialogs/bib_dialog.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/bib_dialog.py:118]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused method",
+   "line": 61,
+   "name": "convert_controls",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/gui/dialogs/course_edit.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/course_edit.py:61]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused method",
+   "line": 87,
+   "name": "on_name_changed",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/gui/dialogs/course_edit.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/course_edit.py:87]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused method",
+   "line": 128,
+   "name": "convert_course",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/gui/dialogs/group_edit.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/group_edit.py:128]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused method",
+   "line": 133,
+   "name": "convert_race_type",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/gui/dialogs/group_edit.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/group_edit.py:133]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused method",
+   "line": 136,
+   "name": "parse_course",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/gui/dialogs/group_edit.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/group_edit.py:136]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused method",
+   "line": 148,
+   "name": "on_name_changed",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/gui/dialogs/group_edit.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/group_edit.py:148]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused method",
+   "line": 156,
+   "name": "on_ranking_clicked",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/gui/dialogs/group_edit.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/group_edit.py:156]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused method",
+   "line": 176,
+   "name": "on_min_year_finished",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/gui/dialogs/group_edit.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/group_edit.py:176]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused method",
+   "line": 179,
+   "name": "on_max_year_finished",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/gui/dialogs/group_edit.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/group_edit.py:179]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused method",
+   "line": 49,
+   "name": "on_name_changed",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/gui/dialogs/organization_edit.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/organization_edit.py:49]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused method",
+   "line": 181,
+   "name": "convert_group",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/gui/dialogs/person_edit.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/person_edit.py:181]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused method",
+   "line": 186,
+   "name": "convert_organization",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/gui/dialogs/person_edit.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/person_edit.py:186]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused method",
+   "line": 191,
+   "name": "convert_qual",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/gui/dialogs/person_edit.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/person_edit.py:191]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused method",
+   "line": 194,
+   "name": "parse_group",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/gui/dialogs/person_edit.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/person_edit.py:194]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused method",
+   "line": 197,
+   "name": "parse_organization",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/gui/dialogs/person_edit.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/person_edit.py:197]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused method",
+   "line": 205,
+   "name": "parse_qual",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/gui/dialogs/person_edit.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/person_edit.py:205]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused method",
+   "line": 208,
+   "name": "on_year_finished",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/gui/dialogs/person_edit.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/person_edit.py:208]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused method",
+   "line": 231,
+   "name": "on_group_changed",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/gui/dialogs/person_edit.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/person_edit.py:231]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused method",
+   "line": 269,
+   "name": "on_card_number_changed",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/gui/dialogs/person_edit.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/person_edit.py:269]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused method",
+   "line": 292,
+   "name": "on_bib_button_clicked",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/gui/dialogs/person_edit.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/person_edit.py:292]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused attribute",
+   "line": 66,
+   "name": "selected_printer",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/gui/dialogs/print_properties.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/print_properties.py:66]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused class",
+   "line": 21,
+   "name": "ScoresDialog",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/gui/dialogs/scores_dialog.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/scores_dialog.py:21]"
+  },
+  {
+   "confidence": 100,
+   "kind": "redundant if-condition",
+   "line": 482,
+   "name": "",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/gui/dialogs/start_preparation.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/start_preparation.py:482]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused method",
+   "line": 155,
+   "name": "save_to_file",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/gui/dialogs/text_io.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/text_io.py:155]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused method",
+   "line": 158,
+   "name": "load_from_file",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/gui/dialogs/text_io.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/text_io.py:158]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused method",
+   "line": 14,
+   "name": "get_app",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/gui/global_access.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/global_access.py:14]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused class",
+   "line": 29,
+   "name": "Application",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/gui/main.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/main.py:29]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused class",
+   "line": 103,
+   "name": "NewAction",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/gui/menu/actions.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:103]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused class",
+   "line": 108,
+   "name": "SaveAction",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/gui/menu/actions.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:108]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused class",
+   "line": 113,
+   "name": "OpenAction",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/gui/menu/actions.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:113]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused class",
+   "line": 121,
+   "name": "SaveAsAction",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/gui/menu/actions.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:121]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused class",
+   "line": 126,
+   "name": "OpenRecentAction",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/gui/menu/actions.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:126]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused class",
+   "line": 131,
+   "name": "CopyAction",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/gui/menu/actions.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:131]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused class",
+   "line": 145,
+   "name": "DuplicateAction",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/gui/menu/actions.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:145]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused class",
+   "line": 157,
+   "name": "SettingsAction",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/gui/menu/actions.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:157]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused class",
+   "line": 162,
+   "name": "EventSettingsAction",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/gui/menu/actions.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:162]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused class",
+   "line": 167,
+   "name": "CSVWinorientImportAction",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/gui/menu/actions.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:167]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused class",
+   "line": 185,
+   "name": "SFRXImportAction",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/gui/menu/actions.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:185]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused class",
+   "line": 203,
+   "name": "WDBWinorientImportAction",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/gui/menu/actions.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:203]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused class",
+   "line": 222,
+   "name": "OcadTXTv8ImportAction",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/gui/menu/actions.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:222]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused class",
+   "line": 240,
+   "name": "WDBWinorientExportAction",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/gui/menu/actions.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:240]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused class",
+   "line": 267,
+   "name": "IOFResultListExportAction",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/gui/menu/actions.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:267]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused class",
+   "line": 286,
+   "name": "IOFResultListAllSplitsExportAction",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/gui/menu/actions.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:286]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused class",
+   "line": 307,
+   "name": "IOFEntryListExportAction",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/gui/menu/actions.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:307]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused class",
+   "line": 326,
+   "name": "IOFEntryListImportAction",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/gui/menu/actions.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:326]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused class",
+   "line": 344,
+   "name": "IOFStartListExportAction",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/gui/menu/actions.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:344]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused class",
+   "line": 363,
+   "name": "IOFCompetitorListExportAction",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/gui/menu/actions.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:363]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused class",
+   "line": 386,
+   "name": "RecoverySportorgHtmlAction",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/gui/menu/actions.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:386]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused class",
+   "line": 404,
+   "name": "RecoverySportorgSiLogAction",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/gui/menu/actions.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:404]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused class",
+   "line": 415,
+   "name": "RecoverySportidentMasterCsvAction",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/gui/menu/actions.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:415]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused class",
+   "line": 426,
+   "name": "RecoveryOrgeoFinishCsvAction",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/gui/menu/actions.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:426]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused class",
+   "line": 437,
+   "name": "AddObjectAction",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/gui/menu/actions.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:437]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused class",
+   "line": 442,
+   "name": "DeleteAction",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/gui/menu/actions.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:442]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused class",
+   "line": 447,
+   "name": "TextExchangeAction",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/gui/menu/actions.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:447]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused class",
+   "line": 454,
+   "name": "MassEditAction",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/gui/menu/actions.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:454]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused class",
+   "line": 470,
+   "name": "RefreshAction",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/gui/menu/actions.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:470]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused class",
+   "line": 475,
+   "name": "FilterAction",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/gui/menu/actions.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:475]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused class",
+   "line": 482,
+   "name": "FilterResetAction",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/gui/menu/actions.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:482]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused class",
+   "line": 490,
+   "name": "SearchAction",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/gui/menu/actions.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:490]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused class",
+   "line": 499,
+   "name": "ToStartPreparationAction",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/gui/menu/actions.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:499]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused class",
+   "line": 504,
+   "name": "ToRaceResultsAction",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/gui/menu/actions.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:504]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused class",
+   "line": 509,
+   "name": "ToGroupsAction",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/gui/menu/actions.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:509]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused class",
+   "line": 514,
+   "name": "ToCoursesAction",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/gui/menu/actions.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:514]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused class",
+   "line": 519,
+   "name": "ToTeamsAction",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/gui/menu/actions.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:519]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused class",
+   "line": 524,
+   "name": "ToLogsAction",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/gui/menu/actions.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:524]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused class",
+   "line": 529,
+   "name": "StartPreparationAction",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/gui/menu/actions.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:529]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused class",
+   "line": 535,
+   "name": "GuessCoursesAction",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/gui/menu/actions.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:535]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused class",
+   "line": 541,
+   "name": "GuessCorridorsAction",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/gui/menu/actions.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:541]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused class",
+   "line": 547,
+   "name": "RelayNumberAction",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/gui/menu/actions.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:547]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused class",
+   "line": 559,
+   "name": "StartTimeChangeAction",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/gui/menu/actions.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:559]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused class",
+   "line": 565,
+   "name": "StartHandicapAction",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/gui/menu/actions.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:565]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused class",
+   "line": 571,
+   "name": "RelayCloneAction",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/gui/menu/actions.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:571]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused class",
+   "line": 577,
+   "name": "CopyBibToCardNumber",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/gui/menu/actions.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:577]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused class",
+   "line": 588,
+   "name": "CopyCardNumberToBib",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/gui/menu/actions.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:588]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused class",
+   "line": 599,
+   "name": "ManualFinishAction",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/gui/menu/actions.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:599]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused class",
+   "line": 609,
+   "name": "CardReadoutAction",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/gui/menu/actions.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:609]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused class",
+   "line": 628,
+   "name": "CreateReportAction",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/gui/menu/actions.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:628]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused class",
+   "line": 633,
+   "name": "SplitPrintoutAction",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/gui/menu/actions.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:633]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused class",
+   "line": 638,
+   "name": "RecheckingAction",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/gui/menu/actions.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:638]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused class",
+   "line": 645,
+   "name": "GroupFinderAction",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/gui/menu/actions.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:645]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused class",
+   "line": 665,
+   "name": "PenaltyCalculationAction",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/gui/menu/actions.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:665]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused class",
+   "line": 676,
+   "name": "PenaltyRemovingAction",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/gui/menu/actions.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:676]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused class",
+   "line": 687,
+   "name": "ChangeStatusAction",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/gui/menu/actions.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:687]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused class",
+   "line": 722,
+   "name": "SetDNSNumbersAction",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/gui/menu/actions.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:722]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused class",
+   "line": 728,
+   "name": "ImportPersonsAction",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/gui/menu/actions.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:728]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused class",
+   "line": 734,
+   "name": "ControlTimeChangeAction",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/gui/menu/actions.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:734]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused class",
+   "line": 740,
+   "name": "CPDeleteAction",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/gui/menu/actions.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:740]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused class",
+   "line": 746,
+   "name": "SplitDeleteAction",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/gui/menu/actions.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:746]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused class",
+   "line": 752,
+   "name": "MergeResultsAction",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/gui/menu/actions.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:752]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused class",
+   "line": 758,
+   "name": "AddSPORTidentResultAction",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/gui/menu/actions.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:758]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused class",
+   "line": 768,
+   "name": "TimekeepingSettingsAction",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/gui/menu/actions.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:768]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused class",
+   "line": 774,
+   "name": "TeamworkSettingsAction",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/gui/menu/actions.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:774]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused class",
+   "line": 779,
+   "name": "TeamworkEnableAction",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/gui/menu/actions.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:779]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused class",
+   "line": 785,
+   "name": "TeamworkSendAction",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/gui/menu/actions.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:785]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused class",
+   "line": 812,
+   "name": "PrinterSettingsAction",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/gui/menu/actions.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:812]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused class",
+   "line": 817,
+   "name": "LiveSettingsAction",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/gui/menu/actions.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:817]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused class",
+   "line": 823,
+   "name": "PluginsSettingsAction",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/gui/menu/actions.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:823]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused class",
+   "line": 828,
+   "name": "LiveToggleAction",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/gui/menu/actions.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:828]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused class",
+   "line": 836,
+   "name": "TelegramSettingsAction",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/gui/menu/actions.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:836]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused class",
+   "line": 841,
+   "name": "TelegramSendAction",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/gui/menu/actions.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:841]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused class",
+   "line": 859,
+   "name": "OnlineSendAction",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/gui/menu/actions.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:859]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused class",
+   "line": 891,
+   "name": "AboutAction",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/gui/menu/actions.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:891]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused class",
+   "line": 896,
+   "name": "CheckUpdatesAction",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/gui/menu/actions.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:896]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused class",
+   "line": 910,
+   "name": "AssignResultByBibAction",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/gui/menu/actions.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:910]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused class",
+   "line": 918,
+   "name": "AssignResultByCardNumberAction",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/gui/menu/actions.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:918]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused class",
+   "line": 926,
+   "name": "ImportSportOrgAction",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/gui/menu/actions.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:926]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused class",
+   "line": 963,
+   "name": "RentCardsAction",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/gui/menu/actions.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:963]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused class",
+   "line": 969,
+   "name": "MarkedRouteCourseGeneration",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/gui/menu/actions.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:969]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused class",
+   "line": 975,
+   "name": "ExtractPersonMiddleName",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/gui/menu/actions.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:975]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused class",
+   "line": 982,
+   "name": "HuichangManagementAction",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/gui/menu/actions.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:982]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused class",
+   "line": 987,
+   "name": "SFRExportAction",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/gui/menu/actions.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:987]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused attribute",
+   "line": 41,
+   "name": "r_count",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/gui/tabs/memory_model.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/tabs/memory_model.py:41]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused method",
+   "line": 82,
+   "name": "columnCount",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/gui/tabs/memory_model.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/tabs/memory_model.py:82]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused method",
+   "line": 88,
+   "name": "headerData",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/gui/tabs/memory_model.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/tabs/memory_model.py:88]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused method",
+   "line": 307,
+   "name": "update_one_object",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/gui/tabs/memory_model.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/tabs/memory_model.py:307]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused method",
+   "line": 81,
+   "name": "wheelEvent",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/gui/utils/custom_controls.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/utils/custom_controls.py:81]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused method",
+   "line": 101,
+   "name": "wheelEvent",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/gui/utils/custom_controls.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/utils/custom_controls.py:101]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused method",
+   "line": 127,
+   "name": "wheelEvent",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/gui/utils/custom_controls.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/utils/custom_controls.py:127]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused variable",
+   "line": 36,
+   "name": "CMD_WRITE_FINGER_NAME",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/libs/huichang/huichang.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:36]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused variable",
+   "line": 37,
+   "name": "CMD_READ_FINGER_NAME",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/libs/huichang/huichang.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:37]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused property",
+   "line": 62,
+   "name": "connected",
+   "name_in_string": true,
+   "name_is_string": false,
+   "path": "sportorg/libs/huichang/huichang.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:62]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused class",
+   "line": 291,
+   "name": "EntryList",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/libs/iof/iof.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/iof/iof.py:291]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused class",
+   "line": 340,
+   "name": "TeamEntryList",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/libs/iof/iof.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/iof/iof.py:340]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused class",
+   "line": 401,
+   "name": "StartList",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/libs/iof/iof.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/iof/iof.py:401]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused variable",
+   "line": 417,
+   "name": "FINISHED",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/libs/iof/iof.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/iof/iof.py:417]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused variable",
+   "line": 421,
+   "name": "ACTIVE",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/libs/iof/iof.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/iof/iof.py:421]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused variable",
+   "line": 422,
+   "name": "INACTIVE",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/libs/iof/iof.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/iof/iof.py:422]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused variable",
+   "line": 423,
+   "name": "OVER_TIME",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/libs/iof/iof.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/iof/iof.py:423]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused variable",
+   "line": 424,
+   "name": "SPORTING_WITHDRAWAL",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/libs/iof/iof.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/iof/iof.py:424]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused variable",
+   "line": 425,
+   "name": "NOT_COMPETING",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/libs/iof/iof.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/iof/iof.py:425]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused variable",
+   "line": 426,
+   "name": "MOVED",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/libs/iof/iof.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/iof/iof.py:426]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused variable",
+   "line": 427,
+   "name": "MOVED_UP",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/libs/iof/iof.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/iof/iof.py:427]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused variable",
+   "line": 429,
+   "name": "DID_NOT_ENTER",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/libs/iof/iof.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/iof/iof.py:429]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused variable",
+   "line": 430,
+   "name": "CANCELLED",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/libs/iof/iof.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/iof/iof.py:430]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused attribute",
+   "line": 440,
+   "name": "time_behind",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/libs/iof/iof.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/iof/iof.py:440]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused class",
+   "line": 573,
+   "name": "ResultList",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/libs/iof/iof.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/iof/iof.py:573]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused function",
+   "line": 138,
+   "name": "ifempty",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/libs/ocad/ocad.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/ocad/ocad.py:138]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused class",
+   "line": 183,
+   "name": "CoursesText",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/libs/ocad/ocad.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/ocad/ocad.py:183]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused attribute",
+   "line": 199,
+   "name": "_tree",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/libs/ocad/ocad.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/ocad/ocad.py:199]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused attribute",
+   "line": 202,
+   "name": "_tree",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/libs/ocad/ocad.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/ocad/ocad.py:202]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused function",
+   "line": 207,
+   "name": "parse_xml_v3",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/libs/ocad/ocad.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/ocad/ocad.py:207]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused attribute",
+   "line": 72,
+   "name": "_debug",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/libs/sfr/sfrreader.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:72]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused attribute",
+   "line": 74,
+   "name": "_logfile",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/libs/sfr/sfrreader.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:74]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused attribute",
+   "line": 76,
+   "name": "_logfile",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/libs/sfr/sfrreader.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:76]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused method",
+   "line": 241,
+   "name": "reconnect",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/libs/sfr/sfrreader.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:241]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused attribute",
+   "line": 409,
+   "name": "last_card",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/libs/sfr/sfrreader.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:409]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused class",
+   "line": 466,
+   "name": "SFRReaderTimeout",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/libs/sfr/sfrreader.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:466]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused variable",
+   "line": 54,
+   "name": "CHECK_STATION",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/libs/sportiduino/sportiduino.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:54]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused variable",
+   "line": 55,
+   "name": "CLEAR_STATION",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/libs/sportiduino/sportiduino.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:55]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused variable",
+   "line": 60,
+   "name": "CMD_INIT_PASSWDCARD",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/libs/sportiduino/sportiduino.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:60]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused variable",
+   "line": 85,
+   "name": "RESP_MODE",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/libs/sportiduino/sportiduino.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:85]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused variable",
+   "line": 99,
+   "name": "MASTER_CARD_SET_TIME",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/libs/sportiduino/sportiduino.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:99]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused variable",
+   "line": 100,
+   "name": "MASTER_CARD_SET_NUMBER",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/libs/sportiduino/sportiduino.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:100]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused variable",
+   "line": 101,
+   "name": "MASTER_CARD_SLEEP",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/libs/sportiduino/sportiduino.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:101]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused variable",
+   "line": 102,
+   "name": "MASTER_CARD_READ_BACKUP",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/libs/sportiduino/sportiduino.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:102]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused variable",
+   "line": 103,
+   "name": "MASTER_CARD_SET_PASS",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/libs/sportiduino/sportiduino.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:103]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused variable",
+   "line": 105,
+   "name": "MIN_CARD_NUM",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/libs/sportiduino/sportiduino.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:105]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused variable",
+   "line": 106,
+   "name": "MAX_CARD_NUM",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/libs/sportiduino/sportiduino.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:106]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused method",
+   "line": 348,
+   "name": "beep_error",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/libs/sportiduino/sportiduino.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:348]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused method",
+   "line": 356,
+   "name": "reconnect",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/libs/sportiduino/sportiduino.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:356]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused method",
+   "line": 374,
+   "name": "read_card_type",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/libs/sportiduino/sportiduino.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:374]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused method",
+   "line": 418,
+   "name": "read_backup",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/libs/sportiduino/sportiduino.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:418]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused method",
+   "line": 428,
+   "name": "init_card",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/libs/sportiduino/sportiduino.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:428]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused method",
+   "line": 448,
+   "name": "init_backupreader",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/libs/sportiduino/sportiduino.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:448]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused method",
+   "line": 452,
+   "name": "init_sleepcard",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/libs/sportiduino/sportiduino.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:452]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused method",
+   "line": 463,
+   "name": "init_cp_number_card",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/libs/sportiduino/sportiduino.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:463]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused method",
+   "line": 470,
+   "name": "init_time_card",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/libs/sportiduino/sportiduino.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:470]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused method",
+   "line": 483,
+   "name": "init_config_card",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/libs/sportiduino/sportiduino.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:483]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused method",
+   "line": 489,
+   "name": "init_state_card",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/libs/sportiduino/sportiduino.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:489]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused method",
+   "line": 493,
+   "name": "read_state_card",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/libs/sportiduino/sportiduino.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:493]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused method",
+   "line": 514,
+   "name": "apply_pwd",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/libs/sportiduino/sportiduino.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:514]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused method",
+   "line": 522,
+   "name": "read_settings",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/libs/sportiduino/sportiduino.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:522]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused method",
+   "line": 529,
+   "name": "write_settings",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/libs/sportiduino/sportiduino.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:529]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused method",
+   "line": 533,
+   "name": "write_pages6_7",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/libs/sportiduino/sportiduino.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:533]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused method",
+   "line": 540,
+   "name": "enable_continuous_read",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/libs/sportiduino/sportiduino.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:540]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused method",
+   "line": 544,
+   "name": "disable_continuous_read",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/libs/sportiduino/sportiduino.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:544]"
+  },
+  {
+   "confidence": 100,
+   "kind": "unreachable code",
+   "line": 583,
+   "name": "if",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/libs/sportiduino/sportiduino.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:583]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused method",
+   "line": 745,
+   "name": "raw_data_to_card_data",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/libs/sportiduino/sportiduino.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:745]"
+  },
+  {
+   "confidence": 100,
+   "kind": "unused variable",
+   "line": 140,
+   "name": "wait_part",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/libs/srpid/srpid.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/srpid/srpid.py:140]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused method",
+   "line": 181,
+   "name": "reconnect",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/libs/srpid/srpid.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/srpid/srpid.py:181]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused attribute",
+   "line": 308,
+   "name": "qual_ms",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/libs/winorient/wdb.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/winorient/wdb.py:308]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused attribute",
+   "line": 328,
+   "name": "qual_ms",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/libs/winorient/wdb.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/winorient/wdb.py:328]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused method",
+   "line": 483,
+   "name": "get_finish",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/libs/winorient/wdb.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/winorient/wdb.py:483]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused attribute",
+   "line": 509,
+   "name": "team_filer",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/libs/winorient/wdb.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/winorient/wdb.py:509]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused attribute",
+   "line": 510,
+   "name": "group_filter",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/libs/winorient/wdb.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/winorient/wdb.py:510]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused attribute",
+   "line": 549,
+   "name": "view_offset",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/libs/winorient/wdb.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/winorient/wdb.py:549]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused attribute",
+   "line": 555,
+   "name": "is_split_printout",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/libs/winorient/wdb.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/winorient/wdb.py:555]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused attribute",
+   "line": 621,
+   "name": "team_filer",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/libs/winorient/wdb.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/winorient/wdb.py:621]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused attribute",
+   "line": 622,
+   "name": "group_filter",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/libs/winorient/wdb.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/winorient/wdb.py:622]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused attribute",
+   "line": 659,
+   "name": "view_offset",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/libs/winorient/wdb.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/winorient/wdb.py:659]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused attribute",
+   "line": 882,
+   "name": "scores_cart_mode",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/libs/winorient/wdb.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/winorient/wdb.py:882]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused variable",
+   "line": 16,
+   "name": "ONLINE_LAP",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/libs/winorient/wdb_online_sender.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/winorient/wdb_online_sender.py:16]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused variable",
+   "line": 18,
+   "name": "ONLINE_PARAM1",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/libs/winorient/wdb_online_sender.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/winorient/wdb_online_sender.py:18]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused variable",
+   "line": 19,
+   "name": "ONLINE_SCORE",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/libs/winorient/wdb_online_sender.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/winorient/wdb_online_sender.py:19]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused variable",
+   "line": 20,
+   "name": "ONLINE_FINISH_TIME",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/libs/winorient/wdb_online_sender.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/winorient/wdb_online_sender.py:20]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused variable",
+   "line": 21,
+   "name": "ONLINE_SI",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/libs/winorient/wdb_online_sender.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/winorient/wdb_online_sender.py:21]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused variable",
+   "line": 22,
+   "name": "ONLINE_COMMENT",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/libs/winorient/wdb_online_sender.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/winorient/wdb_online_sender.py:22]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused attribute",
+   "line": 31,
+   "name": "is_running",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/libs/winorient/wdb_online_sender.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/winorient/wdb_online_sender.py:31]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused property",
+   "line": 62,
+   "name": "cards",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/libs/winorient/wo.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/winorient/wo.py:62]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused function",
+   "line": 84,
+   "name": "get_qualification_list",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/models/constant.py",
+   "tag": "[код: pysport@b548c35 sportorg/models/constant.py:84]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused variable",
+   "line": 77,
+   "name": "FINISHED",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/models/memory.py",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:77]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused variable",
+   "line": 81,
+   "name": "ACTIVE",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/models/memory.py",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:81]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused variable",
+   "line": 82,
+   "name": "INACTIVE",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/models/memory.py",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:82]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused variable",
+   "line": 84,
+   "name": "SPORTING_WITHDRAWAL",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/models/memory.py",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:84]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused variable",
+   "line": 85,
+   "name": "NOT_COMPETING",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/models/memory.py",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:85]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused variable",
+   "line": 86,
+   "name": "MOVED",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/models/memory.py",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:86]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused variable",
+   "line": 87,
+   "name": "MOVED_UP",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/models/memory.py",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:87]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused variable",
+   "line": 89,
+   "name": "DID_NOT_ENTER",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/models/memory.py",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:89]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused variable",
+   "line": 90,
+   "name": "CANCELLED",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/models/memory.py",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:90]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused attribute",
+   "line": 208,
+   "name": "altitude",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/models/memory.py",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:208]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused method",
+   "line": 336,
+   "name": "get_count_finished",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/models/memory.py",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:336]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused method",
+   "line": 339,
+   "name": "get_count_all",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/models/memory.py",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:339]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused attribute",
+   "line": 429,
+   "name": "has_penalty",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/models/memory.py",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:429]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused attribute",
+   "line": 528,
+   "name": "qty_ok_days",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/models/memory.py",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:528]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused method",
+   "line": 721,
+   "name": "get_result_start_in_comment",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/models/memory.py",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:721]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused method",
+   "line": 775,
+   "name": "get_result_for_sort",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/models/memory.py",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:775]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused attribute",
+   "line": 1125,
+   "name": "has_penalty",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/models/memory.py",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:1125]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused attribute",
+   "line": 1168,
+   "name": "has_penalty",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/models/memory.py",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:1168]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused attribute",
+   "line": 1200,
+   "name": "has_penalty",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/models/memory.py",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:1200]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused attribute",
+   "line": 1213,
+   "name": "has_penalty",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/models/memory.py",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:1213]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused attribute",
+   "line": 1230,
+   "name": "has_penalty",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/models/memory.py",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:1230]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused attribute",
+   "line": 1239,
+   "name": "has_penalty",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/models/memory.py",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:1239]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused method",
+   "line": 1917,
+   "name": "delete_persons",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/models/memory.py",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:1917]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused method",
+   "line": 1961,
+   "name": "delete_results",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/models/memory.py",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:1961]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused method",
+   "line": 1985,
+   "name": "delete_groups",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/models/memory.py",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:1985]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused method",
+   "line": 2015,
+   "name": "delete_courses",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/models/memory.py",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:2015]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused method",
+   "line": 2045,
+   "name": "delete_organizations",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/models/memory.py",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:2045]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused method",
+   "line": 2554,
+   "name": "get_next_leg",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/models/memory.py",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:2554]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused method",
+   "line": 2578,
+   "name": "get_variant",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/models/memory.py",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:2578]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused method",
+   "line": 2582,
+   "name": "parse_variant_text",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/models/memory.py",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:2582]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused method",
+   "line": 2595,
+   "name": "get_variant_text",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/models/memory.py",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:2595]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused attribute",
+   "line": 2672,
+   "name": "last_finished_leg",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/models/memory.py",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:2672]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused method",
+   "line": 2704,
+   "name": "get_all_results",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/models/memory.py",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:2704]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused method",
+   "line": 2721,
+   "name": "set_leg_for_person",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/models/memory.py",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:2721]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused method",
+   "line": 2724,
+   "name": "set_bibs",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/models/memory.py",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:2724]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused method",
+   "line": 407,
+   "name": "detach_penalty_laps_old",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/models/result/result_checker.py",
+   "tag": "[код: pysport@b548c35 sportorg/models/result/result_checker.py:407]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused method",
+   "line": 98,
+   "name": "get_group_team_results",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/models/result/score_calculation.py",
+   "tag": "[код: pysport@b548c35 sportorg/models/result/score_calculation.py:98]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused method",
+   "line": 106,
+   "name": "get_group_region_results",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/models/result/score_calculation.py",
+   "tag": "[код: pysport@b548c35 sportorg/models/result/score_calculation.py:106]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused method",
+   "line": 123,
+   "name": "get_all_regions",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/models/result/score_calculation.py",
+   "tag": "[код: pysport@b548c35 sportorg/models/result/score_calculation.py:123]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused method",
+   "line": 106,
+   "name": "get_leg_relative_time",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/models/result/split_calculation.py",
+   "tag": "[код: pysport@b548c35 sportorg/models/result/split_calculation.py:106]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused method",
+   "line": 225,
+   "name": "get_leg_leader",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/models/result/split_calculation.py",
+   "tag": "[код: pysport@b548c35 sportorg/models/result/split_calculation.py:225]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused method",
+   "line": 68,
+   "name": "set_array",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/models/start/start_preparation.py",
+   "tag": "[код: pysport@b548c35 sportorg/models/start/start_preparation.py:68]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused method",
+   "line": 88,
+   "name": "get_tossed_array",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/models/start/start_preparation.py",
+   "tag": "[код: pysport@b548c35 sportorg/models/start/start_preparation.py:88]"
+  },
+  {
+   "confidence": 100,
+   "kind": "redundant if-condition",
+   "line": 693,
+   "name": "",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/models/start/start_preparation.py",
+   "tag": "[код: pysport@b548c35 sportorg/models/start/start_preparation.py:693]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused variable",
+   "line": 16,
+   "name": "PATH",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/modules/configs/configs.py",
+   "tag": "[код: pysport@b548c35 sportorg/modules/configs/configs.py:16]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused attribute",
+   "line": 40,
+   "name": "_debug",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/modules/huichang/huichang.py",
+   "tag": "[код: pysport@b548c35 sportorg/modules/huichang/huichang.py:40]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused method",
+   "line": 991,
+   "name": "refresh_menus",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/modules/plugins/manager.py",
+   "tag": "[код: pysport@b548c35 sportorg/modules/plugins/manager.py:991]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused method",
+   "line": 37,
+   "name": "set_app_printer",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/modules/printing/printing.py",
+   "tag": "[код: pysport@b548c35 sportorg/modules/printing/printing.py:37]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused attribute",
+   "line": 43,
+   "name": "_debug",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/modules/rfid_impinj/rfid_impinj.py",
+   "tag": "[код: pysport@b548c35 sportorg/modules/rfid_impinj/rfid_impinj.py:43]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused method",
+   "line": 118,
+   "name": "run_test",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/modules/rfid_impinj/rfid_impinj.py",
+   "tag": "[код: pysport@b548c35 sportorg/modules/rfid_impinj/rfid_impinj.py:118]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused attribute",
+   "line": 36,
+   "name": "_debug",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/modules/sfr/sfrreader.py",
+   "tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrreader.py:36]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused function",
+   "line": 15,
+   "name": "export_sfr_data",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/modules/sfr/sfrxexporter.py",
+   "tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:15]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused variable",
+   "line": 21,
+   "name": "beam",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/modules/sportident/result_generation.py",
+   "tag": "[код: pysport@b548c35 sportorg/modules/sportident/result_generation.py:21]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused attribute",
+   "line": 34,
+   "name": "card_read_repeated",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/modules/sportident/result_generation.py",
+   "tag": "[код: pysport@b548c35 sportorg/modules/sportident/result_generation.py:34]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused attribute",
+   "line": 119,
+   "name": "card_read_repeated",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/modules/sportident/result_generation.py",
+   "tag": "[код: pysport@b548c35 sportorg/modules/sportident/result_generation.py:119]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused attribute",
+   "line": 147,
+   "name": "card_read_repeated",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/modules/sportident/result_generation.py",
+   "tag": "[код: pysport@b548c35 sportorg/modules/sportident/result_generation.py:147]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused attribute",
+   "line": 48,
+   "name": "_debug",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/modules/sportident/sireader.py",
+   "tag": "[код: pysport@b548c35 sportorg/modules/sportident/sireader.py:48]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused attribute",
+   "line": 35,
+   "name": "_debug",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/modules/sportiduino/sportiduino.py",
+   "tag": "[код: pysport@b548c35 sportorg/modules/sportiduino/sportiduino.py:35]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused attribute",
+   "line": 34,
+   "name": "_debug",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/modules/srpid/srpid.py",
+   "tag": "[код: pysport@b548c35 sportorg/modules/srpid/srpid.py:34]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused attribute",
+   "line": 19,
+   "name": "next_cmd_obj_type",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/modules/teamwork/command.py",
+   "tag": "[код: pysport@b548c35 sportorg/modules/teamwork/command.py:19]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused function",
+   "line": 56,
+   "name": "load_teamwork_key_from_file",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/modules/teamwork/crypto.py",
+   "tag": "[код: pysport@b548c35 sportorg/modules/teamwork/crypto.py:56]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused variable",
+   "line": 46,
+   "name": "Create",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/modules/teamwork/packet_header.py",
+   "tag": "[код: pysport@b548c35 sportorg/modules/teamwork/packet_header.py:46]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused variable",
+   "line": 49,
+   "name": "Delete",
+   "name_in_string": true,
+   "name_is_string": true,
+   "path": "sportorg/modules/teamwork/packet_header.py",
+   "tag": "[код: pysport@b548c35 sportorg/modules/teamwork/packet_header.py:49]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused variable",
+   "line": 50,
+   "name": "SyncRace",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/modules/teamwork/packet_header.py",
+   "tag": "[код: pysport@b548c35 sportorg/modules/teamwork/packet_header.py:50]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused variable",
+   "line": 51,
+   "name": "GetLock",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/modules/teamwork/packet_header.py",
+   "tag": "[код: pysport@b548c35 sportorg/modules/teamwork/packet_header.py:51]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused variable",
+   "line": 52,
+   "name": "ReleaseLoc",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/modules/teamwork/packet_header.py",
+   "tag": "[код: pysport@b548c35 sportorg/modules/teamwork/packet_header.py:52]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused method",
+   "line": 125,
+   "name": "prepare_header",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/modules/teamwork/packet_header.py",
+   "tag": "[код: pysport@b548c35 sportorg/modules/teamwork/packet_header.py:125]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused property",
+   "line": 59,
+   "name": "is_complete",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/modules/winorient/wdb.py",
+   "tag": "[код: pysport@b548c35 sportorg/modules/winorient/wdb.py:59]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused variable",
+   "line": 56,
+   "name": "printer_main",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/settings.py",
+   "tag": "[код: pysport@b548c35 sportorg/settings.py:56]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused attribute",
+   "line": 282,
+   "name": "printer_main",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/settings.py",
+   "tag": "[код: pysport@b548c35 sportorg/settings.py:282]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused function",
+   "line": 78,
+   "name": "date_to_yyyymmdd",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/utils/time.py",
+   "tag": "[код: pysport@b548c35 sportorg/utils/time.py:78]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused function",
+   "line": 111,
+   "name": "time_remove_day",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/utils/time.py",
+   "tag": "[код: pysport@b548c35 sportorg/utils/time.py:111]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused function",
+   "line": 133,
+   "name": "time_to_minutes",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/utils/time.py",
+   "tag": "[код: pysport@b548c35 sportorg/utils/time.py:133]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused function",
+   "line": 151,
+   "name": "date_to_qdate",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/utils/time.py",
+   "tag": "[код: pysport@b548c35 sportorg/utils/time.py:151]"
+  },
+  {
+   "confidence": 60,
+   "kind": "unused function",
+   "line": 157,
+   "name": "str_to_date",
+   "name_in_string": false,
+   "name_is_string": false,
+   "path": "sportorg/utils/time.py",
+   "tag": "[код: pysport@b548c35 sportorg/utils/time.py:157]"
+  }
+ ],
+ "summary": {
+  "by_confidence": {
+   "100": 4,
+   "60": 278
+  },
+  "by_kind": {
+   "redundant if-condition": 2,
+   "unreachable code": 1,
+   "unused attribute": 41,
+   "unused class": 92,
+   "unused function": 12,
+   "unused method": 81,
+   "unused property": 3,
+   "unused variable": 50
+  },
+  "findings": 282,
+  "name_in_string": 109,
+  "name_in_string_by_kind": {
+   "unused class": 86,
+   "unused property": 2,
+   "unused variable": 21
+  },
+  "name_is_string": 108
+ }
+}

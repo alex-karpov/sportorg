@@ -1,0 +1,6603 @@
+{
+ "edges": [
+  {
+   "dst": "sportorg.common.singleton",
+   "line": 12,
+   "local": false,
+   "path": "sportorg/common/audio.py",
+   "src": "sportorg.common.audio",
+   "tag": "[код: pysport@b548c35 sportorg/common/audio.py:12]"
+  },
+  {
+   "dst": "sportorg.config",
+   "line": 11,
+   "local": false,
+   "path": "sportorg/common/audio.py",
+   "src": "sportorg.common.audio",
+   "tag": "[код: pysport@b548c35 sportorg/common/audio.py:11]"
+  },
+  {
+   "dst": "sportorg.config",
+   "line": 4,
+   "local": false,
+   "path": "sportorg/common/template.py",
+   "src": "sportorg.common.template",
+   "tag": "[код: pysport@b548c35 sportorg/common/template.py:4]"
+  },
+  {
+   "dst": "sportorg.libs.template.template",
+   "line": 5,
+   "local": false,
+   "path": "sportorg/common/template.py",
+   "src": "sportorg.common.template",
+   "tag": "[код: pysport@b548c35 sportorg/common/template.py:5]"
+  },
+  {
+   "dst": "sportorg.settings",
+   "line": 4,
+   "local": false,
+   "path": "sportorg/common/template.py",
+   "src": "sportorg.common.template",
+   "tag": "[код: pysport@b548c35 sportorg/common/template.py:4]"
+  },
+  {
+   "dst": "sportorg.paths",
+   "line": 7,
+   "local": false,
+   "path": "sportorg/config.py",
+   "src": "sportorg.config",
+   "tag": "[код: pysport@b548c35 sportorg/config.py:7]"
+  },
+  {
+   "dst": "sportorg.config",
+   "line": 10,
+   "local": false,
+   "path": "sportorg/gui/dialogs/about.py",
+   "src": "sportorg.gui.dialogs.about",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/about.py:10]"
+  },
+  {
+   "dst": "sportorg.gui.global_access",
+   "line": 11,
+   "local": false,
+   "path": "sportorg/gui/dialogs/about.py",
+   "src": "sportorg.gui.dialogs.about",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/about.py:11]"
+  },
+  {
+   "dst": "sportorg.language",
+   "line": 12,
+   "local": false,
+   "path": "sportorg/gui/dialogs/about.py",
+   "src": "sportorg.gui.dialogs.about",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/about.py:12]"
+  },
+  {
+   "dst": "sportorg.config",
+   "line": 24,
+   "local": false,
+   "path": "sportorg/gui/dialogs/bib_dialog.py",
+   "src": "sportorg.gui.dialogs.bib_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/bib_dialog.py:24]"
+  },
+  {
+   "dst": "sportorg.gui.global_access",
+   "line": 25,
+   "local": false,
+   "path": "sportorg/gui/dialogs/bib_dialog.py",
+   "src": "sportorg.gui.dialogs.bib_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/bib_dialog.py:25]"
+  },
+  {
+   "dst": "sportorg.language",
+   "line": 26,
+   "local": false,
+   "path": "sportorg/gui/dialogs/bib_dialog.py",
+   "src": "sportorg.gui.dialogs.bib_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/bib_dialog.py:26]"
+  },
+  {
+   "dst": "sportorg.models.memory",
+   "line": 27,
+   "local": false,
+   "path": "sportorg/gui/dialogs/bib_dialog.py",
+   "src": "sportorg.gui.dialogs.bib_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/bib_dialog.py:27]"
+  },
+  {
+   "dst": "sportorg.modules.sound",
+   "line": 28,
+   "local": false,
+   "path": "sportorg/gui/dialogs/bib_dialog.py",
+   "src": "sportorg.gui.dialogs.bib_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/bib_dialog.py:28]"
+  },
+  {
+   "dst": "sportorg.config",
+   "line": 22,
+   "local": false,
+   "path": "sportorg/gui/dialogs/control_time_change_dialog.py",
+   "src": "sportorg.gui.dialogs.control_time_change_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/control_time_change_dialog.py:22]"
+  },
+  {
+   "dst": "sportorg.gui.global_access",
+   "line": 23,
+   "local": false,
+   "path": "sportorg/gui/dialogs/control_time_change_dialog.py",
+   "src": "sportorg.gui.dialogs.control_time_change_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/control_time_change_dialog.py:23]"
+  },
+  {
+   "dst": "sportorg.gui.utils.custom_controls",
+   "line": 24,
+   "local": false,
+   "path": "sportorg/gui/dialogs/control_time_change_dialog.py",
+   "src": "sportorg.gui.dialogs.control_time_change_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/control_time_change_dialog.py:24]"
+  },
+  {
+   "dst": "sportorg.language",
+   "line": 25,
+   "local": false,
+   "path": "sportorg/gui/dialogs/control_time_change_dialog.py",
+   "src": "sportorg.gui.dialogs.control_time_change_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/control_time_change_dialog.py:25]"
+  },
+  {
+   "dst": "sportorg.models.result.result_tools",
+   "line": 26,
+   "local": false,
+   "path": "sportorg/gui/dialogs/control_time_change_dialog.py",
+   "src": "sportorg.gui.dialogs.control_time_change_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/control_time_change_dialog.py:26]"
+  },
+  {
+   "dst": "sportorg.gui.dialogs.dialog",
+   "line": 4,
+   "local": false,
+   "path": "sportorg/gui/dialogs/course_edit.py",
+   "src": "sportorg.gui.dialogs.course_edit",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/course_edit.py:4]"
+  },
+  {
+   "dst": "sportorg.gui.global_access",
+   "line": 5,
+   "local": false,
+   "path": "sportorg/gui/dialogs/course_edit.py",
+   "src": "sportorg.gui.dialogs.course_edit",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/course_edit.py:5]"
+  },
+  {
+   "dst": "sportorg.language",
+   "line": 6,
+   "local": false,
+   "path": "sportorg/gui/dialogs/course_edit.py",
+   "src": "sportorg.gui.dialogs.course_edit",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/course_edit.py:6]"
+  },
+  {
+   "dst": "sportorg.models.memory",
+   "line": 7,
+   "local": false,
+   "path": "sportorg/gui/dialogs/course_edit.py",
+   "src": "sportorg.gui.dialogs.course_edit",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/course_edit.py:7]"
+  },
+  {
+   "dst": "sportorg.models.result.result_tools",
+   "line": 8,
+   "local": false,
+   "path": "sportorg/gui/dialogs/course_edit.py",
+   "src": "sportorg.gui.dialogs.course_edit",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/course_edit.py:8]"
+  },
+  {
+   "dst": "sportorg.modules.teamwork.teamwork",
+   "line": 9,
+   "local": false,
+   "path": "sportorg/gui/dialogs/course_edit.py",
+   "src": "sportorg.gui.dialogs.course_edit",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/course_edit.py:9]"
+  },
+  {
+   "dst": "sportorg.config",
+   "line": 24,
+   "local": false,
+   "path": "sportorg/gui/dialogs/cp_delete.py",
+   "src": "sportorg.gui.dialogs.cp_delete",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/cp_delete.py:24]"
+  },
+  {
+   "dst": "sportorg.gui.global_access",
+   "line": 25,
+   "local": false,
+   "path": "sportorg/gui/dialogs/cp_delete.py",
+   "src": "sportorg.gui.dialogs.cp_delete",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/cp_delete.py:25]"
+  },
+  {
+   "dst": "sportorg.gui.utils.custom_controls",
+   "line": 26,
+   "local": false,
+   "path": "sportorg/gui/dialogs/cp_delete.py",
+   "src": "sportorg.gui.dialogs.cp_delete",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/cp_delete.py:26]"
+  },
+  {
+   "dst": "sportorg.language",
+   "line": 27,
+   "local": false,
+   "path": "sportorg/gui/dialogs/cp_delete.py",
+   "src": "sportorg.gui.dialogs.cp_delete",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/cp_delete.py:27]"
+  },
+  {
+   "dst": "sportorg.models.memory",
+   "line": 28,
+   "local": false,
+   "path": "sportorg/gui/dialogs/cp_delete.py",
+   "src": "sportorg.gui.dialogs.cp_delete",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/cp_delete.py:28]"
+  },
+  {
+   "dst": "sportorg.models.result.result_tools",
+   "line": 29,
+   "local": false,
+   "path": "sportorg/gui/dialogs/cp_delete.py",
+   "src": "sportorg.gui.dialogs.cp_delete",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/cp_delete.py:29]"
+  },
+  {
+   "dst": "sportorg.config",
+   "line": 40,
+   "local": false,
+   "path": "sportorg/gui/dialogs/dialog.py",
+   "src": "sportorg.gui.dialogs.dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/dialog.py:40]"
+  },
+  {
+   "dst": "sportorg.gui.utils.custom_controls",
+   "line": 41,
+   "local": false,
+   "path": "sportorg/gui/dialogs/dialog.py",
+   "src": "sportorg.gui.dialogs.dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/dialog.py:41]"
+  },
+  {
+   "dst": "sportorg.language",
+   "line": 42,
+   "local": false,
+   "path": "sportorg/gui/dialogs/dialog.py",
+   "src": "sportorg.gui.dialogs.dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/dialog.py:42]"
+  },
+  {
+   "dst": "sportorg.utils.time",
+   "line": 43,
+   "local": false,
+   "path": "sportorg/gui/dialogs/dialog.py",
+   "src": "sportorg.gui.dialogs.dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/dialog.py:43]"
+  },
+  {
+   "dst": "sportorg.config",
+   "line": 13,
+   "local": false,
+   "path": "sportorg/gui/dialogs/entry_mass_edit.py",
+   "src": "sportorg.gui.dialogs.entry_mass_edit",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/entry_mass_edit.py:13]"
+  },
+  {
+   "dst": "sportorg.gui.global_access",
+   "line": 14,
+   "local": false,
+   "path": "sportorg/gui/dialogs/entry_mass_edit.py",
+   "src": "sportorg.gui.dialogs.entry_mass_edit",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/entry_mass_edit.py:14]"
+  },
+  {
+   "dst": "sportorg.gui.utils.custom_controls",
+   "line": 15,
+   "local": false,
+   "path": "sportorg/gui/dialogs/entry_mass_edit.py",
+   "src": "sportorg.gui.dialogs.entry_mass_edit",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/entry_mass_edit.py:15]"
+  },
+  {
+   "dst": "sportorg.language",
+   "line": 16,
+   "local": false,
+   "path": "sportorg/gui/dialogs/entry_mass_edit.py",
+   "src": "sportorg.gui.dialogs.entry_mass_edit",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/entry_mass_edit.py:16]"
+  },
+  {
+   "dst": "sportorg.models.constant",
+   "line": 17,
+   "local": false,
+   "path": "sportorg/gui/dialogs/entry_mass_edit.py",
+   "src": "sportorg.gui.dialogs.entry_mass_edit",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/entry_mass_edit.py:17]"
+  },
+  {
+   "dst": "sportorg.models.memory",
+   "line": 18,
+   "local": false,
+   "path": "sportorg/gui/dialogs/entry_mass_edit.py",
+   "src": "sportorg.gui.dialogs.entry_mass_edit",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/entry_mass_edit.py:18]"
+  },
+  {
+   "dst": "sportorg.config",
+   "line": 26,
+   "local": false,
+   "path": "sportorg/gui/dialogs/event_properties.py",
+   "src": "sportorg.gui.dialogs.event_properties",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/event_properties.py:26]"
+  },
+  {
+   "dst": "sportorg.gui.global_access",
+   "line": 27,
+   "local": false,
+   "path": "sportorg/gui/dialogs/event_properties.py",
+   "src": "sportorg.gui.dialogs.event_properties",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/event_properties.py:27]"
+  },
+  {
+   "dst": "sportorg.gui.utils.custom_controls",
+   "line": 28,
+   "local": false,
+   "path": "sportorg/gui/dialogs/event_properties.py",
+   "src": "sportorg.gui.dialogs.event_properties",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/event_properties.py:28]"
+  },
+  {
+   "dst": "sportorg.language",
+   "line": 29,
+   "local": false,
+   "path": "sportorg/gui/dialogs/event_properties.py",
+   "src": "sportorg.gui.dialogs.event_properties",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/event_properties.py:29]"
+  },
+  {
+   "dst": "sportorg.models.memory",
+   "line": 30,
+   "local": false,
+   "path": "sportorg/gui/dialogs/event_properties.py",
+   "src": "sportorg.gui.dialogs.event_properties",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/event_properties.py:30]"
+  },
+  {
+   "dst": "sportorg.models.result.result_tools",
+   "line": 31,
+   "local": false,
+   "path": "sportorg/gui/dialogs/event_properties.py",
+   "src": "sportorg.gui.dialogs.event_properties",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/event_properties.py:31]"
+  },
+  {
+   "dst": "sportorg.settings",
+   "line": 10,
+   "local": false,
+   "path": "sportorg/gui/dialogs/file_dialog.py",
+   "src": "sportorg.gui.dialogs.file_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/file_dialog.py:10]"
+  },
+  {
+   "dst": "sportorg.config",
+   "line": 12,
+   "local": false,
+   "path": "sportorg/gui/dialogs/filter_dialog.py",
+   "src": "sportorg.gui.dialogs.filter_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/filter_dialog.py:12]"
+  },
+  {
+   "dst": "sportorg.gui.dialogs.person_edit",
+   "line": 13,
+   "local": false,
+   "path": "sportorg/gui/dialogs/filter_dialog.py",
+   "src": "sportorg.gui.dialogs.filter_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/filter_dialog.py:13]"
+  },
+  {
+   "dst": "sportorg.gui.global_access",
+   "line": 14,
+   "local": false,
+   "path": "sportorg/gui/dialogs/filter_dialog.py",
+   "src": "sportorg.gui.dialogs.filter_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/filter_dialog.py:14]"
+  },
+  {
+   "dst": "sportorg.gui.utils.custom_controls",
+   "line": 15,
+   "local": false,
+   "path": "sportorg/gui/dialogs/filter_dialog.py",
+   "src": "sportorg.gui.dialogs.filter_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/filter_dialog.py:15]"
+  },
+  {
+   "dst": "sportorg.language",
+   "line": 16,
+   "local": false,
+   "path": "sportorg/gui/dialogs/filter_dialog.py",
+   "src": "sportorg.gui.dialogs.filter_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/filter_dialog.py:16]"
+  },
+  {
+   "dst": "sportorg.gui.dialogs.dialog",
+   "line": 3,
+   "local": false,
+   "path": "sportorg/gui/dialogs/group_edit.py",
+   "src": "sportorg.gui.dialogs.group_edit",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/group_edit.py:3]"
+  },
+  {
+   "dst": "sportorg.gui.dialogs.group_ranking",
+   "line": 12,
+   "local": false,
+   "path": "sportorg/gui/dialogs/group_edit.py",
+   "src": "sportorg.gui.dialogs.group_edit",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/group_edit.py:12]"
+  },
+  {
+   "dst": "sportorg.gui.global_access",
+   "line": 13,
+   "local": false,
+   "path": "sportorg/gui/dialogs/group_edit.py",
+   "src": "sportorg.gui.dialogs.group_edit",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/group_edit.py:13]"
+  },
+  {
+   "dst": "sportorg.language",
+   "line": 14,
+   "local": false,
+   "path": "sportorg/gui/dialogs/group_edit.py",
+   "src": "sportorg.gui.dialogs.group_edit",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/group_edit.py:14]"
+  },
+  {
+   "dst": "sportorg.models.constant",
+   "line": 15,
+   "local": false,
+   "path": "sportorg/gui/dialogs/group_edit.py",
+   "src": "sportorg.gui.dialogs.group_edit",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/group_edit.py:15]"
+  },
+  {
+   "dst": "sportorg.models.memory",
+   "line": 16,
+   "local": false,
+   "path": "sportorg/gui/dialogs/group_edit.py",
+   "src": "sportorg.gui.dialogs.group_edit",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/group_edit.py:16]"
+  },
+  {
+   "dst": "sportorg.models.result.result_calculation",
+   "line": 17,
+   "local": false,
+   "path": "sportorg/gui/dialogs/group_edit.py",
+   "src": "sportorg.gui.dialogs.group_edit",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/group_edit.py:17]"
+  },
+  {
+   "dst": "sportorg.modules.live.live",
+   "line": 18,
+   "local": false,
+   "path": "sportorg/gui/dialogs/group_edit.py",
+   "src": "sportorg.gui.dialogs.group_edit",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/group_edit.py:18]"
+  },
+  {
+   "dst": "sportorg.modules.teamwork.teamwork",
+   "line": 19,
+   "local": false,
+   "path": "sportorg/gui/dialogs/group_edit.py",
+   "src": "sportorg.gui.dialogs.group_edit",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/group_edit.py:19]"
+  },
+  {
+   "dst": "sportorg.config",
+   "line": 13,
+   "local": false,
+   "path": "sportorg/gui/dialogs/group_mass_edit.py",
+   "src": "sportorg.gui.dialogs.group_mass_edit",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/group_mass_edit.py:13]"
+  },
+  {
+   "dst": "sportorg.gui.global_access",
+   "line": 14,
+   "local": false,
+   "path": "sportorg/gui/dialogs/group_mass_edit.py",
+   "src": "sportorg.gui.dialogs.group_mass_edit",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/group_mass_edit.py:14]"
+  },
+  {
+   "dst": "sportorg.gui.utils.custom_controls",
+   "line": 15,
+   "local": false,
+   "path": "sportorg/gui/dialogs/group_mass_edit.py",
+   "src": "sportorg.gui.dialogs.group_mass_edit",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/group_mass_edit.py:15]"
+  },
+  {
+   "dst": "sportorg.language",
+   "line": 16,
+   "local": false,
+   "path": "sportorg/gui/dialogs/group_mass_edit.py",
+   "src": "sportorg.gui.dialogs.group_mass_edit",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/group_mass_edit.py:16]"
+  },
+  {
+   "dst": "sportorg.models.constant",
+   "line": 17,
+   "local": false,
+   "path": "sportorg/gui/dialogs/group_mass_edit.py",
+   "src": "sportorg.gui.dialogs.group_mass_edit",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/group_mass_edit.py:17]"
+  },
+  {
+   "dst": "sportorg.models.memory",
+   "line": 18,
+   "local": false,
+   "path": "sportorg/gui/dialogs/group_mass_edit.py",
+   "src": "sportorg.gui.dialogs.group_mass_edit",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/group_mass_edit.py:18]"
+  },
+  {
+   "dst": "sportorg.config",
+   "line": 22,
+   "local": false,
+   "path": "sportorg/gui/dialogs/group_ranking.py",
+   "src": "sportorg.gui.dialogs.group_ranking",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/group_ranking.py:22]"
+  },
+  {
+   "dst": "sportorg.gui.global_access",
+   "line": 23,
+   "local": false,
+   "path": "sportorg/gui/dialogs/group_ranking.py",
+   "src": "sportorg.gui.dialogs.group_ranking",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/group_ranking.py:23]"
+  },
+  {
+   "dst": "sportorg.gui.utils.custom_controls",
+   "line": 24,
+   "local": false,
+   "path": "sportorg/gui/dialogs/group_ranking.py",
+   "src": "sportorg.gui.dialogs.group_ranking",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/group_ranking.py:24]"
+  },
+  {
+   "dst": "sportorg.language",
+   "line": 25,
+   "local": false,
+   "path": "sportorg/gui/dialogs/group_ranking.py",
+   "src": "sportorg.gui.dialogs.group_ranking",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/group_ranking.py:25]"
+  },
+  {
+   "dst": "sportorg.models.memory",
+   "line": 26,
+   "local": false,
+   "path": "sportorg/gui/dialogs/group_ranking.py",
+   "src": "sportorg.gui.dialogs.group_ranking",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/group_ranking.py:26]"
+  },
+  {
+   "dst": "sportorg.models.result.result_calculation",
+   "line": 27,
+   "local": false,
+   "path": "sportorg/gui/dialogs/group_ranking.py",
+   "src": "sportorg.gui.dialogs.group_ranking",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/group_ranking.py:27]"
+  },
+  {
+   "dst": "sportorg.gui.global_access",
+   "line": 31,
+   "local": false,
+   "path": "sportorg/gui/dialogs/huichang_management_dialog.py",
+   "src": "sportorg.gui.dialogs.huichang_management_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/huichang_management_dialog.py:31]"
+  },
+  {
+   "dst": "sportorg.gui.utils.custom_controls",
+   "line": 32,
+   "local": false,
+   "path": "sportorg/gui/dialogs/huichang_management_dialog.py",
+   "src": "sportorg.gui.dialogs.huichang_management_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/huichang_management_dialog.py:32]"
+  },
+  {
+   "dst": "sportorg.language",
+   "line": 33,
+   "local": false,
+   "path": "sportorg/gui/dialogs/huichang_management_dialog.py",
+   "src": "sportorg.gui.dialogs.huichang_management_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/huichang_management_dialog.py:33]"
+  },
+  {
+   "dst": "sportorg.libs.huichang.huichang",
+   "line": 34,
+   "local": false,
+   "path": "sportorg/gui/dialogs/huichang_management_dialog.py",
+   "src": "sportorg.gui.dialogs.huichang_management_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/huichang_management_dialog.py:34]"
+  },
+  {
+   "dst": "sportorg.modules.sportident.sireader",
+   "line": 35,
+   "local": false,
+   "path": "sportorg/gui/dialogs/huichang_management_dialog.py",
+   "src": "sportorg.gui.dialogs.huichang_management_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/huichang_management_dialog.py:35]"
+  },
+  {
+   "dst": "sportorg.config",
+   "line": 25,
+   "local": false,
+   "path": "sportorg/gui/dialogs/import_persons_table_dialog.py",
+   "src": "sportorg.gui.dialogs.import_persons_table_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/import_persons_table_dialog.py:25]"
+  },
+  {
+   "dst": "sportorg.gui.dialogs.text_io",
+   "line": 26,
+   "local": false,
+   "path": "sportorg/gui/dialogs/import_persons_table_dialog.py",
+   "src": "sportorg.gui.dialogs.import_persons_table_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/import_persons_table_dialog.py:26]"
+  },
+  {
+   "dst": "sportorg.gui.global_access",
+   "line": 27,
+   "local": false,
+   "path": "sportorg/gui/dialogs/import_persons_table_dialog.py",
+   "src": "sportorg.gui.dialogs.import_persons_table_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/import_persons_table_dialog.py:27]"
+  },
+  {
+   "dst": "sportorg.gui.utils.custom_controls",
+   "line": 28,
+   "local": false,
+   "path": "sportorg/gui/dialogs/import_persons_table_dialog.py",
+   "src": "sportorg.gui.dialogs.import_persons_table_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/import_persons_table_dialog.py:28]"
+  },
+  {
+   "dst": "sportorg.language",
+   "line": 29,
+   "local": false,
+   "path": "sportorg/gui/dialogs/import_persons_table_dialog.py",
+   "src": "sportorg.gui.dialogs.import_persons_table_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/import_persons_table_dialog.py:29]"
+  },
+  {
+   "dst": "sportorg.models.memory",
+   "line": 30,
+   "local": false,
+   "path": "sportorg/gui/dialogs/import_persons_table_dialog.py",
+   "src": "sportorg.gui.dialogs.import_persons_table_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/import_persons_table_dialog.py:30]"
+  },
+  {
+   "dst": "sportorg.models.memory",
+   "line": 31,
+   "local": false,
+   "path": "sportorg/gui/dialogs/import_persons_table_dialog.py",
+   "src": "sportorg.gui.dialogs.import_persons_table_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/import_persons_table_dialog.py:31]"
+  },
+  {
+   "dst": "sportorg.utils.time",
+   "line": 32,
+   "local": false,
+   "path": "sportorg/gui/dialogs/import_persons_table_dialog.py",
+   "src": "sportorg.gui.dialogs.import_persons_table_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/import_persons_table_dialog.py:32]"
+  },
+  {
+   "dst": "sportorg.config",
+   "line": 30,
+   "local": false,
+   "path": "sportorg/gui/dialogs/live_dialog.py",
+   "src": "sportorg.gui.dialogs.live_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/live_dialog.py:30]"
+  },
+  {
+   "dst": "sportorg.gui.global_access",
+   "line": 31,
+   "local": false,
+   "path": "sportorg/gui/dialogs/live_dialog.py",
+   "src": "sportorg.gui.dialogs.live_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/live_dialog.py:31]"
+  },
+  {
+   "dst": "sportorg.gui.utils.custom_controls",
+   "line": 32,
+   "local": false,
+   "path": "sportorg/gui/dialogs/live_dialog.py",
+   "src": "sportorg.gui.dialogs.live_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/live_dialog.py:32]"
+  },
+  {
+   "dst": "sportorg.language",
+   "line": 33,
+   "local": false,
+   "path": "sportorg/gui/dialogs/live_dialog.py",
+   "src": "sportorg.gui.dialogs.live_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/live_dialog.py:33]"
+  },
+  {
+   "dst": "sportorg.models.memory",
+   "line": 34,
+   "local": false,
+   "path": "sportorg/gui/dialogs/live_dialog.py",
+   "src": "sportorg.gui.dialogs.live_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/live_dialog.py:34]"
+  },
+  {
+   "dst": "sportorg.settings",
+   "line": 30,
+   "local": false,
+   "path": "sportorg/gui/dialogs/live_dialog.py",
+   "src": "sportorg.gui.dialogs.live_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/live_dialog.py:30]"
+  },
+  {
+   "dst": "sportorg.config",
+   "line": 24,
+   "local": false,
+   "path": "sportorg/gui/dialogs/marked_route_dialog.py",
+   "src": "sportorg.gui.dialogs.marked_route_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/marked_route_dialog.py:24]"
+  },
+  {
+   "dst": "sportorg.gui.global_access",
+   "line": 25,
+   "local": false,
+   "path": "sportorg/gui/dialogs/marked_route_dialog.py",
+   "src": "sportorg.gui.dialogs.marked_route_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/marked_route_dialog.py:25]"
+  },
+  {
+   "dst": "sportorg.language",
+   "line": 26,
+   "local": false,
+   "path": "sportorg/gui/dialogs/marked_route_dialog.py",
+   "src": "sportorg.gui.dialogs.marked_route_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/marked_route_dialog.py:26]"
+  },
+  {
+   "dst": "sportorg.models.memory",
+   "line": 27,
+   "local": false,
+   "path": "sportorg/gui/dialogs/marked_route_dialog.py",
+   "src": "sportorg.gui.dialogs.marked_route_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/marked_route_dialog.py:27]"
+  },
+  {
+   "dst": "sportorg.common.otime",
+   "line": 11,
+   "local": false,
+   "path": "sportorg/gui/dialogs/merge_results.py",
+   "src": "sportorg.gui.dialogs.merge_results",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/merge_results.py:11]"
+  },
+  {
+   "dst": "sportorg.config",
+   "line": 10,
+   "local": false,
+   "path": "sportorg/gui/dialogs/merge_results.py",
+   "src": "sportorg.gui.dialogs.merge_results",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/merge_results.py:10]"
+  },
+  {
+   "dst": "sportorg.gui.global_access",
+   "line": 12,
+   "local": false,
+   "path": "sportorg/gui/dialogs/merge_results.py",
+   "src": "sportorg.gui.dialogs.merge_results",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/merge_results.py:12]"
+  },
+  {
+   "dst": "sportorg.gui.utils.custom_controls",
+   "line": 13,
+   "local": false,
+   "path": "sportorg/gui/dialogs/merge_results.py",
+   "src": "sportorg.gui.dialogs.merge_results",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/merge_results.py:13]"
+  },
+  {
+   "dst": "sportorg.language",
+   "line": 14,
+   "local": false,
+   "path": "sportorg/gui/dialogs/merge_results.py",
+   "src": "sportorg.gui.dialogs.merge_results",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/merge_results.py:14]"
+  },
+  {
+   "dst": "sportorg.models.memory",
+   "line": 15,
+   "local": false,
+   "path": "sportorg/gui/dialogs/merge_results.py",
+   "src": "sportorg.gui.dialogs.merge_results",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/merge_results.py:15]"
+  },
+  {
+   "dst": "sportorg.models.result.result_tools",
+   "line": 16,
+   "local": false,
+   "path": "sportorg/gui/dialogs/merge_results.py",
+   "src": "sportorg.gui.dialogs.merge_results",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/merge_results.py:16]"
+  },
+  {
+   "dst": "sportorg.config",
+   "line": 24,
+   "local": false,
+   "path": "sportorg/gui/dialogs/not_start_dialog.py",
+   "src": "sportorg.gui.dialogs.not_start_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/not_start_dialog.py:24]"
+  },
+  {
+   "dst": "sportorg.gui.global_access",
+   "line": 25,
+   "local": false,
+   "path": "sportorg/gui/dialogs/not_start_dialog.py",
+   "src": "sportorg.gui.dialogs.not_start_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/not_start_dialog.py:25]"
+  },
+  {
+   "dst": "sportorg.gui.utils.custom_controls",
+   "line": 26,
+   "local": false,
+   "path": "sportorg/gui/dialogs/not_start_dialog.py",
+   "src": "sportorg.gui.dialogs.not_start_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/not_start_dialog.py:26]"
+  },
+  {
+   "dst": "sportorg.language",
+   "line": 27,
+   "local": false,
+   "path": "sportorg/gui/dialogs/not_start_dialog.py",
+   "src": "sportorg.gui.dialogs.not_start_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/not_start_dialog.py:27]"
+  },
+  {
+   "dst": "sportorg.models.constant",
+   "line": 28,
+   "local": false,
+   "path": "sportorg/gui/dialogs/not_start_dialog.py",
+   "src": "sportorg.gui.dialogs.not_start_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/not_start_dialog.py:28]"
+  },
+  {
+   "dst": "sportorg.models.memory",
+   "line": 29,
+   "local": false,
+   "path": "sportorg/gui/dialogs/not_start_dialog.py",
+   "src": "sportorg.gui.dialogs.not_start_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/not_start_dialog.py:29]"
+  },
+  {
+   "dst": "sportorg.models.result.result_tools",
+   "line": 30,
+   "local": false,
+   "path": "sportorg/gui/dialogs/not_start_dialog.py",
+   "src": "sportorg.gui.dialogs.not_start_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/not_start_dialog.py:30]"
+  },
+  {
+   "dst": "sportorg.modules.live.live",
+   "line": 31,
+   "local": false,
+   "path": "sportorg/gui/dialogs/not_start_dialog.py",
+   "src": "sportorg.gui.dialogs.not_start_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/not_start_dialog.py:31]"
+  },
+  {
+   "dst": "sportorg.modules.teamwork.teamwork",
+   "line": 32,
+   "local": false,
+   "path": "sportorg/gui/dialogs/not_start_dialog.py",
+   "src": "sportorg.gui.dialogs.not_start_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/not_start_dialog.py:32]"
+  },
+  {
+   "dst": "sportorg.gui.dialogs.dialog",
+   "line": 1,
+   "local": false,
+   "path": "sportorg/gui/dialogs/organization_edit.py",
+   "src": "sportorg.gui.dialogs.organization_edit",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/organization_edit.py:1]"
+  },
+  {
+   "dst": "sportorg.gui.global_access",
+   "line": 2,
+   "local": false,
+   "path": "sportorg/gui/dialogs/organization_edit.py",
+   "src": "sportorg.gui.dialogs.organization_edit",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/organization_edit.py:2]"
+  },
+  {
+   "dst": "sportorg.language",
+   "line": 3,
+   "local": false,
+   "path": "sportorg/gui/dialogs/organization_edit.py",
+   "src": "sportorg.gui.dialogs.organization_edit",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/organization_edit.py:3]"
+  },
+  {
+   "dst": "sportorg.models.constant",
+   "line": 4,
+   "local": false,
+   "path": "sportorg/gui/dialogs/organization_edit.py",
+   "src": "sportorg.gui.dialogs.organization_edit",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/organization_edit.py:4]"
+  },
+  {
+   "dst": "sportorg.models.memory",
+   "line": 5,
+   "local": false,
+   "path": "sportorg/gui/dialogs/organization_edit.py",
+   "src": "sportorg.gui.dialogs.organization_edit",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/organization_edit.py:5]"
+  },
+  {
+   "dst": "sportorg.modules.live.live",
+   "line": 6,
+   "local": false,
+   "path": "sportorg/gui/dialogs/organization_edit.py",
+   "src": "sportorg.gui.dialogs.organization_edit",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/organization_edit.py:6]"
+  },
+  {
+   "dst": "sportorg.modules.teamwork.teamwork",
+   "line": 7,
+   "local": false,
+   "path": "sportorg/gui/dialogs/organization_edit.py",
+   "src": "sportorg.gui.dialogs.organization_edit",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/organization_edit.py:7]"
+  },
+  {
+   "dst": "sportorg.config",
+   "line": 12,
+   "local": false,
+   "path": "sportorg/gui/dialogs/organization_mass_edit.py",
+   "src": "sportorg.gui.dialogs.organization_mass_edit",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/organization_mass_edit.py:12]"
+  },
+  {
+   "dst": "sportorg.gui.global_access",
+   "line": 13,
+   "local": false,
+   "path": "sportorg/gui/dialogs/organization_mass_edit.py",
+   "src": "sportorg.gui.dialogs.organization_mass_edit",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/organization_mass_edit.py:13]"
+  },
+  {
+   "dst": "sportorg.gui.utils.custom_controls",
+   "line": 14,
+   "local": false,
+   "path": "sportorg/gui/dialogs/organization_mass_edit.py",
+   "src": "sportorg.gui.dialogs.organization_mass_edit",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/organization_mass_edit.py:14]"
+  },
+  {
+   "dst": "sportorg.language",
+   "line": 15,
+   "local": false,
+   "path": "sportorg/gui/dialogs/organization_mass_edit.py",
+   "src": "sportorg.gui.dialogs.organization_mass_edit",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/organization_mass_edit.py:15]"
+  },
+  {
+   "dst": "sportorg.models.constant",
+   "line": 16,
+   "local": false,
+   "path": "sportorg/gui/dialogs/organization_mass_edit.py",
+   "src": "sportorg.gui.dialogs.organization_mass_edit",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/organization_mass_edit.py:16]"
+  },
+  {
+   "dst": "sportorg.models.memory",
+   "line": 17,
+   "local": false,
+   "path": "sportorg/gui/dialogs/organization_mass_edit.py",
+   "src": "sportorg.gui.dialogs.organization_mass_edit",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/organization_mass_edit.py:17]"
+  },
+  {
+   "dst": "sportorg.gui.dialogs.dialog",
+   "line": 4,
+   "local": false,
+   "path": "sportorg/gui/dialogs/person_edit.py",
+   "src": "sportorg.gui.dialogs.person_edit",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/person_edit.py:4]"
+  },
+  {
+   "dst": "sportorg.gui.global_access",
+   "line": 16,
+   "local": false,
+   "path": "sportorg/gui/dialogs/person_edit.py",
+   "src": "sportorg.gui.dialogs.person_edit",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/person_edit.py:16]"
+  },
+  {
+   "dst": "sportorg.language",
+   "line": 17,
+   "local": false,
+   "path": "sportorg/gui/dialogs/person_edit.py",
+   "src": "sportorg.gui.dialogs.person_edit",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/person_edit.py:17]"
+  },
+  {
+   "dst": "sportorg.models.constant",
+   "line": 18,
+   "local": false,
+   "path": "sportorg/gui/dialogs/person_edit.py",
+   "src": "sportorg.gui.dialogs.person_edit",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/person_edit.py:18]"
+  },
+  {
+   "dst": "sportorg.models.memory",
+   "line": 24,
+   "local": false,
+   "path": "sportorg/gui/dialogs/person_edit.py",
+   "src": "sportorg.gui.dialogs.person_edit",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/person_edit.py:24]"
+  },
+  {
+   "dst": "sportorg.models.result.result_tools",
+   "line": 32,
+   "local": false,
+   "path": "sportorg/gui/dialogs/person_edit.py",
+   "src": "sportorg.gui.dialogs.person_edit",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/person_edit.py:32]"
+  },
+  {
+   "dst": "sportorg.modules.live.live",
+   "line": 33,
+   "local": false,
+   "path": "sportorg/gui/dialogs/person_edit.py",
+   "src": "sportorg.gui.dialogs.person_edit",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/person_edit.py:33]"
+  },
+  {
+   "dst": "sportorg.modules.teamwork.teamwork",
+   "line": 34,
+   "local": false,
+   "path": "sportorg/gui/dialogs/person_edit.py",
+   "src": "sportorg.gui.dialogs.person_edit",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/person_edit.py:34]"
+  },
+  {
+   "dst": "sportorg.settings",
+   "line": 3,
+   "local": false,
+   "path": "sportorg/gui/dialogs/person_edit.py",
+   "src": "sportorg.gui.dialogs.person_edit",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/person_edit.py:3]"
+  },
+  {
+   "dst": "sportorg.config",
+   "line": 35,
+   "local": false,
+   "path": "sportorg/gui/dialogs/plugins.py",
+   "src": "sportorg.gui.dialogs.plugins",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/plugins.py:35]"
+  },
+  {
+   "dst": "sportorg.gui.global_access",
+   "line": 36,
+   "local": false,
+   "path": "sportorg/gui/dialogs/plugins.py",
+   "src": "sportorg.gui.dialogs.plugins",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/plugins.py:36]"
+  },
+  {
+   "dst": "sportorg.language",
+   "line": 37,
+   "local": false,
+   "path": "sportorg/gui/dialogs/plugins.py",
+   "src": "sportorg.gui.dialogs.plugins",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/plugins.py:37]"
+  },
+  {
+   "dst": "sportorg.modules.plugins",
+   "line": 38,
+   "local": false,
+   "path": "sportorg/gui/dialogs/plugins.py",
+   "src": "sportorg.gui.dialogs.plugins",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/plugins.py:38]"
+  },
+  {
+   "dst": "sportorg.settings",
+   "line": 35,
+   "local": false,
+   "path": "sportorg/gui/dialogs/plugins.py",
+   "src": "sportorg.gui.dialogs.plugins",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/plugins.py:35]"
+  },
+  {
+   "dst": "sportorg.common.template",
+   "line": 33,
+   "local": false,
+   "path": "sportorg/gui/dialogs/print_properties.py",
+   "src": "sportorg.gui.dialogs.print_properties",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/print_properties.py:33]"
+  },
+  {
+   "dst": "sportorg.config",
+   "line": 32,
+   "local": false,
+   "path": "sportorg/gui/dialogs/print_properties.py",
+   "src": "sportorg.gui.dialogs.print_properties",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/print_properties.py:32]"
+  },
+  {
+   "dst": "sportorg.gui.dialogs.file_dialog",
+   "line": 34,
+   "local": false,
+   "path": "sportorg/gui/dialogs/print_properties.py",
+   "src": "sportorg.gui.dialogs.print_properties",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/print_properties.py:34]"
+  },
+  {
+   "dst": "sportorg.gui.global_access",
+   "line": 35,
+   "local": false,
+   "path": "sportorg/gui/dialogs/print_properties.py",
+   "src": "sportorg.gui.dialogs.print_properties",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/print_properties.py:35]"
+  },
+  {
+   "dst": "sportorg.gui.utils.custom_controls",
+   "line": 36,
+   "local": false,
+   "path": "sportorg/gui/dialogs/print_properties.py",
+   "src": "sportorg.gui.dialogs.print_properties",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/print_properties.py:36]"
+  },
+  {
+   "dst": "sportorg.language",
+   "line": 37,
+   "local": false,
+   "path": "sportorg/gui/dialogs/print_properties.py",
+   "src": "sportorg.gui.dialogs.print_properties",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/print_properties.py:37]"
+  },
+  {
+   "dst": "sportorg.models.memory",
+   "line": 38,
+   "local": false,
+   "path": "sportorg/gui/dialogs/print_properties.py",
+   "src": "sportorg.gui.dialogs.print_properties",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/print_properties.py:38]"
+  },
+  {
+   "dst": "sportorg.settings",
+   "line": 32,
+   "local": false,
+   "path": "sportorg/gui/dialogs/print_properties.py",
+   "src": "sportorg.gui.dialogs.print_properties",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/print_properties.py:32]"
+  },
+  {
+   "dst": "sportorg.config",
+   "line": 10,
+   "local": false,
+   "path": "sportorg/gui/dialogs/relay_clone_dialog.py",
+   "src": "sportorg.gui.dialogs.relay_clone_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/relay_clone_dialog.py:10]"
+  },
+  {
+   "dst": "sportorg.gui.global_access",
+   "line": 11,
+   "local": false,
+   "path": "sportorg/gui/dialogs/relay_clone_dialog.py",
+   "src": "sportorg.gui.dialogs.relay_clone_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/relay_clone_dialog.py:11]"
+  },
+  {
+   "dst": "sportorg.gui.utils.custom_controls",
+   "line": 12,
+   "local": false,
+   "path": "sportorg/gui/dialogs/relay_clone_dialog.py",
+   "src": "sportorg.gui.dialogs.relay_clone_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/relay_clone_dialog.py:12]"
+  },
+  {
+   "dst": "sportorg.language",
+   "line": 13,
+   "local": false,
+   "path": "sportorg/gui/dialogs/relay_clone_dialog.py",
+   "src": "sportorg.gui.dialogs.relay_clone_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/relay_clone_dialog.py:13]"
+  },
+  {
+   "dst": "sportorg.models.start.start_preparation",
+   "line": 14,
+   "local": false,
+   "path": "sportorg/gui/dialogs/relay_clone_dialog.py",
+   "src": "sportorg.gui.dialogs.relay_clone_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/relay_clone_dialog.py:14]"
+  },
+  {
+   "dst": "sportorg.config",
+   "line": 10,
+   "local": false,
+   "path": "sportorg/gui/dialogs/relay_number_dialog.py",
+   "src": "sportorg.gui.dialogs.relay_number_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/relay_number_dialog.py:10]"
+  },
+  {
+   "dst": "sportorg.gui.global_access",
+   "line": 11,
+   "local": false,
+   "path": "sportorg/gui/dialogs/relay_number_dialog.py",
+   "src": "sportorg.gui.dialogs.relay_number_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/relay_number_dialog.py:11]"
+  },
+  {
+   "dst": "sportorg.gui.utils.custom_controls",
+   "line": 12,
+   "local": false,
+   "path": "sportorg/gui/dialogs/relay_number_dialog.py",
+   "src": "sportorg.gui.dialogs.relay_number_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/relay_number_dialog.py:12]"
+  },
+  {
+   "dst": "sportorg.language",
+   "line": 13,
+   "local": false,
+   "path": "sportorg/gui/dialogs/relay_number_dialog.py",
+   "src": "sportorg.gui.dialogs.relay_number_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/relay_number_dialog.py:13]"
+  },
+  {
+   "dst": "sportorg.models.start.relay",
+   "line": 14,
+   "local": false,
+   "path": "sportorg/gui/dialogs/relay_number_dialog.py",
+   "src": "sportorg.gui.dialogs.relay_number_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/relay_number_dialog.py:14]"
+  },
+  {
+   "dst": "sportorg.config",
+   "line": 24,
+   "local": false,
+   "path": "sportorg/gui/dialogs/rent_cards_dialog.py",
+   "src": "sportorg.gui.dialogs.rent_cards_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/rent_cards_dialog.py:24]"
+  },
+  {
+   "dst": "sportorg.gui.global_access",
+   "line": 25,
+   "local": false,
+   "path": "sportorg/gui/dialogs/rent_cards_dialog.py",
+   "src": "sportorg.gui.dialogs.rent_cards_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/rent_cards_dialog.py:25]"
+  },
+  {
+   "dst": "sportorg.language",
+   "line": 26,
+   "local": false,
+   "path": "sportorg/gui/dialogs/rent_cards_dialog.py",
+   "src": "sportorg.gui.dialogs.rent_cards_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/rent_cards_dialog.py:26]"
+  },
+  {
+   "dst": "sportorg.models.constant",
+   "line": 27,
+   "local": false,
+   "path": "sportorg/gui/dialogs/rent_cards_dialog.py",
+   "src": "sportorg.gui.dialogs.rent_cards_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/rent_cards_dialog.py:27]"
+  },
+  {
+   "dst": "sportorg.settings",
+   "line": 24,
+   "local": false,
+   "path": "sportorg/gui/dialogs/rent_cards_dialog.py",
+   "src": "sportorg.gui.dialogs.rent_cards_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/rent_cards_dialog.py:24]"
+  },
+  {
+   "dst": "sportorg.common.template",
+   "line": 30,
+   "local": false,
+   "path": "sportorg/gui/dialogs/report_dialog.py",
+   "src": "sportorg.gui.dialogs.report_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/report_dialog.py:30]"
+  },
+  {
+   "dst": "sportorg.config",
+   "line": 29,
+   "local": false,
+   "path": "sportorg/gui/dialogs/report_dialog.py",
+   "src": "sportorg.gui.dialogs.report_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/report_dialog.py:29]"
+  },
+  {
+   "dst": "sportorg.gui.dialogs.file_dialog",
+   "line": 31,
+   "local": false,
+   "path": "sportorg/gui/dialogs/report_dialog.py",
+   "src": "sportorg.gui.dialogs.report_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/report_dialog.py:31]"
+  },
+  {
+   "dst": "sportorg.gui.global_access",
+   "line": 35,
+   "local": false,
+   "path": "sportorg/gui/dialogs/report_dialog.py",
+   "src": "sportorg.gui.dialogs.report_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/report_dialog.py:35]"
+  },
+  {
+   "dst": "sportorg.gui.utils.custom_controls",
+   "line": 36,
+   "local": false,
+   "path": "sportorg/gui/dialogs/report_dialog.py",
+   "src": "sportorg.gui.dialogs.report_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/report_dialog.py:36]"
+  },
+  {
+   "dst": "sportorg.language",
+   "line": 37,
+   "local": false,
+   "path": "sportorg/gui/dialogs/report_dialog.py",
+   "src": "sportorg.gui.dialogs.report_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/report_dialog.py:37]"
+  },
+  {
+   "dst": "sportorg.models.constant",
+   "line": 38,
+   "local": false,
+   "path": "sportorg/gui/dialogs/report_dialog.py",
+   "src": "sportorg.gui.dialogs.report_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/report_dialog.py:38]"
+  },
+  {
+   "dst": "sportorg.models.memory",
+   "line": 39,
+   "local": false,
+   "path": "sportorg/gui/dialogs/report_dialog.py",
+   "src": "sportorg.gui.dialogs.report_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/report_dialog.py:39]"
+  },
+  {
+   "dst": "sportorg.models.result.result_tools",
+   "line": 40,
+   "local": false,
+   "path": "sportorg/gui/dialogs/report_dialog.py",
+   "src": "sportorg.gui.dialogs.report_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/report_dialog.py:40]"
+  },
+  {
+   "dst": "sportorg.settings",
+   "line": 29,
+   "local": false,
+   "path": "sportorg/gui/dialogs/report_dialog.py",
+   "src": "sportorg.gui.dialogs.report_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/report_dialog.py:29]"
+  },
+  {
+   "dst": "sportorg.config",
+   "line": 42,
+   "local": false,
+   "path": "sportorg/gui/dialogs/result_edit.py",
+   "src": "sportorg.gui.dialogs.result_edit",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/result_edit.py:42]"
+  },
+  {
+   "dst": "sportorg.gui.dialogs.person_edit",
+   "line": 43,
+   "local": false,
+   "path": "sportorg/gui/dialogs/result_edit.py",
+   "src": "sportorg.gui.dialogs.result_edit",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/result_edit.py:43]"
+  },
+  {
+   "dst": "sportorg.gui.global_access",
+   "line": 44,
+   "local": false,
+   "path": "sportorg/gui/dialogs/result_edit.py",
+   "src": "sportorg.gui.dialogs.result_edit",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/result_edit.py:44]"
+  },
+  {
+   "dst": "sportorg.gui.utils.custom_controls",
+   "line": 45,
+   "local": false,
+   "path": "sportorg/gui/dialogs/result_edit.py",
+   "src": "sportorg.gui.dialogs.result_edit",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/result_edit.py:45]"
+  },
+  {
+   "dst": "sportorg.language",
+   "line": 46,
+   "local": false,
+   "path": "sportorg/gui/dialogs/result_edit.py",
+   "src": "sportorg.gui.dialogs.result_edit",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/result_edit.py:46]"
+  },
+  {
+   "dst": "sportorg.models.constant",
+   "line": 47,
+   "local": false,
+   "path": "sportorg/gui/dialogs/result_edit.py",
+   "src": "sportorg.gui.dialogs.result_edit",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/result_edit.py:47]"
+  },
+  {
+   "dst": "sportorg.models.memory",
+   "line": 48,
+   "local": false,
+   "path": "sportorg/gui/dialogs/result_edit.py",
+   "src": "sportorg.gui.dialogs.result_edit",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/result_edit.py:48]"
+  },
+  {
+   "dst": "sportorg.models.result.result_checker",
+   "line": 49,
+   "local": false,
+   "path": "sportorg/gui/dialogs/result_edit.py",
+   "src": "sportorg.gui.dialogs.result_edit",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/result_edit.py:49]"
+  },
+  {
+   "dst": "sportorg.models.result.result_tools",
+   "line": 50,
+   "local": false,
+   "path": "sportorg/gui/dialogs/result_edit.py",
+   "src": "sportorg.gui.dialogs.result_edit",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/result_edit.py:50]"
+  },
+  {
+   "dst": "sportorg.models.result.split_calculation",
+   "line": 51,
+   "local": false,
+   "path": "sportorg/gui/dialogs/result_edit.py",
+   "src": "sportorg.gui.dialogs.result_edit",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/result_edit.py:51]"
+  },
+  {
+   "dst": "sportorg.modules.live.live",
+   "line": 52,
+   "local": false,
+   "path": "sportorg/gui/dialogs/result_edit.py",
+   "src": "sportorg.gui.dialogs.result_edit",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/result_edit.py:52]"
+  },
+  {
+   "dst": "sportorg.modules.teamwork.teamwork",
+   "line": 53,
+   "local": false,
+   "path": "sportorg/gui/dialogs/result_edit.py",
+   "src": "sportorg.gui.dialogs.result_edit",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/result_edit.py:53]"
+  },
+  {
+   "dst": "sportorg.utils.time",
+   "line": 54,
+   "local": false,
+   "path": "sportorg/gui/dialogs/result_edit.py",
+   "src": "sportorg.gui.dialogs.result_edit",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/result_edit.py:54]"
+  },
+  {
+   "dst": "sportorg.config",
+   "line": 14,
+   "local": false,
+   "path": "sportorg/gui/dialogs/scores_dialog.py",
+   "src": "sportorg.gui.dialogs.scores_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/scores_dialog.py:14]"
+  },
+  {
+   "dst": "sportorg.gui.global_access",
+   "line": 15,
+   "local": false,
+   "path": "sportorg/gui/dialogs/scores_dialog.py",
+   "src": "sportorg.gui.dialogs.scores_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/scores_dialog.py:15]"
+  },
+  {
+   "dst": "sportorg.gui.utils.custom_controls",
+   "line": 16,
+   "local": false,
+   "path": "sportorg/gui/dialogs/scores_dialog.py",
+   "src": "sportorg.gui.dialogs.scores_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/scores_dialog.py:16]"
+  },
+  {
+   "dst": "sportorg.language",
+   "line": 17,
+   "local": false,
+   "path": "sportorg/gui/dialogs/scores_dialog.py",
+   "src": "sportorg.gui.dialogs.scores_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/scores_dialog.py:17]"
+  },
+  {
+   "dst": "sportorg.models.memory",
+   "line": 18,
+   "local": false,
+   "path": "sportorg/gui/dialogs/scores_dialog.py",
+   "src": "sportorg.gui.dialogs.scores_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/scores_dialog.py:18]"
+  },
+  {
+   "dst": "sportorg.config",
+   "line": 24,
+   "local": false,
+   "path": "sportorg/gui/dialogs/search_dialog.py",
+   "src": "sportorg.gui.dialogs.search_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/search_dialog.py:24]"
+  },
+  {
+   "dst": "sportorg.gui.global_access",
+   "line": 25,
+   "local": false,
+   "path": "sportorg/gui/dialogs/search_dialog.py",
+   "src": "sportorg.gui.dialogs.search_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/search_dialog.py:25]"
+  },
+  {
+   "dst": "sportorg.language",
+   "line": 26,
+   "local": false,
+   "path": "sportorg/gui/dialogs/search_dialog.py",
+   "src": "sportorg.gui.dialogs.search_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/search_dialog.py:26]"
+  },
+  {
+   "dst": "sportorg.common.audio",
+   "line": 38,
+   "local": false,
+   "path": "sportorg/gui/dialogs/settings.py",
+   "src": "sportorg.gui.dialogs.settings",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/settings.py:38]"
+  },
+  {
+   "dst": "sportorg.common.template",
+   "line": 39,
+   "local": false,
+   "path": "sportorg/gui/dialogs/settings.py",
+   "src": "sportorg.gui.dialogs.settings",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/settings.py:39]"
+  },
+  {
+   "dst": "sportorg.config",
+   "line": 37,
+   "local": false,
+   "path": "sportorg/gui/dialogs/settings.py",
+   "src": "sportorg.gui.dialogs.settings",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/settings.py:37]"
+  },
+  {
+   "dst": "sportorg.gui.dialogs.file_dialog",
+   "line": 40,
+   "local": false,
+   "path": "sportorg/gui/dialogs/settings.py",
+   "src": "sportorg.gui.dialogs.settings",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/settings.py:40]"
+  },
+  {
+   "dst": "sportorg.gui.global_access",
+   "line": 42,
+   "local": false,
+   "path": "sportorg/gui/dialogs/settings.py",
+   "src": "sportorg.gui.dialogs.settings",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/settings.py:42]"
+  },
+  {
+   "dst": "sportorg.gui.theme",
+   "line": 41,
+   "local": false,
+   "path": "sportorg/gui/dialogs/settings.py",
+   "src": "sportorg.gui.dialogs.settings",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/settings.py:41]"
+  },
+  {
+   "dst": "sportorg.gui.utils.custom_controls",
+   "line": 43,
+   "local": false,
+   "path": "sportorg/gui/dialogs/settings.py",
+   "src": "sportorg.gui.dialogs.settings",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/settings.py:43]"
+  },
+  {
+   "dst": "sportorg.gui.utils.custom_controls",
+   "line": 44,
+   "local": false,
+   "path": "sportorg/gui/dialogs/settings.py",
+   "src": "sportorg.gui.dialogs.settings",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/settings.py:44]"
+  },
+  {
+   "dst": "sportorg.language",
+   "line": 45,
+   "local": false,
+   "path": "sportorg/gui/dialogs/settings.py",
+   "src": "sportorg.gui.dialogs.settings",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/settings.py:45]"
+  },
+  {
+   "dst": "sportorg.models.memory",
+   "line": 46,
+   "local": false,
+   "path": "sportorg/gui/dialogs/settings.py",
+   "src": "sportorg.gui.dialogs.settings",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/settings.py:46]"
+  },
+  {
+   "dst": "sportorg.modules.teamwork.teamwork",
+   "line": 56,
+   "local": false,
+   "path": "sportorg/gui/dialogs/settings.py",
+   "src": "sportorg.gui.dialogs.settings",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/settings.py:56]"
+  },
+  {
+   "dst": "sportorg.settings",
+   "line": 37,
+   "local": false,
+   "path": "sportorg/gui/dialogs/settings.py",
+   "src": "sportorg.gui.dialogs.settings",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/settings.py:37]"
+  },
+  {
+   "dst": "sportorg.config",
+   "line": 22,
+   "local": false,
+   "path": "sportorg/gui/dialogs/split_delete.py",
+   "src": "sportorg.gui.dialogs.split_delete",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/split_delete.py:22]"
+  },
+  {
+   "dst": "sportorg.gui.global_access",
+   "line": 23,
+   "local": false,
+   "path": "sportorg/gui/dialogs/split_delete.py",
+   "src": "sportorg.gui.dialogs.split_delete",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/split_delete.py:23]"
+  },
+  {
+   "dst": "sportorg.language",
+   "line": 24,
+   "local": false,
+   "path": "sportorg/gui/dialogs/split_delete.py",
+   "src": "sportorg.gui.dialogs.split_delete",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/split_delete.py:24]"
+  },
+  {
+   "dst": "sportorg.models.memory",
+   "line": 25,
+   "local": false,
+   "path": "sportorg/gui/dialogs/split_delete.py",
+   "src": "sportorg.gui.dialogs.split_delete",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/split_delete.py:25]"
+  },
+  {
+   "dst": "sportorg.models.result.result_tools",
+   "line": 26,
+   "local": false,
+   "path": "sportorg/gui/dialogs/split_delete.py",
+   "src": "sportorg.gui.dialogs.split_delete",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/split_delete.py:26]"
+  },
+  {
+   "dst": "sportorg.config",
+   "line": 24,
+   "local": false,
+   "path": "sportorg/gui/dialogs/sportorg_import_dialog.py",
+   "src": "sportorg.gui.dialogs.sportorg_import_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/sportorg_import_dialog.py:24]"
+  },
+  {
+   "dst": "sportorg.gui.global_access",
+   "line": 25,
+   "local": false,
+   "path": "sportorg/gui/dialogs/sportorg_import_dialog.py",
+   "src": "sportorg.gui.dialogs.sportorg_import_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/sportorg_import_dialog.py:25]"
+  },
+  {
+   "dst": "sportorg.gui.utils.custom_controls",
+   "line": 26,
+   "local": false,
+   "path": "sportorg/gui/dialogs/sportorg_import_dialog.py",
+   "src": "sportorg.gui.dialogs.sportorg_import_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/sportorg_import_dialog.py:26]"
+  },
+  {
+   "dst": "sportorg.language",
+   "line": 27,
+   "local": false,
+   "path": "sportorg/gui/dialogs/sportorg_import_dialog.py",
+   "src": "sportorg.gui.dialogs.sportorg_import_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/sportorg_import_dialog.py:27]"
+  },
+  {
+   "dst": "sportorg.models.memory",
+   "line": 28,
+   "local": false,
+   "path": "sportorg/gui/dialogs/sportorg_import_dialog.py",
+   "src": "sportorg.gui.dialogs.sportorg_import_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/sportorg_import_dialog.py:28]"
+  },
+  {
+   "dst": "sportorg.common.otime",
+   "line": 23,
+   "local": false,
+   "path": "sportorg/gui/dialogs/start_handicap_dialog.py",
+   "src": "sportorg.gui.dialogs.start_handicap_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/start_handicap_dialog.py:23]"
+  },
+  {
+   "dst": "sportorg.config",
+   "line": 22,
+   "local": false,
+   "path": "sportorg/gui/dialogs/start_handicap_dialog.py",
+   "src": "sportorg.gui.dialogs.start_handicap_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/start_handicap_dialog.py:22]"
+  },
+  {
+   "dst": "sportorg.gui.global_access",
+   "line": 24,
+   "local": false,
+   "path": "sportorg/gui/dialogs/start_handicap_dialog.py",
+   "src": "sportorg.gui.dialogs.start_handicap_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/start_handicap_dialog.py:24]"
+  },
+  {
+   "dst": "sportorg.gui.utils.custom_controls",
+   "line": 25,
+   "local": false,
+   "path": "sportorg/gui/dialogs/start_handicap_dialog.py",
+   "src": "sportorg.gui.dialogs.start_handicap_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/start_handicap_dialog.py:25]"
+  },
+  {
+   "dst": "sportorg.language",
+   "line": 26,
+   "local": false,
+   "path": "sportorg/gui/dialogs/start_handicap_dialog.py",
+   "src": "sportorg.gui.dialogs.start_handicap_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/start_handicap_dialog.py:26]"
+  },
+  {
+   "dst": "sportorg.models.memory",
+   "line": 27,
+   "local": false,
+   "path": "sportorg/gui/dialogs/start_handicap_dialog.py",
+   "src": "sportorg.gui.dialogs.start_handicap_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/start_handicap_dialog.py:27]"
+  },
+  {
+   "dst": "sportorg.models.start.start_preparation",
+   "line": 28,
+   "local": false,
+   "path": "sportorg/gui/dialogs/start_handicap_dialog.py",
+   "src": "sportorg.gui.dialogs.start_handicap_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/start_handicap_dialog.py:28]"
+  },
+  {
+   "dst": "sportorg.common.otime",
+   "line": 14,
+   "local": false,
+   "path": "sportorg/gui/dialogs/start_preparation.py",
+   "src": "sportorg.gui.dialogs.start_preparation",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/start_preparation.py:14]"
+  },
+  {
+   "dst": "sportorg.config",
+   "line": 13,
+   "local": false,
+   "path": "sportorg/gui/dialogs/start_preparation.py",
+   "src": "sportorg.gui.dialogs.start_preparation",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/start_preparation.py:13]"
+  },
+  {
+   "dst": "sportorg.gui.global_access",
+   "line": 15,
+   "local": false,
+   "path": "sportorg/gui/dialogs/start_preparation.py",
+   "src": "sportorg.gui.dialogs.start_preparation",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/start_preparation.py:15]"
+  },
+  {
+   "dst": "sportorg.gui.utils.custom_controls",
+   "line": 16,
+   "local": false,
+   "path": "sportorg/gui/dialogs/start_preparation.py",
+   "src": "sportorg.gui.dialogs.start_preparation",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/start_preparation.py:16]"
+  },
+  {
+   "dst": "sportorg.language",
+   "line": 17,
+   "local": false,
+   "path": "sportorg/gui/dialogs/start_preparation.py",
+   "src": "sportorg.gui.dialogs.start_preparation",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/start_preparation.py:17]"
+  },
+  {
+   "dst": "sportorg.models.memory",
+   "line": 18,
+   "local": false,
+   "path": "sportorg/gui/dialogs/start_preparation.py",
+   "src": "sportorg.gui.dialogs.start_preparation",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/start_preparation.py:18]"
+  },
+  {
+   "dst": "sportorg.models.start.start_preparation",
+   "line": 19,
+   "local": false,
+   "path": "sportorg/gui/dialogs/start_preparation.py",
+   "src": "sportorg.gui.dialogs.start_preparation",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/start_preparation.py:19]"
+  },
+  {
+   "dst": "sportorg.config",
+   "line": 10,
+   "local": false,
+   "path": "sportorg/gui/dialogs/start_time_change_dialog.py",
+   "src": "sportorg.gui.dialogs.start_time_change_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/start_time_change_dialog.py:10]"
+  },
+  {
+   "dst": "sportorg.gui.global_access",
+   "line": 11,
+   "local": false,
+   "path": "sportorg/gui/dialogs/start_time_change_dialog.py",
+   "src": "sportorg.gui.dialogs.start_time_change_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/start_time_change_dialog.py:11]"
+  },
+  {
+   "dst": "sportorg.gui.utils.custom_controls",
+   "line": 12,
+   "local": false,
+   "path": "sportorg/gui/dialogs/start_time_change_dialog.py",
+   "src": "sportorg.gui.dialogs.start_time_change_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/start_time_change_dialog.py:12]"
+  },
+  {
+   "dst": "sportorg.language",
+   "line": 13,
+   "local": false,
+   "path": "sportorg/gui/dialogs/start_time_change_dialog.py",
+   "src": "sportorg.gui.dialogs.start_time_change_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/start_time_change_dialog.py:13]"
+  },
+  {
+   "dst": "sportorg.models.start.start_preparation",
+   "line": 14,
+   "local": false,
+   "path": "sportorg/gui/dialogs/start_time_change_dialog.py",
+   "src": "sportorg.gui.dialogs.start_time_change_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/start_time_change_dialog.py:14]"
+  },
+  {
+   "dst": "sportorg.gui.global_access",
+   "line": 46,
+   "local": false,
+   "path": "sportorg/gui/dialogs/teamwork_properties.py",
+   "src": "sportorg.gui.dialogs.teamwork_properties",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/teamwork_properties.py:46]"
+  },
+  {
+   "dst": "sportorg.gui.utils.custom_controls",
+   "line": 47,
+   "local": false,
+   "path": "sportorg/gui/dialogs/teamwork_properties.py",
+   "src": "sportorg.gui.dialogs.teamwork_properties",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/teamwork_properties.py:47]"
+  },
+  {
+   "dst": "sportorg.language",
+   "line": 48,
+   "local": false,
+   "path": "sportorg/gui/dialogs/teamwork_properties.py",
+   "src": "sportorg.gui.dialogs.teamwork_properties",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/teamwork_properties.py:48]"
+  },
+  {
+   "dst": "sportorg.modules.teamwork.crypto",
+   "line": 49,
+   "local": false,
+   "path": "sportorg/gui/dialogs/teamwork_properties.py",
+   "src": "sportorg.gui.dialogs.teamwork_properties",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/teamwork_properties.py:49]"
+  },
+  {
+   "dst": "sportorg.modules.teamwork.teamwork",
+   "line": 54,
+   "local": false,
+   "path": "sportorg/gui/dialogs/teamwork_properties.py",
+   "src": "sportorg.gui.dialogs.teamwork_properties",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/teamwork_properties.py:54]"
+  },
+  {
+   "dst": "sportorg.settings",
+   "line": 45,
+   "local": false,
+   "path": "sportorg/gui/dialogs/teamwork_properties.py",
+   "src": "sportorg.gui.dialogs.teamwork_properties",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/teamwork_properties.py:45]"
+  },
+  {
+   "dst": "sportorg.config",
+   "line": 30,
+   "local": false,
+   "path": "sportorg/gui/dialogs/telegram_dialog.py",
+   "src": "sportorg.gui.dialogs.telegram_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/telegram_dialog.py:30]"
+  },
+  {
+   "dst": "sportorg.gui.global_access",
+   "line": 31,
+   "local": false,
+   "path": "sportorg/gui/dialogs/telegram_dialog.py",
+   "src": "sportorg.gui.dialogs.telegram_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/telegram_dialog.py:31]"
+  },
+  {
+   "dst": "sportorg.language",
+   "line": 32,
+   "local": false,
+   "path": "sportorg/gui/dialogs/telegram_dialog.py",
+   "src": "sportorg.gui.dialogs.telegram_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/telegram_dialog.py:32]"
+  },
+  {
+   "dst": "sportorg.models.memory",
+   "line": 33,
+   "local": false,
+   "path": "sportorg/gui/dialogs/telegram_dialog.py",
+   "src": "sportorg.gui.dialogs.telegram_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/telegram_dialog.py:33]"
+  },
+  {
+   "dst": "sportorg.settings",
+   "line": 30,
+   "local": false,
+   "path": "sportorg/gui/dialogs/telegram_dialog.py",
+   "src": "sportorg.gui.dialogs.telegram_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/telegram_dialog.py:30]"
+  },
+  {
+   "dst": "sportorg.gui.global_access",
+   "line": 22,
+   "local": false,
+   "path": "sportorg/gui/dialogs/text_io.py",
+   "src": "sportorg.gui.dialogs.text_io",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/text_io.py:22]"
+  },
+  {
+   "dst": "sportorg.language",
+   "line": 23,
+   "local": false,
+   "path": "sportorg/gui/dialogs/text_io.py",
+   "src": "sportorg.gui.dialogs.text_io",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/text_io.py:23]"
+  },
+  {
+   "dst": "sportorg.models.memory",
+   "line": 24,
+   "local": false,
+   "path": "sportorg/gui/dialogs/text_io.py",
+   "src": "sportorg.gui.dialogs.text_io",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/text_io.py:24]"
+  },
+  {
+   "dst": "sportorg.utils.time",
+   "line": 25,
+   "local": false,
+   "path": "sportorg/gui/dialogs/text_io.py",
+   "src": "sportorg.gui.dialogs.text_io",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/text_io.py:25]"
+  },
+  {
+   "dst": "sportorg.common.otime",
+   "line": 34,
+   "local": false,
+   "path": "sportorg/gui/dialogs/timekeeping_properties.py",
+   "src": "sportorg.gui.dialogs.timekeeping_properties",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/timekeeping_properties.py:34]"
+  },
+  {
+   "dst": "sportorg.gui.global_access",
+   "line": 35,
+   "local": false,
+   "path": "sportorg/gui/dialogs/timekeeping_properties.py",
+   "src": "sportorg.gui.dialogs.timekeeping_properties",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/timekeeping_properties.py:35]"
+  },
+  {
+   "dst": "sportorg.gui.utils.custom_controls",
+   "line": 36,
+   "local": false,
+   "path": "sportorg/gui/dialogs/timekeeping_properties.py",
+   "src": "sportorg.gui.dialogs.timekeeping_properties",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/timekeeping_properties.py:36]"
+  },
+  {
+   "dst": "sportorg.language",
+   "line": 37,
+   "local": false,
+   "path": "sportorg/gui/dialogs/timekeeping_properties.py",
+   "src": "sportorg.gui.dialogs.timekeeping_properties",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/timekeeping_properties.py:37]"
+  },
+  {
+   "dst": "sportorg.models.memory",
+   "line": 38,
+   "local": false,
+   "path": "sportorg/gui/dialogs/timekeeping_properties.py",
+   "src": "sportorg.gui.dialogs.timekeeping_properties",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/timekeeping_properties.py:38]"
+  },
+  {
+   "dst": "sportorg.models.result.result_tools",
+   "line": 39,
+   "local": false,
+   "path": "sportorg/gui/dialogs/timekeeping_properties.py",
+   "src": "sportorg.gui.dialogs.timekeeping_properties",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/timekeeping_properties.py:39]"
+  },
+  {
+   "dst": "sportorg.modules.sportident.sireader",
+   "line": 40,
+   "local": false,
+   "path": "sportorg/gui/dialogs/timekeeping_properties.py",
+   "src": "sportorg.gui.dialogs.timekeeping_properties",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/timekeeping_properties.py:40]"
+  },
+  {
+   "dst": "sportorg.settings",
+   "line": 3,
+   "local": false,
+   "path": "sportorg/gui/dialogs/timekeeping_properties.py",
+   "src": "sportorg.gui.dialogs.timekeeping_properties",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/timekeeping_properties.py:3]"
+  },
+  {
+   "dst": "sportorg.common.singleton",
+   "line": 3,
+   "local": false,
+   "path": "sportorg/gui/global_access.py",
+   "src": "sportorg.gui.global_access",
+   "tag": "[код: pysport@b548c35 sportorg/gui/global_access.py:3]"
+  },
+  {
+   "dst": "sportorg.common.singleton",
+   "line": 11,
+   "local": false,
+   "path": "sportorg/gui/main.py",
+   "src": "sportorg.gui.main",
+   "tag": "[код: pysport@b548c35 sportorg/gui/main.py:11]"
+  },
+  {
+   "dst": "sportorg.config",
+   "line": 10,
+   "local": false,
+   "path": "sportorg/gui/main.py",
+   "src": "sportorg.gui.main",
+   "tag": "[код: pysport@b548c35 sportorg/gui/main.py:10]"
+  },
+  {
+   "dst": "sportorg.gui.global_access",
+   "line": 13,
+   "local": false,
+   "path": "sportorg/gui/main.py",
+   "src": "sportorg.gui.main",
+   "tag": "[код: pysport@b548c35 sportorg/gui/main.py:13]"
+  },
+  {
+   "dst": "sportorg.gui.main_window",
+   "line": 14,
+   "local": false,
+   "path": "sportorg/gui/main.py",
+   "src": "sportorg.gui.main",
+   "tag": "[код: pysport@b548c35 sportorg/gui/main.py:14]"
+  },
+  {
+   "dst": "sportorg.gui.theme",
+   "line": 12,
+   "local": false,
+   "path": "sportorg/gui/main.py",
+   "src": "sportorg.gui.main",
+   "tag": "[код: pysport@b548c35 sportorg/gui/main.py:12]"
+  },
+  {
+   "dst": "sportorg.language",
+   "line": 15,
+   "local": false,
+   "path": "sportorg/gui/main.py",
+   "src": "sportorg.gui.main",
+   "tag": "[код: pysport@b548c35 sportorg/gui/main.py:15]"
+  },
+  {
+   "dst": "sportorg.models.constant",
+   "line": 16,
+   "local": false,
+   "path": "sportorg/gui/main.py",
+   "src": "sportorg.gui.main",
+   "tag": "[код: pysport@b548c35 sportorg/gui/main.py:16]"
+  },
+  {
+   "dst": "sportorg.rust_example",
+   "line": 26,
+   "local": false,
+   "path": "sportorg/gui/main.py",
+   "src": "sportorg.gui.main",
+   "tag": "[код: pysport@b548c35 sportorg/gui/main.py:26]"
+  },
+  {
+   "dst": "sportorg.settings",
+   "line": 10,
+   "local": false,
+   "path": "sportorg/gui/main.py",
+   "src": "sportorg.gui.main",
+   "tag": "[код: pysport@b548c35 sportorg/gui/main.py:10]"
+  },
+  {
+   "dst": "sportorg.config",
+   "line": 22,
+   "local": false,
+   "path": "sportorg/gui/main_window.py",
+   "src": "sportorg.gui.main_window",
+   "tag": "[код: pysport@b548c35 sportorg/gui/main_window.py:22]"
+  },
+  {
+   "dst": "sportorg.gui.dialogs.course_edit",
+   "line": 23,
+   "local": false,
+   "path": "sportorg/gui/main_window.py",
+   "src": "sportorg.gui.main_window",
+   "tag": "[код: pysport@b548c35 sportorg/gui/main_window.py:23]"
+  },
+  {
+   "dst": "sportorg.gui.dialogs.file_dialog",
+   "line": 24,
+   "local": false,
+   "path": "sportorg/gui/main_window.py",
+   "src": "sportorg.gui.main_window",
+   "tag": "[код: pysport@b548c35 sportorg/gui/main_window.py:24]"
+  },
+  {
+   "dst": "sportorg.gui.dialogs.group_edit",
+   "line": 25,
+   "local": false,
+   "path": "sportorg/gui/main_window.py",
+   "src": "sportorg.gui.main_window",
+   "tag": "[код: pysport@b548c35 sportorg/gui/main_window.py:25]"
+  },
+  {
+   "dst": "sportorg.gui.dialogs.organization_edit",
+   "line": 26,
+   "local": false,
+   "path": "sportorg/gui/main_window.py",
+   "src": "sportorg.gui.main_window",
+   "tag": "[код: pysport@b548c35 sportorg/gui/main_window.py:26]"
+  },
+  {
+   "dst": "sportorg.gui.dialogs.person_edit",
+   "line": 27,
+   "local": false,
+   "path": "sportorg/gui/main_window.py",
+   "src": "sportorg.gui.main_window",
+   "tag": "[код: pysport@b548c35 sportorg/gui/main_window.py:27]"
+  },
+  {
+   "dst": "sportorg.gui.global_access",
+   "line": 28,
+   "local": false,
+   "path": "sportorg/gui/main_window.py",
+   "src": "sportorg.gui.main_window",
+   "tag": "[код: pysport@b548c35 sportorg/gui/main_window.py:28]"
+  },
+  {
+   "dst": "sportorg.gui.menu",
+   "line": 29,
+   "local": false,
+   "path": "sportorg/gui/main_window.py",
+   "src": "sportorg.gui.main_window",
+   "tag": "[код: pysport@b548c35 sportorg/gui/main_window.py:29]"
+  },
+  {
+   "dst": "sportorg.gui.tabs.courses",
+   "line": 30,
+   "local": false,
+   "path": "sportorg/gui/main_window.py",
+   "src": "sportorg.gui.main_window",
+   "tag": "[код: pysport@b548c35 sportorg/gui/main_window.py:30]"
+  },
+  {
+   "dst": "sportorg.gui.tabs.groups",
+   "line": 30,
+   "local": false,
+   "path": "sportorg/gui/main_window.py",
+   "src": "sportorg.gui.main_window",
+   "tag": "[код: pysport@b548c35 sportorg/gui/main_window.py:30]"
+  },
+  {
+   "dst": "sportorg.gui.tabs.log",
+   "line": 30,
+   "local": false,
+   "path": "sportorg/gui/main_window.py",
+   "src": "sportorg.gui.main_window",
+   "tag": "[код: pysport@b548c35 sportorg/gui/main_window.py:30]"
+  },
+  {
+   "dst": "sportorg.gui.tabs.memory_model",
+   "line": 31,
+   "local": false,
+   "path": "sportorg/gui/main_window.py",
+   "src": "sportorg.gui.main_window",
+   "tag": "[код: pysport@b548c35 sportorg/gui/main_window.py:31]"
+  },
+  {
+   "dst": "sportorg.gui.tabs.organizations",
+   "line": 30,
+   "local": false,
+   "path": "sportorg/gui/main_window.py",
+   "src": "sportorg.gui.main_window",
+   "tag": "[код: pysport@b548c35 sportorg/gui/main_window.py:30]"
+  },
+  {
+   "dst": "sportorg.gui.tabs.persons",
+   "line": 30,
+   "local": false,
+   "path": "sportorg/gui/main_window.py",
+   "src": "sportorg.gui.main_window",
+   "tag": "[код: pysport@b548c35 sportorg/gui/main_window.py:30]"
+  },
+  {
+   "dst": "sportorg.gui.tabs.results",
+   "line": 30,
+   "local": false,
+   "path": "sportorg/gui/main_window.py",
+   "src": "sportorg.gui.main_window",
+   "tag": "[код: pysport@b548c35 sportorg/gui/main_window.py:30]"
+  },
+  {
+   "dst": "sportorg.gui.toolbar",
+   "line": 38,
+   "local": false,
+   "path": "sportorg/gui/main_window.py",
+   "src": "sportorg.gui.main_window",
+   "tag": "[код: pysport@b548c35 sportorg/gui/main_window.py:38]"
+  },
+  {
+   "dst": "sportorg.gui.utils.custom_controls",
+   "line": 39,
+   "local": false,
+   "path": "sportorg/gui/main_window.py",
+   "src": "sportorg.gui.main_window",
+   "tag": "[код: pysport@b548c35 sportorg/gui/main_window.py:39]"
+  },
+  {
+   "dst": "sportorg.language",
+   "line": 40,
+   "local": false,
+   "path": "sportorg/gui/main_window.py",
+   "src": "sportorg.gui.main_window",
+   "tag": "[код: pysport@b548c35 sportorg/gui/main_window.py:40]"
+  },
+  {
+   "dst": "sportorg.models.constant",
+   "line": 41,
+   "local": false,
+   "path": "sportorg/gui/main_window.py",
+   "src": "sportorg.gui.main_window",
+   "tag": "[код: pysport@b548c35 sportorg/gui/main_window.py:41]"
+  },
+  {
+   "dst": "sportorg.models.memory",
+   "line": 42,
+   "local": false,
+   "path": "sportorg/gui/main_window.py",
+   "src": "sportorg.gui.main_window",
+   "tag": "[код: pysport@b548c35 sportorg/gui/main_window.py:42]"
+  },
+  {
+   "dst": "sportorg.models.result.result_tools",
+   "line": 53,
+   "local": false,
+   "path": "sportorg/gui/main_window.py",
+   "src": "sportorg.gui.main_window",
+   "tag": "[код: pysport@b548c35 sportorg/gui/main_window.py:53]"
+  },
+  {
+   "dst": "sportorg.models.result.split_calculation",
+   "line": 54,
+   "local": false,
+   "path": "sportorg/gui/main_window.py",
+   "src": "sportorg.gui.main_window",
+   "tag": "[код: pysport@b548c35 sportorg/gui/main_window.py:54]"
+  },
+  {
+   "dst": "sportorg.modules.backup.file",
+   "line": 55,
+   "local": false,
+   "path": "sportorg/gui/main_window.py",
+   "src": "sportorg.gui.main_window",
+   "tag": "[код: pysport@b548c35 sportorg/gui/main_window.py:55]"
+  },
+  {
+   "dst": "sportorg.modules.huichang.huichang",
+   "line": 71,
+   "local": false,
+   "path": "sportorg/gui/main_window.py",
+   "src": "sportorg.gui.main_window",
+   "tag": "[код: pysport@b548c35 sportorg/gui/main_window.py:71]"
+  },
+  {
+   "dst": "sportorg.modules.live.live",
+   "line": 56,
+   "local": false,
+   "path": "sportorg/gui/main_window.py",
+   "src": "sportorg.gui.main_window",
+   "tag": "[код: pysport@b548c35 sportorg/gui/main_window.py:56]"
+  },
+  {
+   "dst": "sportorg.modules.plugins",
+   "line": 57,
+   "local": false,
+   "path": "sportorg/gui/main_window.py",
+   "src": "sportorg.gui.main_window",
+   "tag": "[код: pysport@b548c35 sportorg/gui/main_window.py:57]"
+  },
+  {
+   "dst": "sportorg.modules.printing.model",
+   "line": 58,
+   "local": false,
+   "path": "sportorg/gui/main_window.py",
+   "src": "sportorg.gui.main_window",
+   "tag": "[код: pysport@b548c35 sportorg/gui/main_window.py:58]"
+  },
+  {
+   "dst": "sportorg.modules.rfid_impinj.rfid_impinj",
+   "line": 64,
+   "local": false,
+   "path": "sportorg/gui/main_window.py",
+   "src": "sportorg.gui.main_window",
+   "tag": "[код: pysport@b548c35 sportorg/gui/main_window.py:64]"
+  },
+  {
+   "dst": "sportorg.modules.sfr.sfrreader",
+   "line": 65,
+   "local": false,
+   "path": "sportorg/gui/main_window.py",
+   "src": "sportorg.gui.main_window",
+   "tag": "[код: pysport@b548c35 sportorg/gui/main_window.py:65]"
+  },
+  {
+   "dst": "sportorg.modules.sound",
+   "line": 66,
+   "local": false,
+   "path": "sportorg/gui/main_window.py",
+   "src": "sportorg.gui.main_window",
+   "tag": "[код: pysport@b548c35 sportorg/gui/main_window.py:66]"
+  },
+  {
+   "dst": "sportorg.modules.sportident.result_generation",
+   "line": 67,
+   "local": false,
+   "path": "sportorg/gui/main_window.py",
+   "src": "sportorg.gui.main_window",
+   "tag": "[код: pysport@b548c35 sportorg/gui/main_window.py:67]"
+  },
+  {
+   "dst": "sportorg.modules.sportident.sireader",
+   "line": 68,
+   "local": false,
+   "path": "sportorg/gui/main_window.py",
+   "src": "sportorg.gui.main_window",
+   "tag": "[код: pysport@b548c35 sportorg/gui/main_window.py:68]"
+  },
+  {
+   "dst": "sportorg.modules.sportiduino.sportiduino",
+   "line": 69,
+   "local": false,
+   "path": "sportorg/gui/main_window.py",
+   "src": "sportorg.gui.main_window",
+   "tag": "[код: pysport@b548c35 sportorg/gui/main_window.py:69]"
+  },
+  {
+   "dst": "sportorg.modules.srpid.srpid",
+   "line": 70,
+   "local": false,
+   "path": "sportorg/gui/main_window.py",
+   "src": "sportorg.gui.main_window",
+   "tag": "[код: pysport@b548c35 sportorg/gui/main_window.py:70]"
+  },
+  {
+   "dst": "sportorg.modules.teamwork.packet_header",
+   "line": 72,
+   "local": false,
+   "path": "sportorg/gui/main_window.py",
+   "src": "sportorg.gui.main_window",
+   "tag": "[код: pysport@b548c35 sportorg/gui/main_window.py:72]"
+  },
+  {
+   "dst": "sportorg.modules.teamwork.teamwork",
+   "line": 73,
+   "local": false,
+   "path": "sportorg/gui/main_window.py",
+   "src": "sportorg.gui.main_window",
+   "tag": "[код: pysport@b548c35 sportorg/gui/main_window.py:73]"
+  },
+  {
+   "dst": "sportorg.modules.telegram.telegram",
+   "line": 77,
+   "local": false,
+   "path": "sportorg/gui/main_window.py",
+   "src": "sportorg.gui.main_window",
+   "tag": "[код: pysport@b548c35 sportorg/gui/main_window.py:77]"
+  },
+  {
+   "dst": "sportorg.settings",
+   "line": 22,
+   "local": false,
+   "path": "sportorg/gui/main_window.py",
+   "src": "sportorg.gui.main_window",
+   "tag": "[код: pysport@b548c35 sportorg/gui/main_window.py:22]"
+  },
+  {
+   "dst": "sportorg.gui.menu.factory",
+   "line": 1,
+   "local": false,
+   "path": "sportorg/gui/menu/__init__.py",
+   "src": "sportorg.gui.menu",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/__init__.py:1]"
+  },
+  {
+   "dst": "sportorg.gui.menu.menu",
+   "line": 2,
+   "local": false,
+   "path": "sportorg/gui/menu/__init__.py",
+   "src": "sportorg.gui.menu",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/__init__.py:2]"
+  },
+  {
+   "dst": "sportorg.common.otime",
+   "line": 17,
+   "local": false,
+   "path": "sportorg/gui/menu/actions.py",
+   "src": "sportorg.gui.menu.actions",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:17]"
+  },
+  {
+   "dst": "sportorg.config",
+   "line": 16,
+   "local": false,
+   "path": "sportorg/gui/menu/actions.py",
+   "src": "sportorg.gui.menu.actions",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:16]"
+  },
+  {
+   "dst": "sportorg.gui.dialogs.about",
+   "line": 18,
+   "local": false,
+   "path": "sportorg/gui/menu/actions.py",
+   "src": "sportorg.gui.menu.actions",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:18]"
+  },
+  {
+   "dst": "sportorg.gui.dialogs.control_time_change_dialog",
+   "line": 19,
+   "local": false,
+   "path": "sportorg/gui/menu/actions.py",
+   "src": "sportorg.gui.menu.actions",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:19]"
+  },
+  {
+   "dst": "sportorg.gui.dialogs.cp_delete",
+   "line": 20,
+   "local": false,
+   "path": "sportorg/gui/menu/actions.py",
+   "src": "sportorg.gui.menu.actions",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:20]"
+  },
+  {
+   "dst": "sportorg.gui.dialogs.entry_mass_edit",
+   "line": 21,
+   "local": false,
+   "path": "sportorg/gui/menu/actions.py",
+   "src": "sportorg.gui.menu.actions",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:21]"
+  },
+  {
+   "dst": "sportorg.gui.dialogs.event_properties",
+   "line": 22,
+   "local": false,
+   "path": "sportorg/gui/menu/actions.py",
+   "src": "sportorg.gui.menu.actions",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:22]"
+  },
+  {
+   "dst": "sportorg.gui.dialogs.file_dialog",
+   "line": 23,
+   "local": false,
+   "path": "sportorg/gui/menu/actions.py",
+   "src": "sportorg.gui.menu.actions",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:23]"
+  },
+  {
+   "dst": "sportorg.gui.dialogs.filter_dialog",
+   "line": 24,
+   "local": false,
+   "path": "sportorg/gui/menu/actions.py",
+   "src": "sportorg.gui.menu.actions",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:24]"
+  },
+  {
+   "dst": "sportorg.gui.dialogs.group_mass_edit",
+   "line": 25,
+   "local": false,
+   "path": "sportorg/gui/menu/actions.py",
+   "src": "sportorg.gui.menu.actions",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:25]"
+  },
+  {
+   "dst": "sportorg.gui.dialogs.huichang_management_dialog",
+   "line": 52,
+   "local": false,
+   "path": "sportorg/gui/menu/actions.py",
+   "src": "sportorg.gui.menu.actions",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:52]"
+  },
+  {
+   "dst": "sportorg.gui.dialogs.import_persons_table_dialog",
+   "line": 26,
+   "local": false,
+   "path": "sportorg/gui/menu/actions.py",
+   "src": "sportorg.gui.menu.actions",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:26]"
+  },
+  {
+   "dst": "sportorg.gui.dialogs.live_dialog",
+   "line": 27,
+   "local": false,
+   "path": "sportorg/gui/menu/actions.py",
+   "src": "sportorg.gui.menu.actions",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:27]"
+  },
+  {
+   "dst": "sportorg.gui.dialogs.marked_route_dialog",
+   "line": 28,
+   "local": false,
+   "path": "sportorg/gui/menu/actions.py",
+   "src": "sportorg.gui.menu.actions",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:28]"
+  },
+  {
+   "dst": "sportorg.gui.dialogs.merge_results",
+   "line": 29,
+   "local": false,
+   "path": "sportorg/gui/menu/actions.py",
+   "src": "sportorg.gui.menu.actions",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:29]"
+  },
+  {
+   "dst": "sportorg.gui.dialogs.not_start_dialog",
+   "line": 30,
+   "local": false,
+   "path": "sportorg/gui/menu/actions.py",
+   "src": "sportorg.gui.menu.actions",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:30]"
+  },
+  {
+   "dst": "sportorg.gui.dialogs.organization_mass_edit",
+   "line": 31,
+   "local": false,
+   "path": "sportorg/gui/menu/actions.py",
+   "src": "sportorg.gui.menu.actions",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:31]"
+  },
+  {
+   "dst": "sportorg.gui.dialogs.plugins",
+   "line": 33,
+   "local": false,
+   "path": "sportorg/gui/menu/actions.py",
+   "src": "sportorg.gui.menu.actions",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:33]"
+  },
+  {
+   "dst": "sportorg.gui.dialogs.print_properties",
+   "line": 32,
+   "local": false,
+   "path": "sportorg/gui/menu/actions.py",
+   "src": "sportorg.gui.menu.actions",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:32]"
+  },
+  {
+   "dst": "sportorg.gui.dialogs.relay_clone_dialog",
+   "line": 34,
+   "local": false,
+   "path": "sportorg/gui/menu/actions.py",
+   "src": "sportorg.gui.menu.actions",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:34]"
+  },
+  {
+   "dst": "sportorg.gui.dialogs.relay_number_dialog",
+   "line": 35,
+   "local": false,
+   "path": "sportorg/gui/menu/actions.py",
+   "src": "sportorg.gui.menu.actions",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:35]"
+  },
+  {
+   "dst": "sportorg.gui.dialogs.rent_cards_dialog",
+   "line": 36,
+   "local": false,
+   "path": "sportorg/gui/menu/actions.py",
+   "src": "sportorg.gui.menu.actions",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:36]"
+  },
+  {
+   "dst": "sportorg.gui.dialogs.report_dialog",
+   "line": 37,
+   "local": false,
+   "path": "sportorg/gui/menu/actions.py",
+   "src": "sportorg.gui.menu.actions",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:37]"
+  },
+  {
+   "dst": "sportorg.gui.dialogs.search_dialog",
+   "line": 38,
+   "local": false,
+   "path": "sportorg/gui/menu/actions.py",
+   "src": "sportorg.gui.menu.actions",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:38]"
+  },
+  {
+   "dst": "sportorg.gui.dialogs.settings",
+   "line": 39,
+   "local": false,
+   "path": "sportorg/gui/menu/actions.py",
+   "src": "sportorg.gui.menu.actions",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:39]"
+  },
+  {
+   "dst": "sportorg.gui.dialogs.split_delete",
+   "line": 40,
+   "local": false,
+   "path": "sportorg/gui/menu/actions.py",
+   "src": "sportorg.gui.menu.actions",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:40]"
+  },
+  {
+   "dst": "sportorg.gui.dialogs.sportorg_import_dialog",
+   "line": 41,
+   "local": false,
+   "path": "sportorg/gui/menu/actions.py",
+   "src": "sportorg.gui.menu.actions",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:41]"
+  },
+  {
+   "dst": "sportorg.gui.dialogs.start_handicap_dialog",
+   "line": 42,
+   "local": false,
+   "path": "sportorg/gui/menu/actions.py",
+   "src": "sportorg.gui.menu.actions",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:42]"
+  },
+  {
+   "dst": "sportorg.gui.dialogs.start_preparation",
+   "line": 43,
+   "local": false,
+   "path": "sportorg/gui/menu/actions.py",
+   "src": "sportorg.gui.menu.actions",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:43]"
+  },
+  {
+   "dst": "sportorg.gui.dialogs.start_time_change_dialog",
+   "line": 47,
+   "local": false,
+   "path": "sportorg/gui/menu/actions.py",
+   "src": "sportorg.gui.menu.actions",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:47]"
+  },
+  {
+   "dst": "sportorg.gui.dialogs.teamwork_properties",
+   "line": 48,
+   "local": false,
+   "path": "sportorg/gui/menu/actions.py",
+   "src": "sportorg.gui.menu.actions",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:48]"
+  },
+  {
+   "dst": "sportorg.gui.dialogs.telegram_dialog",
+   "line": 49,
+   "local": false,
+   "path": "sportorg/gui/menu/actions.py",
+   "src": "sportorg.gui.menu.actions",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:49]"
+  },
+  {
+   "dst": "sportorg.gui.dialogs.text_io",
+   "line": 50,
+   "local": false,
+   "path": "sportorg/gui/menu/actions.py",
+   "src": "sportorg.gui.menu.actions",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:50]"
+  },
+  {
+   "dst": "sportorg.gui.dialogs.timekeeping_properties",
+   "line": 51,
+   "local": false,
+   "path": "sportorg/gui/menu/actions.py",
+   "src": "sportorg.gui.menu.actions",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:51]"
+  },
+  {
+   "dst": "sportorg.gui.menu.action",
+   "line": 53,
+   "local": false,
+   "path": "sportorg/gui/menu/actions.py",
+   "src": "sportorg.gui.menu.actions",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:53]"
+  },
+  {
+   "dst": "sportorg.gui.utils.custom_controls",
+   "line": 54,
+   "local": false,
+   "path": "sportorg/gui/menu/actions.py",
+   "src": "sportorg.gui.menu.actions",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:54]"
+  },
+  {
+   "dst": "sportorg.language",
+   "line": 55,
+   "local": false,
+   "path": "sportorg/gui/menu/actions.py",
+   "src": "sportorg.gui.menu.actions",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:55]"
+  },
+  {
+   "dst": "sportorg.libs.sfr.sfrximporter",
+   "line": 56,
+   "local": false,
+   "path": "sportorg/gui/menu/actions.py",
+   "src": "sportorg.gui.menu.actions",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:56]"
+  },
+  {
+   "dst": "sportorg.libs.winorient.wdb",
+   "line": 57,
+   "local": false,
+   "path": "sportorg/gui/menu/actions.py",
+   "src": "sportorg.gui.menu.actions",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:57]"
+  },
+  {
+   "dst": "sportorg.models.memory",
+   "line": 58,
+   "local": false,
+   "path": "sportorg/gui/menu/actions.py",
+   "src": "sportorg.gui.menu.actions",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:58]"
+  },
+  {
+   "dst": "sportorg.models.result.result_checker",
+   "line": 59,
+   "local": false,
+   "path": "sportorg/gui/menu/actions.py",
+   "src": "sportorg.gui.menu.actions",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:59]"
+  },
+  {
+   "dst": "sportorg.models.result.result_tools",
+   "line": 60,
+   "local": false,
+   "path": "sportorg/gui/menu/actions.py",
+   "src": "sportorg.gui.menu.actions",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:60]"
+  },
+  {
+   "dst": "sportorg.models.start.start_preparation",
+   "line": 61,
+   "local": false,
+   "path": "sportorg/gui/menu/actions.py",
+   "src": "sportorg.gui.menu.actions",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:61]"
+  },
+  {
+   "dst": "sportorg.modules.backup.file",
+   "line": 66,
+   "local": false,
+   "path": "sportorg/gui/menu/actions.py",
+   "src": "sportorg.gui.menu.actions",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:66]"
+  },
+  {
+   "dst": "sportorg.modules.backup.json",
+   "line": 67,
+   "local": false,
+   "path": "sportorg/gui/menu/actions.py",
+   "src": "sportorg.gui.menu.actions",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:67]"
+  },
+  {
+   "dst": "sportorg.modules.huichang.huichang",
+   "line": 83,
+   "local": false,
+   "path": "sportorg/gui/menu/actions.py",
+   "src": "sportorg.gui.menu.actions",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:83]"
+  },
+  {
+   "dst": "sportorg.modules.iof.iof_xml",
+   "line": 68,
+   "local": false,
+   "path": "sportorg/gui/menu/actions.py",
+   "src": "sportorg.gui.menu.actions",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:68]"
+  },
+  {
+   "dst": "sportorg.modules.live.live",
+   "line": 69,
+   "local": false,
+   "path": "sportorg/gui/menu/actions.py",
+   "src": "sportorg.gui.menu.actions",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:69]"
+  },
+  {
+   "dst": "sportorg.modules.ocad.ocad",
+   "line": 70,
+   "local": false,
+   "path": "sportorg/gui/menu/actions.py",
+   "src": "sportorg.gui.menu.actions",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:70]"
+  },
+  {
+   "dst": "sportorg.modules.ocad.ocad",
+   "line": 71,
+   "local": false,
+   "path": "sportorg/gui/menu/actions.py",
+   "src": "sportorg.gui.menu.actions",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:71]"
+  },
+  {
+   "dst": "sportorg.modules.recovery.recovery_orgeo_finish_csv",
+   "line": 72,
+   "local": false,
+   "path": "sportorg/gui/menu/actions.py",
+   "src": "sportorg.gui.menu.actions",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:72]"
+  },
+  {
+   "dst": "sportorg.modules.recovery.recovery_si_master_csv",
+   "line": 72,
+   "local": false,
+   "path": "sportorg/gui/menu/actions.py",
+   "src": "sportorg.gui.menu.actions",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:72]"
+  },
+  {
+   "dst": "sportorg.modules.recovery.recovery_sportorg_html",
+   "line": 72,
+   "local": false,
+   "path": "sportorg/gui/menu/actions.py",
+   "src": "sportorg.gui.menu.actions",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:72]"
+  },
+  {
+   "dst": "sportorg.modules.recovery.recovery_sportorg_si_log",
+   "line": 72,
+   "local": false,
+   "path": "sportorg/gui/menu/actions.py",
+   "src": "sportorg.gui.menu.actions",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:72]"
+  },
+  {
+   "dst": "sportorg.modules.rfid_impinj.rfid_impinj",
+   "line": 78,
+   "local": false,
+   "path": "sportorg/gui/menu/actions.py",
+   "src": "sportorg.gui.menu.actions",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:78]"
+  },
+  {
+   "dst": "sportorg.modules.sfr.sfrreader",
+   "line": 79,
+   "local": false,
+   "path": "sportorg/gui/menu/actions.py",
+   "src": "sportorg.gui.menu.actions",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:79]"
+  },
+  {
+   "dst": "sportorg.modules.sfr.sfrxexporter",
+   "line": 997,
+   "local": true,
+   "path": "sportorg/gui/menu/actions.py",
+   "src": "sportorg.gui.menu.actions",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:997]"
+  },
+  {
+   "dst": "sportorg.modules.sportident.sireader",
+   "line": 80,
+   "local": false,
+   "path": "sportorg/gui/menu/actions.py",
+   "src": "sportorg.gui.menu.actions",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:80]"
+  },
+  {
+   "dst": "sportorg.modules.sportiduino.sportiduino",
+   "line": 81,
+   "local": false,
+   "path": "sportorg/gui/menu/actions.py",
+   "src": "sportorg.gui.menu.actions",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:81]"
+  },
+  {
+   "dst": "sportorg.modules.srpid.srpid",
+   "line": 82,
+   "local": false,
+   "path": "sportorg/gui/menu/actions.py",
+   "src": "sportorg.gui.menu.actions",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:82]"
+  },
+  {
+   "dst": "sportorg.modules.teamwork.teamwork",
+   "line": 84,
+   "local": false,
+   "path": "sportorg/gui/menu/actions.py",
+   "src": "sportorg.gui.menu.actions",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:84]"
+  },
+  {
+   "dst": "sportorg.modules.telegram.telegram",
+   "line": 88,
+   "local": false,
+   "path": "sportorg/gui/menu/actions.py",
+   "src": "sportorg.gui.menu.actions",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:88]"
+  },
+  {
+   "dst": "sportorg.modules.updater.checker",
+   "line": 89,
+   "local": false,
+   "path": "sportorg/gui/menu/actions.py",
+   "src": "sportorg.gui.menu.actions",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:89]"
+  },
+  {
+   "dst": "sportorg.modules.winorient.wdb",
+   "line": 91,
+   "local": false,
+   "path": "sportorg/gui/menu/actions.py",
+   "src": "sportorg.gui.menu.actions",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:91]"
+  },
+  {
+   "dst": "sportorg.modules.winorient.winorient",
+   "line": 90,
+   "local": false,
+   "path": "sportorg/gui/menu/actions.py",
+   "src": "sportorg.gui.menu.actions",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:90]"
+  },
+  {
+   "dst": "sportorg.settings",
+   "line": 16,
+   "local": false,
+   "path": "sportorg/gui/menu/actions.py",
+   "src": "sportorg.gui.menu.actions",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:16]"
+  },
+  {
+   "dst": "sportorg.utils.text",
+   "line": 7,
+   "local": false,
+   "path": "sportorg/gui/menu/actions.py",
+   "src": "sportorg.gui.menu.actions",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:7]"
+  },
+  {
+   "dst": "sportorg.gui.menu.actions",
+   "line": 1,
+   "local": false,
+   "path": "sportorg/gui/menu/factory.py",
+   "src": "sportorg.gui.menu.factory",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/factory.py:1]"
+  },
+  {
+   "dst": "sportorg.modules.plugins.manager",
+   "line": 2,
+   "local": false,
+   "path": "sportorg/gui/menu/factory.py",
+   "src": "sportorg.gui.menu.factory",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/factory.py:2]"
+  },
+  {
+   "dst": "sportorg.config",
+   "line": 3,
+   "local": false,
+   "path": "sportorg/gui/menu/menu.py",
+   "src": "sportorg.gui.menu.menu",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:3]"
+  },
+  {
+   "dst": "sportorg.language",
+   "line": 4,
+   "local": false,
+   "path": "sportorg/gui/menu/menu.py",
+   "src": "sportorg.gui.menu.menu",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:4]"
+  },
+  {
+   "dst": "sportorg.modules.plugins",
+   "line": 52,
+   "local": true,
+   "path": "sportorg/gui/menu/menu.py",
+   "src": "sportorg.gui.menu.menu",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:52]"
+  },
+  {
+   "dst": "sportorg.settings",
+   "line": 3,
+   "local": false,
+   "path": "sportorg/gui/menu/menu.py",
+   "src": "sportorg.gui.menu.menu",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:3]"
+  },
+  {
+   "dst": "sportorg.gui.dialogs.course_edit",
+   "line": 8,
+   "local": false,
+   "path": "sportorg/gui/tabs/courses.py",
+   "src": "sportorg.gui.tabs.courses",
+   "tag": "[код: pysport@b548c35 sportorg/gui/tabs/courses.py:8]"
+  },
+  {
+   "dst": "sportorg.gui.global_access",
+   "line": 9,
+   "local": false,
+   "path": "sportorg/gui/tabs/courses.py",
+   "src": "sportorg.gui.tabs.courses",
+   "tag": "[код: pysport@b548c35 sportorg/gui/tabs/courses.py:9]"
+  },
+  {
+   "dst": "sportorg.gui.tabs.memory_model",
+   "line": 10,
+   "local": false,
+   "path": "sportorg/gui/tabs/courses.py",
+   "src": "sportorg.gui.tabs.courses",
+   "tag": "[код: pysport@b548c35 sportorg/gui/tabs/courses.py:10]"
+  },
+  {
+   "dst": "sportorg.gui.tabs.table",
+   "line": 11,
+   "local": false,
+   "path": "sportorg/gui/tabs/courses.py",
+   "src": "sportorg.gui.tabs.courses",
+   "tag": "[код: pysport@b548c35 sportorg/gui/tabs/courses.py:11]"
+  },
+  {
+   "dst": "sportorg.models.memory",
+   "line": 12,
+   "local": false,
+   "path": "sportorg/gui/tabs/courses.py",
+   "src": "sportorg.gui.tabs.courses",
+   "tag": "[код: pysport@b548c35 sportorg/gui/tabs/courses.py:12]"
+  },
+  {
+   "dst": "sportorg.gui.dialogs.group_edit",
+   "line": 8,
+   "local": false,
+   "path": "sportorg/gui/tabs/groups.py",
+   "src": "sportorg.gui.tabs.groups",
+   "tag": "[код: pysport@b548c35 sportorg/gui/tabs/groups.py:8]"
+  },
+  {
+   "dst": "sportorg.gui.global_access",
+   "line": 9,
+   "local": false,
+   "path": "sportorg/gui/tabs/groups.py",
+   "src": "sportorg.gui.tabs.groups",
+   "tag": "[код: pysport@b548c35 sportorg/gui/tabs/groups.py:9]"
+  },
+  {
+   "dst": "sportorg.gui.tabs.memory_model",
+   "line": 10,
+   "local": false,
+   "path": "sportorg/gui/tabs/groups.py",
+   "src": "sportorg.gui.tabs.groups",
+   "tag": "[код: pysport@b548c35 sportorg/gui/tabs/groups.py:10]"
+  },
+  {
+   "dst": "sportorg.gui.tabs.table",
+   "line": 11,
+   "local": false,
+   "path": "sportorg/gui/tabs/groups.py",
+   "src": "sportorg.gui.tabs.groups",
+   "tag": "[код: pysport@b548c35 sportorg/gui/tabs/groups.py:11]"
+  },
+  {
+   "dst": "sportorg.models.memory",
+   "line": 12,
+   "local": false,
+   "path": "sportorg/gui/tabs/groups.py",
+   "src": "sportorg.gui.tabs.groups",
+   "tag": "[код: pysport@b548c35 sportorg/gui/tabs/groups.py:12]"
+  },
+  {
+   "dst": "sportorg.settings",
+   "line": 6,
+   "local": false,
+   "path": "sportorg/gui/tabs/log.py",
+   "src": "sportorg.gui.tabs.log",
+   "tag": "[код: pysport@b548c35 sportorg/gui/tabs/log.py:6]"
+  },
+  {
+   "dst": "sportorg.gui.global_access",
+   "line": 8,
+   "local": false,
+   "path": "sportorg/gui/tabs/memory_model.py",
+   "src": "sportorg.gui.tabs.memory_model",
+   "tag": "[код: pysport@b548c35 sportorg/gui/tabs/memory_model.py:8]"
+  },
+  {
+   "dst": "sportorg.language",
+   "line": 16,
+   "local": false,
+   "path": "sportorg/gui/tabs/memory_model.py",
+   "src": "sportorg.gui.tabs.memory_model",
+   "tag": "[код: pysport@b548c35 sportorg/gui/tabs/memory_model.py:16]"
+  },
+  {
+   "dst": "sportorg.models.constant",
+   "line": 17,
+   "local": false,
+   "path": "sportorg/gui/tabs/memory_model.py",
+   "src": "sportorg.gui.tabs.memory_model",
+   "tag": "[код: pysport@b548c35 sportorg/gui/tabs/memory_model.py:17]"
+  },
+  {
+   "dst": "sportorg.models.memory",
+   "line": 18,
+   "local": false,
+   "path": "sportorg/gui/tabs/memory_model.py",
+   "src": "sportorg.gui.tabs.memory_model",
+   "tag": "[код: pysport@b548c35 sportorg/gui/tabs/memory_model.py:18]"
+  },
+  {
+   "dst": "sportorg.settings",
+   "line": 15,
+   "local": false,
+   "path": "sportorg/gui/tabs/memory_model.py",
+   "src": "sportorg.gui.tabs.memory_model",
+   "tag": "[код: pysport@b548c35 sportorg/gui/tabs/memory_model.py:15]"
+  },
+  {
+   "dst": "sportorg.utils.time",
+   "line": 27,
+   "local": false,
+   "path": "sportorg/gui/tabs/memory_model.py",
+   "src": "sportorg.gui.tabs.memory_model",
+   "tag": "[код: pysport@b548c35 sportorg/gui/tabs/memory_model.py:27]"
+  },
+  {
+   "dst": "sportorg.gui.dialogs.organization_edit",
+   "line": 8,
+   "local": false,
+   "path": "sportorg/gui/tabs/organizations.py",
+   "src": "sportorg.gui.tabs.organizations",
+   "tag": "[код: pysport@b548c35 sportorg/gui/tabs/organizations.py:8]"
+  },
+  {
+   "dst": "sportorg.gui.global_access",
+   "line": 9,
+   "local": false,
+   "path": "sportorg/gui/tabs/organizations.py",
+   "src": "sportorg.gui.tabs.organizations",
+   "tag": "[код: pysport@b548c35 sportorg/gui/tabs/organizations.py:9]"
+  },
+  {
+   "dst": "sportorg.gui.tabs.memory_model",
+   "line": 10,
+   "local": false,
+   "path": "sportorg/gui/tabs/organizations.py",
+   "src": "sportorg.gui.tabs.organizations",
+   "tag": "[код: pysport@b548c35 sportorg/gui/tabs/organizations.py:10]"
+  },
+  {
+   "dst": "sportorg.gui.tabs.table",
+   "line": 11,
+   "local": false,
+   "path": "sportorg/gui/tabs/organizations.py",
+   "src": "sportorg.gui.tabs.organizations",
+   "tag": "[код: pysport@b548c35 sportorg/gui/tabs/organizations.py:11]"
+  },
+  {
+   "dst": "sportorg.models.memory",
+   "line": 12,
+   "local": false,
+   "path": "sportorg/gui/tabs/organizations.py",
+   "src": "sportorg.gui.tabs.organizations",
+   "tag": "[код: pysport@b548c35 sportorg/gui/tabs/organizations.py:12]"
+  },
+  {
+   "dst": "sportorg.gui.dialogs.person_edit",
+   "line": 9,
+   "local": false,
+   "path": "sportorg/gui/tabs/persons.py",
+   "src": "sportorg.gui.tabs.persons",
+   "tag": "[код: pysport@b548c35 sportorg/gui/tabs/persons.py:9]"
+  },
+  {
+   "dst": "sportorg.gui.global_access",
+   "line": 10,
+   "local": false,
+   "path": "sportorg/gui/tabs/persons.py",
+   "src": "sportorg.gui.tabs.persons",
+   "tag": "[код: pysport@b548c35 sportorg/gui/tabs/persons.py:10]"
+  },
+  {
+   "dst": "sportorg.gui.tabs.memory_model",
+   "line": 11,
+   "local": false,
+   "path": "sportorg/gui/tabs/persons.py",
+   "src": "sportorg.gui.tabs.persons",
+   "tag": "[код: pysport@b548c35 sportorg/gui/tabs/persons.py:11]"
+  },
+  {
+   "dst": "sportorg.gui.tabs.table",
+   "line": 12,
+   "local": false,
+   "path": "sportorg/gui/tabs/persons.py",
+   "src": "sportorg.gui.tabs.persons",
+   "tag": "[код: pysport@b548c35 sportorg/gui/tabs/persons.py:12]"
+  },
+  {
+   "dst": "sportorg.models.memory",
+   "line": 13,
+   "local": false,
+   "path": "sportorg/gui/tabs/persons.py",
+   "src": "sportorg.gui.tabs.persons",
+   "tag": "[код: pysport@b548c35 sportorg/gui/tabs/persons.py:13]"
+  },
+  {
+   "dst": "sportorg.models.start.relay",
+   "line": 14,
+   "local": false,
+   "path": "sportorg/gui/tabs/persons.py",
+   "src": "sportorg.gui.tabs.persons",
+   "tag": "[код: pysport@b548c35 sportorg/gui/tabs/persons.py:14]"
+  },
+  {
+   "dst": "sportorg.common.otime",
+   "line": 10,
+   "local": false,
+   "path": "sportorg/gui/tabs/results.py",
+   "src": "sportorg.gui.tabs.results",
+   "tag": "[код: pysport@b548c35 sportorg/gui/tabs/results.py:10]"
+  },
+  {
+   "dst": "sportorg.gui.dialogs.result_edit",
+   "line": 11,
+   "local": false,
+   "path": "sportorg/gui/tabs/results.py",
+   "src": "sportorg.gui.tabs.results",
+   "tag": "[код: pysport@b548c35 sportorg/gui/tabs/results.py:11]"
+  },
+  {
+   "dst": "sportorg.gui.global_access",
+   "line": 12,
+   "local": false,
+   "path": "sportorg/gui/tabs/results.py",
+   "src": "sportorg.gui.tabs.results",
+   "tag": "[код: pysport@b548c35 sportorg/gui/tabs/results.py:12]"
+  },
+  {
+   "dst": "sportorg.gui.tabs.memory_model",
+   "line": 13,
+   "local": false,
+   "path": "sportorg/gui/tabs/results.py",
+   "src": "sportorg.gui.tabs.results",
+   "tag": "[код: pysport@b548c35 sportorg/gui/tabs/results.py:13]"
+  },
+  {
+   "dst": "sportorg.gui.tabs.table",
+   "line": 14,
+   "local": false,
+   "path": "sportorg/gui/tabs/results.py",
+   "src": "sportorg.gui.tabs.results",
+   "tag": "[код: pysport@b548c35 sportorg/gui/tabs/results.py:14]"
+  },
+  {
+   "dst": "sportorg.language",
+   "line": 15,
+   "local": false,
+   "path": "sportorg/gui/tabs/results.py",
+   "src": "sportorg.gui.tabs.results",
+   "tag": "[код: pysport@b548c35 sportorg/gui/tabs/results.py:15]"
+  },
+  {
+   "dst": "sportorg.models.memory",
+   "line": 16,
+   "local": false,
+   "path": "sportorg/gui/tabs/results.py",
+   "src": "sportorg.gui.tabs.results",
+   "tag": "[код: pysport@b548c35 sportorg/gui/tabs/results.py:16]"
+  },
+  {
+   "dst": "sportorg.utils.time",
+   "line": 17,
+   "local": false,
+   "path": "sportorg/gui/tabs/results.py",
+   "src": "sportorg.gui.tabs.results",
+   "tag": "[код: pysport@b548c35 sportorg/gui/tabs/results.py:17]"
+  },
+  {
+   "dst": "sportorg.config",
+   "line": 1,
+   "local": false,
+   "path": "sportorg/gui/toolbar.py",
+   "src": "sportorg.gui.toolbar",
+   "tag": "[код: pysport@b548c35 sportorg/gui/toolbar.py:1]"
+  },
+  {
+   "dst": "sportorg.language",
+   "line": 2,
+   "local": false,
+   "path": "sportorg/gui/toolbar.py",
+   "src": "sportorg.gui.toolbar",
+   "tag": "[код: pysport@b548c35 sportorg/gui/toolbar.py:2]"
+  },
+  {
+   "dst": "sportorg.common.otime",
+   "line": 22,
+   "local": false,
+   "path": "sportorg/gui/utils/custom_controls.py",
+   "src": "sportorg.gui.utils.custom_controls",
+   "tag": "[код: pysport@b548c35 sportorg/gui/utils/custom_controls.py:22]"
+  },
+  {
+   "dst": "sportorg.language",
+   "line": 23,
+   "local": false,
+   "path": "sportorg/gui/utils/custom_controls.py",
+   "src": "sportorg.gui.utils.custom_controls",
+   "tag": "[код: pysport@b548c35 sportorg/gui/utils/custom_controls.py:23]"
+  },
+  {
+   "dst": "sportorg.utils.time",
+   "line": 24,
+   "local": false,
+   "path": "sportorg/gui/utils/custom_controls.py",
+   "src": "sportorg.gui.utils.custom_controls",
+   "tag": "[код: pysport@b548c35 sportorg/gui/utils/custom_controls.py:24]"
+  },
+  {
+   "dst": "sportorg.config",
+   "line": 9,
+   "local": false,
+   "path": "sportorg/language.py",
+   "src": "sportorg.language",
+   "tag": "[код: pysport@b548c35 sportorg/language.py:9]"
+  },
+  {
+   "dst": "sportorg.common.otime",
+   "line": 25,
+   "local": false,
+   "path": "sportorg/libs/huichang/huichang.py",
+   "src": "sportorg.libs.huichang.huichang",
+   "tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:25]"
+  },
+  {
+   "dst": "sportorg.language",
+   "line": 24,
+   "local": false,
+   "path": "sportorg/libs/huichang/huichang.py",
+   "src": "sportorg.libs.huichang.huichang",
+   "tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:24]"
+  },
+  {
+   "dst": "sportorg.common.otime",
+   "line": 7,
+   "local": false,
+   "path": "sportorg/libs/iof/generator.py",
+   "src": "sportorg.libs.iof.generator",
+   "tag": "[код: pysport@b548c35 sportorg/libs/iof/generator.py:7]"
+  },
+  {
+   "dst": "sportorg.models.memory",
+   "line": 8,
+   "local": false,
+   "path": "sportorg/libs/iof/generator.py",
+   "src": "sportorg.libs.iof.generator",
+   "tag": "[код: pysport@b548c35 sportorg/libs/iof/generator.py:8]"
+  },
+  {
+   "dst": "sportorg.models.result.result_calculation",
+   "line": 9,
+   "local": false,
+   "path": "sportorg/libs/iof/generator.py",
+   "src": "sportorg.libs.iof.generator",
+   "tag": "[код: pysport@b548c35 sportorg/libs/iof/generator.py:9]"
+  },
+  {
+   "dst": "sportorg.utils.text",
+   "line": 4,
+   "local": false,
+   "path": "sportorg/libs/ocad/ocad.py",
+   "src": "sportorg.libs.ocad.ocad",
+   "tag": "[код: pysport@b548c35 sportorg/libs/ocad/ocad.py:4]"
+  },
+  {
+   "dst": "sportorg.language",
+   "line": 4,
+   "local": false,
+   "path": "sportorg/libs/sfr/sfrximporter.py",
+   "src": "sportorg.libs.sfr.sfrximporter",
+   "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrximporter.py:4]"
+  },
+  {
+   "dst": "sportorg.libs.sfr.sfrxparser",
+   "line": 5,
+   "local": false,
+   "path": "sportorg/libs/sfr/sfrximporter.py",
+   "src": "sportorg.libs.sfr.sfrximporter",
+   "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrximporter.py:5]"
+  },
+  {
+   "dst": "sportorg.models.memory",
+   "line": 6,
+   "local": false,
+   "path": "sportorg/libs/sfr/sfrximporter.py",
+   "src": "sportorg.libs.sfr.sfrximporter",
+   "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrximporter.py:6]"
+  },
+  {
+   "dst": "sportorg.models.memory",
+   "line": 7,
+   "local": false,
+   "path": "sportorg/libs/sfr/sfrximporter.py",
+   "src": "sportorg.libs.sfr.sfrximporter",
+   "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrximporter.py:7]"
+  },
+  {
+   "dst": "sportorg.utils.time",
+   "line": 17,
+   "local": false,
+   "path": "sportorg/libs/sfr/sfrximporter.py",
+   "src": "sportorg.libs.sfr.sfrximporter",
+   "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrximporter.py:17]"
+  },
+  {
+   "dst": "sportorg.models.memory",
+   "line": 3,
+   "local": false,
+   "path": "sportorg/libs/sfr/sfrxparser.py",
+   "src": "sportorg.libs.sfr.sfrxparser",
+   "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrxparser.py:3]"
+  },
+  {
+   "dst": "sportorg.common.otime",
+   "line": 8,
+   "local": false,
+   "path": "sportorg/libs/winorient/wdb_online_sender.py",
+   "src": "sportorg.libs.winorient.wdb_online_sender",
+   "tag": "[код: pysport@b548c35 sportorg/libs/winorient/wdb_online_sender.py:8]"
+  },
+  {
+   "dst": "sportorg.libs.winorient.wdb",
+   "line": 9,
+   "local": false,
+   "path": "sportorg/libs/winorient/wdb_online_sender.py",
+   "src": "sportorg.libs.winorient.wdb_online_sender",
+   "tag": "[код: pysport@b548c35 sportorg/libs/winorient/wdb_online_sender.py:9]"
+  },
+  {
+   "dst": "sportorg.utils.time",
+   "line": 10,
+   "local": false,
+   "path": "sportorg/libs/winorient/wdb_online_sender.py",
+   "src": "sportorg.libs.winorient.wdb_online_sender",
+   "tag": "[код: pysport@b548c35 sportorg/libs/winorient/wdb_online_sender.py:10]"
+  },
+  {
+   "dst": "sportorg.libs.winorient.wdb_online_sender",
+   "line": 15,
+   "local": false,
+   "path": "sportorg/libs/winorient/wdb_online_sender_dialog.py",
+   "src": "sportorg.libs.winorient.wdb_online_sender_dialog",
+   "tag": "[код: pysport@b548c35 sportorg/libs/winorient/wdb_online_sender_dialog.py:15]"
+  },
+  {
+   "dst": "sportorg.common.singleton",
+   "line": 6,
+   "local": false,
+   "path": "sportorg/models/constant.py",
+   "src": "sportorg.models.constant",
+   "tag": "[код: pysport@b548c35 sportorg/models/constant.py:6]"
+  },
+  {
+   "dst": "sportorg.models.memory",
+   "line": 8,
+   "local": false,
+   "path": "sportorg/models/constant.py",
+   "src": "sportorg.models.constant",
+   "tag": "[код: pysport@b548c35 sportorg/models/constant.py:8]"
+  },
+  {
+   "dst": "sportorg.settings",
+   "line": 7,
+   "local": false,
+   "path": "sportorg/models/constant.py",
+   "src": "sportorg.models.constant",
+   "tag": "[код: pysport@b548c35 sportorg/models/constant.py:7]"
+  },
+  {
+   "dst": "sportorg.common.otime",
+   "line": 14,
+   "local": false,
+   "path": "sportorg/models/memory.py",
+   "src": "sportorg.models.memory",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:14]"
+  },
+  {
+   "dst": "sportorg.language",
+   "line": 15,
+   "local": false,
+   "path": "sportorg/models/memory.py",
+   "src": "sportorg.models.memory",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:15]"
+  },
+  {
+   "dst": "sportorg.settings",
+   "line": 13,
+   "local": false,
+   "path": "sportorg/models/memory.py",
+   "src": "sportorg.models.memory",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:13]"
+  },
+  {
+   "dst": "sportorg.utils.time",
+   "line": 16,
+   "local": false,
+   "path": "sportorg/models/memory.py",
+   "src": "sportorg.models.memory",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:16]"
+  },
+  {
+   "dst": "sportorg.common.otime",
+   "line": 4,
+   "local": false,
+   "path": "sportorg/models/result/result_calculation.py",
+   "src": "sportorg.models.result.result_calculation",
+   "tag": "[код: pysport@b548c35 sportorg/models/result/result_calculation.py:4]"
+  },
+  {
+   "dst": "sportorg.models.constant",
+   "line": 5,
+   "local": false,
+   "path": "sportorg/models/result/result_calculation.py",
+   "src": "sportorg.models.result.result_calculation",
+   "tag": "[код: pysport@b548c35 sportorg/models/result/result_calculation.py:5]"
+  },
+  {
+   "dst": "sportorg.models.memory",
+   "line": 6,
+   "local": false,
+   "path": "sportorg/models/result/result_calculation.py",
+   "src": "sportorg.models.result.result_calculation",
+   "tag": "[код: pysport@b548c35 sportorg/models/result/result_calculation.py:6]"
+  },
+  {
+   "dst": "sportorg.settings",
+   "line": 3,
+   "local": false,
+   "path": "sportorg/models/result/result_calculation.py",
+   "src": "sportorg.models.result.result_calculation",
+   "tag": "[код: pysport@b548c35 sportorg/models/result/result_calculation.py:3]"
+  },
+  {
+   "dst": "sportorg.common.otime",
+   "line": 1,
+   "local": false,
+   "path": "sportorg/models/result/result_checker.py",
+   "src": "sportorg.models.result.result_checker",
+   "tag": "[код: pysport@b548c35 sportorg/models/result/result_checker.py:1]"
+  },
+  {
+   "dst": "sportorg.models.constant",
+   "line": 2,
+   "local": false,
+   "path": "sportorg/models/result/result_checker.py",
+   "src": "sportorg.models.result.result_checker",
+   "tag": "[код: pysport@b548c35 sportorg/models/result/result_checker.py:2]"
+  },
+  {
+   "dst": "sportorg.models.memory",
+   "line": 3,
+   "local": false,
+   "path": "sportorg/models/result/result_checker.py",
+   "src": "sportorg.models.result.result_checker",
+   "tag": "[код: pysport@b548c35 sportorg/models/result/result_checker.py:3]"
+  },
+  {
+   "dst": "sportorg.common.otime",
+   "line": 6,
+   "local": false,
+   "path": "sportorg/models/result/result_tools.py",
+   "src": "sportorg.models.result.result_tools",
+   "tag": "[код: pysport@b548c35 sportorg/models/result/result_tools.py:6]"
+  },
+  {
+   "dst": "sportorg.models.memory",
+   "line": 7,
+   "local": false,
+   "path": "sportorg/models/result/result_tools.py",
+   "src": "sportorg.models.result.result_tools",
+   "tag": "[код: pysport@b548c35 sportorg/models/result/result_tools.py:7]"
+  },
+  {
+   "dst": "sportorg.models.result.result_calculation",
+   "line": 8,
+   "local": false,
+   "path": "sportorg/models/result/result_tools.py",
+   "src": "sportorg.models.result.result_tools",
+   "tag": "[код: pysport@b548c35 sportorg/models/result/result_tools.py:8]"
+  },
+  {
+   "dst": "sportorg.models.result.result_checker",
+   "line": 12,
+   "local": false,
+   "path": "sportorg/models/result/result_tools.py",
+   "src": "sportorg.models.result.result_tools",
+   "tag": "[код: pysport@b548c35 sportorg/models/result/result_tools.py:12]"
+  },
+  {
+   "dst": "sportorg.models.result.score_calculation",
+   "line": 13,
+   "local": false,
+   "path": "sportorg/models/result/result_tools.py",
+   "src": "sportorg.models.result.result_tools",
+   "tag": "[код: pysport@b548c35 sportorg/models/result/result_tools.py:13]"
+  },
+  {
+   "dst": "sportorg.models.result.split_calculation",
+   "line": 14,
+   "local": false,
+   "path": "sportorg/models/result/result_tools.py",
+   "src": "sportorg.models.result.result_tools",
+   "tag": "[код: pysport@b548c35 sportorg/models/result/result_tools.py:14]"
+  },
+  {
+   "dst": "sportorg.common.otime",
+   "line": 3,
+   "local": false,
+   "path": "sportorg/models/result/score_calculation.py",
+   "src": "sportorg.models.result.score_calculation",
+   "tag": "[код: pysport@b548c35 sportorg/models/result/score_calculation.py:3]"
+  },
+  {
+   "dst": "sportorg.models.memory",
+   "line": 6,
+   "local": false,
+   "path": "sportorg/models/result/score_calculation.py",
+   "src": "sportorg.models.result.score_calculation",
+   "tag": "[код: pysport@b548c35 sportorg/models/result/score_calculation.py:6]"
+  },
+  {
+   "dst": "sportorg.models.result.result_calculation",
+   "line": 7,
+   "local": false,
+   "path": "sportorg/models/result/score_calculation.py",
+   "src": "sportorg.models.result.score_calculation",
+   "tag": "[код: pysport@b548c35 sportorg/models/result/score_calculation.py:7]"
+  },
+  {
+   "dst": "sportorg.models.start.relay",
+   "line": 11,
+   "local": false,
+   "path": "sportorg/models/result/score_calculation.py",
+   "src": "sportorg.models.result.score_calculation",
+   "tag": "[код: pysport@b548c35 sportorg/models/result/score_calculation.py:11]"
+  },
+  {
+   "dst": "sportorg.models.memory",
+   "line": 4,
+   "local": false,
+   "path": "sportorg/models/result/split_calculation.py",
+   "src": "sportorg.models.result.split_calculation",
+   "tag": "[код: pysport@b548c35 sportorg/models/result/split_calculation.py:4]"
+  },
+  {
+   "dst": "sportorg.models.result.result_calculation",
+   "line": 5,
+   "local": false,
+   "path": "sportorg/models/result/split_calculation.py",
+   "src": "sportorg.models.result.split_calculation",
+   "tag": "[код: pysport@b548c35 sportorg/models/result/split_calculation.py:5]"
+  },
+  {
+   "dst": "sportorg.utils.time",
+   "line": 6,
+   "local": false,
+   "path": "sportorg/models/result/split_calculation.py",
+   "src": "sportorg.models.result.split_calculation",
+   "tag": "[код: pysport@b548c35 sportorg/models/result/split_calculation.py:6]"
+  },
+  {
+   "dst": "sportorg.common.otime",
+   "line": 1,
+   "local": false,
+   "path": "sportorg/models/start/relay.py",
+   "src": "sportorg.models.start.relay",
+   "tag": "[код: pysport@b548c35 sportorg/models/start/relay.py:1]"
+  },
+  {
+   "dst": "sportorg.models.memory",
+   "line": 2,
+   "local": false,
+   "path": "sportorg/models/start/relay.py",
+   "src": "sportorg.models.start.relay",
+   "tag": "[код: pysport@b548c35 sportorg/models/start/relay.py:2]"
+  },
+  {
+   "dst": "sportorg.common.otime",
+   "line": 8,
+   "local": false,
+   "path": "sportorg/models/start/start_preparation.py",
+   "src": "sportorg.models.start.start_preparation",
+   "tag": "[код: pysport@b548c35 sportorg/models/start/start_preparation.py:8]"
+  },
+  {
+   "dst": "sportorg.models.memory",
+   "line": 9,
+   "local": false,
+   "path": "sportorg/models/start/start_preparation.py",
+   "src": "sportorg.models.start.start_preparation",
+   "tag": "[код: pysport@b548c35 sportorg/models/start/start_preparation.py:9]"
+  },
+  {
+   "dst": "sportorg.models.result.result_calculation",
+   "line": 10,
+   "local": false,
+   "path": "sportorg/models/start/start_preparation.py",
+   "src": "sportorg.models.start.start_preparation",
+   "tag": "[код: pysport@b548c35 sportorg/models/start/start_preparation.py:10]"
+  },
+  {
+   "dst": "sportorg.modules.backup.json",
+   "line": 8,
+   "local": false,
+   "path": "sportorg/modules/backup/file.py",
+   "src": "sportorg.modules.backup.file",
+   "tag": "[код: pysport@b548c35 sportorg/modules/backup/file.py:8]"
+  },
+  {
+   "dst": "sportorg.modules.backup.sfr_results_board",
+   "line": 8,
+   "local": false,
+   "path": "sportorg/modules/backup/file.py",
+   "src": "sportorg.modules.backup.file",
+   "tag": "[код: pysport@b548c35 sportorg/modules/backup/file.py:8]"
+  },
+  {
+   "dst": "sportorg.settings",
+   "line": 7,
+   "local": false,
+   "path": "sportorg/modules/backup/file.py",
+   "src": "sportorg.modules.backup.file",
+   "tag": "[код: pysport@b548c35 sportorg/modules/backup/file.py:7]"
+  },
+  {
+   "dst": "sportorg.config",
+   "line": 7,
+   "local": false,
+   "path": "sportorg/modules/backup/json.py",
+   "src": "sportorg.modules.backup.json",
+   "tag": "[код: pysport@b548c35 sportorg/modules/backup/json.py:7]"
+  },
+  {
+   "dst": "sportorg.models.memory",
+   "line": 8,
+   "local": false,
+   "path": "sportorg/modules/backup/json.py",
+   "src": "sportorg.modules.backup.json",
+   "tag": "[код: pysport@b548c35 sportorg/modules/backup/json.py:8]"
+  },
+  {
+   "dst": "sportorg.models.result.result_tools",
+   "line": 16,
+   "local": false,
+   "path": "sportorg/modules/backup/json.py",
+   "src": "sportorg.modules.backup.json",
+   "tag": "[код: pysport@b548c35 sportorg/modules/backup/json.py:16]"
+  },
+  {
+   "dst": "sportorg.models.memory",
+   "line": 3,
+   "local": false,
+   "path": "sportorg/modules/backup/sfr_results_board.py",
+   "src": "sportorg.modules.backup.sfr_results_board",
+   "tag": "[код: pysport@b548c35 sportorg/modules/backup/sfr_results_board.py:3]"
+  },
+  {
+   "dst": "sportorg.common.singleton",
+   "line": 8,
+   "local": false,
+   "path": "sportorg/modules/configs/configs.py",
+   "src": "sportorg.modules.configs.configs",
+   "tag": "[код: pysport@b548c35 sportorg/modules/configs/configs.py:8]"
+  },
+  {
+   "dst": "sportorg.config",
+   "line": 7,
+   "local": false,
+   "path": "sportorg/modules/configs/configs.py",
+   "src": "sportorg.modules.configs.configs",
+   "tag": "[код: pysport@b548c35 sportorg/modules/configs/configs.py:7]"
+  },
+  {
+   "dst": "sportorg.common.otime",
+   "line": 21,
+   "local": false,
+   "path": "sportorg/modules/huichang/huichang.py",
+   "src": "sportorg.modules.huichang.huichang",
+   "tag": "[код: pysport@b548c35 sportorg/modules/huichang/huichang.py:21]"
+  },
+  {
+   "dst": "sportorg.common.singleton",
+   "line": 20,
+   "local": false,
+   "path": "sportorg/modules/huichang/huichang.py",
+   "src": "sportorg.modules.huichang.huichang",
+   "tag": "[код: pysport@b548c35 sportorg/modules/huichang/huichang.py:20]"
+  },
+  {
+   "dst": "sportorg.libs.huichang.huichang",
+   "line": 14,
+   "local": false,
+   "path": "sportorg/modules/huichang/huichang.py",
+   "src": "sportorg.modules.huichang.huichang",
+   "tag": "[код: pysport@b548c35 sportorg/modules/huichang/huichang.py:14]"
+  },
+  {
+   "dst": "sportorg.models.memory",
+   "line": 22,
+   "local": false,
+   "path": "sportorg/modules/huichang/huichang.py",
+   "src": "sportorg.modules.huichang.huichang",
+   "tag": "[код: pysport@b548c35 sportorg/modules/huichang/huichang.py:22]"
+  },
+  {
+   "dst": "sportorg.modules.sportident.backup",
+   "line": 23,
+   "local": false,
+   "path": "sportorg/modules/huichang/huichang.py",
+   "src": "sportorg.modules.huichang.huichang",
+   "tag": "[код: pysport@b548c35 sportorg/modules/huichang/huichang.py:23]"
+  },
+  {
+   "dst": "sportorg.common.otime",
+   "line": 8,
+   "local": false,
+   "path": "sportorg/modules/iof/iof_xml.py",
+   "src": "sportorg.modules.iof.iof_xml",
+   "tag": "[код: pysport@b548c35 sportorg/modules/iof/iof_xml.py:8]"
+  },
+  {
+   "dst": "sportorg.language",
+   "line": 9,
+   "local": false,
+   "path": "sportorg/modules/iof/iof_xml.py",
+   "src": "sportorg.modules.iof.iof_xml",
+   "tag": "[код: pysport@b548c35 sportorg/modules/iof/iof_xml.py:9]"
+  },
+  {
+   "dst": "sportorg.libs.iof.generator",
+   "line": 10,
+   "local": false,
+   "path": "sportorg/modules/iof/iof_xml.py",
+   "src": "sportorg.modules.iof.iof_xml",
+   "tag": "[код: pysport@b548c35 sportorg/modules/iof/iof_xml.py:10]"
+  },
+  {
+   "dst": "sportorg.libs.iof.parser",
+   "line": 16,
+   "local": false,
+   "path": "sportorg/modules/iof/iof_xml.py",
+   "src": "sportorg.modules.iof.iof_xml",
+   "tag": "[код: pysport@b548c35 sportorg/modules/iof/iof_xml.py:16]"
+  },
+  {
+   "dst": "sportorg.models.memory",
+   "line": 17,
+   "local": false,
+   "path": "sportorg/modules/iof/iof_xml.py",
+   "src": "sportorg.modules.iof.iof_xml",
+   "tag": "[код: pysport@b548c35 sportorg/modules/iof/iof_xml.py:17]"
+  },
+  {
+   "dst": "sportorg.utils.time",
+   "line": 30,
+   "local": false,
+   "path": "sportorg/modules/iof/iof_xml.py",
+   "src": "sportorg.modules.iof.iof_xml",
+   "tag": "[код: pysport@b548c35 sportorg/modules/iof/iof_xml.py:30]"
+  },
+  {
+   "dst": "sportorg.models.memory",
+   "line": 10,
+   "local": false,
+   "path": "sportorg/modules/live/live.py",
+   "src": "sportorg.modules.live.live",
+   "tag": "[код: pysport@b548c35 sportorg/modules/live/live.py:10]"
+  },
+  {
+   "dst": "sportorg.modules.live.orgeo",
+   "line": 11,
+   "local": false,
+   "path": "sportorg/modules/live/live.py",
+   "src": "sportorg.modules.live.live",
+   "tag": "[код: pysport@b548c35 sportorg/modules/live/live.py:11]"
+  },
+  {
+   "dst": "sportorg.common.otime",
+   "line": 7,
+   "local": false,
+   "path": "sportorg/modules/live/orgeo.py",
+   "src": "sportorg.modules.live.orgeo",
+   "tag": "[код: pysport@b548c35 sportorg/modules/live/orgeo.py:7]"
+  },
+  {
+   "dst": "sportorg.config",
+   "line": 6,
+   "local": false,
+   "path": "sportorg/modules/live/orgeo.py",
+   "src": "sportorg.modules.live.orgeo",
+   "tag": "[код: pysport@b548c35 sportorg/modules/live/orgeo.py:6]"
+  },
+  {
+   "dst": "sportorg.settings",
+   "line": 6,
+   "local": false,
+   "path": "sportorg/modules/live/orgeo.py",
+   "src": "sportorg.modules.live.orgeo",
+   "tag": "[код: pysport@b548c35 sportorg/modules/live/orgeo.py:6]"
+  },
+  {
+   "dst": "sportorg.utils.time",
+   "line": 8,
+   "local": false,
+   "path": "sportorg/modules/live/orgeo.py",
+   "src": "sportorg.modules.live.orgeo",
+   "tag": "[код: pysport@b548c35 sportorg/modules/live/orgeo.py:8]"
+  },
+  {
+   "dst": "sportorg.libs.ocad.ocad",
+   "line": 1,
+   "local": false,
+   "path": "sportorg/modules/ocad/ocad.py",
+   "src": "sportorg.modules.ocad.ocad",
+   "tag": "[код: pysport@b548c35 sportorg/modules/ocad/ocad.py:1]"
+  },
+  {
+   "dst": "sportorg.models.memory",
+   "line": 2,
+   "local": false,
+   "path": "sportorg/modules/ocad/ocad.py",
+   "src": "sportorg.modules.ocad.ocad",
+   "tag": "[код: pysport@b548c35 sportorg/modules/ocad/ocad.py:2]"
+  },
+  {
+   "dst": "sportorg.models.memory",
+   "line": 3,
+   "local": false,
+   "path": "sportorg/modules/ocad/ocad.py",
+   "src": "sportorg.modules.ocad.ocad",
+   "tag": "[код: pysport@b548c35 sportorg/modules/ocad/ocad.py:3]"
+  },
+  {
+   "dst": "sportorg.modules.plugins.manager",
+   "line": 1,
+   "local": false,
+   "path": "sportorg/modules/plugins/__init__.py",
+   "src": "sportorg.modules.plugins",
+   "tag": "[код: pysport@b548c35 sportorg/modules/plugins/__init__.py:1]"
+  },
+  {
+   "dst": "sportorg.config",
+   "line": 15,
+   "local": false,
+   "path": "sportorg/modules/plugins/manager.py",
+   "src": "sportorg.modules.plugins.manager",
+   "tag": "[код: pysport@b548c35 sportorg/modules/plugins/manager.py:15]"
+  },
+  {
+   "dst": "sportorg.models.memory",
+   "line": 16,
+   "local": false,
+   "path": "sportorg/modules/plugins/manager.py",
+   "src": "sportorg.modules.plugins.manager",
+   "tag": "[код: pysport@b548c35 sportorg/modules/plugins/manager.py:16]"
+  },
+  {
+   "dst": "sportorg.settings",
+   "line": 15,
+   "local": false,
+   "path": "sportorg/modules/plugins/manager.py",
+   "src": "sportorg.modules.plugins.manager",
+   "tag": "[код: pysport@b548c35 sportorg/modules/plugins/manager.py:15]"
+  },
+  {
+   "dst": "sportorg.common.template",
+   "line": 5,
+   "local": false,
+   "path": "sportorg/modules/printing/model.py",
+   "src": "sportorg.modules.printing.model",
+   "tag": "[код: pysport@b548c35 sportorg/modules/printing/model.py:5]"
+  },
+  {
+   "dst": "sportorg.language",
+   "line": 6,
+   "local": false,
+   "path": "sportorg/modules/printing/model.py",
+   "src": "sportorg.modules.printing.model",
+   "tag": "[код: pysport@b548c35 sportorg/modules/printing/model.py:6]"
+  },
+  {
+   "dst": "sportorg.models.memory",
+   "line": 7,
+   "local": false,
+   "path": "sportorg/modules/printing/model.py",
+   "src": "sportorg.modules.printing.model",
+   "tag": "[код: pysport@b548c35 sportorg/modules/printing/model.py:7]"
+  },
+  {
+   "dst": "sportorg.models.result.split_calculation",
+   "line": 8,
+   "local": false,
+   "path": "sportorg/modules/printing/model.py",
+   "src": "sportorg.modules.printing.model",
+   "tag": "[код: pysport@b548c35 sportorg/modules/printing/model.py:8]"
+  },
+  {
+   "dst": "sportorg.modules.printing.printing",
+   "line": 9,
+   "local": false,
+   "path": "sportorg/modules/printing/model.py",
+   "src": "sportorg.modules.printing.model",
+   "tag": "[код: pysport@b548c35 sportorg/modules/printing/model.py:9]"
+  },
+  {
+   "dst": "sportorg.modules.printing.printout_split",
+   "line": 10,
+   "local": false,
+   "path": "sportorg/modules/printing/model.py",
+   "src": "sportorg.modules.printing.model",
+   "tag": "[код: pysport@b548c35 sportorg/modules/printing/model.py:10]"
+  },
+  {
+   "dst": "sportorg.settings",
+   "line": 4,
+   "local": false,
+   "path": "sportorg/modules/printing/model.py",
+   "src": "sportorg.modules.printing.model",
+   "tag": "[код: pysport@b548c35 sportorg/modules/printing/model.py:4]"
+  },
+  {
+   "dst": "sportorg.common.fake_std",
+   "line": 20,
+   "local": false,
+   "path": "sportorg/modules/printing/printing.py",
+   "src": "sportorg.modules.printing.printing",
+   "tag": "[код: pysport@b548c35 sportorg/modules/printing/printing.py:20]"
+  },
+  {
+   "dst": "sportorg.gui.global_access",
+   "line": 21,
+   "local": false,
+   "path": "sportorg/modules/printing/printing.py",
+   "src": "sportorg.modules.printing.printing",
+   "tag": "[код: pysport@b548c35 sportorg/modules/printing/printing.py:21]"
+  },
+  {
+   "dst": "sportorg.language",
+   "line": 3,
+   "local": false,
+   "path": "sportorg/modules/printing/printout_split.py",
+   "src": "sportorg.modules.printing.printout_split",
+   "tag": "[код: pysport@b548c35 sportorg/modules/printing/printout_split.py:3]"
+  },
+  {
+   "dst": "sportorg.models.memory",
+   "line": 4,
+   "local": false,
+   "path": "sportorg/modules/printing/printout_split.py",
+   "src": "sportorg.modules.printing.printout_split",
+   "tag": "[код: pysport@b548c35 sportorg/modules/printing/printout_split.py:4]"
+  },
+  {
+   "dst": "sportorg.models.result.result_calculation",
+   "line": 5,
+   "local": false,
+   "path": "sportorg/modules/printing/printout_split.py",
+   "src": "sportorg.modules.printing.printout_split",
+   "tag": "[код: pysport@b548c35 sportorg/modules/printing/printout_split.py:5]"
+  },
+  {
+   "dst": "sportorg.models.memory",
+   "line": 18,
+   "local": false,
+   "path": "sportorg/modules/recovery/recovery_orgeo_finish_csv.py",
+   "src": "sportorg.modules.recovery.recovery_orgeo_finish_csv",
+   "tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_orgeo_finish_csv.py:18]"
+  },
+  {
+   "dst": "sportorg.utils.time",
+   "line": 27,
+   "local": false,
+   "path": "sportorg/modules/recovery/recovery_orgeo_finish_csv.py",
+   "src": "sportorg.modules.recovery.recovery_orgeo_finish_csv",
+   "tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_orgeo_finish_csv.py:27]"
+  },
+  {
+   "dst": "sportorg.common.otime",
+   "line": 23,
+   "local": false,
+   "path": "sportorg/modules/recovery/recovery_si_master_csv.py",
+   "src": "sportorg.modules.recovery.recovery_si_master_csv",
+   "tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_si_master_csv.py:23]"
+  },
+  {
+   "dst": "sportorg.models.memory",
+   "line": 24,
+   "local": false,
+   "path": "sportorg/modules/recovery/recovery_si_master_csv.py",
+   "src": "sportorg.modules.recovery.recovery_si_master_csv",
+   "tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_si_master_csv.py:24]"
+  },
+  {
+   "dst": "sportorg.modules.sportident.fix_time_sicard_5",
+   "line": 25,
+   "local": false,
+   "path": "sportorg/modules/recovery/recovery_si_master_csv.py",
+   "src": "sportorg.modules.recovery.recovery_si_master_csv",
+   "tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_si_master_csv.py:25]"
+  },
+  {
+   "dst": "sportorg.utils.time",
+   "line": 26,
+   "local": false,
+   "path": "sportorg/modules/recovery/recovery_si_master_csv.py",
+   "src": "sportorg.modules.recovery.recovery_si_master_csv",
+   "tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_si_master_csv.py:26]"
+  },
+  {
+   "dst": "sportorg.utils.text",
+   "line": 15,
+   "local": false,
+   "path": "sportorg/modules/recovery/recovery_sportorg_html.py",
+   "src": "sportorg.modules.recovery.recovery_sportorg_html",
+   "tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_sportorg_html.py:15]"
+  },
+  {
+   "dst": "sportorg.common.otime",
+   "line": 32,
+   "local": false,
+   "path": "sportorg/modules/recovery/recovery_sportorg_si_log.py",
+   "src": "sportorg.modules.recovery.recovery_sportorg_si_log",
+   "tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_sportorg_si_log.py:32]"
+  },
+  {
+   "dst": "sportorg.models.memory",
+   "line": 33,
+   "local": false,
+   "path": "sportorg/modules/recovery/recovery_sportorg_si_log.py",
+   "src": "sportorg.modules.recovery.recovery_sportorg_si_log",
+   "tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_sportorg_si_log.py:33]"
+  },
+  {
+   "dst": "sportorg.modules.sportident.fix_time_sicard_5",
+   "line": 34,
+   "local": false,
+   "path": "sportorg/modules/recovery/recovery_sportorg_si_log.py",
+   "src": "sportorg.modules.recovery.recovery_sportorg_si_log",
+   "tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_sportorg_si_log.py:34]"
+  },
+  {
+   "dst": "sportorg.utils.time",
+   "line": 35,
+   "local": false,
+   "path": "sportorg/modules/recovery/recovery_sportorg_si_log.py",
+   "src": "sportorg.modules.recovery.recovery_sportorg_si_log",
+   "tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_sportorg_si_log.py:35]"
+  },
+  {
+   "dst": "sportorg.common.otime",
+   "line": 23,
+   "local": false,
+   "path": "sportorg/modules/rfid_impinj/rfid_impinj.py",
+   "src": "sportorg.modules.rfid_impinj.rfid_impinj",
+   "tag": "[код: pysport@b548c35 sportorg/modules/rfid_impinj/rfid_impinj.py:23]"
+  },
+  {
+   "dst": "sportorg.common.singleton",
+   "line": 24,
+   "local": false,
+   "path": "sportorg/modules/rfid_impinj/rfid_impinj.py",
+   "src": "sportorg.modules.rfid_impinj.rfid_impinj",
+   "tag": "[код: pysport@b548c35 sportorg/modules/rfid_impinj/rfid_impinj.py:24]"
+  },
+  {
+   "dst": "sportorg.models.memory",
+   "line": 25,
+   "local": false,
+   "path": "sportorg/modules/rfid_impinj/rfid_impinj.py",
+   "src": "sportorg.modules.rfid_impinj.rfid_impinj",
+   "tag": "[код: pysport@b548c35 sportorg/modules/rfid_impinj/rfid_impinj.py:25]"
+  },
+  {
+   "dst": "sportorg.models.memory",
+   "line": 26,
+   "local": false,
+   "path": "sportorg/modules/rfid_impinj/rfid_impinj.py",
+   "src": "sportorg.modules.rfid_impinj.rfid_impinj",
+   "tag": "[код: pysport@b548c35 sportorg/modules/rfid_impinj/rfid_impinj.py:26]"
+  },
+  {
+   "dst": "sportorg.common.singleton",
+   "line": 12,
+   "local": false,
+   "path": "sportorg/modules/sfr/sfrreader.py",
+   "src": "sportorg.modules.sfr.sfrreader",
+   "tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrreader.py:12]"
+  },
+  {
+   "dst": "sportorg.language",
+   "line": 13,
+   "local": false,
+   "path": "sportorg/modules/sfr/sfrreader.py",
+   "src": "sportorg.modules.sfr.sfrreader",
+   "tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrreader.py:13]"
+  },
+  {
+   "dst": "sportorg.libs.sfr.sfrreader",
+   "line": 14,
+   "local": false,
+   "path": "sportorg/modules/sfr/sfrreader.py",
+   "src": "sportorg.modules.sfr.sfrreader",
+   "tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrreader.py:14]"
+  },
+  {
+   "dst": "sportorg.libs.sfr.sfrreader",
+   "line": 15,
+   "local": false,
+   "path": "sportorg/modules/sfr/sfrreader.py",
+   "src": "sportorg.modules.sfr.sfrreader",
+   "tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrreader.py:15]"
+  },
+  {
+   "dst": "sportorg.models.memory",
+   "line": 16,
+   "local": false,
+   "path": "sportorg/modules/sfr/sfrreader.py",
+   "src": "sportorg.modules.sfr.sfrreader",
+   "tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrreader.py:16]"
+  },
+  {
+   "dst": "sportorg.modules.sportident.backup",
+   "line": 17,
+   "local": false,
+   "path": "sportorg/modules/sfr/sfrreader.py",
+   "src": "sportorg.modules.sfr.sfrreader",
+   "tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrreader.py:17]"
+  },
+  {
+   "dst": "sportorg.utils.time",
+   "line": 18,
+   "local": false,
+   "path": "sportorg/modules/sfr/sfrreader.py",
+   "src": "sportorg.modules.sfr.sfrreader",
+   "tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrreader.py:18]"
+  },
+  {
+   "dst": "sportorg.config",
+   "line": 4,
+   "local": false,
+   "path": "sportorg/modules/sfr/sfrxexporter.py",
+   "src": "sportorg.modules.sfr.sfrxexporter",
+   "tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:4]"
+  },
+  {
+   "dst": "sportorg.language",
+   "line": 5,
+   "local": false,
+   "path": "sportorg/modules/sfr/sfrxexporter.py",
+   "src": "sportorg.modules.sfr.sfrxexporter",
+   "tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:5]"
+  },
+  {
+   "dst": "sportorg.models.memory",
+   "line": 6,
+   "local": false,
+   "path": "sportorg/modules/sfr/sfrxexporter.py",
+   "src": "sportorg.modules.sfr.sfrxexporter",
+   "tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:6]"
+  },
+  {
+   "dst": "sportorg.models.memory",
+   "line": 7,
+   "local": false,
+   "path": "sportorg/modules/sfr/sfrxexporter.py",
+   "src": "sportorg.modules.sfr.sfrxexporter",
+   "tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:7]"
+  },
+  {
+   "dst": "sportorg.common.audio",
+   "line": 2,
+   "local": false,
+   "path": "sportorg/modules/sound/__init__.py",
+   "src": "sportorg.modules.sound",
+   "tag": "[код: pysport@b548c35 sportorg/modules/sound/__init__.py:2]"
+  },
+  {
+   "dst": "sportorg.common.singleton",
+   "line": 3,
+   "local": false,
+   "path": "sportorg/modules/sound/__init__.py",
+   "src": "sportorg.modules.sound",
+   "tag": "[код: pysport@b548c35 sportorg/modules/sound/__init__.py:3]"
+  },
+  {
+   "dst": "sportorg.settings",
+   "line": 1,
+   "local": false,
+   "path": "sportorg/modules/sound/__init__.py",
+   "src": "sportorg.modules.sound",
+   "tag": "[код: pysport@b548c35 sportorg/modules/sound/__init__.py:1]"
+  },
+  {
+   "dst": "sportorg.common.fake_std",
+   "line": 7,
+   "local": false,
+   "path": "sportorg/modules/sportident/backup.py",
+   "src": "sportorg.modules.sportident.backup",
+   "tag": "[код: pysport@b548c35 sportorg/modules/sportident/backup.py:7]"
+  },
+  {
+   "dst": "sportorg.config",
+   "line": 6,
+   "local": false,
+   "path": "sportorg/modules/sportident/backup.py",
+   "src": "sportorg.modules.sportident.backup",
+   "tag": "[код: pysport@b548c35 sportorg/modules/sportident/backup.py:6]"
+  },
+  {
+   "dst": "sportorg.utils.time",
+   "line": 8,
+   "local": false,
+   "path": "sportorg/modules/sportident/backup.py",
+   "src": "sportorg.modules.sportident.backup",
+   "tag": "[код: pysport@b548c35 sportorg/modules/sportident/backup.py:8]"
+  },
+  {
+   "dst": "sportorg.common.otime",
+   "line": 1,
+   "local": false,
+   "path": "sportorg/modules/sportident/fix_time_sicard_5.py",
+   "src": "sportorg.modules.sportident.fix_time_sicard_5",
+   "tag": "[код: pysport@b548c35 sportorg/modules/sportident/fix_time_sicard_5.py:1]"
+  },
+  {
+   "dst": "sportorg.common.otime",
+   "line": 6,
+   "local": false,
+   "path": "sportorg/modules/sportident/result_generation.py",
+   "src": "sportorg.modules.sportident.result_generation",
+   "tag": "[код: pysport@b548c35 sportorg/modules/sportident/result_generation.py:6]"
+  },
+  {
+   "dst": "sportorg.gui.dialogs.bib_dialog",
+   "line": 7,
+   "local": false,
+   "path": "sportorg/modules/sportident/result_generation.py",
+   "src": "sportorg.modules.sportident.result_generation",
+   "tag": "[код: pysport@b548c35 sportorg/modules/sportident/result_generation.py:7]"
+  },
+  {
+   "dst": "sportorg.language",
+   "line": 8,
+   "local": false,
+   "path": "sportorg/modules/sportident/result_generation.py",
+   "src": "sportorg.modules.sportident.result_generation",
+   "tag": "[код: pysport@b548c35 sportorg/modules/sportident/result_generation.py:8]"
+  },
+  {
+   "dst": "sportorg.models.memory",
+   "line": 9,
+   "local": false,
+   "path": "sportorg/modules/sportident/result_generation.py",
+   "src": "sportorg.modules.sportident.result_generation",
+   "tag": "[код: pysport@b548c35 sportorg/modules/sportident/result_generation.py:9]"
+  },
+  {
+   "dst": "sportorg.models.result.result_checker",
+   "line": 10,
+   "local": false,
+   "path": "sportorg/modules/sportident/result_generation.py",
+   "src": "sportorg.modules.sportident.result_generation",
+   "tag": "[код: pysport@b548c35 sportorg/modules/sportident/result_generation.py:10]"
+  },
+  {
+   "dst": "sportorg.utils.time",
+   "line": 11,
+   "local": false,
+   "path": "sportorg/modules/sportident/result_generation.py",
+   "src": "sportorg.modules.sportident.result_generation",
+   "tag": "[код: pysport@b548c35 sportorg/modules/sportident/result_generation.py:11]"
+  },
+  {
+   "dst": "sportorg.common.singleton",
+   "line": 26,
+   "local": false,
+   "path": "sportorg/modules/sportident/sireader.py",
+   "src": "sportorg.modules.sportident.sireader",
+   "tag": "[код: pysport@b548c35 sportorg/modules/sportident/sireader.py:26]"
+  },
+  {
+   "dst": "sportorg.language",
+   "line": 27,
+   "local": false,
+   "path": "sportorg/modules/sportident/sireader.py",
+   "src": "sportorg.modules.sportident.sireader",
+   "tag": "[код: pysport@b548c35 sportorg/modules/sportident/sireader.py:27]"
+  },
+  {
+   "dst": "sportorg.models.memory",
+   "line": 28,
+   "local": false,
+   "path": "sportorg/modules/sportident/sireader.py",
+   "src": "sportorg.modules.sportident.sireader",
+   "tag": "[код: pysport@b548c35 sportorg/modules/sportident/sireader.py:28]"
+  },
+  {
+   "dst": "sportorg.modules.sportident.backup",
+   "line": 29,
+   "local": false,
+   "path": "sportorg/modules/sportident/sireader.py",
+   "src": "sportorg.modules.sportident.sireader",
+   "tag": "[код: pysport@b548c35 sportorg/modules/sportident/sireader.py:29]"
+  },
+  {
+   "dst": "sportorg.utils.time",
+   "line": 30,
+   "local": false,
+   "path": "sportorg/modules/sportident/sireader.py",
+   "src": "sportorg.modules.sportident.sireader",
+   "tag": "[код: pysport@b548c35 sportorg/modules/sportident/sireader.py:30]"
+  },
+  {
+   "dst": "sportorg.common.singleton",
+   "line": 14,
+   "local": false,
+   "path": "sportorg/modules/sportiduino/sportiduino.py",
+   "src": "sportorg.modules.sportiduino.sportiduino",
+   "tag": "[код: pysport@b548c35 sportorg/modules/sportiduino/sportiduino.py:14]"
+  },
+  {
+   "dst": "sportorg.libs.sportiduino.sportiduino",
+   "line": 15,
+   "local": false,
+   "path": "sportorg/modules/sportiduino/sportiduino.py",
+   "src": "sportorg.modules.sportiduino.sportiduino",
+   "tag": "[код: pysport@b548c35 sportorg/modules/sportiduino/sportiduino.py:15]"
+  },
+  {
+   "dst": "sportorg.models.memory",
+   "line": 16,
+   "local": false,
+   "path": "sportorg/modules/sportiduino/sportiduino.py",
+   "src": "sportorg.modules.sportiduino.sportiduino",
+   "tag": "[код: pysport@b548c35 sportorg/modules/sportiduino/sportiduino.py:16]"
+  },
+  {
+   "dst": "sportorg.modules.sportident.backup",
+   "line": 17,
+   "local": false,
+   "path": "sportorg/modules/sportiduino/sportiduino.py",
+   "src": "sportorg.modules.sportiduino.sportiduino",
+   "tag": "[код: pysport@b548c35 sportorg/modules/sportiduino/sportiduino.py:17]"
+  },
+  {
+   "dst": "sportorg.utils.time",
+   "line": 18,
+   "local": false,
+   "path": "sportorg/modules/sportiduino/sportiduino.py",
+   "src": "sportorg.modules.sportiduino.sportiduino",
+   "tag": "[код: pysport@b548c35 sportorg/modules/sportiduino/sportiduino.py:18]"
+  },
+  {
+   "dst": "sportorg.common.singleton",
+   "line": 13,
+   "local": false,
+   "path": "sportorg/modules/srpid/srpid.py",
+   "src": "sportorg.modules.srpid.srpid",
+   "tag": "[код: pysport@b548c35 sportorg/modules/srpid/srpid.py:13]"
+  },
+  {
+   "dst": "sportorg.libs.srpid.srpid",
+   "line": 14,
+   "local": false,
+   "path": "sportorg/modules/srpid/srpid.py",
+   "src": "sportorg.modules.srpid.srpid",
+   "tag": "[код: pysport@b548c35 sportorg/modules/srpid/srpid.py:14]"
+  },
+  {
+   "dst": "sportorg.models.memory",
+   "line": 15,
+   "local": false,
+   "path": "sportorg/modules/srpid/srpid.py",
+   "src": "sportorg.modules.srpid.srpid",
+   "tag": "[код: pysport@b548c35 sportorg/modules/srpid/srpid.py:15]"
+  },
+  {
+   "dst": "sportorg.modules.sportident.backup",
+   "line": 16,
+   "local": false,
+   "path": "sportorg/modules/srpid/srpid.py",
+   "src": "sportorg.modules.srpid.srpid",
+   "tag": "[код: pysport@b548c35 sportorg/modules/srpid/srpid.py:16]"
+  },
+  {
+   "dst": "sportorg.utils.time",
+   "line": 17,
+   "local": false,
+   "path": "sportorg/modules/srpid/srpid.py",
+   "src": "sportorg.modules.srpid.srpid",
+   "tag": "[код: pysport@b548c35 sportorg/modules/srpid/srpid.py:17]"
+  },
+  {
+   "dst": "sportorg.modules.teamwork.command",
+   "line": 10,
+   "local": false,
+   "path": "sportorg/modules/teamwork/client.py",
+   "src": "sportorg.modules.teamwork.client",
+   "tag": "[код: pysport@b548c35 sportorg/modules/teamwork/client.py:10]"
+  },
+  {
+   "dst": "sportorg.modules.teamwork.crypto",
+   "line": 11,
+   "local": false,
+   "path": "sportorg/modules/teamwork/client.py",
+   "src": "sportorg.modules.teamwork.client",
+   "tag": "[код: pysport@b548c35 sportorg/modules/teamwork/client.py:11]"
+  },
+  {
+   "dst": "sportorg.modules.teamwork.packet_header",
+   "line": 12,
+   "local": false,
+   "path": "sportorg/modules/teamwork/client.py",
+   "src": "sportorg.modules.teamwork.client",
+   "tag": "[код: pysport@b548c35 sportorg/modules/teamwork/client.py:12]"
+  },
+  {
+   "dst": "sportorg.modules.teamwork.crypto",
+   "line": 6,
+   "local": false,
+   "path": "sportorg/modules/teamwork/command.py",
+   "src": "sportorg.modules.teamwork.command",
+   "tag": "[код: pysport@b548c35 sportorg/modules/teamwork/command.py:6]"
+  },
+  {
+   "dst": "sportorg.modules.teamwork.packet_header",
+   "line": 7,
+   "local": false,
+   "path": "sportorg/modules/teamwork/command.py",
+   "src": "sportorg.modules.teamwork.command",
+   "tag": "[код: pysport@b548c35 sportorg/modules/teamwork/command.py:7]"
+  },
+  {
+   "dst": "sportorg.models.memory",
+   "line": 372,
+   "local": true,
+   "path": "sportorg/modules/teamwork/server.py",
+   "src": "sportorg.modules.teamwork.server",
+   "tag": "[код: pysport@b548c35 sportorg/modules/teamwork/server.py:372]"
+  },
+  {
+   "dst": "sportorg.modules.teamwork.command",
+   "line": 10,
+   "local": false,
+   "path": "sportorg/modules/teamwork/server.py",
+   "src": "sportorg.modules.teamwork.server",
+   "tag": "[код: pysport@b548c35 sportorg/modules/teamwork/server.py:10]"
+  },
+  {
+   "dst": "sportorg.modules.teamwork.crypto",
+   "line": 11,
+   "local": false,
+   "path": "sportorg/modules/teamwork/server.py",
+   "src": "sportorg.modules.teamwork.server",
+   "tag": "[код: pysport@b548c35 sportorg/modules/teamwork/server.py:11]"
+  },
+  {
+   "dst": "sportorg.modules.teamwork.packet_header",
+   "line": 12,
+   "local": false,
+   "path": "sportorg/modules/teamwork/server.py",
+   "src": "sportorg.modules.teamwork.server",
+   "tag": "[код: pysport@b548c35 sportorg/modules/teamwork/server.py:12]"
+  },
+  {
+   "dst": "sportorg.settings",
+   "line": 366,
+   "local": true,
+   "path": "sportorg/modules/teamwork/server.py",
+   "src": "sportorg.modules.teamwork.server",
+   "tag": "[код: pysport@b548c35 sportorg/modules/teamwork/server.py:366]"
+  },
+  {
+   "dst": "sportorg.common.singleton",
+   "line": 11,
+   "local": false,
+   "path": "sportorg/modules/teamwork/teamwork.py",
+   "src": "sportorg.modules.teamwork.teamwork",
+   "tag": "[код: pysport@b548c35 sportorg/modules/teamwork/teamwork.py:11]"
+  },
+  {
+   "dst": "sportorg.models.memory",
+   "line": 158,
+   "local": true,
+   "path": "sportorg/modules/teamwork/teamwork.py",
+   "src": "sportorg.modules.teamwork.teamwork",
+   "tag": "[код: pysport@b548c35 sportorg/modules/teamwork/teamwork.py:158]"
+  },
+  {
+   "dst": "sportorg.modules.teamwork.client",
+   "line": 13,
+   "local": false,
+   "path": "sportorg/modules/teamwork/teamwork.py",
+   "src": "sportorg.modules.teamwork.teamwork",
+   "tag": "[код: pysport@b548c35 sportorg/modules/teamwork/teamwork.py:13]"
+  },
+  {
+   "dst": "sportorg.modules.teamwork.crypto",
+   "line": 14,
+   "local": false,
+   "path": "sportorg/modules/teamwork/teamwork.py",
+   "src": "sportorg.modules.teamwork.teamwork",
+   "tag": "[код: pysport@b548c35 sportorg/modules/teamwork/teamwork.py:14]"
+  },
+  {
+   "dst": "sportorg.modules.teamwork.packet_header",
+   "line": 15,
+   "local": false,
+   "path": "sportorg/modules/teamwork/teamwork.py",
+   "src": "sportorg.modules.teamwork.teamwork",
+   "tag": "[код: pysport@b548c35 sportorg/modules/teamwork/teamwork.py:15]"
+  },
+  {
+   "dst": "sportorg.modules.teamwork.server",
+   "line": 16,
+   "local": false,
+   "path": "sportorg/modules/teamwork/teamwork.py",
+   "src": "sportorg.modules.teamwork.teamwork",
+   "tag": "[код: pysport@b548c35 sportorg/modules/teamwork/teamwork.py:16]"
+  },
+  {
+   "dst": "sportorg.settings",
+   "line": 199,
+   "local": true,
+   "path": "sportorg/modules/teamwork/teamwork.py",
+   "src": "sportorg.modules.teamwork.teamwork",
+   "tag": "[код: pysport@b548c35 sportorg/modules/teamwork/teamwork.py:199]"
+  },
+  {
+   "dst": "sportorg.common.fake_std",
+   "line": 6,
+   "local": false,
+   "path": "sportorg/modules/telegram/telegram.py",
+   "src": "sportorg.modules.telegram.telegram",
+   "tag": "[код: pysport@b548c35 sportorg/modules/telegram/telegram.py:6]"
+  },
+  {
+   "dst": "sportorg.libs.telegram.telegram",
+   "line": 7,
+   "local": false,
+   "path": "sportorg/modules/telegram/telegram.py",
+   "src": "sportorg.modules.telegram.telegram",
+   "tag": "[код: pysport@b548c35 sportorg/modules/telegram/telegram.py:7]"
+  },
+  {
+   "dst": "sportorg.models.memory",
+   "line": 8,
+   "local": false,
+   "path": "sportorg/modules/telegram/telegram.py",
+   "src": "sportorg.modules.telegram.telegram",
+   "tag": "[код: pysport@b548c35 sportorg/modules/telegram/telegram.py:8]"
+  },
+  {
+   "dst": "sportorg.settings",
+   "line": 5,
+   "local": false,
+   "path": "sportorg/modules/telegram/telegram.py",
+   "src": "sportorg.modules.telegram.telegram",
+   "tag": "[код: pysport@b548c35 sportorg/modules/telegram/telegram.py:5]"
+  },
+  {
+   "dst": "sportorg.common.otime",
+   "line": 1,
+   "local": false,
+   "path": "sportorg/modules/winorient/wdb.py",
+   "src": "sportorg.modules.winorient.wdb",
+   "tag": "[код: pysport@b548c35 sportorg/modules/winorient/wdb.py:1]"
+  },
+  {
+   "dst": "sportorg.libs.winorient.wdb",
+   "line": 2,
+   "local": false,
+   "path": "sportorg/modules/winorient/wdb.py",
+   "src": "sportorg.modules.winorient.wdb",
+   "tag": "[код: pysport@b548c35 sportorg/modules/winorient/wdb.py:2]"
+  },
+  {
+   "dst": "sportorg.models.memory",
+   "line": 12,
+   "local": false,
+   "path": "sportorg/modules/winorient/wdb.py",
+   "src": "sportorg.modules.winorient.wdb",
+   "tag": "[код: pysport@b548c35 sportorg/modules/winorient/wdb.py:12]"
+  },
+  {
+   "dst": "sportorg.models.result.result_tools",
+   "line": 25,
+   "local": false,
+   "path": "sportorg/modules/winorient/wdb.py",
+   "src": "sportorg.modules.winorient.wdb",
+   "tag": "[код: pysport@b548c35 sportorg/modules/winorient/wdb.py:25]"
+  },
+  {
+   "dst": "sportorg.utils.time",
+   "line": 26,
+   "local": false,
+   "path": "sportorg/modules/winorient/wdb.py",
+   "src": "sportorg.modules.winorient.wdb",
+   "tag": "[код: pysport@b548c35 sportorg/modules/winorient/wdb.py:26]"
+  },
+  {
+   "dst": "sportorg.gui.dialogs.file_dialog",
+   "line": 6,
+   "local": false,
+   "path": "sportorg/modules/winorient/wdb_number_setter.py",
+   "src": "sportorg.modules.winorient.wdb_number_setter",
+   "tag": "[код: pysport@b548c35 sportorg/modules/winorient/wdb_number_setter.py:6]"
+  },
+  {
+   "dst": "sportorg.language",
+   "line": 7,
+   "local": false,
+   "path": "sportorg/modules/winorient/wdb_number_setter.py",
+   "src": "sportorg.modules.winorient.wdb_number_setter",
+   "tag": "[код: pysport@b548c35 sportorg/modules/winorient/wdb_number_setter.py:7]"
+  },
+  {
+   "dst": "sportorg.libs.winorient.wdb",
+   "line": 8,
+   "local": false,
+   "path": "sportorg/modules/winorient/wdb_number_setter.py",
+   "src": "sportorg.modules.winorient.wdb_number_setter",
+   "tag": "[код: pysport@b548c35 sportorg/modules/winorient/wdb_number_setter.py:8]"
+  },
+  {
+   "dst": "sportorg.modules.winorient.wdb",
+   "line": 9,
+   "local": false,
+   "path": "sportorg/modules/winorient/wdb_number_setter.py",
+   "src": "sportorg.modules.winorient.wdb_number_setter",
+   "tag": "[код: pysport@b548c35 sportorg/modules/winorient/wdb_number_setter.py:9]"
+  },
+  {
+   "dst": "sportorg.language",
+   "line": 3,
+   "local": false,
+   "path": "sportorg/modules/winorient/winorient.py",
+   "src": "sportorg.modules.winorient.winorient",
+   "tag": "[код: pysport@b548c35 sportorg/modules/winorient/winorient.py:3]"
+  },
+  {
+   "dst": "sportorg.libs.winorient.wo",
+   "line": 4,
+   "local": false,
+   "path": "sportorg/modules/winorient/winorient.py",
+   "src": "sportorg.modules.winorient.winorient",
+   "tag": "[код: pysport@b548c35 sportorg/modules/winorient/winorient.py:4]"
+  },
+  {
+   "dst": "sportorg.models.memory",
+   "line": 5,
+   "local": false,
+   "path": "sportorg/modules/winorient/winorient.py",
+   "src": "sportorg.modules.winorient.winorient",
+   "tag": "[код: pysport@b548c35 sportorg/modules/winorient/winorient.py:5]"
+  },
+  {
+   "dst": "sportorg.models.memory",
+   "line": 6,
+   "local": false,
+   "path": "sportorg/modules/winorient/winorient.py",
+   "src": "sportorg.modules.winorient.winorient",
+   "tag": "[код: pysport@b548c35 sportorg/modules/winorient/winorient.py:6]"
+  },
+  {
+   "dst": "sportorg.modules.winorient.wdb",
+   "line": 7,
+   "local": false,
+   "path": "sportorg/modules/winorient/winorient.py",
+   "src": "sportorg.modules.winorient.winorient",
+   "tag": "[код: pysport@b548c35 sportorg/modules/winorient/winorient.py:7]"
+  },
+  {
+   "dst": "sportorg.config",
+   "line": 7,
+   "local": false,
+   "path": "sportorg/settings.py",
+   "src": "sportorg.settings",
+   "tag": "[код: pysport@b548c35 sportorg/settings.py:7]"
+  },
+  {
+   "dst": "sportorg.libs.settings",
+   "line": 8,
+   "local": false,
+   "path": "sportorg/settings.py",
+   "src": "sportorg.settings",
+   "tag": "[код: pysport@b548c35 sportorg/settings.py:8]"
+  },
+  {
+   "dst": "sportorg.modules.configs.configs",
+   "line": 257,
+   "local": true,
+   "path": "sportorg/settings.py",
+   "src": "sportorg.settings",
+   "tag": "[код: pysport@b548c35 sportorg/settings.py:257]"
+  },
+  {
+   "dst": "sportorg.paths",
+   "line": 7,
+   "local": false,
+   "path": "sportorg/settings.py",
+   "src": "sportorg.settings",
+   "tag": "[код: pysport@b548c35 sportorg/settings.py:7]"
+  },
+  {
+   "dst": "sportorg.config",
+   "line": 15,
+   "local": false,
+   "path": "sportorg/startup.py",
+   "src": "sportorg.startup",
+   "tag": "[код: pysport@b548c35 sportorg/startup.py:15]"
+  },
+  {
+   "dst": "sportorg.paths",
+   "line": 15,
+   "local": false,
+   "path": "sportorg/startup.py",
+   "src": "sportorg.startup",
+   "tag": "[код: pysport@b548c35 sportorg/startup.py:15]"
+  },
+  {
+   "dst": "sportorg.paths",
+   "line": 16,
+   "local": false,
+   "path": "sportorg/startup.py",
+   "src": "sportorg.startup",
+   "tag": "[код: pysport@b548c35 sportorg/startup.py:16]"
+  },
+  {
+   "dst": "sportorg.common.otime",
+   "line": 12,
+   "local": false,
+   "path": "sportorg/utils/time.py",
+   "src": "sportorg.utils.time",
+   "tag": "[код: pysport@b548c35 sportorg/utils/time.py:12]"
+  }
+ ],
+ "modules": [
+  {
+   "fan_in": 0,
+   "fan_out": 0,
+   "import_statements": 0,
+   "layer": "foundation",
+   "local_import_statements": 0,
+   "module": "sportorg",
+   "rank": 1
+  },
+  {
+   "fan_in": 0,
+   "fan_out": 0,
+   "import_statements": 0,
+   "layer": "foundation",
+   "local_import_statements": 0,
+   "module": "sportorg.common",
+   "rank": 1
+  },
+  {
+   "fan_in": 2,
+   "fan_out": 2,
+   "import_statements": 2,
+   "layer": "foundation",
+   "local_import_statements": 0,
+   "module": "sportorg.common.audio",
+   "rank": 1
+  },
+  {
+   "fan_in": 3,
+   "fan_out": 0,
+   "import_statements": 0,
+   "layer": "foundation",
+   "local_import_statements": 0,
+   "module": "sportorg.common.fake_std",
+   "rank": 1
+  },
+  {
+   "fan_in": 27,
+   "fan_out": 0,
+   "import_statements": 0,
+   "layer": "foundation",
+   "local_import_statements": 0,
+   "module": "sportorg.common.otime",
+   "rank": 1
+  },
+  {
+   "fan_in": 13,
+   "fan_out": 0,
+   "import_statements": 0,
+   "layer": "foundation",
+   "local_import_statements": 0,
+   "module": "sportorg.common.singleton",
+   "rank": 1
+  },
+  {
+   "fan_in": 4,
+   "fan_out": 3,
+   "import_statements": 3,
+   "layer": "foundation",
+   "local_import_statements": 0,
+   "module": "sportorg.common.template",
+   "rank": 1
+  },
+  {
+   "fan_in": 48,
+   "fan_out": 1,
+   "import_statements": 1,
+   "layer": "foundation",
+   "local_import_statements": 0,
+   "module": "sportorg.config",
+   "rank": 1
+  },
+  {
+   "fan_in": 0,
+   "fan_out": 0,
+   "import_statements": 0,
+   "layer": "outside",
+   "local_import_statements": 0,
+   "module": "sportorg.data",
+   "rank": -1
+  },
+  {
+   "fan_in": 0,
+   "fan_out": 0,
+   "import_statements": 0,
+   "layer": "ui",
+   "local_import_statements": 0,
+   "module": "sportorg.gui",
+   "rank": 4
+  },
+  {
+   "fan_in": 0,
+   "fan_out": 0,
+   "import_statements": 0,
+   "layer": "ui",
+   "local_import_statements": 0,
+   "module": "sportorg.gui.dialogs",
+   "rank": 4
+  },
+  {
+   "fan_in": 1,
+   "fan_out": 3,
+   "import_statements": 3,
+   "layer": "ui",
+   "local_import_statements": 0,
+   "module": "sportorg.gui.dialogs.about",
+   "rank": 4
+  },
+  {
+   "fan_in": 1,
+   "fan_out": 5,
+   "import_statements": 5,
+   "layer": "ui",
+   "local_import_statements": 0,
+   "module": "sportorg.gui.dialogs.bib_dialog",
+   "rank": 4
+  },
+  {
+   "fan_in": 1,
+   "fan_out": 5,
+   "import_statements": 5,
+   "layer": "ui",
+   "local_import_statements": 0,
+   "module": "sportorg.gui.dialogs.control_time_change_dialog",
+   "rank": 4
+  },
+  {
+   "fan_in": 2,
+   "fan_out": 6,
+   "import_statements": 6,
+   "layer": "ui",
+   "local_import_statements": 0,
+   "module": "sportorg.gui.dialogs.course_edit",
+   "rank": 4
+  },
+  {
+   "fan_in": 1,
+   "fan_out": 6,
+   "import_statements": 6,
+   "layer": "ui",
+   "local_import_statements": 0,
+   "module": "sportorg.gui.dialogs.cp_delete",
+   "rank": 4
+  },
+  {
+   "fan_in": 4,
+   "fan_out": 4,
+   "import_statements": 4,
+   "layer": "ui",
+   "local_import_statements": 0,
+   "module": "sportorg.gui.dialogs.dialog",
+   "rank": 4
+  },
+  {
+   "fan_in": 1,
+   "fan_out": 6,
+   "import_statements": 6,
+   "layer": "ui",
+   "local_import_statements": 0,
+   "module": "sportorg.gui.dialogs.entry_mass_edit",
+   "rank": 4
+  },
+  {
+   "fan_in": 1,
+   "fan_out": 6,
+   "import_statements": 6,
+   "layer": "ui",
+   "local_import_statements": 0,
+   "module": "sportorg.gui.dialogs.event_properties",
+   "rank": 4
+  },
+  {
+   "fan_in": 6,
+   "fan_out": 1,
+   "import_statements": 1,
+   "layer": "ui",
+   "local_import_statements": 0,
+   "module": "sportorg.gui.dialogs.file_dialog",
+   "rank": 4
+  },
+  {
+   "fan_in": 1,
+   "fan_out": 5,
+   "import_statements": 5,
+   "layer": "ui",
+   "local_import_statements": 0,
+   "module": "sportorg.gui.dialogs.filter_dialog",
+   "rank": 4
+  },
+  {
+   "fan_in": 2,
+   "fan_out": 9,
+   "import_statements": 9,
+   "layer": "ui",
+   "local_import_statements": 0,
+   "module": "sportorg.gui.dialogs.group_edit",
+   "rank": 4
+  },
+  {
+   "fan_in": 1,
+   "fan_out": 6,
+   "import_statements": 6,
+   "layer": "ui",
+   "local_import_statements": 0,
+   "module": "sportorg.gui.dialogs.group_mass_edit",
+   "rank": 4
+  },
+  {
+   "fan_in": 1,
+   "fan_out": 6,
+   "import_statements": 6,
+   "layer": "ui",
+   "local_import_statements": 0,
+   "module": "sportorg.gui.dialogs.group_ranking",
+   "rank": 4
+  },
+  {
+   "fan_in": 1,
+   "fan_out": 5,
+   "import_statements": 5,
+   "layer": "ui",
+   "local_import_statements": 0,
+   "module": "sportorg.gui.dialogs.huichang_management_dialog",
+   "rank": 4
+  },
+  {
+   "fan_in": 1,
+   "fan_out": 7,
+   "import_statements": 8,
+   "layer": "ui",
+   "local_import_statements": 0,
+   "module": "sportorg.gui.dialogs.import_persons_table_dialog",
+   "rank": 4
+  },
+  {
+   "fan_in": 1,
+   "fan_out": 6,
+   "import_statements": 6,
+   "layer": "ui",
+   "local_import_statements": 0,
+   "module": "sportorg.gui.dialogs.live_dialog",
+   "rank": 4
+  },
+  {
+   "fan_in": 1,
+   "fan_out": 4,
+   "import_statements": 4,
+   "layer": "ui",
+   "local_import_statements": 0,
+   "module": "sportorg.gui.dialogs.marked_route_dialog",
+   "rank": 4
+  },
+  {
+   "fan_in": 1,
+   "fan_out": 7,
+   "import_statements": 7,
+   "layer": "ui",
+   "local_import_statements": 0,
+   "module": "sportorg.gui.dialogs.merge_results",
+   "rank": 4
+  },
+  {
+   "fan_in": 1,
+   "fan_out": 9,
+   "import_statements": 9,
+   "layer": "ui",
+   "local_import_statements": 0,
+   "module": "sportorg.gui.dialogs.not_start_dialog",
+   "rank": 4
+  },
+  {
+   "fan_in": 2,
+   "fan_out": 7,
+   "import_statements": 7,
+   "layer": "ui",
+   "local_import_statements": 0,
+   "module": "sportorg.gui.dialogs.organization_edit",
+   "rank": 4
+  },
+  {
+   "fan_in": 1,
+   "fan_out": 6,
+   "import_statements": 6,
+   "layer": "ui",
+   "local_import_statements": 0,
+   "module": "sportorg.gui.dialogs.organization_mass_edit",
+   "rank": 4
+  },
+  {
+   "fan_in": 4,
+   "fan_out": 9,
+   "import_statements": 9,
+   "layer": "ui",
+   "local_import_statements": 0,
+   "module": "sportorg.gui.dialogs.person_edit",
+   "rank": 4
+  },
+  {
+   "fan_in": 1,
+   "fan_out": 5,
+   "import_statements": 5,
+   "layer": "ui",
+   "local_import_statements": 0,
+   "module": "sportorg.gui.dialogs.plugins",
+   "rank": 4
+  },
+  {
+   "fan_in": 1,
+   "fan_out": 8,
+   "import_statements": 8,
+   "layer": "ui",
+   "local_import_statements": 0,
+   "module": "sportorg.gui.dialogs.print_properties",
+   "rank": 4
+  },
+  {
+   "fan_in": 1,
+   "fan_out": 5,
+   "import_statements": 5,
+   "layer": "ui",
+   "local_import_statements": 0,
+   "module": "sportorg.gui.dialogs.relay_clone_dialog",
+   "rank": 4
+  },
+  {
+   "fan_in": 1,
+   "fan_out": 5,
+   "import_statements": 5,
+   "layer": "ui",
+   "local_import_statements": 0,
+   "module": "sportorg.gui.dialogs.relay_number_dialog",
+   "rank": 4
+  },
+  {
+   "fan_in": 1,
+   "fan_out": 5,
+   "import_statements": 5,
+   "layer": "ui",
+   "local_import_statements": 0,
+   "module": "sportorg.gui.dialogs.rent_cards_dialog",
+   "rank": 4
+  },
+  {
+   "fan_in": 1,
+   "fan_out": 10,
+   "import_statements": 10,
+   "layer": "ui",
+   "local_import_statements": 0,
+   "module": "sportorg.gui.dialogs.report_dialog",
+   "rank": 4
+  },
+  {
+   "fan_in": 1,
+   "fan_out": 13,
+   "import_statements": 13,
+   "layer": "ui",
+   "local_import_statements": 0,
+   "module": "sportorg.gui.dialogs.result_edit",
+   "rank": 4
+  },
+  {
+   "fan_in": 0,
+   "fan_out": 5,
+   "import_statements": 5,
+   "layer": "ui",
+   "local_import_statements": 0,
+   "module": "sportorg.gui.dialogs.scores_dialog",
+   "rank": 4
+  },
+  {
+   "fan_in": 1,
+   "fan_out": 3,
+   "import_statements": 3,
+   "layer": "ui",
+   "local_import_statements": 0,
+   "module": "sportorg.gui.dialogs.search_dialog",
+   "rank": 4
+  },
+  {
+   "fan_in": 1,
+   "fan_out": 11,
+   "import_statements": 12,
+   "layer": "ui",
+   "local_import_statements": 0,
+   "module": "sportorg.gui.dialogs.settings",
+   "rank": 4
+  },
+  {
+   "fan_in": 1,
+   "fan_out": 5,
+   "import_statements": 5,
+   "layer": "ui",
+   "local_import_statements": 0,
+   "module": "sportorg.gui.dialogs.split_delete",
+   "rank": 4
+  },
+  {
+   "fan_in": 1,
+   "fan_out": 5,
+   "import_statements": 5,
+   "layer": "ui",
+   "local_import_statements": 0,
+   "module": "sportorg.gui.dialogs.sportorg_import_dialog",
+   "rank": 4
+  },
+  {
+   "fan_in": 1,
+   "fan_out": 7,
+   "import_statements": 7,
+   "layer": "ui",
+   "local_import_statements": 0,
+   "module": "sportorg.gui.dialogs.start_handicap_dialog",
+   "rank": 4
+  },
+  {
+   "fan_in": 1,
+   "fan_out": 7,
+   "import_statements": 7,
+   "layer": "ui",
+   "local_import_statements": 0,
+   "module": "sportorg.gui.dialogs.start_preparation",
+   "rank": 4
+  },
+  {
+   "fan_in": 1,
+   "fan_out": 5,
+   "import_statements": 5,
+   "layer": "ui",
+   "local_import_statements": 0,
+   "module": "sportorg.gui.dialogs.start_time_change_dialog",
+   "rank": 4
+  },
+  {
+   "fan_in": 0,
+   "fan_out": 0,
+   "import_statements": 0,
+   "layer": "ui",
+   "local_import_statements": 0,
+   "module": "sportorg.gui.dialogs.swimming_results",
+   "rank": 4
+  },
+  {
+   "fan_in": 1,
+   "fan_out": 6,
+   "import_statements": 6,
+   "layer": "ui",
+   "local_import_statements": 0,
+   "module": "sportorg.gui.dialogs.teamwork_properties",
+   "rank": 4
+  },
+  {
+   "fan_in": 1,
+   "fan_out": 5,
+   "import_statements": 5,
+   "layer": "ui",
+   "local_import_statements": 0,
+   "module": "sportorg.gui.dialogs.telegram_dialog",
+   "rank": 4
+  },
+  {
+   "fan_in": 2,
+   "fan_out": 4,
+   "import_statements": 4,
+   "layer": "ui",
+   "local_import_statements": 0,
+   "module": "sportorg.gui.dialogs.text_io",
+   "rank": 4
+  },
+  {
+   "fan_in": 1,
+   "fan_out": 8,
+   "import_statements": 8,
+   "layer": "ui",
+   "local_import_statements": 0,
+   "module": "sportorg.gui.dialogs.timekeeping_properties",
+   "rank": 4
+  },
+  {
+   "fan_in": 48,
+   "fan_out": 1,
+   "import_statements": 1,
+   "layer": "ui",
+   "local_import_statements": 0,
+   "module": "sportorg.gui.global_access",
+   "rank": 4
+  },
+  {
+   "fan_in": 0,
+   "fan_out": 9,
+   "import_statements": 9,
+   "layer": "ui",
+   "local_import_statements": 0,
+   "module": "sportorg.gui.main",
+   "rank": 4
+  },
+  {
+   "fan_in": 1,
+   "fan_out": 38,
+   "import_statements": 38,
+   "layer": "ui",
+   "local_import_statements": 0,
+   "module": "sportorg.gui.main_window",
+   "rank": 4
+  },
+  {
+   "fan_in": 1,
+   "fan_out": 2,
+   "import_statements": 2,
+   "layer": "ui",
+   "local_import_statements": 0,
+   "module": "sportorg.gui.menu",
+   "rank": 4
+  },
+  {
+   "fan_in": 1,
+   "fan_out": 0,
+   "import_statements": 0,
+   "layer": "ui",
+   "local_import_statements": 0,
+   "module": "sportorg.gui.menu.action",
+   "rank": 4
+  },
+  {
+   "fan_in": 1,
+   "fan_out": 66,
+   "import_statements": 67,
+   "layer": "ui",
+   "local_import_statements": 1,
+   "module": "sportorg.gui.menu.actions",
+   "rank": 4
+  },
+  {
+   "fan_in": 1,
+   "fan_out": 2,
+   "import_statements": 2,
+   "layer": "ui",
+   "local_import_statements": 0,
+   "module": "sportorg.gui.menu.factory",
+   "rank": 4
+  },
+  {
+   "fan_in": 1,
+   "fan_out": 4,
+   "import_statements": 4,
+   "layer": "ui",
+   "local_import_statements": 1,
+   "module": "sportorg.gui.menu.menu",
+   "rank": 4
+  },
+  {
+   "fan_in": 0,
+   "fan_out": 0,
+   "import_statements": 0,
+   "layer": "ui",
+   "local_import_statements": 0,
+   "module": "sportorg.gui.tabs",
+   "rank": 4
+  },
+  {
+   "fan_in": 1,
+   "fan_out": 5,
+   "import_statements": 5,
+   "layer": "ui",
+   "local_import_statements": 0,
+   "module": "sportorg.gui.tabs.courses",
+   "rank": 4
+  },
+  {
+   "fan_in": 1,
+   "fan_out": 5,
+   "import_statements": 5,
+   "layer": "ui",
+   "local_import_statements": 0,
+   "module": "sportorg.gui.tabs.groups",
+   "rank": 4
+  },
+  {
+   "fan_in": 1,
+   "fan_out": 1,
+   "import_statements": 1,
+   "layer": "ui",
+   "local_import_statements": 0,
+   "module": "sportorg.gui.tabs.log",
+   "rank": 4
+  },
+  {
+   "fan_in": 6,
+   "fan_out": 6,
+   "import_statements": 6,
+   "layer": "ui",
+   "local_import_statements": 0,
+   "module": "sportorg.gui.tabs.memory_model",
+   "rank": 4
+  },
+  {
+   "fan_in": 1,
+   "fan_out": 5,
+   "import_statements": 5,
+   "layer": "ui",
+   "local_import_statements": 0,
+   "module": "sportorg.gui.tabs.organizations",
+   "rank": 4
+  },
+  {
+   "fan_in": 1,
+   "fan_out": 6,
+   "import_statements": 6,
+   "layer": "ui",
+   "local_import_statements": 0,
+   "module": "sportorg.gui.tabs.persons",
+   "rank": 4
+  },
+  {
+   "fan_in": 1,
+   "fan_out": 8,
+   "import_statements": 8,
+   "layer": "ui",
+   "local_import_statements": 0,
+   "module": "sportorg.gui.tabs.results",
+   "rank": 4
+  },
+  {
+   "fan_in": 5,
+   "fan_out": 0,
+   "import_statements": 0,
+   "layer": "ui",
+   "local_import_statements": 0,
+   "module": "sportorg.gui.tabs.table",
+   "rank": 4
+  },
+  {
+   "fan_in": 2,
+   "fan_out": 0,
+   "import_statements": 0,
+   "layer": "ui",
+   "local_import_statements": 0,
+   "module": "sportorg.gui.theme",
+   "rank": 4
+  },
+  {
+   "fan_in": 1,
+   "fan_out": 2,
+   "import_statements": 2,
+   "layer": "ui",
+   "local_import_statements": 0,
+   "module": "sportorg.gui.toolbar",
+   "rank": 4
+  },
+  {
+   "fan_in": 0,
+   "fan_out": 0,
+   "import_statements": 0,
+   "layer": "ui",
+   "local_import_statements": 0,
+   "module": "sportorg.gui.utils",
+   "rank": 4
+  },
+  {
+   "fan_in": 29,
+   "fan_out": 3,
+   "import_statements": 3,
+   "layer": "ui",
+   "local_import_statements": 0,
+   "module": "sportorg.gui.utils.custom_controls",
+   "rank": 4
+  },
+  {
+   "fan_in": 60,
+   "fan_out": 1,
+   "import_statements": 1,
+   "layer": "foundation",
+   "local_import_statements": 0,
+   "module": "sportorg.language",
+   "rank": 1
+  },
+  {
+   "fan_in": 0,
+   "fan_out": 0,
+   "import_statements": 0,
+   "layer": "vendored",
+   "local_import_statements": 0,
+   "module": "sportorg.libs",
+   "rank": 0
+  },
+  {
+   "fan_in": 0,
+   "fan_out": 0,
+   "import_statements": 0,
+   "layer": "vendored",
+   "local_import_statements": 0,
+   "module": "sportorg.libs.huichang",
+   "rank": 0
+  },
+  {
+   "fan_in": 2,
+   "fan_out": 2,
+   "import_statements": 2,
+   "layer": "vendored",
+   "local_import_statements": 0,
+   "module": "sportorg.libs.huichang.huichang",
+   "rank": 0
+  },
+  {
+   "fan_in": 0,
+   "fan_out": 0,
+   "import_statements": 0,
+   "layer": "vendored",
+   "local_import_statements": 0,
+   "module": "sportorg.libs.iof",
+   "rank": 0
+  },
+  {
+   "fan_in": 1,
+   "fan_out": 3,
+   "import_statements": 3,
+   "layer": "vendored",
+   "local_import_statements": 0,
+   "module": "sportorg.libs.iof.generator",
+   "rank": 0
+  },
+  {
+   "fan_in": 0,
+   "fan_out": 0,
+   "import_statements": 0,
+   "layer": "vendored",
+   "local_import_statements": 0,
+   "module": "sportorg.libs.iof.iof",
+   "rank": 0
+  },
+  {
+   "fan_in": 1,
+   "fan_out": 0,
+   "import_statements": 0,
+   "layer": "vendored",
+   "local_import_statements": 0,
+   "module": "sportorg.libs.iof.parser",
+   "rank": 0
+  },
+  {
+   "fan_in": 0,
+   "fan_out": 0,
+   "import_statements": 0,
+   "layer": "vendored",
+   "local_import_statements": 0,
+   "module": "sportorg.libs.ocad",
+   "rank": 0
+  },
+  {
+   "fan_in": 1,
+   "fan_out": 1,
+   "import_statements": 1,
+   "layer": "vendored",
+   "local_import_statements": 0,
+   "module": "sportorg.libs.ocad.ocad",
+   "rank": 0
+  },
+  {
+   "fan_in": 1,
+   "fan_out": 0,
+   "import_statements": 0,
+   "layer": "vendored",
+   "local_import_statements": 0,
+   "module": "sportorg.libs.settings",
+   "rank": 0
+  },
+  {
+   "fan_in": 0,
+   "fan_out": 0,
+   "import_statements": 0,
+   "layer": "vendored",
+   "local_import_statements": 0,
+   "module": "sportorg.libs.sfr",
+   "rank": 0
+  },
+  {
+   "fan_in": 1,
+   "fan_out": 0,
+   "import_statements": 0,
+   "layer": "vendored",
+   "local_import_statements": 0,
+   "module": "sportorg.libs.sfr.sfrreader",
+   "rank": 0
+  },
+  {
+   "fan_in": 1,
+   "fan_out": 4,
+   "import_statements": 5,
+   "layer": "vendored",
+   "local_import_statements": 0,
+   "module": "sportorg.libs.sfr.sfrximporter",
+   "rank": 0
+  },
+  {
+   "fan_in": 1,
+   "fan_out": 1,
+   "import_statements": 1,
+   "layer": "vendored",
+   "local_import_statements": 0,
+   "module": "sportorg.libs.sfr.sfrxparser",
+   "rank": 0
+  },
+  {
+   "fan_in": 0,
+   "fan_out": 0,
+   "import_statements": 0,
+   "layer": "vendored",
+   "local_import_statements": 0,
+   "module": "sportorg.libs.sportiduino",
+   "rank": 0
+  },
+  {
+   "fan_in": 1,
+   "fan_out": 0,
+   "import_statements": 0,
+   "layer": "vendored",
+   "local_import_statements": 0,
+   "module": "sportorg.libs.sportiduino.sportiduino",
+   "rank": 0
+  },
+  {
+   "fan_in": 0,
+   "fan_out": 0,
+   "import_statements": 0,
+   "layer": "vendored",
+   "local_import_statements": 0,
+   "module": "sportorg.libs.srpid",
+   "rank": 0
+  },
+  {
+   "fan_in": 1,
+   "fan_out": 0,
+   "import_statements": 0,
+   "layer": "vendored",
+   "local_import_statements": 0,
+   "module": "sportorg.libs.srpid.srpid",
+   "rank": 0
+  },
+  {
+   "fan_in": 0,
+   "fan_out": 0,
+   "import_statements": 0,
+   "layer": "vendored",
+   "local_import_statements": 0,
+   "module": "sportorg.libs.telegram",
+   "rank": 0
+  },
+  {
+   "fan_in": 1,
+   "fan_out": 0,
+   "import_statements": 0,
+   "layer": "vendored",
+   "local_import_statements": 0,
+   "module": "sportorg.libs.telegram.telegram",
+   "rank": 0
+  },
+  {
+   "fan_in": 0,
+   "fan_out": 0,
+   "import_statements": 0,
+   "layer": "vendored",
+   "local_import_statements": 0,
+   "module": "sportorg.libs.template",
+   "rank": 0
+  },
+  {
+   "fan_in": 1,
+   "fan_out": 0,
+   "import_statements": 0,
+   "layer": "vendored",
+   "local_import_statements": 0,
+   "module": "sportorg.libs.template.template",
+   "rank": 0
+  },
+  {
+   "fan_in": 0,
+   "fan_out": 0,
+   "import_statements": 0,
+   "layer": "vendored",
+   "local_import_statements": 0,
+   "module": "sportorg.libs.winorient",
+   "rank": 0
+  },
+  {
+   "fan_in": 4,
+   "fan_out": 0,
+   "import_statements": 0,
+   "layer": "vendored",
+   "local_import_statements": 0,
+   "module": "sportorg.libs.winorient.wdb",
+   "rank": 0
+  },
+  {
+   "fan_in": 1,
+   "fan_out": 3,
+   "import_statements": 3,
+   "layer": "vendored",
+   "local_import_statements": 0,
+   "module": "sportorg.libs.winorient.wdb_online_sender",
+   "rank": 0
+  },
+  {
+   "fan_in": 0,
+   "fan_out": 1,
+   "import_statements": 1,
+   "layer": "vendored",
+   "local_import_statements": 0,
+   "module": "sportorg.libs.winorient.wdb_online_sender_dialog",
+   "rank": 0
+  },
+  {
+   "fan_in": 1,
+   "fan_out": 0,
+   "import_statements": 0,
+   "layer": "vendored",
+   "local_import_statements": 0,
+   "module": "sportorg.libs.winorient.wo",
+   "rank": 0
+  },
+  {
+   "fan_in": 0,
+   "fan_out": 0,
+   "import_statements": 0,
+   "layer": "domain",
+   "local_import_statements": 0,
+   "module": "sportorg.models",
+   "rank": 2
+  },
+  {
+   "fan_in": 15,
+   "fan_out": 3,
+   "import_statements": 3,
+   "layer": "domain",
+   "local_import_statements": 0,
+   "module": "sportorg.models.constant",
+   "rank": 2
+  },
+  {
+   "fan_in": 71,
+   "fan_out": 4,
+   "import_statements": 4,
+   "layer": "domain",
+   "local_import_statements": 0,
+   "module": "sportorg.models.memory",
+   "rank": 2
+  },
+  {
+   "fan_in": 0,
+   "fan_out": 0,
+   "import_statements": 0,
+   "layer": "domain",
+   "local_import_statements": 0,
+   "module": "sportorg.models.result",
+   "rank": 2
+  },
+  {
+   "fan_in": 8,
+   "fan_out": 4,
+   "import_statements": 4,
+   "layer": "domain",
+   "local_import_statements": 0,
+   "module": "sportorg.models.result.result_calculation",
+   "rank": 2
+  },
+  {
+   "fan_in": 4,
+   "fan_out": 3,
+   "import_statements": 3,
+   "layer": "domain",
+   "local_import_statements": 0,
+   "module": "sportorg.models.result.result_checker",
+   "rank": 2
+  },
+  {
+   "fan_in": 15,
+   "fan_out": 6,
+   "import_statements": 6,
+   "layer": "domain",
+   "local_import_statements": 0,
+   "module": "sportorg.models.result.result_tools",
+   "rank": 2
+  },
+  {
+   "fan_in": 1,
+   "fan_out": 4,
+   "import_statements": 4,
+   "layer": "domain",
+   "local_import_statements": 0,
+   "module": "sportorg.models.result.score_calculation",
+   "rank": 2
+  },
+  {
+   "fan_in": 4,
+   "fan_out": 3,
+   "import_statements": 3,
+   "layer": "domain",
+   "local_import_statements": 0,
+   "module": "sportorg.models.result.split_calculation",
+   "rank": 2
+  },
+  {
+   "fan_in": 0,
+   "fan_out": 0,
+   "import_statements": 0,
+   "layer": "domain",
+   "local_import_statements": 0,
+   "module": "sportorg.models.start",
+   "rank": 2
+  },
+  {
+   "fan_in": 3,
+   "fan_out": 2,
+   "import_statements": 2,
+   "layer": "domain",
+   "local_import_statements": 0,
+   "module": "sportorg.models.start.relay",
+   "rank": 2
+  },
+  {
+   "fan_in": 5,
+   "fan_out": 3,
+   "import_statements": 3,
+   "layer": "domain",
+   "local_import_statements": 0,
+   "module": "sportorg.models.start.start_preparation",
+   "rank": 2
+  },
+  {
+   "fan_in": 0,
+   "fan_out": 0,
+   "import_statements": 0,
+   "layer": "application",
+   "local_import_statements": 0,
+   "module": "sportorg.modules",
+   "rank": 3
+  },
+  {
+   "fan_in": 0,
+   "fan_out": 0,
+   "import_statements": 0,
+   "layer": "application",
+   "local_import_statements": 0,
+   "module": "sportorg.modules.backup",
+   "rank": 3
+  },
+  {
+   "fan_in": 2,
+   "fan_out": 3,
+   "import_statements": 3,
+   "layer": "application",
+   "local_import_statements": 0,
+   "module": "sportorg.modules.backup.file",
+   "rank": 3
+  },
+  {
+   "fan_in": 2,
+   "fan_out": 3,
+   "import_statements": 3,
+   "layer": "application",
+   "local_import_statements": 0,
+   "module": "sportorg.modules.backup.json",
+   "rank": 3
+  },
+  {
+   "fan_in": 1,
+   "fan_out": 1,
+   "import_statements": 1,
+   "layer": "application",
+   "local_import_statements": 0,
+   "module": "sportorg.modules.backup.sfr_results_board",
+   "rank": 3
+  },
+  {
+   "fan_in": 0,
+   "fan_out": 0,
+   "import_statements": 0,
+   "layer": "application",
+   "local_import_statements": 0,
+   "module": "sportorg.modules.configs",
+   "rank": 3
+  },
+  {
+   "fan_in": 1,
+   "fan_out": 2,
+   "import_statements": 2,
+   "layer": "application",
+   "local_import_statements": 0,
+   "module": "sportorg.modules.configs.configs",
+   "rank": 3
+  },
+  {
+   "fan_in": 0,
+   "fan_out": 0,
+   "import_statements": 0,
+   "layer": "application",
+   "local_import_statements": 0,
+   "module": "sportorg.modules.huichang",
+   "rank": 3
+  },
+  {
+   "fan_in": 2,
+   "fan_out": 5,
+   "import_statements": 5,
+   "layer": "application",
+   "local_import_statements": 0,
+   "module": "sportorg.modules.huichang.huichang",
+   "rank": 3
+  },
+  {
+   "fan_in": 0,
+   "fan_out": 0,
+   "import_statements": 0,
+   "layer": "application",
+   "local_import_statements": 0,
+   "module": "sportorg.modules.iof",
+   "rank": 3
+  },
+  {
+   "fan_in": 1,
+   "fan_out": 6,
+   "import_statements": 6,
+   "layer": "application",
+   "local_import_statements": 0,
+   "module": "sportorg.modules.iof.iof_xml",
+   "rank": 3
+  },
+  {
+   "fan_in": 0,
+   "fan_out": 0,
+   "import_statements": 0,
+   "layer": "application",
+   "local_import_statements": 0,
+   "module": "sportorg.modules.live",
+   "rank": 3
+  },
+  {
+   "fan_in": 7,
+   "fan_out": 2,
+   "import_statements": 2,
+   "layer": "application",
+   "local_import_statements": 0,
+   "module": "sportorg.modules.live.live",
+   "rank": 3
+  },
+  {
+   "fan_in": 1,
+   "fan_out": 4,
+   "import_statements": 4,
+   "layer": "application",
+   "local_import_statements": 0,
+   "module": "sportorg.modules.live.orgeo",
+   "rank": 3
+  },
+  {
+   "fan_in": 0,
+   "fan_out": 0,
+   "import_statements": 0,
+   "layer": "application",
+   "local_import_statements": 0,
+   "module": "sportorg.modules.ocad",
+   "rank": 3
+  },
+  {
+   "fan_in": 1,
+   "fan_out": 2,
+   "import_statements": 3,
+   "layer": "application",
+   "local_import_statements": 0,
+   "module": "sportorg.modules.ocad.ocad",
+   "rank": 3
+  },
+  {
+   "fan_in": 3,
+   "fan_out": 1,
+   "import_statements": 1,
+   "layer": "application",
+   "local_import_statements": 0,
+   "module": "sportorg.modules.plugins",
+   "rank": 3
+  },
+  {
+   "fan_in": 2,
+   "fan_out": 3,
+   "import_statements": 3,
+   "layer": "application",
+   "local_import_statements": 0,
+   "module": "sportorg.modules.plugins.manager",
+   "rank": 3
+  },
+  {
+   "fan_in": 0,
+   "fan_out": 0,
+   "import_statements": 0,
+   "layer": "application",
+   "local_import_statements": 0,
+   "module": "sportorg.modules.printing",
+   "rank": 3
+  },
+  {
+   "fan_in": 1,
+   "fan_out": 7,
+   "import_statements": 7,
+   "layer": "application",
+   "local_import_statements": 0,
+   "module": "sportorg.modules.printing.model",
+   "rank": 3
+  },
+  {
+   "fan_in": 1,
+   "fan_out": 2,
+   "import_statements": 2,
+   "layer": "application",
+   "local_import_statements": 0,
+   "module": "sportorg.modules.printing.printing",
+   "rank": 3
+  },
+  {
+   "fan_in": 1,
+   "fan_out": 3,
+   "import_statements": 3,
+   "layer": "application",
+   "local_import_statements": 0,
+   "module": "sportorg.modules.printing.printout_split",
+   "rank": 3
+  },
+  {
+   "fan_in": 1,
+   "fan_out": 2,
+   "import_statements": 2,
+   "layer": "application",
+   "local_import_statements": 0,
+   "module": "sportorg.modules.recovery.recovery_orgeo_finish_csv",
+   "rank": 3
+  },
+  {
+   "fan_in": 1,
+   "fan_out": 4,
+   "import_statements": 4,
+   "layer": "application",
+   "local_import_statements": 0,
+   "module": "sportorg.modules.recovery.recovery_si_master_csv",
+   "rank": 3
+  },
+  {
+   "fan_in": 1,
+   "fan_out": 1,
+   "import_statements": 1,
+   "layer": "application",
+   "local_import_statements": 0,
+   "module": "sportorg.modules.recovery.recovery_sportorg_html",
+   "rank": 3
+  },
+  {
+   "fan_in": 1,
+   "fan_out": 4,
+   "import_statements": 4,
+   "layer": "application",
+   "local_import_statements": 0,
+   "module": "sportorg.modules.recovery.recovery_sportorg_si_log",
+   "rank": 3
+  },
+  {
+   "fan_in": 0,
+   "fan_out": 0,
+   "import_statements": 0,
+   "layer": "application",
+   "local_import_statements": 0,
+   "module": "sportorg.modules.rfid_impinj",
+   "rank": 3
+  },
+  {
+   "fan_in": 2,
+   "fan_out": 3,
+   "import_statements": 4,
+   "layer": "application",
+   "local_import_statements": 0,
+   "module": "sportorg.modules.rfid_impinj.rfid_impinj",
+   "rank": 3
+  },
+  {
+   "fan_in": 0,
+   "fan_out": 0,
+   "import_statements": 0,
+   "layer": "application",
+   "local_import_statements": 0,
+   "module": "sportorg.modules.sfr",
+   "rank": 3
+  },
+  {
+   "fan_in": 2,
+   "fan_out": 6,
+   "import_statements": 7,
+   "layer": "application",
+   "local_import_statements": 0,
+   "module": "sportorg.modules.sfr.sfrreader",
+   "rank": 3
+  },
+  {
+   "fan_in": 1,
+   "fan_out": 3,
+   "import_statements": 4,
+   "layer": "application",
+   "local_import_statements": 0,
+   "module": "sportorg.modules.sfr.sfrxexporter",
+   "rank": 3
+  },
+  {
+   "fan_in": 2,
+   "fan_out": 3,
+   "import_statements": 3,
+   "layer": "application",
+   "local_import_statements": 0,
+   "module": "sportorg.modules.sound",
+   "rank": 3
+  },
+  {
+   "fan_in": 0,
+   "fan_out": 0,
+   "import_statements": 0,
+   "layer": "application",
+   "local_import_statements": 0,
+   "module": "sportorg.modules.sportident",
+   "rank": 3
+  },
+  {
+   "fan_in": 5,
+   "fan_out": 3,
+   "import_statements": 3,
+   "layer": "application",
+   "local_import_statements": 0,
+   "module": "sportorg.modules.sportident.backup",
+   "rank": 3
+  },
+  {
+   "fan_in": 2,
+   "fan_out": 1,
+   "import_statements": 1,
+   "layer": "application",
+   "local_import_statements": 0,
+   "module": "sportorg.modules.sportident.fix_time_sicard_5",
+   "rank": 3
+  },
+  {
+   "fan_in": 1,
+   "fan_out": 6,
+   "import_statements": 6,
+   "layer": "application",
+   "local_import_statements": 0,
+   "module": "sportorg.modules.sportident.result_generation",
+   "rank": 3
+  },
+  {
+   "fan_in": 4,
+   "fan_out": 5,
+   "import_statements": 5,
+   "layer": "application",
+   "local_import_statements": 0,
+   "module": "sportorg.modules.sportident.sireader",
+   "rank": 3
+  },
+  {
+   "fan_in": 0,
+   "fan_out": 0,
+   "import_statements": 0,
+   "layer": "application",
+   "local_import_statements": 0,
+   "module": "sportorg.modules.sportiduino",
+   "rank": 3
+  },
+  {
+   "fan_in": 2,
+   "fan_out": 5,
+   "import_statements": 5,
+   "layer": "application",
+   "local_import_statements": 0,
+   "module": "sportorg.modules.sportiduino.sportiduino",
+   "rank": 3
+  },
+  {
+   "fan_in": 0,
+   "fan_out": 0,
+   "import_statements": 0,
+   "layer": "application",
+   "local_import_statements": 0,
+   "module": "sportorg.modules.srpid",
+   "rank": 3
+  },
+  {
+   "fan_in": 2,
+   "fan_out": 5,
+   "import_statements": 5,
+   "layer": "application",
+   "local_import_statements": 0,
+   "module": "sportorg.modules.srpid.srpid",
+   "rank": 3
+  },
+  {
+   "fan_in": 0,
+   "fan_out": 0,
+   "import_statements": 0,
+   "layer": "application",
+   "local_import_statements": 0,
+   "module": "sportorg.modules.teamwork",
+   "rank": 3
+  },
+  {
+   "fan_in": 1,
+   "fan_out": 3,
+   "import_statements": 3,
+   "layer": "application",
+   "local_import_statements": 0,
+   "module": "sportorg.modules.teamwork.client",
+   "rank": 3
+  },
+  {
+   "fan_in": 2,
+   "fan_out": 2,
+   "import_statements": 2,
+   "layer": "application",
+   "local_import_statements": 0,
+   "module": "sportorg.modules.teamwork.command",
+   "rank": 3
+  },
+  {
+   "fan_in": 5,
+   "fan_out": 0,
+   "import_statements": 0,
+   "layer": "application",
+   "local_import_statements": 0,
+   "module": "sportorg.modules.teamwork.crypto",
+   "rank": 3
+  },
+  {
+   "fan_in": 5,
+   "fan_out": 0,
+   "import_statements": 0,
+   "layer": "application",
+   "local_import_statements": 0,
+   "module": "sportorg.modules.teamwork.packet_header",
+   "rank": 3
+  },
+  {
+   "fan_in": 1,
+   "fan_out": 5,
+   "import_statements": 5,
+   "layer": "application",
+   "local_import_statements": 2,
+   "module": "sportorg.modules.teamwork.server",
+   "rank": 3
+  },
+  {
+   "fan_in": 10,
+   "fan_out": 7,
+   "import_statements": 7,
+   "layer": "application",
+   "local_import_statements": 2,
+   "module": "sportorg.modules.teamwork.teamwork",
+   "rank": 3
+  },
+  {
+   "fan_in": 0,
+   "fan_out": 0,
+   "import_statements": 0,
+   "layer": "application",
+   "local_import_statements": 0,
+   "module": "sportorg.modules.telegram",
+   "rank": 3
+  },
+  {
+   "fan_in": 2,
+   "fan_out": 4,
+   "import_statements": 4,
+   "layer": "application",
+   "local_import_statements": 0,
+   "module": "sportorg.modules.telegram.telegram",
+   "rank": 3
+  },
+  {
+   "fan_in": 0,
+   "fan_out": 0,
+   "import_statements": 0,
+   "layer": "application",
+   "local_import_statements": 0,
+   "module": "sportorg.modules.updater",
+   "rank": 3
+  },
+  {
+   "fan_in": 1,
+   "fan_out": 0,
+   "import_statements": 0,
+   "layer": "application",
+   "local_import_statements": 0,
+   "module": "sportorg.modules.updater.checker",
+   "rank": 3
+  },
+  {
+   "fan_in": 0,
+   "fan_out": 0,
+   "import_statements": 0,
+   "layer": "application",
+   "local_import_statements": 0,
+   "module": "sportorg.modules.winorient",
+   "rank": 3
+  },
+  {
+   "fan_in": 3,
+   "fan_out": 5,
+   "import_statements": 5,
+   "layer": "application",
+   "local_import_statements": 0,
+   "module": "sportorg.modules.winorient.wdb",
+   "rank": 3
+  },
+  {
+   "fan_in": 0,
+   "fan_out": 4,
+   "import_statements": 4,
+   "layer": "application",
+   "local_import_statements": 0,
+   "module": "sportorg.modules.winorient.wdb_number_setter",
+   "rank": 3
+  },
+  {
+   "fan_in": 1,
+   "fan_out": 4,
+   "import_statements": 5,
+   "layer": "application",
+   "local_import_statements": 0,
+   "module": "sportorg.modules.winorient.winorient",
+   "rank": 3
+  },
+  {
+   "fan_in": 3,
+   "fan_out": 0,
+   "import_statements": 0,
+   "layer": "foundation",
+   "local_import_statements": 0,
+   "module": "sportorg.paths",
+   "rank": 1
+  },
+  {
+   "fan_in": 1,
+   "fan_out": 0,
+   "import_statements": 0,
+   "layer": "application",
+   "local_import_statements": 0,
+   "module": "sportorg.rust_example",
+   "rank": 3
+  },
+  {
+   "fan_in": 29,
+   "fan_out": 4,
+   "import_statements": 4,
+   "layer": "foundation",
+   "local_import_statements": 1,
+   "module": "sportorg.settings",
+   "rank": 1
+  },
+  {
+   "fan_in": 0,
+   "fan_out": 2,
+   "import_statements": 3,
+   "layer": "entry",
+   "local_import_statements": 0,
+   "module": "sportorg.startup",
+   "rank": 5
+  },
+  {
+   "fan_in": 0,
+   "fan_out": 0,
+   "import_statements": 0,
+   "layer": "foundation",
+   "local_import_statements": 0,
+   "module": "sportorg.utils",
+   "rank": 1
+  },
+  {
+   "fan_in": 3,
+   "fan_out": 0,
+   "import_statements": 0,
+   "layer": "foundation",
+   "local_import_statements": 0,
+   "module": "sportorg.utils.text",
+   "rank": 1
+  },
+  {
+   "fan_in": 23,
+   "fan_out": 1,
+   "import_statements": 1,
+   "layer": "foundation",
+   "local_import_statements": 0,
+   "module": "sportorg.utils.time",
+   "rank": 1
+  }
+ ],
+ "only_grimp": [],
+ "only_own": [
+  {
+   "dst": "sportorg.modules.recovery.recovery_orgeo_finish_csv",
+   "src": "sportorg.gui.menu.actions",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:72]"
+  },
+  {
+   "dst": "sportorg.modules.recovery.recovery_si_master_csv",
+   "src": "sportorg.gui.menu.actions",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:72]"
+  },
+  {
+   "dst": "sportorg.modules.recovery.recovery_sportorg_html",
+   "src": "sportorg.gui.menu.actions",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:72]"
+  },
+  {
+   "dst": "sportorg.modules.recovery.recovery_sportorg_si_log",
+   "src": "sportorg.gui.menu.actions",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:72]"
+  },
+  {
+   "dst": "sportorg.models.memory",
+   "src": "sportorg.modules.recovery.recovery_orgeo_finish_csv",
+   "tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_orgeo_finish_csv.py:18]"
+  },
+  {
+   "dst": "sportorg.utils.time",
+   "src": "sportorg.modules.recovery.recovery_orgeo_finish_csv",
+   "tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_orgeo_finish_csv.py:27]"
+  },
+  {
+   "dst": "sportorg.common.otime",
+   "src": "sportorg.modules.recovery.recovery_si_master_csv",
+   "tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_si_master_csv.py:23]"
+  },
+  {
+   "dst": "sportorg.models.memory",
+   "src": "sportorg.modules.recovery.recovery_si_master_csv",
+   "tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_si_master_csv.py:24]"
+  },
+  {
+   "dst": "sportorg.modules.sportident.fix_time_sicard_5",
+   "src": "sportorg.modules.recovery.recovery_si_master_csv",
+   "tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_si_master_csv.py:25]"
+  },
+  {
+   "dst": "sportorg.utils.time",
+   "src": "sportorg.modules.recovery.recovery_si_master_csv",
+   "tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_si_master_csv.py:26]"
+  },
+  {
+   "dst": "sportorg.utils.text",
+   "src": "sportorg.modules.recovery.recovery_sportorg_html",
+   "tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_sportorg_html.py:15]"
+  },
+  {
+   "dst": "sportorg.common.otime",
+   "src": "sportorg.modules.recovery.recovery_sportorg_si_log",
+   "tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_sportorg_si_log.py:32]"
+  },
+  {
+   "dst": "sportorg.models.memory",
+   "src": "sportorg.modules.recovery.recovery_sportorg_si_log",
+   "tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_sportorg_si_log.py:33]"
+  },
+  {
+   "dst": "sportorg.modules.sportident.fix_time_sicard_5",
+   "src": "sportorg.modules.recovery.recovery_sportorg_si_log",
+   "tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_sportorg_si_log.py:34]"
+  },
+  {
+   "dst": "sportorg.utils.time",
+   "src": "sportorg.modules.recovery.recovery_sportorg_si_log",
+   "tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_sportorg_si_log.py:35]"
+  }
+ ],
+ "summary": {
+  "edges_both": 588,
+  "edges_grimp": 588,
+  "edges_only_grimp": 0,
+  "edges_only_own": 15,
+  "edges_own": 603,
+  "modules": 177,
+  "statements": 613,
+  "statements_local": 7,
+  "statements_module_level": 606,
+  "syntax_warnings": 1,
+  "unparsed": 0
+ },
+ "syntax_warnings": [
+  {
+   "line": 747,
+   "message": "\"\\`\" is an invalid escape sequence. Such sequences will not work in the future. Did you mean \"\\\\`\"? A raw string is also an option.",
+   "path": "sportorg/gui/dialogs/about.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/about.py:747]"
+  }
+ ],
+ "unparsed": []
+}
