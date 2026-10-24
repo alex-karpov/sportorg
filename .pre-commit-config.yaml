@@ -1,0 +1,40 @@
+# Git hooks run the same project commands as scripts/check.py and CI; tool versions come from uv.lock.
+# Install once: uvx pre-commit install   (pre-commit itself is a tool, not a project dependency: ADR-0004)
+default_install_hook_types: [pre-commit, pre-push]
+repos:
+  - repo: local
+    hooks:
+      - id: ruff-format
+        name: ruff format --check
+        entry: uv run --no-sync ruff format --check
+        language: system
+        types: [python]
+      - id: ruff-check
+        name: ruff check
+        entry: uv run --no-sync ruff check
+        language: system
+        types: [python]
+      - id: basedpyright
+        name: basedpyright (changed files)
+        entry: uv run --no-sync basedpyright
+        language: system
+        types: [python]
+      - id: lint-imports
+        name: import-linter contracts
+        entry: uv run --no-sync lint-imports
+        language: system
+        pass_filenames: false
+        files: ^(src/.*\.py|pyproject\.toml)$
+      - id: uv-lock
+        name: uv.lock is up to date
+        entry: uv lock --check
+        language: system
+        pass_filenames: false
+        files: ^(pyproject\.toml|uv\.lock)$
+      - id: tests
+        name: pytest (on push)
+        entry: uv run --no-sync python scripts/check.py --only tests
+        language: system
+        pass_filenames: false
+        always_run: true
+        stages: [pre-push]

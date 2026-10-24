@@ -1,0 +1,18 @@
+# all run against C:\Users\ank\Prog\Orient\_other\pysport-legacy (read-only)
+git rev-parse HEAD
+git log -1 --format=%ad --date=short
+git rev-list --count HEAD
+git log --format='%h %ad %s' --date=short -n 15
+git log --format='@@%H %ad %s' --date=short --name-only   (inside scripts/legacy_fix_candidates.py)
+git show --numstat --format= <hash> -- sportorg/   (inside script, per matching commit)
+uv run --python 3.14 --no-project python -I scripts/legacy_fix_candidates.py --legacy-path ../_other/pysport-legacy --out docs/evidence/stage-0/candidates.json   (temp output, deleted after report build)
+git ls-files | grep -i test | sed 's|/[^/]*$||' | sort | uniq -c
+git log --format= --name-only | sort | uniq -c | sort -rn | head -25
+git show HEAD:sportorg/models/memory.py | wc -l
+git show --stat --format='%H%n%P%n%ad%n%s' --date=short <hash>   (each candidate)
+git show --format= <hash> -- tests/ ':!tests/data' | head -80   (each candidate)
+git show --format= <hash> -- sportorg/ | head -N   (reading source diffs)
+git log --format='@@%h %ad %s' --date=short --name-status | awk ...   (survey of commits adding/modifying tests/*.py and touching sportorg/)
+git show --stat / -- tests/ for 6446c70 460bf74 20b5146 e0c0480   (survey only)
+git show b0391dd:tests/test_race_partial.py | grep -n '^def test'
+scratchpad build.py (uses git show/log/rev-parse/rev-list only) generated the md

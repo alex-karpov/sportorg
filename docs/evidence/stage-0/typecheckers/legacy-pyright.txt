@@ -1,0 +1,2001 @@
+$ (cwd=temp dir)
+$ uvx --python 3.14 --from pyright==1.1.414 pyright --outputjson C:\Users\ank\Prog\Orient\_other\pysport-legacy\sportorg
+# exit=1 timeout=False seconds=7.28
+
+{
+    "version": "1.1.414",
+    "time": "1792839806374",
+    "generalDiagnostics": [
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
+            "severity": "error",
+            "message": "Import \"playsound3\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 6,
+                    "character": 9
+                },
+                "end": {
+                    "line": 6,
+                    "character": 19
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
+            "severity": "error",
+            "message": "Import \"sportorg\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 10,
+                    "character": 5
+                },
+                "end": {
+                    "line": 10,
+                    "character": 13
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
+            "severity": "error",
+            "message": "Import \"sportorg.common.singleton\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 11,
+                    "character": 5
+                },
+                "end": {
+                    "line": 11,
+                    "character": 30
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "severity": "error",
+            "message": "Import \"sportorg_core\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 5,
+                    "character": 9
+                },
+                "end": {
+                    "line": 5,
+                    "character": 22
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\template.py",
+            "severity": "error",
+            "message": "Import \"sportorg\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 3,
+                    "character": 5
+                },
+                "end": {
+                    "line": 3,
+                    "character": 13
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\template.py",
+            "severity": "error",
+            "message": "Import \"sportorg.libs.template\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 4,
+                    "character": 5
+                },
+                "end": {
+                    "line": 4,
+                    "character": 27
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\config.py",
+            "severity": "error",
+            "message": "Import \"sportorg\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 6,
+                    "character": 5
+                },
+                "end": {
+                    "line": 6,
+                    "character": 13
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\about.py",
+            "severity": "error",
+            "message": "Import \"PySide6.QtCore\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 1,
+                    "character": 9
+                },
+                "end": {
+                    "line": 1,
+                    "character": 23
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\about.py",
+            "severity": "error",
+            "message": "Import \"PySide6.QtGui\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 2,
+                    "character": 9
+                },
+                "end": {
+                    "line": 2,
+                    "character": 22
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\about.py",
+            "severity": "error",
+            "message": "Import \"PySide6.QtWidgets\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 3,
+                    "character": 9
+                },
+                "end": {
+                    "line": 3,
+                    "character": 26
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\about.py",
+            "severity": "error",
+            "message": "Import \"PySide2.QtCore\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 5,
+                    "character": 9
+                },
+                "end": {
+                    "line": 5,
+                    "character": 23
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\about.py",
+            "severity": "error",
+            "message": "Import \"PySide2.QtGui\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 6,
+                    "character": 9
+                },
+                "end": {
+                    "line": 6,
+                    "character": 22
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\about.py",
+            "severity": "error",
+            "message": "Import \"PySide2.QtWidgets\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 7,
+                    "character": 9
+                },
+                "end": {
+                    "line": 7,
+                    "character": 26
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\about.py",
+            "severity": "error",
+            "message": "Import \"sportorg\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 9,
+                    "character": 5
+                },
+                "end": {
+                    "line": 9,
+                    "character": 13
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\about.py",
+            "severity": "error",
+            "message": "Import \"sportorg.gui.global_access\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 10,
+                    "character": 5
+                },
+                "end": {
+                    "line": 10,
+                    "character": 31
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\about.py",
+            "severity": "error",
+            "message": "Import \"sportorg.language\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 11,
+                    "character": 5
+                },
+                "end": {
+                    "line": 11,
+                    "character": 22
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\about.py",
+            "severity": "warning",
+            "message": "Unsupported escape sequence in string literal",
+            "range": {
+                "start": {
+                    "line": 746,
+                    "character": 26
+                },
+                "end": {
+                    "line": 746,
+                    "character": 28
+                }
+            },
+            "rule": "reportInvalidStringEscapeSequence"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\about.py",
+            "severity": "warning",
+            "message": "Unsupported escape sequence in string literal",
+            "range": {
+                "start": {
+                    "line": 746,
+                    "character": 40
+                },
+                "end": {
+                    "line": 746,
+                    "character": 42
+                }
+            },
+            "rule": "reportInvalidStringEscapeSequence"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\bib_dialog.py",
+            "severity": "error",
+            "message": "Import \"PySide6\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 3,
+                    "character": 9
+                },
+                "end": {
+                    "line": 3,
+                    "character": 16
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\bib_dialog.py",
+            "severity": "error",
+            "message": "Import \"PySide6.QtGui\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 4,
+                    "character": 9
+                },
+                "end": {
+                    "line": 4,
+                    "character": 22
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\bib_dialog.py",
+            "severity": "error",
+            "message": "Import \"PySide6.QtWidgets\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 5,
+                    "character": 9
+                },
+                "end": {
+                    "line": 5,
+                    "character": 26
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\bib_dialog.py",
+            "severity": "error",
+            "message": "Import \"PySide2\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 13,
+                    "character": 9
+                },
+                "end": {
+                    "line": 13,
+                    "character": 16
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\bib_dialog.py",
+            "severity": "error",
+            "message": "Import \"PySide2.QtGui\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 14,
+                    "character": 9
+                },
+                "end": {
+                    "line": 14,
+                    "character": 22
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\bib_dialog.py",
+            "severity": "error",
+            "message": "Import \"PySide2.QtWidgets\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 15,
+                    "character": 9
+                },
+                "end": {
+                    "line": 15,
+                    "character": 26
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\bib_dialog.py",
+            "severity": "error",
+            "message": "Import \"sportorg\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 23,
+                    "character": 5
+                },
+                "end": {
+                    "line": 23,
+                    "character": 13
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\bib_dialog.py",
+            "severity": "error",
+            "message": "Import \"sportorg.gui.global_access\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 24,
+                    "character": 5
+                },
+                "end": {
+                    "line": 24,
+                    "character": 31
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\bib_dialog.py",
+            "severity": "error",
+            "message": "Import \"sportorg.language\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 25,
+                    "character": 5
+                },
+                "end": {
+                    "line": 25,
+                    "character": 22
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\bib_dialog.py",
+            "severity": "error",
+            "message": "Import \"sportorg.models\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 26,
+                    "character": 5
+                },
+                "end": {
+                    "line": 26,
+                    "character": 20
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\bib_dialog.py",
+            "severity": "error",
+            "message": "Import \"sportorg.modules.sound\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 27,
+                    "character": 5
+                },
+                "end": {
+                    "line": 27,
+                    "character": 27
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\control_time_change_dialog.py",
+            "severity": "error",
+            "message": "Import \"PySide6.QtGui\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 3,
+                    "character": 9
+                },
+                "end": {
+                    "line": 3,
+                    "character": 22
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\control_time_change_dialog.py",
+            "severity": "error",
+            "message": "Import \"PySide6.QtWidgets\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 4,
+                    "character": 9
+                },
+                "end": {
+                    "line": 4,
+                    "character": 26
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\control_time_change_dialog.py",
+            "severity": "error",
+            "message": "Import \"PySide2.QtGui\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 12,
+                    "character": 9
+                },
+                "end": {
+                    "line": 12,
+                    "character": 22
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\control_time_change_dialog.py",
+            "severity": "error",
+            "message": "Import \"PySide2.QtWidgets\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 13,
+                    "character": 9
+                },
+                "end": {
+                    "line": 13,
+                    "character": 26
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\control_time_change_dialog.py",
+            "severity": "error",
+            "message": "Import \"sportorg\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 21,
+                    "character": 5
+                },
+                "end": {
+                    "line": 21,
+                    "character": 13
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\control_time_change_dialog.py",
+            "severity": "error",
+            "message": "Import \"sportorg.gui.global_access\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 22,
+                    "character": 5
+                },
+                "end": {
+                    "line": 22,
+                    "character": 31
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\control_time_change_dialog.py",
+            "severity": "error",
+            "message": "Import \"sportorg.gui.utils.custom_controls\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 23,
+                    "character": 5
+                },
+                "end": {
+                    "line": 23,
+                    "character": 39
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\control_time_change_dialog.py",
+            "severity": "error",
+            "message": "Import \"sportorg.language\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 24,
+                    "character": 5
+                },
+                "end": {
+                    "line": 24,
+                    "character": 22
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\control_time_change_dialog.py",
+            "severity": "error",
+            "message": "Import \"sportorg.models.result.result_tools\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 25,
+                    "character": 5
+                },
+                "end": {
+                    "line": 25,
+                    "character": 40
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\course_edit.py",
+            "severity": "error",
+            "message": "Import \"sportorg.gui.dialogs.dialog\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 3,
+                    "character": 5
+                },
+                "end": {
+                    "line": 3,
+                    "character": 32
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\course_edit.py",
+            "severity": "error",
+            "message": "Import \"sportorg.gui.global_access\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 4,
+                    "character": 5
+                },
+                "end": {
+                    "line": 4,
+                    "character": 31
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\course_edit.py",
+            "severity": "error",
+            "message": "Import \"sportorg.language\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 5,
+                    "character": 5
+                },
+                "end": {
+                    "line": 5,
+                    "character": 22
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\course_edit.py",
+            "severity": "error",
+            "message": "Import \"sportorg.models.memory\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 6,
+                    "character": 5
+                },
+                "end": {
+                    "line": 6,
+                    "character": 27
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\course_edit.py",
+            "severity": "error",
+            "message": "Import \"sportorg.models.result.result_tools\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 7,
+                    "character": 5
+                },
+                "end": {
+                    "line": 7,
+                    "character": 40
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\course_edit.py",
+            "severity": "error",
+            "message": "Import \"sportorg.modules.teamwork.teamwork\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 8,
+                    "character": 5
+                },
+                "end": {
+                    "line": 8,
+                    "character": 39
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\cp_delete.py",
+            "severity": "error",
+            "message": "Import \"PySide6.QtGui\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 3,
+                    "character": 9
+                },
+                "end": {
+                    "line": 3,
+                    "character": 22
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\cp_delete.py",
+            "severity": "error",
+            "message": "Import \"PySide6.QtWidgets\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 4,
+                    "character": 9
+                },
+                "end": {
+                    "line": 4,
+                    "character": 26
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\cp_delete.py",
+            "severity": "error",
+            "message": "Import \"PySide2.QtGui\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 13,
+                    "character": 9
+                },
+                "end": {
+                    "line": 13,
+                    "character": 22
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\cp_delete.py",
+            "severity": "error",
+            "message": "Import \"PySide2.QtWidgets\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 14,
+                    "character": 9
+                },
+                "end": {
+                    "line": 14,
+                    "character": 26
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\cp_delete.py",
+            "severity": "error",
+            "message": "Import \"sportorg\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 23,
+                    "character": 5
+                },
+                "end": {
+                    "line": 23,
+                    "character": 13
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\cp_delete.py",
+            "severity": "error",
+            "message": "Import \"sportorg.gui.global_access\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 24,
+                    "character": 5
+                },
+                "end": {
+                    "line": 24,
+                    "character": 31
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\cp_delete.py",
+            "severity": "error",
+            "message": "Import \"sportorg.gui.utils.custom_controls\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 25,
+                    "character": 5
+                },
+                "end": {
+                    "line": 25,
+                    "character": 39
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\cp_delete.py",
+            "severity": "error",
+            "message": "Import \"sportorg.language\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 26,
+                    "character": 5
+                },
+                "end": {
+                    "line": 26,
+                    "character": 22
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\cp_delete.py",
+            "severity": "error",
+            "message": "Import \"sportorg.models.memory\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 27,
+                    "character": 5
+                },
+                "end": {
+                    "line": 27,
+                    "character": 27
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\cp_delete.py",
+            "severity": "error",
+            "message": "Import \"sportorg.models.result.result_tools\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 28,
+                    "character": 5
+                },
+                "end": {
+                    "line": 28,
+                    "character": 40
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\dialog.py",
+            "severity": "error",
+            "message": "Import \"PySide6.QtGui\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 5,
+                    "character": 9
+                },
+                "end": {
+                    "line": 5,
+                    "character": 22
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\dialog.py",
+            "severity": "error",
+            "message": "Import \"PySide6.QtWidgets\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 6,
+                    "character": 9
+                },
+                "end": {
+                    "line": 6,
+                    "character": 26
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\dialog.py",
+            "severity": "error",
+            "message": "Import \"PySide2.QtGui\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 22,
+                    "character": 9
+                },
+                "end": {
+                    "line": 22,
+                    "character": 22
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\dialog.py",
+            "severity": "error",
+            "message": "Import \"PySide2.QtWidgets\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 23,
+                    "character": 9
+                },
+                "end": {
+                    "line": 23,
+                    "character": 26
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\dialog.py",
+            "severity": "error",
+            "message": "Import \"sportorg\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 39,
+                    "character": 5
+                },
+                "end": {
+                    "line": 39,
+                    "character": 13
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\dialog.py",
+            "severity": "error",
+            "message": "Import \"sportorg.gui.utils.custom_controls\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 40,
+                    "character": 5
+                },
+                "end": {
+                    "line": 40,
+                    "character": 39
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\dialog.py",
+            "severity": "error",
+            "message": "Import \"sportorg.language\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 41,
+                    "character": 5
+                },
+                "end": {
+                    "line": 41,
+                    "character": 22
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\dialog.py",
+            "severity": "error",
+            "message": "Import \"sportorg.utils.time\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 42,
+                    "character": 5
+                },
+                "end": {
+                    "line": 42,
+                    "character": 24
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\dialog.py",
+            "severity": "error",
+            "message": "Cannot assign to attribute \"spinbox\" for class \"NumberButtonField\"\n  Attribute \"spinbox\" is unknown",
+            "range": {
+                "start": {
+                    "line": 222,
+                    "character": 27
+                },
+                "end": {
+                    "line": 222,
+                    "character": 34
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\dialog.py",
+            "severity": "error",
+            "message": "Cannot assign to attribute \"button\" for class \"NumberButtonField\"\n  Attribute \"button\" is unknown",
+            "range": {
+                "start": {
+                    "line": 223,
+                    "character": 27
+                },
+                "end": {
+                    "line": 223,
+                    "character": 33
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\dialog.py",
+            "severity": "error",
+            "message": "Cannot access attribute \"spinbox\" for class \"NumberButtonField\"\n  Attribute \"spinbox\" is unknown",
+            "range": {
+                "start": {
+                    "line": 323,
+                    "character": 39
+                },
+                "end": {
+                    "line": 323,
+                    "character": 46
+                }
+            },
+            "rule": "reportAttributeAccessIssue"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\entry_mass_edit.py",
+            "severity": "error",
+            "message": "Import \"PySide6\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 4,
+                    "character": 9
+                },
+                "end": {
+                    "line": 4,
+                    "character": 16
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\entry_mass_edit.py",
+            "severity": "error",
+            "message": "Import \"PySide6.QtGui\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 5,
+                    "character": 9
+                },
+                "end": {
+                    "line": 5,
+                    "character": 22
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\entry_mass_edit.py",
+            "severity": "error",
+            "message": "Import \"PySide6.QtWidgets\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 6,
+                    "character": 9
+                },
+                "end": {
+                    "line": 6,
+                    "character": 26
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\entry_mass_edit.py",
+            "severity": "error",
+            "message": "Import \"PySide2\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 8,
+                    "character": 9
+                },
+                "end": {
+                    "line": 8,
+                    "character": 16
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\entry_mass_edit.py",
+            "severity": "error",
+            "message": "Import \"PySide2.QtGui\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 9,
+                    "character": 9
+                },
+                "end": {
+                    "line": 9,
+                    "character": 22
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\entry_mass_edit.py",
+            "severity": "error",
+            "message": "Import \"PySide2.QtWidgets\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 10,
+                    "character": 9
+                },
+                "end": {
+                    "line": 10,
+                    "character": 26
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\entry_mass_edit.py",
+            "severity": "error",
+            "message": "Import \"sportorg\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 12,
+                    "character": 5
+                },
+                "end": {
+                    "line": 12,
+                    "character": 13
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\entry_mass_edit.py",
+            "severity": "error",
+            "message": "Import \"sportorg.gui.global_access\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 13,
+                    "character": 5
+                },
+                "end": {
+                    "line": 13,
+                    "character": 31
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\entry_mass_edit.py",
+            "severity": "error",
+            "message": "Import \"sportorg.gui.utils.custom_controls\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 14,
+                    "character": 5
+                },
+                "end": {
+                    "line": 14,
+                    "character": 39
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\entry_mass_edit.py",
+            "severity": "error",
+            "message": "Import \"sportorg.language\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 15,
+                    "character": 5
+                },
+                "end": {
+                    "line": 15,
+                    "character": 22
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\entry_mass_edit.py",
+            "severity": "error",
+            "message": "Import \"sportorg.models.constant\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 16,
+                    "character": 5
+                },
+                "end": {
+                    "line": 16,
+                    "character": 29
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\entry_mass_edit.py",
+            "severity": "error",
+            "message": "Import \"sportorg.models.memory\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 17,
+                    "character": 5
+                },
+                "end": {
+                    "line": 17,
+                    "character": 27
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\event_properties.py",
+            "severity": "error",
+            "message": "Import \"PySide6.QtGui\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 3,
+                    "character": 9
+                },
+                "end": {
+                    "line": 3,
+                    "character": 22
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\event_properties.py",
+            "severity": "error",
+            "message": "Import \"PySide6.QtWidgets\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 4,
+                    "character": 9
+                },
+                "end": {
+                    "line": 4,
+                    "character": 26
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\event_properties.py",
+            "severity": "error",
+            "message": "Import \"PySide2.QtGui\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 14,
+                    "character": 9
+                },
+                "end": {
+                    "line": 14,
+                    "character": 22
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\event_properties.py",
+            "severity": "error",
+            "message": "Import \"PySide2.QtWidgets\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 15,
+                    "character": 9
+                },
+                "end": {
+                    "line": 15,
+                    "character": 26
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\event_properties.py",
+            "severity": "error",
+            "message": "Import \"sportorg\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 25,
+                    "character": 5
+                },
+                "end": {
+                    "line": 25,
+                    "character": 13
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\event_properties.py",
+            "severity": "error",
+            "message": "Import \"sportorg.gui.global_access\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 26,
+                    "character": 5
+                },
+                "end": {
+                    "line": 26,
+                    "character": 31
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\event_properties.py",
+            "severity": "error",
+            "message": "Import \"sportorg.gui.utils.custom_controls\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 27,
+                    "character": 5
+                },
+                "end": {
+                    "line": 27,
+                    "character": 39
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\event_properties.py",
+            "severity": "error",
+            "message": "Import \"sportorg.language\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 28,
+                    "character": 5
+                },
+                "end": {
+                    "line": 28,
+                    "character": 22
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\event_properties.py",
+            "severity": "error",
+            "message": "Import \"sportorg.models.memory\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 29,
+                    "character": 5
+                },
+                "end": {
+                    "line": 29,
+                    "character": 27
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\event_properties.py",
+            "severity": "error",
+            "message": "Import \"sportorg.models.result.result_tools\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 30,
+                    "character": 5
+                },
+                "end": {
+                    "line": 30,
+                    "character": 40
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\file_dialog.py",
+            "severity": "error",
+            "message": "Import \"PySide6.QtWidgets\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 5,
+                    "character": 9
+                },
+                "end": {
+                    "line": 5,
+                    "character": 26
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\file_dialog.py",
+            "severity": "error",
+            "message": "Import \"PySide2.QtWidgets\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 7,
+                    "character": 9
+                },
+                "end": {
+                    "line": 7,
+                    "character": 26
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\file_dialog.py",
+            "severity": "error",
+            "message": "Import \"sportorg\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 9,
+                    "character": 5
+                },
+                "end": {
+                    "line": 9,
+                    "character": 13
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\filter_dialog.py",
+            "severity": "error",
+            "message": "Import \"PySide6\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 3,
+                    "character": 9
+                },
+                "end": {
+                    "line": 3,
+                    "character": 16
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\filter_dialog.py",
+            "severity": "error",
+            "message": "Import \"PySide6.QtGui\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 4,
+                    "character": 9
+                },
+                "end": {
+                    "line": 4,
+                    "character": 22
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\filter_dialog.py",
+            "severity": "error",
+            "message": "Import \"PySide6.QtWidgets\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 5,
+                    "character": 9
+                },
+                "end": {
+                    "line": 5,
+                    "character": 26
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\filter_dialog.py",
+            "severity": "error",
+            "message": "Import \"PySide2\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 7,
+                    "character": 9
+                },
+                "end": {
+                    "line": 7,
+                    "character": 16
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\filter_dialog.py",
+            "severity": "error",
+            "message": "Import \"PySide2.QtGui\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 8,
+                    "character": 9
+                },
+                "end": {
+                    "line": 8,
+                    "character": 22
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\filter_dialog.py",
+            "severity": "error",
+            "message": "Import \"PySide2.QtWidgets\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 9,
+                    "character": 9
+                },
+                "end": {
+                    "line": 9,
+                    "character": 26
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\filter_dialog.py",
+            "severity": "error",
+            "message": "Import \"sportorg\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 11,
+                    "character": 5
+                },
+                "end": {
+                    "line": 11,
+                    "character": 13
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\filter_dialog.py",
+            "severity": "error",
+            "message": "Import \"sportorg.gui.dialogs.person_edit\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 12,
+                    "character": 5
+                },
+                "end": {
+                    "line": 12,
+                    "character": 37
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\filter_dialog.py",
+            "severity": "error",
+            "message": "Import \"sportorg.gui.global_access\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 13,
+                    "character": 5
+                },
+                "end": {
+                    "line": 13,
+                    "character": 31
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\filter_dialog.py",
+            "severity": "error",
+            "message": "Import \"sportorg.gui.utils.custom_controls\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 14,
+                    "character": 5
+                },
+                "end": {
+                    "line": 14,
+                    "character": 39
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\filter_dialog.py",
+            "severity": "error",
+            "message": "Import \"sportorg.language\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 15,
+                    "character": 5
+                },
+                "end": {
+                    "line": 15,
+                    "character": 22
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\group_edit.py",
+            "severity": "error",
+            "message": "Import \"sportorg.gui.dialogs.dialog\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 2,
+                    "character": 5
+                },
+                "end": {
+                    "line": 2,
+                    "character": 32
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\group_edit.py",
+            "severity": "error",
+            "message": "Import \"sportorg.gui.dialogs.group_ranking\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 11,
+                    "character": 5
+                },
+                "end": {
+                    "line": 11,
+                    "character": 39
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\group_edit.py",
+            "severity": "error",
+            "message": "Import \"sportorg.gui.global_access\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 12,
+                    "character": 5
+                },
+                "end": {
+                    "line": 12,
+                    "character": 31
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\group_edit.py",
+            "severity": "error",
+            "message": "Import \"sportorg.language\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 13,
+                    "character": 5
+                },
+                "end": {
+                    "line": 13,
+                    "character": 22
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\group_edit.py",
+            "severity": "error",
+            "message": "Import \"sportorg.models.constant\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 14,
+                    "character": 5
+                },
+                "end": {
+                    "line": 14,
+                    "character": 29
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\group_edit.py",
+            "severity": "error",
+            "message": "Import \"sportorg.models.memory\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 15,
+                    "character": 5
+                },
+                "end": {
+                    "line": 15,
+                    "character": 27
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\group_edit.py",
+            "severity": "error",
+            "message": "Import \"sportorg.models.result.result_calculation\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 16,
+                    "character": 5
+                },
+                "end": {
+                    "line": 16,
+                    "character": 46
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\group_edit.py",
+            "severity": "error",
+            "message": "Import \"sportorg.modules.live.live\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 17,
+                    "character": 5
+                },
+                "end": {
+                    "line": 17,
+                    "character": 31
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\group_edit.py",
+            "severity": "error",
+            "message": "Import \"sportorg.modules.teamwork.teamwork\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 18,
+                    "character": 5
+                },
+                "end": {
+                    "line": 18,
+                    "character": 39
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\group_mass_edit.py",
+            "severity": "error",
+            "message": "Import \"PySide6\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 4,
+                    "character": 9
+                },
+                "end": {
+                    "line": 4,
+                    "character": 16
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\group_mass_edit.py",
+            "severity": "error",
+            "message": "Import \"PySide6.QtGui\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 5,
+                    "character": 9
+                },
+                "end": {
+                    "line": 5,
+                    "character": 22
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\group_mass_edit.py",
+            "severity": "error",
+            "message": "Import \"PySide6.QtWidgets\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 6,
+                    "character": 9
+                },
+                "end": {
+                    "line": 6,
+                    "character": 26
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\group_mass_edit.py",
+            "severity": "error",
+            "message": "Import \"PySide2\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 8,
+                    "character": 9
+                },
+                "end": {
+                    "line": 8,
+                    "character": 16
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\group_mass_edit.py",
+            "severity": "error",
+            "message": "Import \"PySide2.QtGui\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 9,
+                    "character": 9
+                },
+                "end": {
+                    "line": 9,
+                    "character": 22
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\group_mass_edit.py",
+            "severity": "error",
+            "message": "Import \"PySide2.QtWidgets\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 10,
+                    "character": 9
+                },
+                "end": {
+                    "line": 10,
+                    "character": 26
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\group_mass_edit.py",
+            "severity": "error",
+            "message": "Import \"sportorg\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 12,
+                    "character": 5
+                },
+                "end": {
+                    "line": 12,
+                    "character": 13
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\group_mass_edit.py",
+            "severity": "error",
+            "message": "Import \"sportorg.gui.global_access\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 13,
+                    "character": 5
+                },
+                "end": {
+                    "line": 13,
+                    "character": 31
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\group_mass_edit.py",
+            "severity": "error",
+            "message": "Import \"sportorg.gui.utils.custom_controls\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 14,
+                    "character": 5
+                },
+                "end": {
+                    "line": 14,
+                    "character": 39
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\group_mass_edit.py",
+            "severity": "error",
+            "message": "Import \"sportorg.language\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 15,
+                    "character": 5
+                },
+                "end": {
+                    "line": 15,
+                    "character": 22
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\group_mass_edit.py",
+            "severity": "error",
+            "message": "Import \"sportorg.models.constant\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 16,
+                    "character": 5
+                },
+                "end": {
+                    "line": 16,
+                    "character": 29
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\group_mass_edit.py",
+            "severity": "error",
+            "message": "Import \"sportorg.models.memory\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 17,
+                    "character": 5
+                },
+                "end": {
+                    "line": 17,
+                    "character": 27
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\group_ranking.py",
+            "severity": "error",
+            "message": "Import \"PySide6.QtGui\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 3,
+                    "character": 9
+                },
+                "end": {
+                    "line": 3,
+                    "character": 22
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\group_ranking.py",
+            "severity": "error",
+            "message": "Import \"PySide6.QtWidgets\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 4,
+                    "character": 9
+                },
+                "end": {
+                    "line": 4,
+                    "character": 26
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\gui\\dialogs\\group_ranking.py",
+            "severity": "error",
+            "message": "Import \"PySide2.QtGui\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 12,
+                    "character": 9
+... [TRUNCATED: 21810 lines total, first 2000 kept]

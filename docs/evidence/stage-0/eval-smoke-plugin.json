@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 1,
+  "claudeVersion": "2.1.310",
+  "startedAt": "2026-10-24T12:18:01.484Z",
+  "durationSeconds": 8,
+  "costUsd": 0.0030941200000000006,
+  "partial": false,
+  "suite": {
+    "root": "C:\\Users\\ank\\Prog\\Orient\\sportorg",
+    "ablation": "with-without",
+    "modelOverride": "haiku",
+    "caseFilter": "smoke-plugin",
+    "threshold": 1,
+    "concurrency": 1,
+    "plugins": [
+      {
+        "name": "code-modernization",
+        "version": "1.0.0",
+        "path": "C:\\Users\\ank\\Prog\\Orient\\sportorg\\tools\\plugins\\code-modernization"
+      }
+    ]
+  },
+  "cases": [
+    {
+      "name": "smoke-plugin",
+      "dir": "evals\\smoke-plugin",
+      "source": "prose",
+      "promptMarkdown": "Reply with exactly the single word READY and nothing else.",
+      "runsPerCase": 1,
+      "timeoutSeconds": 120,
+      "maxTurns": 2,
+      "graders": [
+        {
+          "name": "ready",
+          "type": "regex",
+          "weight": 1,
+          "config": {
+            "target": "last_message",
+            "pattern": "^\\s*READY\\s*$",
+            "flags": "",
+            "match": "contains"
+          }
+        }
+      ],
+      "arms": {
+        "with": [
+          {
+            "score": 1,
+            "passed": true,
+            "turns": 1,
+            "costUsd": 0.0018690600000000003,
+            "judgeCostUsd": 0,
+            "durationSeconds": 4,
+            "startedAt": "2026-10-24T12:18:01.890Z",
+            "error": null,
+            "tracePath": "C:\\Users\\ank\\AppData\\Local\\Temp\\claude-eval-RRJ1M4\\out\\trace.jsonl",
+            "skippedPaidGraders": false,
+            "graders": [
+              {
+                "name": "ready",
+                "passed": true,
+                "weight": 1,
+                "explanation": "matched ^\\s*READY\\s*$",
+                "withOnly": false,
+                "scored": true
+              }
+            ]
+          }
+        ],
+        "without": [
+          {
+            "score": 1,
+            "passed": true,
+            "turns": 1,
+            "costUsd": 0.00122506,
+            "judgeCostUsd": 0,
+            "durationSeconds": 3,
+            "startedAt": "2026-10-24T12:18:06.170Z",
+            "error": null,
+            "tracePath": "C:\\Users\\ank\\AppData\\Local\\Temp\\claude-eval-BpG1UR\\out\\trace.jsonl",
+            "skippedPaidGraders": false,
+            "graders": [
+              {
+                "name": "ready",
+                "passed": true,
+                "weight": 1,
+                "explanation": "matched ^\\s*READY\\s*$",
+                "withOnly": false,
+                "scored": true
+              }
+            ]
+          }
+        ]
+      },
+      "aggregates": {
+        "score": 1,
+        "passRate": 1,
+        "scoreWithout": 1,
+        "passRateWithout": 1,
+        "delta": 0
+      }
+    }
+  ],
+  "aggregates": {
+    "casesTotal": 1,
+    "casesPassed": 1,
+    "overallScore": 1,
+    "overallPassRate": 1,
+    "meanDelta": 0
+  }
+}

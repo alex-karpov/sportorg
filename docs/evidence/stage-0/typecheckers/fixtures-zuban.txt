@@ -1,0 +1,25 @@
+$ (cwd=C:\Users\ank\Prog\Orient\sportorg\scripts\typecheck_configs\zuban)
+$ uvx --python 3.14 --from zuban==0.10.1 zuban check --config-file C:\Users\ank\Prog\Orient\sportorg\scripts\typecheck_configs\zuban\mypy.ini --mode mypy --strict C:\Users\ank\Prog\Orient\sportorg\scripts\typecheck_fixtures
+# exit=1
+
+..\..\typecheck_fixtures\any_leak_untyped_call.py:2: error: Function is missing a return type annotation  [no-untyped-def]
+..\..\typecheck_fixtures\any_leak_untyped_call.py:9: error: Call to untyped function "k" in typed context  [no-untyped-call]
+..\..\typecheck_fixtures\assert_isinstance_evasion.py:3: error: Subclass of "str" and "int" cannot exist: have distinct disjoint bases  [unreachable]
+..\..\typecheck_fixtures\assert_isinstance_evasion.py:4: error: Statement is unreachable  [unreachable]
+..\..\typecheck_fixtures\explicit_any_param.py:5: error: Explicit "Any" is not allowed  [explicit-any]
+..\..\typecheck_fixtures\explicit_any_param.py:5: error: Explicit "Any" is not allowed  [explicit-any]
+..\..\typecheck_fixtures\implicit_optional.py:2: error: Incompatible default for parameter "a" (default has type "None", parameter has type "int")  [assignment]
+..\..\typecheck_fixtures\implicit_optional.py:2: note: PEP 484 prohibits implicit Optional. Accordingly, mypy has changed its default to no_implicit_optional=True
+..\..\typecheck_fixtures\implicit_optional.py:2: note: Use https://github.com/hauntsaninja/no_implicit_optional to automatically upgrade your codebase
+..\..\typecheck_fixtures\missing_import.py:2: error: Cannot find implementation or library stub for module named "nonexistent_module_xyz_123"  [import-not-found]
+..\..\typecheck_fixtures\real_bug_missing_return.py:2: error: Missing return statement  [return]
+..\..\typecheck_fixtures\real_bug_optional_attr.py:3: error: Item "None" of "str | None" has no attribute "upper"  [union-attr]
+..\..\typecheck_fixtures\real_bug_str_plus_int.py:3: error: Unsupported operand types for + ("str" and "int")  [operator]
+..\..\typecheck_fixtures\real_bug_str_plus_int.py:3: error: Returning Any from function declared to return "str"  [no-any-return]
+..\..\typecheck_fixtures\redundant_cast.py:4: error: Redundant cast to "int"  [redundant-cast]
+..\..\typecheck_fixtures\typeddict_wrong_key.py:11: error: TypedDict "Movie" has no key "director"  [typeddict-item]
+..\..\typecheck_fixtures\typeddict_wrong_key.py:11: error: Returning Any from function declared to return "str"  [no-any-return]
+..\..\typecheck_fixtures\unreachable_code.py:4: error: Statement is unreachable  [unreachable]
+..\..\typecheck_fixtures\untyped_def.py:2: error: Function is missing a type annotation  [no-untyped-def]
+..\..\typecheck_fixtures\untyped_def.py:6: error: Call to untyped function "g" in typed context  [no-untyped-call]
+Found 18 errors in 12 files (checked 18 source files)

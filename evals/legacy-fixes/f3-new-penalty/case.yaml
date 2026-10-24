@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: f3-new-penalty
+context:
+  scaffold_script: scaffold.sh

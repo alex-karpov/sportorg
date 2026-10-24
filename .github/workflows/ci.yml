@@ -1,0 +1,52 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  checks:
+    name: ${{ matrix.os }} / py${{ matrix.python }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        python: ["3.14", "3.15"]   # 3.14 = development version and lower bound, 3.15 = early-warning lane (ADR-0001)
+    steps:
+      - uses: actions/checkout@v5
+      - uses: astral-sh/setup-uv@v10.3.2
+        with:
+          enable-cache: true
+      - name: Install Python ${{ matrix.python }} and sync locked environment
+        run: |
+          uv python install ${{ matrix.python }}
+          uv sync --locked --python ${{ matrix.python }}
+      - name: Quality checks (same command as locally)
+        run: uv run --no-sync python scripts/check.py --keep-going
+      - name: Vulnerabilities
+        run: uv audit --locked
+      - name: Licence compatibility
+        run: uv run --no-sync python -m scripts.check_licenses
+
+  clean-install:
+    # README installation steps executed verbatim on a machine with nothing preinstalled.
+    name: clean machine (ubuntu container)
+    runs-on: ubuntu-latest
+    container: ubuntu:24.04
+    steps:
+      - name: Prerequisites a fresh machine would have to install (git, curl, CA certs)
+        run: apt-get update && apt-get install -y --no-install-recommends git curl ca-certificates
+      - name: README step 1 — install uv
+        run: curl -LsSf https://astral.sh/uv/install.sh | sh
+      - name: README step 2 — clone
+        run: git clone --branch "${GITHUB_REF_NAME}" --depth 1 "https://github.com/${GITHUB_REPOSITORY}.git" app
+      - name: README steps 3–4 — sync and check
+        working-directory: app
+        run: |
+          export PATH="$HOME/.local/bin:$PATH"
+          uv sync
+          uv run python scripts/check.py

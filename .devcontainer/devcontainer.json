@@ -1,0 +1,11 @@
+{
+  "name": "sportorg_ng",
+  "build": { "dockerfile": "Dockerfile" },
+  "remoteUser": "vscode",
+  "postCreateCommand": "uv sync && uvx pre-commit install",
+  "customizations": {
+    "vscode": {
+      "extensions": ["charliermarsh.ruff", "detachhead.basedpyright"]
+    }
+  }
+}
