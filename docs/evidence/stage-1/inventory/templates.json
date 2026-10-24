@@ -1,0 +1,738 @@
+{
+ "loaders": [
+  {
+   "kind": "list_templates",
+   "source": "[код: pysport@b548c35 sportorg/common/template.py:8]",
+   "text": "def get_templates(path: str = \"\", exclude_path: str = \"\") -> List[str]:"
+  },
+  {
+   "kind": "template_dir",
+   "source": "[код: pysport@b548c35 sportorg/common/template.py:10]",
+   "text": "path = settings.template_dir()"
+  },
+  {
+   "kind": "template_dir",
+   "source": "[код: pysport@b548c35 sportorg/common/template.py:12]",
+   "text": "exclude_path = settings.template_dir()"
+  },
+  {
+   "kind": "list_templates",
+   "source": "[код: pysport@b548c35 sportorg/common/template.py:17]",
+   "text": "fs = get_templates(full_path)"
+  },
+  {
+   "kind": "render_text",
+   "source": "[код: pysport@b548c35 sportorg/common/template.py:30]",
+   "text": "def get_text_from_file(path: str, **kwargs: Any) -> str:"
+  },
+  {
+   "kind": "template_dir",
+   "source": "[код: pysport@b548c35 sportorg/common/template.py:36]",
+   "text": "return template.get_text_from_template(settings.template_dir(), path, **kwargs)"
+  },
+  {
+   "kind": "render_text",
+   "source": "[код: pysport@b548c35 sportorg/common/template.py:36]",
+   "text": "return template.get_text_from_template(settings.template_dir(), path, **kwargs)"
+  },
+  {
+   "kind": "env_config",
+   "source": "[код: pysport@b548c35 sportorg/config.py:17]",
+   "text": "TEMPLATES_PATH = os.getenv(f\"{ENV_PREFIX}TEMPLATES_PATH\", \"\")"
+  },
+  {
+   "kind": "list_templates",
+   "source": "[код: pysport@b548c35 sportorg/gui/dialogs/print_properties.py:78]",
+   "text": "self.item_template.addItems(get_templates(settings.template_dir(\"split\")))"
+  },
+  {
+   "kind": "template_dir",
+   "source": "[код: pysport@b548c35 sportorg/gui/dialogs/print_properties.py:78]",
+   "text": "self.item_template.addItems(get_templates(settings.template_dir(\"split\")))"
+  },
+  {
+   "kind": "setting",
+   "source": "[код: pysport@b548c35 sportorg/gui/dialogs/print_properties.py:140]",
+   "text": "template = obj.get_setting(\"split_template\")"
+  },
+  {
+   "kind": "setting",
+   "source": "[код: pysport@b548c35 sportorg/gui/dialogs/print_properties.py:165]",
+   "text": "obj.set_setting(\"split_template\", self.item_template.currentText())"
+  },
+  {
+   "kind": "docxtpl",
+   "source": "[код: pysport@b548c35 sportorg/gui/dialogs/report_dialog.py:6]",
+   "text": "from docxtpl import DocxTemplate"
+  },
+  {
+   "kind": "list_templates",
+   "source": "[код: pysport@b548c35 sportorg/gui/dialogs/report_dialog.py:70]",
+   "text": "sorted(get_templates(settings.template_dir(\"reports\")))"
+  },
+  {
+   "kind": "template_dir",
+   "source": "[код: pysport@b548c35 sportorg/gui/dialogs/report_dialog.py:70]",
+   "text": "sorted(get_templates(settings.template_dir(\"reports\")))"
+  },
+  {
+   "kind": "template_dir",
+   "source": "[код: pysport@b548c35 sportorg/gui/dialogs/report_dialog.py:212]",
+   "text": "full_path = settings.template_dir() + template_path"
+  },
+  {
+   "kind": "docxtpl",
+   "source": "[код: pysport@b548c35 sportorg/gui/dialogs/report_dialog.py:213]",
+   "text": "doc = DocxTemplate(full_path)"
+  },
+  {
+   "kind": "render_text",
+   "source": "[код: pysport@b548c35 sportorg/gui/dialogs/report_dialog.py:236]",
+   "text": "template = get_text_from_file("
+  },
+  {
+   "kind": "render_text",
+   "source": "[код: pysport@b548c35 sportorg/gui/dialogs/report_dialog.py:263]",
+   "text": "template = get_text_from_file("
+  },
+  {
+   "kind": "setting",
+   "source": "[код: pysport@b548c35 sportorg/gui/dialogs/settings.py:394]",
+   "text": "templates_path = get_existing_directory("
+  },
+  {
+   "kind": "template_dir",
+   "source": "[код: pysport@b548c35 sportorg/gui/dialogs/settings.py:395]",
+   "text": "translate(\"Open the templates directory\"), settings.template_dir()"
+  },
+  {
+   "kind": "setting",
+   "source": "[код: pysport@b548c35 sportorg/gui/dialogs/settings.py:397]",
+   "text": "if not templates_path:"
+  },
+  {
+   "kind": "setting",
+   "source": "[код: pysport@b548c35 sportorg/gui/dialogs/settings.py:400]",
+   "text": "self.item_custom_dirpath.setText(templates_path)"
+  },
+  {
+   "kind": "setting",
+   "source": "[код: pysport@b548c35 sportorg/gui/dialogs/settings.py:401]",
+   "text": "settings.SETTINGS.templates_path = templates_path"
+  },
+  {
+   "kind": "list_templates",
+   "source": "[код: pysport@b548c35 sportorg/gui/dialogs/settings.py:404]",
+   "text": "sorted(get_templates(settings.template_dir(\"reports\")))"
+  },
+  {
+   "kind": "template_dir",
+   "source": "[код: pysport@b548c35 sportorg/gui/dialogs/settings.py:404]",
+   "text": "sorted(get_templates(settings.template_dir(\"reports\")))"
+  },
+  {
+   "kind": "template_dir",
+   "source": "[код: pysport@b548c35 sportorg/gui/dialogs/settings.py:411]",
+   "text": "self.item_custom_dirpath.setText(settings.template_dir())"
+  },
+  {
+   "kind": "jinja2",
+   "source": "[код: pysport@b548c35 sportorg/libs/template/template.py:7]",
+   "text": "from jinja2 import Environment, FileSystemLoader, Template"
+  },
+  {
+   "kind": "render_text",
+   "source": "[код: pysport@b548c35 sportorg/libs/template/template.py:53]",
+   "text": "def get_text_from_template(searchpath: str, path: str, **kwargs):"
+  },
+  {
+   "kind": "jinja2",
+   "source": "[код: pysport@b548c35 sportorg/libs/template/template.py:54]",
+   "text": "env = Environment(loader=FileSystemLoader(searchpath), finalize=finalize)"
+  },
+  {
+   "kind": "template_dir",
+   "source": "[код: pysport@b548c35 sportorg/modules/printing/model.py:35]",
+   "text": "\"split_template\", settings.template_dir(\"split\", \"1_split_printout.html\")"
+  },
+  {
+   "kind": "setting",
+   "source": "[код: pysport@b548c35 sportorg/modules/printing/model.py:35]",
+   "text": "\"split_template\", settings.template_dir(\"split\", \"1_split_printout.html\")"
+  },
+  {
+   "kind": "render_text",
+   "source": "[код: pysport@b548c35 sportorg/modules/printing/model.py:80]",
+   "text": "template = get_text_from_file("
+  },
+  {
+   "kind": "setting",
+   "source": "[код: pysport@b548c35 sportorg/settings.py:48]",
+   "text": "templates_path: str = \"\""
+  },
+  {
+   "kind": "template_dir",
+   "source": "[код: pysport@b548c35 sportorg/settings.py:104]",
+   "text": "def template_dir(*parts: str) -> str:"
+  },
+  {
+   "kind": "env_config",
+   "source": "[код: pysport@b548c35 sportorg/settings.py:106]",
+   "text": "\"templates\", *parts, override=SETTINGS.templates_path or config.TEMPLATES_PATH"
+  },
+  {
+   "kind": "setting",
+   "source": "[код: pysport@b548c35 sportorg/settings.py:106]",
+   "text": "\"templates\", *parts, override=SETTINGS.templates_path or config.TEMPLATES_PATH"
+  },
+  {
+   "kind": "setting",
+   "source": "[код: pysport@b548c35 sportorg/settings.py:174]",
+   "text": "\"templates_path\": ((\"sportorg\", \"data\", \"templates\"), (\"templates\",)),"
+  },
+  {
+   "kind": "setting",
+   "source": "[код: pysport@b548c35 sportorg/settings.py:272]",
+   "text": "SETTINGS.templates_path = sanitize_path("
+  },
+  {
+   "kind": "setting",
+   "source": "[код: pysport@b548c35 sportorg/settings.py:273]",
+   "text": "\"templates_path\", Config().templates.get(\"directory\", \"\")"
+  },
+  {
+   "kind": "env_config",
+   "source": "[код: pysport@b548c35 sportorg/startup.py:28]",
+   "text": "if config.TEMPLATES_PATH:"
+  },
+  {
+   "kind": "env_config",
+   "source": "[код: pysport@b548c35 sportorg/startup.py:29]",
+   "text": "os.makedirs(config.TEMPLATES_PATH, exist_ok=True)"
+  },
+  {
+   "kind": "setting",
+   "source": "[код: pysport@b548c35 tests/test_settings_migration.py:53]",
+   "text": "write_settings(path, {\"templates_path\": unreachable})"
+  },
+  {
+   "kind": "setting",
+   "source": "[код: pysport@b548c35 tests/test_settings_migration.py:57]",
+   "text": "assert loaded.templates_path == unreachable"
+  },
+  {
+   "kind": "setting",
+   "source": "[код: pysport@b548c35 tests/test_settings_migration.py:63]",
+   "text": "write_settings(path, {\"templates_path\": str(dead)})"
+  },
+  {
+   "kind": "setting",
+   "source": "[код: pysport@b548c35 tests/test_settings_migration.py:67]",
+   "text": "assert loaded.templates_path == \"\""
+  },
+  {
+   "kind": "template_dir",
+   "source": "[код: pysport@b548c35 tests/test_settings_migration.py:106]",
+   "text": "assert os.path.isdir(settings.template_dir())"
+  },
+  {
+   "kind": "render_text",
+   "source": "[код: pysport@b548c35 tests/test_templates.py:11]",
+   "text": "result = get_text_from_file("
+  }
+ ],
+ "pysport": [
+  {
+   "format": "html",
+   "lines": 26,
+   "path": "sportorg/data/templates/base.html",
+   "size": 693,
+   "source": "[код: pysport@b548c35 sportorg/data/templates/base.html:1]"
+  },
+  {
+   "format": "html",
+   "lines": 828,
+   "path": "sportorg/data/templates/reports/1_results.html",
+   "size": 37148,
+   "source": "[код: pysport@b548c35 sportorg/data/templates/reports/1_results.html:1]"
+  },
+  {
+   "format": "html",
+   "lines": 212,
+   "path": "sportorg/data/templates/reports/2_start_list.html",
+   "size": 6932,
+   "source": "[код: pysport@b548c35 sportorg/data/templates/reports/2_start_list.html:1]"
+  },
+  {
+   "format": "html",
+   "lines": 212,
+   "path": "sportorg/data/templates/reports/2_start_list_relay.html",
+   "size": 6967,
+   "source": "[код: pysport@b548c35 sportorg/data/templates/reports/2_start_list_relay.html:1]"
+  },
+  {
+   "format": "html",
+   "lines": 232,
+   "path": "sportorg/data/templates/reports/2_start_team.html",
+   "size": 8228,
+   "source": "[код: pysport@b548c35 sportorg/data/templates/reports/2_start_team.html:1]"
+  },
+  {
+   "format": "html",
+   "lines": 515,
+   "path": "sportorg/data/templates/script.js.html",
+   "size": 17947,
+   "source": "[код: pysport@b548c35 sportorg/data/templates/script.js.html:1]"
+  },
+  {
+   "format": "html",
+   "lines": 236,
+   "path": "sportorg/data/templates/split/1_split_printout.html",
+   "size": 5918,
+   "source": "[код: pysport@b548c35 sportorg/data/templates/split/1_split_printout.html:1]"
+  },
+  {
+   "format": "html",
+   "lines": 214,
+   "path": "sportorg/data/templates/style.css.html",
+   "size": 3320,
+   "source": "[код: pysport@b548c35 sportorg/data/templates/style.css.html:1]"
+  }
+ ],
+ "templates_repo": [
+  {
+   "format": "html",
+   "lines": 26,
+   "path": "ru/base.html",
+   "size": 693,
+   "source": "[код: templates@cd95382 ru/base.html:1]"
+  },
+  {
+   "format": "html",
+   "lines": 23,
+   "path": "ru/base_v2.html",
+   "size": 676,
+   "source": "[код: templates@cd95382 ru/base_v2.html:1]"
+  },
+  {
+   "format": "html",
+   "lines": 881,
+   "path": "ru/reports/1_res.html",
+   "size": 36881,
+   "source": "[код: templates@cd95382 ru/reports/1_res.html:1]"
+  },
+  {
+   "format": "html",
+   "lines": 883,
+   "path": "ru/reports/1_res_date.html",
+   "size": 37188,
+   "source": "[код: templates@cd95382 ru/reports/1_res_date.html:1]"
+  },
+  {
+   "format": "html",
+   "lines": 912,
+   "path": "ru/reports/1_res_swimming.html",
+   "size": 37821,
+   "source": "[код: templates@cd95382 ru/reports/1_res_swimming.html:1]"
+  },
+  {
+   "format": "html",
+   "lines": 911,
+   "path": "ru/reports/1_res_swimming_awarding.html",
+   "size": 37745,
+   "source": "[код: templates@cd95382 ru/reports/1_res_swimming_awarding.html:1]"
+  },
+  {
+   "format": "html",
+   "lines": 828,
+   "path": "ru/reports/1_results.html",
+   "size": 37148,
+   "source": "[код: templates@cd95382 ru/reports/1_results.html:1]"
+  },
+  {
+   "format": "html",
+   "lines": 881,
+   "path": "ru/reports/1_протокол_результатов.html",
+   "size": 36590,
+   "source": "[код: templates@cd95382 ru/reports/1_протокол_результатов.html:1]"
+  },
+  {
+   "format": "html",
+   "lines": 1095,
+   "path": "ru/reports/1_протокол_результатов_командные_очки.html",
+   "size": 47119,
+   "source": "[код: templates@cd95382 ru/reports/1_протокол_результатов_командные_очки.html:1]"
+  },
+  {
+   "format": "html",
+   "lines": 317,
+   "path": "ru/reports/1_протокол_результатов_не_финишировавшие.html",
+   "size": 13235,
+   "source": "[код: templates@cd95382 ru/reports/1_протокол_результатов_не_финишировавшие.html:1]"
+  },
+  {
+   "format": "html",
+   "lines": 885,
+   "path": "ru/reports/1_протокол_результатов_сплиты.html",
+   "size": 36656,
+   "source": "[код: templates@cd95382 ru/reports/1_протокол_результатов_сплиты.html:1]"
+  },
+  {
+   "format": "html",
+   "lines": 529,
+   "path": "ru/reports/1_протокол_результатов_термопринтер_80_мм.html",
+   "size": 21051,
+   "source": "[код: templates@cd95382 ru/reports/1_протокол_результатов_термопринтер_80_мм.html:1]"
+  },
+  {
+   "format": "html",
+   "lines": 238,
+   "path": "ru/reports/2_sta.html",
+   "size": 7972,
+   "source": "[код: templates@cd95382 ru/reports/2_sta.html:1]"
+  },
+  {
+   "format": "html",
+   "lines": 243,
+   "path": "ru/reports/2_sta_для_старта.html",
+   "size": 8054,
+   "source": "[код: templates@cd95382 ru/reports/2_sta_для_старта.html:1]"
+  },
+  {
+   "format": "html",
+   "lines": 212,
+   "path": "ru/reports/2_start_list.html",
+   "size": 6932,
+   "source": "[код: templates@cd95382 ru/reports/2_start_list.html:1]"
+  },
+  {
+   "format": "html",
+   "lines": 212,
+   "path": "ru/reports/2_start_list_relay.html",
+   "size": 6967,
+   "source": "[код: templates@cd95382 ru/reports/2_start_list_relay.html:1]"
+  },
+  {
+   "format": "html",
+   "lines": 232,
+   "path": "ru/reports/2_start_team.html",
+   "size": 8228,
+   "source": "[код: templates@cd95382 ru/reports/2_start_team.html:1]"
+  },
+  {
+   "format": "html",
+   "lines": 262,
+   "path": "ru/reports/2_выписки_по_командам.html",
+   "size": 9759,
+   "source": "[код: templates@cd95382 ru/reports/2_выписки_по_командам.html:1]"
+  },
+  {
+   "format": "html",
+   "lines": 666,
+   "path": "ru/reports/2_выписки_по_командам_взнос.html",
+   "size": 26709,
+   "source": "[код: templates@cd95382 ru/reports/2_выписки_по_командам_взнос.html:1]"
+  },
+  {
+   "format": "html",
+   "lines": 663,
+   "path": "ru/reports/2_выписки_по_командам_взнос_10процентов.html",
+   "size": 26359,
+   "source": "[код: templates@cd95382 ru/reports/2_выписки_по_командам_взнос_10процентов.html:1]"
+  },
+  {
+   "format": "html",
+   "lines": 621,
+   "path": "ru/reports/2_выписки_по_командам_взнос_10процентов_old.html",
+   "size": 24644,
+   "source": "[код: templates@cd95382 ru/reports/2_выписки_по_командам_взнос_10процентов_old.html:1]"
+  },
+  {
+   "format": "html",
+   "lines": 621,
+   "path": "ru/reports/2_выписки_по_командам_взнос_old.html",
+   "size": 24575,
+   "source": "[код: templates@cd95382 ru/reports/2_выписки_по_командам_взнос_old.html:1]"
+  },
+  {
+   "format": "html",
+   "lines": 373,
+   "path": "ru/reports/2_выписки_по_командам_комиссия_по_допуску.html",
+   "size": 13375,
+   "source": "[код: templates@cd95382 ru/reports/2_выписки_по_командам_комиссия_по_допуску.html:1]"
+  },
+  {
+   "format": "html",
+   "lines": 226,
+   "path": "ru/reports/2_протокол_старта.html",
+   "size": 7554,
+   "source": "[код: templates@cd95382 ru/reports/2_протокол_старта.html:1]"
+  },
+  {
+   "format": "html",
+   "lines": 228,
+   "path": "ru/reports/2_протокол_старта_комментарий.html",
+   "size": 7649,
+   "source": "[код: templates@cd95382 ru/reports/2_протокол_старта_комментарий.html:1]"
+  },
+  {
+   "format": "html",
+   "lines": 82,
+   "path": "ru/reports/2_стартовая_шахматка.html",
+   "size": 2535,
+   "source": "[код: templates@cd95382 ru/reports/2_стартовая_шахматка.html:1]"
+  },
+  {
+   "format": "html",
+   "lines": 382,
+   "path": "ru/reports/2_стартовые_номера.html",
+   "size": 11841,
+   "source": "[код: templates@cd95382 ru/reports/2_стартовые_номера.html:1]"
+  },
+  {
+   "format": "html",
+   "lines": 395,
+   "path": "ru/reports/2_стартовые_номера_этикетки_60x58мм.html",
+   "size": 12098,
+   "source": "[код: templates@cd95382 ru/reports/2_стартовые_номера_этикетки_60x58мм.html:1]"
+  },
+  {
+   "format": "html",
+   "lines": 398,
+   "path": "ru/reports/2_стартовые_номера_этикетки_80x120мм.html",
+   "size": 12197,
+   "source": "[код: templates@cd95382 ru/reports/2_стартовые_номера_этикетки_80x120мм.html:1]"
+  },
+  {
+   "format": "html",
+   "lines": 247,
+   "path": "ru/reports/3_командный_протокол_сумма_времени.html",
+   "size": 9397,
+   "source": "[код: templates@cd95382 ru/reports/3_командный_протокол_сумма_времени.html:1]"
+  },
+  {
+   "format": "html",
+   "lines": 237,
+   "path": "ru/reports/3_командный_протокол_сумма_времени_со_списком.html",
+   "size": 9092,
+   "source": "[код: templates@cd95382 ru/reports/3_командный_протокол_сумма_времени_со_списком.html:1]"
+  },
+  {
+   "format": "html",
+   "lines": 237,
+   "path": "ru/reports/3_командный_протокол_сумма_мест.html",
+   "size": 9112,
+   "source": "[код: templates@cd95382 ru/reports/3_командный_протокол_сумма_мест.html:1]"
+  },
+  {
+   "format": "html",
+   "lines": 232,
+   "path": "ru/reports/3_командный_протокол_сумма_мест_все_группы.html",
+   "size": 8787,
+   "source": "[код: templates@cd95382 ru/reports/3_командный_протокол_сумма_мест_все_группы.html:1]"
+  },
+  {
+   "format": "html",
+   "lines": 236,
+   "path": "ru/reports/3_командный_протокол_сумма_очков.html",
+   "size": 9075,
+   "source": "[код: templates@cd95382 ru/reports/3_командный_протокол_сумма_очков.html:1]"
+  },
+  {
+   "format": "html",
+   "lines": 236,
+   "path": "ru/reports/3_командный_протокол_сумма_очков_все_группы.html",
+   "size": 8936,
+   "source": "[код: templates@cd95382 ru/reports/3_командный_протокол_сумма_очков_все_группы.html:1]"
+  },
+  {
+   "format": "html",
+   "lines": 237,
+   "path": "ru/reports/3_командный_протокол_сумма_очков_со_списком.html",
+   "size": 9296,
+   "source": "[код: templates@cd95382 ru/reports/3_командный_протокол_сумма_очков_со_списком.html:1]"
+  },
+  {
+   "format": "html",
+   "lines": 237,
+   "path": "ru/reports/3_командный_протокол_сумма_очков_со_списком_без_ФИО.html",
+   "size": 9255,
+   "source": "[код: templates@cd95382 ru/reports/3_командный_протокол_сумма_очков_со_списком_без_ФИО.html:1]"
+  },
+  {
+   "format": "html",
+   "lines": 322,
+   "path": "ru/reports/4_результаты_многодневный_сумма_времени.html",
+   "size": 11267,
+   "source": "[код: templates@cd95382 ru/reports/4_результаты_многодневный_сумма_времени.html:1]"
+  },
+  {
+   "format": "html",
+   "lines": 322,
+   "path": "ru/reports/4_результаты_сумма_времени.html",
+   "size": 11262,
+   "source": "[код: templates@cd95382 ru/reports/4_результаты_сумма_времени.html:1]"
+  },
+  {
+   "format": "html",
+   "lines": 322,
+   "path": "ru/reports/4_результаты_сумма_времени_регион.html",
+   "size": 11264,
+   "source": "[код: templates@cd95382 ru/reports/4_результаты_сумма_времени_регион.html:1]"
+  },
+  {
+   "format": "html",
+   "lines": 335,
+   "path": "ru/reports/4_результаты_сумма_кп_и_времени_(ardf).html",
+   "size": 11747,
+   "source": "[код: templates@cd95382 ru/reports/4_результаты_сумма_кп_и_времени_(ardf).html:1]"
+  },
+  {
+   "format": "html",
+   "lines": 433,
+   "path": "ru/reports/4_результаты_сумма_мест.html",
+   "size": 14406,
+   "source": "[код: templates@cd95382 ru/reports/4_результаты_сумма_мест.html:1]"
+  },
+  {
+   "format": "html",
+   "lines": 435,
+   "path": "ru/reports/4_результаты_сумма_мест_с_суммой_времени.html",
+   "size": 14554,
+   "source": "[код: templates@cd95382 ru/reports/4_результаты_сумма_мест_с_суммой_времени.html:1]"
+  },
+  {
+   "format": "html",
+   "lines": 418,
+   "path": "ru/reports/4_результаты_сумма_очков.html",
+   "size": 13904,
+   "source": "[код: templates@cd95382 ru/reports/4_результаты_сумма_очков.html:1]"
+  },
+  {
+   "format": "docx",
+   "lines": null,
+   "path": "ru/reports/диплом_Кубок_России_word.docx",
+   "size": 22472,
+   "source": ""
+  },
+  {
+   "format": "html",
+   "lines": 142,
+   "path": "ru/reports/протокол_мандатной_комиссии.html",
+   "size": 4714,
+   "source": "[код: templates@cd95382 ru/reports/протокол_мандатной_комиссии.html:1]"
+  },
+  {
+   "format": "html",
+   "lines": 225,
+   "path": "ru/reports/протокол_старта_длинный_коллектив.html",
+   "size": 7461,
+   "source": "[код: templates@cd95382 ru/reports/протокол_старта_длинный_коллектив.html:1]"
+  },
+  {
+   "format": "html",
+   "lines": 124,
+   "path": "ru/reports/стартовая_шахматка_имена.html",
+   "size": 3564,
+   "source": "[код: templates@cd95382 ru/reports/стартовая_шахматка_имена.html:1]"
+  },
+  {
+   "format": "html",
+   "lines": 333,
+   "path": "ru/reports/стартовые_номера_для_карт.html",
+   "size": 10086,
+   "source": "[код: templates@cd95382 ru/reports/стартовые_номера_для_карт.html:1]"
+  },
+  {
+   "format": "html",
+   "lines": 527,
+   "path": "ru/script.js.html",
+   "size": 18095,
+   "source": "[код: templates@cd95382 ru/script.js.html:1]"
+  },
+  {
+   "format": "html",
+   "lines": 527,
+   "path": "ru/script_v2.js.html",
+   "size": 18095,
+   "source": "[код: templates@cd95382 ru/script_v2.js.html:1]"
+  },
+  {
+   "format": "html",
+   "lines": 222,
+   "path": "ru/split/1_split_printout.html",
+   "size": 6114,
+   "source": "[код: templates@cd95382 ru/split/1_split_printout.html:1]"
+  },
+  {
+   "format": "html",
+   "lines": 115,
+   "path": "ru/split/1_маркировка_с_изображением.html",
+   "size": 4132,
+   "source": "[код: templates@cd95382 ru/split/1_маркировка_с_изображением.html:1]"
+  },
+  {
+   "format": "html",
+   "lines": 114,
+   "path": "ru/split/1_сплиты_маркировка_только_штраф.html",
+   "size": 4134,
+   "source": "[код: templates@cd95382 ru/split/1_сплиты_маркировка_только_штраф.html:1]"
+  },
+  {
+   "format": "html",
+   "lines": 170,
+   "path": "ru/split/1_сплиты_с_лидерами_на_перегонах.html",
+   "size": 6027,
+   "source": "[код: templates@cd95382 ru/split/1_сплиты_с_лидерами_на_перегонах.html:1]"
+  },
+  {
+   "format": "html",
+   "lines": 219,
+   "path": "ru/split/1_триатлон.html",
+   "size": 5608,
+   "source": "[код: templates@cd95382 ru/split/1_триатлон.html:1]"
+  },
+  {
+   "format": "html",
+   "lines": 48,
+   "path": "ru/split/2_marked_route_penalty_A5.html",
+   "size": 1138,
+   "source": "[код: templates@cd95382 ru/split/2_marked_route_penalty_A5.html:1]"
+  },
+  {
+   "format": "html",
+   "lines": 158,
+   "path": "ru/split/2_маркировка_WO.html",
+   "size": 2985,
+   "source": "[код: templates@cd95382 ru/split/2_маркировка_WO.html:1]"
+  },
+  {
+   "format": "html",
+   "lines": 161,
+   "path": "ru/split/2_маркировка_номер_и_штраф.html",
+   "size": 3500,
+   "source": "[код: templates@cd95382 ru/split/2_маркировка_номер_и_штраф.html:1]"
+  },
+  {
+   "format": "html",
+   "lines": 54,
+   "path": "ru/split/3_marked_route_penalty_80mm.html",
+   "size": 1241,
+   "source": "[код: templates@cd95382 ru/split/3_marked_route_penalty_80mm.html:1]"
+  },
+  {
+   "format": "html",
+   "lines": 214,
+   "path": "ru/style.css.html",
+   "size": 3320,
+   "source": "[код: templates@cd95382 ru/style.css.html:1]"
+  },
+  {
+   "format": "html",
+   "lines": 214,
+   "path": "ru/style_v2.css.html",
+   "size": 3320,
+   "source": "[код: templates@cd95382 ru/style_v2.css.html:1]"
+  }
+ ]
+}

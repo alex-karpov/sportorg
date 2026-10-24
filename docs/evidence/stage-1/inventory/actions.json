@@ -1,0 +1,848 @@
+{
+ "actions": [
+  {
+   "class": "AboutAction",
+   "end": 893,
+   "imports": {
+    "AboutDialog": "sportorg.gui.dialogs.about"
+   },
+   "line": 891,
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:891]"
+  },
+  {
+   "class": "AddObjectAction",
+   "end": 439,
+   "imports": {},
+   "line": 437,
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:437]"
+  },
+  {
+   "class": "AddSPORTidentResultAction",
+   "end": 765,
+   "imports": {
+    "Teamwork": "sportorg.modules.teamwork.teamwork",
+    "logging": "logging",
+    "race": "sportorg.models.memory"
+   },
+   "line": 758,
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:758]"
+  },
+  {
+   "class": "AssignResultByBibAction",
+   "end": 915,
+   "imports": {
+    "race": "sportorg.models.memory"
+   },
+   "line": 910,
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:910]"
+  },
+  {
+   "class": "AssignResultByCardNumberAction",
+   "end": 923,
+   "imports": {
+    "race": "sportorg.models.memory"
+   },
+   "line": 918,
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:918]"
+  },
+  {
+   "class": "CPDeleteAction",
+   "end": 743,
+   "imports": {
+    "CPDeleteDialog": "sportorg.gui.dialogs.cp_delete"
+   },
+   "line": 740,
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:740]"
+  },
+  {
+   "class": "CSVWinorientImportAction",
+   "end": 182,
+   "imports": {
+    "QMessageBox": "PySide6.QtWidgets",
+    "get_open_file_name": "sportorg.gui.dialogs.file_dialog",
+    "logging": "logging",
+    "translate": "sportorg.language",
+    "winorient": "sportorg.modules.winorient"
+   },
+   "line": 167,
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:167]"
+  },
+  {
+   "class": "CardReadoutAction",
+   "end": 625,
+   "imports": {
+    "HuichangClient": "sportorg.modules.huichang.huichang",
+    "ImpinjClient": "sportorg.modules.rfid_impinj.rfid_impinj",
+    "SFRReaderClient": "sportorg.modules.sfr.sfrreader",
+    "SIReaderClient": "sportorg.modules.sportident.sireader",
+    "SportiduinoClient": "sportorg.modules.sportiduino.sportiduino",
+    "SrpidClient": "sportorg.modules.srpid.srpid",
+    "SystemType": "sportorg.models.memory",
+    "race": "sportorg.models.memory",
+    "time": "time"
+   },
+   "line": 609,
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:609]"
+  },
+  {
+   "class": "ChangeStatusAction",
+   "end": 719,
+   "imports": {
+    "QMessageBox": "PySide6.QtWidgets",
+    "ResultStatus": "sportorg.models.memory",
+    "Teamwork": "sportorg.modules.teamwork.teamwork",
+    "live_client": "sportorg.modules.live.live",
+    "logging": "logging",
+    "race": "sportorg.models.memory",
+    "translate": "sportorg.language"
+   },
+   "line": 687,
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:687]"
+  },
+  {
+   "class": "CheckUpdatesAction",
+   "end": 907,
+   "imports": {
+    "QMessageBox": "PySide6.QtWidgets",
+    "checker": "sportorg.modules.updater",
+    "config": "sportorg",
+    "logging": "logging",
+    "translate": "sportorg.language"
+   },
+   "line": 896,
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:896]"
+  },
+  {
+   "class": "ControlTimeChangeAction",
+   "end": 737,
+   "imports": {
+    "ControlTimeChangeDialog": "sportorg.gui.dialogs.control_time_change_dialog"
+   },
+   "line": 734,
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:734]"
+  },
+  {
+   "class": "CopyAction",
+   "end": 142,
+   "imports": {
+    "QApplication": "PySide6.QtWidgets"
+   },
+   "line": 131,
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:131]"
+  },
+  {
+   "class": "CopyBibToCardNumber",
+   "end": 585,
+   "imports": {
+    "QMessageBox": "PySide6.QtWidgets",
+    "copy_bib_to_card_number": "sportorg.models.start.start_preparation",
+    "messageBoxQuestion": "sportorg.gui.utils.custom_controls",
+    "translate": "sportorg.language"
+   },
+   "line": 577,
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:577]"
+  },
+  {
+   "class": "CopyCardNumberToBib",
+   "end": 596,
+   "imports": {
+    "QMessageBox": "PySide6.QtWidgets",
+    "copy_card_number_to_bib": "sportorg.models.start.start_preparation",
+    "messageBoxQuestion": "sportorg.gui.utils.custom_controls",
+    "translate": "sportorg.language"
+   },
+   "line": 588,
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:588]"
+  },
+  {
+   "class": "CreateReportAction",
+   "end": 630,
+   "imports": {
+    "ReportDialog": "sportorg.gui.dialogs.report_dialog"
+   },
+   "line": 628,
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:628]"
+  },
+  {
+   "class": "DeleteAction",
+   "end": 444,
+   "imports": {},
+   "line": 442,
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:442]"
+  },
+  {
+   "class": "DuplicateAction",
+   "end": 154,
+   "imports": {},
+   "line": 145,
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:145]"
+  },
+  {
+   "class": "EventSettingsAction",
+   "end": 164,
+   "imports": {
+    "EventPropertiesDialog": "sportorg.gui.dialogs.event_properties"
+   },
+   "line": 162,
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:162]"
+  },
+  {
+   "class": "ExtractPersonMiddleName",
+   "end": 979,
+   "imports": {
+    "race": "sportorg.models.memory"
+   },
+   "line": 975,
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:975]"
+  },
+  {
+   "class": "FilterAction",
+   "end": 479,
+   "imports": {
+    "DialogFilter": "sportorg.gui.dialogs.filter_dialog"
+   },
+   "line": 475,
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:475]"
+  },
+  {
+   "class": "FilterResetAction",
+   "end": 487,
+   "imports": {},
+   "line": 482,
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:482]"
+  },
+  {
+   "class": "GroupFinderAction",
+   "end": 662,
+   "imports": {
+    "ResultStatus": "sportorg.models.memory",
+    "race": "sportorg.models.memory"
+   },
+   "line": 645,
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:645]"
+  },
+  {
+   "class": "GuessCorridorsAction",
+   "end": 544,
+   "imports": {
+    "guess_corridors_for_groups": "sportorg.models.start.start_preparation"
+   },
+   "line": 541,
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:541]"
+  },
+  {
+   "class": "GuessCoursesAction",
+   "end": 538,
+   "imports": {
+    "guess_courses_for_groups": "sportorg.gui.dialogs.start_preparation"
+   },
+   "line": 535,
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:535]"
+  },
+  {
+   "class": "HuichangManagementAction",
+   "end": 984,
+   "imports": {
+    "HuichangManagementDialog": "sportorg.gui.dialogs.huichang_management_dialog"
+   },
+   "line": 982,
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:982]"
+  },
+  {
+   "class": "IOFCompetitorListExportAction",
+   "end": 383,
+   "imports": {
+    "QMessageBox": "PySide6.QtWidgets",
+    "config": "sportorg",
+    "get_save_file_name": "sportorg.gui.dialogs.file_dialog",
+    "iof_xml": "sportorg.modules.iof",
+    "logging": "logging",
+    "race": "sportorg.models.memory",
+    "translate": "sportorg.language"
+   },
+   "line": 363,
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:363]"
+  },
+  {
+   "class": "IOFEntryListExportAction",
+   "end": 323,
+   "imports": {
+    "QMessageBox": "PySide6.QtWidgets",
+    "config": "sportorg",
+    "get_save_file_name": "sportorg.gui.dialogs.file_dialog",
+    "iof_xml": "sportorg.modules.iof",
+    "logging": "logging",
+    "race": "sportorg.models.memory",
+    "translate": "sportorg.language"
+   },
+   "line": 307,
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:307]"
+  },
+  {
+   "class": "IOFEntryListImportAction",
+   "end": 341,
+   "imports": {
+    "QMessageBox": "PySide6.QtWidgets",
+    "get_open_file_name": "sportorg.gui.dialogs.file_dialog",
+    "iof_xml": "sportorg.modules.iof",
+    "logging": "logging",
+    "translate": "sportorg.language"
+   },
+   "line": 326,
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:326]"
+  },
+  {
+   "class": "IOFResultListAllSplitsExportAction",
+   "end": 304,
+   "imports": {
+    "QMessageBox": "PySide6.QtWidgets",
+    "config": "sportorg",
+    "get_save_file_name": "sportorg.gui.dialogs.file_dialog",
+    "iof_xml": "sportorg.modules.iof",
+    "logging": "logging",
+    "race": "sportorg.models.memory",
+    "translate": "sportorg.language"
+   },
+   "line": 286,
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:286]"
+  },
+  {
+   "class": "IOFResultListExportAction",
+   "end": 283,
+   "imports": {
+    "QMessageBox": "PySide6.QtWidgets",
+    "config": "sportorg",
+    "get_save_file_name": "sportorg.gui.dialogs.file_dialog",
+    "iof_xml": "sportorg.modules.iof",
+    "logging": "logging",
+    "race": "sportorg.models.memory",
+    "translate": "sportorg.language"
+   },
+   "line": 267,
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:267]"
+  },
+  {
+   "class": "IOFStartListExportAction",
+   "end": 360,
+   "imports": {
+    "QMessageBox": "PySide6.QtWidgets",
+    "config": "sportorg",
+    "get_save_file_name": "sportorg.gui.dialogs.file_dialog",
+    "iof_xml": "sportorg.modules.iof",
+    "logging": "logging",
+    "race": "sportorg.models.memory",
+    "translate": "sportorg.language"
+   },
+   "line": 344,
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:344]"
+  },
+  {
+   "class": "ImportPersonsAction",
+   "end": 731,
+   "imports": {
+    "ImportPersonsTableDialog": "sportorg.gui.dialogs.import_persons_table_dialog"
+   },
+   "line": 728,
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:728]"
+  },
+  {
+   "class": "ImportSportOrgAction",
+   "end": 960,
+   "imports": {
+    "SportOrgImportDialog": "sportorg.gui.dialogs.sportorg_import_dialog",
+    "get_open_file_name": "sportorg.gui.dialogs.file_dialog",
+    "get_races_from_file": "sportorg.modules.backup.json",
+    "is_gzip_file": "sportorg.modules.backup.file",
+    "settings": "sportorg",
+    "translate": "sportorg.language"
+   },
+   "line": 926,
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:926]"
+  },
+  {
+   "class": "LiveSettingsAction",
+   "end": 820,
+   "imports": {
+    "LiveDialog": "sportorg.gui.dialogs.live_dialog"
+   },
+   "line": 817,
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:817]"
+  },
+  {
+   "class": "ManualFinishAction",
+   "end": 606,
+   "imports": {
+    "ResultManual": "sportorg.models.memory",
+    "Teamwork": "sportorg.modules.teamwork.teamwork",
+    "live_client": "sportorg.modules.live.live",
+    "logging": "logging",
+    "race": "sportorg.models.memory",
+    "translate": "sportorg.language"
+   },
+   "line": 599,
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:599]"
+  },
+  {
+   "class": "MarkedRouteCourseGeneration",
+   "end": 972,
+   "imports": {
+    "MarkedRouteDialog": "sportorg.gui.dialogs.marked_route_dialog"
+   },
+   "line": 969,
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:969]"
+  },
+  {
+   "class": "MassEditAction",
+   "end": 467,
+   "imports": {
+    "GroupMassEditDialog": "sportorg.gui.dialogs.group_mass_edit",
+    "MassEditDialog": "sportorg.gui.dialogs.entry_mass_edit",
+    "OrganizationMassEditDialog": "sportorg.gui.dialogs.organization_mass_edit",
+    "race": "sportorg.models.memory"
+   },
+   "line": 454,
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:454]"
+  },
+  {
+   "class": "MergeResultsAction",
+   "end": 755,
+   "imports": {
+    "MergeResultsDialog": "sportorg.gui.dialogs.merge_results"
+   },
+   "line": 752,
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:752]"
+  },
+  {
+   "class": "NewAction",
+   "end": 105,
+   "imports": {},
+   "line": 103,
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:103]"
+  },
+  {
+   "class": "OcadTXTv8ImportAction",
+   "end": 237,
+   "imports": {
+    "OcadImportException": "sportorg.modules.ocad.ocad",
+    "QMessageBox": "PySide6.QtWidgets",
+    "get_open_file_name": "sportorg.gui.dialogs.file_dialog",
+    "logging": "logging",
+    "ocad": "sportorg.modules.ocad",
+    "translate": "sportorg.language"
+   },
+   "line": 222,
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:222]"
+  },
+  {
+   "class": "OnlineSendAction",
+   "end": 888,
+   "imports": {
+    "live_client": "sportorg.modules.live.live",
+    "logging": "logging",
+    "race": "sportorg.models.memory"
+   },
+   "line": 859,
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:859]"
+  },
+  {
+   "class": "OpenAction",
+   "end": 118,
+   "imports": {
+    "get_open_file_name": "sportorg.gui.dialogs.file_dialog",
+    "translate": "sportorg.language"
+   },
+   "line": 113,
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:113]"
+  },
+  {
+   "class": "PenaltyCalculationAction",
+   "end": 673,
+   "imports": {
+    "ResultChecker": "sportorg.models.result.result_checker",
+    "logging": "logging",
+    "race": "sportorg.models.memory",
+    "recalculate_results": "sportorg.models.result.result_tools"
+   },
+   "line": 665,
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:665]"
+  },
+  {
+   "class": "PenaltyRemovingAction",
+   "end": 684,
+   "imports": {
+    "OTime": "sportorg.common.otime",
+    "logging": "logging",
+    "race": "sportorg.models.memory",
+    "recalculate_results": "sportorg.models.result.result_tools"
+   },
+   "line": 676,
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:676]"
+  },
+  {
+   "class": "PluginsSettingsAction",
+   "end": 825,
+   "imports": {
+    "PluginsDialog": "sportorg.gui.dialogs.plugins"
+   },
+   "line": 823,
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:823]"
+  },
+  {
+   "class": "PrinterSettingsAction",
+   "end": 814,
+   "imports": {
+    "PrintPropertiesDialog": "sportorg.gui.dialogs.print_properties"
+   },
+   "line": 812,
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:812]"
+  },
+  {
+   "class": "RecheckingAction",
+   "end": 642,
+   "imports": {
+    "race": "sportorg.models.memory",
+    "recalculate_results": "sportorg.models.result.result_tools"
+   },
+   "line": 638,
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:638]"
+  },
+  {
+   "class": "RecoveryOrgeoFinishCsvAction",
+   "end": 434,
+   "imports": {
+    "get_open_file_name": "sportorg.gui.dialogs.file_dialog",
+    "race": "sportorg.models.memory",
+    "recovery_orgeo_finish_csv": "sportorg.modules.recovery",
+    "translate": "sportorg.language"
+   },
+   "line": 426,
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:426]"
+  },
+  {
+   "class": "RecoverySportidentMasterCsvAction",
+   "end": 423,
+   "imports": {
+    "get_open_file_name": "sportorg.gui.dialogs.file_dialog",
+    "race": "sportorg.models.memory",
+    "recovery_si_master_csv": "sportorg.modules.recovery",
+    "translate": "sportorg.language"
+   },
+   "line": 415,
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:415]"
+  },
+  {
+   "class": "RecoverySportorgHtmlAction",
+   "end": 401,
+   "imports": {
+    "SportOrgImportDialog": "sportorg.gui.dialogs.sportorg_import_dialog",
+    "detect_encoding": "sportorg.utils.text",
+    "get_open_file_name": "sportorg.gui.dialogs.file_dialog",
+    "get_races_from_file": "sportorg.modules.backup.json",
+    "recovery_sportorg_html": "sportorg.modules.recovery",
+    "remove": "os",
+    "translate": "sportorg.language"
+   },
+   "line": 386,
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:386]"
+  },
+  {
+   "class": "RecoverySportorgSiLogAction",
+   "end": 412,
+   "imports": {
+    "get_open_file_name": "sportorg.gui.dialogs.file_dialog",
+    "race": "sportorg.models.memory",
+    "recovery_sportorg_si_log": "sportorg.modules.recovery",
+    "translate": "sportorg.language"
+   },
+   "line": 404,
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:404]"
+  },
+  {
+   "class": "RefreshAction",
+   "end": 472,
+   "imports": {},
+   "line": 470,
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:470]"
+  },
+  {
+   "class": "RelayCloneAction",
+   "end": 574,
+   "imports": {
+    "RelayCloneDialog": "sportorg.gui.dialogs.relay_clone_dialog"
+   },
+   "line": 571,
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:571]"
+  },
+  {
+   "class": "RelayNumberAction",
+   "end": 556,
+   "imports": {
+    "QApplication": "PySide6.QtWidgets",
+    "QtCore": "PySide6",
+    "RelayNumberDialog": "sportorg.gui.dialogs.relay_number_dialog"
+   },
+   "line": 547,
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:547]"
+  },
+  {
+   "class": "RentCardsAction",
+   "end": 966,
+   "imports": {
+    "RentCardsDialog": "sportorg.gui.dialogs.rent_cards_dialog"
+   },
+   "line": 963,
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:963]"
+  },
+  {
+   "class": "SFRExportAction",
+   "end": 1024,
+   "imports": {
+    "QMessageBox": "PySide6.QtWidgets",
+    "get_save_file_name": "sportorg.gui.dialogs.file_dialog",
+    "logging": "logging",
+    "race": "sportorg.models.memory",
+    "translate": "sportorg.language"
+   },
+   "line": 987,
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:987]"
+  },
+  {
+   "class": "SFRXImportAction",
+   "end": 200,
+   "imports": {
+    "QMessageBox": "PySide6.QtWidgets",
+    "get_open_file_name": "sportorg.gui.dialogs.file_dialog",
+    "logging": "logging",
+    "sfrximporter": "sportorg.libs.sfr",
+    "translate": "sportorg.language"
+   },
+   "line": 185,
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:185]"
+  },
+  {
+   "class": "SaveAction",
+   "end": 110,
+   "imports": {},
+   "line": 108,
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:108]"
+  },
+  {
+   "class": "SaveAsAction",
+   "end": 123,
+   "imports": {},
+   "line": 121,
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:121]"
+  },
+  {
+   "class": "SearchAction",
+   "end": 496,
+   "imports": {
+    "SearchDialog": "sportorg.gui.dialogs.search_dialog"
+   },
+   "line": 490,
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:490]"
+  },
+  {
+   "class": "SetDNSNumbersAction",
+   "end": 725,
+   "imports": {
+    "InputStartNumbersDialog": "sportorg.gui.dialogs.not_start_dialog"
+   },
+   "line": 722,
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:722]"
+  },
+  {
+   "class": "SettingsAction",
+   "end": 159,
+   "imports": {
+    "SettingsDialog": "sportorg.gui.dialogs.settings"
+   },
+   "line": 157,
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:157]"
+  },
+  {
+   "class": "SplitDeleteAction",
+   "end": 749,
+   "imports": {
+    "SplitDeleteDialog": "sportorg.gui.dialogs.split_delete"
+   },
+   "line": 746,
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:746]"
+  },
+  {
+   "class": "SplitPrintoutAction",
+   "end": 635,
+   "imports": {},
+   "line": 633,
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:633]"
+  },
+  {
+   "class": "StartHandicapAction",
+   "end": 568,
+   "imports": {
+    "StartHandicapDialog": "sportorg.gui.dialogs.start_handicap_dialog"
+   },
+   "line": 565,
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:565]"
+  },
+  {
+   "class": "StartPreparationAction",
+   "end": 532,
+   "imports": {
+    "StartPreparationDialog": "sportorg.gui.dialogs.start_preparation"
+   },
+   "line": 529,
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:529]"
+  },
+  {
+   "class": "StartTimeChangeAction",
+   "end": 562,
+   "imports": {
+    "StartTimeChangeDialog": "sportorg.gui.dialogs.start_time_change_dialog"
+   },
+   "line": 559,
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:559]"
+  },
+  {
+   "class": "TeamworkEnableAction",
+   "end": 782,
+   "imports": {
+    "Teamwork": "sportorg.modules.teamwork.teamwork",
+    "configure_teamwork_from_settings": "sportorg.modules.teamwork.teamwork"
+   },
+   "line": 779,
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:779]"
+  },
+  {
+   "class": "TeamworkSendAction",
+   "end": 809,
+   "imports": {
+    "Teamwork": "sportorg.modules.teamwork.teamwork",
+    "logging": "logging",
+    "race": "sportorg.models.memory"
+   },
+   "line": 785,
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:785]"
+  },
+  {
+   "class": "TeamworkSettingsAction",
+   "end": 776,
+   "imports": {
+    "TeamworkPropertiesDialog": "sportorg.gui.dialogs.teamwork_properties"
+   },
+   "line": 774,
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:774]"
+  },
+  {
+   "class": "TelegramSendAction",
+   "end": 856,
+   "imports": {
+    "logging": "logging",
+    "race": "sportorg.models.memory",
+    "telegram_client": "sportorg.modules.telegram.telegram",
+    "translate": "sportorg.language"
+   },
+   "line": 841,
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:841]"
+  },
+  {
+   "class": "TelegramSettingsAction",
+   "end": 838,
+   "imports": {
+    "TelegramDialog": "sportorg.gui.dialogs.telegram_dialog"
+   },
+   "line": 836,
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:836]"
+  },
+  {
+   "class": "TextExchangeAction",
+   "end": 451,
+   "imports": {
+    "TextExchangeDialog": "sportorg.gui.dialogs.text_io",
+    "race": "sportorg.models.memory"
+   },
+   "line": 447,
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:447]"
+  },
+  {
+   "class": "TimekeepingSettingsAction",
+   "end": 771,
+   "imports": {
+    "TimekeepingPropertiesDialog": "sportorg.gui.dialogs.timekeeping_properties"
+   },
+   "line": 768,
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:768]"
+  },
+  {
+   "class": "ToCoursesAction",
+   "end": 516,
+   "imports": {},
+   "line": 514,
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:514]"
+  },
+  {
+   "class": "ToGroupsAction",
+   "end": 511,
+   "imports": {},
+   "line": 509,
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:509]"
+  },
+  {
+   "class": "ToLogsAction",
+   "end": 526,
+   "imports": {},
+   "line": 524,
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:524]"
+  },
+  {
+   "class": "ToRaceResultsAction",
+   "end": 506,
+   "imports": {},
+   "line": 504,
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:504]"
+  },
+  {
+   "class": "ToStartPreparationAction",
+   "end": 501,
+   "imports": {},
+   "line": 499,
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:499]"
+  },
+  {
+   "class": "ToTeamsAction",
+   "end": 521,
+   "imports": {},
+   "line": 519,
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:519]"
+  },
+  {
+   "class": "WDBWinorientExportAction",
+   "end": 264,
+   "imports": {
+    "QMessageBox": "PySide6.QtWidgets",
+    "WinOrientBinary": "sportorg.modules.winorient.wdb",
+    "get_save_file_name": "sportorg.gui.dialogs.file_dialog",
+    "logging": "logging",
+    "race": "sportorg.models.memory",
+    "translate": "sportorg.language",
+    "write_wdb": "sportorg.libs.winorient.wdb"
+   },
+   "line": 240,
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:240]"
+  },
+  {
+   "class": "WDBWinorientImportAction",
+   "end": 219,
+   "imports": {
+    "QMessageBox": "PySide6.QtWidgets",
+    "WDBImportError": "sportorg.modules.winorient.wdb",
+    "get_open_file_name": "sportorg.gui.dialogs.file_dialog",
+    "logging": "logging",
+    "translate": "sportorg.language",
+    "winorient": "sportorg.modules.winorient"
+   },
+   "line": 203,
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:203]"
+  }
+ ]
+}
