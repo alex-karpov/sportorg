@@ -4,7 +4,7 @@ title: 'Legacy as pinned, locked clones in .legacy/ (ADR-0006)'
 status: In Progress
 assignee: []
 created_date: '2026-10-24 12:05'
-updated_date: '2026-10-24 17:25'
+updated_date: '2026-10-24 17:34'
 labels:
   - stage-0
   - claude-code
@@ -23,7 +23,7 @@ Maintainer decision 7 (2026-10-24): legacy is a git-ignored clone inside the rep
 ## Acceptance Criteria
 <!-- AC:BEGIN -->
 - [x] #1 No absolute path in committed .claude/settings.json; guard tests cover compound commands, PowerShell, junctions, cd into legacy and main() failure modes (tests/scripts/test_guard.py green)
-- [ ] #2 uv run python -m scripts.legacy verify prints ok on Windows and in a WSL2 ext4 clone (outputs attached here)
+- [x] #2 uv run python -m scripts.legacy verify prints ok on Windows and in a WSL2 ext4 clone (outputs attached here)
 - [ ] #3 scripts/probe_legacy_protection.py agent run in WSL2: Edit, Write and Bash writes into .legacy refused; output added to docs/evidence/stage-0/legacy-layout/
 - [x] #4 Pinned commit fetchable from the URL in legacy.toml without --source (maintainer chose option A or B; ADR-0006 updated)
 <!-- AC:END -->
@@ -32,4 +32,6 @@ Maintainer decision 7 (2026-10-24): legacy is a git-ignored clone inside the rep
 
 <!-- SECTION:NOTES:BEGIN -->
 2026-10-25, Windows: 'uv run python -m scripts.legacy fetch' replaced pysport 30d849d with b548c35 and cloned templates from GitHub without --source (6.9 s); 'verify' -> 'ok: pysport@b548c35ba18f, templates@cd953823beb3 locked', exit 0.
+
+2026-10-25, WSL2 Ubuntu (Linux 6.18.33.2-microsoft-standard-WSL2), fresh clone of stage-0 882bd00 from GitHub on ext4, uv 0.13.5: 'uv sync --locked' ok; 'scripts.legacy fetch' without --source 7.18 s -> pysport at b548c35ba18f..., templates at cd953823beb3..., locked; 'verify' -> 'ok: pysport@b548c35ba18f, templates@cd953823beb3 locked', exit 0; modes dr-xr-xr-x .legacy/pysport, -r--r--r-- README.md; check.py 5 steps ok, 99 tests.
 <!-- SECTION:NOTES:END -->

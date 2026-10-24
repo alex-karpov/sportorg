@@ -209,3 +209,8 @@ Codex CLI 0.164: читает AGENTS.md (корневой и вложенные)
 | `uv run python -m scripts.legacy verify` | `ok: pysport@b548c35ba18f, templates@cd953823beb3 locked` |
 
 Мелочь: `docs/brief.md` по-прежнему называет legacy `../_other/pysport-legacy`. Это ваш документ, я его не правил; актуальное расположение — ADR-0006.
+
+## После push (коммиты `28dd1b4`, `882bd00`)
+- **CI на GitHub** (прогон 40116575190): общий итог `success`. Зелёные: Linux, Windows и macOS на 3.14, Linux и Windows на 3.15, `clean machine (ubuntu container)` по README. Упала только необязательная лента macOS / 3.15: `grimp==3.17 … marked as --no-build but has no binary distribution`. Так и задумано: под 3.15 на macOS нет готового колеса, а собирать из исходников CI больше не даёт (ADR-0001, TASK-5).
+- **WSL2**, свежий клон `stage-0` с GitHub на ext4: `uv sync --locked` ok; `scripts.legacy fetch` без `--source` за 7,2 с; `verify` → `ok: pysport@b548c35ba18f, templates@cd953823beb3 locked`; `check.py` — 5 шагов ok, 99 тестов. TASK-1, критерий 2 выполнен.
+- Не доказано: агентная проба deny-правила в WSL2 (нужен Claude Code там) и macOS на живой машине. Вердикт этапа — PARTLY PROVEN до повторной проверки по `docs/reports/stage-0-verification-prompt.md` в свежей сессии.

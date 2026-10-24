@@ -42,7 +42,8 @@ portable rule `Edit(/.legacy/**)`, guard on resolved paths; probe on Windows and
   `verify` → `ok: pysport@30d849dde1f7 locked`; `git log`/`git status` keep working on the locked clone.
 - After the decision on sources (2026-10-25), `fetch` without `--source`: 6.9 s from GitHub, replaced
   pysport 30d849d by b548c35 (15 MB) and cloned templates (1.7 MB); `verify` →
-  `ok: pysport@b548c35ba18f, templates@cd953823beb3 locked`.
+  `ok: pysport@b548c35ba18f, templates@cd953823beb3 locked`. Same in WSL2 on a fresh ext4 clone of
+  `stage-0` from GitHub: `fetch` 7.2 s, `verify` ok, modes `dr-xr-xr-x`/`-r--r--r--`.
 
 ## Decision
 1. **Layout.** `legacy.toml` lists each pinned repository (name, URL, 40-character commit).
