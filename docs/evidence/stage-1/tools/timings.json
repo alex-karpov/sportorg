@@ -1,0 +1,12 @@
+{
+ "N1 lizard": 0.5,
+ "N1 radon": 0.44,
+ "N1 ruff": 0.03,
+ "N2 grimp": 0.01,
+ "N2 own ast": 0.59,
+ "N3 vulture": 0.57,
+ "N6 own git log": 0.41,
+ "N6 pydriller": 6.7,
+ "N8 ast-grep": 0.05,
+ "N8 git grep": 0.01
+}
