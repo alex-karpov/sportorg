@@ -1,0 +1,38 @@
+# Commands run (Git Bash, cwd = repo root C:\Users\USER\Prog\Orient\sportorg unless noted)
+# PyPI metadata (stdlib urllib; scratch script, also reimplemented in scripts/bench_typecheckers.py::pypi_meta)
+uv run --python 3.14 /tmp/meta.py        # GET https://pypi.org/pypi/<name>/json for mypy pyright basedpyright ty pyrefly zuban
+
+# --help capture
+uvx --python 3.14 --from mypy==2.4.0 mypy --help > docs/evidence/stage-0/typecheckers/help-mypy.txt
+uvx --python 3.14 --from pyright==1.1.414 pyright --help > .../help-pyright.txt
+uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --help > .../help-basedpyright.txt
+uvx --python 3.14 --from ty==0.0.91 ty --help > .../help-ty.txt ; uvx ... ty check --help  (appended)
+uvx --python 3.14 --from pyrefly==1.4.0 pyrefly --help > .../help-pyrefly.txt ; uvx ... pyrefly check --help (appended)
+uvx --python 3.14 --from zuban==0.10.1 zuban --help > .../help-zuban.txt ; uvx ... zuban check --help (appended)
+
+# Config smoke tests while choosing strict settings
+uvx --python 3.14 --from ty==0.0.91 ty check --config-file scripts/typecheck_configs/ty/ty.toml scripts/typecheck_fixtures
+uvx --python 3.14 --from pyrefly==1.4.0 pyrefly check -c scripts/typecheck_configs/pyrefly/pyrefly.toml scripts/typecheck_fixtures
+(cwd scripts/typecheck_configs/zuban) uvx --python 3.14 --from zuban==0.10.1 zuban check --config-file mypy.ini --strict --mode mypy <3 fixtures>
+(cwd scripts/typecheck_configs/zuban) uvx --python 3.14 --from zuban==0.10.1 zuban check --config-file mypy.ini --strict --mode default --warn-unused-ignores ...   -> "unexpected argument '--warn-unused-ignores'" (exit 2)
+(cwd scripts/typecheck_configs/zuban) uvx --python 3.14 --from zuban==0.10.1 zuban mypy --config-file mypy.ini --strict --warn-unused-ignores ...  -> same "unexpected argument" error
+
+# Benchmark (writes results.json, results.md, fixtures-*.txt, legacy-*.txt)
+uv run --no-project --python 3.14 scripts/bench_typecheckers.py --runs 1 --skip-legacy     # debug run
+uv run --no-project --python 3.14 scripts/bench_typecheckers.py                             # final run, 3 runs, all tools
+# Exact per-tool command lines are in results.md section 4 and results.json.
+
+# Read-only checks of the legacy repo after the run
+(cd ../_other/pysport-legacy && git status --short; find . -newer <marker> -not -path './.git/*')   -> empty
+
+# Strict configs used (scripts/typecheck_configs/<tool>/):
+# mypy:   mypy.ini  strict, warn_unreachable, warn_unused_ignores, disallow_any_explicit=True, disallow_any_expr=False,
+#         enable_error_code = ignore-without-code, redundant-expr, truthy-bool, possibly-undefined, unused-awaitable; show_error_codes
+# pyright: pyrightconfig.json  typeCheckingMode=strict, reportUnnecessaryTypeIgnoreComment=error, enableTypeIgnoreComments=true
+# basedpyright: pyrightconfig.json typeCheckingMode=all, reportUnnecessaryTypeIgnoreComment=error, enableTypeIgnoreComments=true
+# ty:     ty.toml  [rules] all = "error"   (ty has no strict preset; no options for explicit-Any / untyped-def exist -> n/a)
+# pyrefly: pyrefly.toml  preset="all" (every error kind at Error), check_unannotated_defs=true, infer_return_types="checked"
+#         (ignore comments enabled: default type,pyrefly only; "# pyright: ignore" NOT honored by pyrefly default)
+# zuban:  same mypy.ini as mypy, run as `zuban check --config-file mypy.ini --mode mypy --strict`
+#         (--mode default did not report redundant cast; zuban exposes no --warn-unused-ignores flag and does not report
+#          unused/bare type: ignore in either mode, despite --strict help text listing --warn-unused-ignores)

@@ -1,0 +1,23 @@
+# Pinned legacy repositories (AGENTS.md rule 1, ADR-0006).
+#
+#   uv run python -m scripts.legacy fetch     # clone into .legacy/<name> at the commit, then lock;
+#                                             # after a pin change, replaces the clean old checkout
+#   uv run python -m scripts.legacy verify    # HEAD == commit, clean tree, locked
+#
+# .legacy/ is git-ignored and read-only; executable copies go to .legacy-run/ (scripts/legacy_clone.py).
+# Pins change only by the maintainer's decision.
+
+# The program. Upstream master of 2026-09-25 ("ci: fix building rust code"); its code is identical
+# to the maintainer's former pin 30d849d, which only added templates (ADR-0006).
+[[repo]]
+name = "pysport"
+url = "https://github.com/sportorg/pysport.git"
+commit = "b548c35ba18fe85e2526f96bbd3b4cf94f58b6f6"
+
+# The Russian report templates: fork of sportorg/templates with the templates of 30d849d, without
+# the .docx files except one cleaned diploma. Legacy reads them through
+# SPORTORG_TEMPLATES_PATH=<.legacy/templates>/ru (sportorg/config.py:17).
+[[repo]]
+name = "templates"
+url = "https://github.com/alex-karpov/sportorg-templates.git"
+commit = "cd953823beb3d3cbf7ae4a4d47db4d6a341dfa13"

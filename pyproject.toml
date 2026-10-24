@@ -1,0 +1,114 @@
+[project]
+name = "sportorg-ng"
+version = "0.0.1"
+description = "Timing, results and publication software for orienteering and related sports (modernization of SportOrg)"
+readme = "README.md"
+# Maintainer, 2026-10-25: the legacy's About dialog grants "or later" (ADR-0004, last section).
+license = "GPL-3.0-or-later"
+license-files = ["LICENSE"]
+requires-python = ">=3.14"
+dependencies = []
+
+[dependency-groups]
+dev = [
+  "ruff>=0.17.2",
+  "pytest>=9.1.1",
+  "import-linter>=2.15",
+  "basedpyright>=1.40.2",
+]
+
+[build-system]
+requires = ["uv_build>=0.13.1,<0.14"]
+build-backend = "uv_build"
+
+[tool.uv]
+# Development Python is 3.14 (ADR-0001: 3.15 lacks wheels for pyyaml and others as of 2026-10-24);
+# CI also runs a 3.15 lane as the early-warning signal for switching.
+required-version = ">=0.13.1"
+
+# ---------------------------------------------------------------- ruff
+[tool.ruff]
+target-version = "py314"
+line-length = 100
+src = ["src", "tests", "scripts"]
+# Deliberately broken files used to measure type checkers (ADR-0002); never checked.
+extend-exclude = ["scripts/typecheck_fixtures", "scripts/typecheck_configs"]
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = [
+  "D100", "D101", "D102", "D103", "D104", "D105", "D107", # docstrings are not mandatory everywhere
+  "D203", "D213",       # conflict with D211/D212 (one style must be picked)
+  "COM812",             # handled by the formatter
+  "FIX002", "TD002", "TD003",  # TODOs are tracked in Backlog.md, not in code comments
+  "CPY001",             # one licence for the whole project, in LICENSE and pyproject (ADR-0004 row 3)
+]
+# Agents must not silence checks: every noqa needs a code and a reason, and unused noqa is an error (RUF100).
+[tool.ruff.lint.flake8-annotations]
+allow-star-arg-any = false
+suppress-none-returning = false
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["S101", "PLR2004", "INP001", "ANN"]   # asserts, magic numbers and loose annotations are fine in tests
+"scripts/**" = ["T201", "INP001", "S603", "S607"]   # scripts print and run subprocesses by design
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.ruff.format]
+docstring-code-format = true
+
+# ---------------------------------------------------------------- pytest
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra --strict-markers --strict-config"
+xfail_strict = true
+filterwarnings = ["error"]
+
+# ---------------------------------------------------------------- import-linter
+[tool.importlinter]
+root_package = "sportorg_ng"
+include_external_packages = true
+
+[[tool.importlinter.contracts]]
+name = "core is pure: no I/O, UI, platform or national code"
+type = "forbidden"
+source_modules = ["sportorg_ng.core"]
+forbidden_modules = [
+  "sportorg_ng.adapters",
+  "sportorg_ng.ui",
+  "sportorg_ng.national",
+  # platform / I/O / GUI libraries (extend with the Stage 4 ADR)
+  "os", "sys", "subprocess", "socket", "serial", "PySide6", "PyQt6", "tkinter", "winreg", "ctypes",
+]
+
+[[tool.importlinter.contracts]]
+name = "nothing imports the UI"
+type = "forbidden"
+source_modules = ["sportorg_ng.core", "sportorg_ng.adapters", "sportorg_ng.national"]
+forbidden_modules = ["sportorg_ng.ui"]
+
+[[tool.importlinter.contracts]]
+name = "core and adapters do not depend on national packages"
+type = "forbidden"
+source_modules = ["sportorg_ng.core", "sportorg_ng.adapters"]
+forbidden_modules = ["sportorg_ng.national"]
+
+# ---------------------------------------------------------------- basedpyright (ADR-0002)
+[tool.basedpyright]
+pythonVersion = "3.14"
+typeCheckingMode = "all"
+include = ["src", "tests", "scripts"]
+exclude = ["scripts/typecheck_fixtures", "scripts/typecheck_configs", "**/__pycache__", ".venv"]
+reportUnnecessaryTypeIgnoreComment = "error"
+reportIgnoreCommentWithoutRule = "error"
+# Covered by ruff (ISC001/ISC002) — overlap is not counted twice (ADR-0002).
+reportImplicitStringConcatenation = false
+# Off: flags every `parser.add_argument(...)`/`subprocess.run(...)`; ruff B018 keeps the useless-expression case.
+reportUnusedCallResult = false
+enableTypeIgnoreComments = true
+venvPath = "."
+venv = ".venv"
+
+[tool.ruff.lint.isort]
+known-first-party = ["sportorg_ng", "scripts", "tests"]

@@ -1,0 +1,96 @@
+== devcontainer image: Ubuntu 24.04.3 LTS, user vscode
+uv 0.13.5 (x86_64-unknown-linux-musl)
+== postCreateCommand: uv sync
+Downloading cpython-3.14.9-linux-x86_64-gnu (download) (35.0MiB)
+ Downloaded cpython-3.14.9-linux-x86_64-gnu (download)
+Using CPython 3.14.9
+Creating virtual environment at: .venv
+Resolved 20 packages in 0.79ms
+   Building sportorg-ng @ file:///tmp/work
+      Built sportorg-ng @ file:///tmp/work
+Downloading pygments (1.2MiB)
+Downloading ruff (10.0MiB)
+Downloading grimp (2.2MiB)
+Downloading nodejs-wheel-binaries (58.3MiB)
+Downloading basedpyright (13.1MiB)
+ Downloaded pygments
+ Downloaded grimp
+ Downloaded ruff
+ Downloaded basedpyright
+ Downloaded nodejs-wheel-binaries
+Prepared 19 packages in 11.90s
+Installed 19 packages in 1.40s
+ + basedpyright==1.40.2
+ + click==8.5.0
+ + grimp==3.17
+ + import-linter==2.15
+ + iniconfig==2.3.1
+ + markdown-it-py==4.2.0
+ + mdurl==0.1.2
+ + nodejs-wheel-binaries==24.19.0
+ + packaging==26.3
+ + pip-licenses==5.5.5
+ + pluggy==1.7.0
+ + prettytable==3.18.0
+ + pygments==2.21.0
+ + pytest==9.1.1
+ + rich==15.0.0
+ + ruff==0.17.2
+ + sportorg-ng==0.0.1 (from file:///tmp/work)
+ + typing-extensions==4.16.0
+ + wcwidth==0.9.3
+
+real	0m18.457s
+user	0m4.966s
+sys	0m6.706s
+== checks
+
+== format: /tmp/work/.venv/bin/ruff format --check src tests scripts
+27 files already formatted
+
+== lint: /tmp/work/.venv/bin/ruff check src tests scripts
+All checks passed!
+
+== types: /tmp/work/.venv/bin/basedpyright src tests scripts
+0 errors, 0 warnings, 0 notes
+
+== imports: /tmp/work/.venv/bin/lint-imports
+
+╔══╗─────────▶╔╗ ╔╗      ╔╗◀───┐
+╚╣╠╝◀─────┐  ╔╝╚╗║║────▶╔╝╚╗   │
+ ║║   ╔══╦══╦╩╗╔╝║║  ╔╦═╩╗╔╝╔═╦══╗
+ ║║╔══╣╔╗║╔╗║╔╣║ ║║ ╔╬╣╔╗║║ ║│║╔═╝
+╔╣╠╣║║║╚╝║╚╝║║║╚╗║╚═╝║║║║║╚╗║═╣║
+╚══╩╩╩╣╔═╩══╩╝╚═╝╚═══╩╩╝╚╩═╩╩═╩╝
+  └──▶║║                    ▲ 
+      ╚╝────────────────────┘
+
+
+---------
+Contracts
+---------
+
+Analyzed 10 files, 3 dependencies.
+----------------------------------
+
+core is pure: no I/O, UI, platform or national code KEPT
+nothing imports the UI KEPT
+core and adapters do not depend on national packages KEPT
+
+Contracts: 3 kept, 0 broken.
+
+== tests: /tmp/work/.venv/bin/pytest -q
+.......................                                                  [100%]
+23 passed in 0.14s
+
+== summary
+ok   format     0.01s
+ok   lint       0.02s
+ok   types      2.56s
+ok   imports    0.52s
+ok   tests      1.00s
+
+real	0m4.528s
+user	0m5.215s
+sys	0m0.922s
+exit=0

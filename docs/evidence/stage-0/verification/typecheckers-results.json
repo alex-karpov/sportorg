@@ -1,0 +1,1093 @@
+{
+  "machine": {
+    "platform": "Windows-11-10.0.26300-SP0",
+    "processor": "AMD64 Family 25 Model 80 Stepping 0, AuthenticAMD",
+    "cpu_count": 12,
+    "python": "3.14.8",
+    "uv": "uv 0.13.1 (62faed335 2026-10-13 x86_64-pc-windows-msvc)",
+    "date": "2026-10-24"
+  },
+  "legacy_path": "C:\\Users\\USER\\AppData\\Local\\Temp\\claude\\C--Users-USER-Prog-Orient-sportorg\\468d4e66-c0b1-4013-a35c-dc100817b3a3\\scratchpad\\legacy-probe\\sportorg",
+  "runs": 3,
+  "tools": {
+    "mypy": {
+      "tool": "mypy",
+      "meta": {
+        "version": "2.4.0",
+        "latest_on_pypi": "2.4.0",
+        "released": "2026-10-01",
+        "license": "MIT",
+        "wheel_windows": "yes (platform wheel)",
+        "wheel_linux_x86_64": "yes (platform wheel)",
+        "wheel_macos_arm64": "yes (platform wheel)",
+        "sdist": "yes",
+        "n_files": 52
+      },
+      "version_output": "mypy 2.4.0 (compiled: yes)",
+      "version_cmd_exit": 0,
+      "launcher_overhead_s": 0.38401620000149705,
+      "fixtures": {
+        "cmd": [
+          "uvx",
+          "--python",
+          "3.14",
+          "--from",
+          "mypy==2.4.0",
+          "mypy",
+          "--config-file",
+          "C:\\Users\\USER\\AppData\\Local\\Temp\\claude\\C--Users-USER-Prog-Orient-sportorg\\468d4e66-c0b1-4013-a35c-dc100817b3a3\\scratchpad\\v2\\proj\\scripts\\typecheck_configs\\mypy\\mypy.ini",
+          "--no-incremental",
+          "--cache-dir",
+          "C:\\Users\\USER\\AppData\\Local\\Temp\\tc_mypy_fbepidn_\\mypy_cache",
+          "C:\\Users\\USER\\AppData\\Local\\Temp\\claude\\C--Users-USER-Prog-Orient-sportorg\\468d4e66-c0b1-4013-a35c-dc100817b3a3\\scratchpad\\v2\\proj\\scripts\\typecheck_fixtures"
+        ],
+        "cwd": "C:\\Users\\USER\\AppData\\Local\\Temp\\claude\\C--Users-USER-Prog-Orient-sportorg\\468d4e66-c0b1-4013-a35c-dc100817b3a3\\scratchpad\\v2\\proj\\scripts\\typecheck_configs\\mypy",
+        "exit": 1,
+        "timeout": false,
+        "seconds": [
+          1.3032827000024554,
+          1.0204334000009112,
+          0.9820454000000609
+        ],
+        "median_seconds": 1.0204334000009112,
+        "reported": {
+          "any_leak_untyped_call.py": true,
+          "assert_isinstance_evasion.py": true,
+          "control_clean.py": false,
+          "explicit_any_param.py": true,
+          "implicit_optional.py": true,
+          "missing_import.py": true,
+          "object_dot_getattr.py": false,
+          "pyright_ignore_unused.py": false,
+          "real_bug_missing_return.py": true,
+          "real_bug_optional_attr.py": true,
+          "real_bug_str_plus_int.py": true,
+          "redundant_cast.py": true,
+          "type_ignore_without_code.py": true,
+          "typeddict_wrong_key.py": true,
+          "unreachable_code.py": true,
+          "untyped_def.py": true,
+          "unused_type_ignore.py": true,
+          "wrong_cast.py": false
+        },
+        "messages": {
+          "any_leak_untyped_call.py": [
+            "Function is missing a return type annotation  [no-untyped-def]",
+            "Call to untyped function \"k\" in typed context  [no-untyped-call]"
+          ],
+          "assert_isinstance_evasion.py": [
+            "Subclass of \"str\" and \"int\" cannot exist: have distinct disjoint bases  [unreachable]",
+            "Statement is unreachable  [unreachable]"
+          ],
+          "control_clean.py": [],
+          "explicit_any_param.py": [
+            "Explicit \"Any\" is not allowed  [explicit-any]"
+          ],
+          "implicit_optional.py": [
+            "Incompatible default for parameter \"a\" (default has type \"None\", parameter has type \"int\")  [assignment]"
+          ],
+          "missing_import.py": [
+            "Cannot find implementation or library stub for module named \"nonexistent_module_xyz_123\"  [import-not-found]"
+          ],
+          "object_dot_getattr.py": [],
+          "pyright_ignore_unused.py": [],
+          "real_bug_missing_return.py": [
+            "Missing return statement  [return]"
+          ],
+          "real_bug_optional_attr.py": [
+            "Item \"None\" of \"str | None\" has no attribute \"upper\"  [union-attr]"
+          ],
+          "real_bug_str_plus_int.py": [
+            "Returning Any from function declared to return \"str\"  [no-any-return]",
+            "Unsupported operand types for + (\"str\" and \"int\")  [operator]"
+          ],
+          "redundant_cast.py": [
+            "Redundant cast to \"int\"  [redundant-cast]"
+          ],
+          "type_ignore_without_code.py": [
+            "\"type: ignore\" comment without error code (consider \"type: ignore[assignment]\" instead)  [ignore-without-code]"
+          ],
+          "typeddict_wrong_key.py": [
+            "Returning Any from function declared to return \"str\"  [no-any-return]",
+            "TypedDict \"Movie\" has no key \"director\"  [typeddict-item]"
+          ],
+          "unreachable_code.py": [
+            "Statement is unreachable  [unreachable]"
+          ],
+          "untyped_def.py": [
+            "Function is missing a type annotation  [no-untyped-def]",
+            "Call to untyped function \"g\" in typed context  [no-untyped-call]"
+          ],
+          "unused_type_ignore.py": [
+            "Unused \"type: ignore\" comment  [unused-ignore]"
+          ],
+          "wrong_cast.py": []
+        },
+        "unattributed_diags": 0,
+        "total_diags": 19
+      },
+      "legacy": {
+        "cmd": [
+          "uvx",
+          "--python",
+          "3.14",
+          "--from",
+          "mypy==2.4.0",
+          "mypy",
+          "--no-incremental",
+          "--cache-dir",
+          "C:\\Users\\USER\\AppData\\Local\\Temp\\tc_mypy_fbepidn_\\mypy_cache",
+          "C:\\Users\\USER\\AppData\\Local\\Temp\\claude\\C--Users-USER-Prog-Orient-sportorg\\468d4e66-c0b1-4013-a35c-dc100817b3a3\\scratchpad\\legacy-probe\\sportorg"
+        ],
+        "cwd": "<fresh temp dir>",
+        "exit_codes": [
+          1,
+          1,
+          1
+        ],
+        "timeouts": [
+          false,
+          false,
+          false
+        ],
+        "seconds": [
+          3.170851599999878,
+          2.689533599997958,
+          2.6857267000013962
+        ],
+        "cold_seconds": 3.170851599999878,
+        "warm_seconds": 2.6857267000013962,
+        "error_lines": 482,
+        "summary": {
+          "errors": 481,
+          "files_with_errors": 1,
+          "files_checked": 177
+        },
+        "last_line": "Found 481 errors in 1 file (checked 177 source files)",
+        "output_truncated_in_evidence": false,
+        "stderr_head": ""
+      },
+      "single_file": {
+        "file": "C:\\Users\\USER\\AppData\\Local\\Temp\\claude\\C--Users-USER-Prog-Orient-sportorg\\468d4e66-c0b1-4013-a35c-dc100817b3a3\\scratchpad\\legacy-probe\\sportorg\\models\\result\\result_checker.py",
+        "note": null,
+        "cmd": [
+          "uvx",
+          "--python",
+          "3.14",
+          "--from",
+          "mypy==2.4.0",
+          "mypy",
+          "--no-incremental",
+          "--cache-dir",
+          "C:\\Users\\USER\\AppData\\Local\\Temp\\tc_mypy_fbepidn_\\mypy_cache",
+          "C:\\Users\\USER\\AppData\\Local\\Temp\\claude\\C--Users-USER-Prog-Orient-sportorg\\468d4e66-c0b1-4013-a35c-dc100817b3a3\\scratchpad\\legacy-probe\\sportorg\\models\\result\\result_checker.py"
+        ],
+        "seconds": [
+          1.3200849999993807,
+          1.307330899999215,
+          1.3177129000032437
+        ],
+        "median_seconds": 1.3177129000032437,
+        "exit_codes": [
+          1,
+          1,
+          1
+        ],
+        "error_lines": 28
+      }
+    },
+    "pyright": {
+      "tool": "pyright",
+      "meta": {
+        "version": "1.1.414",
+        "latest_on_pypi": "1.1.414",
+        "released": "2026-09-10",
+        "license": "MIT",
+        "wheel_windows": "yes (any wheel)",
+        "wheel_linux_x86_64": "yes (any wheel)",
+        "wheel_macos_arm64": "yes (any wheel)",
+        "sdist": "yes",
+        "n_files": 2
+      },
+      "version_output": "pyright 1.1.414",
+      "version_cmd_exit": 0,
+      "launcher_overhead_s": 1.1630817000004754,
+      "fixtures": {
+        "cmd": [
+          "uvx",
+          "--python",
+          "3.14",
+          "--from",
+          "pyright==1.1.414",
+          "pyright",
+          "-p",
+          "C:\\Users\\USER\\AppData\\Local\\Temp\\claude\\C--Users-USER-Prog-Orient-sportorg\\468d4e66-c0b1-4013-a35c-dc100817b3a3\\scratchpad\\v2\\proj\\scripts\\typecheck_configs\\pyright\\pyrightconfig.json",
+          "C:\\Users\\USER\\AppData\\Local\\Temp\\claude\\C--Users-USER-Prog-Orient-sportorg\\468d4e66-c0b1-4013-a35c-dc100817b3a3\\scratchpad\\v2\\proj\\scripts\\typecheck_fixtures"
+        ],
+        "cwd": "C:\\Users\\USER\\AppData\\Local\\Temp\\claude\\C--Users-USER-Prog-Orient-sportorg\\468d4e66-c0b1-4013-a35c-dc100817b3a3\\scratchpad\\v2\\proj\\scripts\\typecheck_configs\\pyright",
+        "exit": 1,
+        "timeout": false,
+        "seconds": [
+          1.5902839000009408,
+          1.9625137000002724,
+          1.5874895000015385
+        ],
+        "median_seconds": 1.5902839000009408,
+        "reported": {
+          "any_leak_untyped_call.py": true,
+          "assert_isinstance_evasion.py": false,
+          "control_clean.py": false,
+          "explicit_any_param.py": false,
+          "implicit_optional.py": true,
+          "missing_import.py": true,
+          "object_dot_getattr.py": false,
+          "pyright_ignore_unused.py": true,
+          "real_bug_missing_return.py": true,
+          "real_bug_optional_attr.py": true,
+          "real_bug_str_plus_int.py": true,
+          "redundant_cast.py": false,
+          "type_ignore_without_code.py": false,
+          "typeddict_wrong_key.py": true,
+          "unreachable_code.py": false,
+          "untyped_def.py": true,
+          "unused_type_ignore.py": true,
+          "wrong_cast.py": false
+        },
+        "messages": {
+          "any_leak_untyped_call.py": [
+            "Argument of type \"Literal['s']\" cannot be assigned to parameter \"i\" of type \"int\" in function \"need_int\""
+          ],
+          "assert_isinstance_evasion.py": [],
+          "control_clean.py": [],
+          "explicit_any_param.py": [],
+          "implicit_optional.py": [
+            "Expression of type \"None\" cannot be assigned to parameter of type \"int\""
+          ],
+          "missing_import.py": [
+            "Import \"nonexistent_module_xyz_123\" could not be resolved (reportMissingImports)",
+            "Type of \"value\" is unknown (reportUnknownMemberType)",
+            "Argument type is unknown"
+          ],
+          "object_dot_getattr.py": [],
+          "pyright_ignore_unused.py": [
+            "Unnecessary \"# type: ignore\" comment (reportUnnecessaryTypeIgnoreComment)"
+          ],
+          "real_bug_missing_return.py": [
+            "Function with declared return type \"int\" must return value on all code paths"
+          ],
+          "real_bug_optional_attr.py": [
+            "\"upper\" is not a known attribute of \"None\" (reportOptionalMemberAccess)"
+          ],
+          "real_bug_str_plus_int.py": [
+            "Operator \"+\" not supported for types \"str\" and \"Literal[1]\" (reportOperatorIssue)",
+            "Return type is unknown (reportUnknownVariableType)"
+          ],
+          "redundant_cast.py": [],
+          "type_ignore_without_code.py": [],
+          "typeddict_wrong_key.py": [
+            "Could not access item in TypedDict",
+            "Return type is unknown (reportUnknownVariableType)"
+          ],
+          "unreachable_code.py": [],
+          "untyped_def.py": [
+            "Return type is unknown (reportUnknownParameterType)",
+            "Type of parameter \"a\" is unknown (reportUnknownParameterType)",
+            "Type annotation is missing for parameter \"a\" (reportMissingParameterType)",
+            "Type of parameter \"b\" is unknown (reportUnknownParameterType)",
+            "Type annotation is missing for parameter \"b\" (reportMissingParameterType)",
+            "Return type is unknown (reportUnknownVariableType)"
+          ],
+          "unused_type_ignore.py": [
+            "Unnecessary \"# type: ignore\" comment (reportUnnecessaryTypeIgnoreComment)"
+          ],
+          "wrong_cast.py": []
+        },
+        "unattributed_diags": 0,
+        "total_diags": 19
+      },
+      "legacy": {
+        "cmd": [
+          "uvx",
+          "--python",
+          "3.14",
+          "--from",
+          "pyright==1.1.414",
+          "pyright",
+          "--outputjson",
+          "C:\\Users\\USER\\AppData\\Local\\Temp\\claude\\C--Users-USER-Prog-Orient-sportorg\\468d4e66-c0b1-4013-a35c-dc100817b3a3\\scratchpad\\legacy-probe\\sportorg"
+        ],
+        "cwd": "<fresh temp dir>",
+        "exit_codes": [
+          1,
+          1,
+          1
+        ],
+        "timeouts": [
+          false,
+          false,
+          false
+        ],
+        "seconds": [
+          5.748852099997748,
+          5.629777500002092,
+          5.719822199996997
+        ],
+        "cold_seconds": 5.748852099997748,
+        "warm_seconds": 5.629777500002092,
+        "error_lines": 1327,
+        "summary": {
+          "errors": 1327,
+          "warnings": 35,
+          "files_checked": 177,
+          "tool_seconds": 4.976
+        },
+        "last_line": "}",
+        "output_truncated_in_evidence": true,
+        "stderr_head": ""
+      },
+      "single_file": {
+        "file": "C:\\Users\\USER\\AppData\\Local\\Temp\\claude\\C--Users-USER-Prog-Orient-sportorg\\468d4e66-c0b1-4013-a35c-dc100817b3a3\\scratchpad\\legacy-probe\\sportorg\\models\\result\\result_checker.py",
+        "note": null,
+        "cmd": [
+          "uvx",
+          "--python",
+          "3.14",
+          "--from",
+          "pyright==1.1.414",
+          "pyright",
+          "--outputjson",
+          "C:\\Users\\USER\\AppData\\Local\\Temp\\claude\\C--Users-USER-Prog-Orient-sportorg\\468d4e66-c0b1-4013-a35c-dc100817b3a3\\scratchpad\\legacy-probe\\sportorg\\models\\result\\result_checker.py"
+        ],
+        "seconds": [
+          1.073498900001141,
+          1.0694795999988855,
+          1.0175142999978561
+        ],
+        "median_seconds": 1.0694795999988855,
+        "exit_codes": [
+          1,
+          1,
+          1
+        ],
+        "error_lines": 3
+      }
+    },
+    "basedpyright": {
+      "tool": "basedpyright",
+      "meta": {
+        "version": "1.40.2",
+        "latest_on_pypi": "1.40.2",
+        "released": "2026-10-04",
+        "license": "MIT License",
+        "wheel_windows": "yes (any wheel)",
+        "wheel_linux_x86_64": "yes (any wheel)",
+        "wheel_macos_arm64": "yes (any wheel)",
+        "sdist": "yes",
+        "n_files": 2
+      },
+      "version_output": "basedpyright 1.40.2\nbased on pyright 1.1.414",
+      "version_cmd_exit": 0,
+      "launcher_overhead_s": 0.3888132000029145,
+      "fixtures": {
+        "cmd": [
+          "uvx",
+          "--python",
+          "3.14",
+          "--from",
+          "basedpyright==1.40.2",
+          "basedpyright",
+          "-p",
+          "C:\\Users\\USER\\AppData\\Local\\Temp\\claude\\C--Users-USER-Prog-Orient-sportorg\\468d4e66-c0b1-4013-a35c-dc100817b3a3\\scratchpad\\v2\\proj\\scripts\\typecheck_configs\\basedpyright\\pyrightconfig.json",
+          "C:\\Users\\USER\\AppData\\Local\\Temp\\claude\\C--Users-USER-Prog-Orient-sportorg\\468d4e66-c0b1-4013-a35c-dc100817b3a3\\scratchpad\\v2\\proj\\scripts\\typecheck_fixtures"
+        ],
+        "cwd": "C:\\Users\\USER\\AppData\\Local\\Temp\\claude\\C--Users-USER-Prog-Orient-sportorg\\468d4e66-c0b1-4013-a35c-dc100817b3a3\\scratchpad\\v2\\proj\\scripts\\typecheck_configs\\basedpyright",
+        "exit": 1,
+        "timeout": false,
+        "seconds": [
+          1.014566999998351,
+          0.9469406000025629,
+          0.880402700000559
+        ],
+        "median_seconds": 0.9469406000025629,
+        "reported": {
+          "any_leak_untyped_call.py": true,
+          "assert_isinstance_evasion.py": false,
+          "control_clean.py": false,
+          "explicit_any_param.py": true,
+          "implicit_optional.py": true,
+          "missing_import.py": true,
+          "object_dot_getattr.py": true,
+          "pyright_ignore_unused.py": true,
+          "real_bug_missing_return.py": true,
+          "real_bug_optional_attr.py": true,
+          "real_bug_str_plus_int.py": true,
+          "redundant_cast.py": false,
+          "type_ignore_without_code.py": true,
+          "typeddict_wrong_key.py": true,
+          "unreachable_code.py": true,
+          "untyped_def.py": true,
+          "unused_type_ignore.py": true,
+          "wrong_cast.py": true
+        },
+        "messages": {
+          "any_leak_untyped_call.py": [
+            "\"i\" is not accessed (reportUnusedParameter)",
+            "Argument of type \"Literal['s']\" cannot be assigned to parameter \"i\" of type \"int\" in function \"need_int\""
+          ],
+          "assert_isinstance_evasion.py": [],
+          "control_clean.py": [],
+          "explicit_any_param.py": [
+            "Return type is Any (reportAny)",
+            "Type of parameter \"a\" is Any (reportAny)",
+            "Type `Any` is not allowed (reportExplicitAny)",
+            "Type `Any` is not allowed (reportExplicitAny)",
+            "Return type is Any (reportAny)"
+          ],
+          "implicit_optional.py": [
+            "Expression of type \"None\" cannot be assigned to parameter of type \"int\""
+          ],
+          "missing_import.py": [
+            "Import \"nonexistent_module_xyz_123\" could not be resolved (reportMissingImports)",
+            "Type of \"value\" is unknown (reportUnknownMemberType)",
+            "Argument type is unknown"
+          ],
+          "object_dot_getattr.py": [
+            "Return type is Any (reportAny)"
+          ],
+          "pyright_ignore_unused.py": [
+            "`pyright: ignore` comment must specify a rule (eg. `# pyright: ignore[ruleName]`) (reportIgnoreCommentWithoutRule)",
+            "Unnecessary \"# type: ignore\" comment (reportUnnecessaryTypeIgnoreComment)"
+          ],
+          "real_bug_missing_return.py": [
+            "Function with declared return type \"int\" must return value on all code paths"
+          ],
+          "real_bug_optional_attr.py": [
+            "\"upper\" is not a known attribute of \"None\" (reportOptionalMemberAccess)"
+          ],
+          "real_bug_str_plus_int.py": [
+            "Operator \"+\" not supported for types \"str\" and \"Literal[1]\" (reportOperatorIssue)",
+            "Return type is unknown (reportUnknownVariableType)"
+          ],
+          "redundant_cast.py": [],
+          "type_ignore_without_code.py": [
+            "`type: ignore` comment must specify a rule (eg. `# type: ignore[ruleName]`) (reportIgnoreCommentWithoutRule)"
+          ],
+          "typeddict_wrong_key.py": [
+            "Could not access item in TypedDict",
+            "Return type is unknown (reportUnknownVariableType)"
+          ],
+          "unreachable_code.py": [
+            "Code is unreachable (reportUnreachable)"
+          ],
+          "untyped_def.py": [
+            "Return type is unknown (reportUnknownParameterType)",
+            "Type of parameter \"a\" is unknown (reportUnknownParameterType)",
+            "Type annotation is missing for parameter \"a\" (reportMissingParameterType)",
+            "Type of parameter \"b\" is unknown (reportUnknownParameterType)",
+            "Type annotation is missing for parameter \"b\" (reportMissingParameterType)",
+            "Return type is unknown (reportUnknownVariableType)"
+          ],
+          "unused_type_ignore.py": [
+            "`type: ignore` comment must specify a rule (eg. `# type: ignore[ruleName]`) (reportIgnoreCommentWithoutRule)",
+            "Unnecessary \"# type: ignore\" comment (reportUnnecessaryTypeIgnoreComment)"
+          ],
+          "wrong_cast.py": [
+            "Conversion of type `Literal['not an int']` to type `int` may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to `object` first. (reportInvalidCast)"
+          ]
+        },
+        "unattributed_diags": 0,
+        "total_diags": 31
+      },
+      "legacy": {
+        "cmd": [
+          "uvx",
+          "--python",
+          "3.14",
+          "--from",
+          "basedpyright==1.40.2",
+          "basedpyright",
+          "--outputjson",
+          "C:\\Users\\USER\\AppData\\Local\\Temp\\claude\\C--Users-USER-Prog-Orient-sportorg\\468d4e66-c0b1-4013-a35c-dc100817b3a3\\scratchpad\\legacy-probe\\sportorg"
+        ],
+        "cwd": "<fresh temp dir>",
+        "exit_codes": [
+          1,
+          1,
+          1
+        ],
+        "timeouts": [
+          false,
+          false,
+          false
+        ],
+        "seconds": [
+          7.016393800000515,
+          5.945928199998889,
+          6.067198700002336
+        ],
+        "cold_seconds": 7.016393800000515,
+        "warm_seconds": 5.945928199998889,
+        "error_lines": 1505,
+        "summary": {
+          "errors": 1505,
+          "warnings": 25513,
+          "files_checked": 177,
+          "tool_seconds": 5.984
+        },
+        "last_line": "}",
+        "output_truncated_in_evidence": true,
+        "stderr_head": ""
+      },
+      "single_file": {
+        "file": "C:\\Users\\USER\\AppData\\Local\\Temp\\claude\\C--Users-USER-Prog-Orient-sportorg\\468d4e66-c0b1-4013-a35c-dc100817b3a3\\scratchpad\\legacy-probe\\sportorg\\models\\result\\result_checker.py",
+        "note": null,
+        "cmd": [
+          "uvx",
+          "--python",
+          "3.14",
+          "--from",
+          "basedpyright==1.40.2",
+          "basedpyright",
+          "--outputjson",
+          "C:\\Users\\USER\\AppData\\Local\\Temp\\claude\\C--Users-USER-Prog-Orient-sportorg\\468d4e66-c0b1-4013-a35c-dc100817b3a3\\scratchpad\\legacy-probe\\sportorg\\models\\result\\result_checker.py"
+        ],
+        "seconds": [
+          1.0419045000016922,
+          1.059147200001462,
+          1.0257409000005282
+        ],
+        "median_seconds": 1.0419045000016922,
+        "exit_codes": [
+          1,
+          1,
+          1
+        ],
+        "error_lines": 3
+      }
+    },
+    "ty": {
+      "tool": "ty",
+      "meta": {
+        "version": "0.0.91",
+        "latest_on_pypi": "0.0.91",
+        "released": "2026-10-22",
+        "license": "MIT License",
+        "wheel_windows": "yes (platform wheel)",
+        "wheel_linux_x86_64": "yes (platform wheel)",
+        "wheel_macos_arm64": "yes (platform wheel)",
+        "sdist": "yes",
+        "n_files": 18
+      },
+      "version_output": "ty 0.0.91 (67fbd2874 2026-10-22)",
+      "version_cmd_exit": 0,
+      "launcher_overhead_s": 0.060845900003187126,
+      "fixtures": {
+        "cmd": [
+          "uvx",
+          "--python",
+          "3.14",
+          "--from",
+          "ty==0.0.91",
+          "ty",
+          "check",
+          "--config-file",
+          "C:\\Users\\USER\\AppData\\Local\\Temp\\claude\\C--Users-USER-Prog-Orient-sportorg\\468d4e66-c0b1-4013-a35c-dc100817b3a3\\scratchpad\\v2\\proj\\scripts\\typecheck_configs\\ty\\ty.toml",
+          "C:\\Users\\USER\\AppData\\Local\\Temp\\claude\\C--Users-USER-Prog-Orient-sportorg\\468d4e66-c0b1-4013-a35c-dc100817b3a3\\scratchpad\\v2\\proj\\scripts\\typecheck_fixtures"
+        ],
+        "cwd": "C:\\Users\\USER\\AppData\\Local\\Temp\\claude\\C--Users-USER-Prog-Orient-sportorg\\468d4e66-c0b1-4013-a35c-dc100817b3a3\\scratchpad\\v2\\proj\\scripts\\typecheck_configs\\ty",
+        "exit": 1,
+        "timeout": false,
+        "seconds": [
+          0.14653230000112671,
+          0.12117600000055972,
+          0.10433430000193766
+        ],
+        "median_seconds": 0.12117600000055972,
+        "reported": {
+          "any_leak_untyped_call.py": false,
+          "assert_isinstance_evasion.py": false,
+          "control_clean.py": false,
+          "explicit_any_param.py": false,
+          "implicit_optional.py": true,
+          "missing_import.py": true,
+          "object_dot_getattr.py": false,
+          "pyright_ignore_unused.py": false,
+          "real_bug_missing_return.py": true,
+          "real_bug_optional_attr.py": true,
+          "real_bug_str_plus_int.py": true,
+          "redundant_cast.py": false,
+          "type_ignore_without_code.py": false,
+          "typeddict_wrong_key.py": true,
+          "unreachable_code.py": false,
+          "untyped_def.py": false,
+          "unused_type_ignore.py": true,
+          "wrong_cast.py": true
+        },
+        "messages": {
+          "any_leak_untyped_call.py": [],
+          "assert_isinstance_evasion.py": [],
+          "control_clean.py": [],
+          "explicit_any_param.py": [],
+          "implicit_optional.py": [
+            "Default value of type `None` is not assignable to annotated parameter type `int` [invalid-parameter-default]"
+          ],
+          "missing_import.py": [
+            "Cannot resolve imported module `nonexistent_module_xyz_123` [unresolved-import]"
+          ],
+          "object_dot_getattr.py": [],
+          "pyright_ignore_unused.py": [],
+          "real_bug_missing_return.py": [
+            "Function can implicitly return `None`, which is not assignable to return type `int` [invalid-return-type]"
+          ],
+          "real_bug_optional_attr.py": [
+            "Attribute `upper` is not defined on `None` in union `str | None` [unresolved-attribute]"
+          ],
+          "real_bug_str_plus_int.py": [
+            "Unsound return statement [unsound-return-statement]",
+            "Unsupported `+` operation [unsupported-operator]"
+          ],
+          "redundant_cast.py": [],
+          "type_ignore_without_code.py": [],
+          "typeddict_wrong_key.py": [
+            "Unsound return statement [unsound-return-statement]",
+            "Unknown key \"director\" for TypedDict `Movie` [invalid-key]"
+          ],
+          "unreachable_code.py": [],
+          "untyped_def.py": [],
+          "unused_type_ignore.py": [
+            "Unused blanket `type: ignore` directive [unused-type-ignore-comment]"
+          ],
+          "wrong_cast.py": [
+            "Cast to a disjoint type [disjoint-cast]"
+          ]
+        },
+        "unattributed_diags": 0,
+        "total_diags": 10
+      },
+      "legacy": {
+        "cmd": [
+          "uvx",
+          "--python",
+          "3.14",
+          "--from",
+          "ty==0.0.91",
+          "ty",
+          "check",
+          "--output-format",
+          "concise",
+          "C:\\Users\\USER\\AppData\\Local\\Temp\\claude\\C--Users-USER-Prog-Orient-sportorg\\468d4e66-c0b1-4013-a35c-dc100817b3a3\\scratchpad\\legacy-probe\\sportorg"
+        ],
+        "cwd": "<fresh temp dir>",
+        "exit_codes": [
+          1,
+          1,
+          1
+        ],
+        "timeouts": [
+          false,
+          false,
+          false
+        ],
+        "seconds": [
+          0.3978930000012042,
+          0.3191798000007111,
+          0.33968280000044615
+        ],
+        "cold_seconds": 0.3978930000012042,
+        "warm_seconds": 0.3191798000007111,
+        "error_lines": 1247,
+        "summary": {
+          "errors": 1276
+        },
+        "last_line": "Found 1276 diagnostics",
+        "output_truncated_in_evidence": false,
+        "stderr_head": ""
+      },
+      "single_file": {
+        "file": "C:\\Users\\USER\\AppData\\Local\\Temp\\claude\\C--Users-USER-Prog-Orient-sportorg\\468d4e66-c0b1-4013-a35c-dc100817b3a3\\scratchpad\\legacy-probe\\sportorg\\models\\result\\result_checker.py",
+        "note": null,
+        "cmd": [
+          "uvx",
+          "--python",
+          "3.14",
+          "--from",
+          "ty==0.0.91",
+          "ty",
+          "check",
+          "--output-format",
+          "concise",
+          "C:\\Users\\USER\\AppData\\Local\\Temp\\claude\\C--Users-USER-Prog-Orient-sportorg\\468d4e66-c0b1-4013-a35c-dc100817b3a3\\scratchpad\\legacy-probe\\sportorg\\models\\result\\result_checker.py"
+        ],
+        "seconds": [
+          0.12376030000086757,
+          0.12315000000307919,
+          0.12281250000160071
+        ],
+        "median_seconds": 0.12315000000307919,
+        "exit_codes": [
+          1,
+          1,
+          1
+        ],
+        "error_lines": 3
+      }
+    },
+    "pyrefly": {
+      "tool": "pyrefly",
+      "meta": {
+        "version": "1.4.0",
+        "latest_on_pypi": "1.4.0",
+        "released": "2026-10-15",
+        "license": "MIT License",
+        "wheel_windows": "yes (platform wheel)",
+        "wheel_linux_x86_64": "yes (platform wheel)",
+        "wheel_macos_arm64": "yes (platform wheel)",
+        "sdist": "yes",
+        "n_files": 12
+      },
+      "version_output": "pyrefly 1.4.0",
+      "version_cmd_exit": 0,
+      "launcher_overhead_s": 0.06297180000183289,
+      "fixtures": {
+        "cmd": [
+          "uvx",
+          "--python",
+          "3.14",
+          "--from",
+          "pyrefly==1.4.0",
+          "pyrefly",
+          "check",
+          "-c",
+          "C:\\Users\\USER\\AppData\\Local\\Temp\\claude\\C--Users-USER-Prog-Orient-sportorg\\468d4e66-c0b1-4013-a35c-dc100817b3a3\\scratchpad\\v2\\proj\\scripts\\typecheck_configs\\pyrefly\\pyrefly.toml",
+          "C:\\Users\\USER\\AppData\\Local\\Temp\\claude\\C--Users-USER-Prog-Orient-sportorg\\468d4e66-c0b1-4013-a35c-dc100817b3a3\\scratchpad\\v2\\proj\\scripts\\typecheck_fixtures"
+        ],
+        "cwd": "C:\\Users\\USER\\AppData\\Local\\Temp\\claude\\C--Users-USER-Prog-Orient-sportorg\\468d4e66-c0b1-4013-a35c-dc100817b3a3\\scratchpad\\v2\\proj\\scripts\\typecheck_configs\\pyrefly",
+        "exit": 1,
+        "timeout": false,
+        "seconds": [
+          0.5561009999983071,
+          0.3809987999993609,
+          0.3890276000020094
+        ],
+        "median_seconds": 0.3890276000020094,
+        "reported": {
+          "any_leak_untyped_call.py": true,
+          "assert_isinstance_evasion.py": false,
+          "control_clean.py": false,
+          "explicit_any_param.py": true,
+          "implicit_optional.py": true,
+          "missing_import.py": true,
+          "object_dot_getattr.py": false,
+          "pyright_ignore_unused.py": false,
+          "real_bug_missing_return.py": true,
+          "real_bug_optional_attr.py": true,
+          "real_bug_str_plus_int.py": true,
+          "redundant_cast.py": false,
+          "type_ignore_without_code.py": false,
+          "typeddict_wrong_key.py": true,
+          "unreachable_code.py": true,
+          "untyped_def.py": true,
+          "unused_type_ignore.py": true,
+          "wrong_cast.py": true
+        },
+        "messages": {
+          "any_leak_untyped_call.py": [
+            "`k` is missing a return annotation [unannotated-return]",
+            "Argument `Literal['s']` is not assignable to parameter `i` with type `int` in function `need_int` [bad-argument-type]"
+          ],
+          "assert_isinstance_evasion.py": [],
+          "control_clean.py": [],
+          "explicit_any_param.py": [
+            "Explicit `Any` is not allowed [explicit-any]",
+            "Explicit `Any` is not allowed [explicit-any]"
+          ],
+          "implicit_optional.py": [
+            "Default `None` is not assignable to parameter `a` with type `int` [bad-function-definition]"
+          ],
+          "missing_import.py": [
+            "Cannot find module `nonexistent_module_xyz_123` [missing-import]"
+          ],
+          "object_dot_getattr.py": [],
+          "pyright_ignore_unused.py": [],
+          "real_bug_missing_return.py": [
+            "Function declared to return `int`, but one or more paths are missing an explicit `return` [bad-return]"
+          ],
+          "real_bug_optional_attr.py": [
+            "Object of class `NoneType` has no attribute `upper` [missing-attribute]"
+          ],
+          "real_bug_str_plus_int.py": [
+            "`+` is not supported between `str` and `Literal[1]` [unsupported-operation]"
+          ],
+          "redundant_cast.py": [],
+          "type_ignore_without_code.py": [],
+          "typeddict_wrong_key.py": [
+            "TypedDict `Movie` does not have key `director` [bad-typed-dict-key]"
+          ],
+          "unreachable_code.py": [
+            "Function declared to return `int`, but one or more paths are missing an explicit `return` [bad-return]",
+            "This code is unreachable [unreachable]"
+          ],
+          "untyped_def.py": [
+            "`g` is missing a return annotation [unannotated-return]",
+            "`g` is missing an annotation for parameter `a` [implicit-any-parameter]",
+            "`g` is missing an annotation for parameter `b` [implicit-any-parameter]",
+            "The type of the returned value is unknown; it is inferred as an implicit `Any` [unknown-return-type]"
+          ],
+          "unused_type_ignore.py": [
+            "Unused `# type: ignore` comment [unused-type-ignore]"
+          ],
+          "wrong_cast.py": [
+            "Cast from `Literal['not an int']` to `int` is invalid because the types are disjoint [invalid-cast]"
+          ]
+        },
+        "unattributed_diags": 0,
+        "total_diags": 18
+      },
+      "legacy": {
+        "cmd": [
+          "uvx",
+          "--python",
+          "3.14",
+          "--from",
+          "pyrefly==1.4.0",
+          "pyrefly",
+          "check",
+          "--output-format",
+          "min-text",
+          "C:\\Users\\USER\\AppData\\Local\\Temp\\claude\\C--Users-USER-Prog-Orient-sportorg\\468d4e66-c0b1-4013-a35c-dc100817b3a3\\scratchpad\\legacy-probe\\sportorg"
+        ],
+        "cwd": "<fresh temp dir>",
+        "exit_codes": [
+          1,
+          1,
+          1
+        ],
+        "timeouts": [
+          false,
+          false,
+          false
+        ],
+        "seconds": [
+          0.5666124999988824,
+          0.5330758999989484,
+          0.5415197000002081
+        ],
+        "cold_seconds": 0.5666124999988824,
+        "warm_seconds": 0.5330758999989484,
+        "error_lines": 2912,
+        "summary": {},
+        "last_line": "Docs: https://pyrefly.org/en/docs/installation/",
+        "output_truncated_in_evidence": true,
+        "stderr_head": " INFO 2,911 errors (22 suppressed, 85 warnings not shown, use `--min-severity=warn` to see them)\nNo `pyrefly.toml` found \u2014 using settings imported from `[tool.mypy]` in your `pyproject.toml` (preset: legacy).\nRun `pyrefly init` to continue setting up Pyrefly.\nDocs: https://pyrefly.org/en/docs/installation/\n"
+      },
+      "single_file": {
+        "file": "C:\\Users\\USER\\AppData\\Local\\Temp\\claude\\C--Users-USER-Prog-Orient-sportorg\\468d4e66-c0b1-4013-a35c-dc100817b3a3\\scratchpad\\legacy-probe\\sportorg\\models\\result\\result_checker.py",
+        "note": null,
+        "cmd": [
+          "uvx",
+          "--python",
+          "3.14",
+          "--from",
+          "pyrefly==1.4.0",
+          "pyrefly",
+          "check",
+          "--output-format",
+          "min-text",
+          "C:\\Users\\USER\\AppData\\Local\\Temp\\claude\\C--Users-USER-Prog-Orient-sportorg\\468d4e66-c0b1-4013-a35c-dc100817b3a3\\scratchpad\\legacy-probe\\sportorg\\models\\result\\result_checker.py"
+        ],
+        "seconds": [
+          0.4085536000020511,
+          0.42526139999972656,
+          0.41770120000001043
+        ],
+        "median_seconds": 0.41770120000001043,
+        "exit_codes": [
+          1,
+          1,
+          1
+        ],
+        "error_lines": 45
+      }
+    },
+    "zuban": {
+      "tool": "zuban",
+      "meta": {
+        "version": "0.10.1",
+        "latest_on_pypi": "0.10.1",
+        "released": "2026-10-11",
+        "license": "AGPL-3.0-only",
+        "wheel_windows": "yes (platform wheel)",
+        "wheel_linux_x86_64": "yes (platform wheel)",
+        "wheel_macos_arm64": "yes (platform wheel)",
+        "sdist": "no",
+        "n_files": 12
+      },
+      "version_output": "zuban 0.10.1",
+      "version_cmd_exit": 0,
+      "launcher_overhead_s": 0.05890929999804939,
+      "fixtures": {
+        "cmd": [
+          "uvx",
+          "--python",
+          "3.14",
+          "--from",
+          "zuban==0.10.1",
+          "zuban",
+          "check",
+          "--config-file",
+          "C:\\Users\\USER\\AppData\\Local\\Temp\\claude\\C--Users-USER-Prog-Orient-sportorg\\468d4e66-c0b1-4013-a35c-dc100817b3a3\\scratchpad\\v2\\proj\\scripts\\typecheck_configs\\zuban\\mypy.ini",
+          "--mode",
+          "mypy",
+          "--strict",
+          "C:\\Users\\USER\\AppData\\Local\\Temp\\claude\\C--Users-USER-Prog-Orient-sportorg\\468d4e66-c0b1-4013-a35c-dc100817b3a3\\scratchpad\\v2\\proj\\scripts\\typecheck_fixtures"
+        ],
+        "cwd": "C:\\Users\\USER\\AppData\\Local\\Temp\\claude\\C--Users-USER-Prog-Orient-sportorg\\468d4e66-c0b1-4013-a35c-dc100817b3a3\\scratchpad\\v2\\proj\\scripts\\typecheck_configs\\zuban",
+        "exit": 1,
+        "timeout": false,
+        "seconds": [
+          0.13027800000054413,
+          0.09219370000209892,
+          0.09496700000090641
+        ],
+        "median_seconds": 0.09496700000090641,
+        "reported": {
+          "any_leak_untyped_call.py": true,
+          "assert_isinstance_evasion.py": true,
+          "control_clean.py": false,
+          "explicit_any_param.py": true,
+          "implicit_optional.py": true,
+          "missing_import.py": true,
+          "object_dot_getattr.py": false,
+          "pyright_ignore_unused.py": false,
+          "real_bug_missing_return.py": true,
+          "real_bug_optional_attr.py": true,
+          "real_bug_str_plus_int.py": true,
+          "redundant_cast.py": true,
+          "type_ignore_without_code.py": false,
+          "typeddict_wrong_key.py": true,
+          "unreachable_code.py": true,
+          "untyped_def.py": true,
+          "unused_type_ignore.py": false,
+          "wrong_cast.py": false
+        },
+        "messages": {
+          "any_leak_untyped_call.py": [
+            "Function is missing a return type annotation  [no-untyped-def]",
+            "Call to untyped function \"k\" in typed context  [no-untyped-call]"
+          ],
+          "assert_isinstance_evasion.py": [
+            "Subclass of \"str\" and \"int\" cannot exist: have distinct disjoint bases  [unreachable]",
+            "Statement is unreachable  [unreachable]"
+          ],
+          "control_clean.py": [],
+          "explicit_any_param.py": [
+            "Explicit \"Any\" is not allowed  [explicit-any]",
+            "Explicit \"Any\" is not allowed  [explicit-any]"
+          ],
+          "implicit_optional.py": [
+            "Incompatible default for parameter \"a\" (default has type \"None\", parameter has type \"int\")  [assignment]"
+          ],
+          "missing_import.py": [
+            "Cannot find implementation or library stub for module named \"nonexistent_module_xyz_123\"  [import-not-found]"
+          ],
+          "object_dot_getattr.py": [],
+          "pyright_ignore_unused.py": [],
+          "real_bug_missing_return.py": [
+            "Missing return statement  [return]"
+          ],
+          "real_bug_optional_attr.py": [
+            "Item \"None\" of \"str | None\" has no attribute \"upper\"  [union-attr]"
+          ],
+          "real_bug_str_plus_int.py": [
+            "Unsupported operand types for + (\"str\" and \"int\")  [operator]",
+            "Returning Any from function declared to return \"str\"  [no-any-return]"
+          ],
+          "redundant_cast.py": [
+            "Redundant cast to \"int\"  [redundant-cast]"
+          ],
+          "type_ignore_without_code.py": [],
+          "typeddict_wrong_key.py": [
+            "TypedDict \"Movie\" has no key \"director\"  [typeddict-item]",
+            "Returning Any from function declared to return \"str\"  [no-any-return]"
+          ],
+          "unreachable_code.py": [
+            "Statement is unreachable  [unreachable]"
+          ],
+          "untyped_def.py": [
+            "Function is missing a type annotation  [no-untyped-def]",
+            "Call to untyped function \"g\" in typed context  [no-untyped-call]"
+          ],
+          "unused_type_ignore.py": [],
+          "wrong_cast.py": []
+        },
+        "unattributed_diags": 0,
+        "total_diags": 18
+      },
+      "legacy": {
+        "cmd": [
+          "uvx",
+          "--python",
+          "3.14",
+          "--from",
+          "zuban==0.10.1",
+          "zuban",
+          "check",
+          "C:\\Users\\USER\\AppData\\Local\\Temp\\claude\\C--Users-USER-Prog-Orient-sportorg\\468d4e66-c0b1-4013-a35c-dc100817b3a3\\scratchpad\\legacy-probe\\sportorg"
+        ],
+        "cwd": "<fresh temp dir>",
+        "exit_codes": [
+          1,
+          1,
+          1
+        ],
+        "timeouts": [
+          false,
+          false,
+          false
+        ],
+        "seconds": [
+          1.6909254000020155,
+          0.4154129999988072,
+          0.44130289999884553
+        ],
+        "cold_seconds": 1.6909254000020155,
+        "warm_seconds": 0.4154129999988072,
+        "error_lines": 1679,
+        "summary": {
+          "errors": 1678,
+          "files_with_errors": 131,
+          "files_checked": 177
+        },
+        "last_line": "Found 1678 errors in 131 files (checked 177 source files)",
+        "output_truncated_in_evidence": false,
+        "stderr_head": ""
+      },
+      "single_file": {
+        "file": "C:\\Users\\USER\\AppData\\Local\\Temp\\claude\\C--Users-USER-Prog-Orient-sportorg\\468d4e66-c0b1-4013-a35c-dc100817b3a3\\scratchpad\\legacy-probe\\sportorg\\models\\result\\result_checker.py",
+        "note": null,
+        "cmd": [
+          "uvx",
+          "--python",
+          "3.14",
+          "--from",
+          "zuban==0.10.1",
+          "zuban",
+          "check",
+          "C:\\Users\\USER\\AppData\\Local\\Temp\\claude\\C--Users-USER-Prog-Orient-sportorg\\468d4e66-c0b1-4013-a35c-dc100817b3a3\\scratchpad\\legacy-probe\\sportorg\\models\\result\\result_checker.py"
+        ],
+        "seconds": [
+          0.16705800000272575,
+          0.12672350000138977,
+          0.12010819999704836
+        ],
+        "median_seconds": 0.12672350000138977,
+        "exit_codes": [
+          1,
+          1,
+          1
+        ],
+        "error_lines": 4
+      }
+    }
+  }
+}

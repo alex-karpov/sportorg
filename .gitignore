@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+build/
+dist/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.hypothesis/
+.coverage
+htmlcov/
+
+# Backlog.md local state
+backlog/.user
+
+# Editors / OS
+.idea/
+# VS Code: only the extension recommendations are shared (docs/windows-wsl-vscode.md)
+.vscode/*
+!.vscode/extensions.json
+.DS_Store
+Thumbs.db
+
+# Local Claude Code overrides (the committed file is .claude/settings.json)
+.claude/settings.local.json
+
+# Legacy: read-only pinned clones (scripts/legacy.py, ADR-0006) and executable copies
+.legacy/
+.legacy-run/
+pysport-legacy/
+
+# Agent working directories
+.superpowers/
+.worktrees/
+# code-modernization junction legacy/sportorg -> .legacy/pysport
+legacy/
+# code-modernization build output (not used by this project)
+modernized/
+analysis/**/*.local.*
+evals/results/
+
+# Local copies of plugins under test for claude plugin eval (scripts/pilot_setup.py)
+tools/plugins/

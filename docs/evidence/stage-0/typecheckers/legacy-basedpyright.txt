@@ -1,0 +1,2001 @@
+$ (cwd=temp dir)
+$ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Users\USER\Prog\Orient\_other\pysport-legacy\sportorg
+# exit=1 timeout=False seconds=9.00
+
+
+{
+    "version": "1.40.2",
+    "time": "1792839838414",
+    "generalDiagnostics": [
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
+            "severity": "error",
+            "message": "Import \"playsound3\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 6,
+                    "character": 9
+                },
+                "end": {
+                    "line": 6,
+                    "character": 19
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
+            "severity": "warning",
+            "message": "Type of \"playsound\" is unknown",
+            "range": {
+                "start": {
+                    "line": 6,
+                    "character": 27
+                },
+                "end": {
+                    "line": 6,
+                    "character": 36
+                }
+            },
+            "rule": "reportUnknownVariableType"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
+            "severity": "error",
+            "message": "Import \"sportorg\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 10,
+                    "character": 5
+                },
+                "end": {
+                    "line": 10,
+                    "character": 13
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
+            "severity": "warning",
+            "message": "Type of \"config\" is unknown",
+            "range": {
+                "start": {
+                    "line": 10,
+                    "character": 21
+                },
+                "end": {
+                    "line": 10,
+                    "character": 27
+                }
+            },
+            "rule": "reportUnknownVariableType"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
+            "severity": "error",
+            "message": "Import \"sportorg.common.singleton\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 11,
+                    "character": 5
+                },
+                "end": {
+                    "line": 11,
+                    "character": 30
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
+            "severity": "warning",
+            "message": "Type of \"singleton\" is unknown",
+            "range": {
+                "start": {
+                    "line": 11,
+                    "character": 38
+                },
+                "end": {
+                    "line": 11,
+                    "character": 47
+                }
+            },
+            "rule": "reportUnknownVariableType"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
+            "severity": "warning",
+            "message": "Type of parameter \"sound\" is unknown",
+            "range": {
+                "start": {
+                    "line": 14,
+                    "character": 9
+                },
+                "end": {
+                    "line": 14,
+                    "character": 14
+                }
+            },
+            "rule": "reportUnknownParameterType"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
+            "severity": "warning",
+            "message": "Type annotation is missing for parameter \"sound\"",
+            "range": {
+                "start": {
+                    "line": 14,
+                    "character": 9
+                },
+                "end": {
+                    "line": 14,
+                    "character": 14
+                }
+            },
+            "rule": "reportMissingParameterType"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
+            "severity": "warning",
+            "message": "Return type, \"list[Unknown]\", is partially unknown",
+            "range": {
+                "start": {
+                    "line": 20,
+                    "character": 4
+                },
+                "end": {
+                    "line": 20,
+                    "character": 14
+                }
+            },
+            "rule": "reportUnknownParameterType"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
+            "severity": "warning",
+            "message": "Type of parameter \"path\" is partially unknown\n  Parameter type is \"Unknown | None\"",
+            "range": {
+                "start": {
+                    "line": 20,
+                    "character": 15
+                },
+                "end": {
+                    "line": 20,
+                    "character": 19
+                }
+            },
+            "rule": "reportUnknownParameterType"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
+            "severity": "warning",
+            "message": "Type annotation is missing for parameter \"path\"",
+            "range": {
+                "start": {
+                    "line": 20,
+                    "character": 15
+                },
+                "end": {
+                    "line": 20,
+                    "character": 19
+                }
+            },
+            "rule": "reportMissingParameterType"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
+            "severity": "warning",
+            "message": "Type of \"path\" is unknown",
+            "range": {
+                "start": {
+                    "line": 22,
+                    "character": 8
+                },
+                "end": {
+                    "line": 22,
+                    "character": 12
+                }
+            },
+            "rule": "reportUnknownVariableType"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
+            "severity": "warning",
+            "message": "Type of \"sound_dir\" is unknown",
+            "range": {
+                "start": {
+                    "line": 22,
+                    "character": 15
+                },
+                "end": {
+                    "line": 22,
+                    "character": 31
+                }
+            },
+            "rule": "reportUnknownMemberType"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
+            "severity": "warning",
+            "message": "Type of \"p\" is unknown",
+            "range": {
+                "start": {
+                    "line": 24,
+                    "character": 8
+                },
+                "end": {
+                    "line": 24,
+                    "character": 9
+                }
+            },
+            "rule": "reportUnknownVariableType"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
+            "severity": "warning",
+            "message": "Argument type is unknown\n  Argument corresponds to parameter \"path\" in function \"listdir\"",
+            "range": {
+                "start": {
+                    "line": 24,
+                    "character": 24
+                },
+                "end": {
+                    "line": 24,
+                    "character": 28
+                }
+            },
+            "rule": "reportUnknownArgumentType"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
+            "severity": "warning",
+            "message": "Type of \"full_path\" is unknown",
+            "range": {
+                "start": {
+                    "line": 25,
+                    "character": 8
+                },
+                "end": {
+                    "line": 25,
+                    "character": 17
+                }
+            },
+            "rule": "reportUnknownVariableType"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
+            "severity": "warning",
+            "message": "Argument type is unknown\n  Argument corresponds to parameter \"a\" in function \"join\"",
+            "range": {
+                "start": {
+                    "line": 25,
+                    "character": 33
+                },
+                "end": {
+                    "line": 25,
+                    "character": 37
+                }
+            },
+            "rule": "reportUnknownArgumentType"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
+            "severity": "warning",
+            "message": "Argument type is unknown\n  Argument corresponds to parameter \"paths\" in function \"join\"",
+            "range": {
+                "start": {
+                    "line": 25,
+                    "character": 39
+                },
+                "end": {
+                    "line": 25,
+                    "character": 40
+                }
+            },
+            "rule": "reportUnknownArgumentType"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
+            "severity": "warning",
+            "message": "Argument type is unknown\n  Argument corresponds to parameter \"s\" in function \"isdir\"",
+            "range": {
+                "start": {
+                    "line": 26,
+                    "character": 25
+                },
+                "end": {
+                    "line": 26,
+                    "character": 34
+                }
+            },
+            "rule": "reportUnknownArgumentType"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
+            "severity": "warning",
+            "message": "Type of \"fs\" is partially unknown\n  Type of \"fs\" is \"list[Unknown]\"",
+            "range": {
+                "start": {
+                    "line": 27,
+                    "character": 12
+                },
+                "end": {
+                    "line": 27,
+                    "character": 14
+                }
+            },
+            "rule": "reportUnknownVariableType"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
+            "severity": "warning",
+            "message": "Argument type is unknown\n  Argument corresponds to parameter \"path\" in function \"get_sounds\"",
+            "range": {
+                "start": {
+                    "line": 27,
+                    "character": 28
+                },
+                "end": {
+                    "line": 27,
+                    "character": 37
+                }
+            },
+            "rule": "reportUnknownArgumentType"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
+            "severity": "warning",
+            "message": "Type of \"f\" is unknown",
+            "range": {
+                "start": {
+                    "line": 28,
+                    "character": 16
+                },
+                "end": {
+                    "line": 28,
+                    "character": 17
+                }
+            },
+            "rule": "reportUnknownVariableType"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
+            "severity": "warning",
+            "message": "Type of \"append\" is partially unknown\n  Type of \"append\" is \"(object: Unknown, /) -> None\"",
+            "range": {
+                "start": {
+                    "line": 29,
+                    "character": 16
+                },
+                "end": {
+                    "line": 29,
+                    "character": 28
+                }
+            },
+            "rule": "reportUnknownMemberType"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
+            "severity": "warning",
+            "message": "Argument type is unknown\n  Argument corresponds to parameter \"object\" in function \"append\"",
+            "range": {
+                "start": {
+                    "line": 29,
+                    "character": 29
+                },
+                "end": {
+                    "line": 29,
+                    "character": 30
+                }
+            },
+            "rule": "reportUnknownArgumentType"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
+            "severity": "warning",
+            "message": "Type of \"append\" is partially unknown\n  Type of \"append\" is \"(object: Unknown, /) -> None\"",
+            "range": {
+                "start": {
+                    "line": 31,
+                    "character": 12
+                },
+                "end": {
+                    "line": 31,
+                    "character": 24
+                }
+            },
+            "rule": "reportUnknownMemberType"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
+            "severity": "warning",
+            "message": "Argument type is unknown\n  Argument corresponds to parameter \"object\" in function \"append\"",
+            "range": {
+                "start": {
+                    "line": 31,
+                    "character": 25
+                },
+                "end": {
+                    "line": 31,
+                    "character": 34
+                }
+            },
+            "rule": "reportUnknownArgumentType"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
+            "severity": "warning",
+            "message": "Return type, \"list[Unknown]\", is partially unknown",
+            "range": {
+                "start": {
+                    "line": 33,
+                    "character": 11
+                },
+                "end": {
+                    "line": 33,
+                    "character": 16
+                }
+            },
+            "rule": "reportUnknownVariableType"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
+            "severity": "warning",
+            "message": "Untyped class decorator obscures type of class; ignoring decorator",
+            "range": {
+                "start": {
+                    "line": 36,
+                    "character": 1
+                },
+                "end": {
+                    "line": 36,
+                    "character": 10
+                }
+            },
+            "rule": "reportUntypedClassDecorator"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
+            "severity": "warning",
+            "message": "Type of \"_queue\" is partially unknown\n  Type of \"_queue\" is \"Queue[Unknown]\"",
+            "range": {
+                "start": {
+                    "line": 39,
+                    "character": 8
+                },
+                "end": {
+                    "line": 39,
+                    "character": 19
+                }
+            },
+            "rule": "reportUnknownMemberType"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
+            "severity": "warning",
+            "message": "Type annotation for attribute `_queue` is required because this class is not decorated with `@final`",
+            "range": {
+                "start": {
+                    "line": 39,
+                    "character": 13
+                },
+                "end": {
+                    "line": 39,
+                    "character": 19
+                }
+            },
+            "rule": "reportUnannotatedClassAttribute"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
+            "severity": "warning",
+            "message": "Type annotation for attribute `_thread` is required because this class is not decorated with `@final`",
+            "range": {
+                "start": {
+                    "line": 40,
+                    "character": 13
+                },
+                "end": {
+                    "line": 40,
+                    "character": 20
+                }
+            },
+            "rule": "reportUnannotatedClassAttribute"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
+            "severity": "warning",
+            "message": "Type annotation for attribute `_logger` is required because this class is not decorated with `@final`",
+            "range": {
+                "start": {
+                    "line": 41,
+                    "character": 13
+                },
+                "end": {
+                    "line": 41,
+                    "character": 20
+                }
+            },
+            "rule": "reportUnannotatedClassAttribute"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
+            "severity": "warning",
+            "message": "Type of parameter \"sound\" is unknown",
+            "range": {
+                "start": {
+                    "line": 43,
+                    "character": 19
+                },
+                "end": {
+                    "line": 43,
+                    "character": 24
+                }
+            },
+            "rule": "reportUnknownParameterType"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
+            "severity": "warning",
+            "message": "Type annotation is missing for parameter \"sound\"",
+            "range": {
+                "start": {
+                    "line": 43,
+                    "character": 19
+                },
+                "end": {
+                    "line": 43,
+                    "character": 24
+                }
+            },
+            "rule": "reportMissingParameterType"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
+            "severity": "warning",
+            "message": "Type of \"_queue\" is partially unknown\n  Type of \"_queue\" is \"Queue[Unknown]\"",
+            "range": {
+                "start": {
+                    "line": 44,
+                    "character": 8
+                },
+                "end": {
+                    "line": 44,
+                    "character": 19
+                }
+            },
+            "rule": "reportUnknownMemberType"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
+            "severity": "warning",
+            "message": "Type of \"put\" is partially unknown\n  Type of \"put\" is \"(item: Unknown, block: bool = True, timeout: float | None = None) -> None\"",
+            "range": {
+                "start": {
+                    "line": 44,
+                    "character": 8
+                },
+                "end": {
+                    "line": 44,
+                    "character": 23
+                }
+            },
+            "rule": "reportUnknownMemberType"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
+            "severity": "warning",
+            "message": "Argument type is unknown\n  Argument corresponds to parameter \"item\" in function \"put\"",
+            "range": {
+                "start": {
+                    "line": 44,
+                    "character": 24
+                },
+                "end": {
+                    "line": 44,
+                    "character": 29
+                }
+            },
+            "rule": "reportUnknownArgumentType"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
+            "severity": "warning",
+            "message": "Type of \"_queue\" is partially unknown\n  Type of \"_queue\" is \"Queue[Unknown]\"",
+            "range": {
+                "start": {
+                    "line": 58,
+                    "character": 18
+                },
+                "end": {
+                    "line": 58,
+                    "character": 29
+                }
+            },
+            "rule": "reportUnknownMemberType"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
+            "severity": "warning",
+            "message": "Type of \"sound\" is unknown",
+            "range": {
+                "start": {
+                    "line": 59,
+                    "character": 12
+                },
+                "end": {
+                    "line": 59,
+                    "character": 17
+                }
+            },
+            "rule": "reportUnknownVariableType"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
+            "severity": "warning",
+            "message": "Type of \"_queue\" is partially unknown\n  Type of \"_queue\" is \"Queue[Unknown]\"",
+            "range": {
+                "start": {
+                    "line": 59,
+                    "character": 20
+                },
+                "end": {
+                    "line": 59,
+                    "character": 31
+                }
+            },
+            "rule": "reportUnknownMemberType"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
+            "severity": "warning",
+            "message": "Argument type is unknown\n  Argument corresponds to parameter \"sound\" in function \"play\"",
+            "range": {
+                "start": {
+                    "line": 61,
+                    "character": 21
+                },
+                "end": {
+                    "line": 61,
+                    "character": 26
+                }
+            },
+            "rule": "reportUnknownArgumentType"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
+            "severity": "warning",
+            "message": "Variable \"e\" is not accessed",
+            "range": {
+                "start": {
+                    "line": 62,
+                    "character": 32
+                },
+                "end": {
+                    "line": 62,
+                    "character": 33
+                }
+            },
+            "rule": "reportUnusedVariable"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
+            "severity": "warning",
+            "message": "Argument type is unknown\n  Argument corresponds to parameter \"args\" in function \"error\"",
+            "range": {
+                "start": {
+                    "line": 63,
+                    "character": 54
+                },
+                "end": {
+                    "line": 63,
+                    "character": 59
+                }
+            },
+            "rule": "reportUnknownArgumentType"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\fake_std.py",
+            "severity": "warning",
+            "message": "Type of parameter \"string\" is unknown",
+            "range": {
+                "start": {
+                    "line": 1,
+                    "character": 20
+                },
+                "end": {
+                    "line": 1,
+                    "character": 26
+                }
+            },
+            "rule": "reportUnknownParameterType"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\fake_std.py",
+            "severity": "warning",
+            "message": "Type annotation is missing for parameter \"string\"",
+            "range": {
+                "start": {
+                    "line": 1,
+                    "character": 20
+                },
+                "end": {
+                    "line": 1,
+                    "character": 26
+                }
+            },
+            "rule": "reportMissingParameterType"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\fake_std.py",
+            "severity": "warning",
+            "message": "\"string\" is not accessed",
+            "range": {
+                "start": {
+                    "line": 1,
+                    "character": 20
+                },
+                "end": {
+                    "line": 1,
+                    "character": 26
+                }
+            },
+            "rule": "reportUnusedParameter"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "severity": "warning",
+            "message": "This type is deprecated as of Python 3.10; use \"| None\" instead",
+            "range": {
+                "start": {
+                    "line": 2,
+                    "character": 19
+                },
+                "end": {
+                    "line": 2,
+                    "character": 27
+                }
+            },
+            "rule": "reportDeprecated"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "severity": "warning",
+            "message": "This type is deprecated as of Python 3.9; use \"type\" instead",
+            "range": {
+                "start": {
+                    "line": 2,
+                    "character": 29
+                },
+                "end": {
+                    "line": 2,
+                    "character": 33
+                }
+            },
+            "rule": "reportDeprecated"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "severity": "error",
+            "message": "Import \"sportorg_core\" could not be resolved",
+            "range": {
+                "start": {
+                    "line": 5,
+                    "character": 9
+                },
+                "end": {
+                    "line": 5,
+                    "character": 22
+                }
+            },
+            "rule": "reportMissingImports"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "severity": "warning",
+            "message": "Type of \"_RustOTime\" is unknown",
+            "range": {
+                "start": {
+                    "line": 5,
+                    "character": 39
+                },
+                "end": {
+                    "line": 5,
+                    "character": 49
+                }
+            },
+            "rule": "reportUnknownVariableType"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "severity": "warning",
+            "message": "Type annotation for attribute `math` is required because this class is not decorated with `@final`",
+            "range": {
+                "start": {
+                    "line": 11,
+                    "character": 4
+                },
+                "end": {
+                    "line": 11,
+                    "character": 8
+                }
+            },
+            "rule": "reportUnannotatedClassAttribute"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "severity": "warning",
+            "message": "Type annotation for attribute `down` is required because this class is not decorated with `@final`",
+            "range": {
+                "start": {
+                    "line": 12,
+                    "character": 4
+                },
+                "end": {
+                    "line": 12,
+                    "character": 8
+                }
+            },
+            "rule": "reportUnannotatedClassAttribute"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "severity": "warning",
+            "message": "Type annotation for attribute `up` is required because this class is not decorated with `@final`",
+            "range": {
+                "start": {
+                    "line": 13,
+                    "character": 4
+                },
+                "end": {
+                    "line": 13,
+                    "character": 6
+                }
+            },
+            "rule": "reportUnannotatedClassAttribute"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "severity": "warning",
+            "message": "Type annotation for attribute `_msec` is required because this class is not decorated with `@final`",
+            "range": {
+                "start": {
+                    "line": 37,
+                    "character": 13
+                },
+                "end": {
+                    "line": 37,
+                    "character": 18
+                }
+            },
+            "rule": "reportUnannotatedClassAttribute"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "severity": "warning",
+            "message": "Type annotation for attribute `_args` is required because this class is not decorated with `@final`",
+            "range": {
+                "start": {
+                    "line": 38,
+                    "character": 13
+                },
+                "end": {
+                    "line": 38,
+                    "character": 18
+                }
+            },
+            "rule": "reportUnannotatedClassAttribute"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "severity": "warning",
+            "message": "Return type is unknown",
+            "range": {
+                "start": {
+                    "line": 73,
+                    "character": 8
+                },
+                "end": {
+                    "line": 73,
+                    "character": 14
+                }
+            },
+            "rule": "reportUnknownParameterType"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "severity": "warning",
+            "message": "Method \"__eq__\" is not marked as override but is overriding a method in class \"object\"",
+            "range": {
+                "start": {
+                    "line": 73,
+                    "character": 8
+                },
+                "end": {
+                    "line": 73,
+                    "character": 14
+                }
+            },
+            "rule": "reportImplicitOverride"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "severity": "warning",
+            "message": "Type of parameter \"other\" is unknown",
+            "range": {
+                "start": {
+                    "line": 73,
+                    "character": 21
+                },
+                "end": {
+                    "line": 73,
+                    "character": 26
+                }
+            },
+            "rule": "reportUnknownParameterType"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "severity": "warning",
+            "message": "Type annotation is missing for parameter \"other\"",
+            "range": {
+                "start": {
+                    "line": 73,
+                    "character": 21
+                },
+                "end": {
+                    "line": 73,
+                    "character": 26
+                }
+            },
+            "rule": "reportMissingParameterType"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "severity": "warning",
+            "message": "Return type is unknown",
+            "range": {
+                "start": {
+                    "line": 74,
+                    "character": 15
+                },
+                "end": {
+                    "line": 74,
+                    "character": 48
+                }
+            },
+            "rule": "reportUnknownVariableType"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "severity": "warning",
+            "message": "Type of \"to_msec\" is unknown",
+            "range": {
+                "start": {
+                    "line": 74,
+                    "character": 33
+                },
+                "end": {
+                    "line": 74,
+                    "character": 46
+                }
+            },
+            "rule": "reportUnknownMemberType"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "severity": "warning",
+            "message": "Return type is unknown",
+            "range": {
+                "start": {
+                    "line": 76,
+                    "character": 8
+                },
+                "end": {
+                    "line": 76,
+                    "character": 14
+                }
+            },
+            "rule": "reportUnknownParameterType"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "severity": "warning",
+            "message": "Type of parameter \"other\" is unknown",
+            "range": {
+                "start": {
+                    "line": 76,
+                    "character": 21
+                },
+                "end": {
+                    "line": 76,
+                    "character": 26
+                }
+            },
+            "rule": "reportUnknownParameterType"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "severity": "warning",
+            "message": "Type annotation is missing for parameter \"other\"",
+            "range": {
+                "start": {
+                    "line": 76,
+                    "character": 21
+                },
+                "end": {
+                    "line": 76,
+                    "character": 26
+                }
+            },
+            "rule": "reportMissingParameterType"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "severity": "warning",
+            "message": "Return type is unknown",
+            "range": {
+                "start": {
+                    "line": 77,
+                    "character": 15
+                },
+                "end": {
+                    "line": 77,
+                    "character": 47
+                }
+            },
+            "rule": "reportUnknownVariableType"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "severity": "warning",
+            "message": "Type of \"to_msec\" is unknown",
+            "range": {
+                "start": {
+                    "line": 77,
+                    "character": 32
+                },
+                "end": {
+                    "line": 77,
+                    "character": 45
+                }
+            },
+            "rule": "reportUnknownMemberType"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "severity": "warning",
+            "message": "Return type is unknown",
+            "range": {
+                "start": {
+                    "line": 79,
+                    "character": 8
+                },
+                "end": {
+                    "line": 79,
+                    "character": 14
+                }
+            },
+            "rule": "reportUnknownParameterType"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "severity": "warning",
+            "message": "Type of parameter \"other\" is unknown",
+            "range": {
+                "start": {
+                    "line": 79,
+                    "character": 21
+                },
+                "end": {
+                    "line": 79,
+                    "character": 26
+                }
+            },
+            "rule": "reportUnknownParameterType"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "severity": "warning",
+            "message": "Type annotation is missing for parameter \"other\"",
+            "range": {
+                "start": {
+                    "line": 79,
+                    "character": 21
+                },
+                "end": {
+                    "line": 79,
+                    "character": 26
+                }
+            },
+            "rule": "reportMissingParameterType"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "severity": "warning",
+            "message": "Return type is unknown",
+            "range": {
+                "start": {
+                    "line": 80,
+                    "character": 15
+                },
+                "end": {
+                    "line": 80,
+                    "character": 48
+                }
+            },
+            "rule": "reportUnknownVariableType"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "severity": "warning",
+            "message": "Type of \"to_msec\" is unknown",
+            "range": {
+                "start": {
+                    "line": 80,
+                    "character": 33
+                },
+                "end": {
+                    "line": 80,
+                    "character": 46
+                }
+            },
+            "rule": "reportUnknownMemberType"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "severity": "warning",
+            "message": "Type of parameter \"other\" is unknown",
+            "range": {
+                "start": {
+                    "line": 82,
+                    "character": 22
+                },
+                "end": {
+                    "line": 82,
+                    "character": 27
+                }
+            },
+            "rule": "reportUnknownParameterType"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "severity": "warning",
+            "message": "Type annotation is missing for parameter \"other\"",
+            "range": {
+                "start": {
+                    "line": 82,
+                    "character": 22
+                },
+                "end": {
+                    "line": 82,
+                    "character": 27
+                }
+            },
+            "rule": "reportMissingParameterType"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "severity": "warning",
+            "message": "Argument type is unknown\n  Argument corresponds to parameter \"msec\" in function \"__init__\"",
+            "range": {
+                "start": {
+                    "line": 83,
+                    "character": 31
+                },
+                "end": {
+                    "line": 83,
+                    "character": 65
+                }
+            },
+            "rule": "reportUnknownArgumentType"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "severity": "warning",
+            "message": "Type of \"to_msec\" is unknown",
+            "range": {
+                "start": {
+                    "line": 83,
+                    "character": 49
+                },
+                "end": {
+                    "line": 83,
+                    "character": 62
+                }
+            },
+            "rule": "reportUnknownMemberType"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "severity": "warning",
+            "message": "Type of parameter \"other\" is unknown",
+            "range": {
+                "start": {
+                    "line": 85,
+                    "character": 22
+                },
+                "end": {
+                    "line": 85,
+                    "character": 27
+                }
+            },
+            "rule": "reportUnknownParameterType"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "severity": "warning",
+            "message": "Type annotation is missing for parameter \"other\"",
+            "range": {
+                "start": {
+                    "line": 85,
+                    "character": 22
+                },
+                "end": {
+                    "line": 85,
+                    "character": 27
+                }
+            },
+            "rule": "reportMissingParameterType"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "severity": "warning",
+            "message": "Argument type is unknown\n  Argument corresponds to parameter \"msec\" in function \"__init__\"",
+            "range": {
+                "start": {
+                    "line": 86,
+                    "character": 31
+                },
+                "end": {
+                    "line": 86,
+                    "character": 65
+                }
+            },
+            "rule": "reportUnknownArgumentType"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "severity": "warning",
+            "message": "Type of \"to_msec\" is unknown",
+            "range": {
+                "start": {
+                    "line": 86,
+                    "character": 49
+                },
+                "end": {
+                    "line": 86,
+                    "character": 62
+                }
+            },
+            "rule": "reportUnknownMemberType"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "severity": "warning",
+            "message": "Type of parameter \"mlt\" is unknown",
+            "range": {
+                "start": {
+                    "line": 88,
+                    "character": 22
+                },
+                "end": {
+                    "line": 88,
+                    "character": 25
+                }
+            },
+            "rule": "reportUnknownParameterType"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "severity": "warning",
+            "message": "Type annotation is missing for parameter \"mlt\"",
+            "range": {
+                "start": {
+                    "line": 88,
+                    "character": 22
+                },
+                "end": {
+                    "line": 88,
+                    "character": 25
+                }
+            },
+            "rule": "reportMissingParameterType"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "severity": "warning",
+            "message": "Argument type is unknown\n  Argument corresponds to parameter \"x\" in function \"__new__\"",
+            "range": {
+                "start": {
+                    "line": 89,
+                    "character": 35
+                },
+                "end": {
+                    "line": 89,
+                    "character": 55
+                }
+            },
+            "rule": "reportUnknownArgumentType"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "severity": "warning",
+            "message": "Type of parameter \"div\" is unknown",
+            "range": {
+                "start": {
+                    "line": 91,
+                    "character": 26
+                },
+                "end": {
+                    "line": 91,
+                    "character": 29
+                }
+            },
+            "rule": "reportUnknownParameterType"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "severity": "warning",
+            "message": "Type annotation is missing for parameter \"div\"",
+            "range": {
+                "start": {
+                    "line": 91,
+                    "character": 26
+                },
+                "end": {
+                    "line": 91,
+                    "character": 29
+                }
+            },
+            "rule": "reportMissingParameterType"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "severity": "warning",
+            "message": "Argument type is unknown\n  Argument corresponds to parameter \"x\" in function \"__new__\"",
+            "range": {
+                "start": {
+                    "line": 92,
+                    "character": 35
+                },
+                "end": {
+                    "line": 92,
+                    "character": 55
+                }
+            },
+            "rule": "reportUnknownArgumentType"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "severity": "warning",
+            "message": "Method \"__str__\" is not marked as override but is overriding a method in class \"object\"",
+            "range": {
+                "start": {
+                    "line": 97,
+                    "character": 8
+                },
+                "end": {
+                    "line": 97,
+                    "character": 15
+                }
+            },
+            "rule": "reportImplicitOverride"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "severity": "warning",
+            "message": "Method \"__repr__\" is not marked as override but is overriding a method in class \"object\"",
+            "range": {
+                "start": {
+                    "line": 100,
+                    "character": 8
+                },
+                "end": {
+                    "line": 100,
+                    "character": 16
+                }
+            },
+            "rule": "reportImplicitOverride"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "severity": "warning",
+            "message": "This type is deprecated as of Python 3.9; use \"type\" instead",
+            "range": {
+                "start": {
+                    "line": 107,
+                    "character": 17
+                },
+                "end": {
+                    "line": 107,
+                    "character": 21
+                }
+            },
+            "rule": "reportDeprecated"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "severity": "warning",
+            "message": "Type of parameter \"day\" is partially unknown\n  Parameter type is \"Unknown | None\"",
+            "range": {
+                "start": {
+                    "line": 112,
+                    "character": 29
+                },
+                "end": {
+                    "line": 112,
+                    "character": 32
+                }
+            },
+            "rule": "reportUnknownParameterType"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "severity": "warning",
+            "message": "Type annotation is missing for parameter \"day\"",
+            "range": {
+                "start": {
+                    "line": 112,
+                    "character": 29
+                },
+                "end": {
+                    "line": 112,
+                    "character": 32
+                }
+            },
+            "rule": "reportMissingParameterType"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "severity": "warning",
+            "message": "Type of parameter \"hour\" is partially unknown\n  Parameter type is \"Unknown | None\"",
+            "range": {
+                "start": {
+                    "line": 112,
+                    "character": 39
+                },
+                "end": {
+                    "line": 112,
+                    "character": 43
+                }
+            },
+            "rule": "reportUnknownParameterType"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "severity": "warning",
+            "message": "Type annotation is missing for parameter \"hour\"",
+            "range": {
+                "start": {
+                    "line": 112,
+                    "character": 39
+                },
+                "end": {
+                    "line": 112,
+                    "character": 43
+                }
+            },
+            "rule": "reportMissingParameterType"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "severity": "warning",
+            "message": "Type of parameter \"minute\" is partially unknown\n  Parameter type is \"Unknown | None\"",
+            "range": {
+                "start": {
+                    "line": 112,
+                    "character": 50
+                },
+                "end": {
+                    "line": 112,
+                    "character": 56
+                }
+            },
+            "rule": "reportUnknownParameterType"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "severity": "warning",
+            "message": "Type annotation is missing for parameter \"minute\"",
+            "range": {
+                "start": {
+                    "line": 112,
+                    "character": 50
+                },
+                "end": {
+                    "line": 112,
+                    "character": 56
+                }
+            },
+            "rule": "reportMissingParameterType"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "severity": "warning",
+            "message": "Type of parameter \"sec\" is partially unknown\n  Parameter type is \"Unknown | None\"",
+            "range": {
+                "start": {
+                    "line": 112,
+                    "character": 63
+                },
+                "end": {
+                    "line": 112,
+                    "character": 66
+                }
+            },
+            "rule": "reportUnknownParameterType"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "severity": "warning",
+            "message": "Type annotation is missing for parameter \"sec\"",
+            "range": {
+                "start": {
+                    "line": 112,
+                    "character": 63
+                },
+                "end": {
+                    "line": 112,
+                    "character": 66
+                }
+            },
+            "rule": "reportMissingParameterType"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "severity": "warning",
+            "message": "Type of parameter \"msec\" is partially unknown\n  Parameter type is \"Unknown | None\"",
+            "range": {
+                "start": {
+                    "line": 112,
+                    "character": 73
+                },
+                "end": {
+                    "line": 112,
+                    "character": 77
+                }
+            },
+            "rule": "reportUnknownParameterType"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "severity": "warning",
+            "message": "Type annotation is missing for parameter \"msec\"",
+            "range": {
+                "start": {
+                    "line": 112,
+                    "character": 73
+                },
+                "end": {
+                    "line": 112,
+                    "character": 77
+                }
+            },
+            "rule": "reportMissingParameterType"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "severity": "warning",
+            "message": "Argument type is partially unknown\n  Argument corresponds to parameter \"val\" in function \"if_none\"\n  Argument type is \"Unknown | None\"",
+            "range": {
+                "start": {
+                    "line": 115,
+                    "character": 25
+                },
+                "end": {
+                    "line": 115,
+                    "character": 28
+                }
+            },
+            "rule": "reportUnknownArgumentType"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "severity": "warning",
+            "message": "Argument type is partially unknown\n  Argument corresponds to parameter \"val\" in function \"if_none\"\n  Argument type is \"Unknown | None\"",
+            "range": {
+                "start": {
+                    "line": 116,
+                    "character": 25
+                },
+                "end": {
+                    "line": 116,
+                    "character": 29
+                }
+            },
+            "rule": "reportUnknownArgumentType"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "severity": "warning",
+            "message": "Argument type is partially unknown\n  Argument corresponds to parameter \"val\" in function \"if_none\"\n  Argument type is \"Unknown | None\"",
+            "range": {
+                "start": {
+                    "line": 117,
+                    "character": 25
+                },
+                "end": {
+                    "line": 117,
+                    "character": 31
+                }
+            },
+            "rule": "reportUnknownArgumentType"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "severity": "warning",
+            "message": "Argument type is partially unknown\n  Argument corresponds to parameter \"val\" in function \"if_none\"\n  Argument type is \"Unknown | None\"",
+            "range": {
+                "start": {
+                    "line": 118,
+                    "character": 25
+                },
+                "end": {
+                    "line": 118,
+                    "character": 28
+                }
+            },
+            "rule": "reportUnknownArgumentType"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "severity": "warning",
+            "message": "Argument type is partially unknown\n  Argument corresponds to parameter \"val\" in function \"if_none\"\n  Argument type is \"Unknown | None\"",
+            "range": {
+                "start": {
+                    "line": 119,
+                    "character": 25
+                },
+                "end": {
+                    "line": 119,
+                    "character": 29
+                }
+            },
+            "rule": "reportUnknownArgumentType"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "severity": "warning",
+            "message": "Type of \"mlt\" is Any",
+            "range": {
+                "start": {
+                    "line": 134,
+                    "character": 8
+                },
+                "end": {
+                    "line": 134,
+                    "character": 11
+                }
+            },
+            "rule": "reportAny"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "severity": "warning",
+            "message": "Return type is Any",
+            "range": {
+                "start": {
+                    "line": 135,
+                    "character": 15
+                },
+                "end": {
+                    "line": 135,
+                    "character": 38
+                }
+            },
+            "rule": "reportAny"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "severity": "warning",
+            "message": "Type annotation is missing for parameter \"day\"",
+            "range": {
+                "start": {
+                    "line": 148,
+                    "character": 17
+                },
+                "end": {
+                    "line": 148,
+                    "character": 20
+                }
+            },
+            "rule": "reportMissingParameterType"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "severity": "warning",
+            "message": "Type annotation is missing for parameter \"hour\"",
+            "range": {
+                "start": {
+                    "line": 148,
+                    "character": 24
+                },
+                "end": {
+                    "line": 148,
+                    "character": 28
+                }
+            },
+            "rule": "reportMissingParameterType"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "severity": "warning",
+            "message": "Type annotation is missing for parameter \"minute\"",
+            "range": {
+                "start": {
+                    "line": 148,
+                    "character": 32
+                },
+                "end": {
+                    "line": 148,
+                    "character": 38
+                }
+            },
+            "rule": "reportMissingParameterType"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "severity": "warning",
+            "message": "Type annotation is missing for parameter \"sec\"",
+            "range": {
+                "start": {
+                    "line": 148,
+                    "character": 42
+                },
+                "end": {
+                    "line": 148,
+                    "character": 45
+                }
+            },
+            "rule": "reportMissingParameterType"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "severity": "warning",
+            "message": "Type annotation is missing for parameter \"msec\"",
+            "range": {
+                "start": {
+                    "line": 148,
+                    "character": 49
+                },
+                "end": {
+                    "line": 148,
+                    "character": 53
+                }
+            },
+            "rule": "reportMissingParameterType"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "severity": "warning",
+            "message": "This type is deprecated as of Python 3.10; use \"| None\" instead",
+            "range": {
+                "start": {
+                    "line": 158,
+                    "character": 21
+                },
+                "end": {
+                    "line": 158,
+                    "character": 29
+                }
+            },
+            "rule": "reportDeprecated"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "severity": "warning",
+            "message": "Type of \"multiplier\" is Any",
+            "range": {
+                "start": {
+                    "line": 179,
+                    "character": 8
+                },
+                "end": {
+                    "line": 179,
+                    "character": 18
+                }
+            },
+            "rule": "reportAny"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "severity": "warning",
+            "message": "Type of \"new_ms\" is Any",
+            "range": {
+                "start": {
+                    "line": 181,
+                    "character": 12
+                },
+                "end": {
+                    "line": 181,
+                    "character": 18
+                }
+            },
+            "rule": "reportAny"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "severity": "warning",
+            "message": "Argument type is Any\n  Argument corresponds to parameter \"number\" in function \"round\"",
+            "range": {
+                "start": {
+                    "line": 181,
+                    "character": 31
+                },
+                "end": {
+                    "line": 181,
+                    "character": 46
+                }
+            },
+            "rule": "reportAny"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "severity": "warning",
+            "message": "Type of \"new_ms\" is Any",
+            "range": {
+                "start": {
+                    "line": 183,
+                    "character": 12
+                },
+                "end": {
+                    "line": 183,
+                    "character": 18
+                }
+            },
+            "rule": "reportAny"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "severity": "warning",
+            "message": "Type of \"new_ms\" is Any",
+            "range": {
+                "start": {
+                    "line": 185,
+                    "character": 12
+                },
+                "end": {
+                    "line": 185,
+                    "character": 18
+                }
+            },
+            "rule": "reportAny"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "severity": "warning",
+            "message": "Argument type is Any\n  Argument corresponds to parameter \"msec\" in function \"__init__\"",
+            "range": {
+                "start": {
+                    "line": 187,
+                    "character": 31
+                },
+                "end": {
+                    "line": 187,
+                    "character": 37
+                }
+            },
+            "rule": "reportAny"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "severity": "warning",
+            "message": "Type of \"OTime\" is partially unknown\n  Type of \"OTime\" is \"Unknown | type[PythonOTime]\"",
+            "range": {
+                "start": {
+                    "line": 190,
+                    "character": 0
+                },
+                "end": {
+                    "line": 190,
+                    "character": 5
+                }
+            },
+            "rule": "reportUnknownVariableType"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\singleton.py",
+            "severity": "warning",
+            "message": "Type of parameter \"name\" is unknown",
+            "range": {
+                "start": {
+                    "line": 11,
+                    "character": 22
+                },
+                "end": {
+                    "line": 11,
+                    "character": 26
+                }
+            },
+            "rule": "reportUnknownParameterType"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\singleton.py",
+            "severity": "warning",
+            "message": "Type annotation is missing for parameter \"name\"",
+            "range": {
+                "start": {
+                    "line": 11,
+                    "character": 22
+                },
+                "end": {
+                    "line": 11,
+                    "character": 26
+                }
+            },
+            "rule": "reportMissingParameterType"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\singleton.py",
+            "severity": "warning",
+            "message": "Type of parameter \"bases\" is unknown",
+            "range": {
+                "start": {
+                    "line": 11,
+                    "character": 28
+                },
+                "end": {
+                    "line": 11,
+                    "character": 33
+                }
+            },
+            "rule": "reportUnknownParameterType"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\singleton.py",
+            "severity": "warning",
+            "message": "Type annotation is missing for parameter \"bases\"",
+            "range": {
+                "start": {
+                    "line": 11,
+                    "character": 28
+                },
+                "end": {
+                    "line": 11,
+                    "character": 33
+                }
+            },
+            "rule": "reportMissingParameterType"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\singleton.py",
+            "severity": "warning",
+            "message": "Type of parameter \"attrs\" is unknown",
+            "range": {
+                "start": {
+                    "line": 11,
+                    "character": 35
+                },
+                "end": {
+                    "line": 11,
+                    "character": 40
+                }
+            },
+            "rule": "reportUnknownParameterType"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\singleton.py",
+            "severity": "warning",
+            "message": "Type annotation is missing for parameter \"attrs\"",
+            "range": {
+                "start": {
+                    "line": 11,
+                    "character": 35
+                },
+                "end": {
+                    "line": 11,
+                    "character": 40
+                }
+            },
+            "rule": "reportMissingParameterType"
+        },
+        {
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\singleton.py",
+            "severity": "warning",
+            "message": "Type of parameter \"kwargs\" is unknown",
+            "range": {
+                "start": {
+                    "line": 11,
+... [TRUNCATED: 432306 lines total, first 2000 kept]

@@ -1,0 +1,64 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  checks:
+    name: ${{ matrix.os }} / py${{ matrix.python }}
+    runs-on: ${{ matrix.os }}
+    # 3.15 is an early-warning signal and must not block merges (ADR-0001)
+    continue-on-error: ${{ matrix.python == '3.15' }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        python: ["3.14", "3.15"]   # 3.14 = development version and lower bound, 3.15 = early-warning lane (ADR-0001)
+    steps:
+      - uses: actions/checkout@93cb6efe18208431cddfb8368fd83d5badbf9bfd # v5.0.1
+      - uses: astral-sh/setup-uv@07a047e608db84b3d8c06cd9a7c7dcc9c355c18e # v10.3.2
+        with:
+          enable-cache: true
+      - name: Install Python ${{ matrix.python }} and sync locked environment
+        run: |
+          uv python install ${{ matrix.python }}
+          uv sync --locked --no-build --python ${{ matrix.python }}   # --no-build: never compile third-party sdists (ADR-0001)
+      - name: Quality checks (same command as locally)
+        run: uv run --no-sync python scripts/check.py --keep-going
+      - name: Vulnerabilities
+        run: uv audit --locked
+      - name: Licence compatibility
+        run: uv run --no-sync python -m scripts.check_licenses
+
+  clean-install:
+    # README Linux steps executed in order on a machine with nothing preinstalled.
+    # Latest uv is installed on purpose (as a newcomer would get it): do not pin uv here.
+    name: clean machine (ubuntu container)
+    runs-on: ubuntu-latest
+    container: ubuntu:24.04
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - name: Container only (not in README) - the container runs as root and has no sudo
+        run: apt-get update && apt-get install -y --no-install-recommends sudo
+      - name: README Prerequisites (Linux)
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y git curl ca-certificates
+      - name: README Linux and macOS steps
+        run: |
+          set -e
+          curl -LsSf https://astral.sh/uv/install.sh | sh
+          source $HOME/.local/bin/env
+          git clone https://github.com/alex-karpov/sportorg.git
+          cd sportorg
+          # CI only (not in README): README describes main; test the commit under test instead
+          git fetch "https://github.com/${GITHUB_REPOSITORY}.git" "${GITHUB_SHA}"
+          git checkout --detach FETCH_HEAD
+          uv sync
+          uv run python scripts/check.py

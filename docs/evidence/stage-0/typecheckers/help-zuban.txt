@@ -1,0 +1,166 @@
+Installed 1 package in 10.27s
+A fast type checker and language server for Python, written in Rust
+
+Usage: zuban.exe <COMMAND>
+
+Commands:
+  check   Checks a file or project for type errors
+  mypy    Type checks files like you would do when calling `mypy`
+  server  Starts an LSP server
+  help    Print this message or the help of the given subcommand(s)
+
+Options:
+  -h, --help     Print help
+  -V, --version  Print version
+
+===== zuban check --help =====
+Checks a file or project for type errors
+
+Usage: zuban.exe check [OPTIONS] [FILES]...
+
+Arguments:
+  [FILES]...  
+
+Options:
+      --mode <MODE>
+          Choosing a mode sets the basic preset of flags. The default mode is not mypy-compatible [possible values: default, mypy, auto]
+      --untyped-function-return-mode <UNTYPED_FUNCTION_RETURN_MODE>
+          Can be either "any" to infer untyped function returns like Mypy, "inferred" to infer return types or "advanced" to infer return types in a more sophisticated way that includes inferring params [possible values: any, inferred, advanced]
+      --exclude <EXCLUDE>
+          Regular expression to match file names, directory names or paths which mypy should ignore while recursively discovering files to check, e.g. --exclude '/setup\.py$'. May be specified more than once, eg. --exclude a --exclude b
+      --config-file <CONFIG_FILE>
+          Configuration file, must have a [mypy] section (defaults to mypy.ini, .mypy.ini, pyproject.toml, setup.cfg, ~/.config/mypy/config, ~/.mypy.ini)
+      --ignore-missing-imports
+          Silently ignore imports of missing modules
+      --follow-untyped-imports
+          Typecheck modules without stubs or py.typed marker
+      --python-version <PYTHON_VERSION>
+          Type check code assuming it will be running on Python x.y
+      --python-executable <PYTHON_EXECUTABLE>
+          Specifies the path for a python executable (for example a virtual env)
+      --platform <PLATFORM>
+          Type check special-cased code for the given OS platform (defaults to sys.platform)
+      --always-true <NAME>
+          Additional variable to be considered True (may be repeated)
+      --always-false <NAME>
+          Additional variable to be considered False (may be repeated)
+      --disallow-any-decorated
+          Disallow functions that have Any in their signature after decorator transformation
+      --allow-any-decorated
+          
+      --disallow-any-explicit
+          Disallow explicit Any in type positions
+      --allow-any-explicit
+          
+      --disallow-any-generics
+          Disallow usage of generic types that do not specify explicit type parameters (inverse: --allow-any-generics)
+      --allow-any-generics
+          
+      --disallow-subclassing-any
+          Disallow subclassing values of type 'Any' when defining classes (inverse: --allow-subclassing-any)
+      --allow-subclassing-any
+          
+      --disallow-untyped-calls
+          Disallow calling functions without type annotations from functions with type annotations (inverse: --allow-untyped-calls)
+      --allow-untyped-calls
+          
+      --disallow-untyped-defs
+          Disallow defining functions without type annotations or with incomplete type annotations (inverse: --allow-untyped-defs)
+      --allow-untyped-defs
+          
+      --disallow-incomplete-defs
+          Disallow defining functions with incomplete type annotations (while still allowing entirely unannotated definitions) (inverse: --allow-incomplete-defs)
+      --allow-incomplete-defs
+          
+      --check-untyped-defs
+          Type check the interior of functions without type annotations (inverse: --no-check-untyped-defs)
+      --no-check-untyped-defs
+          
+      --disallow-untyped-decorators
+          Disallow decorating typed functions with untyped decorators (inverse: --allow-untyped-decorators)
+      --allow-untyped-decorators
+          
+      --implicit-optional
+          Assume arguments with default values of None are Optional (inverse: --no-implicit-optional)
+      --no-implicit-optional
+          
+      --no-strict-optional
+          Disable strict Optional checks (inverse: --strict-optional)
+      --strict-optional
+          
+      --no-untyped-strict-optional
+          Disable strict Optional checks in untyped contexts (inverse: --untyped-strict-optional)
+      --untyped-strict-optional
+          
+      --warn-redundant-casts
+          Warn about casting an expression to its inferred type (inverse: --no-warn-redundant-casts)
+      --no-warn-redundant-casts
+          
+      --warn-no-return
+          Warn about functions that end without returning (inverse: --no-warn-no-return)
+      --no-warn-no-return
+          
+      --warn-return-any
+          Warn about returning values of type Any from non-Any typed functions (inverse: --no-warn-return-any)
+      --no-warn-return-any
+          
+      --warn-unreachable
+          Warn about statements or expressions inferred to be unreachable (inverse: --no-warn-unreachable)
+      --no-warn-unreachable
+          
+      --allow-untyped-globals
+          Suppress toplevel errors caused by missing annotations (inverse: --disallow-untyped-globals)
+      --disallow-untyped-globals
+          
+      --allow-redefinition
+          Allow unconditional variable redefinition with a new type (inverse: --disallow-redefinition)
+      --disallow-redefinition
+          
+      --allow-redefinition-new
+          For now --allow-redefinition and --allow-redefinition-new are the same (inverse: --disallow-redefinition-new)
+      --disallow-redefinition-new
+          
+      --no-implicit-reexport
+          Treat imports as private unless aliased (inverse: --implicit-reexport)
+      --implicit-reexport
+          
+      --strict-equality
+          Prohibit equality, identity, and container checks for non-overlapping types (inverse: --no-strict-equality)
+      --no-strict-equality
+          
+      --strict-bytes
+          Disable treating bytearray and memoryview as subtypes of bytes
+      --extra-checks
+          Enable additional checks that are technically correct but may be impractical in real code. For example, this prohibits partial overlap in TypedDict updates, and makes arguments prepended via Concatenate positional-only (inverse: --no-extra-checks)
+      --no-extra-checks
+          
+      --strict
+          Strict mode; enables the following flags: --warn-unused-configs, --disallow-any-generics, --disallow-subclassing-any, --disallow-untyped-calls, --disallow-untyped-defs, --disallow-incomplete-defs, --check-untyped-defs, --disallow-untyped-decorators, --warn-redundant-casts, --warn-unused-ignores, --warn-return-any, --no-implicit-reexport, --strict-equality, --extra-checks
+      --disable-error-code <NAME>
+          Disable a specific error code
+      --enable-error-code <NAME>
+          Enable a specific error code
+      --show-column-numbers
+          Show column numbers in error messages (inverse: --hide-column-numbers)
+      --hide-column-numbers
+          
+      --show-error-end
+          Show end line/end column numbers in error messages. This implies --show-column-numbers (inverse: --hide-error-end)
+      --hide-error-end
+          
+      --show-error-codes
+          Show error codes in error messages (inverse: --hide-error-codes)
+      --hide-error-codes
+          
+      --pretty
+          Use visually nicer output in error messages: Use soft word wrap, show source code snippets, and show error location markers (inverse: --no-pretty)
+      --no-pretty
+          
+      --no-error-summary
+          
+      --custom-typeshed-dir <CUSTOM_TYPESHED_DIR>
+          Specifies the directory where zuban looks for standard library typeshed stubs, instead of the typeshed that ships with zuban
+      --extra-search-path <EXTRA_SEARCH_PATH>
+          Additional paths to be used as additional "sys.path" module-resolution bases. Using this option typically means your environment is not setup correctly. In some rare cases this can be useful to find Python packages that were not installed normally
+  -h, --help
+          Print help

@@ -1,0 +1,3 @@
+preset = "all"
+check_unannotated_defs = true
+infer_return_types = "checked"

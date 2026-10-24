@@ -1,0 +1,111 @@
+$ (cwd=C:\Users\USER\Prog\Orient\sportorg\scripts\typecheck_configs\pyrefly)
+$ uvx --python 3.14 --from pyrefly==1.4.0 pyrefly check -c C:\Users\USER\Prog\Orient\sportorg\scripts\typecheck_configs\pyrefly\pyrefly.toml C:\Users\USER\Prog\Orient\sportorg\scripts\typecheck_fixtures
+# exit=1
+
+ERROR `k` is missing a return annotation [unannotated-return]
+ --> C:\Users\USER\Prog\Orient\sportorg\scripts\typecheck_fixtures\any_leak_untyped_call.py:2:5
+  |
+2 | def k():
+  |     ^
+ERROR Argument `Literal['s']` is not assignable to parameter `i` with type `int` in function `need_int` [bad-argument-type]
+ --> C:\Users\USER\Prog\Orient\sportorg\scripts\typecheck_fixtures\any_leak_untyped_call.py:9:10
+  |
+9 | need_int(k())
+  |          ^^^
+ERROR Explicit `Any` is not allowed [explicit-any]
+ --> C:\Users\USER\Prog\Orient\sportorg\scripts\typecheck_fixtures\explicit_any_param.py:5:10
+  |
+5 | def f(a: Any) -> Any:
+  |          ^^^
+ERROR Explicit `Any` is not allowed [explicit-any]
+ --> C:\Users\USER\Prog\Orient\sportorg\scripts\typecheck_fixtures\explicit_any_param.py:5:18
+  |
+5 | def f(a: Any) -> Any:
+  |                  ^^^
+ERROR Default `None` is not assignable to parameter `a` with type `int` [bad-function-definition]
+ --> C:\Users\USER\Prog\Orient\sportorg\scripts\typecheck_fixtures\implicit_optional.py:2:16
+  |
+2 | def h(a: int = None) -> int:
+  |          ---   ^^^^
+  |          |
+  |          declared type
+  The declared type does not allow `None`. Consider changing the declared type to `int | None`.
+ERROR Cannot find module `nonexistent_module_xyz_123` [missing-import]
+ --> C:\Users\USER\Prog\Orient\sportorg\scripts\typecheck_fixtures\missing_import.py:2:8
+  |
+2 | import nonexistent_module_xyz_123
+  |        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  Looked in these locations (from config in `C:\Users\USER\Prog\Orient\sportorg\scripts\typecheck_configs\pyrefly\pyrefly.toml`):
+  Import root (inferred from project layout): "C:\\Users\\USER\\Prog\\Orient\\sportorg\\scripts\\typecheck_configs\\pyrefly"
+  Site packages path queried from interpreter: ["C:\\Users\\USER\\AppData\\Roaming\\uv\\python\\cpython-3.14-windows-x86_64-none\\DLLs", "C:\\Users\\USER\\AppData\\Roaming\\uv\\python\\cpython-3.14-windows-x86_64-none", "C:\\Users\\USER\\AppData\\Local\\uv\\cache\\archive-v0\\txEhm6RCblf6Jp0a", "C:\\Users\\USER\\AppData\\Local\\uv\\cache\\archive-v0\\txEhm6RCblf6Jp0a\\Lib\\site-packages"]
+ERROR Function declared to return `int`, but one or more paths are missing an explicit `return` [bad-return]
+ --> C:\Users\USER\Prog\Orient\sportorg\scripts\typecheck_fixtures\real_bug_missing_return.py:2:22
+  |
+2 | def p(flag: bool) -> int:
+  |                      ^^^
+ERROR Object of class `NoneType` has no attribute `upper` [missing-attribute]
+ --> C:\Users\USER\Prog\Orient\sportorg\scripts\typecheck_fixtures\real_bug_optional_attr.py:3:12
+  |
+3 |     return s.upper()
+  |            ^^^^^^^
+ERROR `+` is not supported between `str` and `Literal[1]` [unsupported-operation]
+ --> C:\Users\USER\Prog\Orient\sportorg\scripts\typecheck_fixtures\real_bug_str_plus_int.py:3:12
+  |
+3 |     return s + 1
+  |            -^^^-
+  |            |   |
+  |            |   has type `Literal[1]`
+  |            has type `str`
+  No matching overload found for function `str.__add__` called with arguments: (Literal[1])
+  Possible overloads:
+    (value: LiteralString, /) -> LiteralString
+    (value: str, /) -> str [closest match]
+  Argument `Literal[1]` is not assignable to parameter `value` with type `str` in function `str.__add__`
+ERROR TypedDict `Movie` does not have key `director` [bad-typed-dict-key]
+  --> C:\Users\USER\Prog\Orient\sportorg\scripts\typecheck_fixtures\typeddict_wrong_key.py:11:14
+   |
+11 |     return m["director"]
+   |              ^^^^^^^^^^
+ERROR Function declared to return `int`, but one or more paths are missing an explicit `return` [bad-return]
+ --> C:\Users\USER\Prog\Orient\sportorg\scripts\typecheck_fixtures\unreachable_code.py:2:12
+  |
+2 | def r() -> int:
+  |            ^^^
+ERROR This code is unreachable [unreachable]
+ --> C:\Users\USER\Prog\Orient\sportorg\scripts\typecheck_fixtures\unreachable_code.py:4:5
+  |
+4 |     print("never")
+  |     ^^^^^^^^^^^^^^
+ERROR `g` is missing a return annotation [unannotated-return]
+ --> C:\Users\USER\Prog\Orient\sportorg\scripts\typecheck_fixtures\untyped_def.py:2:5
+  |
+2 | def g(a, b):
+  |     ^
+ERROR `g` is missing an annotation for parameter `a` [implicit-any-parameter]
+ --> C:\Users\USER\Prog\Orient\sportorg\scripts\typecheck_fixtures\untyped_def.py:2:7
+  |
+2 | def g(a, b):
+  |       ^
+ERROR `g` is missing an annotation for parameter `b` [implicit-any-parameter]
+ --> C:\Users\USER\Prog\Orient\sportorg\scripts\typecheck_fixtures\untyped_def.py:2:10
+  |
+2 | def g(a, b):
+  |          ^
+ERROR The type of the returned value is unknown; it is inferred as an implicit `Any` [unknown-return-type]
+ --> C:\Users\USER\Prog\Orient\sportorg\scripts\typecheck_fixtures\untyped_def.py:3:12
+  |
+3 |     return a + b
+  |            ^^^^^
+ERROR Unused `# type: ignore` comment [unused-type-ignore]
+ --> C:\Users\USER\Prog\Orient\sportorg\scripts\typecheck_fixtures\unused_type_ignore.py:2:13
+  |
+2 | x: int = 1  # type: ignore
+  |             ^^^^^^^^^^^^^^
+ERROR Cast from `Literal['not an int']` to `int` is invalid because the types are disjoint [invalid-cast]
+ --> C:\Users\USER\Prog\Orient\sportorg\scripts\typecheck_fixtures\wrong_cast.py:4:14
+  |
+4 | w: int = cast(int, "not an int")
+  |              ^^^^^^^^^^^^^^^^^^^
+--- stderr ---
+ WARN C:\Users\USER\Prog\Orient\sportorg\scripts\typecheck_configs\pyrefly\pyrefly.toml: Extra keys found in config: check_unannotated_defs, infer_return_types
+ INFO 18 errors (1 suppressed)

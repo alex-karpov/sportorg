@@ -1,0 +1,118 @@
+== clean machine: Ubuntu 24.04.5 LTS
+== preinstalled? uv/python3/git/curl:
+debconf: delaying package configuration, since apt-utils is not installed
+== README step 1: install uv
+downloading uv 0.13.5 x86_64-unknown-linux-gnu
+installing to /root/.local/bin
+  uv
+  uvx
+everything's installed!
+
+To add $HOME/.local/bin to your PATH, either restart your shell or run:
+
+    source $HOME/.local/bin/env (sh, bash, zsh)
+    source $HOME/.local/bin/env.fish (fish)
+uv 0.13.5 (x86_64-unknown-linux-gnu)
+== README step 2 (substituted: working-tree copy instead of git clone, branch not pushed yet; file modes reset to 644 because the Windows bind mount reports every file as executable)
+== README step 3: uv sync
+Downloading cpython-3.14.9-linux-x86_64-gnu (download) (35.0MiB)
+ Downloaded cpython-3.14.9-linux-x86_64-gnu (download)
+Using CPython 3.14.9
+Creating virtual environment at: .venv
+Resolved 20 packages in 1ms
+   Building sportorg-ng @ file:///work
+      Built sportorg-ng @ file:///work
+Downloading pygments (1.2MiB)
+Downloading ruff (10.0MiB)
+Downloading grimp (2.2MiB)
+Downloading nodejs-wheel-binaries (58.3MiB)
+Downloading basedpyright (13.1MiB)
+ Downloaded pygments
+ Downloaded grimp
+ Downloaded ruff
+ Downloaded basedpyright
+ Downloaded nodejs-wheel-binaries
+Prepared 19 packages in 15.18s
+Installed 19 packages in 524ms
+ + basedpyright==1.40.2
+ + click==8.5.0
+ + grimp==3.17
+ + import-linter==2.15
+ + iniconfig==2.3.1
+ + markdown-it-py==4.2.0
+ + mdurl==0.1.2
+ + nodejs-wheel-binaries==24.19.0
+ + packaging==26.3
+ + pip-licenses==5.5.5
+ + pluggy==1.7.0
+ + prettytable==3.18.0
+ + pygments==2.21.0
+ + pytest==9.1.1
+ + rich==15.0.0
+ + ruff==0.17.2
+ + sportorg-ng==0.0.1 (from file:///work)
+ + typing-extensions==4.16.0
+ + wcwidth==0.9.3
+
+real	0m20.980s
+user	0m2.291s
+sys	0m5.155s
+== README step 4: checks
+
+== format: /work/.venv/bin/ruff format --check src tests scripts
+27 files already formatted
+
+== lint: /work/.venv/bin/ruff check src tests scripts
+All checks passed!
+
+== types: /work/.venv/bin/basedpyright src tests scripts
+0 errors, 0 warnings, 0 notes
+
+== imports: /work/.venv/bin/lint-imports
+
+╔══╗─────────▶╔╗ ╔╗      ╔╗◀───┐
+╚╣╠╝◀─────┐  ╔╝╚╗║║────▶╔╝╚╗   │
+ ║║   ╔══╦══╦╩╗╔╝║║  ╔╦═╩╗╔╝╔═╦══╗
+ ║║╔══╣╔╗║╔╗║╔╣║ ║║ ╔╬╣╔╗║║ ║│║╔═╝
+╔╣╠╣║║║╚╝║╚╝║║║╚╗║╚═╝║║║║║╚╗║═╣║
+╚══╩╩╩╣╔═╩══╩╝╚═╝╚═══╩╩╝╚╩═╩╩═╩╝
+  └──▶║║                    ▲ 
+      ╚╝────────────────────┘
+
+
+---------
+Contracts
+---------
+
+Analyzed 10 files, 3 dependencies.
+----------------------------------
+
+core is pure: no I/O, UI, platform or national code KEPT
+nothing imports the UI KEPT
+core and adapters do not depend on national packages KEPT
+
+Contracts: 3 kept, 0 broken.
+
+== tests: /work/.venv/bin/pytest -q
+.......................                                                  [100%]
+23 passed in 0.10s
+
+== summary
+ok   format     0.01s
+ok   lint       0.02s
+ok   types      2.18s
+ok   imports    0.50s
+ok   tests      0.79s
+
+real	0m3.954s
+user	0m4.546s
+sys	0m0.782s
+== extra: uv audit + licences
+warning: `uv audit` is experimental and may change without warning. Pass `--preview-features audit-command` to disable this warning.
+Resolved 20 packages in 1ms
+Found no known vulnerabilities and no adverse project statuses in 19 packages
+Traceback (most recent call last):
+  File "/work/scripts/check_licenses.py", line 18, in <module>
+    from scripts._json import as_dict, as_list, as_str, parse_json
+ModuleNotFoundError: No module named 'scripts'
+exit=1

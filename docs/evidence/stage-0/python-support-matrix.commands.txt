@@ -1,0 +1,4 @@
+# run from repo root C:\Users\USER\Prog\Orient\sportorg (Git Bash)
+1. uv run --python 3.15 --no-project python -I scripts/python_support_matrix.py   -> exit 0 (ok: 62/62 packages; eol=True)
+   (a first attempt failed only because of a shell heredoc quoting error while creating the script; the script was then created with a file-write tool, no script bug fixes were needed)
+2. uv python list --all-platforms --only-downloads 2>&1 | grep -E "cpython-3\.1[345]\.[0-9]+-(windows|linux|macos)" | grep -v freethreaded | sort -u | head -60 > docs/evidence/stage-0/uv-python-downloads.txt   -> exit 0 (PIPESTATUS 0 0 0 0 0)

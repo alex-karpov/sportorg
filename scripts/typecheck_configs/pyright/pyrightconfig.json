@@ -1,0 +1,5 @@
+{
+  "typeCheckingMode": "strict",
+  "reportUnnecessaryTypeIgnoreComment": "error",
+  "enableTypeIgnoreComments": true
+}

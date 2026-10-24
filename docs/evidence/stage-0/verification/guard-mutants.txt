@@ -1,0 +1,28 @@
+# guard mutants: copy of scripts/, tests/, pyproject.toml from the clone at aeb0d35; 2026-10-24T21:57:09+07:00
+# pytest runs with -B and every .pyc removed before each mutant (an earlier run without this was invalid: stale bytecode)
+guard module under test: C:\Users\USER\AppData\Local\Temp\claude\C--Users-USER-Prog-Orient-sportorg\468d4e66-c0b1-4013-a35c-dc100817b3a3\scratchpad\v2\mut2\scripts\hooks\guard.py
+baseline: exit 0 | 18 passed in 0.07s
+killed   drop rm                          | 1 failed, 17 passed in 0.15s
+SURVIVED drop cd                          | 18 passed in 0.07s
+killed   drop > / >> redirection          | 1 failed, 17 passed in 0.14s
+killed   drop sed -i                      | 1 failed, 17 passed in 0.15s
+killed   drop git checkout                | 1 failed, 17 passed in 0.15s
+SURVIVED drop uv sync                     | 18 passed in 0.06s
+killed   drop Set-Content                 | 1 failed, 17 passed in 0.15s
+SURVIVED drop Remove-Item                 | 18 passed in 0.07s
+SURVIVED verb only at line start          | 18 passed in 0.07s
+killed   NotebookEdit not a file tool     | 1 failed, 17 passed in 0.14s
+killed   MultiEdit not a file tool        | 1 failed, 17 passed in 0.14s
+SURVIVED PowerShell not a shell tool      | 18 passed in 0.07s
+killed   ignore notebook_path             | 1 failed, 17 passed in 0.14s
+killed   golden: no ask                   | 1 failed, 17 passed in 0.14s
+killed   file tools: no legacy deny       | 4 failed, 14 passed in 0.14s
+killed   shell: and -> or                 | 4 failed, 14 passed in 0.14s
+SURVIVED main prints nothing              | 18 passed in 0.06s
+SURVIVED main exits 1 on decision         | 18 passed in 0.06s
+killed   decision always deny in JSON     | 1 failed, 17 passed in 0.14s
+killed   normalize keeps backslashes      | 1 failed, 17 passed in 0.15s
+SURVIVED malformed payload raises         | 18 passed in 0.06s
+killed 13/21
+[exit 0]
+copy restored: identical to the clone except line endings

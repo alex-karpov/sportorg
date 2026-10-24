@@ -1,0 +1,130 @@
+
+######## README step 1 (verbatim): curl -LsSf https://astral.sh/uv/install.sh | sh
+bash: line 7: curl: command not found
+[exit 127/0]
+
+######## Not in README: prerequisites of a bare image (git, curl, CA certs)
+debconf: delaying package configuration, since apt-utils is not installed
+[exit 0]
+
+######## README step 1 (verbatim, retry after prerequisites)
+downloading uv 0.13.5 x86_64-unknown-linux-gnu
+installing to /root/.local/bin
+  uv
+  uvx
+everything's installed!
+
+To add $HOME/.local/bin to your PATH, either restart your shell or run:
+
+    source $HOME/.local/bin/env (sh, bash, zsh)
+    source $HOME/.local/bin/env.fish (fish)
+[exit 0/0]
+
+######## README step 2 (with --branch stage-0 as the verifier was told): git clone ... && cd sportorg
+Cloning into 'sportorg'...
+[exit 0] pwd=/root/sportorg head=aeb0d35b5114a3efbe9e878583f275883b3495a0
+
+######## README step 3 (verbatim, same shell): uv sync
+bash: line 19: uv: command not found
+[exit 127]
+
+######## Same shell after sourcing the env file the uv installer names
+uv=/root/.local/bin/uv uv 0.13.5 (x86_64-unknown-linux-gnu)
+
+######## README step 3 (verbatim): uv sync
+Downloading cpython-3.14.9-linux-x86_64-gnu (download) (35.0MiB)
+ Downloaded cpython-3.14.9-linux-x86_64-gnu (download)
+Using CPython 3.14.9
+Creating virtual environment at: .venv
+Resolved 20 packages in 0.83ms
+   Building sportorg-ng @ file:///root/sportorg
+      Built sportorg-ng @ file:///root/sportorg
+Downloading pygments (1.2MiB)
+Downloading ruff (10.0MiB)
+Downloading nodejs-wheel-binaries (58.3MiB)
+Downloading basedpyright (13.1MiB)
+Downloading grimp (2.2MiB)
+ Downloaded pygments
+ Downloaded grimp
+ Downloaded ruff
+ Downloaded basedpyright
+ Downloaded nodejs-wheel-binaries
+Prepared 19 packages in 8.91s
+Installed 19 packages in 486ms
+ + basedpyright==1.40.2
+ + click==8.5.0
+ + grimp==3.17
+ + import-linter==2.15
+ + iniconfig==2.3.1
+ + markdown-it-py==4.2.0
+ + mdurl==0.1.2
+ + nodejs-wheel-binaries==24.19.0
+ + packaging==26.3
+ + pip-licenses==5.5.5
+ + pluggy==1.7.0
+ + prettytable==3.18.0
+ + pygments==2.21.0
+ + pytest==9.1.1
+ + rich==15.0.0
+ + ruff==0.17.2
+ + sportorg-ng==0.0.1 (from file:///root/sportorg)
+ + typing-extensions==4.16.0
+ + wcwidth==0.9.3
+[exit 0]
+
+######## README step 4 (verbatim): uv run python scripts/check.py
+
+== format: /root/sportorg/.venv/bin/ruff format --check src tests scripts
+27 files already formatted
+
+== lint: /root/sportorg/.venv/bin/ruff check src tests scripts
+All checks passed!
+
+== types: /root/sportorg/.venv/bin/basedpyright src tests scripts
+0 errors, 0 warnings, 0 notes
+
+== imports: /root/sportorg/.venv/bin/lint-imports
+
+╔══╗─────────▶╔╗ ╔╗      ╔╗◀───┐
+╚╣╠╝◀─────┐  ╔╝╚╗║║────▶╔╝╚╗   │
+ ║║   ╔══╦══╦╩╗╔╝║║  ╔╦═╩╗╔╝╔═╦══╗
+ ║║╔══╣╔╗║╔╗║╔╣║ ║║ ╔╬╣╔╗║║ ║│║╔═╝
+╔╣╠╣║║║╚╝║╚╝║║║╚╗║╚═╝║║║║║╚╗║═╣║
+╚══╩╩╩╣╔═╩══╩╝╚═╝╚═══╩╩╝╚╩═╩╩═╩╝
+  └──▶║║                    ▲ 
+      ╚╝────────────────────┘
+
+
+---------
+Contracts
+---------
+
+Analyzed 10 files, 3 dependencies.
+----------------------------------
+
+core is pure: no I/O, UI, platform or national code KEPT
+nothing imports the UI KEPT
+core and adapters do not depend on national packages KEPT
+
+Contracts: 3 kept, 0 broken.
+
+== tests: /root/sportorg/.venv/bin/pytest -q
+.......................                                                  [100%]
+23 passed in 0.10s
+
+== summary
+ok   format     0.01s
+ok   lint       0.01s
+ok   types      1.78s
+ok   imports    0.39s
+ok   tests      0.72s
+[exit 0]
+
+######## README step 5 (verbatim, optional): uvx pre-commit install
+Downloading virtualenv (5.3MiB)
+ Downloaded virtualenv
+Installed 11 packages in 20ms
+pre-commit installed at .git/hooks/pre-commit
+pre-commit installed at .git/hooks/pre-push
+[exit 0]
+cpython-3.14.9-linux-x86_64-gnu    /root/.local/share/uv/python/cpython-3.14-linux-x86_64-gnu/bin/python3.14

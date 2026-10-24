@@ -1,0 +1,37 @@
+# 2026-10-24T21:59:28+07:00 | clone HEAD aeb0d35b5114a3efbe9e878583f275883b3495a0
+
+######## rule 8: personal data in tracked files
+--- e-mail addresses (excluding noreply/anthropic/example and decorators):
+  none
+--- Cyrillic first name + surname pairs outside docs/brief.md:
+  none
+--- 7-8 digit numbers (card-number shaped) in docs/evidence and evals:
+  none
+--- race data files committed:
+  none
+--- tracked files containing the maintainer's absolute home path (any separator):
+28
+
+######## licence check heuristics (scripts/check_licenses.py verdict())
+  'GPL-2.0-only'               -> ok
+  'GPL-2.0-or-later'           -> ok
+  'Limited use license'        -> ok
+  'SSPL-1.0'                   -> unknown
+  'BUSL-1.1'                   -> unknown
+  'CC-BY-NC-4.0'               -> unknown
+  'EUPL-1.2'                   -> unknown
+--- installed packages vs packages the licence check sees:
+  installed: 20 | checked: 16 | not checked (besides the project): pip-licenses prettytable wcwidth 
+
+######## guard hook vs the project venv (uv run --no-project --python 3.14, as in .claude/settings.json)
+--- healthy .venv in the clone:
+  prefix: C:\Users\USER\AppData\Local\Temp\claude\C--Users-USER-Prog-Orient-sportorg\468d4e66-c0b1-4013-a35c-dc100817b3a3\scratchpad\v2\envb-win\.venv
+  non-stdlib modules: ['__main__', 'scripts']
+--- broken .venv:
+  prefix: C:\Users\USER\AppData\Roaming\uv\python\cpython-3.14-windows-x86_64-none
+{"hookSpecificOutput": {"hookEventName": "PreToolUse", "permissionDecision": "deny", "permissionDecisionReason": "This command could modify the read-only legacy checkout (AGENTS.md rule 1). Read-only git/grep commands are fine; to execute legacy use scripts/legacy_clone.py."}}
+  [exit 0]
+--- absent .venv:
+  prefix: C:\Users\USER\AppData\Roaming\uv\python\cpython-3.14-windows-x86_64-none
+{"hookSpecificOutput": {"hookEventName": "PreToolUse", "permissionDecision": "deny", "permissionDecisionReason": "This command could modify the read-only legacy checkout (AGENTS.md rule 1). Read-only git/grep commands are fine; to execute legacy use scripts/legacy_clone.py."}}
+  [exit 0]

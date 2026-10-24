@@ -1,0 +1,191 @@
+Installed 1 package in 16ms
+An extremely fast Python type checker.
+
+Usage: ty.exe <COMMAND>
+
+Commands:
+  check    Check a project for type errors
+  server   Start the language server
+  version  Display ty's version
+  explain  Explain rules and other parts of ty
+  help     Print this message or the help of the given subcommand(s)
+
+Options:
+  -h, --help     Print help
+  -V, --version  Print version
+
+===== ty check --help =====
+Check a project for type errors
+
+Usage: ty.exe check [OPTIONS] [PATH]...
+
+Arguments:
+  [PATH]...
+          List of files or directories to check [default: the project root]
+
+Options:
+      --fix
+          Apply fixes to resolve errors
+
+      --add-ignore
+          Adds `ty: ignore` comments to suppress all rule diagnostics
+
+      --project <PROJECT>
+          Run the command within the given project directory.
+          
+          All `pyproject.toml` files will be discovered by walking up the directory tree from the
+          given project directory, as will the project's virtual environment (`.venv`) unless the
+          `venv-path` option is set.
+          
+          Other command-line arguments (such as relative paths) will be resolved relative to the
+          current working directory.
+
+      --python <PATH>
+          Path to your project's Python environment or interpreter.
+          
+          ty uses your Python environment to resolve third-party imports in your code.
+          
+          This can be a path to:
+          
+          - A Python interpreter, e.g. `.venv/bin/python3` - A virtual environment directory, e.g.
+          `.venv` - A system Python [`sys.prefix`] directory, e.g. `/usr`
+          
+          If you're using a project management tool such as uv or you have an activated Conda or
+          virtual environment, you should not generally need to specify this option.
+          
+          [`sys.prefix`]: https://docs.python.org/3/library/sys.html#sys.prefix
+
+      --typeshed <PATH>
+          Custom directory to use for stdlib typeshed stubs
+
+      --extra-search-path <PATH>
+          Additional path to use as a module-resolution source (can be passed multiple times).
+          
+          This is an advanced option that should usually only be used for first-party or third-party
+          modules that are not installed into your Python environment in a conventional way. Use
+          `--python` to point ty to your Python environment if it is in an unusual location.
+
+      --python-version <VERSION>
+          Python version to assume when resolving types.
+          
+          The Python version affects allowed syntax, type definitions of the standard library, and
+          type definitions of first- and third-party modules that are conditional on the Python
+          version.
+          
+          If a version is not specified on the command line or in a configuration file, ty will try
+          the following techniques in order of preference to determine a value: 1. Check for the
+          `project.requires-python` setting in a `pyproject.toml` file and use the minimum version
+          from the specified range 2. Check for an activated or configured Python environment and
+          attempt to infer the Python version of that environment 3. Fall back to the latest stable
+          Python version supported by ty (see `ty check --help` output)
+          
+          [possible values: 3.7, 3.8, 3.9, 3.10, 3.11, 3.12, 3.13, 3.14, 3.15]
+
+      --python-platform <PLATFORM>
+          Target platform to assume when resolving types.
+          
+          This is used to specialize the type of `sys.platform` and will affect the visibility of
+          platform-specific functions and attributes. If the value is set to `all`, no assumptions
+          are made about the target platform. If unspecified, the current system's platform will be
+          used.
+
+  -v, --verbose...
+          Use verbose output (or `-vv` and `-vvv` for more verbose output)
+
+  -q, --quiet...
+          Use quiet output (or `-qq` for silent output)
+
+  -c, --config <CONFIG_OPTION>
+          
+          A TOML `<KEY> = <VALUE>` pair (such as you might find in a `ty.toml` configuration file)
+          overriding a specific configuration option.
+          
+          Overrides of individual settings using this option always take precedence
+          over all configuration files.
+
+      --config-file <PATH>
+          The path to a `ty.toml` file to use for configuration.
+          
+          While ty configuration can be included in a `pyproject.toml` file, it is not allowed in
+          this context.
+          
+          [env: TY_CONFIG_FILE=]
+
+      --output-format <OUTPUT_FORMAT>
+          The format to use for printing diagnostic messages
+
+          Possible values:
+          - full:    Print diagnostics verbosely, with context and helpful hints (default)
+          - concise: Print diagnostics concisely, one per line
+          - gitlab:  Print diagnostics in the JSON format expected by GitLab Code Quality reports
+          - github:  Print diagnostics in the format used by GitHub Actions workflow error
+            annotations
+          - junit:   Print diagnostics as a JUnit-style XML report
+          
+          [env: TY_OUTPUT_FORMAT=]
+
+      --error-on-warning
+          Use exit code 1 if there are any warning-level diagnostics.
+          
+          Cannot be used in combination with `--exit-zero` or `--exit-zero-on-warning`.
+
+      --exit-zero
+          Always use exit code 0, even when there are error-level diagnostics.
+          
+          Cannot be used in combination with `--error-on-warning`.
+
+      --exit-zero-on-warning
+          Use exit code 0 if there are no error-level diagnostics.
+          
+          Cannot be used in combination with `--error-on-warning`.
+
+  -W, --watch
+          Watch files for changes and recheck files related to the changed files
+
+  -h, --help
+          Print help (see a summary with '-h')
+
+Enabling / disabling rules:
+      --error <RULE>
+          Treat the given rule as having severity 'error'. Can be specified multiple times. Use
+          'all' to apply to all rules.
+
+      --warn <RULE>
+          Treat the given rule as having severity 'warn'. Can be specified multiple times. Use 'all'
+          to apply to all rules.
+
+      --ignore <RULE>
+          Disables the rule. Can be specified multiple times. Use 'all' to apply to all rules.
+
+File selection:
+      --respect-ignore-files
+          Respect file exclusions via `.gitignore` and other standard ignore files. Use
+          `--no-respect-ignore-files` to disable
+
+      --force-exclude
+          Enforce exclusions, even for paths passed to ty directly on the command-line. Use
+          `--no-force-exclude` to disable
+
+      --exclude-scripts
+          Exclude files containing PEP 723 inline script metadata unless passed explicitly. Use
+          `--include-scripts` to disable
+
+      --exclude <EXCLUDE>
+          Glob patterns for files to exclude from type checking.
+          
+          Uses gitignore-style syntax to exclude files and directories from type checking. Supports
+          patterns like `tests/`, `*.tmp`, `**/__pycache__/**`.
+
+Global options:
+      --no-progress
+          Hide all progress outputs.
+          
+          For example, spinners or progress bars.
+
+      --color <WHEN>
+          Control when colored output is used
+
+          Possible values:
+          - auto:   Display colors if the output goes to an interactive terminal
+          - always: Always display colors
+          - never:  Never display colors

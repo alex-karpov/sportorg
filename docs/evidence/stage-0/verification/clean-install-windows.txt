@@ -1,0 +1,543 @@
+Windows Sandbox (host Windows 11 Pro 26H2 10.0.26300.9711; sandbox reports 10.0.26100.9711), wsb 0.8.107.0
+Steps 1-5 and the Git install: original log. Steps 6-17: per-step outputs copied from the sandbox; the
+original run lost its log writes from step 6 on (exit codes included), so exit codes of 6-17 come from a
+rerun of the same commands in the same sandbox (warm state) - see the EXIT CODES section.
+
+OS:   build  | PowerShell 5.1.26100.9711 | user WDAGUtilityAccount | home C:\Users\WDAGUtilityAccount
+Preinstalled tools (Get-Command):
+  git       not found
+  uv        not found
+  python    not found
+  python3   not found
+  py        not found
+  winget    not found
+  curl.exe  C:\Windows\system32\curl.exe
+  pwsh      not found
+
+######## [1] README step 1 verbatim (Windows PowerShell)
+shell: ps | dir: C:\Users\WDAGUtilityAccount
+> powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+downloading uv 0.13.5 (x86_64-pc-windows-msvc)
+installing to C:\Users\WDAGUtilityAccount\.local\bin
+  uv.exe
+  uvx.exe
+  uvw.exe
+everything's installed!
+
+To add C:\Users\WDAGUtilityAccount\.local\bin to your PATH, either restart your shell or run:
+
+    set Path=C:\Users\WDAGUtilityAccount\.local\bin;%Path%   (cmd)
+    $env:Path = "C:\Users\WDAGUtilityAccount\.local\bin;$env:Path"   (powershell)
+[exit 0] [10,3 s]
+
+######## [2] README step 2 verbatim, same window (Windows PowerShell 5.1)
+shell: ps | dir: C:\Users\WDAGUtilityAccount
+> git clone https://github.com/alex-karpov/sportorg.git && cd sportorg
+At C:\Users\WDAGUtilityAccount\AppData\Local\Temp\probe\step2.ps1:1 char:55
++ git clone https://github.com/alex-karpov/sportorg.git && cd sportorg
++                                                       ~~
+The token '&&' is not a valid statement separator in this version.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordEx 
+   ception
+    + FullyQualifiedErrorId : InvalidEndOfLine
+ 
+[exit 1] [1,9 s]
+
+######## [3] README step 2 verbatim, same window (cmd)
+shell: cmd | dir: C:\Users\WDAGUtilityAccount
+> git clone https://github.com/alex-karpov/sportorg.git && cd sportorg
+'git' is not recognized as an internal or external command,
+operable program or batch file.
+[exit 1] [0,1 s]
+
+######## [4] README step 3 verbatim, same window
+shell: ps | dir: C:\Users\WDAGUtilityAccount
+> uv sync
+uv : The term 'uv' is not recognized as the name of a cmdlet, function, script 
+file, or operable program. Check the spelling of the name, or if a path was inc
+luded, verify that the path is correct and try again.
+At C:\Users\WDAGUtilityAccount\AppData\Local\Temp\probe\step4.ps1:1 char:1
++ uv sync
++ ~~
+    + CategoryInfo          : ObjectNotFound: (uv:String) [], CommandNotFoundE 
+   xception
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+[exit 0] [2,0 s]
+
+######## DEVIATION: README does not name Git; install Git for Windows (latest GitHub release, silent)
+installer: https://github.com/git-for-windows/git/releases/download/v2.56.0.windows.3/Git-2.56.0.3-64-bit.exe sha256 DC6D3DB061999136E139F31376C5582A9ED6F36A4EA12F15E54AD7FA2BFC0BF2
+[installer exit 0]
+
+######## NEW WINDOW: PATH reloaded from the registry (what a newly opened shell sees)
+
+######## [5] tool versions in a new window
+shell: ps | dir: C:\Users\WDAGUtilityAccount
+> uv --version; git --version
+uv 0.13.5 (46776a95d 2026-10-21 x86_64-pc-windows-msvc)
+git version 2.56.0.windows.3
+[exit 0] [1,9 s]
+
+######## [6] README step 2 verbatim, new window (cmd; default branch)
+shell: cmd | dir: C:\Users\WDAGUtilityAccount\verbatim
+> git clone https://github.com/alex-karpov/sportorg.git && cd sportorg
+Cloning into 'sportorg'...
+
+######## [7] contents of the default-branch clone
+> dir /b /a
+.git
+docs
+
+######## [8] README step 3 verbatim in the default-branch clone
+> uv sync
+error: No `pyproject.toml` found in current directory or any parent directory
+
+######## [9] README step 2 with --branch stage-0, new window (cmd)
+> git clone --branch stage-0 https://github.com/alex-karpov/sportorg.git && cd sportorg
+Cloning into 'sportorg'...
+
+######## [10] clone HEAD
+> git rev-parse HEAD
+aeb0d35b5114a3efbe9e878583f275883b3495a0
+
+######## [11] README step 3 verbatim (cold)
+> uv sync
+Downloading cpython-3.14.9-windows-x86_64-none (download) (22.2MiB)
+ Downloaded cpython-3.14.9-windows-x86_64-none (download)
+Using CPython 3.14.9
+Creating virtual environment at: .venv
+Resolved 20 packages in 1ms
+   Building sportorg-ng @ file:///C:/Users/WDAGUtilityAccount/sportorg
+      Built sportorg-ng @ file:///C:/Users/WDAGUtilityAccount/sportorg
+Downloading pygments (1.2MiB)
+Downloading grimp (1.9MiB)
+Downloading basedpyright (13.1MiB)
+Downloading ruff (9.8MiB)
+Downloading nodejs-wheel-binaries (40.5MiB)
+ Downloaded pygments
+ Downloaded grimp
+ Downloaded ruff
+ Downloaded basedpyright
+ Downloaded nodejs-wheel-binaries
+Prepared 20 packages in 11.65s
+Installed 20 packages in 1.10s
+ + basedpyright==1.40.2
+ + click==8.5.0
+ + colorama==0.4.6
+ + grimp==3.17
+ + import-linter==2.15
+ + iniconfig==2.3.1
+ + markdown-it-py==4.2.0
+ + mdurl==0.1.2
+ + nodejs-wheel-binaries==24.19.0
+ + packaging==26.3
+ + pip-licenses==5.5.5
+ + pluggy==1.7.0
+ + prettytable==3.18.0
+ + pygments==2.21.0
+ + pytest==9.1.1
+ + rich==15.0.0
+ + ruff==0.17.2
+ + sportorg-ng==0.0.1 (from file:///C:/Users/WDAGUtilityAccount/sportorg)
+ + typing-extensions==4.16.0
+ + wcwidth==0.9.3
+
+######## [12] README step 4 verbatim
+> uv run python scripts/check.py
+
+== format: C:\Users\WDAGUtilityAccount\sportorg\.venv\Scripts\ruff.EXE format --check src tests scripts
+27 files already formatted
+
+== lint: C:\Users\WDAGUtilityAccount\sportorg\.venv\Scripts\ruff.EXE check src tests scripts
+All checks passed!
+
+== types: C:\Users\WDAGUtilityAccount\sportorg\.venv\Scripts\basedpyright.EXE src tests scripts
+0 errors, 0 warnings, 0 notes
+
+== imports: C:\Users\WDAGUtilityAccount\sportorg\.venv\Scripts\lint-imports.EXE
+=============
+Import Linter
+=============
+
+
+---------
+Contracts
+---------
+
+Analyzed 10 files, 3 dependencies.
+----------------------------------
+
+core is pure: no I/O, UI, platform or national code KEPT
+nothing imports the UI KEPT
+core and adapters do not depend on national packages KEPT
+
+Contracts: 3 kept, 0 broken.
+
+== tests: C:\Users\WDAGUtilityAccount\sportorg\.venv\Scripts\pytest.EXE -q
+.......................                                                  [100%]
+23 passed in 0.16s
+
+== summary
+ok   format     0.12s
+ok   lint       0.04s
+ok   types      3.49s
+ok   imports    0.90s
+ok   tests      1.27s
+
+######## [13] README step 5 verbatim (optional)
+> uvx pre-commit install
+Downloading virtualenv (5.3MiB)
+ Downloaded virtualenv
+Installed 11 packages in 48ms
+pre-commit installed at .git\hooks\pre-commit
+pre-commit installed at .git\hooks\pre-push
+
+######## [14] extra: interpreters uv installed
+> uv python list --only-installed
+cpython-3.14.9-windows-x86_64-none    C:\Users\WDAGUtilityAccount\AppData\Roaming\uv\python\cpython-3.14-windows-x86_64-none\python.exe
+
+######## [15] extra: pre-commit on all files
+> uvx pre-commit run --all-files
+ruff format --check......................................................Passed
+ruff check...............................................................Failed
+- hook id: ruff-check
+- exit code: 1
+
+E501 Line too long (204 > 100)
+ --> scripts\typecheck_fixtures\any_leak_untyped_call.py:1:101
+  |
+1 | …urned but int expected; strict checkers that infer the return type report an error, those treating it as Any are silent
+  |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2 | …
+3 | …
+  |
+
+ANN201 Missing return type annotation for public function `k`
+ --> scripts\typecheck_fixtures\any_leak_untyped_call.py:2:5
+  |
+1 | # PATTERN: untyped function result (inferred/Any) passed to int parameter; str is returned but int expected; strict checkers that infer…
+2 | def k():
+  |     ^
+3 |     return "s"
+  |
+help: Add return type annotation: `str`
+  |
+1 | # PATTERN: untyped function result (inferred/Any) passed to int parameter; str is returned but int expected; strict checkers that infer the return type report an error, those treating it as Any are silent
+  - def k():
+2 + def k() -> str:
+3 |     return "s"
+  |
+note: This is an unsafe fix and may change runtime behavior
+
+E501 Line too long (105 > 100)
+ --> scripts\typecheck_fixtures\unreachable_code.py:1:101
+  |
+1 | # PATTERN: code after unconditional return; checkers with warn_unreachable should report unreachable code
+  |                                                                                                     ^^^^^
+2 | def r() -> int:
+3 |     return 1
+  |
+
+RET503 Missing explicit `return` at the end of function able to return non-`None` value
+ --> scripts\typecheck_fixtures\unreachable_code.py:2:1
+  |
+1 |   # PATTERN: code after unconditional return; checkers with warn_unreachable should report unreachable code
+2 | / def r() -> int:
+3 | |     return 1
+4 | |     print("never")
+  | |__________________^
+help: Add explicit `return` statement
+  |
+4 |     print("never")
+5 +     return None
+  |
+note: This is an unsafe fix and may change runtime behavior
+
+Found 4 errors.
+2 unsafe fixes available with `--fix --unsafe-fixes`.
+E501 Line too long (103 > 100)
+ --> scripts\typecheck_fixtures\explicit_any_param.py:1:101
+  |
+1 | # PATTERN: explicit Any in signature; strict checker (disallow_any_explicit) should report explicit Any
+  |                                                                                                     ^^^
+2 | from typing import Any
+  |
+
+ANN401 Dynamically typed expressions (typing.Any) are disallowed in `a`
+ --> scripts\typecheck_fixtures\explicit_any_param.py:5:10
+  |
+5 | def f(a: Any) -> Any:
+  |          ^^^
+6 |     return a
+  |
+
+ANN401 Dynamically typed expressions (typing.Any) are disallowed in `f`
+ --> scripts\typecheck_fixtures\explicit_any_param.py:5:18
+  |
+5 | def f(a: Any) -> Any:
+  |                  ^^^
+6 |     return a
+  |
+
+E501 Line too long (110 > 100)
+ --> scripts\typecheck_fixtures\implicit_optional.py:1:101
+  |
+1 | # PATTERN: implicit Optional via default None; strict checker should report incompatible default / return type
+  |                                                                                                     ^^^^^^^^^^
+2 | def h(a: int = None) -> int:
+3 |     return a
+  |
+
+RUF013 PEP 484 prohibits implicit `Optional`
+ --> scripts\typecheck_fixtures\implicit_optional.py:2:10
+  |
+1 | # PATTERN: implicit Optional via default None; strict checker should report incompatible default / return type
+2 | def h(a: int = None) -> int:
+  |          ^^^
+3 |     return a
+  |
+help: Convert to `T | None`
+  |
+1 | # PATTERN: implicit Optional via default None; strict checker should report incompatible default / return type
+  - def h(a: int = None) -> int:
+2 + def h(a: int | None = None) -> int:
+3 |     return a
+  |
+note: This is an unsafe fix and may change runtime behavior
+
+Found 5 errors.
+1 unsafe fix available with `--fix --unsafe-fixes`.
+E501 Line too long (129 > 100)
+ --> scripts\typecheck_fixtures\untyped_def.py:1:101
+  |
+1 | # PATTERN: function without annotations; strict checker should report missing annotations (and call g(1, "x") is a runtime error)
+  |                                                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2 | def g(a, b):
+3 |     return a + b
+  |
+
+ANN201 Missing return type annotation for public function `g`
+ --> scripts\typecheck_fixtures\untyped_def.py:2:5
+  |
+1 | # PATTERN: function without annotations; strict checker should report missing annotations (and call g(1, "x") is a runtime error)
+2 | def g(a, b):
+  |     ^
+3 |     return a + b
+  |
+help: Add return type annotation
+
+ANN001 Missing type annotation for function argument `a`
+ --> scripts\typecheck_fixtures\untyped_def.py:2:7
+  |
+1 | # PATTERN: function without annotations; strict checker should report missing annotations (and call g(1, "x") is a runtime error)
+2 | def g(a, b):
+  |       ^
+3 |     return a + b
+  |
+
+ANN001 Missing type annotation for function argument `b`
+ --> scripts\typecheck_fixtures\untyped_def.py:2:10
+  |
+1 | # PATTERN: function without annotations; strict checker should report missing annotations (and call g(1, "x") is a runtime error)
+2 | def g(a, b):
+  |          ^
+3 |     return a + b
+  |
+
+Found 4 errors.
+All checks passed!
+RET503 Missing explicit `return` at the end of function able to return non-`None` value
+ --> scripts\typecheck_fixtures\real_bug_missing_return.py:2:1
+  |
+1 |   # BUG: missing return on the flag=False branch; checker should report missing return
+2 | / def p(flag: bool) -> int:
+3 | |     if flag:
+4 | |         return 1
+  | |________________^
+help: Add explicit `return` statement
+  |
+4 |         return 1
+5 +     return None
+  |
+note: This is an unsafe fix and may change runtime behavior
+
+FBT001 Boolean-typed positional argument in function definition
+ --> scripts\typecheck_fixtures\real_bug_missing_return.py:2:7
+  |
+1 | # BUG: missing return on the flag=False branch; checker should report missing return
+2 | def p(flag: bool) -> int:
+  |       ^^^^
+3 |     if flag:
+4 |         return 1
+  |
+
+TC006 [*] Add quotes to type expression in `typing.cast()`
+ --> scripts\typecheck_fixtures\redundant_cast.py:4:10
+  |
+2 | from typing import cast
+3 |
+4 | z = cast(int, 1)
+  |          ^^^
+help: Add quotes
+  |
+3 |
+  - z = cast(int, 1)
+4 + z = cast("int", 1)
+  |
+
+Found 3 errors.
+[*] 1 fixable with `--fix` (1 unsafe fix available with `--fix --unsafe-fixes`).
+All checks passed!
+All checks passed!
+All checks passed!
+E501 Line too long (141 > 100)
+ --> scripts\typecheck_fixtures\assert_isinstance_evasion.py:1:101
+  |
+1 | …ranch unreachable afterwards); checkers with unreachable/redundant warnings should flag
+  |                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2 | …
+3 | …
+  |
+
+S101 Use of `assert` detected
+ --> scripts\typecheck_fixtures\assert_isinstance_evasion.py:3:5
+  |
+1 | # PATTERN: assert isinstance(v, int) on a str value (branch unreachable afterwards); checkers with unreachable/redundant warnings shoul…
+2 | def s(v: str) -> int:
+3 |     assert isinstance(v, int)
+  |     ^^^^^^
+4 |     return v + 1
+  |
+
+E501 Line too long (151 > 100)
+ --> scripts\typecheck_fixtures\type_ignore_without_code.py:1:101
+  |
+1 | …ng a genuine error; strict checker should flag ignore-without-code and ideally the error too
+  |                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2 | …
+  |
+
+PGH003 Use specific rule codes when ignoring type issues
+ --> scripts\typecheck_fixtures\type_ignore_without_code.py:2:15
+  |
+1 | # PATTERN: bare type-ignore comment (no error code) silencing a genuine error; strict checker should flag ignore-without-code and ideal…
+2 | y: int = "s"  # type: ignore
+  |               ^^^^^^^^^^^^^^
+
+Found 4 errors.
+E501 Line too long (128 > 100)
+ --> scripts\typecheck_fixtures\object_dot_getattr.py:1:101
+  |
+1 | # PATTERN: getattr(obj, "attr") dodging an attribute error on str; checker returns Any silently, direct v.attr would be an error
+  |                                                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2 | def t(obj: str) -> object:
+3 |     return getattr(obj, "attr")
+  |
+
+B009 [*] Do not call `getattr` with a constant attribute value. It is not any safer than normal property access.
+ --> scripts\typecheck_fixtures\object_dot_getattr.py:3:12
+  |
+1 | # PATTERN: getattr(obj, "attr") dodging an attribute error on str; checker returns Any silently, direct v.attr would be an error
+2 | def t(obj: str) -> object:
+3 |     return getattr(obj, "attr")
+  |            ^^^^^^^^^^^^^^^^^^^^
+help: Replace `getattr` with attribute access
+  |
+2 | def t(obj: str) -> object:
+  -     return getattr(obj, "attr")
+3 +     return obj.attr
+  |
+
+E501 Line too long (120 > 100)
+ --> scripts\typecheck_fixtures\pyright_ignore_unused.py:1:101
+  |
+1 | # PATTERN: unnecessary pyright-ignore comment on a valid line; checkers with unnecessary-ignore reporting should flag it
+  |                                                                                                     ^^^^^^^^^^^^^^^^^^^^
+2 | q: int = 1  # pyright: ignore
+  |
+
+PGH003 Use specific rule codes when ignoring type issues
+ --> scripts\typecheck_fixtures\pyright_ignore_unused.py:2:13
+  |
+1 | # PATTERN: unnecessary pyright-ignore comment on a valid line; checkers with unnecessary-ignore reporting should flag it
+2 | q: int = 1  # pyright: ignore
+  |             ^^^^^^^^^^^^^^^^^
+
+TC006 [*] Add quotes to type expression in `typing.cast()`
+ --> scripts\typecheck_fixtures\wrong_cast.py:4:15
+  |
+2 | from typing import cast
+3 |
+4 | w: int = cast(int, "not an int")
+  |               ^^^
+help: Add quotes
+  |
+3 |
+  - w: int = cast(int, "not an int")
+4 + w: int = cast("int", "not an int")
+  |
+
+Found 5 errors.
+[*] 2 fixable with `--fix`.
+E501 Line too long (102 > 100)
+ --> scripts\typecheck_fixtures\unused_type_ignore.py:1:101
+  |
+1 | # PATTERN: unnecessary type-ignore comment on a valid line; strict checker should report unused ignore
+  |                                                                                                     ^^
+2 | x: int = 1  # type: ignore
+  |
+
+PGH003 Use specific rule codes when ignoring type issues
+ --> scripts\typecheck_fixtures\unused_type_ignore.py:2:13
+  |
+1 | # PATTERN: unnecessary type-ignore comment on a valid line; strict checker should report unused ignore
+2 | x: int = 1  # type: ignore
+  |             ^^^^^^^^^^^^^^
+
+Found 2 errors.
+
+basedpyright (changed files).............................................Passed
+import-linter contracts..................................................Passed
+uv.lock is up to date....................................................Passed
+
+######## [16] extra: vulnerabilities
+> uv audit
+warning: `uv audit` is experimental and may change without warning. Pass `--preview-features audit-command` to disable this warning.
+Resolved 20 packages in 1ms
+Found no known vulnerabilities and no adverse project statuses in 19 packages
+
+######## [17] extra: licences
+> uv run python -m scripts.check_licenses
+checked 16 packages; problems: 0
+
+######## EXIT CODES (rerun in the same sandbox, output discarded)
+rerun 2026-10-24T20:38:22.0905290+07:00 (same sandbox, warm state)
+[exit 0] git clone https://github.com/alex-karpov/sportorg.git default-branch | C:\Users\WDAGUtilityAccount\AppData\Local\Temp\clones
+[exit 0] git clone --branch stage-0 https://github.com/alex-karpov/sportorg.git stage-0 | C:\Users\WDAGUtilityAccount\AppData\Local\Temp\clones
+[exit 2] uv sync | C:\Users\WDAGUtilityAccount\verbatim\sportorg
+[exit 0] uv sync | C:\Users\WDAGUtilityAccount\sportorg
+[exit 1] uv run python scripts/check.py | C:\Users\WDAGUtilityAccount\sportorg
+[exit 0] uvx pre-commit install | C:\Users\WDAGUtilityAccount\sportorg
+[exit 1] uvx pre-commit run --all-files | C:\Users\WDAGUtilityAccount\sportorg
+[exit 0] uv audit | C:\Users\WDAGUtilityAccount\sportorg
+[exit 0] uv run python -m scripts.check_licenses | C:\Users\WDAGUtilityAccount\sportorg
+done
+
+######## check.py with stdout to a file vs to NUL (same sandbox)
+
+== summary
+ok   format     0.04s
+ok   lint       0.04s
+ok   types      2.31s
+ok   imports    0.28s
+ok   tests      0.48s
+[exit 0] output to file
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 0-2: character maps to <undefined>
+[exit 1] stdout to NUL
+
+######## README step 4 in a real console window (same sandbox)
+console 2026-10-24T20:39:28.0962967+07:00 | code page: 866 | OutputEncoding: cp866
+[exit 0] uv run python scripts/check.py
+[exit 0] uv run lint-imports
+[exit 0] python encoding probe
+redirected python stdout encoding / preferred: cp1251 cp1251
