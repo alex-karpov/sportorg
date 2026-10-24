@@ -19,8 +19,31 @@ from pathlib import Path
 from scripts._json import Json, as_dict, as_list, parse_json
 
 
-def sample(items: list[Json], n: int, *, seed: int, stratify: str | None = None) -> list[Json]:
-    """``n`` items chosen with ``random.Random(seed)``, equal shares per ``stratify`` value."""
+def parse_where(pairs: list[str]) -> dict[str, Json]:
+    """``field=value`` filters; the value is read as JSON when it parses, else kept as text."""
+    where: dict[str, Json] = {}
+    for pair in pairs:
+        key, _, raw = pair.partition("=")
+        try:
+            where[key] = parse_json(raw)
+        except ValueError:
+            where[key] = raw
+    return where
+
+
+def sample(
+    items: list[Json],
+    n: int,
+    *,
+    seed: int,
+    stratify: str | None = None,
+    where: dict[str, Json] | None = None,
+) -> list[Json]:
+    """``n`` items chosen with ``random.Random(seed)``, equal shares per ``stratify`` value.
+
+    ``where`` keeps only items whose fields equal the given values, before sampling.
+    """
+    items = [i for i in items if all(as_dict(i).get(k) == v for k, v in (where or {}).items())]
     rng = random.Random(seed)  # noqa: S311 - reproducible sample, not crypto
     if stratify is None:
         groups = [list(range(len(items)))]
@@ -51,6 +74,7 @@ class Options(argparse.Namespace):
     n: int = 30
     seed: int = 0
     stratify: str | None = None
+    where: list[str] | None = None
     fields: str = ""
 
 
@@ -61,12 +85,22 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--n", type=int, default=30)
     parser.add_argument("--seed", type=int, required=True)
     parser.add_argument("--stratify")
+    parser.add_argument("--where", action="append", help="field=value filter, repeatable")
     parser.add_argument("--fields", required=True, help="comma-separated row fields to show")
     args = parser.parse_args(argv, namespace=Options())
     data = parse_json(args.json.read_text(encoding="utf-8"))
     items = as_list(as_dict(data).get(args.key) if args.key else data)
     print(
-        table(sample(items, args.n, seed=args.seed, stratify=args.stratify), args.fields.split(","))
+        table(
+            sample(
+                items,
+                args.n,
+                seed=args.seed,
+                stratify=args.stratify,
+                where=parse_where(args.where or []),
+            ),
+            args.fields.split(","),
+        )
     )
     return 0
 

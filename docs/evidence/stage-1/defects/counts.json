@@ -1,0 +1,656 @@
+{
+ "cache_sha256": {
+  "repos/sportorg/pysport/issues?state=all&per_page=100&page=1": "b100361fbc5a9125de14f23c6751a1083d7be3f39540cc941cd97534fb7a3de0",
+  "repos/sportorg/pysport/issues?state=all&per_page=100&page=2": "989e833860b9d32ba0d1169aed4d5ed23a976864f477a4aedae2b68c082b0457",
+  "repos/sportorg/pysport/issues?state=all&per_page=100&page=3": "ba0a473118aed39878a7d13f6b2aac28a179e8d504763479dce4a59432821010",
+  "repos/sportorg/pysport/issues?state=all&per_page=100&page=4": "1ca8f815c863fc116d07b47691dab90be4c9d5103a2d4523e66fc0a39c5d599f",
+  "repos/sportorg/pysport/issues?state=all&per_page=100&page=5": "ab9d7d1d34f8e306fedd12ea502f1b562947db5fa25d295b53d0701870b0e303",
+  "repos/sportorg/pysport/issues?state=all&per_page=100&page=6": "fc4d3c2c56017f3c5677692c6654f9034d750ef9067560173d79b75ba7c772a8",
+  "repos/sportorg/pysport/labels?per_page=100": "c7bbedce526c1b06006e3c8bb9dca8d94a6e6fd755051f44632b940326c8c5a3"
+ },
+ "counts": {
+  "class_totals_all_fixes": {
+   "calc": 13,
+   "device": 14,
+   "docs-only": 2,
+   "i18n": 4,
+   "import-export": 15,
+   "online": 9,
+   "other": 50,
+   "persistence": 10,
+   "platform-build": 10,
+   "report-print": 12,
+   "time": 2,
+   "ui": 35
+  },
+  "class_totals_product": {
+   "calc": 13,
+   "device": 14,
+   "i18n": 4,
+   "import-export": 15,
+   "online": 9,
+   "other": 50,
+   "persistence": 10,
+   "platform-build": 4,
+   "report-print": 12,
+   "time": 2,
+   "ui": 35
+  },
+  "fix_commits": 176,
+  "fix_like_but_excluded_by_type": {
+   "docs": 1,
+   "feat": 2,
+   "refactor": 5,
+   "style": 3
+  },
+  "fix_rule1_conventional": 56,
+  "fix_rule2_keyword": 120,
+  "fixes_docs_only": 2,
+  "merges": 198,
+  "module_class_product": {
+   "other": {
+    "calc": 5,
+    "device": 2,
+    "i18n": 4,
+    "import-export": 3,
+    "online": 3,
+    "other": 27,
+    "persistence": 3,
+    "platform-build": 3,
+    "report-print": 7,
+    "ui": 7
+   },
+   "sportorg": {
+    "calc": 1,
+    "device": 1,
+    "other": 1,
+    "ui": 1
+   },
+   "sportorg.app.controller": {
+    "other": 1
+   },
+   "sportorg.app.controllers": {
+    "other": 2,
+    "persistence": 2,
+    "ui": 1
+   },
+   "sportorg.app.gui": {
+    "persistence": 1
+   },
+   "sportorg.app.models": {
+    "calc": 1,
+    "device": 1,
+    "other": 4,
+    "ui": 1
+   },
+   "sportorg.app.modules": {
+    "device": 1,
+    "persistence": 1
+   },
+   "sportorg.app.plugins": {
+    "device": 1,
+    "import-export": 1,
+    "other": 1,
+    "persistence": 1
+   },
+   "sportorg.common": {
+    "online": 1
+   },
+   "sportorg.core": {
+    "calc": 1,
+    "report-print": 1
+   },
+   "sportorg.gui": {
+    "calc": 4,
+    "device": 5,
+    "i18n": 2,
+    "import-export": 1,
+    "online": 3,
+    "other": 7,
+    "persistence": 2,
+    "ui": 10
+   },
+   "sportorg.gui.dialogs": {
+    "calc": 2,
+    "device": 2,
+    "i18n": 2,
+    "import-export": 1,
+    "online": 2,
+    "other": 5,
+    "report-print": 2,
+    "ui": 19
+   },
+   "sportorg.gui.menu": {
+    "calc": 2,
+    "device": 3,
+    "i18n": 1,
+    "import-export": 4,
+    "online": 3,
+    "other": 2,
+    "ui": 7
+   },
+   "sportorg.gui.tabs": {
+    "calc": 3,
+    "device": 1,
+    "i18n": 2,
+    "other": 2,
+    "report-print": 1,
+    "ui": 4
+   },
+   "sportorg.gui.utils": {
+    "ui": 2
+   },
+   "sportorg.lib.template": {
+    "other": 1
+   },
+   "sportorg.lib.winorient": {
+    "calc": 1
+   },
+   "sportorg.libs.huichang": {
+    "device": 1
+   },
+   "sportorg.libs.iof": {
+    "calc": 1,
+    "i18n": 1,
+    "import-export": 3
+   },
+   "sportorg.libs.ocad": {
+    "import-export": 3
+   },
+   "sportorg.libs.settings": {
+    "other": 1
+   },
+   "sportorg.libs.sfr": {
+    "device": 2,
+    "import-export": 1,
+    "other": 1,
+    "platform-build": 1
+   },
+   "sportorg.libs.sportident": {
+    "device": 1,
+    "other": 1
+   },
+   "sportorg.libs.sportiduino": {
+    "device": 1,
+    "import-export": 1
+   },
+   "sportorg.libs.template": {
+    "report-print": 2
+   },
+   "sportorg.libs.winorient": {
+    "calc": 1,
+    "import-export": 3,
+    "online": 1
+   },
+   "sportorg.models": {
+    "calc": 5,
+    "device": 4,
+    "i18n": 1,
+    "import-export": 1,
+    "online": 2,
+    "other": 17,
+    "persistence": 1,
+    "report-print": 2,
+    "ui": 4
+   },
+   "sportorg.models.result": {
+    "calc": 8,
+    "device": 1,
+    "i18n": 1,
+    "other": 4,
+    "persistence": 1,
+    "report-print": 1,
+    "ui": 2
+   },
+   "sportorg.models.start": {
+    "calc": 2,
+    "device": 1,
+    "i18n": 1,
+    "time": 1
+   },
+   "sportorg.modules.backup": {
+    "calc": 1,
+    "device": 1,
+    "import-export": 1,
+    "persistence": 6
+   },
+   "sportorg.modules.configs": {
+    "other": 2
+   },
+   "sportorg.modules.huichang": {
+    "device": 1
+   },
+   "sportorg.modules.iof": {
+    "calc": 1,
+    "device": 1,
+    "import-export": 1,
+    "other": 2
+   },
+   "sportorg.modules.live": {
+    "calc": 1,
+    "device": 1,
+    "import-export": 1,
+    "online": 6
+   },
+   "sportorg.modules.ocad": {
+    "import-export": 1
+   },
+   "sportorg.modules.printing": {
+    "calc": 1,
+    "i18n": 1,
+    "import-export": 1,
+    "report-print": 4,
+    "ui": 1
+   },
+   "sportorg.modules.recovery": {
+    "calc": 1,
+    "device": 1,
+    "import-export": 1
+   },
+   "sportorg.modules.rfid_impinj": {
+    "device": 1
+   },
+   "sportorg.modules.sportident": {
+    "calc": 1,
+    "device": 4,
+    "import-export": 1,
+    "online": 2,
+    "other": 2
+   },
+   "sportorg.modules.sportiduino": {
+    "device": 1
+   },
+   "sportorg.modules.srpid": {
+    "device": 1
+   },
+   "sportorg.modules.teamwork": {
+    "online": 3
+   },
+   "sportorg.modules.telegram": {
+    "online": 2
+   },
+   "sportorg.modules.winorient": {
+    "calc": 1,
+    "device": 1,
+    "i18n": 1,
+    "import-export": 3,
+    "other": 1
+   },
+   "sportorg.ttk": {
+    "ui": 1
+   },
+   "sportorg.utils": {
+    "import-export": 3,
+    "time": 1
+   },
+   "sportorg.winorient": {
+    "other": 1
+   },
+   "tests": {
+    "calc": 1,
+    "import-export": 1,
+    "online": 1,
+    "other": 5,
+    "persistence": 1
+   }
+  },
+  "module_fix": {
+   "other": 71,
+   "sportorg": 5,
+   "sportorg.app.controller": 1,
+   "sportorg.app.controllers": 5,
+   "sportorg.app.gui": 1,
+   "sportorg.app.models": 7,
+   "sportorg.app.modules": 2,
+   "sportorg.app.plugins": 4,
+   "sportorg.common": 1,
+   "sportorg.core": 2,
+   "sportorg.gui": 34,
+   "sportorg.gui.dialogs": 35,
+   "sportorg.gui.menu": 22,
+   "sportorg.gui.tabs": 13,
+   "sportorg.gui.utils": 2,
+   "sportorg.lib.template": 1,
+   "sportorg.lib.winorient": 1,
+   "sportorg.libs.huichang": 1,
+   "sportorg.libs.iof": 5,
+   "sportorg.libs.ocad": 3,
+   "sportorg.libs.settings": 1,
+   "sportorg.libs.sfr": 5,
+   "sportorg.libs.sportident": 2,
+   "sportorg.libs.sportiduino": 2,
+   "sportorg.libs.template": 2,
+   "sportorg.libs.winorient": 5,
+   "sportorg.models": 37,
+   "sportorg.models.result": 18,
+   "sportorg.models.start": 5,
+   "sportorg.modules.backup": 9,
+   "sportorg.modules.configs": 2,
+   "sportorg.modules.huichang": 1,
+   "sportorg.modules.iof": 5,
+   "sportorg.modules.live": 9,
+   "sportorg.modules.ocad": 1,
+   "sportorg.modules.printing": 8,
+   "sportorg.modules.recovery": 3,
+   "sportorg.modules.rfid_impinj": 1,
+   "sportorg.modules.sportident": 10,
+   "sportorg.modules.sportiduino": 1,
+   "sportorg.modules.srpid": 1,
+   "sportorg.modules.teamwork": 3,
+   "sportorg.modules.telegram": 2,
+   "sportorg.modules.winorient": 7,
+   "sportorg.ttk": 1,
+   "sportorg.utils": 4,
+   "sportorg.winorient": 1,
+   "tests": 9
+  },
+  "module_non_merge": {
+   "crates.sportorg-core": 2,
+   "crates.sportorg-rust-example": 1,
+   "other": 548,
+   "sportorg": 96,
+   "sportorg.app": 2,
+   "sportorg.app.contoller": 4,
+   "sportorg.app.controller": 30,
+   "sportorg.app.controllers": 110,
+   "sportorg.app.gui": 56,
+   "sportorg.app.models": 140,
+   "sportorg.app.modules": 41,
+   "sportorg.app.plugins": 82,
+   "sportorg.app.view": 6,
+   "sportorg.common": 24,
+   "sportorg.core": 49,
+   "sportorg.core.backup": 2,
+   "sportorg.data": 1,
+   "sportorg.data.configs": 1,
+   "sportorg.data.img": 1,
+   "sportorg.data.languages": 12,
+   "sportorg.data.sounds": 1,
+   "sportorg.data.styles": 1,
+   "sportorg.data.templates": 1,
+   "sportorg.etc": 2,
+   "sportorg.gui": 192,
+   "sportorg.gui.dialogs": 304,
+   "sportorg.gui.menu": 140,
+   "sportorg.gui.tabs": 105,
+   "sportorg.gui.utils": 15,
+   "sportorg.lib": 2,
+   "sportorg.lib.iof": 3,
+   "sportorg.lib.jinja2": 2,
+   "sportorg.lib.ocad": 11,
+   "sportorg.lib.sportident": 3,
+   "sportorg.lib.template": 5,
+   "sportorg.lib.winorient": 30,
+   "sportorg.libs": 10,
+   "sportorg.libs.huichang": 4,
+   "sportorg.libs.iof": 30,
+   "sportorg.libs.ocad": 15,
+   "sportorg.libs.settings": 4,
+   "sportorg.libs.sfr": 23,
+   "sportorg.libs.sportident": 12,
+   "sportorg.libs.sportiduino": 13,
+   "sportorg.libs.srpid": 7,
+   "sportorg.libs.telegram": 5,
+   "sportorg.libs.template": 14,
+   "sportorg.libs.winorient": 34,
+   "sportorg.models": 230,
+   "sportorg.models.api": 2,
+   "sportorg.models.processes": 3,
+   "sportorg.models.result": 136,
+   "sportorg.models.start": 55,
+   "sportorg.modules": 1,
+   "sportorg.modules.backup": 44,
+   "sportorg.modules.configs": 27,
+   "sportorg.modules.huichang": 2,
+   "sportorg.modules.iof": 32,
+   "sportorg.modules.live": 52,
+   "sportorg.modules.ocad": 10,
+   "sportorg.modules.plugins": 1,
+   "sportorg.modules.printing": 57,
+   "sportorg.modules.recovery": 8,
+   "sportorg.modules.rfid_impinj": 10,
+   "sportorg.modules.sfr": 20,
+   "sportorg.modules.sound": 9,
+   "sportorg.modules.sportident": 81,
+   "sportorg.modules.sportiduino": 19,
+   "sportorg.modules.srpid": 8,
+   "sportorg.modules.teamwork": 39,
+   "sportorg.modules.telegram": 9,
+   "sportorg.modules.testing": 8,
+   "sportorg.modules.updater": 4,
+   "sportorg.modules.utils": 3,
+   "sportorg.modules.web": 2,
+   "sportorg.modules.winorient": 53,
+   "sportorg.ocad": 2,
+   "sportorg.so_import": 2,
+   "sportorg.so_import.winorient": 3,
+   "sportorg.ttk": 4,
+   "sportorg.utils": 25,
+   "sportorg.var": 2,
+   "sportorg.widget": 3,
+   "sportorg.winorient": 3,
+   "tests": 55
+  },
+  "module_product": {
+   "other": 64,
+   "sportorg": 4,
+   "sportorg.app.controller": 1,
+   "sportorg.app.controllers": 5,
+   "sportorg.app.gui": 1,
+   "sportorg.app.models": 7,
+   "sportorg.app.modules": 2,
+   "sportorg.app.plugins": 4,
+   "sportorg.common": 1,
+   "sportorg.core": 2,
+   "sportorg.gui": 34,
+   "sportorg.gui.dialogs": 35,
+   "sportorg.gui.menu": 22,
+   "sportorg.gui.tabs": 13,
+   "sportorg.gui.utils": 2,
+   "sportorg.lib.template": 1,
+   "sportorg.lib.winorient": 1,
+   "sportorg.libs.huichang": 1,
+   "sportorg.libs.iof": 5,
+   "sportorg.libs.ocad": 3,
+   "sportorg.libs.settings": 1,
+   "sportorg.libs.sfr": 5,
+   "sportorg.libs.sportident": 2,
+   "sportorg.libs.sportiduino": 2,
+   "sportorg.libs.template": 2,
+   "sportorg.libs.winorient": 5,
+   "sportorg.models": 37,
+   "sportorg.models.result": 18,
+   "sportorg.models.start": 5,
+   "sportorg.modules.backup": 9,
+   "sportorg.modules.configs": 2,
+   "sportorg.modules.huichang": 1,
+   "sportorg.modules.iof": 5,
+   "sportorg.modules.live": 9,
+   "sportorg.modules.ocad": 1,
+   "sportorg.modules.printing": 8,
+   "sportorg.modules.recovery": 3,
+   "sportorg.modules.rfid_impinj": 1,
+   "sportorg.modules.sportident": 10,
+   "sportorg.modules.sportiduino": 1,
+   "sportorg.modules.srpid": 1,
+   "sportorg.modules.teamwork": 3,
+   "sportorg.modules.telegram": 2,
+   "sportorg.modules.winorient": 7,
+   "sportorg.ttk": 1,
+   "sportorg.utils": 4,
+   "sportorg.winorient": 1,
+   "tests": 9
+  },
+  "non_merge_commits": 1142,
+  "per_year": {
+   "2017": {
+    "all": 485,
+    "fix": 35,
+    "merges": 100,
+    "non_merge": 385,
+    "product": 35
+   },
+   "2018": {
+    "all": 373,
+    "fix": 41,
+    "merges": 42,
+    "non_merge": 331,
+    "product": 40
+   },
+   "2019": {
+    "all": 98,
+    "fix": 2,
+    "merges": 39,
+    "non_merge": 59,
+    "product": 2
+   },
+   "2020": {
+    "all": 58,
+    "fix": 16,
+    "merges": 6,
+    "non_merge": 52,
+    "product": 16
+   },
+   "2021": {
+    "all": 40,
+    "fix": 11,
+    "merges": 4,
+    "non_merge": 36,
+    "product": 11
+   },
+   "2022": {
+    "all": 34,
+    "fix": 4,
+    "merges": 4,
+    "non_merge": 30,
+    "product": 4
+   },
+   "2023": {
+    "all": 63,
+    "fix": 11,
+    "merges": 3,
+    "non_merge": 60,
+    "product": 9
+   },
+   "2024": {
+    "all": 56,
+    "fix": 16,
+    "non_merge": 56,
+    "product": 14
+   },
+   "2025": {
+    "all": 76,
+    "fix": 27,
+    "non_merge": 76,
+    "product": 26
+   },
+   "2026": {
+    "all": 57,
+    "fix": 13,
+    "non_merge": 57,
+    "product": 11
+   }
+  },
+  "platform_build_by_type": {
+   "build": 2,
+   "ci": 4
+  },
+  "platform_build_by_year": {
+   "2023": 2,
+   "2024": 2,
+   "2026": 2
+  },
+  "product_defects": 168,
+  "product_fixes_of_class_platform_build": 4
+ },
+ "stage0": [
+  {
+   "class": "other",
+   "commit": "b0391dd",
+   "found": true,
+   "is_fix": true,
+   "product_defect": true,
+   "type": "fix"
+  },
+  {
+   "class": "other",
+   "commit": "393b630",
+   "found": true,
+   "is_fix": true,
+   "product_defect": true,
+   "type": "fix"
+  },
+  {
+   "class": "other",
+   "commit": "57ac99d",
+   "found": true,
+   "is_fix": true,
+   "product_defect": true,
+   "type": "fix"
+  },
+  {
+   "class": "other",
+   "commit": "2b31638",
+   "found": true,
+   "is_fix": false,
+   "product_defect": false,
+   "type": "feat"
+  },
+  {
+   "class": "other",
+   "commit": "3b55fe8",
+   "found": true,
+   "is_fix": true,
+   "product_defect": true,
+   "type": "fix"
+  },
+  {
+   "class": "other",
+   "commit": "c8761e7",
+   "found": true,
+   "is_fix": true,
+   "product_defect": true,
+   "type": "fix"
+  },
+  {
+   "class": "ui",
+   "commit": "ef983f3",
+   "found": true,
+   "is_fix": false,
+   "product_defect": false,
+   "type": "feat"
+  },
+  {
+   "class": "import-export",
+   "commit": "42e806a",
+   "found": true,
+   "is_fix": true,
+   "product_defect": true,
+   "type": "fix"
+  },
+  {
+   "class": "calc",
+   "commit": "5170d6c",
+   "found": true,
+   "is_fix": true,
+   "product_defect": true,
+   "type": "fix"
+  },
+  {
+   "class": "online",
+   "commit": "aee1e99",
+   "found": true,
+   "is_fix": true,
+   "product_defect": true,
+   "type": "fix"
+  },
+  {
+   "class": "persistence",
+   "commit": "ab72a79",
+   "found": true,
+   "is_fix": true,
+   "product_defect": true,
+   "type": "fix"
+  }
+ ]
+}

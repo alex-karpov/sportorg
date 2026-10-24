@@ -1,0 +1,5 @@
+# Run from the repository root; offline (reads .legacy/pysport at the pin via
+# git and the GitHub cache ~/.cache/sportorg-stage1, fetched by the main session).
+PYTHONDONTWRITEBYTECODE=1 uv run python -m scripts.archaeology.defects \
+    --out docs/evidence/stage-1/defects
+uv run python -m scripts.legacy verify

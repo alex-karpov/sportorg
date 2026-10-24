@@ -38,3 +38,13 @@ def test_table_shows_requested_fields() -> None:
         sample.table([{"a": 1, "b": "x|y"}], ["a", "b"])
         == "| # | a | b |\n|---|---|---|\n| 1 | 1 | x\\|y |"
     )
+
+
+def test_where_filters_before_sampling() -> None:
+    chosen = sample.sample(ITEMS, 30, seed=0, where={"kind": "fix"})
+    assert all(as_dict(item).get("kind") == "fix" for item in chosen)
+    assert len(chosen) == 10
+
+
+def test_parse_where_reads_json_values() -> None:
+    assert sample.parse_where(["is_merge=false", "kind=fix"]) == {"is_merge": False, "kind": "fix"}
