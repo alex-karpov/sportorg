@@ -1,5 +1,5 @@
 $ (cwd=temp dir)
-$ uvx --python 3.14 --from zuban==0.10.1 zuban check C:\Users\ank\Prog\Orient\_other\pysport-legacy\sportorg
+$ uvx --python 3.14 --from zuban==0.10.1 zuban check C:\Users\USER\Prog\Orient\_other\pysport-legacy\sportorg
 # exit=1 timeout=False seconds=0.88
 
 ..\..\..\..\Prog\Orient\_other\pysport-legacy\sportorg\common\audio.py:7: error: Cannot find implementation or library stub for module named "playsound3"  [import-not-found]

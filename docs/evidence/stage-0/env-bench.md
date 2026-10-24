@@ -25,14 +25,14 @@ Notes: ruff exits non-zero in every environment (finding RUF043 in tests, "Found
 ## Commands
 
 All run with the cwd inside a copy of the repo (copies' `scripts/`, `pyproject.toml`, `uv.lock` refreshed from the main checkout by copying).
-Scratchpad = `C:\Users\ank\AppData\Local\Temp\claude\C--Users-ank-Prog-Orient-sportorg\33a8a286-529a-4024-bb4b-7f1f54ecf08b\scratchpad`.
+Scratchpad = `C:\Users\USER\AppData\Local\Temp\claude\C--Users-USER-Prog-Orient-sportorg\33a8a286-529a-4024-bb4b-7f1f54ecf08b\scratchpad`.
 
 ```
 # wsl-ext4 (literal paths; see failures)
-wsl -d Ubuntu --cd '~' -- bash -lc 'export PATH="$HOME/.local/bin:$PATH"; cd /home/ank/envbench/sportorg && pwd && df -T . && bash scripts/bench_env.sh wsl-ext4 /home/ank/envbench/sportorg'
+wsl -d Ubuntu --cd '~' -- bash -lc 'export PATH="$HOME/.local/bin:$PATH"; cd /home/USER/envbench/sportorg && pwd && df -T . && bash scripts/bench_env.sh wsl-ext4 /home/USER/envbench/sportorg'
 
 # wsl-mntc
-wsl -d Ubuntu --cd '~' -- bash -lc "export PATH=\"\$HOME/.local/bin:\$PATH\"; cd /mnt/c/Users/ank/AppData/Local/Temp/claude/C--Users-ank-Prog-Orient-sportorg/33a8a286-529a-4024-bb4b-7f1f54ecf08b/scratchpad/envbench/wsl-mnt/sportorg && pwd && df -T . && bash scripts/bench_env.sh wsl-mntc <same path>"
+wsl -d Ubuntu --cd '~' -- bash -lc "export PATH=\"\$HOME/.local/bin:\$PATH\"; cd /mnt/c/Users/USER/AppData/Local/Temp/claude/C--Users-USER-Prog-Orient-sportorg/33a8a286-529a-4024-bb4b-7f1f54ecf08b/scratchpad/envbench/wsl-mnt/sportorg && pwd && df -T . && bash scripts/bench_env.sh wsl-mntc <same path>"
 
 # docker-bind
 docker run --rm -v "<scratchpad>\envbench\docker\sportorg:/work" -w /work uvbench:0.13.5 bash scripts/bench_env.sh docker-bind /work
@@ -47,6 +47,6 @@ COPY --from=ghcr.io/astral-sh/uv:0.13.5 /uv /uvx /usr/local/bin/
 
 ## Failures and deviations (verbatim where applicable)
 
-1. First wsl-ext4 attempts were invalid and discarded (fs column 9p, and `error: No \`pyproject.toml\` found in current directory or any parent dir`). Causes: (a) `wsl --cd ~` typed in Git Bash expands `~` to /mnt/c/Users/ank; (b) wsl.exe passes the command through the default shell, which expands `$PWD`/`$VAR` in the outer shell (cwd /home/ank) before `bash -lc` sees them, so `"$PWD"` became `/home/ank`. Fix: literal paths with no shell variables; `MSYS_NO_PATHCONV=1` for Git Bash. Reported fs of the final wsl-ext4 run is ext4 (`df -T`: /dev/sdd ext4).
+1. First wsl-ext4 attempts were invalid and discarded (fs column 9p, and `error: No \`pyproject.toml\` found in current directory or any parent dir`). Causes: (a) `wsl --cd ~` typed in Git Bash expands `~` to /mnt/c/Users/USER; (b) wsl.exe passes the command through the default shell, which expands `$PWD`/`$VAR` in the outer shell (cwd /home/USER) before `bash -lc` sees them, so `"$PWD"` became `/home/USER`. Fix: literal paths with no shell variables; `MSYS_NO_PATHCONV=1` for Git Bash. Reported fs of the final wsl-ext4 run is ext4 (`df -T`: /dev/sdd ext4).
 2. docker-bind with the image as specified (first attempt, discarded): `error: Required uv version \`>=0.13.1\` does not match the running version \`0.9.30\`` (all commands; row showed 0.02s everywhere). Tags `0.13.5-python3.14-bookworm-slim`, `0.13.1-python3.14-bookworm-slim`, `0.13-python3.14-bookworm-slim` do not exist ("not found"); `ghcr.io/astral-sh/uv:0.13.5` / `0.13.1` pull but are distroless (no bash), hence the derived image.
 3. Docker "fs" for docker-bind reads 9p as reported by `df -T` in the container (Docker Desktop bind mount from Windows).

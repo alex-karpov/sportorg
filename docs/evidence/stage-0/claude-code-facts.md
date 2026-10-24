@@ -7,7 +7,7 @@ plugins/loading.md, plugin-evals) and verified in this session where marked **[v
 ## Permission rules
 - Path forms: `//path` absolute from filesystem root (Windows paths are normalised, `C:\Users\x` → `//c/Users/x`),
   `~/path` home, `/path` relative to the settings file's project, `path`/`./path` relative to cwd. No `../` form
-  is documented. **[verified here]**: `Edit(../_deny_probe/**)` did not block an Edit; `Edit(//c/Users/ank/Prog/Orient/_deny_probe/**)`
+  is documented. **[verified here]**: `Edit(../_deny_probe/**)` did not block an Edit; `Edit(//c/Users/USER/Prog/Orient/_deny_probe/**)`
   blocked it with "File is in a directory that is denied by your permission settings".
 - `Write(...)` rules never match; use `Edit(...)` for Write/NotebookEdit/MultiEdit. A Read deny also covers Edit/Write
   and recognised Bash file commands; Glob/Grep coverage is best-effort. Bash rules match command text only and are not a

@@ -1,7 +1,7 @@
 # Type checker measurements (stage 0)
 
 Machine: Windows-11-10.0.26300-SP0, 12 CPUs, benchmark script on Python 3.14.8, uv: uv 0.13.1 (62faed335 2026-10-13 x86_64-pc-windows-msvc), date 2026-10-24.
-Legacy corpus: `C:\Users\ank\Prog\Orient\_other\pysport-legacy\sportorg` (read-only), runs per measurement: 3.
+Legacy corpus: `C:\Users\USER\Prog\Orient\_other\pysport-legacy\sportorg` (read-only), runs per measurement: 3.
 
 ## 1. Metadata (PyPI)
 
@@ -58,34 +58,34 @@ Error count = lines matching `error` (case-insensitive) in the first legacy run;
 ## 4. Exact command lines
 
 ### mypy
-- fixtures (cwd `C:\Users\ank\Prog\Orient\sportorg\scripts\typecheck_configs\mypy`): `uvx --python 3.14 --from mypy==2.4.0 mypy --config-file C:\Users\ank\Prog\Orient\sportorg\scripts\typecheck_configs\mypy\mypy.ini --no-incremental --cache-dir C:\Users\ank\AppData\Local\Temp\tc_mypy_jdaetyfn\mypy_cache C:\Users\ank\Prog\Orient\sportorg\scripts\typecheck_fixtures`
-- legacy (cwd <fresh temp dir>): `uvx --python 3.14 --from mypy==2.4.0 mypy --no-incremental --cache-dir C:\Users\ank\AppData\Local\Temp\tc_mypy_jdaetyfn\mypy_cache C:\Users\ank\Prog\Orient\_other\pysport-legacy\sportorg`
-- single file: `uvx --python 3.14 --from mypy==2.4.0 mypy --no-incremental --cache-dir C:\Users\ank\AppData\Local\Temp\tc_mypy_jdaetyfn\mypy_cache C:\Users\ank\Prog\Orient\_other\pysport-legacy\sportorg\models\result\result_checker.py`
+- fixtures (cwd `C:\Users\USER\Prog\Orient\sportorg\scripts\typecheck_configs\mypy`): `uvx --python 3.14 --from mypy==2.4.0 mypy --config-file C:\Users\USER\Prog\Orient\sportorg\scripts\typecheck_configs\mypy\mypy.ini --no-incremental --cache-dir C:\Users\USER\AppData\Local\Temp\tc_mypy_jdaetyfn\mypy_cache C:\Users\USER\Prog\Orient\sportorg\scripts\typecheck_fixtures`
+- legacy (cwd <fresh temp dir>): `uvx --python 3.14 --from mypy==2.4.0 mypy --no-incremental --cache-dir C:\Users\USER\AppData\Local\Temp\tc_mypy_jdaetyfn\mypy_cache C:\Users\USER\Prog\Orient\_other\pysport-legacy\sportorg`
+- single file: `uvx --python 3.14 --from mypy==2.4.0 mypy --no-incremental --cache-dir C:\Users\USER\AppData\Local\Temp\tc_mypy_jdaetyfn\mypy_cache C:\Users\USER\Prog\Orient\_other\pysport-legacy\sportorg\models\result\result_checker.py`
 
 ### pyright
-- fixtures (cwd `C:\Users\ank\Prog\Orient\sportorg\scripts\typecheck_configs\pyright`): `uvx --python 3.14 --from pyright==1.1.414 pyright -p C:\Users\ank\Prog\Orient\sportorg\scripts\typecheck_configs\pyright\pyrightconfig.json C:\Users\ank\Prog\Orient\sportorg\scripts\typecheck_fixtures`
-- legacy (cwd <fresh temp dir>): `uvx --python 3.14 --from pyright==1.1.414 pyright --outputjson C:\Users\ank\Prog\Orient\_other\pysport-legacy\sportorg`
-- single file: `uvx --python 3.14 --from pyright==1.1.414 pyright --outputjson C:\Users\ank\Prog\Orient\_other\pysport-legacy\sportorg\models\result\result_checker.py`
+- fixtures (cwd `C:\Users\USER\Prog\Orient\sportorg\scripts\typecheck_configs\pyright`): `uvx --python 3.14 --from pyright==1.1.414 pyright -p C:\Users\USER\Prog\Orient\sportorg\scripts\typecheck_configs\pyright\pyrightconfig.json C:\Users\USER\Prog\Orient\sportorg\scripts\typecheck_fixtures`
+- legacy (cwd <fresh temp dir>): `uvx --python 3.14 --from pyright==1.1.414 pyright --outputjson C:\Users\USER\Prog\Orient\_other\pysport-legacy\sportorg`
+- single file: `uvx --python 3.14 --from pyright==1.1.414 pyright --outputjson C:\Users\USER\Prog\Orient\_other\pysport-legacy\sportorg\models\result\result_checker.py`
 
 ### basedpyright
-- fixtures (cwd `C:\Users\ank\Prog\Orient\sportorg\scripts\typecheck_configs\basedpyright`): `uvx --python 3.14 --from basedpyright==1.40.2 basedpyright -p C:\Users\ank\Prog\Orient\sportorg\scripts\typecheck_configs\basedpyright\pyrightconfig.json C:\Users\ank\Prog\Orient\sportorg\scripts\typecheck_fixtures`
-- legacy (cwd <fresh temp dir>): `uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Users\ank\Prog\Orient\_other\pysport-legacy\sportorg`
-- single file: `uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Users\ank\Prog\Orient\_other\pysport-legacy\sportorg\models\result\result_checker.py`
+- fixtures (cwd `C:\Users\USER\Prog\Orient\sportorg\scripts\typecheck_configs\basedpyright`): `uvx --python 3.14 --from basedpyright==1.40.2 basedpyright -p C:\Users\USER\Prog\Orient\sportorg\scripts\typecheck_configs\basedpyright\pyrightconfig.json C:\Users\USER\Prog\Orient\sportorg\scripts\typecheck_fixtures`
+- legacy (cwd <fresh temp dir>): `uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Users\USER\Prog\Orient\_other\pysport-legacy\sportorg`
+- single file: `uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Users\USER\Prog\Orient\_other\pysport-legacy\sportorg\models\result\result_checker.py`
 
 ### ty
-- fixtures (cwd `C:\Users\ank\Prog\Orient\sportorg\scripts\typecheck_configs\ty`): `uvx --python 3.14 --from ty==0.0.91 ty check --config-file C:\Users\ank\Prog\Orient\sportorg\scripts\typecheck_configs\ty\ty.toml C:\Users\ank\Prog\Orient\sportorg\scripts\typecheck_fixtures`
-- legacy (cwd <fresh temp dir>): `uvx --python 3.14 --from ty==0.0.91 ty check --output-format concise C:\Users\ank\Prog\Orient\_other\pysport-legacy\sportorg`
-- single file: `uvx --python 3.14 --from ty==0.0.91 ty check --output-format concise C:\Users\ank\Prog\Orient\_other\pysport-legacy\sportorg\models\result\result_checker.py`
+- fixtures (cwd `C:\Users\USER\Prog\Orient\sportorg\scripts\typecheck_configs\ty`): `uvx --python 3.14 --from ty==0.0.91 ty check --config-file C:\Users\USER\Prog\Orient\sportorg\scripts\typecheck_configs\ty\ty.toml C:\Users\USER\Prog\Orient\sportorg\scripts\typecheck_fixtures`
+- legacy (cwd <fresh temp dir>): `uvx --python 3.14 --from ty==0.0.91 ty check --output-format concise C:\Users\USER\Prog\Orient\_other\pysport-legacy\sportorg`
+- single file: `uvx --python 3.14 --from ty==0.0.91 ty check --output-format concise C:\Users\USER\Prog\Orient\_other\pysport-legacy\sportorg\models\result\result_checker.py`
 
 ### pyrefly
-- fixtures (cwd `C:\Users\ank\Prog\Orient\sportorg\scripts\typecheck_configs\pyrefly`): `uvx --python 3.14 --from pyrefly==1.4.0 pyrefly check -c C:\Users\ank\Prog\Orient\sportorg\scripts\typecheck_configs\pyrefly\pyrefly.toml C:\Users\ank\Prog\Orient\sportorg\scripts\typecheck_fixtures`
-- legacy (cwd <fresh temp dir>): `uvx --python 3.14 --from pyrefly==1.4.0 pyrefly check --output-format min-text C:\Users\ank\Prog\Orient\_other\pysport-legacy\sportorg`
-- single file: `uvx --python 3.14 --from pyrefly==1.4.0 pyrefly check --output-format min-text C:\Users\ank\Prog\Orient\_other\pysport-legacy\sportorg\models\result\result_checker.py`
+- fixtures (cwd `C:\Users\USER\Prog\Orient\sportorg\scripts\typecheck_configs\pyrefly`): `uvx --python 3.14 --from pyrefly==1.4.0 pyrefly check -c C:\Users\USER\Prog\Orient\sportorg\scripts\typecheck_configs\pyrefly\pyrefly.toml C:\Users\USER\Prog\Orient\sportorg\scripts\typecheck_fixtures`
+- legacy (cwd <fresh temp dir>): `uvx --python 3.14 --from pyrefly==1.4.0 pyrefly check --output-format min-text C:\Users\USER\Prog\Orient\_other\pysport-legacy\sportorg`
+- single file: `uvx --python 3.14 --from pyrefly==1.4.0 pyrefly check --output-format min-text C:\Users\USER\Prog\Orient\_other\pysport-legacy\sportorg\models\result\result_checker.py`
 
 ### zuban
-- fixtures (cwd `C:\Users\ank\Prog\Orient\sportorg\scripts\typecheck_configs\zuban`): `uvx --python 3.14 --from zuban==0.10.1 zuban check --config-file C:\Users\ank\Prog\Orient\sportorg\scripts\typecheck_configs\zuban\mypy.ini --mode mypy --strict C:\Users\ank\Prog\Orient\sportorg\scripts\typecheck_fixtures`
-- legacy (cwd <fresh temp dir>): `uvx --python 3.14 --from zuban==0.10.1 zuban check C:\Users\ank\Prog\Orient\_other\pysport-legacy\sportorg`
-- single file: `uvx --python 3.14 --from zuban==0.10.1 zuban check C:\Users\ank\Prog\Orient\_other\pysport-legacy\sportorg\models\result\result_checker.py`
+- fixtures (cwd `C:\Users\USER\Prog\Orient\sportorg\scripts\typecheck_configs\zuban`): `uvx --python 3.14 --from zuban==0.10.1 zuban check --config-file C:\Users\USER\Prog\Orient\sportorg\scripts\typecheck_configs\zuban\mypy.ini --mode mypy --strict C:\Users\USER\Prog\Orient\sportorg\scripts\typecheck_fixtures`
+- legacy (cwd <fresh temp dir>): `uvx --python 3.14 --from zuban==0.10.1 zuban check C:\Users\USER\Prog\Orient\_other\pysport-legacy\sportorg`
+- single file: `uvx --python 3.14 --from zuban==0.10.1 zuban check C:\Users\USER\Prog\Orient\_other\pysport-legacy\sportorg\models\result\result_checker.py`
 
 ## 5. First diagnostic message per fixture
 

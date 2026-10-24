@@ -1,4 +1,4 @@
-# Commands run (Git Bash, cwd = repo root C:\Users\ank\Prog\Orient\sportorg unless noted)
+# Commands run (Git Bash, cwd = repo root C:\Users\USER\Prog\Orient\sportorg unless noted)
 # PyPI metadata (stdlib urllib; scratch script, also reimplemented in scripts/bench_typecheckers.py::pypi_meta)
 uv run --python 3.14 /tmp/meta.py        # GET https://pypi.org/pypi/<name>/json for mypy pyright basedpyright ty pyrefly zuban
 

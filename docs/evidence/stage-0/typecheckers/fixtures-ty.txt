@@ -1,38 +1,38 @@
-$ (cwd=C:\Users\ank\Prog\Orient\sportorg\scripts\typecheck_configs\ty)
-$ uvx --python 3.14 --from ty==0.0.91 ty check --config-file C:\Users\ank\Prog\Orient\sportorg\scripts\typecheck_configs\ty\ty.toml C:\Users\ank\Prog\Orient\sportorg\scripts\typecheck_fixtures
+$ (cwd=C:\Users\USER\Prog\Orient\sportorg\scripts\typecheck_configs\ty)
+$ uvx --python 3.14 --from ty==0.0.91 ty check --config-file C:\Users\USER\Prog\Orient\sportorg\scripts\typecheck_configs\ty\ty.toml C:\Users\USER\Prog\Orient\sportorg\scripts\typecheck_fixtures
 # exit=1
 
 error[invalid-parameter-default]: Default value of type `None` is not assignable to annotated parameter type `int`
- --> C:\Users\ank\Prog\Orient\sportorg\scripts\typecheck_fixtures\implicit_optional.py:2:7
+ --> C:\Users\USER\Prog\Orient\sportorg\scripts\typecheck_fixtures\implicit_optional.py:2:7
   |
 2 | def h(a: int = None) -> int:
   |       ^^^^^^^^^^^^^
 
 error[unresolved-import]: Cannot resolve imported module `nonexistent_module_xyz_123`
- --> C:\Users\ank\Prog\Orient\sportorg\scripts\typecheck_fixtures\missing_import.py:2:8
+ --> C:\Users\USER\Prog\Orient\sportorg\scripts\typecheck_fixtures\missing_import.py:2:8
   |
 2 | import nonexistent_module_xyz_123
   |        ^^^^^^^^^^^^^^^^^^^^^^^^^^
 info: Searched in the following paths during module resolution:
-info:   1. C:\Users\ank\Prog\Orient\sportorg\scripts\typecheck_configs\ty (first-party code)
+info:   1. C:\Users\USER\Prog\Orient\sportorg\scripts\typecheck_configs\ty (first-party code)
 info:   2. vendored://stdlib (stdlib typeshed stubs vendored by ty)
-info:   3. C:\Users\ank\AppData\Local\uv\cache\archive-v0\ouCHrl3n5s51qHnj\Lib\site-packages (site-packages)
+info:   3. C:\Users\USER\AppData\Local\uv\cache\archive-v0\ouCHrl3n5s51qHnj\Lib\site-packages (site-packages)
 info: make sure your Python environment is properly configured: https://docs.astral.sh/ty/modules/#python-environment
 
 error[invalid-return-type]: Function can implicitly return `None`, which is not assignable to return type `int`
- --> C:\Users\ank\Prog\Orient\sportorg\scripts\typecheck_fixtures\real_bug_missing_return.py:2:22
+ --> C:\Users\USER\Prog\Orient\sportorg\scripts\typecheck_fixtures\real_bug_missing_return.py:2:22
   |
 2 | def p(flag: bool) -> int:
   |                      ^^^
 
 error[unresolved-attribute]: Attribute `upper` is not defined on `None` in union `str | None`
- --> C:\Users\ank\Prog\Orient\sportorg\scripts\typecheck_fixtures\real_bug_optional_attr.py:3:12
+ --> C:\Users\USER\Prog\Orient\sportorg\scripts\typecheck_fixtures\real_bug_optional_attr.py:3:12
   |
 3 |     return s.upper()
   |            ^^^^^^^
 
 error[unsound-return-statement]: Unsound return statement
- --> C:\Users\ank\Prog\Orient\sportorg\scripts\typecheck_fixtures\real_bug_str_plus_int.py:3:12
+ --> C:\Users\USER\Prog\Orient\sportorg\scripts\typecheck_fixtures\real_bug_str_plus_int.py:3:12
   |
 2 | def m(s: str) -> str:
   |                  --- Expected a subtype of `str` because of the return type
@@ -42,7 +42,7 @@ info: `Unknown` is assignable to `str`, but not a subtype of `str`
 help: Consider using an `assert` to narrow the type prior to the `return` statement
 
 error[unsupported-operator]: Unsupported `+` operation
- --> C:\Users\ank\Prog\Orient\sportorg\scripts\typecheck_fixtures\real_bug_str_plus_int.py:3:12
+ --> C:\Users\USER\Prog\Orient\sportorg\scripts\typecheck_fixtures\real_bug_str_plus_int.py:3:12
   |
 3 |     return s + 1
   |            -^^^-
@@ -51,7 +51,7 @@ error[unsupported-operator]: Unsupported `+` operation
   |            Has type `str`
 
 error[unsound-return-statement]: Unsound return statement
-  --> C:\Users\ank\Prog\Orient\sportorg\scripts\typecheck_fixtures\typeddict_wrong_key.py:11:12
+  --> C:\Users\USER\Prog\Orient\sportorg\scripts\typecheck_fixtures\typeddict_wrong_key.py:11:12
    |
 10 | def get(m: Movie) -> str:
    |                      --- Expected a subtype of `str` because of the return type
@@ -61,7 +61,7 @@ info: `Unknown` is assignable to `str`, but not a subtype of `str`
 help: Consider using an `assert` to narrow the type prior to the `return` statement
 
 error[invalid-key]: Unknown key "director" for TypedDict `Movie`
-  --> C:\Users\ank\Prog\Orient\sportorg\scripts\typecheck_fixtures\typeddict_wrong_key.py:11:14
+  --> C:\Users\USER\Prog\Orient\sportorg\scripts\typecheck_fixtures\typeddict_wrong_key.py:11:14
    |
 11 |     return m["director"]
    |            - ^^^^^^^^^^ Unknown key "director"
@@ -69,7 +69,7 @@ error[invalid-key]: Unknown key "director" for TypedDict `Movie`
    |            TypedDict `Movie`
 
 error[unused-type-ignore-comment]: Unused blanket `type: ignore` directive
- --> C:\Users\ank\Prog\Orient\sportorg\scripts\typecheck_fixtures\unused_type_ignore.py:2:13
+ --> C:\Users\USER\Prog\Orient\sportorg\scripts\typecheck_fixtures\unused_type_ignore.py:2:13
   |
 2 | x: int = 1  # type: ignore
   |             ^^^^^^^^^^^^^^
@@ -81,7 +81,7 @@ help: Remove the unused suppression comment
   |
 
 error[disjoint-cast]: Cast to a disjoint type
-   --> C:\Users\ank\Prog\Orient\sportorg\scripts\typecheck_fixtures\wrong_cast.py:4:10
+   --> C:\Users\USER\Prog\Orient\sportorg\scripts\typecheck_fixtures\wrong_cast.py:4:10
     |
   4 | w: int = cast(int, "not an int")
     |          ^^^^^---^^------------^

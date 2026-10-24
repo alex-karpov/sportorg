@@ -1,7 +1,7 @@
 # Plugin source inventory (read-only; facts only)
 
-Roots: SP = C:\Users\ank\.claude\plugins\cache\claude-plugins-official\superpowers\7.0.0\
-       CM = C:\Users\ank\.claude\plugins\cache\claude-plugins-official\code-modernization\1.0.0\
+Roots: SP = C:\Users\USER\.claude\plugins\cache\claude-plugins-official\superpowers\7.0.0\
+       CM = C:\Users\USER\.claude\plugins\cache\claude-plugins-official\code-modernization\1.0.0\
 Neither plugin has `.mcp.json` / MCP servers.
 
 ======================================================================

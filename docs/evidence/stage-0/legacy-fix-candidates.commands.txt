@@ -1,4 +1,4 @@
-# all run against C:\Users\ank\Prog\Orient\_other\pysport-legacy (read-only)
+# all run against C:\Users\USER\Prog\Orient\_other\pysport-legacy (read-only)
 git rev-parse HEAD
 git log -1 --format=%ad --date=short
 git rev-list --count HEAD

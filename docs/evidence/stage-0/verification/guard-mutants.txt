@@ -1,6 +1,6 @@
 # guard mutants: copy of scripts/, tests/, pyproject.toml from the clone at aeb0d35; 2026-10-24T21:57:09+07:00
 # pytest runs with -B and every .pyc removed before each mutant (an earlier run without this was invalid: stale bytecode)
-guard module under test: C:\Users\ank\AppData\Local\Temp\claude\C--Users-ank-Prog-Orient-sportorg\468d4e66-c0b1-4013-a35c-dc100817b3a3\scratchpad\v2\mut2\scripts\hooks\guard.py
+guard module under test: C:\Users\USER\AppData\Local\Temp\claude\C--Users-USER-Prog-Orient-sportorg\468d4e66-c0b1-4013-a35c-dc100817b3a3\scratchpad\v2\mut2\scripts\hooks\guard.py
 baseline: exit 0 | 18 passed in 0.07s
 killed   drop rm                          | 1 failed, 17 passed in 0.15s
 SURVIVED drop cd                          | 18 passed in 0.07s

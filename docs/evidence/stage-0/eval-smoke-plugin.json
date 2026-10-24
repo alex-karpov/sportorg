@@ -6,7 +6,7 @@
   "costUsd": 0.0030941200000000006,
   "partial": false,
   "suite": {
-    "root": "C:\\Users\\ank\\Prog\\Orient\\sportorg",
+    "root": "C:\\Users\\USER\\Prog\\Orient\\sportorg",
     "ablation": "with-without",
     "modelOverride": "haiku",
     "caseFilter": "smoke-plugin",
@@ -16,7 +16,7 @@
       {
         "name": "code-modernization",
         "version": "1.0.0",
-        "path": "C:\\Users\\ank\\Prog\\Orient\\sportorg\\tools\\plugins\\code-modernization"
+        "path": "C:\\Users\\USER\\Prog\\Orient\\sportorg\\tools\\plugins\\code-modernization"
       }
     ]
   },
@@ -53,7 +53,7 @@
             "durationSeconds": 4,
             "startedAt": "2026-10-24T12:18:01.890Z",
             "error": null,
-            "tracePath": "C:\\Users\\ank\\AppData\\Local\\Temp\\claude-eval-RRJ1M4\\out\\trace.jsonl",
+            "tracePath": "C:\\Users\\USER\\AppData\\Local\\Temp\\claude-eval-RRJ1M4\\out\\trace.jsonl",
             "skippedPaidGraders": false,
             "graders": [
               {
@@ -77,7 +77,7 @@
             "durationSeconds": 3,
             "startedAt": "2026-10-24T12:18:06.170Z",
             "error": null,
-            "tracePath": "C:\\Users\\ank\\AppData\\Local\\Temp\\claude-eval-BpG1UR\\out\\trace.jsonl",
+            "tracePath": "C:\\Users\\USER\\AppData\\Local\\Temp\\claude-eval-BpG1UR\\out\\trace.jsonl",
             "skippedPaidGraders": false,
             "graders": [
               {

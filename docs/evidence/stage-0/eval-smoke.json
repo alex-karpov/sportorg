@@ -6,7 +6,7 @@
   "costUsd": 0.00122446,
   "partial": false,
   "suite": {
-    "root": "C:\\Users\\ank\\Prog\\Orient\\sportorg",
+    "root": "C:\\Users\\USER\\Prog\\Orient\\sportorg",
     "ablation": "none",
     "modelOverride": "haiku",
     "caseFilter": "smoke",
@@ -47,7 +47,7 @@
             "durationSeconds": 4,
             "startedAt": "2026-10-24T12:15:04.755Z",
             "error": null,
-            "tracePath": "C:\\Users\\ank\\AppData\\Local\\Temp\\claude-eval-sm947Z\\out\\trace.jsonl",
+            "tracePath": "C:\\Users\\USER\\AppData\\Local\\Temp\\claude-eval-sm947Z\\out\\trace.jsonl",
             "skippedPaidGraders": false,
             "graders": [
               {

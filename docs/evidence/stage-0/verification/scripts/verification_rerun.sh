@@ -3,7 +3,7 @@
 # Runs on a clean clone of the project at the verified commit; nothing is written to the working checkout.
 # Usage: verification_rerun.sh <clone> <scratch> [<legacy-checkout>]
 set -u
-CLONE="$1"; S="$2"; LEGACY="${3:-C:/Users/ank/Prog/Orient/_other/pysport-legacy}"
+CLONE="$1"; S="$2"; LEGACY="${3:-C:/Users/USER/Prog/Orient/_other/pysport-legacy}"
 cd "$CLONE" || exit 2
 step() { echo; echo "######## $*"; }
 run() { echo "\$ $*"; "$@"; echo "[exit $?]"; }

@@ -1,5 +1,5 @@
-$ (cwd=C:\Users\ank\Prog\Orient\sportorg\scripts\typecheck_configs\zuban)
-$ uvx --python 3.14 --from zuban==0.10.1 zuban check --config-file C:\Users\ank\Prog\Orient\sportorg\scripts\typecheck_configs\zuban\mypy.ini --mode mypy --strict C:\Users\ank\Prog\Orient\sportorg\scripts\typecheck_fixtures
+$ (cwd=C:\Users\USER\Prog\Orient\sportorg\scripts\typecheck_configs\zuban)
+$ uvx --python 3.14 --from zuban==0.10.1 zuban check --config-file C:\Users\USER\Prog\Orient\sportorg\scripts\typecheck_configs\zuban\mypy.ini --mode mypy --strict C:\Users\USER\Prog\Orient\sportorg\scripts\typecheck_fixtures
 # exit=1
 
 ..\..\typecheck_fixtures\any_leak_untyped_call.py:2: error: Function is missing a return type annotation  [no-untyped-def]

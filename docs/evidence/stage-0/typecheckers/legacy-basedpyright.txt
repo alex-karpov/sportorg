@@ -1,5 +1,5 @@
 $ (cwd=temp dir)
-$ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Users\ank\Prog\Orient\_other\pysport-legacy\sportorg
+$ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Users\USER\Prog\Orient\_other\pysport-legacy\sportorg
 # exit=1 timeout=False seconds=9.00
 
 
@@ -8,7 +8,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
     "time": "1792839838414",
     "generalDiagnostics": [
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
             "severity": "error",
             "message": "Import \"playsound3\" could not be resolved",
             "range": {
@@ -24,7 +24,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportMissingImports"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
             "severity": "warning",
             "message": "Type of \"playsound\" is unknown",
             "range": {
@@ -40,7 +40,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportUnknownVariableType"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
             "severity": "error",
             "message": "Import \"sportorg\" could not be resolved",
             "range": {
@@ -56,7 +56,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportMissingImports"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
             "severity": "warning",
             "message": "Type of \"config\" is unknown",
             "range": {
@@ -72,7 +72,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportUnknownVariableType"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
             "severity": "error",
             "message": "Import \"sportorg.common.singleton\" could not be resolved",
             "range": {
@@ -88,7 +88,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportMissingImports"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
             "severity": "warning",
             "message": "Type of \"singleton\" is unknown",
             "range": {
@@ -104,7 +104,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportUnknownVariableType"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
             "severity": "warning",
             "message": "Type of parameter \"sound\" is unknown",
             "range": {
@@ -120,7 +120,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportUnknownParameterType"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
             "severity": "warning",
             "message": "Type annotation is missing for parameter \"sound\"",
             "range": {
@@ -136,7 +136,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportMissingParameterType"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
             "severity": "warning",
             "message": "Return type, \"list[Unknown]\", is partially unknown",
             "range": {
@@ -152,7 +152,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportUnknownParameterType"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
             "severity": "warning",
             "message": "Type of parameter \"path\" is partially unknown\n  Parameter type is \"Unknown | None\"",
             "range": {
@@ -168,7 +168,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportUnknownParameterType"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
             "severity": "warning",
             "message": "Type annotation is missing for parameter \"path\"",
             "range": {
@@ -184,7 +184,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportMissingParameterType"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
             "severity": "warning",
             "message": "Type of \"path\" is unknown",
             "range": {
@@ -200,7 +200,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportUnknownVariableType"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
             "severity": "warning",
             "message": "Type of \"sound_dir\" is unknown",
             "range": {
@@ -216,7 +216,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportUnknownMemberType"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
             "severity": "warning",
             "message": "Type of \"p\" is unknown",
             "range": {
@@ -232,7 +232,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportUnknownVariableType"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
             "severity": "warning",
             "message": "Argument type is unknown\n  Argument corresponds to parameter \"path\" in function \"listdir\"",
             "range": {
@@ -248,7 +248,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportUnknownArgumentType"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
             "severity": "warning",
             "message": "Type of \"full_path\" is unknown",
             "range": {
@@ -264,7 +264,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportUnknownVariableType"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
             "severity": "warning",
             "message": "Argument type is unknown\n  Argument corresponds to parameter \"a\" in function \"join\"",
             "range": {
@@ -280,7 +280,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportUnknownArgumentType"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
             "severity": "warning",
             "message": "Argument type is unknown\n  Argument corresponds to parameter \"paths\" in function \"join\"",
             "range": {
@@ -296,7 +296,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportUnknownArgumentType"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
             "severity": "warning",
             "message": "Argument type is unknown\n  Argument corresponds to parameter \"s\" in function \"isdir\"",
             "range": {
@@ -312,7 +312,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportUnknownArgumentType"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
             "severity": "warning",
             "message": "Type of \"fs\" is partially unknown\n  Type of \"fs\" is \"list[Unknown]\"",
             "range": {
@@ -328,7 +328,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportUnknownVariableType"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
             "severity": "warning",
             "message": "Argument type is unknown\n  Argument corresponds to parameter \"path\" in function \"get_sounds\"",
             "range": {
@@ -344,7 +344,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportUnknownArgumentType"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
             "severity": "warning",
             "message": "Type of \"f\" is unknown",
             "range": {
@@ -360,7 +360,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportUnknownVariableType"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
             "severity": "warning",
             "message": "Type of \"append\" is partially unknown\n  Type of \"append\" is \"(object: Unknown, /) -> None\"",
             "range": {
@@ -376,7 +376,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportUnknownMemberType"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
             "severity": "warning",
             "message": "Argument type is unknown\n  Argument corresponds to parameter \"object\" in function \"append\"",
             "range": {
@@ -392,7 +392,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportUnknownArgumentType"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
             "severity": "warning",
             "message": "Type of \"append\" is partially unknown\n  Type of \"append\" is \"(object: Unknown, /) -> None\"",
             "range": {
@@ -408,7 +408,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportUnknownMemberType"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
             "severity": "warning",
             "message": "Argument type is unknown\n  Argument corresponds to parameter \"object\" in function \"append\"",
             "range": {
@@ -424,7 +424,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportUnknownArgumentType"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
             "severity": "warning",
             "message": "Return type, \"list[Unknown]\", is partially unknown",
             "range": {
@@ -440,7 +440,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportUnknownVariableType"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
             "severity": "warning",
             "message": "Untyped class decorator obscures type of class; ignoring decorator",
             "range": {
@@ -456,7 +456,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportUntypedClassDecorator"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
             "severity": "warning",
             "message": "Type of \"_queue\" is partially unknown\n  Type of \"_queue\" is \"Queue[Unknown]\"",
             "range": {
@@ -472,7 +472,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportUnknownMemberType"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
             "severity": "warning",
             "message": "Type annotation for attribute `_queue` is required because this class is not decorated with `@final`",
             "range": {
@@ -488,7 +488,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportUnannotatedClassAttribute"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
             "severity": "warning",
             "message": "Type annotation for attribute `_thread` is required because this class is not decorated with `@final`",
             "range": {
@@ -504,7 +504,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportUnannotatedClassAttribute"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
             "severity": "warning",
             "message": "Type annotation for attribute `_logger` is required because this class is not decorated with `@final`",
             "range": {
@@ -520,7 +520,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportUnannotatedClassAttribute"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
             "severity": "warning",
             "message": "Type of parameter \"sound\" is unknown",
             "range": {
@@ -536,7 +536,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportUnknownParameterType"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
             "severity": "warning",
             "message": "Type annotation is missing for parameter \"sound\"",
             "range": {
@@ -552,7 +552,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportMissingParameterType"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
             "severity": "warning",
             "message": "Type of \"_queue\" is partially unknown\n  Type of \"_queue\" is \"Queue[Unknown]\"",
             "range": {
@@ -568,7 +568,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportUnknownMemberType"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
             "severity": "warning",
             "message": "Type of \"put\" is partially unknown\n  Type of \"put\" is \"(item: Unknown, block: bool = True, timeout: float | None = None) -> None\"",
             "range": {
@@ -584,7 +584,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportUnknownMemberType"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
             "severity": "warning",
             "message": "Argument type is unknown\n  Argument corresponds to parameter \"item\" in function \"put\"",
             "range": {
@@ -600,7 +600,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportUnknownArgumentType"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
             "severity": "warning",
             "message": "Type of \"_queue\" is partially unknown\n  Type of \"_queue\" is \"Queue[Unknown]\"",
             "range": {
@@ -616,7 +616,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportUnknownMemberType"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
             "severity": "warning",
             "message": "Type of \"sound\" is unknown",
             "range": {
@@ -632,7 +632,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportUnknownVariableType"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
             "severity": "warning",
             "message": "Type of \"_queue\" is partially unknown\n  Type of \"_queue\" is \"Queue[Unknown]\"",
             "range": {
@@ -648,7 +648,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportUnknownMemberType"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
             "severity": "warning",
             "message": "Argument type is unknown\n  Argument corresponds to parameter \"sound\" in function \"play\"",
             "range": {
@@ -664,7 +664,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportUnknownArgumentType"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
             "severity": "warning",
             "message": "Variable \"e\" is not accessed",
             "range": {
@@ -680,7 +680,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportUnusedVariable"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\audio.py",
             "severity": "warning",
             "message": "Argument type is unknown\n  Argument corresponds to parameter \"args\" in function \"error\"",
             "range": {
@@ -696,7 +696,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportUnknownArgumentType"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\fake_std.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\fake_std.py",
             "severity": "warning",
             "message": "Type of parameter \"string\" is unknown",
             "range": {
@@ -712,7 +712,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportUnknownParameterType"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\fake_std.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\fake_std.py",
             "severity": "warning",
             "message": "Type annotation is missing for parameter \"string\"",
             "range": {
@@ -728,7 +728,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportMissingParameterType"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\fake_std.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\fake_std.py",
             "severity": "warning",
             "message": "\"string\" is not accessed",
             "range": {
@@ -744,7 +744,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportUnusedParameter"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
             "severity": "warning",
             "message": "This type is deprecated as of Python 3.10; use \"| None\" instead",
             "range": {
@@ -760,7 +760,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportDeprecated"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
             "severity": "warning",
             "message": "This type is deprecated as of Python 3.9; use \"type\" instead",
             "range": {
@@ -776,7 +776,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportDeprecated"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
             "severity": "error",
             "message": "Import \"sportorg_core\" could not be resolved",
             "range": {
@@ -792,7 +792,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportMissingImports"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
             "severity": "warning",
             "message": "Type of \"_RustOTime\" is unknown",
             "range": {
@@ -808,7 +808,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportUnknownVariableType"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
             "severity": "warning",
             "message": "Type annotation for attribute `math` is required because this class is not decorated with `@final`",
             "range": {
@@ -824,7 +824,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportUnannotatedClassAttribute"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
             "severity": "warning",
             "message": "Type annotation for attribute `down` is required because this class is not decorated with `@final`",
             "range": {
@@ -840,7 +840,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportUnannotatedClassAttribute"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
             "severity": "warning",
             "message": "Type annotation for attribute `up` is required because this class is not decorated with `@final`",
             "range": {
@@ -856,7 +856,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportUnannotatedClassAttribute"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
             "severity": "warning",
             "message": "Type annotation for attribute `_msec` is required because this class is not decorated with `@final`",
             "range": {
@@ -872,7 +872,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportUnannotatedClassAttribute"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
             "severity": "warning",
             "message": "Type annotation for attribute `_args` is required because this class is not decorated with `@final`",
             "range": {
@@ -888,7 +888,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportUnannotatedClassAttribute"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
             "severity": "warning",
             "message": "Return type is unknown",
             "range": {
@@ -904,7 +904,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportUnknownParameterType"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
             "severity": "warning",
             "message": "Method \"__eq__\" is not marked as override but is overriding a method in class \"object\"",
             "range": {
@@ -920,7 +920,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportImplicitOverride"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
             "severity": "warning",
             "message": "Type of parameter \"other\" is unknown",
             "range": {
@@ -936,7 +936,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportUnknownParameterType"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
             "severity": "warning",
             "message": "Type annotation is missing for parameter \"other\"",
             "range": {
@@ -952,7 +952,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportMissingParameterType"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
             "severity": "warning",
             "message": "Return type is unknown",
             "range": {
@@ -968,7 +968,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportUnknownVariableType"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
             "severity": "warning",
             "message": "Type of \"to_msec\" is unknown",
             "range": {
@@ -984,7 +984,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportUnknownMemberType"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
             "severity": "warning",
             "message": "Return type is unknown",
             "range": {
@@ -1000,7 +1000,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportUnknownParameterType"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
             "severity": "warning",
             "message": "Type of parameter \"other\" is unknown",
             "range": {
@@ -1016,7 +1016,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportUnknownParameterType"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
             "severity": "warning",
             "message": "Type annotation is missing for parameter \"other\"",
             "range": {
@@ -1032,7 +1032,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportMissingParameterType"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
             "severity": "warning",
             "message": "Return type is unknown",
             "range": {
@@ -1048,7 +1048,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportUnknownVariableType"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
             "severity": "warning",
             "message": "Type of \"to_msec\" is unknown",
             "range": {
@@ -1064,7 +1064,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportUnknownMemberType"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
             "severity": "warning",
             "message": "Return type is unknown",
             "range": {
@@ -1080,7 +1080,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportUnknownParameterType"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
             "severity": "warning",
             "message": "Type of parameter \"other\" is unknown",
             "range": {
@@ -1096,7 +1096,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportUnknownParameterType"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
             "severity": "warning",
             "message": "Type annotation is missing for parameter \"other\"",
             "range": {
@@ -1112,7 +1112,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportMissingParameterType"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
             "severity": "warning",
             "message": "Return type is unknown",
             "range": {
@@ -1128,7 +1128,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportUnknownVariableType"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
             "severity": "warning",
             "message": "Type of \"to_msec\" is unknown",
             "range": {
@@ -1144,7 +1144,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportUnknownMemberType"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
             "severity": "warning",
             "message": "Type of parameter \"other\" is unknown",
             "range": {
@@ -1160,7 +1160,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportUnknownParameterType"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
             "severity": "warning",
             "message": "Type annotation is missing for parameter \"other\"",
             "range": {
@@ -1176,7 +1176,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportMissingParameterType"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
             "severity": "warning",
             "message": "Argument type is unknown\n  Argument corresponds to parameter \"msec\" in function \"__init__\"",
             "range": {
@@ -1192,7 +1192,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportUnknownArgumentType"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
             "severity": "warning",
             "message": "Type of \"to_msec\" is unknown",
             "range": {
@@ -1208,7 +1208,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportUnknownMemberType"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
             "severity": "warning",
             "message": "Type of parameter \"other\" is unknown",
             "range": {
@@ -1224,7 +1224,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportUnknownParameterType"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
             "severity": "warning",
             "message": "Type annotation is missing for parameter \"other\"",
             "range": {
@@ -1240,7 +1240,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportMissingParameterType"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
             "severity": "warning",
             "message": "Argument type is unknown\n  Argument corresponds to parameter \"msec\" in function \"__init__\"",
             "range": {
@@ -1256,7 +1256,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportUnknownArgumentType"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
             "severity": "warning",
             "message": "Type of \"to_msec\" is unknown",
             "range": {
@@ -1272,7 +1272,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportUnknownMemberType"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
             "severity": "warning",
             "message": "Type of parameter \"mlt\" is unknown",
             "range": {
@@ -1288,7 +1288,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportUnknownParameterType"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
             "severity": "warning",
             "message": "Type annotation is missing for parameter \"mlt\"",
             "range": {
@@ -1304,7 +1304,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportMissingParameterType"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
             "severity": "warning",
             "message": "Argument type is unknown\n  Argument corresponds to parameter \"x\" in function \"__new__\"",
             "range": {
@@ -1320,7 +1320,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportUnknownArgumentType"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
             "severity": "warning",
             "message": "Type of parameter \"div\" is unknown",
             "range": {
@@ -1336,7 +1336,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportUnknownParameterType"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
             "severity": "warning",
             "message": "Type annotation is missing for parameter \"div\"",
             "range": {
@@ -1352,7 +1352,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportMissingParameterType"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
             "severity": "warning",
             "message": "Argument type is unknown\n  Argument corresponds to parameter \"x\" in function \"__new__\"",
             "range": {
@@ -1368,7 +1368,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportUnknownArgumentType"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
             "severity": "warning",
             "message": "Method \"__str__\" is not marked as override but is overriding a method in class \"object\"",
             "range": {
@@ -1384,7 +1384,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportImplicitOverride"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
             "severity": "warning",
             "message": "Method \"__repr__\" is not marked as override but is overriding a method in class \"object\"",
             "range": {
@@ -1400,7 +1400,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportImplicitOverride"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
             "severity": "warning",
             "message": "This type is deprecated as of Python 3.9; use \"type\" instead",
             "range": {
@@ -1416,7 +1416,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportDeprecated"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
             "severity": "warning",
             "message": "Type of parameter \"day\" is partially unknown\n  Parameter type is \"Unknown | None\"",
             "range": {
@@ -1432,7 +1432,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportUnknownParameterType"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
             "severity": "warning",
             "message": "Type annotation is missing for parameter \"day\"",
             "range": {
@@ -1448,7 +1448,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportMissingParameterType"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
             "severity": "warning",
             "message": "Type of parameter \"hour\" is partially unknown\n  Parameter type is \"Unknown | None\"",
             "range": {
@@ -1464,7 +1464,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportUnknownParameterType"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
             "severity": "warning",
             "message": "Type annotation is missing for parameter \"hour\"",
             "range": {
@@ -1480,7 +1480,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportMissingParameterType"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
             "severity": "warning",
             "message": "Type of parameter \"minute\" is partially unknown\n  Parameter type is \"Unknown | None\"",
             "range": {
@@ -1496,7 +1496,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportUnknownParameterType"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
             "severity": "warning",
             "message": "Type annotation is missing for parameter \"minute\"",
             "range": {
@@ -1512,7 +1512,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportMissingParameterType"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
             "severity": "warning",
             "message": "Type of parameter \"sec\" is partially unknown\n  Parameter type is \"Unknown | None\"",
             "range": {
@@ -1528,7 +1528,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportUnknownParameterType"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
             "severity": "warning",
             "message": "Type annotation is missing for parameter \"sec\"",
             "range": {
@@ -1544,7 +1544,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportMissingParameterType"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
             "severity": "warning",
             "message": "Type of parameter \"msec\" is partially unknown\n  Parameter type is \"Unknown | None\"",
             "range": {
@@ -1560,7 +1560,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportUnknownParameterType"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
             "severity": "warning",
             "message": "Type annotation is missing for parameter \"msec\"",
             "range": {
@@ -1576,7 +1576,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportMissingParameterType"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
             "severity": "warning",
             "message": "Argument type is partially unknown\n  Argument corresponds to parameter \"val\" in function \"if_none\"\n  Argument type is \"Unknown | None\"",
             "range": {
@@ -1592,7 +1592,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportUnknownArgumentType"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
             "severity": "warning",
             "message": "Argument type is partially unknown\n  Argument corresponds to parameter \"val\" in function \"if_none\"\n  Argument type is \"Unknown | None\"",
             "range": {
@@ -1608,7 +1608,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportUnknownArgumentType"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
             "severity": "warning",
             "message": "Argument type is partially unknown\n  Argument corresponds to parameter \"val\" in function \"if_none\"\n  Argument type is \"Unknown | None\"",
             "range": {
@@ -1624,7 +1624,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportUnknownArgumentType"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
             "severity": "warning",
             "message": "Argument type is partially unknown\n  Argument corresponds to parameter \"val\" in function \"if_none\"\n  Argument type is \"Unknown | None\"",
             "range": {
@@ -1640,7 +1640,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportUnknownArgumentType"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
             "severity": "warning",
             "message": "Argument type is partially unknown\n  Argument corresponds to parameter \"val\" in function \"if_none\"\n  Argument type is \"Unknown | None\"",
             "range": {
@@ -1656,7 +1656,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportUnknownArgumentType"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
             "severity": "warning",
             "message": "Type of \"mlt\" is Any",
             "range": {
@@ -1672,7 +1672,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportAny"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
             "severity": "warning",
             "message": "Return type is Any",
             "range": {
@@ -1688,7 +1688,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportAny"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
             "severity": "warning",
             "message": "Type annotation is missing for parameter \"day\"",
             "range": {
@@ -1704,7 +1704,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportMissingParameterType"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
             "severity": "warning",
             "message": "Type annotation is missing for parameter \"hour\"",
             "range": {
@@ -1720,7 +1720,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportMissingParameterType"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
             "severity": "warning",
             "message": "Type annotation is missing for parameter \"minute\"",
             "range": {
@@ -1736,7 +1736,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportMissingParameterType"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
             "severity": "warning",
             "message": "Type annotation is missing for parameter \"sec\"",
             "range": {
@@ -1752,7 +1752,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportMissingParameterType"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
             "severity": "warning",
             "message": "Type annotation is missing for parameter \"msec\"",
             "range": {
@@ -1768,7 +1768,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportMissingParameterType"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
             "severity": "warning",
             "message": "This type is deprecated as of Python 3.10; use \"| None\" instead",
             "range": {
@@ -1784,7 +1784,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportDeprecated"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
             "severity": "warning",
             "message": "Type of \"multiplier\" is Any",
             "range": {
@@ -1800,7 +1800,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportAny"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
             "severity": "warning",
             "message": "Type of \"new_ms\" is Any",
             "range": {
@@ -1816,7 +1816,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportAny"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
             "severity": "warning",
             "message": "Argument type is Any\n  Argument corresponds to parameter \"number\" in function \"round\"",
             "range": {
@@ -1832,7 +1832,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportAny"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
             "severity": "warning",
             "message": "Type of \"new_ms\" is Any",
             "range": {
@@ -1848,7 +1848,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportAny"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
             "severity": "warning",
             "message": "Type of \"new_ms\" is Any",
             "range": {
@@ -1864,7 +1864,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportAny"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
             "severity": "warning",
             "message": "Argument type is Any\n  Argument corresponds to parameter \"msec\" in function \"__init__\"",
             "range": {
@@ -1880,7 +1880,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportAny"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\otime.py",
             "severity": "warning",
             "message": "Type of \"OTime\" is partially unknown\n  Type of \"OTime\" is \"Unknown | type[PythonOTime]\"",
             "range": {
@@ -1896,7 +1896,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportUnknownVariableType"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\singleton.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\singleton.py",
             "severity": "warning",
             "message": "Type of parameter \"name\" is unknown",
             "range": {
@@ -1912,7 +1912,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportUnknownParameterType"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\singleton.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\singleton.py",
             "severity": "warning",
             "message": "Type annotation is missing for parameter \"name\"",
             "range": {
@@ -1928,7 +1928,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportMissingParameterType"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\singleton.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\singleton.py",
             "severity": "warning",
             "message": "Type of parameter \"bases\" is unknown",
             "range": {
@@ -1944,7 +1944,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportUnknownParameterType"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\singleton.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\singleton.py",
             "severity": "warning",
             "message": "Type annotation is missing for parameter \"bases\"",
             "range": {
@@ -1960,7 +1960,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportMissingParameterType"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\singleton.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\singleton.py",
             "severity": "warning",
             "message": "Type of parameter \"attrs\" is unknown",
             "range": {
@@ -1976,7 +1976,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportUnknownParameterType"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\singleton.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\singleton.py",
             "severity": "warning",
             "message": "Type annotation is missing for parameter \"attrs\"",
             "range": {
@@ -1992,7 +1992,7 @@ $ uvx --python 3.14 --from basedpyright==1.40.2 basedpyright --outputjson C:\Use
             "rule": "reportMissingParameterType"
         },
         {
-            "file": "c:\\Users\\ank\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\singleton.py",
+            "file": "c:\\Users\\USER\\Prog\\Orient\\_other\\pysport-legacy\\sportorg\\common\\singleton.py",
             "severity": "warning",
             "message": "Type of parameter \"kwargs\" is unknown",
             "range": {

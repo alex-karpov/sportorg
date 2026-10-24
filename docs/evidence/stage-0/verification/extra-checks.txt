@@ -25,13 +25,13 @@
 
 ######## guard hook vs the project venv (uv run --no-project --python 3.14, as in .claude/settings.json)
 --- healthy .venv in the clone:
-  prefix: C:\Users\ank\AppData\Local\Temp\claude\C--Users-ank-Prog-Orient-sportorg\468d4e66-c0b1-4013-a35c-dc100817b3a3\scratchpad\v2\envb-win\.venv
+  prefix: C:\Users\USER\AppData\Local\Temp\claude\C--Users-USER-Prog-Orient-sportorg\468d4e66-c0b1-4013-a35c-dc100817b3a3\scratchpad\v2\envb-win\.venv
   non-stdlib modules: ['__main__', 'scripts']
 --- broken .venv:
-  prefix: C:\Users\ank\AppData\Roaming\uv\python\cpython-3.14-windows-x86_64-none
+  prefix: C:\Users\USER\AppData\Roaming\uv\python\cpython-3.14-windows-x86_64-none
 {"hookSpecificOutput": {"hookEventName": "PreToolUse", "permissionDecision": "deny", "permissionDecisionReason": "This command could modify the read-only legacy checkout (AGENTS.md rule 1). Read-only git/grep commands are fine; to execute legacy use scripts/legacy_clone.py."}}
   [exit 0]
 --- absent .venv:
-  prefix: C:\Users\ank\AppData\Roaming\uv\python\cpython-3.14-windows-x86_64-none
+  prefix: C:\Users\USER\AppData\Roaming\uv\python\cpython-3.14-windows-x86_64-none
 {"hookSpecificOutput": {"hookEventName": "PreToolUse", "permissionDecision": "deny", "permissionDecisionReason": "This command could modify the read-only legacy checkout (AGENTS.md rule 1). Read-only git/grep commands are fine; to execute legacy use scripts/legacy_clone.py."}}
   [exit 0]

@@ -1,39 +1,39 @@
-$ (cwd=C:\Users\ank\Prog\Orient\sportorg\scripts\typecheck_configs\pyright)
-$ uvx --python 3.14 --from pyright==1.1.414 pyright -p C:\Users\ank\Prog\Orient\sportorg\scripts\typecheck_configs\pyright\pyrightconfig.json C:\Users\ank\Prog\Orient\sportorg\scripts\typecheck_fixtures
+$ (cwd=C:\Users\USER\Prog\Orient\sportorg\scripts\typecheck_configs\pyright)
+$ uvx --python 3.14 --from pyright==1.1.414 pyright -p C:\Users\USER\Prog\Orient\sportorg\scripts\typecheck_configs\pyright\pyrightconfig.json C:\Users\USER\Prog\Orient\sportorg\scripts\typecheck_fixtures
 # exit=1
 
-c:\Users\ank\Prog\Orient\sportorg\scripts\typecheck_fixtures\any_leak_untyped_call.py
-  c:\Users\ank\Prog\Orient\sportorg\scripts\typecheck_fixtures\any_leak_untyped_call.py:9:10 - error: Argument of type "Literal['s']" cannot be assigned to parameter "i" of type "int" in function "need_int"
+c:\Users\USER\Prog\Orient\sportorg\scripts\typecheck_fixtures\any_leak_untyped_call.py
+  c:\Users\USER\Prog\Orient\sportorg\scripts\typecheck_fixtures\any_leak_untyped_call.py:9:10 - error: Argument of type "Literal['s']" cannot be assigned to parameter "i" of type "int" in function "need_int"
     "Literal['s']" is not assignable to "int" (reportArgumentType)
-c:\Users\ank\Prog\Orient\sportorg\scripts\typecheck_fixtures\implicit_optional.py
-  c:\Users\ank\Prog\Orient\sportorg\scripts\typecheck_fixtures\implicit_optional.py:2:16 - error: Expression of type "None" cannot be assigned to parameter of type "int"
+c:\Users\USER\Prog\Orient\sportorg\scripts\typecheck_fixtures\implicit_optional.py
+  c:\Users\USER\Prog\Orient\sportorg\scripts\typecheck_fixtures\implicit_optional.py:2:16 - error: Expression of type "None" cannot be assigned to parameter of type "int"
     "None" is not assignable to "int" (reportArgumentType)
-c:\Users\ank\Prog\Orient\sportorg\scripts\typecheck_fixtures\missing_import.py
-  c:\Users\ank\Prog\Orient\sportorg\scripts\typecheck_fixtures\missing_import.py:2:8 - error: Import "nonexistent_module_xyz_123" could not be resolved (reportMissingImports)
-  c:\Users\ank\Prog\Orient\sportorg\scripts\typecheck_fixtures\missing_import.py:4:7 - error: Type of "value" is unknown (reportUnknownMemberType)
-  c:\Users\ank\Prog\Orient\sportorg\scripts\typecheck_fixtures\missing_import.py:4:7 - error: Argument type is unknown
+c:\Users\USER\Prog\Orient\sportorg\scripts\typecheck_fixtures\missing_import.py
+  c:\Users\USER\Prog\Orient\sportorg\scripts\typecheck_fixtures\missing_import.py:2:8 - error: Import "nonexistent_module_xyz_123" could not be resolved (reportMissingImports)
+  c:\Users\USER\Prog\Orient\sportorg\scripts\typecheck_fixtures\missing_import.py:4:7 - error: Type of "value" is unknown (reportUnknownMemberType)
+  c:\Users\USER\Prog\Orient\sportorg\scripts\typecheck_fixtures\missing_import.py:4:7 - error: Argument type is unknown
     Argument corresponds to parameter "values" in function "print" (reportUnknownArgumentType)
-c:\Users\ank\Prog\Orient\sportorg\scripts\typecheck_fixtures\pyright_ignore_unused.py
-  c:\Users\ank\Prog\Orient\sportorg\scripts\typecheck_fixtures\pyright_ignore_unused.py:2:15 - error: Unnecessary "# type: ignore" comment (reportUnnecessaryTypeIgnoreComment)
-c:\Users\ank\Prog\Orient\sportorg\scripts\typecheck_fixtures\real_bug_missing_return.py
-  c:\Users\ank\Prog\Orient\sportorg\scripts\typecheck_fixtures\real_bug_missing_return.py:2:22 - error: Function with declared return type "int" must return value on all code paths
+c:\Users\USER\Prog\Orient\sportorg\scripts\typecheck_fixtures\pyright_ignore_unused.py
+  c:\Users\USER\Prog\Orient\sportorg\scripts\typecheck_fixtures\pyright_ignore_unused.py:2:15 - error: Unnecessary "# type: ignore" comment (reportUnnecessaryTypeIgnoreComment)
+c:\Users\USER\Prog\Orient\sportorg\scripts\typecheck_fixtures\real_bug_missing_return.py
+  c:\Users\USER\Prog\Orient\sportorg\scripts\typecheck_fixtures\real_bug_missing_return.py:2:22 - error: Function with declared return type "int" must return value on all code paths
     "None" is not assignable to "int" (reportReturnType)
-c:\Users\ank\Prog\Orient\sportorg\scripts\typecheck_fixtures\real_bug_optional_attr.py
-  c:\Users\ank\Prog\Orient\sportorg\scripts\typecheck_fixtures\real_bug_optional_attr.py:3:14 - error: "upper" is not a known attribute of "None" (reportOptionalMemberAccess)
-c:\Users\ank\Prog\Orient\sportorg\scripts\typecheck_fixtures\real_bug_str_plus_int.py
-  c:\Users\ank\Prog\Orient\sportorg\scripts\typecheck_fixtures\real_bug_str_plus_int.py:3:12 - error: Operator "+" not supported for types "str" and "Literal[1]" (reportOperatorIssue)
-  c:\Users\ank\Prog\Orient\sportorg\scripts\typecheck_fixtures\real_bug_str_plus_int.py:3:12 - error: Return type is unknown (reportUnknownVariableType)
-c:\Users\ank\Prog\Orient\sportorg\scripts\typecheck_fixtures\typeddict_wrong_key.py
-  c:\Users\ank\Prog\Orient\sportorg\scripts\typecheck_fixtures\typeddict_wrong_key.py:11:12 - error: Could not access item in TypedDict
+c:\Users\USER\Prog\Orient\sportorg\scripts\typecheck_fixtures\real_bug_optional_attr.py
+  c:\Users\USER\Prog\Orient\sportorg\scripts\typecheck_fixtures\real_bug_optional_attr.py:3:14 - error: "upper" is not a known attribute of "None" (reportOptionalMemberAccess)
+c:\Users\USER\Prog\Orient\sportorg\scripts\typecheck_fixtures\real_bug_str_plus_int.py
+  c:\Users\USER\Prog\Orient\sportorg\scripts\typecheck_fixtures\real_bug_str_plus_int.py:3:12 - error: Operator "+" not supported for types "str" and "Literal[1]" (reportOperatorIssue)
+  c:\Users\USER\Prog\Orient\sportorg\scripts\typecheck_fixtures\real_bug_str_plus_int.py:3:12 - error: Return type is unknown (reportUnknownVariableType)
+c:\Users\USER\Prog\Orient\sportorg\scripts\typecheck_fixtures\typeddict_wrong_key.py
+  c:\Users\USER\Prog\Orient\sportorg\scripts\typecheck_fixtures\typeddict_wrong_key.py:11:12 - error: Could not access item in TypedDict
     "director" is not a defined key in "Movie" (reportGeneralTypeIssues)
-  c:\Users\ank\Prog\Orient\sportorg\scripts\typecheck_fixtures\typeddict_wrong_key.py:11:12 - error: Return type is unknown (reportUnknownVariableType)
-c:\Users\ank\Prog\Orient\sportorg\scripts\typecheck_fixtures\untyped_def.py
-  c:\Users\ank\Prog\Orient\sportorg\scripts\typecheck_fixtures\untyped_def.py:2:5 - error: Return type is unknown (reportUnknownParameterType)
-  c:\Users\ank\Prog\Orient\sportorg\scripts\typecheck_fixtures\untyped_def.py:2:7 - error: Type of parameter "a" is unknown (reportUnknownParameterType)
-  c:\Users\ank\Prog\Orient\sportorg\scripts\typecheck_fixtures\untyped_def.py:2:7 - error: Type annotation is missing for parameter "a" (reportMissingParameterType)
-  c:\Users\ank\Prog\Orient\sportorg\scripts\typecheck_fixtures\untyped_def.py:2:10 - error: Type of parameter "b" is unknown (reportUnknownParameterType)
-  c:\Users\ank\Prog\Orient\sportorg\scripts\typecheck_fixtures\untyped_def.py:2:10 - error: Type annotation is missing for parameter "b" (reportMissingParameterType)
-  c:\Users\ank\Prog\Orient\sportorg\scripts\typecheck_fixtures\untyped_def.py:3:12 - error: Return type is unknown (reportUnknownVariableType)
-c:\Users\ank\Prog\Orient\sportorg\scripts\typecheck_fixtures\unused_type_ignore.py
-  c:\Users\ank\Prog\Orient\sportorg\scripts\typecheck_fixtures\unused_type_ignore.py:2:15 - error: Unnecessary "# type: ignore" comment (reportUnnecessaryTypeIgnoreComment)
+  c:\Users\USER\Prog\Orient\sportorg\scripts\typecheck_fixtures\typeddict_wrong_key.py:11:12 - error: Return type is unknown (reportUnknownVariableType)
+c:\Users\USER\Prog\Orient\sportorg\scripts\typecheck_fixtures\untyped_def.py
+  c:\Users\USER\Prog\Orient\sportorg\scripts\typecheck_fixtures\untyped_def.py:2:5 - error: Return type is unknown (reportUnknownParameterType)
+  c:\Users\USER\Prog\Orient\sportorg\scripts\typecheck_fixtures\untyped_def.py:2:7 - error: Type of parameter "a" is unknown (reportUnknownParameterType)
+  c:\Users\USER\Prog\Orient\sportorg\scripts\typecheck_fixtures\untyped_def.py:2:7 - error: Type annotation is missing for parameter "a" (reportMissingParameterType)
+  c:\Users\USER\Prog\Orient\sportorg\scripts\typecheck_fixtures\untyped_def.py:2:10 - error: Type of parameter "b" is unknown (reportUnknownParameterType)
+  c:\Users\USER\Prog\Orient\sportorg\scripts\typecheck_fixtures\untyped_def.py:2:10 - error: Type annotation is missing for parameter "b" (reportMissingParameterType)
+  c:\Users\USER\Prog\Orient\sportorg\scripts\typecheck_fixtures\untyped_def.py:3:12 - error: Return type is unknown (reportUnknownVariableType)
+c:\Users\USER\Prog\Orient\sportorg\scripts\typecheck_fixtures\unused_type_ignore.py
+  c:\Users\USER\Prog\Orient\sportorg\scripts\typecheck_fixtures\unused_type_ignore.py:2:15 - error: Unnecessary "# type: ignore" comment (reportUnnecessaryTypeIgnoreComment)
 19 errors, 0 warnings, 0 informations
