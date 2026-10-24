@@ -33,6 +33,9 @@ portable rule `Edit(/.legacy/**)`, guard on resolved paths; probe on Windows and
   (documented gap: subprocesses that open files themselves). Read and a control edit worked.
 - Agent probe, WSL2 (2026-10-25), same rule and steps: 12 of 13 write attempts refused with the same
   messages; passed again only `python3 -c "open(…)"`; the two PowerShell steps do not apply on Linux.
+- Same probe in WSL2 with the Claude Code Bash sandbox in auto-allow mode (2026-10-25): 13 of 13
+  refused. Edit/Write by the rule as before; every Bash step, `python3 -c "open(…)"` included, ran
+  without a permission check and failed with "Read-only file system" on writable files.
 - File modes, no agent: WSL ext4 with `chmod a-w` — 9 of 10 blocked (the owner can `chmod u+w` back).
   Windows read-only attribute — 5 of 14 blocked (`sed -i`, `cp`, `mv`, `rm`, `git rm`, `chmod u+w`,
   `Remove-Item -Force` pass). Windows attribute + inherited deny ACE (write, append, attributes,
@@ -73,6 +76,10 @@ portable rule `Edit(/.legacy/**)`, guard on resolved paths; probe on Windows and
 | Subprocess opening files itself | no | no | yes / yes |
 | Owner restoring write access | no | denies `chmod`/`attrib`/`icacls` on legacy | no / yes |
 | Session started in a subdirectory or worktree | no (`/path` anchors at the session's start directory) | yes | yes / yes |
+
+With the Claude Code Bash sandbox on (WSL2, Linux, macOS; not native Windows, ADR-0003), the deny rule
+also covers everything Bash starts, subprocesses included (probe above). The repository's settings do
+not turn the sandbox on, so the table does not count on it.
 
 ## Sources of the pins: two repositories `[мейнтейнер: 2026-10-25]`
 The first pin, `30d849d`, was the maintainer's local commit "feat: add russian templates" on top of

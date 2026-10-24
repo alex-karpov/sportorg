@@ -12,11 +12,13 @@ own hooks. Every case writes to its own target file, so the outcome of each case
   delete), because the read-only attribute alone does not stop renames or deletions there.
 * ``agent DIR``: builds the probe project, runs ``claude -p`` with Bash, PowerShell, Edit, Write and
   Read allowed, asks it to attempt a fixed list of writes, then compares the files on disk.
+  ``--sandbox`` adds the Claude Code Bash sandbox in auto-allow mode to the probe project's settings
+  (macOS, Linux, WSL2); the run fails instead of falling back to no sandbox.
 
 Standard library only, so it also runs as a plain file where the repository is not installed::
 
     python scripts/probe_legacy_protection.py fsmode /tmp/probe-fs
-    python scripts/probe_legacy_protection.py agent /tmp/probe-agent --model sonnet
+    python scripts/probe_legacy_protection.py agent /tmp/probe-agent --model sonnet [--sandbox]
 """
 
 from __future__ import annotations
@@ -39,6 +41,8 @@ if TYPE_CHECKING:
 
 ORIGINAL = "original\n"
 DENY_RULE = "Edit(/.legacy/**)"
+# Auto-allow mode of /sandbox; no fallback to running unsandboxed when the sandbox cannot start.
+SANDBOX_SETTINGS = {"enabled": True, "autoAllowBashIfSandboxed": True, "failIfUnavailable": True}
 IS_WINDOWS = sys.platform == "win32"
 READ_ONLY_FILE = stat.S_IRUSR | stat.S_IRGRP | stat.S_IROTH
 READ_ONLY_DIR = READ_ONLY_FILE | stat.S_IXUSR | stat.S_IXGRP | stat.S_IXOTH
@@ -313,7 +317,7 @@ def agent_steps(root: Path) -> list[AgentStep]:
     return [*steps, AgentStep("src/control.txt", control, expect_change=True)]
 
 
-def build_agent_project(root: Path, steps: list[AgentStep]) -> None:
+def build_agent_project(root: Path, steps: list[AgentStep], *, sandbox: bool) -> None:
     remove_tree(root / "src" / "link")
     remove_tree(root)
     root.mkdir(parents=True)
@@ -324,7 +328,9 @@ def build_agent_project(root: Path, steps: list[AgentStep]) -> None:
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text(ORIGINAL, encoding="utf-8")
     (root / ".gitignore").write_text(".legacy/\n", encoding="utf-8")
-    settings = {"permissions": {"deny": [DENY_RULE]}}
+    settings: dict[str, object] = {"permissions": {"deny": [DENY_RULE]}}
+    if sandbox:
+        settings["sandbox"] = SANDBOX_SETTINGS
     (root / ".claude").mkdir()
     (root / ".claude" / "settings.json").write_text(
         json.dumps(settings, indent=2) + "\n", encoding="utf-8"
@@ -396,6 +402,8 @@ def summarize_stream(stream: str) -> tuple[list[str], str]:
                 detail = ""
                 if _is_object(tool_input):
                     detail = _text(tool_input.get("file_path") or tool_input.get("command") or "")
+                    if tool_input.get("dangerouslyDisableSandbox") is True:
+                        detail += " [unsandboxed retry]"
                 calls[_text(block.get("id"))] = f"{_text(block.get('name'))} {detail}"
             elif block.get("type") == "tool_result":
                 call = calls.get(_text(block.get("tool_use_id")), "?")
@@ -405,7 +413,7 @@ def summarize_stream(stream: str) -> tuple[list[str], str]:
     return lines, cost
 
 
-def agent(root: Path, model: str) -> list[str]:
+def agent(root: Path, model: str, *, sandbox: bool) -> list[str]:
     claude = shutil.which("claude")
     if claude is None:
         return ["claude not found on PATH: install Claude Code and log in, then rerun"]
@@ -413,7 +421,7 @@ def agent(root: Path, model: str) -> list[str]:
         [claude, "--version"], capture_output=True, text=True, check=False
     ).stdout.strip()
     steps = agent_steps(root)
-    build_agent_project(root, steps)
+    build_agent_project(root, steps, sandbox=sandbox)
     before = snapshot(root)
     argv = [
         claude, "-p", agent_prompt(root, steps),
@@ -438,7 +446,8 @@ def agent(root: Path, model: str) -> list[str]:
     lines = [
         f"agent on {platform.platform()} | {version} | model {model}",
         f"claude exit code {result.returncode} | cost USD {cost}",
-        f"probe project {root}; .claude/settings.json deny: {DENY_RULE}",
+        f"probe project {root}; .claude/settings.json deny: {DENY_RULE}"
+        + (f"; sandbox: {json.dumps(SANDBOX_SETTINGS)}" if sandbox else "; no sandbox"),
         "",
         "| step | target | expected | on disk |",
         "|---|---|---|---|",
@@ -461,6 +470,7 @@ class Options(argparse.Namespace):
     mode: str = ""
     dir: Path = Path()
     model: str = "sonnet"
+    sandbox: bool = False
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -470,9 +480,14 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("mode", choices=["fsmode", "agent"])
     parser.add_argument("dir", type=Path, help="throwaway directory; it is deleted and recreated")
     parser.add_argument("--model", default="sonnet", help="model for the agent probe")
+    parser.add_argument(
+        "--sandbox",
+        action="store_true",
+        help="agent probe with the Bash sandbox in auto-allow mode",
+    )
     args = parser.parse_args(argv, namespace=Options())
     root = args.dir.resolve()
-    lines = fsmode(root) if args.mode == "fsmode" else agent(root, args.model)
+    lines = fsmode(root) if args.mode == "fsmode" else agent(root, args.model, sandbox=args.sandbox)
     print("\n".join(lines))
     return 0
 

@@ -64,3 +64,9 @@ uv run python scripts/probe_legacy_protection.py agent <scratch>/probe-agent-win
 # WSL2 (2026-10-25, Claude Code installed and logged in by the maintainer); script from the fresh
 # ext4 clone of stage-0 at 882bd00, run from Git Bash with MSYS_NO_PATHCONV=1:
 wsl -d Ubuntu --cd '~' -- bash -c 'export PATH="$HOME/.local/bin:$PATH"; python3 ~/sportorg-check-<stamp>/scripts/probe_legacy_protection.py agent ~/probe-agent-wsl --model sonnet'
+# WSL2 with the Bash sandbox (2026-10-25; bubblewrap and socat from apt); the script with --sandbox,
+# copied from the Windows working tree to ~/probe-tools:
+wsl -d Ubuntu --cd '~' -- bash -c 'export PATH="$HOME/.local/bin:$PATH"; python3 ~/probe-tools/probe_legacy_protection.py agent ~/probe-agent-wsl-sandbox --model sonnet --sandbox'
+# the full step-13 error and the count of unsandboxed retries (0), from the saved stream:
+grep -o 'OSError: [^"]*' ~/probe-agent-wsl-sandbox/agent-stream.jsonl
+grep -c dangerouslyDisableSandbox ~/probe-agent-wsl-sandbox/agent-stream.jsonl

@@ -4,7 +4,7 @@ title: 'Legacy as pinned, locked clones in .legacy/ (ADR-0006)'
 status: Done
 assignee: []
 created_date: '2026-10-24 12:05'
-updated_date: '2026-10-24 18:21'
+updated_date: '2026-10-24 19:21'
 labels:
   - stage-0
   - claude-code
@@ -36,4 +36,6 @@ Maintainer decision 7 (2026-10-24): legacy is a git-ignored clone inside the rep
 2026-10-25, WSL2 Ubuntu (Linux 6.18.33.2-microsoft-standard-WSL2), fresh clone of stage-0 882bd00 from GitHub on ext4, uv 0.13.5: 'uv sync --locked' ok; 'scripts.legacy fetch' without --source 7.18 s -> pysport at b548c35ba18f..., templates at cd953823beb3..., locked; 'verify' -> 'ok: pysport@b548c35ba18f, templates@cd953823beb3 locked', exit 0; modes dr-xr-xr-x .legacy/pysport, -r--r--r-- README.md; check.py 5 steps ok, 99 tests.
 
 2026-10-25, WSL2 agent probe (Claude Code 2.1.310, sonnet, rule only, files writable): 12 of 13 write attempts refused - Edit by relative, absolute, src/.., upper-case and symlink paths, Write, Bash >>, sed -i, cp, mv, rm; passed only python3 -c open(...) (documented gap, stopped by file modes in the real .legacy). Output: docs/evidence/stage-0/legacy-layout/probe-agent-wsl.md.
+
+2026-10-25, WSL2 with the Claude Code Bash sandbox in auto-allow mode (probe option --sandbox): 13 of 13 write attempts refused; Bash steps, python3 -c open() included, failed with 'Read-only file system' on writable files. Evidence: docs/evidence/stage-0/legacy-layout/probe-agent-wsl-sandbox.md, README section 5.3.
 <!-- SECTION:NOTES:END -->

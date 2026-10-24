@@ -33,7 +33,9 @@ Stage 0 that turned the Windows `.venv` into a broken Linux one.
    Log in with `/login`. Turn the sandbox on with `/sandbox` in a session, or with
    `"sandbox": {"enabled": true}` in `~/.claude/settings.json`. If `bubblewrap` or `socat` is missing,
    Claude Code runs commands without the sandbox, unless `"sandbox": {"failIfUnavailable": true}`
-   makes it stop at startup instead. If
+   makes it stop at startup instead. Of the two `/sandbox` modes, auto-allow is the one probed for
+   this project: Bash commands run without prompts inside the sandbox, and `.legacy/` stays read-only
+   for them and for the processes they start (ADR-0006). If
    `sysctl kernel.apparmor_restrict_unprivileged_userns` prints `1` (Ubuntu 24.04+ with AppArmor),
    apply "Ubuntu 24.04 and later: allow bubblewrap to create user namespaces" from the
    [sandboxing docs](https://code.claude.com/docs/en/sandboxing); if the key does not exist, nothing

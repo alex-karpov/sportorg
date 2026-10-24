@@ -97,7 +97,8 @@ pysport@b548c35ba18f, templates@cd953823beb3 locked`. At `b548c35`, pysport's ow
 
 The probe builds a throwaway project with the planned layout (`.legacy/pysport/…`, `.gitignore`
 `.legacy/`, `.claude/settings.json` deny `Edit(/.legacy/**)`) outside this repository. Raw outputs:
-`probe-fsmode-windows.md`, `probe-fsmode-wsl.md`, `probe-agent-windows.md`, `probe-agent-wsl.md`.
+`probe-fsmode-windows.md`, `probe-fsmode-wsl.md`, `probe-agent-windows.md`, `probe-agent-wsl.md`,
+`probe-agent-wsl-sandbox.md`.
 
 ### 5.1 Read-only file modes, no agent (`fsmode`)
 
@@ -128,7 +129,7 @@ includes SYNCHRONIZE, and `ls`/`cat` on the tree failed with "Permission denied"
 directory, then removed). On Linux the owner can always `chmod u+w` back; only root-level tools
 (`chattr +i`, a read-only bind mount) close that.
 
-### 5.2 Claude Code deny rule, agent (`agent`), Windows and WSL2
+### 5.2 Claude Code deny rule, agent (`agent`), Windows and WSL2, no sandbox
 
 Claude Code 2.1.310, model sonnet, `claude -p` started at the probe project root with
 `--permission-mode acceptEdits --allowedTools Bash,PowerShell,Edit,Write,Read`; files writable (rule
@@ -158,3 +159,27 @@ probe: a `/path` rule anchors at the session's primary working directory, so a s
 subdirectory or a worktree does not get this rule for the root `.legacy/` (docs: "Where a pattern
 anchors"); deny rules do not cover subprocesses that open files themselves (docs: Read and Edit
 warning).
+
+### 5.3 The same agent probe with the Bash sandbox, WSL2
+
+2026-10-25, same rule and steps, option `--sandbox`: the probe project's `.claude/settings.json` also
+has `"sandbox": {"enabled": true, "autoAllowBashIfSandboxed": true, "failIfUnavailable": true}`, which
+is the auto-allow mode of `/sandbox`, and Claude Code stops instead of running commands unconfined if
+the sandbox cannot start. bubblewrap and socat from apt; cost USD 0.17.
+
+| Attempt | WSL2, no sandbox (5.2) | WSL2, sandbox | Tool result with the sandbox |
+|---|---|---|---|
+| Edit and Write, steps 1–7 | unchanged | unchanged | the permission messages of 5.2; the sandbox does not apply to these tools |
+| Bash `echo >>`, `sed -i`, `cp`, `mv`, `rm` | unchanged | unchanged | the command ran without a permission check and failed with "Read-only file system", e.g. `rm: cannot remove '.legacy/pysport/s12.txt': Read-only file system` |
+| Bash `python3 -c "open(…, 'a')"` | **written** | unchanged | `OSError: [Errno 30] Read-only file system: '.legacy/pysport/s13.txt'` (full line from `agent-stream.jsonl`; the table in the raw output cuts it) |
+| PowerShell | n/a | n/a | no PowerShell tool on Linux |
+| Read; Edit `src/control.txt` (control) | ok | ok | ok |
+
+Refused: 13 of 13 write attempts. The probe files stayed writable (`-rw-r--r--` after the run), so
+"Read-only file system" comes from the sandbox's mount, not from file modes: `.legacy/` was read-only
+inside a writable working directory for every process that Bash started. That matches the sandboxing
+docs, which merge Edit deny rules into the sandbox's write restrictions; a run with the sandbox and
+without the rule was not made. No tool call asked to run outside the sandbox (`dangerouslyDisableSandbox` occurs 0 times in
+the stream). Not tested: such a retry, which `allowUnsandboxedCommands` (default true) permits and
+ordinary permissions then govern; a Bash write into `src/` under the sandbox (the control step uses
+Edit).
