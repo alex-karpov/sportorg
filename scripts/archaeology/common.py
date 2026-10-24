@@ -8,22 +8,23 @@ from __future__ import annotations
 
 import ast
 import json
+import os
 import re
 import subprocess
 import warnings
 from dataclasses import dataclass
+from pathlib import Path
 from typing import TYPE_CHECKING, Final, override
 
 from scripts import legacy
 
 if TYPE_CHECKING:
-    from pathlib import Path
-
     from scripts._json import Json
 
 PYSPORT: Final = "pysport"
 TEMPLATES: Final = "templates"
 PIN_SHORT_LEN: Final = 7
+LEGACY_BASE_ENV: Final = "ARCHAEOLOGY_LEGACY_BASE"
 
 GIT_LOG_FORMAT: Final = "%x1e%H%x1f%P%x1f%as%x1f%s"
 _RECORD: Final = "\x1e"
@@ -52,7 +53,14 @@ class TreeNotCleanError(RuntimeError):
 
 
 def repo_root(name: str) -> Path:
-    return legacy.checkout_dir(name)
+    """``.legacy/<name>``; ``ARCHAEOLOGY_LEGACY_BASE`` points the scripts at a canary copy instead.
+
+    Canaries of the verification prompt modify a writable copy (``.legacy-run/``, made by
+    ``scripts.legacy_clone``) and replace the pinned commit there with ``git replace``. The scripts
+    keep reading ``<pin>:<path>``, so only the base directory changes.
+    """
+    base = os.environ.get(LEGACY_BASE_ENV)
+    return legacy.checkout_dir(name, Path(base) if base else None)
 
 
 def pin_short(name: str) -> str:

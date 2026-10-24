@@ -182,3 +182,10 @@ def test_parse_source_records_syntax_warnings() -> None:
     assert warnings[0].startswith("sportorg/w.py:1: ")
     assert "invalid escape sequence" in warnings[0]
     assert common.iter_imports(source, "m") == [ImportRef("os", (), 2, local=False)]
+
+
+def test_repo_root_honours_the_canary_base(monkeypatch: pytest.MonkeyPatch, tmp_path: Path) -> None:
+    monkeypatch.delenv(common.LEGACY_BASE_ENV, raising=False)
+    assert common.repo_root("pysport").parts[-2:] == (".legacy", "pysport")
+    monkeypatch.setenv(common.LEGACY_BASE_ENV, str(tmp_path))
+    assert common.repo_root("pysport") == tmp_path / "pysport"
