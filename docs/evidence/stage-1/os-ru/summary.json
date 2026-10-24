@@ -1,0 +1,241 @@
+{
+ "counts": {
+  "OS01": {
+   "core": {
+    "code": 0,
+    "comment": 0,
+    "config": 0,
+    "docstring": 0,
+    "string": 0
+   },
+   "outside": {
+    "code": 20,
+    "comment": 0,
+    "config": 0,
+    "docstring": 0,
+    "string": 0
+   }
+  },
+  "OS02": {
+   "core": {
+    "code": 0,
+    "comment": 0,
+    "config": 0,
+    "docstring": 0,
+    "string": 0
+   },
+   "outside": {
+    "code": 6,
+    "comment": 0,
+    "config": 0,
+    "docstring": 0,
+    "string": 0
+   }
+  },
+  "OS03": {
+   "core": {
+    "code": 0,
+    "comment": 0,
+    "config": 0,
+    "docstring": 0,
+    "string": 0
+   },
+   "outside": {
+    "code": 1,
+    "comment": 0,
+    "config": 0,
+    "docstring": 0,
+    "string": 0
+   }
+  },
+  "OS04": {
+   "core": {
+    "code": 0,
+    "comment": 0,
+    "config": 0,
+    "docstring": 0,
+    "string": 0
+   },
+   "outside": {
+    "code": 0,
+    "comment": 3,
+    "config": 13,
+    "docstring": 2,
+    "string": 6
+   }
+  },
+  "OS05": {
+   "core": {
+    "code": 0,
+    "comment": 0,
+    "config": 0,
+    "docstring": 0,
+    "string": 0
+   },
+   "outside": {
+    "code": 0,
+    "comment": 0,
+    "config": 552,
+    "docstring": 0,
+    "string": 0
+   }
+  },
+  "OS06": {
+   "core": {
+    "code": 0,
+    "comment": 0,
+    "config": 0,
+    "docstring": 0,
+    "string": 0
+   },
+   "outside": {
+    "code": 0,
+    "comment": 0,
+    "config": 0,
+    "docstring": 0,
+    "string": 0
+   }
+  },
+  "RU01": {
+   "core": {
+    "code": 0,
+    "comment": 0,
+    "config": 0,
+    "docstring": 0,
+    "string": 25
+   },
+   "outside": {
+    "code": 0,
+    "comment": 43,
+    "config": 0,
+    "docstring": 3,
+    "string": 69
+   }
+  },
+  "RU02": {
+   "core": {
+    "code": 44,
+    "comment": 0,
+    "config": 0,
+    "docstring": 0,
+    "string": 7
+   },
+   "outside": {
+    "code": 56,
+    "comment": 0,
+    "config": 0,
+    "docstring": 0,
+    "string": 9
+   }
+  },
+  "RU03": {
+   "core": {
+    "code": 0,
+    "comment": 0,
+    "config": 0,
+    "docstring": 0,
+    "string": 1
+   },
+   "outside": {
+    "code": 0,
+    "comment": 2,
+    "config": 0,
+    "docstring": 4,
+    "string": 40
+   }
+  },
+  "RU04": {
+   "core": {
+    "code": 0,
+    "comment": 1,
+    "config": 0,
+    "docstring": 0,
+    "string": 1
+   },
+   "outside": {
+    "code": 0,
+    "comment": 0,
+    "config": 0,
+    "docstring": 2,
+    "string": 5
+   }
+  },
+  "RU05": {
+   "core": {
+    "code": 0,
+    "comment": 0,
+    "config": 0,
+    "docstring": 0,
+    "string": 4
+   },
+   "outside": {
+    "code": 0,
+    "comment": 1,
+    "config": 0,
+    "docstring": 0,
+    "string": 3
+   }
+  }
+ },
+ "layers": {
+  "OS01": {
+   "application": 3,
+   "outside": 6,
+   "ui": 5,
+   "vendored": 6
+  },
+  "OS02": {
+   "application": 3,
+   "outside": 1,
+   "ui": 1,
+   "vendored": 1
+  },
+  "OS03": {
+   "ui": 1
+  },
+  "OS04": {
+   "application": 2,
+   "outside": 18,
+   "ui": 3,
+   "vendored": 1
+  },
+  "OS05": {
+   "outside": 552
+  },
+  "OS06": {},
+  "RU01": {
+   "application": 17,
+   "domain": 25,
+   "outside": 91,
+   "ui": 1,
+   "vendored": 6
+  },
+  "RU02": {
+   "application": 10,
+   "domain": 51,
+   "outside": 36,
+   "ui": 17,
+   "vendored": 2
+  },
+  "RU03": {
+   "application": 10,
+   "foundation": 1,
+   "outside": 3,
+   "ui": 21,
+   "vendored": 12
+  },
+  "RU04": {
+   "application": 2,
+   "foundation": 2,
+   "vendored": 5
+  },
+  "RU05": {
+   "application": 3,
+   "foundation": 4,
+   "outside": 1
+  }
+ },
+ "scanned": 240,
+ "undecodable": [],
+ "unparsed": []
+}

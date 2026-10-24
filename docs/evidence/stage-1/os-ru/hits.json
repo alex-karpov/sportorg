@@ -1,0 +1,8312 @@
+{
+ "hits": [
+  {
+   "core": false,
+   "detail": "win32",
+   "kind": "code",
+   "layer": "outside",
+   "rule": "OS01",
+   "tag": "[код: pysport@b548c35 builder.py:15]",
+   "token": "sys.platform"
+  },
+  {
+   "core": false,
+   "detail": "win32",
+   "kind": "code",
+   "layer": "outside",
+   "rule": "OS01",
+   "tag": "[код: pysport@b548c35 builder.py:123]",
+   "token": "sys.platform"
+  },
+  {
+   "core": false,
+   "detail": "Linux",
+   "kind": "code",
+   "layer": "ui",
+   "rule": "OS01",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/file_dialog.py:28]",
+   "token": "platform.system"
+  },
+  {
+   "core": false,
+   "detail": "win32",
+   "kind": "code",
+   "layer": "ui",
+   "rule": "OS01",
+   "tag": "[код: pysport@b548c35 sportorg/gui/tabs/persons.py:110]",
+   "token": "sys.platform"
+  },
+  {
+   "core": false,
+   "detail": "win32",
+   "kind": "code",
+   "layer": "ui",
+   "rule": "OS01",
+   "tag": "[код: pysport@b548c35 sportorg/gui/theme.py:100]",
+   "token": "sys.platform"
+  },
+  {
+   "core": false,
+   "detail": "darwin",
+   "kind": "code",
+   "layer": "ui",
+   "rule": "OS01",
+   "tag": "[код: pysport@b548c35 sportorg/gui/theme.py:102]",
+   "token": "sys.platform"
+  },
+  {
+   "core": false,
+   "detail": "linux",
+   "kind": "code",
+   "layer": "ui",
+   "rule": "OS01",
+   "tag": "[код: pysport@b548c35 sportorg/gui/theme.py:104]",
+   "token": "sys.platform"
+  },
+  {
+   "core": false,
+   "detail": "Windows",
+   "kind": "code",
+   "layer": "vendored",
+   "rule": "OS01",
+   "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:30]",
+   "token": "platform.system"
+  },
+  {
+   "core": false,
+   "detail": "Windows",
+   "kind": "code",
+   "layer": "vendored",
+   "rule": "OS01",
+   "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:278]",
+   "token": "platform.system"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "code",
+   "layer": "vendored",
+   "rule": "OS01",
+   "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:279]",
+   "token": "platform.system"
+  },
+  {
+   "core": false,
+   "detail": "Linux",
+   "kind": "code",
+   "layer": "vendored",
+   "rule": "OS01",
+   "tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:313]",
+   "token": "platform.system"
+  },
+  {
+   "core": false,
+   "detail": "Windows",
+   "kind": "code",
+   "layer": "vendored",
+   "rule": "OS01",
+   "tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:320]",
+   "token": "platform.system"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "code",
+   "layer": "vendored",
+   "rule": "OS01",
+   "tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:324]",
+   "token": "platform.system"
+  },
+  {
+   "core": false,
+   "detail": "nt",
+   "kind": "code",
+   "layer": "application",
+   "rule": "OS01",
+   "tag": "[код: pysport@b548c35 sportorg/modules/plugins/manager.py:519]",
+   "token": "os.name"
+  },
+  {
+   "core": false,
+   "detail": "Windows",
+   "kind": "code",
+   "layer": "application",
+   "rule": "OS01",
+   "tag": "[код: pysport@b548c35 sportorg/modules/printing/model.py:42]",
+   "token": "platform.system"
+  },
+  {
+   "core": false,
+   "detail": "Windows",
+   "kind": "code",
+   "layer": "application",
+   "rule": "OS01",
+   "tag": "[код: pysport@b548c35 sportorg/modules/printing/printout_split.py:7]",
+   "token": "platform.system"
+  },
+  {
+   "core": false,
+   "detail": "Linux",
+   "kind": "code",
+   "layer": "outside",
+   "rule": "OS01",
+   "tag": "[код: pysport@b548c35 tests/test_reader.py:241]",
+   "token": "platform.system"
+  },
+  {
+   "core": false,
+   "detail": "Linux",
+   "kind": "code",
+   "layer": "outside",
+   "rule": "OS01",
+   "tag": "[код: pysport@b548c35 tests/test_reader.py:289]",
+   "token": "platform.system"
+  },
+  {
+   "core": false,
+   "detail": "Linux",
+   "kind": "code",
+   "layer": "outside",
+   "rule": "OS01",
+   "tag": "[код: pysport@b548c35 tests/test_reader.py:339]",
+   "token": "platform.system"
+  },
+  {
+   "core": false,
+   "detail": "win32",
+   "kind": "code",
+   "layer": "outside",
+   "rule": "OS01",
+   "tag": "[код: pysport@b548c35 tests/test_theme.py:85]",
+   "token": "sys.platform"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "code",
+   "layer": "ui",
+   "rule": "OS02",
+   "tag": "[код: pysport@b548c35 sportorg/gui/theme.py:110]",
+   "token": "winreg"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "code",
+   "layer": "vendored",
+   "rule": "OS02",
+   "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:31]",
+   "token": "pywinusb.hid"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "code",
+   "layer": "application",
+   "rule": "OS02",
+   "tag": "[код: pysport@b548c35 sportorg/modules/printing/printout_split.py:8]",
+   "token": "win32con"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "code",
+   "layer": "application",
+   "rule": "OS02",
+   "tag": "[код: pysport@b548c35 sportorg/modules/printing/printout_split.py:9]",
+   "token": "win32print"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "code",
+   "layer": "application",
+   "rule": "OS02",
+   "tag": "[код: pysport@b548c35 sportorg/modules/printing/printout_split.py:10]",
+   "token": "win32ui"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "code",
+   "layer": "outside",
+   "rule": "OS02",
+   "tag": "[код: pysport@b548c35 tests/test_theme.py:87]",
+   "token": "winreg"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "code",
+   "layer": "ui",
+   "rule": "OS03",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/report_dialog.py:233]",
+   "token": "os.startfile"
+  },
+  {
+   "core": false,
+   "detail": "ext",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS04",
+   "tag": "[код: pysport@b548c35 .github/workflows/release.yml:47]",
+   "token": ".exe"
+  },
+  {
+   "core": false,
+   "detail": "backslash",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS04",
+   "tag": "[код: pysport@b548c35 .github/workflows/release.yml:47]",
+   "token": "6\\ISCC"
+  },
+  {
+   "core": false,
+   "detail": "drive",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS04",
+   "tag": "[код: pysport@b548c35 .github/workflows/release.yml:47]",
+   "token": "C:\\"
+  },
+  {
+   "core": false,
+   "detail": "backslash",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS04",
+   "tag": "[код: pysport@b548c35 .github/workflows/release.yml:58]",
+   "token": "t\\SportOrg"
+  },
+  {
+   "core": false,
+   "detail": "ext",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS04",
+   "tag": "[код: pysport@b548c35 .github/workflows/release.yml:64]",
+   "token": ".exe"
+  },
+  {
+   "core": false,
+   "detail": "ext",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS04",
+   "tag": "[код: pysport@b548c35 .github/workflows/release.yml:97]",
+   "token": ".exe"
+  },
+  {
+   "core": false,
+   "detail": "ext",
+   "kind": "string",
+   "layer": "outside",
+   "rule": "OS04",
+   "tag": "[код: pysport@b548c35 builder.py:87]",
+   "token": ".exe"
+  },
+  {
+   "core": false,
+   "detail": "ext",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS04",
+   "tag": "[код: pysport@b548c35 sportorg.iss:7]",
+   "token": ".exe"
+  },
+  {
+   "core": false,
+   "detail": "backslash",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS04",
+   "tag": "[код: pysport@b548c35 sportorg.iss:18]",
+   "token": "d\\exe"
+  },
+  {
+   "core": false,
+   "detail": "backslash",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS04",
+   "tag": "[код: pysport@b548c35 sportorg.iss:47]",
+   "token": "g\\data"
+  },
+  {
+   "core": false,
+   "detail": "backslash",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS04",
+   "tag": "[код: pysport@b548c35 sportorg.iss:47]",
+   "token": "g\\icon"
+  },
+  {
+   "core": false,
+   "detail": "backslash",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS04",
+   "tag": "[код: pysport@b548c35 sportorg.iss:51]",
+   "token": "s\\Russian"
+  },
+  {
+   "core": false,
+   "detail": "ext",
+   "kind": "comment",
+   "layer": "outside",
+   "rule": "OS04",
+   "tag": "[код: pysport@b548c35 sportorg.iss:60]",
+   "token": ".exe"
+  },
+  {
+   "core": false,
+   "detail": "backslash",
+   "kind": "comment",
+   "layer": "outside",
+   "rule": "OS04",
+   "tag": "[код: pysport@b548c35 sportorg.iss:60]",
+   "token": "t\\vc_redist"
+  },
+  {
+   "core": false,
+   "detail": "ext",
+   "kind": "comment",
+   "layer": "outside",
+   "rule": "OS04",
+   "tag": "[код: pysport@b548c35 sportorg.iss:83]",
+   "token": ".exe"
+  },
+  {
+   "core": false,
+   "detail": "backslash",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS04",
+   "tag": "[код: pysport@b548c35 sportorg.iss:97]",
+   "token": "0\\VC"
+  },
+  {
+   "core": false,
+   "detail": "backslash",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS04",
+   "tag": "[код: pysport@b548c35 sportorg.iss:97]",
+   "token": "E\\Microsoft"
+  },
+  {
+   "core": false,
+   "detail": "backslash",
+   "kind": "string",
+   "layer": "ui",
+   "rule": "OS04",
+   "tag": "[код: pysport@b548c35 sportorg/gui/theme.py:112]",
+   "token": "e\\Microsoft"
+  },
+  {
+   "core": false,
+   "detail": "backslash",
+   "kind": "string",
+   "layer": "ui",
+   "rule": "OS04",
+   "tag": "[код: pysport@b548c35 sportorg/gui/theme.py:112]",
+   "token": "s\\CurrentVersion"
+  },
+  {
+   "core": false,
+   "detail": "backslash",
+   "kind": "string",
+   "layer": "ui",
+   "rule": "OS04",
+   "tag": "[код: pysport@b548c35 sportorg/gui/theme.py:112]",
+   "token": "s\\Personalize"
+  },
+  {
+   "core": false,
+   "detail": "tty",
+   "kind": "string",
+   "layer": "vendored",
+   "rule": "OS04",
+   "tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:311]",
+   "token": "/dev/ttyACM0"
+  },
+  {
+   "core": false,
+   "detail": "drive",
+   "kind": "docstring",
+   "layer": "application",
+   "rule": "OS04",
+   "tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_sportorg_si_log.py:2]",
+   "token": "C:\\"
+  },
+  {
+   "core": false,
+   "detail": "backslash",
+   "kind": "docstring",
+   "layer": "application",
+   "rule": "OS04",
+   "tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_sportorg_si_log.py:2]",
+   "token": "g\\log"
+  },
+  {
+   "core": false,
+   "detail": "ext",
+   "kind": "string",
+   "layer": "outside",
+   "rule": "OS04",
+   "tag": "[код: pysport@b548c35 tests/test_paths.py:37]",
+   "token": ".exe"
+  },
+  {
+   "core": false,
+   "detail": "package",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 pyproject.toml:20]",
+   "token": "pywinusb"
+  },
+  {
+   "core": false,
+   "detail": "package",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 pyproject.toml:30]",
+   "token": "pywin32"
+  },
+  {
+   "core": false,
+   "detail": "package",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 pyproject.toml:31]",
+   "token": "pyImpinj"
+  },
+  {
+   "core": false,
+   "detail": "package",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 pyproject.toml:53]",
+   "token": "pywin32"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:5]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:6]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:7]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:8]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:9]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:10]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:11]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:12]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:13]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:14]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:15]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:16]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:17]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:18]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:28]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:29]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:30]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:31]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:32]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:33]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:34]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:46]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:47]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:48]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:49]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:50]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:51]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:52]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:66]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:67]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:68]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:69]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:70]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:71]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:72]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:182]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:183]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:184]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:185]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:186]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:187]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:188]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:330]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:331]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:332]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:333]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:334]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:335]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:336]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:351]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:352]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:353]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:354]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:355]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:356]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:357]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:384]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:385]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:386]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:387]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:388]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:389]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:390]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:402]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:403]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:404]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:405]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:406]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:407]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:408]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:461]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:462]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:463]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:464]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:465]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:466]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:467]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:547]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:548]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:549]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:550]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:551]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:552]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:553]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:791]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:792]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:793]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:794]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:795]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:796]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:797]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:1003]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:1004]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:1005]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:1006]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:1007]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:1008]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:1009]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:1179]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:1180]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:1181]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:1182]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:1183]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:1184]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:1185]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:1188]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:1189]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:1190]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:1233]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:1234]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:1235]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:1236]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:1237]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:1238]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:1239]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:1242]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:1243]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:1244]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:1246]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:1248]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:1250]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:1293]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:1314]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:1335]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:1336]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:1379]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:1413]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:1414]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:1415]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:1416]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:1417]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:1418]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:1419]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:1521]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:1522]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:1523]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:1524]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:1525]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:1526]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:1527]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:1722]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:1744]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:1927]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:1928]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:1929]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:1930]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:1931]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:1932]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:1933]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:1994]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:1995]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:1996]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:1997]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:1998]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:1999]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:2000]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:2125]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:2126]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:2127]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:2128]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:2129]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:2130]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:2131]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:2236]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:2237]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:2238]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:2239]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:2240]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:2241]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:2242]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:2403]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:2404]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:2405]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:2406]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:2407]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:2408]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:2409]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:2462]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:2463]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:2464]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:2465]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:2466]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:2467]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:2468]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:2530]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:2531]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:2532]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:2533]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:2534]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:2535]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:2536]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:2625]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:2626]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:2627]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:2628]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:2629]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:2630]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:2631]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:2767]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:2768]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:2769]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:2770]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:2771]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:2772]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:2773]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "package",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:2776]",
+   "token": "pywin32"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:2776]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:2788]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:2789]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:2790]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:2791]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:2792]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:2793]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:2794]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "package",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:2799]",
+   "token": "pywin32"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:2799]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:2811]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:2812]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:2813]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:2814]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:2815]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:2816]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:2817]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:2829]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:2830]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:2831]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:2832]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:2833]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:2834]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:2835]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:2872]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:2873]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:2874]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:2875]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:2876]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:2877]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:2878]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:2986]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:2987]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:2988]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:2989]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:2990]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:2991]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:2992]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3151]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3152]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3153]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3154]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3155]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3156]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3157]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3170]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3171]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3172]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3173]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3174]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3175]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3176]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "package",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3194]",
+   "token": "pyimpinj"
+  },
+  {
+   "core": false,
+   "detail": "package",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3202]",
+   "token": "pyImpinj"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3219]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3220]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3221]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3222]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3223]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3224]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3225]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3244]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3245]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3246]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3247]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3248]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3249]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3250]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3272]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3273]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3274]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3275]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3276]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3277]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3278]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3296]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3297]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3298]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3299]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3300]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3301]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3302]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3323]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3324]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3325]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3326]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3327]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3328]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3329]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3346]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3347]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3348]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3349]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3350]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3351]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3352]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3372]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3373]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3374]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3375]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3376]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3377]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3378]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3381]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3398]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3399]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3400]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3401]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3402]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3403]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3404]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3409]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3441]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3442]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3443]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3444]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3445]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3446]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3447]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3463]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3464]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3465]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3466]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3467]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3468]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3469]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3502]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3503]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3504]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3505]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3506]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3507]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3508]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3523]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3524]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3525]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3526]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3527]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3528]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3529]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3558]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3559]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3560]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3561]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3562]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3563]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3564]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3580]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3581]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3582]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3583]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3584]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3585]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3586]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "package",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3609]",
+   "token": "pywin32"
+  },
+  {
+   "core": false,
+   "detail": "package",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3613]",
+   "token": "pywin32"
+  },
+  {
+   "core": false,
+   "detail": "package",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3614]",
+   "token": "pywin32"
+  },
+  {
+   "core": false,
+   "detail": "package",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3615]",
+   "token": "pywin32"
+  },
+  {
+   "core": false,
+   "detail": "package",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3616]",
+   "token": "pywin32"
+  },
+  {
+   "core": false,
+   "detail": "package",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3617]",
+   "token": "pywin32"
+  },
+  {
+   "core": false,
+   "detail": "package",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3618]",
+   "token": "pywin32"
+  },
+  {
+   "core": false,
+   "detail": "package",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3619]",
+   "token": "pywin32"
+  },
+  {
+   "core": false,
+   "detail": "package",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3620]",
+   "token": "pywin32"
+  },
+  {
+   "core": false,
+   "detail": "package",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3621]",
+   "token": "pywin32"
+  },
+  {
+   "core": false,
+   "detail": "package",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3622]",
+   "token": "pywin32"
+  },
+  {
+   "core": false,
+   "detail": "package",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3623]",
+   "token": "pywin32"
+  },
+  {
+   "core": false,
+   "detail": "package",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3624]",
+   "token": "pywin32"
+  },
+  {
+   "core": false,
+   "detail": "package",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3625]",
+   "token": "pywin32"
+  },
+  {
+   "core": false,
+   "detail": "package",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3626]",
+   "token": "pywin32"
+  },
+  {
+   "core": false,
+   "detail": "package",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3627]",
+   "token": "pywin32"
+  },
+  {
+   "core": false,
+   "detail": "package",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3628]",
+   "token": "pywin32"
+  },
+  {
+   "core": false,
+   "detail": "package",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3629]",
+   "token": "pywin32"
+  },
+  {
+   "core": false,
+   "detail": "package",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3630]",
+   "token": "pywin32"
+  },
+  {
+   "core": false,
+   "detail": "package",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3631]",
+   "token": "pywin32"
+  },
+  {
+   "core": false,
+   "detail": "package",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3632]",
+   "token": "pywin32"
+  },
+  {
+   "core": false,
+   "detail": "package",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3636]",
+   "token": "pywinusb"
+  },
+  {
+   "core": false,
+   "detail": "package",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3639]",
+   "token": "pywinusb"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3726]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3727]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3728]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3729]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3730]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3731]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3732]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3750]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3751]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3752]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3753]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3754]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3755]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3756]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3802]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3803]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3804]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3805]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3806]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3807]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3808]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3820]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3821]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3822]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3823]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3824]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3825]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3826]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3840]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3841]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3842]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3843]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3844]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3845]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3846]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3860]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3861]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3862]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3863]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3864]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3865]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3866]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "package",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3920]",
+   "token": "pywinusb"
+  },
+  {
+   "core": false,
+   "detail": "package",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3932]",
+   "token": "pyimpinj"
+  },
+  {
+   "core": false,
+   "detail": "package",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3933]",
+   "token": "pywin32"
+  },
+  {
+   "core": false,
+   "detail": "package",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3958]",
+   "token": "pywin32"
+  },
+  {
+   "core": false,
+   "detail": "package",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3959]",
+   "token": "pywin32"
+  },
+  {
+   "core": false,
+   "detail": "package",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3979]",
+   "token": "pyimpinj"
+  },
+  {
+   "core": false,
+   "detail": "package",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3982]",
+   "token": "pywin32"
+  },
+  {
+   "core": false,
+   "detail": "package",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:3983]",
+   "token": "pywinusb"
+  },
+  {
+   "core": false,
+   "detail": "package",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4006]",
+   "token": "pywin32"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4083]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4084]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4085]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4086]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4087]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4088]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4089]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4101]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4102]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4103]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4104]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4105]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4106]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4107]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4121]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4122]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4123]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4124]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4125]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4126]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4127]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4139]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4140]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4141]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4142]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4143]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4144]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4145]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "package",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4155]",
+   "token": "pywin32"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4159]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4160]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4161]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4162]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4163]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4164]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4165]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "package",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4173]",
+   "token": "pywin32"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4177]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4178]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4179]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4180]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4181]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4182]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4183]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4197]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4198]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4199]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4200]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4201]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4202]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4203]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4218]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4219]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4220]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4221]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4222]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4223]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4224]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4241]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4242]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4243]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4244]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4245]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4246]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4247]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4259]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4260]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4261]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4262]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4263]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4264]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4265]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4279]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4280]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4281]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4282]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4283]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4284]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4285]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4297]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4298]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4299]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4300]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4301]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4302]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4303]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4317]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4318]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4319]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4320]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4321]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4322]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4323]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4335]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4336]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4337]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4338]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4339]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4340]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4341]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4364]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4365]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4366]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4367]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4368]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4369]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4370]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4483]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4484]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4485]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4486]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4487]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4488]",
+   "token": "sys_platform"
+  },
+  {
+   "core": false,
+   "detail": "marker",
+   "kind": "config",
+   "layer": "outside",
+   "rule": "OS05",
+   "tag": "[код: pysport@b548c35 uv.lock:4489]",
+   "token": "sys_platform"
+  },
+  {
+   "core": true,
+   "detail": "data-literal",
+   "kind": "string",
+   "layer": "domain",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:2334]",
+   "token": "б/р"
+  },
+  {
+   "core": true,
+   "detail": "data-literal",
+   "kind": "string",
+   "layer": "domain",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:2335]",
+   "token": "IIIю"
+  },
+  {
+   "core": true,
+   "detail": "data-literal",
+   "kind": "string",
+   "layer": "domain",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:2336]",
+   "token": "IIю"
+  },
+  {
+   "core": true,
+   "detail": "data-literal",
+   "kind": "string",
+   "layer": "domain",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:2337]",
+   "token": "Iю"
+  },
+  {
+   "core": true,
+   "detail": "data-literal",
+   "kind": "string",
+   "layer": "domain",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:2341]",
+   "token": "КМС"
+  },
+  {
+   "core": true,
+   "detail": "data-literal",
+   "kind": "string",
+   "layer": "domain",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:2342]",
+   "token": "МС"
+  },
+  {
+   "core": true,
+   "detail": "data-literal",
+   "kind": "string",
+   "layer": "domain",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:2343]",
+   "token": "МСМК"
+  },
+  {
+   "core": true,
+   "detail": "data-literal",
+   "kind": "string",
+   "layer": "domain",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:2344]",
+   "token": "ЗМС"
+  },
+  {
+   "core": true,
+   "detail": "data-literal",
+   "kind": "string",
+   "layer": "domain",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:2354]",
+   "token": "бр"
+  },
+  {
+   "core": true,
+   "detail": "data-literal",
+   "kind": "string",
+   "layer": "domain",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:2355]",
+   "token": "б\\р"
+  },
+  {
+   "core": true,
+   "detail": "data-literal",
+   "kind": "string",
+   "layer": "domain",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:2356]",
+   "token": "б-р"
+  },
+  {
+   "core": true,
+   "detail": "data-literal",
+   "kind": "string",
+   "layer": "domain",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:2357]",
+   "token": "1ю"
+  },
+  {
+   "core": true,
+   "detail": "data-literal",
+   "kind": "string",
+   "layer": "domain",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:2358]",
+   "token": "2ю"
+  },
+  {
+   "core": true,
+   "detail": "data-literal",
+   "kind": "string",
+   "layer": "domain",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:2359]",
+   "token": "3ю"
+  },
+  {
+   "core": true,
+   "detail": "data-literal",
+   "kind": "string",
+   "layer": "domain",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:2363]",
+   "token": "1р"
+  },
+  {
+   "core": true,
+   "detail": "data-literal",
+   "kind": "string",
+   "layer": "domain",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:2364]",
+   "token": "2р"
+  },
+  {
+   "core": true,
+   "detail": "data-literal",
+   "kind": "string",
+   "layer": "domain",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:2365]",
+   "token": "3р"
+  },
+  {
+   "core": true,
+   "detail": "data-literal",
+   "kind": "string",
+   "layer": "domain",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:2374]",
+   "token": "б/р"
+  },
+  {
+   "core": true,
+   "detail": "data-literal",
+   "kind": "string",
+   "layer": "domain",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:2375]",
+   "token": "б/р"
+  },
+  {
+   "core": true,
+   "detail": "data-literal",
+   "kind": "string",
+   "layer": "domain",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:2376]",
+   "token": "IIIю"
+  },
+  {
+   "core": true,
+   "detail": "data-literal",
+   "kind": "string",
+   "layer": "domain",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:2377]",
+   "token": "IIю"
+  },
+  {
+   "core": true,
+   "detail": "data-literal",
+   "kind": "string",
+   "layer": "domain",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:2378]",
+   "token": "Iю"
+  },
+  {
+   "core": true,
+   "detail": "data-literal",
+   "kind": "string",
+   "layer": "domain",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:2382]",
+   "token": "КМС"
+  },
+  {
+   "core": true,
+   "detail": "data-literal",
+   "kind": "string",
+   "layer": "domain",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:2383]",
+   "token": "МС"
+  },
+  {
+   "core": true,
+   "detail": "data-literal",
+   "kind": "string",
+   "layer": "domain",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:2384]",
+   "token": "МСМК"
+  },
+  {
+   "core": false,
+   "detail": "comment",
+   "kind": "comment",
+   "layer": "ui",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 sportorg/gui/tabs/persons.py:109]",
+   "token": "<text omitted: 47 chars>"
+  },
+  {
+   "core": false,
+   "detail": "comparison",
+   "kind": "string",
+   "layer": "vendored",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrximporter.py:269]",
+   "token": "cнят"
+  },
+  {
+   "core": false,
+   "detail": "comparison",
+   "kind": "string",
+   "layer": "vendored",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrximporter.py:271]",
+   "token": "<text omitted: 12 chars>"
+  },
+  {
+   "core": false,
+   "detail": "comparison",
+   "kind": "string",
+   "layer": "vendored",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrximporter.py:273]",
+   "token": "<text omitted: 10 chars>"
+  },
+  {
+   "core": false,
+   "detail": "comparison",
+   "kind": "string",
+   "layer": "vendored",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrximporter.py:275]",
+   "token": "н/с"
+  },
+  {
+   "core": false,
+   "detail": "comparison",
+   "kind": "string",
+   "layer": "vendored",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrxparser.py:37]",
+   "token": "<text omitted: 8 chars>"
+  },
+  {
+   "core": false,
+   "detail": "docstring",
+   "kind": "docstring",
+   "layer": "vendored",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 sportorg/libs/winorient/wdb.py:32-35]",
+   "token": "<text omitted: 121 chars>"
+  },
+  {
+   "core": false,
+   "detail": "docstring",
+   "kind": "docstring",
+   "layer": "application",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 sportorg/modules/live/orgeo.py:208-213]",
+   "token": "<text omitted: 233 chars>"
+  },
+  {
+   "core": false,
+   "detail": "docstring",
+   "kind": "docstring",
+   "layer": "application",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_orgeo_finish_csv.py:1-14]",
+   "token": "<text omitted: 627 chars>"
+  },
+  {
+   "core": false,
+   "detail": "data-literal",
+   "kind": "string",
+   "layer": "application",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_orgeo_finish_csv.py:38]",
+   "token": "<text omitted: 8 chars>"
+  },
+  {
+   "core": false,
+   "detail": "data-literal",
+   "kind": "string",
+   "layer": "application",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_orgeo_finish_csv.py:39]",
+   "token": "непр.отмет."
+  },
+  {
+   "core": false,
+   "detail": "assignment",
+   "kind": "string",
+   "layer": "application",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:55]",
+   "token": "<text omitted: 12 chars>"
+  },
+  {
+   "core": false,
+   "detail": "assignment",
+   "kind": "string",
+   "layer": "application",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:56]",
+   "token": "<text omitted: 5 chars>"
+  },
+  {
+   "core": false,
+   "detail": "assignment",
+   "kind": "string",
+   "layer": "application",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:57]",
+   "token": "<text omitted: 24 chars>"
+  },
+  {
+   "core": false,
+   "detail": "assignment",
+   "kind": "string",
+   "layer": "application",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:58]",
+   "token": "<text omitted: 38 chars>"
+  },
+  {
+   "core": false,
+   "detail": "assignment",
+   "kind": "string",
+   "layer": "application",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:60]",
+   "token": "<text omitted: 14 chars>"
+  },
+  {
+   "core": false,
+   "detail": "assignment",
+   "kind": "string",
+   "layer": "application",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:62]",
+   "token": "<text omitted: 8 chars>"
+  },
+  {
+   "core": false,
+   "detail": "assignment",
+   "kind": "string",
+   "layer": "application",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:96]",
+   "token": "<text omitted: 14 chars>"
+  },
+  {
+   "core": false,
+   "detail": "assignment",
+   "kind": "string",
+   "layer": "application",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:98]",
+   "token": "<text omitted: 8 chars>"
+  },
+  {
+   "core": false,
+   "detail": "return-value",
+   "kind": "string",
+   "layer": "application",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:374]",
+   "token": "cнят"
+  },
+  {
+   "core": false,
+   "detail": "return-value",
+   "kind": "string",
+   "layer": "application",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:374]",
+   "token": "н/с"
+  },
+  {
+   "core": false,
+   "detail": "return-value",
+   "kind": "string",
+   "layer": "application",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:403]",
+   "token": "<text omitted: 10 chars>"
+  },
+  {
+   "core": false,
+   "detail": "return-value",
+   "kind": "string",
+   "layer": "application",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:405]",
+   "token": "н/с"
+  },
+  {
+   "core": false,
+   "detail": "return-value",
+   "kind": "string",
+   "layer": "application",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:406]",
+   "token": "cнят"
+  },
+  {
+   "core": false,
+   "detail": "comment",
+   "kind": "comment",
+   "layer": "outside",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 tests/test_credit_calculation.py:22]",
+   "token": "<text omitted: 59 chars>"
+  },
+  {
+   "core": false,
+   "detail": "data-literal",
+   "kind": "string",
+   "layer": "outside",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 tests/test_memory_model.py:19]",
+   "token": "<text omitted: 4 chars>"
+  },
+  {
+   "core": false,
+   "detail": "data-literal",
+   "kind": "string",
+   "layer": "outside",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 tests/test_memory_model.py:43]",
+   "token": "<text omitted: 4 chars>"
+  },
+  {
+   "core": false,
+   "detail": "data-literal",
+   "kind": "string",
+   "layer": "outside",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 tests/test_memory_model.py:67]",
+   "token": "<text omitted: 4 chars>"
+  },
+  {
+   "core": false,
+   "detail": "call-argument",
+   "kind": "string",
+   "layer": "outside",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 tests/test_qualification.py:5]",
+   "token": "<text omitted: 3 chars>"
+  },
+  {
+   "core": false,
+   "detail": "call-argument",
+   "kind": "string",
+   "layer": "outside",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 tests/test_qualification.py:6]",
+   "token": "<text omitted: 2 chars>"
+  },
+  {
+   "core": false,
+   "detail": "call-argument",
+   "kind": "string",
+   "layer": "outside",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 tests/test_qualification.py:13]",
+   "token": "<text omitted: 2 chars>"
+  },
+  {
+   "core": false,
+   "detail": "call-argument",
+   "kind": "string",
+   "layer": "outside",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 tests/test_qualification.py:14]",
+   "token": "<text omitted: 2 chars>"
+  },
+  {
+   "core": false,
+   "detail": "call-argument",
+   "kind": "string",
+   "layer": "outside",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 tests/test_qualification.py:15]",
+   "token": "<text omitted: 2 chars>"
+  },
+  {
+   "core": false,
+   "detail": "call-argument",
+   "kind": "string",
+   "layer": "outside",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 tests/test_qualification.py:16]",
+   "token": "<text omitted: 2 chars>"
+  },
+  {
+   "core": false,
+   "detail": "call-argument",
+   "kind": "string",
+   "layer": "outside",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 tests/test_qualification.py:17]",
+   "token": "<text omitted: 4 chars>"
+  },
+  {
+   "core": false,
+   "detail": "call-argument",
+   "kind": "string",
+   "layer": "outside",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 tests/test_qualification.py:18]",
+   "token": "<text omitted: 4 chars>"
+  },
+  {
+   "core": false,
+   "detail": "call-argument",
+   "kind": "string",
+   "layer": "outside",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 tests/test_qualification.py:19]",
+   "token": "<text omitted: 4 chars>"
+  },
+  {
+   "core": false,
+   "detail": "comment",
+   "kind": "comment",
+   "layer": "outside",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 tests/test_relay_results.py:89]",
+   "token": "<text omitted: 24 chars>"
+  },
+  {
+   "core": false,
+   "detail": "comment",
+   "kind": "comment",
+   "layer": "outside",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 tests/test_relay_results.py:90]",
+   "token": "<text omitted: 49 chars>"
+  },
+  {
+   "core": false,
+   "detail": "comment",
+   "kind": "comment",
+   "layer": "outside",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 tests/test_relay_results.py:101]",
+   "token": "<text omitted: 24 chars>"
+  },
+  {
+   "core": false,
+   "detail": "comment",
+   "kind": "comment",
+   "layer": "outside",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 tests/test_relay_results.py:102]",
+   "token": "<text omitted: 84 chars>"
+  },
+  {
+   "core": false,
+   "detail": "comment",
+   "kind": "comment",
+   "layer": "outside",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 tests/test_relay_results.py:115]",
+   "token": "<text omitted: 24 chars>"
+  },
+  {
+   "core": false,
+   "detail": "comment",
+   "kind": "comment",
+   "layer": "outside",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 tests/test_relay_results.py:116]",
+   "token": "<text omitted: 85 chars>"
+  },
+  {
+   "core": false,
+   "detail": "comment",
+   "kind": "comment",
+   "layer": "outside",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 tests/test_relay_results.py:122]",
+   "token": "<text omitted: 24 chars>"
+  },
+  {
+   "core": false,
+   "detail": "comment",
+   "kind": "comment",
+   "layer": "outside",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 tests/test_relay_results.py:123]",
+   "token": "<text omitted: 51 chars>"
+  },
+  {
+   "core": false,
+   "detail": "comment",
+   "kind": "comment",
+   "layer": "outside",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 tests/test_relay_results.py:134]",
+   "token": "<text omitted: 24 chars>"
+  },
+  {
+   "core": false,
+   "detail": "comment",
+   "kind": "comment",
+   "layer": "outside",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 tests/test_relay_results.py:135]",
+   "token": "<text omitted: 34 chars>"
+  },
+  {
+   "core": false,
+   "detail": "comment",
+   "kind": "comment",
+   "layer": "outside",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 tests/test_relay_results.py:188]",
+   "token": "<text omitted: 24 chars>"
+  },
+  {
+   "core": false,
+   "detail": "comment",
+   "kind": "comment",
+   "layer": "outside",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 tests/test_relay_results.py:189]",
+   "token": "<text omitted: 69 chars>"
+  },
+  {
+   "core": false,
+   "detail": "comment",
+   "kind": "comment",
+   "layer": "outside",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 tests/test_relay_results.py:213]",
+   "token": "<text omitted: 24 chars>"
+  },
+  {
+   "core": false,
+   "detail": "comment",
+   "kind": "comment",
+   "layer": "outside",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 tests/test_relay_results.py:214]",
+   "token": "<text omitted: 69 chars>"
+  },
+  {
+   "core": false,
+   "detail": "comment",
+   "kind": "comment",
+   "layer": "outside",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 tests/test_relay_results.py:222]",
+   "token": "<text omitted: 24 chars>"
+  },
+  {
+   "core": false,
+   "detail": "comment",
+   "kind": "comment",
+   "layer": "outside",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 tests/test_relay_results.py:223]",
+   "token": "<text omitted: 49 chars>"
+  },
+  {
+   "core": false,
+   "detail": "comment",
+   "kind": "comment",
+   "layer": "outside",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 tests/test_relay_results.py:249]",
+   "token": "<text omitted: 24 chars>"
+  },
+  {
+   "core": false,
+   "detail": "comment",
+   "kind": "comment",
+   "layer": "outside",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 tests/test_relay_results.py:250]",
+   "token": "<text omitted: 84 chars>"
+  },
+  {
+   "core": false,
+   "detail": "comment",
+   "kind": "comment",
+   "layer": "outside",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 tests/test_relay_results.py:267]",
+   "token": "<text omitted: 24 chars>"
+  },
+  {
+   "core": false,
+   "detail": "comment",
+   "kind": "comment",
+   "layer": "outside",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 tests/test_relay_results.py:268]",
+   "token": "<text omitted: 85 chars>"
+  },
+  {
+   "core": false,
+   "detail": "comment",
+   "kind": "comment",
+   "layer": "outside",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 tests/test_relay_results.py:276]",
+   "token": "<text omitted: 24 chars>"
+  },
+  {
+   "core": false,
+   "detail": "comment",
+   "kind": "comment",
+   "layer": "outside",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 tests/test_relay_results.py:277]",
+   "token": "<text omitted: 51 chars>"
+  },
+  {
+   "core": false,
+   "detail": "comment",
+   "kind": "comment",
+   "layer": "outside",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 tests/test_relay_results.py:297]",
+   "token": "<text omitted: 32 chars>"
+  },
+  {
+   "core": false,
+   "detail": "comment",
+   "kind": "comment",
+   "layer": "outside",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 tests/test_relay_results.py:298]",
+   "token": "<text omitted: 69 chars>"
+  },
+  {
+   "core": false,
+   "detail": "comment",
+   "kind": "comment",
+   "layer": "outside",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 tests/test_relay_results.py:299]",
+   "token": "<text omitted: 30 chars>"
+  },
+  {
+   "core": false,
+   "detail": "comment",
+   "kind": "comment",
+   "layer": "outside",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 tests/test_relay_results.py:321]",
+   "token": "<text omitted: 32 chars>"
+  },
+  {
+   "core": false,
+   "detail": "comment",
+   "kind": "comment",
+   "layer": "outside",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 tests/test_relay_results.py:322]",
+   "token": "<text omitted: 71 chars>"
+  },
+  {
+   "core": false,
+   "detail": "comment",
+   "kind": "comment",
+   "layer": "outside",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 tests/test_relay_results.py:323]",
+   "token": "<text omitted: 42 chars>"
+  },
+  {
+   "core": false,
+   "detail": "comment",
+   "kind": "comment",
+   "layer": "outside",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 tests/test_relay_results.py:356]",
+   "token": "<text omitted: 32 chars>"
+  },
+  {
+   "core": false,
+   "detail": "comment",
+   "kind": "comment",
+   "layer": "outside",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 tests/test_relay_results.py:357]",
+   "token": "<text omitted: 69 chars>"
+  },
+  {
+   "core": false,
+   "detail": "comment",
+   "kind": "comment",
+   "layer": "outside",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 tests/test_relay_results.py:381]",
+   "token": "<text omitted: 32 chars>"
+  },
+  {
+   "core": false,
+   "detail": "comment",
+   "kind": "comment",
+   "layer": "outside",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 tests/test_relay_results.py:382]",
+   "token": "<text omitted: 69 chars>"
+  },
+  {
+   "core": false,
+   "detail": "comment",
+   "kind": "comment",
+   "layer": "outside",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 tests/test_relay_results.py:390]",
+   "token": "<text omitted: 32 chars>"
+  },
+  {
+   "core": false,
+   "detail": "comment",
+   "kind": "comment",
+   "layer": "outside",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 tests/test_relay_results.py:391]",
+   "token": "<text omitted: 49 chars>"
+  },
+  {
+   "core": false,
+   "detail": "comment",
+   "kind": "comment",
+   "layer": "outside",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 tests/test_relay_results.py:416]",
+   "token": "<text omitted: 32 chars>"
+  },
+  {
+   "core": false,
+   "detail": "comment",
+   "kind": "comment",
+   "layer": "outside",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 tests/test_relay_results.py:417]",
+   "token": "<text omitted: 84 chars>"
+  },
+  {
+   "core": false,
+   "detail": "comment",
+   "kind": "comment",
+   "layer": "outside",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 tests/test_relay_results.py:434]",
+   "token": "<text omitted: 32 chars>"
+  },
+  {
+   "core": false,
+   "detail": "comment",
+   "kind": "comment",
+   "layer": "outside",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 tests/test_relay_results.py:435]",
+   "token": "<text omitted: 85 chars>"
+  },
+  {
+   "core": false,
+   "detail": "comment",
+   "kind": "comment",
+   "layer": "outside",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 tests/test_relay_results.py:443]",
+   "token": "<text omitted: 32 chars>"
+  },
+  {
+   "core": false,
+   "detail": "comment",
+   "kind": "comment",
+   "layer": "outside",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 tests/test_relay_results.py:444]",
+   "token": "<text omitted: 51 chars>"
+  },
+  {
+   "core": false,
+   "detail": "data-literal",
+   "kind": "string",
+   "layer": "outside",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 tests/test_sfrx.py:20]",
+   "token": "<text omitted: 4 chars>"
+  },
+  {
+   "core": false,
+   "detail": "data-literal",
+   "kind": "string",
+   "layer": "outside",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 tests/test_sfrx.py:20]",
+   "token": "<text omitted: 8 chars>"
+  },
+  {
+   "core": false,
+   "detail": "data-literal",
+   "kind": "string",
+   "layer": "outside",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 tests/test_sfrx.py:22]",
+   "token": "<text omitted: 9 chars>"
+  },
+  {
+   "core": false,
+   "detail": "data-literal",
+   "kind": "string",
+   "layer": "outside",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 tests/test_sfrx.py:23]",
+   "token": "<text omitted: 7 chars>"
+  },
+  {
+   "core": false,
+   "detail": "data-literal",
+   "kind": "string",
+   "layer": "outside",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 tests/test_sfrx.py:24]",
+   "token": "<text omitted: 8 chars>"
+  },
+  {
+   "core": false,
+   "detail": "data-literal",
+   "kind": "string",
+   "layer": "outside",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 tests/test_sfrx.py:31]",
+   "token": "<text omitted: 5 chars>"
+  },
+  {
+   "core": false,
+   "detail": "data-literal",
+   "kind": "string",
+   "layer": "outside",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 tests/test_sfrx.py:38]",
+   "token": "<text omitted: 5 chars>"
+  },
+  {
+   "core": false,
+   "detail": "data-literal",
+   "kind": "string",
+   "layer": "outside",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 tests/test_sfrx.py:48]",
+   "token": "<text omitted: 4 chars>"
+  },
+  {
+   "core": false,
+   "detail": "data-literal",
+   "kind": "string",
+   "layer": "outside",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 tests/test_sfrx.py:48]",
+   "token": "<text omitted: 8 chars>"
+  },
+  {
+   "core": false,
+   "detail": "data-literal",
+   "kind": "string",
+   "layer": "outside",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 tests/test_sfrx.py:50]",
+   "token": "<text omitted: 9 chars>"
+  },
+  {
+   "core": false,
+   "detail": "data-literal",
+   "kind": "string",
+   "layer": "outside",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 tests/test_sfrx.py:51]",
+   "token": "<text omitted: 7 chars>"
+  },
+  {
+   "core": false,
+   "detail": "data-literal",
+   "kind": "string",
+   "layer": "outside",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 tests/test_sfrx.py:52]",
+   "token": "<text omitted: 8 chars>"
+  },
+  {
+   "core": false,
+   "detail": "data-literal",
+   "kind": "string",
+   "layer": "outside",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 tests/test_sfrx.py:59]",
+   "token": "<text omitted: 5 chars>"
+  },
+  {
+   "core": false,
+   "detail": "data-literal",
+   "kind": "string",
+   "layer": "outside",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 tests/test_sfrx.py:66]",
+   "token": "<text omitted: 9 chars>"
+  },
+  {
+   "core": false,
+   "detail": "comment",
+   "kind": "comment",
+   "layer": "outside",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 tests/test_sfrx.py:103]",
+   "token": "<text omitted: 37 chars>"
+  },
+  {
+   "core": false,
+   "detail": "call-argument",
+   "kind": "string",
+   "layer": "outside",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 tests/test_sfrxexporter.py:66]",
+   "token": "<text omitted: 21 chars>"
+  },
+  {
+   "core": false,
+   "detail": "call-argument",
+   "kind": "string",
+   "layer": "outside",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 tests/test_sfrxexporter.py:67]",
+   "token": "<text omitted: 16 chars>"
+  },
+  {
+   "core": false,
+   "detail": "call-argument",
+   "kind": "string",
+   "layer": "outside",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 tests/test_sfrxexporter.py:72]",
+   "token": "<text omitted: 17 chars>"
+  },
+  {
+   "core": false,
+   "detail": "call-argument",
+   "kind": "string",
+   "layer": "outside",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 tests/test_sfrxexporter.py:73]",
+   "token": "<text omitted: 13 chars>"
+  },
+  {
+   "core": false,
+   "detail": "call-argument",
+   "kind": "string",
+   "layer": "outside",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 tests/test_sfrxexporter.py:74]",
+   "token": "<text omitted: 9 chars>"
+  },
+  {
+   "core": false,
+   "detail": "call-argument",
+   "kind": "string",
+   "layer": "outside",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 tests/test_sfrxexporter.py:77]",
+   "token": "<text omitted: 3 chars>"
+  },
+  {
+   "core": false,
+   "detail": "call-argument",
+   "kind": "string",
+   "layer": "outside",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 tests/test_sfrxexporter.py:79]",
+   "token": "<text omitted: 7 chars>"
+  },
+  {
+   "core": false,
+   "detail": "call-argument",
+   "kind": "string",
+   "layer": "outside",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 tests/test_sfrxexporter.py:86]",
+   "token": "<text omitted: 7 chars>"
+  },
+  {
+   "core": false,
+   "detail": "call-argument",
+   "kind": "string",
+   "layer": "outside",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 tests/test_sfrxexporter.py:88]",
+   "token": "<text omitted: 4 chars>"
+  },
+  {
+   "core": false,
+   "detail": "call-argument",
+   "kind": "string",
+   "layer": "outside",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 tests/test_sfrxexporter.py:89]",
+   "token": "<text omitted: 6 chars>"
+  },
+  {
+   "core": false,
+   "detail": "comparison",
+   "kind": "string",
+   "layer": "outside",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 tests/test_sfrxexporter.py:227]",
+   "token": "<text omitted: 8 chars>"
+  },
+  {
+   "core": false,
+   "detail": "call-argument",
+   "kind": "string",
+   "layer": "outside",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 tests/test_sfrxexporter.py:231]",
+   "token": "<text omitted: 4 chars>"
+  },
+  {
+   "core": false,
+   "detail": "call-argument",
+   "kind": "string",
+   "layer": "outside",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 tests/test_sfrxexporter.py:232]",
+   "token": "<text omitted: 6 chars>"
+  },
+  {
+   "core": false,
+   "detail": "comparison",
+   "kind": "string",
+   "layer": "outside",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 tests/test_sfrxexporter.py:266]",
+   "token": "<text omitted: 6 chars>"
+  },
+  {
+   "core": false,
+   "detail": "comparison",
+   "kind": "string",
+   "layer": "outside",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 tests/test_sfrxexporter.py:267]",
+   "token": "<text omitted: 4 chars>"
+  },
+  {
+   "core": false,
+   "detail": "assignment",
+   "kind": "string",
+   "layer": "outside",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 tests/test_wdb.py:72]",
+   "token": "<text omitted: 12 chars>"
+  },
+  {
+   "core": false,
+   "detail": "assignment",
+   "kind": "string",
+   "layer": "outside",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 tests/test_wdb.py:84]",
+   "token": "<text omitted: 7 chars>"
+  },
+  {
+   "core": false,
+   "detail": "assignment",
+   "kind": "string",
+   "layer": "outside",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 tests/test_wdb.py:98]",
+   "token": "<text omitted: 6 chars>"
+  },
+  {
+   "core": false,
+   "detail": "assignment",
+   "kind": "string",
+   "layer": "outside",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 tests/test_wdb.py:113]",
+   "token": "<text omitted: 13 chars>"
+  },
+  {
+   "core": false,
+   "detail": "call-argument",
+   "kind": "string",
+   "layer": "outside",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 tests/test_winorient.py:14]",
+   "token": "<text omitted: 6 chars>"
+  },
+  {
+   "core": false,
+   "detail": "call-argument",
+   "kind": "string",
+   "layer": "outside",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 tests/test_winorient.py:14]",
+   "token": "<text omitted: 8 chars>"
+  },
+  {
+   "core": false,
+   "detail": "comparison",
+   "kind": "string",
+   "layer": "outside",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 tests/test_winorient.py:17]",
+   "token": "<text omitted: 7 chars>"
+  },
+  {
+   "core": false,
+   "detail": "comparison",
+   "kind": "string",
+   "layer": "outside",
+   "rule": "RU01",
+   "tag": "[код: pysport@b548c35 tests/test_winorient.py:19]",
+   "token": "<text omitted: 19 chars>"
+  },
+  {
+   "core": true,
+   "detail": "import",
+   "kind": "code",
+   "layer": "domain",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 sportorg/models/constant.py:8]",
+   "token": "Qualification"
+  },
+  {
+   "core": true,
+   "detail": "",
+   "kind": "code",
+   "layer": "domain",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 sportorg/models/constant.py:85]",
+   "token": "Qualification"
+  },
+  {
+   "core": true,
+   "detail": "",
+   "kind": "code",
+   "layer": "domain",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 sportorg/models/constant.py:242]",
+   "token": "Qualification.I"
+  },
+  {
+   "core": true,
+   "detail": "",
+   "kind": "code",
+   "layer": "domain",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 sportorg/models/constant.py:243]",
+   "token": "Qualification.II"
+  },
+  {
+   "core": true,
+   "detail": "",
+   "kind": "code",
+   "layer": "domain",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 sportorg/models/constant.py:244]",
+   "token": "Qualification.III"
+  },
+  {
+   "core": true,
+   "detail": "",
+   "kind": "code",
+   "layer": "domain",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 sportorg/models/constant.py:245]",
+   "token": "Qualification.I_Y"
+  },
+  {
+   "core": true,
+   "detail": "",
+   "kind": "code",
+   "layer": "domain",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 sportorg/models/constant.py:246]",
+   "token": "Qualification.II_Y"
+  },
+  {
+   "core": true,
+   "detail": "",
+   "kind": "code",
+   "layer": "domain",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 sportorg/models/constant.py:247]",
+   "token": "Qualification.III_Y"
+  },
+  {
+   "core": true,
+   "detail": "",
+   "kind": "code",
+   "layer": "domain",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 sportorg/models/constant.py:248]",
+   "token": "Qualification.KMS"
+  },
+  {
+   "core": true,
+   "detail": "",
+   "kind": "code",
+   "layer": "domain",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 sportorg/models/constant.py:249]",
+   "token": "Qualification.MS"
+  },
+  {
+   "core": true,
+   "detail": "",
+   "kind": "code",
+   "layer": "domain",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:511]",
+   "token": "Qualification.NOT_QUALIFIED"
+  },
+  {
+   "core": true,
+   "detail": "",
+   "kind": "code",
+   "layer": "domain",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:662]",
+   "token": "Qualification.get_qual_by_code"
+  },
+  {
+   "core": true,
+   "detail": "",
+   "kind": "code",
+   "layer": "domain",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:1357]",
+   "token": "Qualification"
+  },
+  {
+   "core": true,
+   "detail": "",
+   "kind": "code",
+   "layer": "domain",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:1357]",
+   "token": "Qualification.NOT_QUALIFIED"
+  },
+  {
+   "core": true,
+   "detail": "",
+   "kind": "code",
+   "layer": "domain",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:1465]",
+   "token": "Qualification.get_qual_by_code"
+  },
+  {
+   "core": true,
+   "detail": "definition",
+   "kind": "code",
+   "layer": "domain",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:2314]",
+   "token": "class Qualification"
+  },
+  {
+   "core": true,
+   "detail": "definition",
+   "kind": "code",
+   "layer": "domain",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:2315]",
+   "token": "Qualification.NOT_QUALIFIED"
+  },
+  {
+   "core": true,
+   "detail": "definition",
+   "kind": "code",
+   "layer": "domain",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:2316]",
+   "token": "Qualification.I_Y"
+  },
+  {
+   "core": true,
+   "detail": "definition",
+   "kind": "code",
+   "layer": "domain",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:2317]",
+   "token": "Qualification.II_Y"
+  },
+  {
+   "core": true,
+   "detail": "definition",
+   "kind": "code",
+   "layer": "domain",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:2318]",
+   "token": "Qualification.III_Y"
+  },
+  {
+   "core": true,
+   "detail": "definition",
+   "kind": "code",
+   "layer": "domain",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:2319]",
+   "token": "Qualification.I"
+  },
+  {
+   "core": true,
+   "detail": "definition",
+   "kind": "code",
+   "layer": "domain",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:2320]",
+   "token": "Qualification.II"
+  },
+  {
+   "core": true,
+   "detail": "definition",
+   "kind": "code",
+   "layer": "domain",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:2321]",
+   "token": "Qualification.III"
+  },
+  {
+   "core": true,
+   "detail": "definition",
+   "kind": "code",
+   "layer": "domain",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:2322]",
+   "token": "Qualification.KMS"
+  },
+  {
+   "core": true,
+   "detail": "definition",
+   "kind": "code",
+   "layer": "domain",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:2323]",
+   "token": "Qualification.MS"
+  },
+  {
+   "core": true,
+   "detail": "definition",
+   "kind": "code",
+   "layer": "domain",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:2324]",
+   "token": "Qualification.MSMK"
+  },
+  {
+   "core": true,
+   "detail": "",
+   "kind": "string",
+   "layer": "domain",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:2341]",
+   "token": "КМС"
+  },
+  {
+   "core": true,
+   "detail": "",
+   "kind": "string",
+   "layer": "domain",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:2342]",
+   "token": "МС"
+  },
+  {
+   "core": true,
+   "detail": "",
+   "kind": "string",
+   "layer": "domain",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:2343]",
+   "token": "МСМК"
+  },
+  {
+   "core": true,
+   "detail": "",
+   "kind": "string",
+   "layer": "domain",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:2344]",
+   "token": "ЗМС"
+  },
+  {
+   "core": true,
+   "detail": "",
+   "kind": "string",
+   "layer": "domain",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:2382]",
+   "token": "КМС"
+  },
+  {
+   "core": true,
+   "detail": "",
+   "kind": "string",
+   "layer": "domain",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:2383]",
+   "token": "МС"
+  },
+  {
+   "core": true,
+   "detail": "",
+   "kind": "string",
+   "layer": "domain",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:2384]",
+   "token": "МСМК"
+  },
+  {
+   "core": true,
+   "detail": "",
+   "kind": "code",
+   "layer": "domain",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:2397]",
+   "token": "Qualification"
+  },
+  {
+   "core": true,
+   "detail": "",
+   "kind": "code",
+   "layer": "domain",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:2403]",
+   "token": "Qualification.NOT_QUALIFIED"
+  },
+  {
+   "core": true,
+   "detail": "",
+   "kind": "code",
+   "layer": "domain",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:2438]",
+   "token": "Qualification.get_qual_by_code"
+  },
+  {
+   "core": true,
+   "detail": "",
+   "kind": "code",
+   "layer": "domain",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:2454]",
+   "token": "Qualification.MS"
+  },
+  {
+   "core": true,
+   "detail": "",
+   "kind": "code",
+   "layer": "domain",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:2455]",
+   "token": "Qualification.MS"
+  },
+  {
+   "core": true,
+   "detail": "",
+   "kind": "code",
+   "layer": "domain",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:2457]",
+   "token": "Qualification.KMS"
+  },
+  {
+   "core": true,
+   "detail": "",
+   "kind": "code",
+   "layer": "domain",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:2458]",
+   "token": "Qualification.KMS"
+  },
+  {
+   "core": true,
+   "detail": "",
+   "kind": "code",
+   "layer": "domain",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:2460]",
+   "token": "Qualification.I"
+  },
+  {
+   "core": true,
+   "detail": "",
+   "kind": "code",
+   "layer": "domain",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:2461]",
+   "token": "Qualification.II"
+  },
+  {
+   "core": true,
+   "detail": "",
+   "kind": "code",
+   "layer": "domain",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:2462]",
+   "token": "Qualification.III"
+  },
+  {
+   "core": true,
+   "detail": "",
+   "kind": "code",
+   "layer": "domain",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:2463]",
+   "token": "Qualification.I_Y"
+  },
+  {
+   "core": true,
+   "detail": "",
+   "kind": "code",
+   "layer": "domain",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:2464]",
+   "token": "Qualification.II_Y"
+  },
+  {
+   "core": true,
+   "detail": "",
+   "kind": "code",
+   "layer": "domain",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:2465]",
+   "token": "Qualification.III_Y"
+  },
+  {
+   "core": true,
+   "detail": "",
+   "kind": "code",
+   "layer": "domain",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 sportorg/models/memory.py:2468]",
+   "token": "Qualification.NOT_QUALIFIED"
+  },
+  {
+   "core": true,
+   "detail": "import",
+   "kind": "code",
+   "layer": "domain",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 sportorg/models/result/result_calculation.py:6]",
+   "token": "Qualification"
+  },
+  {
+   "core": true,
+   "detail": "",
+   "kind": "code",
+   "layer": "domain",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 sportorg/models/result/result_calculation.py:267]",
+   "token": "Qualification.NOT_QUALIFIED"
+  },
+  {
+   "core": true,
+   "detail": "import",
+   "kind": "code",
+   "layer": "domain",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 sportorg/models/result/split_calculation.py:4]",
+   "token": "Qualification"
+  },
+  {
+   "core": true,
+   "detail": "",
+   "kind": "code",
+   "layer": "domain",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 sportorg/models/result/split_calculation.py:19]",
+   "token": "Qualification.NOT_QUALIFIED"
+  },
+  {
+   "core": false,
+   "detail": "import",
+   "kind": "code",
+   "layer": "ui",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/entry_mass_edit.py:18]",
+   "token": "Qualification"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "code",
+   "layer": "ui",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/entry_mass_edit.py:69]",
+   "token": "Qualification.list_qual"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "code",
+   "layer": "ui",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/entry_mass_edit.py:173]",
+   "token": "Qualification.get_qual_by_name"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "string",
+   "layer": "ui",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/entry_mass_edit.py:249]",
+   "token": "Qualification"
+  },
+  {
+   "core": false,
+   "detail": "import",
+   "kind": "code",
+   "layer": "ui",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/group_ranking.py:26]",
+   "token": "Qualification"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "code",
+   "layer": "ui",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/group_ranking.py:77]",
+   "token": "Qualification"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "string",
+   "layer": "ui",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/import_persons_table_dialog.py:58]",
+   "token": "Qualification"
+  },
+  {
+   "core": false,
+   "detail": "import",
+   "kind": "code",
+   "layer": "ui",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/person_edit.py:24]",
+   "token": "Qualification"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "string",
+   "layer": "ui",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/person_edit.py:107]",
+   "token": "Qualification"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "code",
+   "layer": "ui",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/person_edit.py:111]",
+   "token": "Qualification"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "code",
+   "layer": "ui",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/person_edit.py:206]",
+   "token": "Qualification.get_qual_by_name"
+  },
+  {
+   "core": false,
+   "detail": "import",
+   "kind": "code",
+   "layer": "ui",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/text_io.py:24]",
+   "token": "Qualification"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "string",
+   "layer": "ui",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/text_io.py:44]",
+   "token": "Qualification"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "string",
+   "layer": "ui",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/text_io.py:347]",
+   "token": "Qualification"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "string",
+   "layer": "ui",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/text_io.py:412]",
+   "token": "Qualification"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "code",
+   "layer": "ui",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/text_io.py:413]",
+   "token": "Qualification.get_qual_by_name"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "string",
+   "layer": "ui",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 sportorg/gui/tabs/memory_model.py:330]",
+   "token": "Qualification"
+  },
+  {
+   "core": false,
+   "detail": "import",
+   "kind": "code",
+   "layer": "vendored",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrximporter.py:7]",
+   "token": "Qualification"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "code",
+   "layer": "vendored",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrximporter.py:124]",
+   "token": "Qualification"
+  },
+  {
+   "core": false,
+   "detail": "import",
+   "kind": "code",
+   "layer": "application",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 sportorg/modules/iof/iof_xml.py:17]",
+   "token": "Qualification"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "code",
+   "layer": "application",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 sportorg/modules/iof/iof_xml.py:204]",
+   "token": "Qualification.get_qual_by_name"
+  },
+  {
+   "core": false,
+   "detail": "import",
+   "kind": "code",
+   "layer": "application",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:7]",
+   "token": "Qualification"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "code",
+   "layer": "application",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:511]",
+   "token": "Qualification"
+  },
+  {
+   "core": false,
+   "detail": "import",
+   "kind": "code",
+   "layer": "application",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 sportorg/modules/winorient/wdb.py:12]",
+   "token": "Qualification"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "code",
+   "layer": "application",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 sportorg/modules/winorient/wdb.py:127]",
+   "token": "Qualification.MSMK"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "code",
+   "layer": "application",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 sportorg/modules/winorient/wdb.py:128]",
+   "token": "Qualification.get_qual_by_code"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "code",
+   "layer": "application",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 sportorg/modules/winorient/wdb.py:262]",
+   "token": "Qualification"
+  },
+  {
+   "core": false,
+   "detail": "import",
+   "kind": "code",
+   "layer": "application",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 sportorg/modules/winorient/winorient.py:6]",
+   "token": "Qualification"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "code",
+   "layer": "application",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 sportorg/modules/winorient/winorient.py:47]",
+   "token": "Qualification"
+  },
+  {
+   "core": false,
+   "detail": "import",
+   "kind": "code",
+   "layer": "outside",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 tests/test_qualification.py:1]",
+   "token": "Qualification"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "code",
+   "layer": "outside",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 tests/test_qualification.py:5]",
+   "token": "Qualification.KMS"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "code",
+   "layer": "outside",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 tests/test_qualification.py:5]",
+   "token": "Qualification.get_qual_by_name"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "code",
+   "layer": "outside",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 tests/test_qualification.py:6]",
+   "token": "Qualification.MS"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "code",
+   "layer": "outside",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 tests/test_qualification.py:6]",
+   "token": "Qualification.get_qual_by_name"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "code",
+   "layer": "outside",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 tests/test_qualification.py:10]",
+   "token": "Qualification.I"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "code",
+   "layer": "outside",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 tests/test_qualification.py:10]",
+   "token": "Qualification.get_qual_by_name"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "code",
+   "layer": "outside",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 tests/test_qualification.py:11]",
+   "token": "Qualification.II"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "code",
+   "layer": "outside",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 tests/test_qualification.py:11]",
+   "token": "Qualification.get_qual_by_name"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "code",
+   "layer": "outside",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 tests/test_qualification.py:12]",
+   "token": "Qualification.III"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "code",
+   "layer": "outside",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 tests/test_qualification.py:12]",
+   "token": "Qualification.get_qual_by_name"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "code",
+   "layer": "outside",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 tests/test_qualification.py:13]",
+   "token": "Qualification.I"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "code",
+   "layer": "outside",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 tests/test_qualification.py:13]",
+   "token": "Qualification.get_qual_by_name"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "code",
+   "layer": "outside",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 tests/test_qualification.py:14]",
+   "token": "Qualification.II"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "code",
+   "layer": "outside",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 tests/test_qualification.py:14]",
+   "token": "Qualification.get_qual_by_name"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "code",
+   "layer": "outside",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 tests/test_qualification.py:15]",
+   "token": "Qualification.III"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "code",
+   "layer": "outside",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 tests/test_qualification.py:15]",
+   "token": "Qualification.get_qual_by_name"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "code",
+   "layer": "outside",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 tests/test_qualification.py:16]",
+   "token": "Qualification.I_Y"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "code",
+   "layer": "outside",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 tests/test_qualification.py:16]",
+   "token": "Qualification.get_qual_by_name"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "code",
+   "layer": "outside",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 tests/test_qualification.py:17]",
+   "token": "Qualification.III_Y"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "code",
+   "layer": "outside",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 tests/test_qualification.py:17]",
+   "token": "Qualification.get_qual_by_name"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "code",
+   "layer": "outside",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 tests/test_qualification.py:18]",
+   "token": "Qualification.III_Y"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "code",
+   "layer": "outside",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 tests/test_qualification.py:18]",
+   "token": "Qualification.get_qual_by_name"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "code",
+   "layer": "outside",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 tests/test_qualification.py:19]",
+   "token": "Qualification.NOT_QUALIFIED"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "code",
+   "layer": "outside",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 tests/test_qualification.py:19]",
+   "token": "Qualification.get_qual_by_name"
+  },
+  {
+   "core": false,
+   "detail": "import",
+   "kind": "code",
+   "layer": "outside",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 tests/test_sfrx.py:2]",
+   "token": "Qualification"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "code",
+   "layer": "outside",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 tests/test_sfrx.py:28]",
+   "token": "Qualification.I"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "code",
+   "layer": "outside",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 tests/test_sfrx.py:56]",
+   "token": "Qualification.II"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "string",
+   "layer": "outside",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 tests/test_sfrx.py:101]",
+   "token": "Qualification"
+  },
+  {
+   "core": false,
+   "detail": "definition",
+   "kind": "code",
+   "layer": "outside",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 tests/test_sfrxexporter.py:29]",
+   "token": "class Qualification"
+  },
+  {
+   "core": false,
+   "detail": "definition",
+   "kind": "code",
+   "layer": "outside",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 tests/test_sfrxexporter.py:30]",
+   "token": "Qualification.NOT_QUALIFIED"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "code",
+   "layer": "outside",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 tests/test_sfrxexporter.py:36]",
+   "token": "Qualification"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "code",
+   "layer": "outside",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 tests/test_sfrxexporter.py:152]",
+   "token": "Qualification.NOT_QUALIFIED"
+  },
+  {
+   "core": false,
+   "detail": "import",
+   "kind": "code",
+   "layer": "outside",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 tests/test_winorient.py:1]",
+   "token": "Qualification"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "code",
+   "layer": "outside",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 tests/test_winorient.py:23]",
+   "token": "Qualification.MS"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "string",
+   "layer": "outside",
+   "rule": "RU02",
+   "tag": "[код: pysport@b548c35 tests/test_winorient.py:23]",
+   "token": "Qualification"
+  },
+  {
+   "core": true,
+   "detail": "",
+   "kind": "string",
+   "layer": "foundation",
+   "rule": "RU03",
+   "tag": "[код: pysport@b548c35 sportorg/settings.py:17]",
+   "token": "telegram"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "string",
+   "layer": "ui",
+   "rule": "RU03",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/settings.py:229]",
+   "token": "Telegram"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "string",
+   "layer": "ui",
+   "rule": "RU03",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/telegram_dialog.py:46]",
+   "token": "Telegram"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "string",
+   "layer": "ui",
+   "rule": "RU03",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/telegram_dialog.py:110]",
+   "token": "telegram"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "string",
+   "layer": "ui",
+   "rule": "RU03",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/telegram_dialog.py:111]",
+   "token": "telegram"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "string",
+   "layer": "ui",
+   "rule": "RU03",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/telegram_dialog.py:112]",
+   "token": "telegram"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "string",
+   "layer": "ui",
+   "rule": "RU03",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/telegram_dialog.py:114]",
+   "token": "telegram"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "string",
+   "layer": "ui",
+   "rule": "RU03",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/telegram_dialog.py:116]",
+   "token": "telegram"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "string",
+   "layer": "ui",
+   "rule": "RU03",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/telegram_dialog.py:140]",
+   "token": "telegram"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "string",
+   "layer": "ui",
+   "rule": "RU03",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/telegram_dialog.py:141]",
+   "token": "telegram"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "string",
+   "layer": "ui",
+   "rule": "RU03",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/telegram_dialog.py:142]",
+   "token": "telegram"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "string",
+   "layer": "ui",
+   "rule": "RU03",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/telegram_dialog.py:143]",
+   "token": "telegram"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "string",
+   "layer": "ui",
+   "rule": "RU03",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/telegram_dialog.py:144]",
+   "token": "telegram"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "string",
+   "layer": "ui",
+   "rule": "RU03",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:429]",
+   "token": "orgeo"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "string",
+   "layer": "ui",
+   "rule": "RU03",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:429]",
+   "token": "orgeo.ru"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "string",
+   "layer": "ui",
+   "rule": "RU03",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:155]",
+   "token": "Orgeo"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "string",
+   "layer": "ui",
+   "rule": "RU03",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:155]",
+   "token": "Orgeo.ru"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "string",
+   "layer": "ui",
+   "rule": "RU03",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:156]",
+   "token": "Orgeo"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "string",
+   "layer": "ui",
+   "rule": "RU03",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:486]",
+   "token": "Telegram"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "string",
+   "layer": "ui",
+   "rule": "RU03",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:492]",
+   "token": "Telegram"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "string",
+   "layer": "ui",
+   "rule": "RU03",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:534]",
+   "token": "Telegram"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "string",
+   "layer": "ui",
+   "rule": "RU03",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:535]",
+   "token": "Telegram"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "string",
+   "layer": "vendored",
+   "rule": "RU03",
+   "tag": "[код: pysport@b548c35 sportorg/libs/iof/parser.py:13]",
+   "token": "orgeo"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "string",
+   "layer": "vendored",
+   "rule": "RU03",
+   "tag": "[код: pysport@b548c35 sportorg/libs/iof/parser.py:13]",
+   "token": "orgeo.ru"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "string",
+   "layer": "vendored",
+   "rule": "RU03",
+   "tag": "[код: pysport@b548c35 sportorg/libs/iof/parser.py:170]",
+   "token": "orgeo"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "string",
+   "layer": "vendored",
+   "rule": "RU03",
+   "tag": "[код: pysport@b548c35 sportorg/libs/iof/parser.py:173]",
+   "token": "orgeo"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "comment",
+   "layer": "vendored",
+   "rule": "RU03",
+   "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:20]",
+   "token": "mail.ru"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "comment",
+   "layer": "vendored",
+   "rule": "RU03",
+   "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:20]",
+   "token": "www.sportsystem.ru"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "string",
+   "layer": "vendored",
+   "rule": "RU03",
+   "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrxparser.py:52]",
+   "token": "orgeo"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "docstring",
+   "layer": "vendored",
+   "rule": "RU03",
+   "tag": "[код: pysport@b548c35 sportorg/libs/srpid/srpid.py:3]",
+   "token": "yandex"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "docstring",
+   "layer": "vendored",
+   "rule": "RU03",
+   "tag": "[код: pysport@b548c35 sportorg/libs/srpid/srpid.py:3]",
+   "token": "yandex.ru"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "string",
+   "layer": "vendored",
+   "rule": "RU03",
+   "tag": "[код: pysport@b548c35 sportorg/libs/telegram/telegram.py:5]",
+   "token": "telegram"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "string",
+   "layer": "vendored",
+   "rule": "RU03",
+   "tag": "[код: pysport@b548c35 sportorg/libs/winorient/wdb_online_sender_dialog.py:40]",
+   "token": "orgeo"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "string",
+   "layer": "vendored",
+   "rule": "RU03",
+   "tag": "[код: pysport@b548c35 sportorg/libs/winorient/wdb_online_sender_dialog.py:40]",
+   "token": "orgeo.ru"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "string",
+   "layer": "application",
+   "rule": "RU03",
+   "tag": "[код: pysport@b548c35 sportorg/modules/live/orgeo.py:172]",
+   "token": "Orgeo"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "docstring",
+   "layer": "application",
+   "rule": "RU03",
+   "tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_orgeo_finish_csv.py:2]",
+   "token": "orgeo"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "docstring",
+   "layer": "application",
+   "rule": "RU03",
+   "tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_orgeo_finish_csv.py:2]",
+   "token": "orgeo.ru"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "string",
+   "layer": "application",
+   "rule": "RU03",
+   "tag": "[код: pysport@b548c35 sportorg/modules/telegram/telegram.py:14]",
+   "token": "Telegram"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "string",
+   "layer": "application",
+   "rule": "RU03",
+   "tag": "[код: pysport@b548c35 sportorg/modules/telegram/telegram.py:48]",
+   "token": "telegram"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "string",
+   "layer": "application",
+   "rule": "RU03",
+   "tag": "[код: pysport@b548c35 sportorg/modules/telegram/telegram.py:49]",
+   "token": "telegram"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "string",
+   "layer": "application",
+   "rule": "RU03",
+   "tag": "[код: pysport@b548c35 sportorg/modules/telegram/telegram.py:50]",
+   "token": "telegram"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "string",
+   "layer": "application",
+   "rule": "RU03",
+   "tag": "[код: pysport@b548c35 sportorg/modules/telegram/telegram.py:51]",
+   "token": "telegram"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "string",
+   "layer": "application",
+   "rule": "RU03",
+   "tag": "[код: pysport@b548c35 sportorg/modules/telegram/telegram.py:52]",
+   "token": "telegram"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "string",
+   "layer": "application",
+   "rule": "RU03",
+   "tag": "[код: pysport@b548c35 sportorg/modules/telegram/telegram.py:79]",
+   "token": "Telegram"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "string",
+   "layer": "outside",
+   "rule": "RU03",
+   "tag": "[код: pysport@b548c35 tests/test_menu_features.py:56]",
+   "token": "Telegram"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "string",
+   "layer": "outside",
+   "rule": "RU03",
+   "tag": "[код: pysport@b548c35 tests/test_menu_features.py:57]",
+   "token": "Telegram"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "string",
+   "layer": "outside",
+   "rule": "RU03",
+   "tag": "[код: pysport@b548c35 tests/test_menu_features.py:91]",
+   "token": "Telegram"
+  },
+  {
+   "core": true,
+   "detail": "",
+   "kind": "string",
+   "layer": "foundation",
+   "rule": "RU04",
+   "tag": "[код: pysport@b548c35 sportorg/utils/text.py:15]",
+   "token": "windows-1251"
+  },
+  {
+   "core": true,
+   "detail": "",
+   "kind": "comment",
+   "layer": "foundation",
+   "rule": "RU04",
+   "tag": "[код: pysport@b548c35 sportorg/utils/text.py:22]",
+   "token": "windows-1251"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "string",
+   "layer": "vendored",
+   "rule": "RU04",
+   "tag": "[код: pysport@b548c35 sportorg/libs/ocad/ocad.py:71]",
+   "token": "windows-1251"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "docstring",
+   "layer": "vendored",
+   "rule": "RU04",
+   "tag": "[код: pysport@b548c35 sportorg/libs/winorient/wdb.py:7]",
+   "token": "Windows-1251"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "string",
+   "layer": "vendored",
+   "rule": "RU04",
+   "tag": "[код: pysport@b548c35 sportorg/libs/winorient/wdb.py:8]",
+   "token": "windows-1251"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "docstring",
+   "layer": "vendored",
+   "rule": "RU04",
+   "tag": "[код: pysport@b548c35 sportorg/libs/winorient/wdb.py:34]",
+   "token": "windows-1251"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "string",
+   "layer": "vendored",
+   "rule": "RU04",
+   "tag": "[код: pysport@b548c35 sportorg/libs/winorient/wo.py:13]",
+   "token": "cp1251"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "string",
+   "layer": "application",
+   "rule": "RU04",
+   "tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_orgeo_finish_csv.py:43]",
+   "token": "cp1251"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "string",
+   "layer": "application",
+   "rule": "RU04",
+   "tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_si_master_csv.py:42]",
+   "token": "cp1251"
+  },
+  {
+   "core": true,
+   "detail": "",
+   "kind": "string",
+   "layer": "foundation",
+   "rule": "RU05",
+   "tag": "[код: pysport@b548c35 sportorg/language.py:23]",
+   "token": "ru_RU"
+  },
+  {
+   "core": true,
+   "detail": "",
+   "kind": "string",
+   "layer": "foundation",
+   "rule": "RU05",
+   "tag": "[код: pysport@b548c35 sportorg/language.py:32]",
+   "token": "ru_RU"
+  },
+  {
+   "core": true,
+   "detail": "",
+   "kind": "string",
+   "layer": "foundation",
+   "rule": "RU05",
+   "tag": "[код: pysport@b548c35 sportorg/settings.py:41]",
+   "token": "ru_RU"
+  },
+  {
+   "core": true,
+   "detail": "",
+   "kind": "string",
+   "layer": "foundation",
+   "rule": "RU05",
+   "tag": "[код: pysport@b548c35 sportorg/settings.py:261]",
+   "token": "ru_RU"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "string",
+   "layer": "application",
+   "rule": "RU05",
+   "tag": "[код: pysport@b548c35 sportorg/modules/configs/configs.py:80]",
+   "token": "ru_RU"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "string",
+   "layer": "application",
+   "rule": "RU05",
+   "tag": "[код: pysport@b548c35 sportorg/modules/configs/configs.py:201]",
+   "token": "ru_RU"
+  },
+  {
+   "core": false,
+   "detail": "quoted",
+   "kind": "comment",
+   "layer": "application",
+   "rule": "RU05",
+   "tag": "[код: pysport@b548c35 sportorg/modules/live/orgeo.py:116]",
+   "token": "'RUS'"
+  },
+  {
+   "core": false,
+   "detail": "",
+   "kind": "string",
+   "layer": "outside",
+   "rule": "RU05",
+   "tag": "[код: pysport@b548c35 tests/test_theme_settings.py:31]",
+   "token": "ru_RU"
+  }
+ ],
+ "unparsed": []
+}
