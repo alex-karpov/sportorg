@@ -38,11 +38,11 @@ from scripts._json import (
     fetch_json,
     parse_json,
 )
+from scripts.legacy import checkout_dir
 
 REPO = Path(__file__).resolve().parent.parent
 FIXTURES = REPO / "scripts" / "typecheck_fixtures"
 CONFIGS = REPO / "scripts" / "typecheck_configs"
-EVIDENCE = REPO / "docs" / "evidence" / "stage-0" / "typecheckers"
 PYTHON = "3.14"
 SINGLE_FILE_REL = "models/result/result_checker.py"  # relative to the legacy sportorg dir
 SINGLE_FILE_TARGET_LINES = 300
@@ -50,7 +50,7 @@ VERSION_RUNS = 3
 SINGLE_RUNS = 3
 VERSION_TIMEOUT = 120
 TRUNC_LIMIT = 2000
-DEFAULT_LEGACY_PATH = Path("../_other/pysport-legacy/sportorg")
+DEFAULT_LEGACY_PATH = checkout_dir("pysport") / "sportorg"
 DEFAULT_OUT = Path("docs/evidence/stage-0/typecheckers/results.json")
 BENCH_ERRORS = (
     OSError,
@@ -89,6 +89,15 @@ class Options(argparse.Namespace):
     def __init__(self) -> None:
         super().__init__()
         self.tools: list[str] = list(TOOLS)
+
+
+@dataclass(frozen=True, slots=True)
+class Bench:
+    """Settings shared by every measurement of one run."""
+
+    runs: int
+    timeout: float
+    evidence: Path  # directory for the per-tool output files (next to --out)
 
 
 @dataclass
@@ -415,13 +424,13 @@ def median_seconds(runs: list[RunResult]) -> float:
     return statistics.median(x.seconds for x in runs)
 
 
-def bench_fixtures(tool: str, tmp: str, runs: int, timeout: float) -> Result:
+def bench_fixtures(tool: str, tmp: str, bench: Bench) -> Result:
     fcmd = fixture_cmd(tool, tmp)
-    fruns = [run(fcmd, str(CONFIGS / tool), timeout) for _ in range(runs)]
+    fruns = [run(fcmd, str(CONFIGS / tool), bench.timeout) for _ in range(bench.runs)]
     first = fruns[0]
     text = combined(first)
     header = f"$ (cwd={CONFIGS / tool})\n$ {' '.join(fcmd)}\n# exit={first.exit_code}\n\n"
-    (EVIDENCE / f"fixtures-{tool}.txt").write_text(header + text, encoding="utf-8")
+    (bench.evidence / f"fixtures-{tool}.txt").write_text(header + text, encoding="utf-8")
     diags = parse_diags(tool, first.stdout + "\n" + first.stderr)
     names = sorted(p.name for p in FIXTURES.glob("*.py"))
     per: dict[str, list[str]] = {n: [] for n in names}
@@ -445,12 +454,12 @@ def bench_fixtures(tool: str, tmp: str, runs: int, timeout: float) -> Result:
     }
 
 
-def bench_legacy(tool: str, legacy: Path, tmp: str, runs: int, timeout: float) -> Result:
+def bench_legacy(tool: str, legacy: Path, tmp: str, bench: Bench) -> Result:
     lcmd = legacy_cmd(tool, str(legacy), tmp)
     lruns: list[RunResult] = []
     trunc = False
-    for i in range(runs):
-        r = run(lcmd, tmp, timeout)
+    for i in range(bench.runs):
+        r = run(lcmd, tmp, bench.timeout)
         lruns.append(r)
         if i == 0:
             body = (
@@ -458,7 +467,7 @@ def bench_legacy(tool: str, legacy: Path, tmp: str, runs: int, timeout: float) -
                 f"# exit={r.exit_code} timeout={r.timed_out} seconds={r.seconds:.2f}\n\n"
                 + combined(r)
             )
-            trunc = write_trunc(EVIDENCE / f"legacy-{tool}.txt", body)
+            trunc = write_trunc(bench.evidence / f"legacy-{tool}.txt", body)
         if r.timed_out:
             break
     r0 = lruns[0]
@@ -504,7 +513,7 @@ def bench_single(tool: str, legacy: Path, tmp: str, timeout: float) -> Result:
     }
 
 
-def bench_tool(tool: str, legacy: Path, runs: int, timeout: float, *, skip_legacy: bool) -> Result:
+def bench_tool(tool: str, legacy: Path, bench: Bench, *, skip_legacy: bool) -> Result:
     res: Result = {"tool": tool, "meta": pypi_meta(tool)}
     tmp = tempfile.mkdtemp(prefix=f"tc_{tool}_")
     try:
@@ -515,11 +524,11 @@ def bench_tool(tool: str, legacy: Path, runs: int, timeout: float, *, skip_legac
         res["version_cmd_exit"] = vr[-1].exit_code
         res["launcher_overhead_s"] = median_seconds(vr)
 
-        res["fixtures"] = bench_fixtures(tool, tmp, runs, timeout)
+        res["fixtures"] = bench_fixtures(tool, tmp, bench)
         if skip_legacy:
             return res
-        res["legacy"] = bench_legacy(tool, legacy, tmp, runs, timeout)
-        res["single_file"] = bench_single(tool, legacy, tmp, timeout)
+        res["legacy"] = bench_legacy(tool, legacy, tmp, bench)
+        res["single_file"] = bench_single(tool, legacy, tmp, bench.timeout)
     except BENCH_ERRORS as e:
         res["failed"] = repr(e)
     finally:
@@ -751,7 +760,8 @@ def main(argv: list[str] | None = None) -> int:
         print(f"legacy path not found: {legacy}", file=sys.stderr)
         return 2
     out = a.out if a.out.is_absolute() else REPO / a.out
-    EVIDENCE.mkdir(parents=True, exist_ok=True)
+    evidence = out.parent  # every output file goes next to --out
+    evidence.mkdir(parents=True, exist_ok=True)
     existing = as_dict(parse_json(out.read_text(encoding="utf-8"))) if out.exists() else {}
     uvv = subprocess.run(
         ["uv", "--version"],
@@ -776,12 +786,13 @@ def main(argv: list[str] | None = None) -> int:
     }
     for t in a.tools:
         print(f"== {t}", flush=True)
-        tools_out[t] = bench_tool(t, legacy, a.runs, a.timeout, skip_legacy=a.skip_legacy)
+        bench = Bench(a.runs, a.timeout, evidence)
+        tools_out[t] = bench_tool(t, legacy, bench, skip_legacy=a.skip_legacy)
         out.write_text(json.dumps(results, indent=2), encoding="utf-8")
         r = as_dict(tools_out[t])
         print("  failed:" if r.get("failed") else "  ok", r.get("failed", ""), flush=True)
     out.write_text(json.dumps(results, indent=2), encoding="utf-8")
-    (EVIDENCE / "results.md").write_text(
+    (evidence / "results.md").write_text(
         make_md(results, machine, legacy, a.runs), encoding="utf-8"
     )
     print("wrote", out)

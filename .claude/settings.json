@@ -1,7 +1,8 @@
 {
   "permissions": {
     "deny": [
-      "Edit(//c/Users/ank/Prog/Orient/_other/**)"
+      "Edit(/.legacy/**)",
+      "Edit(/legacy/**)"
     ]
   },
   "hooks": {
@@ -42,7 +43,6 @@
     ]
   },
   "enabledPlugins": {
-    "superpowers@claude-plugins-official": true,
-    "code-modernization@claude-plugins-official": true
+    "superpowers@claude-plugins-official": true
   }
 }

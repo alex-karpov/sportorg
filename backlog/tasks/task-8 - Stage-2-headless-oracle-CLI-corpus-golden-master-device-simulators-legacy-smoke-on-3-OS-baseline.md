@@ -6,7 +6,7 @@ title: >-
 status: To Do
 assignee: []
 created_date: '2026-10-24 12:06'
-updated_date: '2026-10-24 12:12'
+updated_date: '2026-10-24 15:20'
 labels:
   - stage-2
 milestone: m-2
@@ -29,4 +29,5 @@ Blocked by data request items 1-4 (corpus, protocols, personal-data decision, de
 - [ ] #4 Recorded device dumps replay through virtual COM ports
 - [ ] #5 Legacy smoke (GUI, SportIdent read, print) on Windows, Linux, macOS with logs
 - [ ] #6 Baseline: branch coverage, mutation score, complexity, operator task timings, split print time
+- [ ] #7 Agent-neutral protection of tests/golden/** in CI before the first golden file: a changed golden file fails CI unless the commit carries the maintainer's approval (mechanism recorded in an ADR)
 <!-- AC:END -->

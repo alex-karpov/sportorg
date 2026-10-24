@@ -38,17 +38,43 @@ claude plugin eval . --eval-dir evals --case smoke --runs 1 --ablation none --no
 claude plugin eval . --eval-dir evals --case smoke-plugin --runs 1 --ablation with-without --no-publish --trust-plugin --max-cost-usd 1 --model haiku
 ```
 
-Full pilot (maintainer consent + ceiling required, Backlog task-2). Shell tools need a sandbox
+Full pilot: deferred to Stages 2–3 by the maintainer (2026-10-24); needs the maintainer's consent,
+a cost ceiling and the decision rule below approved first (Backlog TASK-2). Shell tools need a sandbox
 backend, so run it from WSL2, not native Windows:
 
 ```
+export EVAL_LEGACY_SRC="$(uv run python -m scripts.legacy path pysport)"
 claude plugin eval . --eval-dir evals --tag legacy --scaffold --allow-tools Bash Edit Write \
-  --ablation with-without --trust-plugin --max-cost-usd 25 --json results.json
+  --ablation with-without --trust-plugin --max-cost-usd <ceiling> --json results.json
 ```
 
-`EVAL_LEGACY_SRC` (env, optional) points at the read-only legacy checkout used as the clone source;
-the scaffold never writes into it. Results go to `evals/results/` (git-ignored); copy the aggregate
-and the HTML report to `docs/evidence/pilot/` when a run is kept as evidence.
+`EVAL_LEGACY_SRC` (required) is the pinned read-only clone `.legacy/pysport` (ADR-0006); each scaffold
+clones it with `--no-hardlinks` and never writes into it. Results go to `evals/results/`
+(git-ignored); copy the aggregate and the HTML report to `docs/evidence/pilot/` when a run is kept.
+
+## Decision rule (draft, to be approved before the first full run)
+
+Written in advance so that the result cannot shape the criterion. Thresholds are proposals. The
+maintainer deferred the pilot to later stages and will approve or amend this rule before it starts
+(2026-10-25); until then it is not in force.
+
+- Setup: the 7 cases below, unchanged; 3 runs per case and arm (21 trials per arm); the same model and
+  effort in both arms; `--ablation with-without`; plugin name and version recorded with the run.
+- Metric: a trial passes when the case grader passes (the real fix's test passes and the case's other
+  checks hold). `W` and `N` are passed trials with and without the plugin.
+- **Useful** (move from local to project settings) only if all hold:
+  1. `W − N ≥ 4` (about +19 percentage points; with 21 trials per arm smaller gaps are within the
+     run-to-run noise of a sample this small);
+  2. no case is worse with the plugin in 2 or more of its 3 runs;
+  3. with the plugin, the median cost and the median wall time per passed trial are at most 1.5 times
+     those without it;
+  4. no rule violation in the with-arm transcripts: no second task registry (plan checkboxes used as
+     status, `MODERNIZATION_BRIEF.md`), no write into legacy, no new suppression.
+- **Harmful** (disable it locally too): `W − N ≤ −3`, or a rule violation caused by the plugin.
+- Otherwise **no evidence**: the plugin stays a local opt-in.
+- Scope: these cases measure fixing and extending legacy code. They do not measure
+  code-modernization's rule extraction and verification; that needs its own criterion before
+  Stage 3 relies on it (ADR-0005 decision 5).
 
 ## Case list
 

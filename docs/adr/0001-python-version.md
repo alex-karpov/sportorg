@@ -1,6 +1,6 @@
 # ADR-0001: Python version for development and lower bound of the code
 
-- Status: accepted (Stage 0), revisit condition below
+- Status: accepted (Stage 0), confirmed by the maintainer `[мейнтейнер: 2026-10-24]`; revisit condition below
 - Date: 2026-10-24
 - Evidence: `docs/evidence/stage-0/python-support-matrix.md` (+ `.json` with hashed raw PyPI
   responses), `docs/evidence/stage-0/endoflife-python.json`, `docs/evidence/stage-0/uv-python-downloads.txt`.
@@ -35,14 +35,23 @@ error: Failed to build `pyyaml==6.0.3`
 error: Microsoft Visual C++ 14.0 or greater is required.
 ```
 
-Legacy pins `>=3.8.1,<=3.14` for Windows 7 operators `[код: ../_other/pysport-legacy/pyproject.toml]`.
-The new product's minimum OS is a Stage 4 decision from operator data; the distributed bundle carries its
-own interpreter, so the lower bound here constrains contributors, not operators.
+Legacy pins `>=3.8.1,<=3.14` `[код: pysport@b548c35 pyproject.toml:6]`; 3.8 is the last Python for
+Windows 7. Python 3.14 supports Windows 10 and newer only ("If you require Windows 7 support, install
+Python 3.8. If you require Windows 8.1 support, install Python 3.12." `[docs.python.org/3.14/using/windows.html,
+§4.5, per PEP 11]`). A distributed bundle carries its own interpreter, but that interpreter still sets the
+minimum OS: **a product on 3.14 cannot run on Windows 7 or 8.1 at all.** How many operators still run them
+is unknown (data request item 10), so that data is needed before Stage 2, not only for the Stage 4 ADR.
+`hidapi` is a candidate from the matrix, not a legacy dependency (absent from legacy `pyproject.toml` and
+imports); `orjson` is a legacy runtime dependency, and its cp315 Linux wheels need glibc ≥ 2.39
+(`manylinux_2_39`: Ubuntu 24.04 yes, RHEL 9 no) — the matrix script counts any manylinux tag, so this
+matters for the Stage 4 minimum-OS ADR (independent check, 2026-10-24).
 
 ## Decision
 Option 2. `.python-version` = 3.14; `requires-python = ">=3.14"`; CI matrix runs 3.14 and 3.15 on three
-OSes. Tools that are not project dependencies (pre-commit) run via `uvx`, so a missing 3.15 wheel in a
-tool's dependency tree cannot block the project environment.
+OSes with `uv sync --locked --no-build` (no third-party source builds anywhere). Tools that are not
+project dependencies run via `uvx` with the interpreter and version pinned
+(`uvx --python 3.14 pre-commit@4.7.0`): a bare `uvx pre-commit` picks the newest installed Python and,
+with 3.15 installed, fails building pyyaml (independent check, 2026-10-24).
 
 Why not 1: two weeks after release the long tail (pyyaml) still has no wheels; on Windows this means a
 compiler requirement for every contributor. Why not 3/4: 3.14 already has wheels for everything in the
@@ -51,10 +60,14 @@ development version (that would be "by default").
 
 ## Consequences
 - Agents may use 3.14 features (t-strings, deferred annotations) but nothing from 3.15.
-- The 3.15 lane is a required CI job: when it fails because of a missing wheel, the fix is to wait or to
-  drop the dependency, never to build from source in CI.
+- The 3.15 lane is non-blocking (`continue-on-error`): it reports, it does not gate merges. When it fails
+  because of a missing wheel, the fix is to wait or to drop the dependency, never to build from source.
+  Known on 2026-10-24: macOS/3.15 has only `cp315t` wheels for grimp 3.17 (import-linter), so that lane
+  is expected to be red until grimp ships a cp315 macOS wheel; before `--no-build` it was green only
+  because CI compiled grimp.
 
 ## Revisit
-Switch development to 3.15 when (a) pyyaml and every direct dependency ship cp315 wheels for win/linux/mac
-and (b) the 3.15 CI lane has been green for 4 consecutive weeks. Re-run the matrix script and record the
+Switch development to 3.15 when (a) every package in `uv.lock` (not only direct dependencies) installs
+from wheels on 3.15 on win/linux/mac — the CI 3.15 lanes with `--no-build` show it — and pre-commit's
+pyyaml has cp315 wheels, and (b) the 3.15 CI lane has been green for 4 consecutive weeks. Re-run the matrix script and record the
 date here. Also revisit when the Stage 4 minimum-OS ADR lands.

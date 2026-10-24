@@ -14,7 +14,10 @@ reason. Full brief: `docs/brief.md` (Russian). Stage reports: `docs/reports/`.
 - `scripts/` — project commands and measurements; `scripts/check.py` runs every quality check
 - `backlog/` — Backlog.md tasks (the only task registry)
 - `docs/adr/` decisions · `docs/sources/` primary sources · `docs/evidence/` tool outputs · `docs/risks.md`
-- `../_other/pysport-legacy` — legacy repository, **read-only**, pinned commit `30d849dde1f7ebe04599098b3344b72fdb1210fe`
+- `.legacy/<name>` — legacy repositories, **read-only**, git-ignored clones at the commits pinned in
+  `legacy.toml` (ADR-0006): `pysport` (the program) and `templates` (Russian report templates; legacy
+  reads them with `SPORTORG_TEMPLATES_PATH=<.legacy/templates>/ru`); `.legacy-run/<name>` — writable
+  copies for running legacy
 
 ## Commands (same on Windows, Linux, macOS)
 ```
@@ -22,11 +25,14 @@ uv sync                                  # environment, Python 3.14 (ADR-0001)
 uv run python scripts/check.py           # ALL checks: format, lint, types, imports, tests (fail-fast)
 uv run python scripts/check.py --fix     # apply ruff format + autofixes, then run checks
 uv run python scripts/check.py --only tests
-uvx pre-commit install                   # git hooks: fast checks on commit, tests on push
+uvx --python 3.14 pre-commit@4.7.0 install  # git hooks: fast checks on commit, tests on push
 uv audit                                 # vulnerabilities (also in CI)
-uv run python -m scripts.check_licenses  # licence compatibility (also in CI)
-uv run python scripts/legacy_clone.py    # fresh clone of the pinned legacy commit for execution
+uv run python -m scripts.check_licenses  # licence compatibility of runtime dependencies (also in CI)
+uv run python -m scripts.legacy fetch    # clone or update the pinned legacy repositories in .legacy/, locked
+uv run python -m scripts.legacy verify   # pinned commit, clean tree, still locked
+uv run python -m scripts.legacy_clone    # writable copy in .legacy-run/ for running legacy
 ```
+Scripts that import `scripts.*` run as modules (`python -m scripts.x`), not as files.
 Only `scripts/check.py` defines what "green" means; pre-commit, CI and agent hooks call the same steps.
 
 Environment (ADR-0003): on a Windows host, agent-driven work runs in WSL2 with the repository cloned on
@@ -35,8 +41,10 @@ open one checkout from both toolchains — the `.venv` breaks. `.devcontainer/` 
 equivalent (Docker) for unattended agents and for hosts without WSL.
 
 ## Rules
-1. **Legacy is read-only.** Never write under `../_other/pysport-legacy`. Run legacy code only from a
-   fresh clone of the pinned commit (`scripts/legacy_clone.py`), never from the read-only checkout.
+1. **Legacy is read-only.** Never write under `.legacy/` (or the maintainer's sibling checkout it is
+   fetched from). Run legacy code only from a copy made by `scripts.legacy_clone`, never in `.legacy/`.
+   Never unlock `.legacy/`. Pins in `legacy.toml` change only by the maintainer's decision; then
+   `scripts.legacy fetch` replaces the old clone.
 2. **Evidence.** A claim about rules, formats or behaviour carries a source tag:
    `[код: path:line]`, `[правила: doc, edition, clause]`, `[корпус: file]`, `[история: commit/issue]`,
    `[мейнтейнер: date]`; otherwise `[допущение]`. Sport rules are never quoted from memory.

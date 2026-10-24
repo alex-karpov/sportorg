@@ -1,17 +1,22 @@
 # Git hooks run the same project commands as scripts/check.py and CI; tool versions come from uv.lock.
-# Install once: uvx pre-commit install   (pre-commit itself is a tool, not a project dependency: ADR-0004)
+# Install once: uvx --python 3.14 pre-commit@4.7.0 install
+# (pre-commit is a tool, not a project dependency: ADR-0004. Python and version are pinned: a bare `uvx pre-commit`
+#  may pick a newer interpreter (3.15) for which pyyaml has no wheel.)
+# Excluded: deliberately broken fixtures and frozen tool-output copies in docs/evidence (scripts/check.py does not
+# lint them either); needed here because pre-commit passes explicit file names.
+exclude: ^(scripts/typecheck_(fixtures|configs)/|docs/evidence/)
 default_install_hook_types: [pre-commit, pre-push]
 repos:
   - repo: local
     hooks:
       - id: ruff-format
         name: ruff format --check
-        entry: uv run --no-sync ruff format --check
+        entry: uv run --no-sync ruff format --check --force-exclude
         language: system
         types: [python]
       - id: ruff-check
         name: ruff check
-        entry: uv run --no-sync ruff check
+        entry: uv run --no-sync ruff check --force-exclude
         language: system
         types: [python]
       - id: basedpyright

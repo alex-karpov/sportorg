@@ -4,7 +4,8 @@
 - Date: 2026-10-24
 - Evidence: `docs/evidence/stage-0/typecheckers/results.md` (+ `results.json`, per-tool outputs,
   `help-*.txt`, `commands.txt`). Reproduce: `uv run --no-project --python 3.14 python -m scripts.bench_typecheckers`
-  (fixtures in `scripts/typecheck_fixtures/`, strict configs in `scripts/typecheck_configs/`).
+  (fixtures in `scripts/typecheck_fixtures/`, strict configs in `scripts/typecheck_configs/`); add
+  `--out <dir>/results.json` to keep the committed evidence untouched (all outputs go next to `--out`).
 
 ## Context
 Code is written mostly by agents. The brief's criteria: speed of feedback in the edit cycle, resistance
@@ -22,6 +23,9 @@ zuban.
 | ty | 0.0.91 | MIT | 8 | 0.11 s | 0.13 s | 0.36 s | 0.34 s |
 | pyrefly | 1.4.0 | MIT | 12 | 0.43 s | 0.46 s | 0.63 s | 0.58 s |
 | zuban | 0.10.1 | **AGPL-3.0** | 12 | 0.11 s | 0.10 s | 0.88 s | 0.45 s |
+
+Independent reproduction on a clone (2026-10-24, separate session): the same counts for all six tools and
+the same fixture matrix line by line; one file basedpyright 1.04 s, mypy 1.32 s.
 
 Times include ~0.4 s `uvx` launcher overhead (0.06 s for ty/pyrefly/zuban). All six run on Windows,
 Linux and macOS wheels. No tool produced a false positive on the clean control file.
@@ -47,19 +51,29 @@ pyright-family gives line, column and rule name; mypy/zuban give line and error 
 `parser.add_argument(...)`; ruff B018 keeps the useless-expression case). Every other adjustment needs a
 line here.
 
-Why over mypy (14/17): catches the invalid-cast bug class and `getattr` Any leaks; column + rule name in
-every message; faster on a single file, which is the agent hook path. Why over ty (10× faster): 8/17
-evasions caught, pre-1.0 (0.0.91) with rules still changing. Why not zuban: AGPL-3.0 and no unused-ignore
+Why over mypy: not the count — 15 against 14 is one fixture of 17, and the fixtures were written by the
+same session that measured them. The deciding points are what an agent needs in the edit loop: every
+message carries line, column and rule name, so a fix (or a justified suppression) can name the rule;
+`reportAny`/`reportExplicitAny` enforce AGENTS.md rule 4 directly, and the invalid-cast bug class is
+caught; a single file is checked faster (1.19 s vs 1.54 s; reproduced 1.04 s vs 1.32 s), which is the
+hook path. The legacy-corpus times describe untyped code and say little about the future typed project.
+
+Why over ty (10× faster): 8/17 evasions caught, pre-1.0 (0.0.91) with rules still changing. Why not zuban: AGPL-3.0 and no unused-ignore
 detection. Why not pyrefly: 12/17, misses the redundant/unused-ignore cases agents produce most often.
 
 Runtime dependency: basedpyright pulls `nodejs-wheel-binaries` (bundled Node), so no system Node is needed.
 
 ## Consequences
-- Hook latency after an edit ≈ 1.8–2.0 s for ruff + basedpyright on one file (measured 2026-10-24).
+- Hook latency after an edit: 1.8–2.0 s for ruff + basedpyright on one file in the Stage 0 session; the
+  independent check measured a median of 1.0–1.2 s over 10 runs (2026-10-24).
+- Mode `all` together with "no suppressions" (AGENTS.md rule 4) will force typed wrappers around
+  libraries without types; that cost is tracked as risk R16 in `docs/risks.md`.
 - JSON and argparse results are `Any`; code must narrow them (`scripts/_json.py` helpers, typed
   `argparse.Namespace` subclasses with class-body defaults). This is intended: the same discipline
   applies to file formats in `adapters/` later.
 
 ## Revisit
-Re-run `scripts/bench_typecheckers.py` when ty reaches 1.0, when any tool catches ≥ 15/17 fixtures and
-checks the legacy corpus in under 1 s, or if basedpyright's whole-project time exceeds 30 s on CI.
+Re-run `python -m scripts.bench_typecheckers` when ty reaches 1.0, when any tool catches ≥ 15/17 fixtures
+and checks the legacy corpus in under 1 s, or if basedpyright's whole-project time exceeds 30 s on CI.
+basedpyright is a fork maintained by a small team `[допущение]`: if its releases fall more than three
+months behind pyright's, fall back to pyright plus the ruff rules that cover the gap.

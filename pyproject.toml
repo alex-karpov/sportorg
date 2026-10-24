@@ -3,8 +3,9 @@ name = "sportorg-ng"
 version = "0.0.1"
 description = "Timing, results and publication software for orienteering and related sports (modernization of SportOrg)"
 readme = "README.md"
-# Provisional: the legacy SportOrg is GPL-3.0-or-later; the final licence is a maintainer decision (ADR-0001, open question).
-license = "GPL-3.0-or-later"
+# Maintainer, 2026-10-25: the legacy grants GPLv3 without "or later"; see ADR-0004, last section.
+license = "GPL-3.0-only"
+license-files = ["LICENSE"]
 requires-python = ">=3.14"
 dependencies = []
 
@@ -13,7 +14,6 @@ dev = [
   "ruff>=0.17.2",
   "pytest>=9.1.1",
   "import-linter>=2.15",
-  "pip-licenses>=5.5.5",
   "basedpyright>=1.40.2",
 ]
 
@@ -41,7 +41,7 @@ ignore = [
   "D203", "D213",       # conflict with D211/D212 (one style must be picked)
   "COM812",             # handled by the formatter
   "FIX002", "TD002", "TD003",  # TODOs are tracked in Backlog.md, not in code comments
-  "CPY001",             # no copyright-header policy (maintainer decision pending with the licence)
+  "CPY001",             # one licence for the whole project, in LICENSE and pyproject (ADR-0004 row 3)
 ]
 # Agents must not silence checks: every noqa needs a code and a reason, and unused noqa is an error (RUF100).
 [tool.ruff.lint.flake8-annotations]

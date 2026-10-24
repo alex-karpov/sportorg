@@ -29,6 +29,20 @@ the product must be tested on operators' OSes; legacy analysis tooling (`code-mo
 | Docker, bind-mounted Windows dir | 9p | 83.2 s | 0.46 s | 2.81 s | 0.34 s | 4.70 s |
 | Docker, repo copied inside | overlay | 11.0 s | 0.23 s | 0.31 s | 0.02 s | 1.08 s |
 
+Independent re-measurement with the same script (2026-10-24, separate session, uv 0.13.1 on Windows and
+0.13.5 in WSL; single cold runs):
+
+| environment | cold `uv sync --no-cache` | warm sync | pytest | ruff | basedpyright |
+|---|---|---|---|---|---|
+| native Windows (Git Bash), NTFS | 21.58 s | 0.28 s | 0.67 s | 0.14 s | 1.09 s |
+| WSL2, ext4 | 10.65 s | 0.05 s | 0.22 s | 0.02 s | 0.86 s |
+| WSL2, /mnt/c | 59.44 s | 0.24 s | 1.78 s | 0.29 s | 3.18 s |
+
+The order of environments is the same, the ratios are smaller: ext4 is 2.0× faster than NTFS on a cold
+sync (3.5× in the first run), 1.27× on type checking (1.4×), /mnt/c is 5.6× slower than ext4 (7×). Cold
+runs were done once each, so the spread between the two runs is the noise level. Warm sync differs by
+tenths of a second and does not matter.
+
 Facts that are not timings:
 - Claude Code has no OS sandbox backend on native Windows (commands run unconfined); `claude plugin eval`
   refuses shell-granting suites there and tells you to use WSL2. Codex has a native Windows sandbox.
@@ -44,8 +58,12 @@ Facts that are not timings:
 
 ## Decision
 - **Windows host, agent-driven work**: WSL2 Ubuntu, repository cloned on ext4 (never under `/mnt/c`),
-  Claude Code or Codex started inside WSL. Reasons: sandbox available, POSIX tools for the analysis plugin,
-  3.5× faster cold sync and 1.4× faster type checking than native, 7× faster than the same tools on 9p.
+  Claude Code or Codex started inside WSL. Reasons, in order of weight: an OS sandbox exists there for
+  Claude Code's Bash tool and for `claude plugin eval` (none on native Windows); the analysis plugin's
+  POSIX tools work; cold syncs are 2–3.5× faster than on NTFS and type checks 1.3–1.4× faster (both
+  measurements above), while warm syncs are equal for practical purposes. The sandbox confines Bash only:
+  Read/Edit/Write are governed by permission rules, which is why legacy has its own protection
+  (ADR-0006).
 - **Windows native checkout**: a separate clone, used for GUI/printing tests and Windows-specific
   behaviour; never opened from WSL.
 - **macOS / Linux hosts**: native (sandboxes available; measured Linux numbers apply).
@@ -59,8 +77,13 @@ Facts that are not timings:
 
 ## Consequences
 - AGENTS.md and README point Windows contributors to WSL2 for agent work; the one-checkout-per-toolchain
-  rule is written down.
-- Hooks that must never fail closed (the PreToolUse guard) run with `uv run --no-project`.
+  rule is written down. It is enforced by nothing but discipline — the Stage 0 incident was exactly its
+  violation — so a mechanical check (refuse to run when `.venv` was built for another OS) is tracked as a
+  Backlog task.
+- Three environments (WSL, native Windows clone, devcontainer) mean three setups to keep working; the
+  devcontainer is verified by building the image and running the checks inside it, not from VS Code.
+- Hooks that must never fail closed (the PreToolUse guard) run with `uv run --no-project` and always
+  exit 0 (ADR-0005).
 
 ## Revisit
 When Claude Code gets a Windows sandbox backend; after the Stage 2 smoke on three OSes (GUI/printing
