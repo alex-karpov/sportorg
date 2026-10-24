@@ -14,14 +14,20 @@ Commands are listed in `commands.txt`.
 | `LICENSE` at 30d849d | Full GPLv3 text. Blob `ef7c3112` is identical at upstream `b548c35`. "any later version" appears only inside the licence text itself (§14, lines 569 and 571; "How to apply" appendix, line 639). |
 | `pyproject.toml` at 30d849d | No `license` field and no licence classifier. |
 | `README.md:2` at 30d849d | Badge "license-GPLv3" linking to `LICENSE`. |
-| Source headers at 30d849d | Only `sportorg/libs/huichang/huichang.py:7-9` carries an explicit "version 3 … or (at your option) any later version" notice. `sportorg/gui/dialogs/about.py` embeds the GPLv3 text; `builder.py:118` sets `copyright="GNU GENERAL PUBLIC LICENSE …"`. |
+| Source headers (corrected 2026-10-25, see below) | Four vendored readers carry "either version 3 of the License, or (at your option) any later version": `sportorg/libs/huichang/huichang.py:7-9`, `sportorg/libs/sfr/sfrreader.py:7-9`, `sportorg/libs/sportiduino/sportiduino.py:7-9`, `sportorg/libs/srpid/srpid.py:6-8`. `builder.py:118` sets `copyright="GNU GENERAL PUBLIC LICENSE …"`. |
+| `sportorg/gui/dialogs/about.py` (the About dialog) | Embeds the GPLv3 text. Its "How to Apply These Terms" appendix is filled in for the program: "SportOrg / Copyright (C) 2018  SportOrg team / … either version 3 of the License, or (at your option) any later version" (lines 720-726), and the interactive notice at line 742 names "SportOrg  Copyright (C) 2018 SportOrg team". |
 | GitHub API `repos/sportorg/pysport` | `license.spdx_id = "GPL-3.0"` (GitHub's detection of the LICENSE text, not a statement by the authors). |
 | GitHub API `repos/sportorg/templates` | `license = null` (no licence file). One commit `fecebb45` (2024-10-07) "refactor: move templates from the app repository". |
 
-Finding: the project names GPL version 3 and nowhere grants "or any later version" at project level.
-Interpretation `[допущение]`: by GPLv3 §14 (a program that specifies a version number without "or any
-later version" is under that version) the legacy is effectively GPL-3.0-only; the vendored
-`huichang.py` is GPL-3.0-or-later. This is a reading of the licence text, not legal advice.
+Finding: `LICENSE`, README and `pyproject.toml` name GPL version 3 without "or any later version";
+the About dialog shows the program's own filled-in notice with "or (at your option) any later
+version", and four vendored files carry the same clause. Correction: until 2026-10-25 this section
+said that only `huichang.py` had the clause and missed the About dialog; the independent round-2 check
+of 2026-10-25 found the rest (`git -C .legacy/pysport grep -n -I -i "any later version" HEAD`).
+Interpretation `[допущение]`: GPLv3 §14 gives the "or later" option when "the Program specifies" it;
+the About dialog is the program specifying it, so the legacy reads as GPL-3.0-or-later rather than
+GPL-3.0-only. The authors can settle it (Backlog TASK-10). This is a reading of the licence text, not
+legal advice.
 
 ## 2. The pinned legacy commit
 
@@ -98,7 +104,7 @@ pysport@b548c35ba18f, templates@cd953823beb3 locked`. At `b548c35`, pysport's ow
 The probe builds a throwaway project with the planned layout (`.legacy/pysport/…`, `.gitignore`
 `.legacy/`, `.claude/settings.json` deny `Edit(/.legacy/**)`) outside this repository. Raw outputs:
 `probe-fsmode-windows.md`, `probe-fsmode-wsl.md`, `probe-agent-windows.md`, `probe-agent-wsl.md`,
-`probe-agent-wsl-sandbox.md`.
+`probe-agent-wsl-sandbox.md`, `probe-hook-exit-code.md`.
 
 ### 5.1 Read-only file modes, no agent (`fsmode`)
 
@@ -179,7 +185,16 @@ Refused: 13 of 13 write attempts. The probe files stayed writable (`-rw-r--r--` 
 "Read-only file system" comes from the sandbox's mount, not from file modes: `.legacy/` was read-only
 inside a writable working directory for every process that Bash started. That matches the sandboxing
 docs, which merge Edit deny rules into the sandbox's write restrictions; a run with the sandbox and
-without the rule was not made. No tool call asked to run outside the sandbox (`dangerouslyDisableSandbox` occurs 0 times in
-the stream). Not tested: such a retry, which `allowUnsandboxedCommands` (default true) permits and
-ordinary permissions then govern; a Bash write into `src/` under the sandbox (the control step uses
-Edit).
+without the rule was not made. No tool call asked to run outside the sandbox
+(`dangerouslyDisableSandbox` occurs 0 times in the stream). Not tested: such a retry, which
+`allowUnsandboxedCommands` (default true) permits and ordinary permissions then govern; a Bash write
+into `src/` under the sandbox (the control step uses Edit).
+
+### 5.4 Exit code of the guard's hook command when uv itself fails
+
+Found by the independent round-2 check (2026-10-25): with an unwritable uv cache the guard's hook
+command exited 2, and the Python guard's "always 0" did not apply because Python never started. Raw
+output: `probe-hook-exit-code.md`. uv exits 2 on its own errors (missing interpreter, unwritable cache).
+A PreToolUse hook whose uv fails that way blocked the Bash call (`out.txt` not written, "PreToolUse:Bash
+hook error: …"); the same command with `|| exit 1` let it run (`out.txt` written). The guard's command
+in `.claude/settings.json` now ends in `|| exit 1`; its Python part still exits 0.

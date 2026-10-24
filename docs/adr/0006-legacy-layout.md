@@ -23,7 +23,7 @@ portable rule `Edit(/.legacy/**)`, guard on resolved paths; probe on Windows and
 | (a) Sibling checkout + absolute deny rule (Stage 0) | nothing to fetch | machine-specific rule, username in history, not pinned (it is the maintainer's working checkout with their own branches) |
 | (b) git submodule at the pinned commit | pin recorded by git itself | a writable working tree that agents can commit in; pointer churn in project history; the pinned commit must be public |
 | (c) Vendored copy committed to this repository | no fetch step | 19 MB of legacy in project history; template `.docx` files with an e-mail and phone numbers would enter the repository (AGENTS.md rule 8); legacy and product mixed |
-| (d) **Git-ignored clone `.legacy/<name>` at the pinned commit, locked read-only, fetched by a script from a manifest** | portable rule, one place for paths, pinned and verifiable | a fetch step; the pinned commit must be reachable from the manifest URL (open, below) |
+| (d) **Git-ignored clone `.legacy/<name>` at the pinned commit, locked read-only, fetched by a script from a manifest** | portable rule, one place for paths, pinned and verifiable | a fetch step; the pinned commit must be reachable from the manifest URL (settled: both pins are in public repositories, below) |
 | (e) Link `legacy/…` to the sibling checkout | no copy | link targets were refused only by a permission prompt in the probe, not by the deny rule; still not pinned |
 
 ## Data (2026-10-24, Windows 11 + WSL2 Ubuntu, Claude Code 2.1.310)
@@ -66,15 +66,18 @@ portable rule `Edit(/.legacy/**)`, guard on resolved paths; probe on Windows and
 4. **Guard.** File tools: the path as written and after `resolve()` (links, junctions, `..`, case).
    Shell: every simple command of a compound command is classified by verb; `cd` into legacy is
    tracked; redirection targets, `git`/`uv` subcommands, `bash -c` and command substitutions are
-   inspected; reading and copying out stay allowed. The hook always exits 0 and turns its own errors
-   into `ask` (Stage 0 incident).
+   inspected; reading and copying out stay allowed; `scripts.legacy unlock` is denied by name. The
+   guard's Python always exits 0 and turns its own errors into `ask` (Stage 0 incident). The hook
+   command ends in `|| exit 1`: uv exits 2 on its own errors (missing interpreter, unwritable cache),
+   and Claude Code reads 2 from a PreToolUse hook as "block"; 1 is a non-blocking error, so the tool
+   runs and the deny rule and file modes still apply (both outcomes seen live on 2026-10-25).
 
 | Write path | Deny rule | Guard | File modes (Linux / Windows with ACE) |
 |---|---|---|---|
 | Edit/Write/NotebookEdit | yes | yes (resolved path) | yes / yes |
 | Shell commands naming legacy | redirections and file commands Claude Code recognises | yes (best effort) | yes / yes |
 | Subprocess opening files itself | no | no | yes / yes |
-| Owner restoring write access | no | denies `chmod`/`attrib`/`icacls` on legacy | no / yes |
+| Owner restoring write access | no | denies `chmod`/`attrib`/`icacls` on legacy and `scripts.legacy unlock` | no / yes |
 | Session started in a subdirectory or worktree | no (`/path` anchors at the session's start directory) | yes | yes / yes |
 
 With the Claude Code Bash sandbox on (WSL2, Linux, macOS; not native Windows, ADR-0003), the deny rule

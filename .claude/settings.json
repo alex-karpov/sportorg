@@ -12,7 +12,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "cd \"$CLAUDE_PROJECT_DIR\" && uv run --no-project --python 3.14 python -m scripts.hooks.guard",
+            "command": "cd \"$CLAUDE_PROJECT_DIR\" && uv run --no-project --python 3.14 python -m scripts.hooks.guard || exit 1",
             "timeout": 30
           }
         ]

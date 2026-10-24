@@ -20,6 +20,8 @@ Users-<name>-                        ->  Users-USER-
 ```
 
 Nothing else changed: counts, timings, messages and line widths are as the tools printed them, apart
-from the shorter username. Path-dependent scripts in `verification/scripts/` need the real path to run
+from the shorter username. The independent round-2 check found two occurrences outside paths, replaced
+the same day: the ACE owner in `legacy-layout/probe-fsmode-windows.md` (`USER`) and the pattern in
+`verification/scripts/extra_capture.sh` (`<name>`). Path-dependent scripts in `verification/scripts/` need the real path to run
 again. The commits up to `9597b15` keep the original paths; the maintainer accepted that instead of
 rewriting the public history (`docs/reports/stage-0.md`, question 3 of 2026-10-24).

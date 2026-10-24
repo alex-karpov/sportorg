@@ -3,12 +3,14 @@
 Input: hook JSON on stdin (``tool_name``, ``tool_input``). Output: a PreToolUse decision JSON on
 stdout (``deny`` or ``ask``), or nothing to let the tool proceed. The exit code is always 0: a guard
 that fails closed blocks every tool of the session (Stage 0 incident), so an internal error turns
-into ``ask`` for commands that mention legacy and into silence otherwise.
+into ``ask`` for commands that mention legacy and into silence otherwise. The hook command in
+``.claude/settings.json`` adds ``|| exit 1`` for failures of uv itself, which exits 2 ("block").
 
 File tools are checked on the path as written and after resolving links and junctions. Shell
 commands are checked textually, best effort: each simple command of a compound command (``;``,
 ``&&``, ``|``, command substitutions, ``bash -c``) is classified by its verb, ``cd`` into legacy is
-tracked, and redirection targets are inspected. Subprocesses that open files themselves
+tracked, and redirection targets are inspected; the project's ``scripts.legacy unlock`` is denied by
+name. Subprocesses that open files themselves
 (``python -c "open(...)"``) are invisible here; the read-only file modes of ``.legacy/`` stop them
 (ADR-0006).
 """
@@ -102,6 +104,9 @@ _FALLBACK_VERBS = re.compile(
     r"(^|[\s;&|(`])(rm|rmdir|del|mv|cp|touch|mkdir|tee|chmod|cd|remove-item|set-content|"
     r"move-item|copy-item|new-item|out-file|add-content)\b",
 )
+# The project's own unlock (``-m scripts.legacy unlock``, ``scripts/legacy.py unlock``, or an import
+# of ``unlock``); it names no legacy path, so the checks below would not see it.
+_UNLOCK = re.compile(r"scripts[./]legacy\b[^;&|\n]*\bunlock\b")
 
 LEGACY_FILE_REASON = "Legacy is read-only (AGENTS.md rule 1)."
 LEGACY_SHELL_REASON = (
@@ -422,6 +427,8 @@ def _redirect_into_legacy(segment: str, ctx: Context) -> bool:
 
 def analyze_shell(command: str, ctx: Context) -> str | None:
     """Deny reason for a whole command line, or None."""
+    if _UNLOCK.search(normalize(command).lower()):
+        return "scripts.legacy unlock removes the lock"
     if not mentions_legacy(command) and not ctx.in_legacy:
         return None
     for segment in simple_commands(command, ctx.shell):

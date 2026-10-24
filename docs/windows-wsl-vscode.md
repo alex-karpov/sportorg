@@ -16,15 +16,21 @@ Stage 0 that turned the Windows `.venv` into a broken Linux one.
 3. **Tools in Ubuntu** (open the Ubuntu terminal):
    ```
    sudo apt-get update
-   sudo apt-get install -y git curl ca-certificates bubblewrap socat
+   sudo apt-get install -y git curl ca-certificates bubblewrap socat nodejs npm
    curl -LsSf https://astral.sh/uv/install.sh | sh
    source $HOME/.local/bin/env
+   npm install -g --prefix ~/.local backlog.md
    git config --global user.name "Your Name"
    git config --global user.email "you@example.com"
    git config --global credential.helper "/mnt/c/Program\ Files/Git/mingw64/bin/git-credential-manager.exe"
    ```
    The last line lets `git push` from WSL use the GitHub login stored by Git for Windows. `bubblewrap`
-   and `socat` are what the Claude Code sandbox needs on Linux and WSL2.
+   and `socat` are what the Claude Code sandbox needs on Linux and WSL2. `nodejs` and `npm` run the
+   Backlog.md CLI (`backlog`, the task registry), installed for your user into `~/.local/bin`; the
+   Windows `backlog` that WSL sees on its PATH needs a Linux `node` and fails with
+   `node: not found`. Check with `command -v backlog` (a path in Linux, not under `/mnt/c`) and
+   `backlog --version`. Verified on 2026-10-25 in a clean `ubuntu:26.04` container: Node.js 22.22.1,
+   npm 9.2.0, Backlog.md 1.55.3, `backlog task list --plain` in a clone of this repository.
 4. **Claude Code in Ubuntu:**
    ```
    curl -fsSL https://claude.ai/install.sh | bash
@@ -40,6 +46,16 @@ Stage 0 that turned the Windows `.venv` into a broken Linux one.
    apply "Ubuntu 24.04 and later: allow bubblewrap to create user namespaces" from the
    [sandboxing docs](https://code.claude.com/docs/en/sandboxing); if the key does not exist, nothing
    is needed.
+
+   The sandbox lets commands write only under the session's directory, and uv keeps its cache in
+   `~/.cache/uv`: a sandboxed `uv run …` then fails with "Read-only file system". Allow the cache in
+   `~/.claude/settings.json`:
+   ```json
+   "sandbox": {"enabled": true, "filesystem": {"allowWrite": ["~/.cache/uv"]}}
+   ```
+   With it, `uv run python scripts/check.py --only tests` ran inside the sandbox
+   (`docs/evidence/stage-0/sandbox-uv-wsl.md`; the cache was already filled, so downloads through the
+   sandbox's network rules were not tried). Hooks run outside the sandbox and do not need this.
 
 ## Clone and check
 

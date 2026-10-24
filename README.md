@@ -69,4 +69,5 @@ Tasks live in `backlog/` (Backlog.md); decisions in `docs/adr/`; the modernizati
 
 ## Licence
 
-GPL-3.0-only, the licence of the legacy SportOrg it is derived from ([LICENSE](LICENSE); ADR-0004).
+GPL-3.0-or-later, as the legacy SportOrg it is derived from states in its About dialog
+([LICENSE](LICENSE); ADR-0004).

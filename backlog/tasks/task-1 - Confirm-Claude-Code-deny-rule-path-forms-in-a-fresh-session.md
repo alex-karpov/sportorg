@@ -4,7 +4,7 @@ title: 'Legacy as pinned, locked clones in .legacy/ (ADR-0006)'
 status: Done
 assignee: []
 created_date: '2026-10-24 12:05'
-updated_date: '2026-10-24 19:21'
+updated_date: '2026-10-24 19:47'
 labels:
   - stage-0
   - claude-code
@@ -17,7 +17,7 @@ ordinal: 1000
 ## Description
 
 <!-- SECTION:DESCRIPTION:BEGIN -->
-Maintainer decision 7 (2026-10-24): legacy is a git-ignored clone inside the repository at a pinned SHA, without write bits, portable deny rule Edit(/.legacy/**), guard on resolved paths, probed on Windows and in WSL first. Maintainer decision of 2026-10-25: two public repositories, sportorg/pysport@b548c35 (code) and alex-karpov/sportorg-templates@cd95382 (Russian templates). Done on Windows: legacy.toml + scripts/legacy.py (fetch, including pin updates; verify; lock), both clones locked (deny ACE on Windows), rules Edit(/.legacy/**) and Edit(/legacy/**), guard rewritten with tests. Open: verify in a WSL2 ext4 clone and the agent probe in WSL2 (Claude Code not installed there). Evidence: docs/evidence/stage-0/legacy-layout/.
+Maintainer decision 7 (2026-10-24): legacy is a git-ignored clone inside the repository at a pinned SHA, without write bits, portable deny rule Edit(/.legacy/**), guard on resolved paths, probed on Windows and in WSL first. Maintainer decision of 2026-10-25: two public repositories, sportorg/pysport@b548c35 (code) and alex-karpov/sportorg-templates@cd95382 (Russian templates). Done: legacy.toml + scripts/legacy.py (fetch, including pin updates; verify; lock), both clones locked (deny ACE on Windows), rules Edit(/.legacy/**) and Edit(/legacy/**), guard rewritten with tests; verify in a WSL2 ext4 clone and the agent probe in WSL2, with and without the Bash sandbox (notes). Evidence: docs/evidence/stage-0/legacy-layout/.
 <!-- SECTION:DESCRIPTION:END -->
 
 ## Acceptance Criteria

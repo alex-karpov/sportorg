@@ -3,8 +3,8 @@ name = "sportorg-ng"
 version = "0.0.1"
 description = "Timing, results and publication software for orienteering and related sports (modernization of SportOrg)"
 readme = "README.md"
-# Maintainer, 2026-10-25: the legacy grants GPLv3 without "or later"; see ADR-0004, last section.
-license = "GPL-3.0-only"
+# Maintainer, 2026-10-25: the legacy's About dialog grants "or later" (ADR-0004, last section).
+license = "GPL-3.0-or-later"
 license-files = ["LICENSE"]
 requires-python = ">=3.14"
 dependencies = []

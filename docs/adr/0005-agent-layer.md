@@ -43,8 +43,10 @@ the workspace root. `/modernize-verify` expects built code under `modernized/…
    `modernized/` are git-ignored.
 3. **Hooks run project commands only** (`scripts/hooks/`): PreToolUse guard (deny writes into legacy,
    ask for `tests/golden/**`), PostToolUse ruff + basedpyright on the edited file, Stop fast tests of
-   the touched packages. The guard always exits 0 and turns its own errors into `ask`: a guard that
-   failed closed blocked every tool in Stage 0. It runs with `uv run --no-project --python 3.14`, which
+   the touched packages. The guard's Python always exits 0 and turns its own errors into `ask`: a
+   guard that failed closed blocked every tool in Stage 0. Its hook command ends in `|| exit 1`, so a
+   failure of uv itself (exit 2, which Claude Code reads as "block") becomes a non-blocking error
+   (ADR-0006, decision 4). It runs with `uv run --no-project --python 3.14`, which
    skips syncing the project; with a healthy `.venv` uv still picks that interpreter, with a broken or
    missing one it falls back to a managed CPython 3.14 (verified in the independent check of
    2026-10-24). Its imports are stdlib, `scripts._json` and `scripts.legacy` only.

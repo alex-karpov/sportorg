@@ -51,7 +51,10 @@ Option 2. `.python-version` = 3.14; `requires-python = ">=3.14"`; CI matrix runs
 OSes with `uv sync --locked --no-build` (no third-party source builds anywhere). Tools that are not
 project dependencies run via `uvx` with the interpreter and version pinned
 (`uvx --python 3.14 pre-commit@4.7.0`): a bare `uvx pre-commit` picks the newest installed Python and,
-with 3.15 installed, fails building pyyaml (independent check, 2026-10-24).
+with 3.15 installed, has to build pyyaml from source. On Windows without a C compiler that failed
+("Microsoft Visual C++ 14.0 or greater is required", independent check, 2026-10-24); on Linux with a
+compiler it built and ran (independent round-2 check, 2026-10-25). Pinning avoids the dependency on a
+compiler.
 
 Why not 1: two weeks after release the long tail (pyyaml) still has no wheels; on Windows this means a
 compiler requirement for every contributor. Why not 3/4: 3.14 already has wheels for everything in the

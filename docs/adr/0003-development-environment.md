@@ -82,8 +82,8 @@ Facts that are not timings:
   Backlog task.
 - Three environments (WSL, native Windows clone, devcontainer) mean three setups to keep working; the
   devcontainer is verified by building the image and running the checks inside it, not from VS Code.
-- Hooks that must never fail closed (the PreToolUse guard) run with `uv run --no-project` and always
-  exit 0 (ADR-0005).
+- Hooks that must never fail closed (the PreToolUse guard) run with `uv run --no-project`; the guard
+  exits 0, and its hook command maps a failure of uv itself to the non-blocking exit 1 (ADR-0005).
 
 ## Revisit
 When Claude Code gets a Windows sandbox backend; after the Stage 2 smoke on three OSes (GUI/printing

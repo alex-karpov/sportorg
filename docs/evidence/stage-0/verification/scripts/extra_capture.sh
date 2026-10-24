@@ -16,7 +16,7 @@ git grep -nIoP '(?<![\w.:/-])\d{7,8}(?![\w.-])' -- docs/evidence evals || echo "
 echo "--- race data files committed:"
 git ls-files | grep -E '\.(sportorg|csv|xlsx?|xml|db|sqlite)$' || echo "  none"
 echo "--- tracked files containing the maintainer's absolute home path (any separator):"
-git grep -lI -iE 'Users[/\\]+ank' | wc -l
+git grep -lI -iE 'Users[/\\]+<name>' | wc -l
 
 echo; echo "######## licence check heuristics (scripts/check_licenses.py verdict())"
 uv run --no-sync python -c "from scripts.check_licenses import verdict as v; [print(f'  {l!r:28} -> {v(\"x\", l)}') for l in ['GPL-2.0-only','GPL-2.0-or-later','Limited use license','SSPL-1.0','BUSL-1.1','CC-BY-NC-4.0','EUPL-1.2']]"

@@ -70,3 +70,13 @@ wsl -d Ubuntu --cd '~' -- bash -c 'export PATH="$HOME/.local/bin:$PATH"; python3
 # the full step-13 error and the count of unsandboxed retries (0), from the saved stream:
 grep -o 'OSError: [^"]*' ~/probe-agent-wsl-sandbox/agent-stream.jsonl
 grep -c dangerouslyDisableSandbox ~/probe-agent-wsl-sandbox/agent-stream.jsonl
+
+## Exit code of a PreToolUse hook whose uv fails (Windows, Git Bash, 2026-10-25)
+uv run --no-project --python 3.99 python -c pass; echo "exit=$?"
+UV_CACHE_DIR=/nonexistent/x uv run --no-project --python 3.14 python -c pass; echo "exit=$?"
+# two scratch projects, .claude/settings.json PreToolUse matcher "Bash|PowerShell", command
+#   blocked: uv run --no-project --python 3.99 python -c pass
+#   mapped:  uv run --no-project --python 3.99 python -c pass || exit 1
+# in each project:
+claude -p 'Use the Bash tool once to run exactly: echo hook-probe-ran > out.txt . Do not retry and do not use any other tool. Then reply with the exact tool result text.' --model haiku --permission-mode acceptEdits --allowedTools Bash --output-format json
+cat out.txt

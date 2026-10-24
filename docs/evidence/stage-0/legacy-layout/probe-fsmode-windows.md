@@ -19,7 +19,7 @@ files 0o444, directories 0o555 (Windows: only the file read-only attribute appli
 | PowerShell Remove-Item -Force | 0 | .legacy/pysport/sub/deep.txt: DELETED |  |
 | PowerShell Remove-Item -Recurse -Force | 0 | .legacy/pysport/probe.txt: DELETED; .legacy/pysport/sub/deep.txt: DELETED |  |
 
-files 0o444, directories 0o555 (Windows: only the file read-only attribute applies) + inherited deny ACE for ank on .legacy: WriteData, AppendData, WriteExtendedAttributes, WriteAttributes, Delete, DeleteSubdirectoriesAndFiles
+files 0o444, directories 0o555 (Windows: only the file read-only attribute applies) + inherited deny ACE for USER on .legacy: WriteData, AppendData, WriteExtendedAttributes, WriteAttributes, Delete, DeleteSubdirectoriesAndFiles
 
 | case | exit | effect on .legacy | message |
 |---|---|---|---|

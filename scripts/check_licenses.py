@@ -1,10 +1,10 @@
 """Fail when a runtime dependency's licence is not compatible with GPL-3.0.
 
-The project licence is GPL-3.0-or-later (provisional, open question in ADR-0004); the allowlist is
-the set of licences compatible with distributing the project under it (the same set holds for
-GPL-3.0-only). Package sets come from ``uv.lock`` (parsed offline): *runtime* is everything
-reachable from the project's ``dependencies`` (environment markers ignored, i.e. the superset),
-*dev* is every other locked package. Licences come from the installed metadata
+The project licence is GPL-3.0-or-later (ADR-0004); the allowlist is the set of licences compatible
+with distributing the project under it (the same set holds for GPL-3.0-only). Package sets come from
+``uv.lock`` (parsed offline): *runtime* is everything reachable from the project's ``dependencies``
+(environment markers ignored, i.e. the superset), *dev* is every other locked package. Licences come
+from the installed metadata
 (``License-Expression``, then ``License ::`` classifiers, then the ``License`` field), are
 normalised to SPDX identifiers and evaluated as SPDX expressions (``OR`` any, ``AND`` all,
 ``WITH`` keeps the base licence verdict).

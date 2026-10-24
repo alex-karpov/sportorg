@@ -104,6 +104,8 @@ def test_reading_legacy_passes() -> None:
         "uv run python -m scripts.bench_typecheckers --legacy-path .legacy/pysport/sportorg",
         "python -I scan.py .legacy/pysport/sportorg/data",
         "ls .legacy-run/pysport && rm -rf .legacy-run/pysport",
+        "uv run python -m scripts.legacy verify",
+        "uv run python -m scripts.legacy fetch && uv run python -m scripts.legacy_clone",
     ],
 )
 def test_read_only_shell_commands_on_legacy_pass(command: str) -> None:
@@ -135,6 +137,9 @@ def test_read_only_shell_commands_on_legacy_pass(command: str) -> None:
         "rm -rf legacy/sportorg/sportorg",
         "rm -rf ../_other/pysport-legacy/.venv",
         "git -C ../_other/pysport-legacy checkout main",
+        "uv run python -m scripts.legacy unlock",
+        "python scripts/legacy.py unlock templates",
+        "uv run python -c 'from scripts.legacy import unlock; unlock(path)'",
     ],
 )
 def test_mutating_shell_commands_on_legacy_are_denied(command: str) -> None:
@@ -150,6 +155,7 @@ def test_mutating_shell_commands_on_legacy_are_denied(command: str) -> None:
         "Copy-Item README.md -Destination .legacy/pysport/README.md",
         r"attrib -R .legacy\pysport\x.txt",
         "icacls .legacy /remove:d someone",
+        r"uv run python -m scripts.legacy unlock",
     ],
 )
 def test_mutating_powershell_commands_on_legacy_are_denied(command: str) -> None:
