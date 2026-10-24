@@ -1,0 +1,4 @@
+# Run from the repository root; offline (reads .legacy/pysport at the pin through git).
+PYTHONDONTWRITEBYTECODE=1 uv run python -m scripts.archaeology.formats --out docs/evidence/stage-1/formats
+PYTHONDONTWRITEBYTECODE=1 uv run python -m scripts.archaeology.verify_locs --evidence docs/evidence/stage-1/formats --sample 10 --seed 1
+uv run python -m scripts.legacy verify
