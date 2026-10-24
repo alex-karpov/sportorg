@@ -61,4 +61,6 @@ uv run python -m scripts.legacy fetch && uv run python -m scripts.legacy verify
 uv run python scripts/probe_legacy_protection.py fsmode <scratch>/probe-fs-win          # Windows
 wsl -d Ubuntu --cd '~' -- bash -lc 'python3 ~/probe-tools/probe_legacy_protection.py fsmode ~/probe-fs-linux'
 uv run python scripts/probe_legacy_protection.py agent <scratch>/probe-agent-win --model sonnet
-# Not yet run: the agent probe in WSL2 (Claude Code is not installed there).
+# WSL2 (2026-10-25, Claude Code installed and logged in by the maintainer); script from the fresh
+# ext4 clone of stage-0 at 882bd00, run from Git Bash with MSYS_NO_PATHCONV=1:
+wsl -d Ubuntu --cd '~' -- bash -c 'export PATH="$HOME/.local/bin:$PATH"; python3 ~/sportorg-check-<stamp>/scripts/probe_legacy_protection.py agent ~/probe-agent-wsl --model sonnet'

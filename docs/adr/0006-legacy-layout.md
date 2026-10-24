@@ -1,7 +1,7 @@
 # ADR-0006: Legacy as pinned, git-ignored, read-only clones in `.legacy/`
 
 - Status: accepted — the layout and its protection `[мейнтейнер: 2026-10-24, decision 7]`, the two
-  public repositories `[мейнтейнер: 2026-10-25]`; the WSL2 checks are open (Backlog TASK-1)
+  public repositories `[мейнтейнер: 2026-10-25]`; probed on Windows and in WSL2 (Backlog TASK-1)
 - Date: 2026-10-24, sources 2026-10-25
 - Supersedes: ADR-0005 decision 4 (absolute deny rule)
 - Evidence: `docs/evidence/stage-0/legacy-layout/` (README, commands, probe outputs),
@@ -31,6 +31,8 @@ portable rule `Edit(/.legacy/**)`, guard on resolved paths; probe on Windows and
   refused — Edit by relative, absolute, `src/..`, upper-case and junction paths, Write, Bash `>>`,
   `sed -i`, `cp`, `mv`, `rm`, PowerShell `Set-Content`/`Remove-Item`. Passed: `python -c "open(…)"`
   (documented gap: subprocesses that open files themselves). Read and a control edit worked.
+- Agent probe, WSL2 (2026-10-25), same rule and steps: 12 of 13 write attempts refused with the same
+  messages; passed again only `python3 -c "open(…)"`; the two PowerShell steps do not apply on Linux.
 - File modes, no agent: WSL ext4 with `chmod a-w` — 9 of 10 blocked (the owner can `chmod u+w` back).
   Windows read-only attribute — 5 of 14 blocked (`sed -i`, `cp`, `mv`, `rm`, `git rm`, `chmod u+w`,
   `Remove-Item -Force` pass). Windows attribute + inherited deny ACE (write, append, attributes,
@@ -101,6 +103,6 @@ Result, as pinned in `legacy.toml`:
   golden master).
 
 ## Revisit
-After the agent probe in WSL2 (Claude Code is not installed there yet, TASK-1); when either pin moves
+When either pin moves
 (maintainer's decision, then `fetch`); if Claude Code changes how `/path` rules anchor or starts
 covering subprocess writes.

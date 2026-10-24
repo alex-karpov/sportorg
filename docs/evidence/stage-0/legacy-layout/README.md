@@ -97,7 +97,7 @@ pysport@b548c35ba18f, templates@cd953823beb3 locked`. At `b548c35`, pysport's ow
 
 The probe builds a throwaway project with the planned layout (`.legacy/pysport/…`, `.gitignore`
 `.legacy/`, `.claude/settings.json` deny `Edit(/.legacy/**)`) outside this repository. Raw outputs:
-`probe-fsmode-windows.md`, `probe-fsmode-wsl.md`, `probe-agent-windows.md`.
+`probe-fsmode-windows.md`, `probe-fsmode-wsl.md`, `probe-agent-windows.md`, `probe-agent-wsl.md`.
 
 ### 5.1 Read-only file modes, no agent (`fsmode`)
 
@@ -128,29 +128,33 @@ includes SYNCHRONIZE, and `ls`/`cat` on the tree failed with "Permission denied"
 directory, then removed). On Linux the owner can always `chmod u+w` back; only root-level tools
 (`chattr +i`, a read-only bind mount) close that.
 
-### 5.2 Claude Code deny rule, agent (`agent`), Windows
+### 5.2 Claude Code deny rule, agent (`agent`), Windows and WSL2
 
 Claude Code 2.1.310, model sonnet, `claude -p` started at the probe project root with
 `--permission-mode acceptEdits --allowedTools Bash,PowerShell,Edit,Write,Read`; files writable (rule
-only); cost USD 0.35.
+only). Windows 11: 2026-10-24, cost USD 0.35. WSL2 Ubuntu (ext4, Python 3.14.4): 2026-10-25, after the
+maintainer installed Claude Code there, probe script from the fresh clone of `stage-0` at `882bd00`,
+cost USD 0.15.
 
-| Attempt | Result on disk | Tool result |
-|---|---|---|
-| Edit, relative path | unchanged | "File is in a directory that is denied by your permission settings." |
-| Edit, absolute path | unchanged | same |
-| Edit, `src/../.legacy/…` | unchanged | same |
-| Edit, `.LEGACY/PYSPORT/…` (case variant) | unchanged | same |
-| Edit through a directory junction `src/link → .legacy/pysport` | unchanged | "Permission to edit … has been denied." (a refused permission request, not the deny-rule message) |
-| Edit in a subdirectory | unchanged | deny-rule message |
-| Write a new file | unchanged | deny-rule message |
-| Bash `echo >>`, `sed -i`, `cp`, `mv`, `rm` | unchanged | "Permission to use Bash with command … has been denied." |
-| Bash `python -c "open(…, 'a')"` | **written** | ok (documented gap: subprocesses that open files themselves) |
-| PowerShell `Set-Content`, `Remove-Item` | unchanged | "set-content targeting '…\.legacy\pysport\s14.txt' was blocked. For security, Claude Code may only access files in the allowed working directories for this session" (same for remove-item) |
-| Read | content returned | ok |
-| Edit `src/control.txt` (control) | changed | ok |
+| Attempt | Windows | WSL2 | Tool result |
+|---|---|---|---|
+| Edit, relative path | unchanged | unchanged | "File is in a directory that is denied by your permission settings." |
+| Edit, absolute path | unchanged | unchanged | same |
+| Edit, `src/../.legacy/…` | unchanged | unchanged | same |
+| Edit, `.LEGACY/PYSPORT/…` (case variant) | unchanged | unchanged | same (on ext4 that path does not exist, Read says so; the Edit is still refused by the rule) |
+| Edit through a link `src/link → .legacy/pysport` (junction on Windows, symlink on Linux) | unchanged | unchanged | "Permission to edit … has been denied." (a refused permission request, not the deny-rule message) |
+| Edit in a subdirectory | unchanged | unchanged | deny-rule message |
+| Write a new file | unchanged | unchanged | deny-rule message |
+| Bash `echo >>`, `sed -i`, `cp`, `mv`, `rm` | unchanged | unchanged | "Permission to use Bash with command … has been denied." |
+| Bash `python -c "open(…, 'a')"` (`python3` on Linux) | **written** | **written** | ok (documented gap: subprocesses that open files themselves) |
+| PowerShell `Set-Content`, `Remove-Item` | unchanged | n/a (no PowerShell tool) | Windows: "set-content targeting '…\.legacy\pysport\s14.txt' was blocked. For security, Claude Code may only access files in the allowed working directories for this session" (same for remove-item) |
+| Read | content returned | content returned | ok |
+| Edit `src/control.txt` (control) | changed | changed | ok |
 
-Not probed: the same agent run in WSL2 (Claude Code is not installed there:
-`command -v claude` → not found, no `~/.claude`). Documented limits that need no probe: a `/path` rule
-anchors at the session's primary working directory, so a session started in a subdirectory or a
-worktree does not get this rule for the root `.legacy/` (docs: "Where a pattern anchors"); deny rules do
-not cover subprocesses that open files themselves (docs: Read and Edit warning).
+Refused: 15 of 16 write attempts on Windows, 12 of 13 in WSL2. The one that passes in both is a
+subprocess opening the file itself; in the real `.legacy/` the file layer stops it (section 5.1:
+Python `open(…, 'a')` blocked on ext4 and under the Windows ACE). Documented limits that need no
+probe: a `/path` rule anchors at the session's primary working directory, so a session started in a
+subdirectory or a worktree does not get this rule for the root `.legacy/` (docs: "Where a pattern
+anchors"); deny rules do not cover subprocesses that open files themselves (docs: Read and Edit
+warning).

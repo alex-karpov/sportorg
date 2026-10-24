@@ -36,7 +36,7 @@ Scripts that import `scripts.*` run as modules (`python -m scripts.x`), not as f
 Only `scripts/check.py` defines what "green" means; pre-commit, CI and agent hooks call the same steps.
 
 Environment (ADR-0003): on a Windows host, agent-driven work runs in WSL2 with the repository cloned on
-ext4 (not under `/mnt/c`); a native Windows clone is a separate checkout for GUI/printing tests. Never
+ext4 (not under `/mnt/c`; setup with VS Code: `docs/windows-wsl-vscode.md`); a native Windows clone is a separate checkout for GUI/printing tests. Never
 open one checkout from both toolchains — the `.venv` breaks. `.devcontainer/` is the reproducible
 equivalent (Docker) for unattended agents and for hosts without WSL.
 

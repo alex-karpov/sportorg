@@ -1,10 +1,10 @@
 ---
 id: TASK-1
 title: 'Legacy as pinned, locked clones in .legacy/ (ADR-0006)'
-status: In Progress
+status: Done
 assignee: []
 created_date: '2026-10-24 12:05'
-updated_date: '2026-10-24 17:34'
+updated_date: '2026-10-24 18:21'
 labels:
   - stage-0
   - claude-code
@@ -24,7 +24,7 @@ Maintainer decision 7 (2026-10-24): legacy is a git-ignored clone inside the rep
 <!-- AC:BEGIN -->
 - [x] #1 No absolute path in committed .claude/settings.json; guard tests cover compound commands, PowerShell, junctions, cd into legacy and main() failure modes (tests/scripts/test_guard.py green)
 - [x] #2 uv run python -m scripts.legacy verify prints ok on Windows and in a WSL2 ext4 clone (outputs attached here)
-- [ ] #3 scripts/probe_legacy_protection.py agent run in WSL2: Edit, Write and Bash writes into .legacy refused; output added to docs/evidence/stage-0/legacy-layout/
+- [x] #3 scripts/probe_legacy_protection.py agent run in WSL2: Edit, Write and Bash writes into .legacy refused; output added to docs/evidence/stage-0/legacy-layout/
 - [x] #4 Pinned commit fetchable from the URL in legacy.toml without --source (maintainer chose option A or B; ADR-0006 updated)
 <!-- AC:END -->
 
@@ -34,4 +34,6 @@ Maintainer decision 7 (2026-10-24): legacy is a git-ignored clone inside the rep
 2026-10-25, Windows: 'uv run python -m scripts.legacy fetch' replaced pysport 30d849d with b548c35 and cloned templates from GitHub without --source (6.9 s); 'verify' -> 'ok: pysport@b548c35ba18f, templates@cd953823beb3 locked', exit 0.
 
 2026-10-25, WSL2 Ubuntu (Linux 6.18.33.2-microsoft-standard-WSL2), fresh clone of stage-0 882bd00 from GitHub on ext4, uv 0.13.5: 'uv sync --locked' ok; 'scripts.legacy fetch' without --source 7.18 s -> pysport at b548c35ba18f..., templates at cd953823beb3..., locked; 'verify' -> 'ok: pysport@b548c35ba18f, templates@cd953823beb3 locked', exit 0; modes dr-xr-xr-x .legacy/pysport, -r--r--r-- README.md; check.py 5 steps ok, 99 tests.
+
+2026-10-25, WSL2 agent probe (Claude Code 2.1.310, sonnet, rule only, files writable): 12 of 13 write attempts refused - Edit by relative, absolute, src/.., upper-case and symlink paths, Write, Bash >>, sed -i, cp, mv, rm; passed only python3 -c open(...) (documented gap, stopped by file modes in the real .legacy). Output: docs/evidence/stage-0/legacy-layout/probe-agent-wsl.md.
 <!-- SECTION:NOTES:END -->

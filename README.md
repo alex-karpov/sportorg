@@ -60,6 +60,7 @@ uvx --python 3.14 pre-commit@4.7.0 install
 Windows contributors who work with coding agents: use WSL2 and clone the repository inside the WSL
 filesystem (see `docs/adr/0003-development-environment.md`; in two single-run measurements on one machine,
 cold `uv sync` took 21.6-37 s on NTFS versus 10.5-10.7 s on ext4, and agent sandboxes exist only there).
+Step by step, with VS Code: [docs/windows-wsl-vscode.md](docs/windows-wsl-vscode.md).
 A devcontainer definition is in `.devcontainer/`.
 
 Everything a contributor or an agent needs to know is in [AGENTS.md](AGENTS.md).

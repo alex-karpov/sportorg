@@ -17,7 +17,9 @@ backlog/.user
 
 # Editors / OS
 .idea/
-.vscode/
+# VS Code: only the extension recommendations are shared (docs/windows-wsl-vscode.md)
+.vscode/*
+!.vscode/extensions.json
 .DS_Store
 Thumbs.db
 

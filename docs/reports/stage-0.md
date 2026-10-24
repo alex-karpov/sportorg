@@ -214,3 +214,8 @@ Codex CLI 0.164: читает AGENTS.md (корневой и вложенные)
 - **CI на GitHub** (прогон 40116575190): общий итог `success`. Зелёные: Linux, Windows и macOS на 3.14, Linux и Windows на 3.15, `clean machine (ubuntu container)` по README. Упала только необязательная лента macOS / 3.15: `grimp==3.17 … marked as --no-build but has no binary distribution`. Так и задумано: под 3.15 на macOS нет готового колеса, а собирать из исходников CI больше не даёт (ADR-0001, TASK-5).
 - **WSL2**, свежий клон `stage-0` с GitHub на ext4: `uv sync --locked` ok; `scripts.legacy fetch` без `--source` за 7,2 с; `verify` → `ok: pysport@b548c35ba18f, templates@cd953823beb3 locked`; `check.py` — 5 шагов ok, 99 тестов. TASK-1, критерий 2 выполнен.
 - Не доказано: агентная проба deny-правила в WSL2 (нужен Claude Code там) и macOS на живой машине. Вердикт этапа — PARTLY PROVEN до повторной проверки по `docs/reports/stage-0-verification-prompt.md` в свежей сессии.
+
+## Агентная проба в WSL2 (2026-10-25, после установки Claude Code)
+Тот же скрипт, правило `Edit(/.legacy/**)`, файлы открыты на запись. Отказано в 12 из 13 попыток записи: правка по относительному, абсолютному, `src/..`, верхнему регистру и через symlink, Write, Bash `>>`, `sed -i`, `cp`, `mv`, `rm`. Прошёл только `python3 -c "open(…)"`, как и на Windows. На настоящем `.legacy/` такую запись останавливают права файлов. Шаги PowerShell на Linux неприменимы. Вывод: `docs/evidence/stage-0/legacy-layout/probe-agent-wsl.md`, стоимость 0,15 USD. TASK-1 закрыта: все четыре критерия выполнены.
+
+Добавлена инструкция `docs/windows-wsl-vscode.md`: VS Code на Windows с репозиторием в WSL2. Для песочницы Claude Code в WSL на этой машине не хватает пакета `socat`.
