@@ -871,6 +871,10 @@
    "prefix": "sportorg.modules.backup"
   },
   {
+   "format": "SFR results board (.srb, TSV)",
+   "prefix": "sportorg.modules.backup.sfr_results_board"
+  },
+  {
    "format": "Recovery import (CSV, HTML, SI log)",
    "prefix": "sportorg.modules.recovery"
   },
@@ -1124,7 +1128,7 @@
   },
   {
    "direction": "write",
-   "format": "SportOrg JSON (.json, gzip)",
+   "format": "SFR results board (.srb, TSV)",
    "function": "dump",
    "source": "[код: pysport@b548c35 sportorg/modules/backup/sfr_results_board.py:6]"
   },

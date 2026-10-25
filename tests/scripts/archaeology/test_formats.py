@@ -221,3 +221,33 @@ def test_protocol_encoder_and_other_contexts() -> None:
 def test_vocabulary_miss_is_not_io() -> None:
     src = "def f(items):\n    return items.read()\n"
     assert f.scan_source(src, "sportorg/utils/x.py") == []
+
+
+def test_file_object_parameter_methods_are_io() -> None:
+    src = (
+        "def dump(file, *, compress=False):\n"
+        "    sep = '\\t'\n"
+        "    first_url = ''\n"
+        "    max_count = 50\n"
+        "    file.write('a' + sep + first_url + str(max_count))\n"
+        "def parse(f):\n"
+        "    return f.readlines()\n"
+        "def other(items):\n"
+        "    return items.read()\n"
+        "def local():\n"
+        "    file = make()\n"
+        "    file.write('x')\n"
+    )
+    rows = {r.function: r for r in f.scan_source(src, "sportorg/modules/backup/x.py")}
+    assert sorted(rows) == ["dump", "parse"]
+    assert rows["dump"].kinds == ("file object (parameter)",)
+    assert (rows["dump"].direction, rows["dump"].calls[0].line) == ("write", 5)
+    assert rows["dump"].calls[0].api == "file.write"
+    assert rows["parse"].direction == "read"
+    assert [(v.kind, v.text) for v in rows["dump"].values] == [("delimiter", "'\\t'")]
+
+
+def test_device_parameter_is_not_counted_twice() -> None:
+    src = "def send(serial):\n    serial.write(b'\\x01')\n"
+    rows = f.scan_source(src, "sportorg/libs/sportiduino/x.py")
+    assert [c.kind for c in rows[0].calls] == ["Sportiduino serial"]

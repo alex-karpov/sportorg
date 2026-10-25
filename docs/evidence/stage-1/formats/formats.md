@@ -35,7 +35,7 @@ Produced by `scripts/archaeology/formats.py` (command in `commands.txt`).
 | Huichang serial | decode | sportorg.libs.huichang.huichang | Huichang.crc8 | `<protocol>` [код: pysport@b548c35 sportorg/libs/huichang/huichang.py:294] | byte-constant=0xFF, offset-or-width=8, byte-constant=0x80, byte-constant=0xFF, offset-or-width=1, byte-constant=0xFF, offset-or-width=1, byte-constant=0x00 |
 | XML | write | sportorg.libs.iof.iof | BaseElement.write | `.write` [код: pysport@b548c35 sportorg/libs/iof/iof.py:56] | - |
 | XML | read | sportorg.libs.iof.parser | parse | `xml.etree.ElementTree.parse` [код: pysport@b548c35 sportorg/libs/iof/parser.py:15] | url="http://www.orienteering.org/datastandard/3.0", url="http://orgeo.ru/iof-xml-extensions/3.0" |
-| text file | read | sportorg.libs.ocad.ocad | ClassesV8.parse | `open` [код: pysport@b548c35 sportorg/libs/ocad/ocad.py:72] | encoding="windows-1251" |
+| file object (parameter), text file | read | sportorg.libs.ocad.ocad | ClassesV8.parse | `open` [код: pysport@b548c35 sportorg/libs/ocad/ocad.py:72] `file.readlines` [код: pysport@b548c35 sportorg/libs/ocad/ocad.py:77] | encoding="windows-1251" |
 | XML | read | sportorg.libs.ocad.ocad | IofXMLv3.parse | `xml.etree.ElementTree.parse` [код: pysport@b548c35 sportorg/libs/ocad/ocad.py:202] | - |
 | JSON, text file | both | sportorg.libs.settings | save_settings | `.open` [код: pysport@b548c35 sportorg/libs/settings/__init__.py:16] `json.dump` [код: pysport@b548c35 sportorg/libs/settings/__init__.py:17] | encoding="utf-8" |
 | JSON, text file | read | sportorg.libs.settings | _load_settings | `.open` [код: pysport@b548c35 sportorg/libs/settings/__init__.py:39] `json.load` [код: pysport@b548c35 sportorg/libs/settings/__init__.py:40] | encoding="utf-8" |
@@ -75,8 +75,9 @@ Produced by `scripts/archaeology/formats.py` (command in `commands.txt`).
 | text file | read | sportorg.models.constant | _read_config_items | `.open` [код: pysport@b548c35 sportorg/models/constant.py:13] | encoding="utf-8" |
 | gzip | read | sportorg.modules.backup.file | is_gzip_file | `gzip.open` [код: pysport@b548c35 sportorg/modules/backup/file.py:15] | - |
 | text file | unknown | sportorg.modules.backup.file | File._backup | `open` [код: pysport@b548c35 sportorg/modules/backup/file.py:42] `open` [код: pysport@b548c35 sportorg/modules/backup/file.py:50] | encoding="utf-8", encoding="utf-8" |
-| JSON | write | sportorg.modules.backup.json | dump | `orjson.dumps` [код: pysport@b548c35 sportorg/modules/backup/json.py:25] | - |
-| JSON | read | sportorg.modules.backup.json | get_races_from_file | `orjson.loads` [код: pysport@b548c35 sportorg/modules/backup/json.py:52] `orjson.loads` [код: pysport@b548c35 sportorg/modules/backup/json.py:54] | - |
+| JSON, file object (parameter) | write | sportorg.modules.backup.json | dump | `orjson.dumps` [код: pysport@b548c35 sportorg/modules/backup/json.py:25] `file.write` [код: pysport@b548c35 sportorg/modules/backup/json.py:27] `file.write` [код: pysport@b548c35 sportorg/modules/backup/json.py:29] | - |
+| JSON, file object (parameter) | read | sportorg.modules.backup.json | get_races_from_file | `file.read` [код: pysport@b548c35 sportorg/modules/backup/json.py:52] `orjson.loads` [код: pysport@b548c35 sportorg/modules/backup/json.py:52] `file.read` [код: pysport@b548c35 sportorg/modules/backup/json.py:54] `orjson.loads` [код: pysport@b548c35 sportorg/modules/backup/json.py:54] | - |
+| file object (parameter) | write | sportorg.modules.backup.sfr_results_board | dump | `file.write` [код: pysport@b548c35 sportorg/modules/backup/sfr_results_board.py:18] `file.write` [код: pysport@b548c35 sportorg/modules/backup/sfr_results_board.py:20] | delimiter="\t", encoding="utf-8" |
 | INI | both | sportorg.modules.configs.configs | Config.__init__ | `configparser.ConfigParser` [код: pysport@b548c35 sportorg/modules/configs/configs.py:76] | - |
 | XML, binary file | write | sportorg.modules.iof.iof_xml | export_result_list | `.write` [код: pysport@b548c35 sportorg/modules/iof/iof_xml.py:38] `open` [код: pysport@b548c35 sportorg/modules/iof/iof_xml.py:38] | encoding="UTF-8", other="wb" |
 | XML, binary file | write | sportorg.modules.iof.iof_xml | export_entry_list | `.write` [код: pysport@b548c35 sportorg/modules/iof/iof_xml.py:46] `open` [код: pysport@b548c35 sportorg/modules/iof/iof_xml.py:46] | encoding="UTF-8", other="wb" |
@@ -92,13 +93,23 @@ Produced by `scripts/archaeology/formats.py` (command in `commands.txt`).
 | printer | device | sportorg.modules.printing.printout_split | SportorgPrinter.print_line | `win32ui.CreateFont` [код: pysport@b548c35 sportorg/modules/printing/printout_split.py:47] | - |
 | printer | device | sportorg.modules.printing.printout_split | SportorgPrinter.print_bib_line | `win32ui.CreateFont` [код: pysport@b548c35 sportorg/modules/printing/printout_split.py:88] | - |
 | printer | device | sportorg.modules.printing.printout_split | SportorgPrinter.print_penalty_line | `win32ui.CreateFont` [код: pysport@b548c35 sportorg/modules/printing/printout_split.py:112] `win32ui.CreateFont` [код: pysport@b548c35 sportorg/modules/printing/printout_split.py:129] | offset-or-width=2 |
-| CSV, text file | read | sportorg.modules.recovery.recovery_orgeo_finish_csv | recovery | `open` [код: pysport@b548c35 sportorg/modules/recovery/recovery_orgeo_finish_csv.py:47] `csv.reader` [код: pysport@b548c35 sportorg/modules/recovery/recovery_orgeo_finish_csv.py:48] | encoding="cp1251", offset-or-width=9, offset-or-width=4, offset-or-width=2, offset-or-width=3, offset-or-width=9, offset-or-width=9, offset-or-width=5, offset-or-width=5, offset-or-width=7 |
-| CSV, text file | read | sportorg.modules.recovery.recovery_si_master_csv | recovery | `open` [код: pysport@b548c35 sportorg/modules/recovery/recovery_si_master_csv.py:42] `csv.reader` [код: pysport@b548c35 sportorg/modules/recovery/recovery_si_master_csv.py:43] | offset-or-width=2, encoding="cp1251", offset-or-width=45, offset-or-width=2, offset-or-width=15, offset-or-width=21, offset-or-width=44, offset-or-width=44, offset-or-width=44, offset-or-width=44 |
+| CSV, text file | read | sportorg.modules.recovery.recovery_orgeo_finish_csv | recovery | `open` [код: pysport@b548c35 sportorg/modules/recovery/recovery_orgeo_finish_csv.py:47] `csv.reader` [код: pysport@b548c35 sportorg/modules/recovery/recovery_orgeo_finish_csv.py:48] | encoding="cp1251", delimiter=";", delimiter="\|", offset-or-width=9, offset-or-width=4, offset-or-width=2, offset-or-width=3, offset-or-width=9, offset-or-width=9, offset-or-width=5, offset-or-width=5, offset-or-width=7 |
+| CSV, text file | read | sportorg.modules.recovery.recovery_si_master_csv | recovery | `open` [код: pysport@b548c35 sportorg/modules/recovery/recovery_si_master_csv.py:42] `csv.reader` [код: pysport@b548c35 sportorg/modules/recovery/recovery_si_master_csv.py:43] | delimiter=";", offset-or-width=2, encoding="cp1251", offset-or-width=45, offset-or-width=2, offset-or-width=15, offset-or-width=21, offset-or-width=44, offset-or-width=44, offset-or-width=44, offset-or-width=44 |
 | gzip, text file | read | sportorg.modules.recovery.recovery_sportorg_html | recovery | `open` [код: pysport@b548c35 sportorg/modules/recovery/recovery_sportorg_html.py:20] `gzip.GzipFile` [код: pysport@b548c35 sportorg/modules/recovery/recovery_sportorg_html.py:26] | other="r", offset-or-width=-2, offset-or-width=12, encoding="utf-8", offset-or-width=11 |
 | text file | write | sportorg.modules.recovery.recovery_sportorg_html | save_to_tmp_file | `open` [код: pysport@b548c35 sportorg/modules/recovery/recovery_sportorg_html.py:44] | extension=.json, encoding="utf-8", other="w" |
 | text file | read | sportorg.modules.recovery.recovery_sportorg_si_log | recovery | `open` [код: pysport@b548c35 sportorg/modules/recovery/recovery_sportorg_si_log.py:50] | offset-or-width=2 |
 | Impinj RFID | device | sportorg.modules.rfid_impinj.rfid_impinj | ImpinjThread.run | `pyImpinj.ImpinjR2KReader` [код: pysport@b548c35 sportorg/modules/rfid_impinj/rfid_impinj.py:53] | timeout=0.1, timeout=1 |
 | text file | write | sportorg.modules.sfr.sfrxexporter | export_sfrx | `open` [код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:32] | delimiter="", encoding="utf-8", extension=".sfrx", other="w", extension=".sfrx" |
+| file object (parameter) | write | sportorg.modules.sfr.sfrxexporter | _write_header | `f.write` [код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:83] | - |
+| file object (parameter) | write | sportorg.modules.sfr.sfrxexporter | _write_days | `f.write` [код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:101] | - |
+| file object (parameter) | write | sportorg.modules.sfr.sfrxexporter | _write_descriptions | `f.write` [код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:108] | - |
+| file object (parameter) | write | sportorg.modules.sfr.sfrxexporter | _write_clubs | `f.write` [код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:115] | - |
+| file object (parameter) | write | sportorg.modules.sfr.sfrxexporter | _write_groups | `f.write` [код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:142] | offset-or-width=5 |
+| file object (parameter) | write | sportorg.modules.sfr.sfrxexporter | _write_teams | `f.write` [код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:151] | offset-or-width=5 |
+| file object (parameter) | write | sportorg.modules.sfr.sfrxexporter | _write_courses | `f.write` [код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:180] | offset-or-width=5, offset-or-width=2 |
+| file object (parameter) | write | sportorg.modules.sfr.sfrxexporter | _write_controls | `f.write` [код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:204] | offset-or-width=5 |
+| file object (parameter) | write | sportorg.modules.sfr.sfrxexporter | _write_competitors | `f.write` [код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:265] | offset-or-width=5 |
+| file object (parameter) | write | sportorg.modules.sfr.sfrxexporter | _write_splits | `f.write` [код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:338] | offset-or-width=1, offset-or-width=1, offset-or-width=5 |
 | text file | write | sportorg.modules.sportident.backup | BackupProcess.run | `open` [код: pysport@b548c35 sportorg/modules/sportident/backup.py:20] | other="a", extension="si{}.log" |
 | SPORTident lib | device | sportorg.modules.sportident.sireader | SIReaderThread.run | `sportident.SIReaderReadout` [код: pysport@b548c35 sportorg/modules/sportident/sireader.py:52] `sportident.SIReaderSRR` [код: pysport@b548c35 sportorg/modules/sportident/sireader.py:55] `sportident.SIReaderControl` [код: pysport@b548c35 sportorg/modules/sportident/sireader.py:61] | timeout=1 |
 | SPORTident serial | decode | sportorg.modules.sportident.sireader | ResultThread._check_data | `<protocol>` [код: pysport@b548c35 sportorg/modules/sportident/sireader.py:137] | offset-or-width=12, offset-or-width=24, offset-or-width=12, offset-or-width=3600, offset-or-width=12 |
@@ -326,6 +337,8 @@ Produced by `scripts/archaeology/formats.py` (command in `commands.txt`).
 | encoding | `"utf-8"` | keyword encoding of .open | sportorg.models.constant._read_config_items | [код: pysport@b548c35 sportorg/models/constant.py:13] |
 | encoding | `"utf-8"` | literal | sportorg.modules.backup.file.File._backup | [код: pysport@b548c35 sportorg/modules/backup/file.py:37] |
 | encoding | `"utf-8"` | literal | sportorg.modules.backup.file.File._backup | [код: pysport@b548c35 sportorg/modules/backup/file.py:48] |
+| delimiter | `"\t"` | literal | sportorg.modules.backup.sfr_results_board.dump | [код: pysport@b548c35 sportorg/modules/backup/sfr_results_board.py:8] |
+| encoding | `"utf-8"` | literal | sportorg.modules.backup.sfr_results_board.dump | [код: pysport@b548c35 sportorg/modules/backup/sfr_results_board.py:18] |
 | encoding | `"UTF-8"` | keyword encoding of open | sportorg.modules.iof.iof_xml.export_result_list | [код: pysport@b548c35 sportorg/modules/iof/iof_xml.py:38] |
 | other | `"wb"` | mode of open | sportorg.modules.iof.iof_xml.export_result_list | [код: pysport@b548c35 sportorg/modules/iof/iof_xml.py:38] |
 | encoding | `"UTF-8"` | keyword encoding of open | sportorg.modules.iof.iof_xml.export_entry_list | [код: pysport@b548c35 sportorg/modules/iof/iof_xml.py:46] |
@@ -339,6 +352,8 @@ Produced by `scripts/archaeology/formats.py` (command in `commands.txt`).
 | byte-constant | `5` | literal | sportorg.modules.printing.printing.PrintProcess.run | [код: pysport@b548c35 sportorg/modules/printing/printing.py:72] |
 | offset-or-width | `2` | literal | sportorg.modules.printing.printout_split.SportorgPrinter.print_penalty_line | [код: pysport@b548c35 sportorg/modules/printing/printout_split.py:106] |
 | encoding | `"cp1251"` | literal | sportorg.modules.recovery.recovery_orgeo_finish_csv.recovery | [код: pysport@b548c35 sportorg/modules/recovery/recovery_orgeo_finish_csv.py:43] |
+| delimiter | `";"` | literal | sportorg.modules.recovery.recovery_orgeo_finish_csv.recovery | [код: pysport@b548c35 sportorg/modules/recovery/recovery_orgeo_finish_csv.py:44] |
+| delimiter | `"\|"` | literal | sportorg.modules.recovery.recovery_orgeo_finish_csv.recovery | [код: pysport@b548c35 sportorg/modules/recovery/recovery_orgeo_finish_csv.py:45] |
 | offset-or-width | `9` | constant POS_START | sportorg.modules.recovery.recovery_orgeo_finish_csv.recovery | [код: pysport@b548c35 sportorg/modules/recovery/recovery_orgeo_finish_csv.py:35] |
 | offset-or-width | `4` | constant POS_BIB | sportorg.modules.recovery.recovery_orgeo_finish_csv.recovery | [код: pysport@b548c35 sportorg/modules/recovery/recovery_orgeo_finish_csv.py:32] |
 | offset-or-width | `2` | constant POS_NAME | sportorg.modules.recovery.recovery_orgeo_finish_csv.recovery | [код: pysport@b548c35 sportorg/modules/recovery/recovery_orgeo_finish_csv.py:30] |
@@ -348,6 +363,7 @@ Produced by `scripts/archaeology/formats.py` (command in `commands.txt`).
 | offset-or-width | `5` | constant POS_CARD | sportorg.modules.recovery.recovery_orgeo_finish_csv.recovery | [код: pysport@b548c35 sportorg/modules/recovery/recovery_orgeo_finish_csv.py:33] |
 | offset-or-width | `5` | constant POS_CARD | sportorg.modules.recovery.recovery_orgeo_finish_csv.recovery | [код: pysport@b548c35 sportorg/modules/recovery/recovery_orgeo_finish_csv.py:33] |
 | offset-or-width | `7` | constant POS_RES | sportorg.modules.recovery.recovery_orgeo_finish_csv.recovery | [код: pysport@b548c35 sportorg/modules/recovery/recovery_orgeo_finish_csv.py:34] |
+| delimiter | `";"` | literal | sportorg.modules.recovery.recovery_si_master_csv.recovery | [код: pysport@b548c35 sportorg/modules/recovery/recovery_si_master_csv.py:35] |
 | offset-or-width | `2` | literal | sportorg.modules.recovery.recovery_si_master_csv.recovery | [код: pysport@b548c35 sportorg/modules/recovery/recovery_si_master_csv.py:39] |
 | encoding | `"cp1251"` | keyword encoding of open | sportorg.modules.recovery.recovery_si_master_csv.recovery | [код: pysport@b548c35 sportorg/modules/recovery/recovery_si_master_csv.py:42] |
 | offset-or-width | `45` | literal | sportorg.modules.recovery.recovery_si_master_csv.recovery | [код: pysport@b548c35 sportorg/modules/recovery/recovery_si_master_csv.py:45] |
@@ -374,6 +390,15 @@ Produced by `scripts/archaeology/formats.py` (command in `commands.txt`).
 | extension | `".sfrx"` | literal | sportorg.modules.sfr.sfrxexporter.export_sfrx | [код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:32] |
 | other | `"w"` | mode of open | sportorg.modules.sfr.sfrxexporter.export_sfrx | [код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:32] |
 | extension | `".sfrx"` | literal | sportorg.modules.sfr.sfrxexporter.export_sfrx | [код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:45] |
+| offset-or-width | `5` | literal | sportorg.modules.sfr.sfrxexporter._write_groups | [код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:120] |
+| offset-or-width | `5` | literal | sportorg.modules.sfr.sfrxexporter._write_teams | [код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:147] |
+| offset-or-width | `5` | literal | sportorg.modules.sfr.sfrxexporter._write_courses | [код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:156] |
+| offset-or-width | `2` | literal | sportorg.modules.sfr.sfrxexporter._write_courses | [код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:175] |
+| offset-or-width | `5` | literal | sportorg.modules.sfr.sfrxexporter._write_controls | [код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:192] |
+| offset-or-width | `5` | literal | sportorg.modules.sfr.sfrxexporter._write_competitors | [код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:209] |
+| offset-or-width | `1` | literal | sportorg.modules.sfr.sfrxexporter._write_splits | [код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:315] |
+| offset-or-width | `1` | literal | sportorg.modules.sfr.sfrxexporter._write_splits | [код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:316] |
+| offset-or-width | `5` | literal | sportorg.modules.sfr.sfrxexporter._write_splits | [код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:328] |
 | other | `"a"` | mode of open | sportorg.modules.sportident.backup.BackupProcess.run | [код: pysport@b548c35 sportorg/modules/sportident/backup.py:22] |
 | extension | `"si{}.log"` | literal | sportorg.modules.sportident.backup.BackupProcess.run | [код: pysport@b548c35 sportorg/modules/sportident/backup.py:21] |
 | timeout | `1` | keyword timeout of self._queue.put | sportorg.modules.sportident.sireader.SIReaderThread.run | [код: pysport@b548c35 sportorg/modules/sportident/sireader.py:85] |
@@ -414,7 +439,7 @@ Produced by `scripts/archaeology/formats.py` (command in `commands.txt`).
    "device": 1
   },
   "SFR": {
-   "write": 1
+   "write": 11
   },
   "SPORTident": {
    "decode": 1,
@@ -427,7 +452,7 @@ Produced by `scripts/archaeology/formats.py` (command in `commands.txt`).
   "backup": {
    "read": 2,
    "unknown": 1,
-   "write": 1
+   "write": 2
   },
   "lib:huichang": {
    "decode": 2,
@@ -570,6 +595,10 @@ Produced by `scripts/archaeology/formats.py` (command in `commands.txt`).
   "docx": {
    "both": 1
   },
+  "file object (parameter)": {
+   "read": 2,
+   "write": 12
+  },
   "file system": {
    "write": 1
   },
@@ -605,10 +634,10 @@ Produced by `scripts/archaeology/formats.py` (command in `commands.txt`).
  "by_value_kind": {
   "baudrate": 3,
   "byte-constant": 80,
-  "delimiter": 2,
-  "encoding": 42,
+  "delimiter": 6,
+  "encoding": 43,
   "extension": 14,
-  "offset-or-width": 98,
+  "offset-or-width": 107,
   "other": 18,
   "struct-format": 3,
   "timeout": 13,
@@ -635,9 +664,9 @@ Produced by `scripts/archaeology/formats.py` (command in `commands.txt`).
   "printer",
   "serial"
  ],
- "functions": 113,
- "io_calls": 167,
- "values": 277,
+ "functions": 124,
+ "io_calls": 184,
+ "values": 291,
  "without_reader": [
   "SPORTident serial",
   "file system"

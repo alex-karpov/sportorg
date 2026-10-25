@@ -249,3 +249,11 @@ def test_local_imports_and_foreign_filters() -> None:
     assert chains[0].formats == ("SFRx",)
     assert chains[0].filters == ()
     assert chains[1].filters == ()
+
+
+def test_format_of_names_the_sfr_results_board_apart_from_backup() -> None:
+    assert inv.format_of("sportorg.modules.backup.json") == "SportOrg JSON (.json, gzip)"
+    assert (
+        inv.format_of("sportorg.modules.backup.sfr_results_board")
+        == "SFR results board (.srb, TSV)"
+    )

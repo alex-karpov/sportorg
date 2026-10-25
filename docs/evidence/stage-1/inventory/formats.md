@@ -125,7 +125,7 @@ Format labels come from the module table in `scripts/archaeology/inventory.py` (
 | SportOrg JSON (.json, gzip) | dump | write | [код: pysport@b548c35 sportorg/modules/backup/json.py:19] |
 | SportOrg JSON (.json, gzip) | load | read | [код: pysport@b548c35 sportorg/modules/backup/json.py:34] |
 | SportOrg JSON (.json, gzip) | get_races_from_file | read | [код: pysport@b548c35 sportorg/modules/backup/json.py:50] |
-| SportOrg JSON (.json, gzip) | dump | write | [код: pysport@b548c35 sportorg/modules/backup/sfr_results_board.py:6] |
+| SFR results board (.srb, TSV) | dump | write | [код: pysport@b548c35 sportorg/modules/backup/sfr_results_board.py:6] |
 | IOF XML | export_result_list | write | [код: pysport@b548c35 sportorg/modules/iof/iof_xml.py:33] |
 | IOF XML | export_entry_list | write | [код: pysport@b548c35 sportorg/modules/iof/iof_xml.py:41] |
 | IOF XML | export_start_list | write | [код: pysport@b548c35 sportorg/modules/iof/iof_xml.py:49] |

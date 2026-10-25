@@ -74,6 +74,7 @@ FORMAT_MODULES: Final = (
     ("sportorg.modules.sfr", "SFRx"),
     ("sportorg.libs.sfr", "SFRx"),
     ("sportorg.modules.backup", "SportOrg JSON (.json, gzip)"),
+    ("sportorg.modules.backup.sfr_results_board", "SFR results board (.srb, TSV)"),
     ("sportorg.modules.recovery", "Recovery import (CSV, HTML, SI log)"),
     ("sportorg.gui.dialogs.report_dialog", "Report output (HTML, DOCX, CSV)"),
     ("sportorg.gui.dialogs.print_properties", "Report templates (HTML)"),

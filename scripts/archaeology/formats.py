@@ -125,6 +125,7 @@ NAME_TOKEN_KINDS: Final = {
     "ADDR": "url",
     "DELIMITER": "delimiter",
     "SEPARATOR": "delimiter",
+    "SEP": "delimiter",
 }
 SIZE_TOKENS: Final = frozenset(
     {"SIZE", "LEN", "LENGTH", "WIDTH", "OFFSET", "COUNT", "MAX", "MIN", "SHIFT"}
@@ -175,6 +176,17 @@ DEVICE_KINDS: Final = (
     ("sportorg/modules/rfid_impinj/", "Impinj RFID"),
 )
 PROTOCOL_API: Final = "<protocol>"
+# [допущение]: a function parameter with one of these names is a file object; its read/write
+# methods are I/O sites of kind FILE_PARAMETER (e.g. ``dump(file)`` writing the .srb board)
+FILE_VOCABULARY: Final = frozenset({"file", "f", "fp", "fh", "fd", "fobj", "stream"})
+FILE_METHODS: Final = {
+    "read": "read",
+    "readline": "read",
+    "readlines": "read",
+    "write": "write",
+    "writelines": "write",
+}
+FILE_PARAMETER: Final = "file object (parameter)"
 BIT_OPS: Final = (ast.BitAnd, ast.BitOr, ast.BitXor, ast.LShift, ast.RShift)
 BYTE_OPS: Final = (*BIT_OPS, ast.Mult, ast.Add, ast.Sub, ast.FloorDiv, ast.Mod)
 
@@ -640,6 +652,23 @@ def _device_method_site(call: ast.Call, func: ast.Attribute, path: str) -> Call 
     return Call(call.lineno, f"{receiver}.{func.attr}", kind, direction)
 
 
+def _parameter_calls(
+    nodes: Sequence[tuple[ast.AST, ast.AST]], scope: ast.FunctionDef | ast.AsyncFunctionDef
+) -> list[Call]:
+    """Read/write methods on a parameter named like a file object (FILE_VOCABULARY)."""
+    args = scope.args
+    params = {a.arg for a in (*args.posonlyargs, *args.args, *args.kwonlyargs)} & FILE_VOCABULARY
+    found: list[Call] = []
+    for node, _parent in nodes:
+        if not (isinstance(node, ast.Call) and isinstance(node.func, ast.Attribute)):
+            continue
+        receiver, method = node.func.value, node.func.attr
+        if isinstance(receiver, ast.Name) and receiver.id in params and method in FILE_METHODS:
+            api = f"{receiver.id}.{method}"
+            found.append(Call(node.lineno, api, FILE_PARAMETER, FILE_METHODS[method]))
+    return found
+
+
 def _is_host_port(call: ast.Call) -> bool:
     first = call.args[0] if call.args else None
     return isinstance(first, ast.Tuple) and len(first.elts) == HOST_PORT_LEN
@@ -821,7 +850,11 @@ class _ValueScan:
         literal = _literal(node)
         if literal is None or id(node) in self.consumed:
             return
-        ref = _Ref(literal, self.facts.segment(node), node.lineno, node.lineno, "literal")
+        name = ""  # a non-empty string assigned to a local name is typed by that name
+        if isinstance(parent, ast.Assign) and len(parent.targets) == 1 and isinstance(literal, str):
+            target = parent.targets[0]
+            name = target.id if isinstance(target, ast.Name) and literal else ""
+        ref = _Ref(literal, self.facts.segment(node), node.lineno, node.lineno, "literal", name)
         self._typed(ref, node, parent, api)
 
     def named(self, node: ast.expr, parent: ast.AST, api: str) -> None:
@@ -947,6 +980,9 @@ def _scan_scope(
 ) -> tuple[list[Call], list[Value]]:
     nodes = list(_own_nodes(scope))
     calls = _find_calls(nodes, facts)
+    if isinstance(scope, ast.FunctionDef | ast.AsyncFunctionDef):
+        known = {(c.line, c.api) for c in calls}
+        calls += [c for c in _parameter_calls(nodes, scope) if (c.line, c.api) not in known]
     kind = device_kind(path)
     if not calls and kind is not None and isinstance(scope, ast.FunctionDef | ast.AsyncFunctionDef):
         calls = _protocol_call(nodes, facts, kind)
@@ -1111,6 +1147,12 @@ DEFINITIONS: Final = {
     " indexed value with an int. encode = `.to_bytes` or a bytes literal that is not compared;"
     " decode = the rest. Named upper-case int constants referenced there are byte-constants",
     "host": "a host or URL value is reported with kind url; newline and quotechar as delimiter",
+    "file_parameter": "[допущение] a read/readline/readlines/write/writelines call on a"
+    " parameter of the enclosing function named file, f, fp, fh, fd, fobj or stream"
+    " (FILE_VOCABULARY) is an I/O site of kind `file object (parameter)` unless a device rule"
+    " already matched it; its direction comes from the method",
+    "local_names": "a non-empty string literal assigned to a local name is typed by that name"
+    ' like a constant (e.g. `sep = "\\t"` is a delimiter)',
 }
 
 
@@ -1176,9 +1218,10 @@ def readme(summary: Mapping[str, Json], unparsed: Sequence[str]) -> str:
         "- Protocol rows are heuristics: a decoder that only slices (`data[5:9]`) and no I/O or"
         " arithmetic gets no row. Receivers outside DEVICE_VOCABULARY are missed.\n"
         "- A value is attributed to the function that contains it, not to the call it feeds.\n"
-        "- Writes through file objects received as parameters (e.g. `file.write` in a dump"
-        " function), directory listing (`os.listdir`), file-choosing dialogs and `webbrowser`"
-        " are not I/O sites.\n"
+        "- File objects received as parameters count only under the names of FILE_VOCABULARY;"
+        " the format of such a row is the caller's (e.g. `.srb` for"
+        " `sfr_results_board.dump`), which the row does not name. Directory listing"
+        " (`os.listdir`), file-choosing dialogs and `webbrowser` are not I/O sites.\n"
         "- An int compared with `==`/`<` is reported as `byte-constant` unless the other side is"
         " `len(...)`; plain index comparisons are therefore included.\n"
         "- Lists of formats without a reader or writer are not judgements: they only show that"

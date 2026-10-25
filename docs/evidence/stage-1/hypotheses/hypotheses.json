@@ -112,11 +112,17 @@
  },
  "H3": {
   "claim": "GUI импортируется вне `sportorg/gui`, в том числе в генерации результатов",
-  "definition": "edges from modules of sportorg/ outside sportorg.gui (sportorg.startup excluded: the entry point may import the UI) to sportorg.gui.* or a Qt binding (PySide6, PySide2, PyQt5, PyQt6). Result generation = sportorg.models.result, sportorg.modules.printing, sportorg.libs.template, sportorg.common.template. Parts: any such edge; any in result generation.",
+  "definition": "edges from modules of sportorg/ outside sportorg.gui (sportorg.startup excluded: the entry point may import the UI) to sportorg.gui.* or a Qt binding (PySide6, PySide2, PyQt5, PyQt6). Result generation = sportorg.models.result, sportorg.modules.printing, sportorg.libs.template, sportorg.common.template. Parts: any such edge; any in result generation. Split: qtcore_only = edges that import only QtCore of a Qt binding (threads, signals, dates); ui = the other edges (sportorg.gui, QtWidgets, QtGui, QtPrintSupport, ...); a module is qtcore_only when all its edges are.",
   "numbers": {
    "edges": 29,
+   "edges_gui_package": 3,
+   "edges_qtcore_only": 18,
+   "edges_ui": 11,
    "local_edges": 0,
+   "modules_gui_package": 3,
    "modules_outside_gui": 12,
+   "modules_qtcore_only": 8,
+   "modules_ui": 4,
    "result_generation_modules": 1,
    "startup_edges_not_counted": 0
   },

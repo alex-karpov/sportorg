@@ -240,29 +240,47 @@ def h2_race(snap: Snapshot) -> Verdict:
 # ---------------------------------------------------------------- H3
 
 
+def _gui_kind(target: str, names: tuple[str, ...]) -> str:
+    """``gui_package`` for sportorg.gui, ``qtcore`` for only QtCore of a binding, else ``qt_ui``."""
+    if target.startswith("sportorg.gui"):
+        return "gui_package"
+    parts = target.split(".")
+    submodules = set(parts[1:2]) if len(parts) > 1 else set(names)
+    return "qtcore" if submodules == {"QtCore"} else "qt_ui"
+
+
 def h3_gui(snap: Snapshot) -> Verdict:
     imports = _imports(snap)
-    edges: list[tuple[str, int, bool]] = []
+    edges: list[tuple[str, int, bool, str]] = []
     startup = 0
     for path, refs in sorted(imports.items()):
         module = module_name(path)[0]
         if not path.startswith("sportorg/") or module.startswith("sportorg.gui"):
             continue
-        for target, _, line, local in refs:
+        for target, names, line, local in refs:
             if not (target.startswith("sportorg.gui") or target.split(".")[0] in QT):
                 continue
             if module == "sportorg.startup":
                 startup += 1
                 continue
-            edges.append((path, line, local))
-    modules = sorted({p for p, _, _ in edges})
+            edges.append((path, line, local, _gui_kind(target, names)))
+    modules = sorted({p for p, _, _, _ in edges})
     result_gen = [p for p in modules if module_name(p)[0].startswith(RESULT_GENERATION)]
+    ui = [e for e in edges if e[3] != "qtcore"]
+    gui_package = [e for e in edges if e[3] == "gui_package"]
+    ui_modules = {p for p, _, _, _ in ui}
     numbers: dict[str, int | str] = {
         "modules_outside_gui": len(modules),
         "edges": len(edges),
-        "local_edges": sum(local for _, _, local in edges),
+        "local_edges": sum(local for _, _, local, _ in edges),
         "result_generation_modules": len(result_gen),
         "startup_edges_not_counted": startup,
+        "modules_qtcore_only": len(modules) - len(ui_modules),
+        "edges_qtcore_only": len(edges) - len(ui),
+        "modules_ui": len(ui_modules),
+        "edges_ui": len(ui),
+        "modules_gui_package": len({p for p, _, _, _ in gui_package}),
+        "edges_gui_package": len(gui_package),
     }
     return Verdict(
         "H3",
@@ -270,10 +288,12 @@ def h3_gui(snap: Snapshot) -> Verdict:
         f"edges from modules of sportorg/ outside sportorg.gui (sportorg.startup excluded: the"
         f" entry point may import the UI) to sportorg.gui.* or a Qt binding ({', '.join(QT)})."
         f" Result generation = {', '.join(RESULT_GENERATION)}. Parts: any such edge; any in"
-        " result generation.",
+        " result generation. Split: qtcore_only = edges that import only QtCore of a Qt binding"
+        " (threads, signals, dates); ui = the other edges (sportorg.gui, QtWidgets, QtGui,"
+        " QtPrintSupport, ...); a module is qtcore_only when all its edges are.",
         numbers,
         verdict_of([bool(modules), bool(result_gen)]),
-        tuple(Loc(snap.repo, p, line) for p, line, _ in edges),
+        tuple(Loc(snap.repo, p, line) for p, line, _, _ in edges),
     )
 
 

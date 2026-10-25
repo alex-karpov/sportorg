@@ -66,6 +66,26 @@ def test_h3_flags_qt_import_outside_gui() -> None:
     assert verdict.verdict == "confirmed"
 
 
+def test_h3_separates_qtcore_from_widgets_and_gui_package() -> None:
+    py = {
+        "sportorg/modules/reader.py": "from PySide6.QtCore import QThread, Signal\n",
+        "sportorg/utils/time.py": "from PySide6 import QtCore\nfrom PySide6.QtCore import QDate\n",
+        "sportorg/modules/printing.py": (
+            "from PySide6.QtCore import QSizeF\nfrom PySide6.QtGui import QTextDocument\n"
+        ),
+        "sportorg/modules/wdb.py": "from PySide6 import QtCore, QtWidgets\n",
+        "sportorg/modules/result.py": "from sportorg.gui.global_access import GlobalAccess\n",
+    }
+    numbers = h.h3_gui(_snapshot(py)).numbers
+    assert numbers["edges"] == 7
+    assert numbers["modules_qtcore_only"] == 2
+    assert numbers["edges_qtcore_only"] == 4
+    assert numbers["modules_ui"] == 3
+    assert numbers["edges_ui"] == 3
+    assert numbers["modules_gui_package"] == 1
+    assert numbers["edges_gui_package"] == 1
+
+
 def test_h4_finds_system_bound_result_classes_and_branches() -> None:
     memory = (
         "class SystemType(Enum):\n    NONE = 0\n    MANUAL = 1\n    SPORTIDENT = 2\n"

@@ -2,8 +2,10 @@
  "definitions": {
   "device_methods": "[допущение] a call of one of DEVICE_METHODS (read, readline, write, flush, send, recv, reset_input_buffer, send_output_report, set_raw_data_handler, ...) on a name or attribute chain whose last part, case-insensitive and without leading underscores, is in DEVICE_VOCABULARY = {serial, ser, port, sock, socket, conn, device, dev, reader, station, hid}; direction comes from the method; format is the device format of the module path (e.g. Sportiduino serial, SFR HID), `socket` for sock/socket/conn, else `device stream`",
   "direction": "read, write, both (read and write, or both in one call), device (only device calls), unknown (open with a non-literal mode)",
+  "file_parameter": "[допущение] a read/readline/readlines/write/writelines call on a parameter of the enclosing function named file, f, fp, fh, fd, fobj or stream (FILE_VOCABULARY) is an I/O site of kind `file object (parameter)` unless a device rule already matched it; its direction comes from the method",
   "host": "a host or URL value is reported with kind url; newline and quotechar as delimiter",
   "io_site": "a call matching the API tables of formats.py (open family with the mode's direction; csv/json/orjson/xml/lxml/struct/zip/gzip/docx/jinja2/INI/PO; serial, socket, HTTP, SPORTident, HID, Impinj, printer; Path.read_*/write_*)",
+  "local_names": "a non-empty string literal assigned to a local name is typed by that name like a constant (e.g. `sep = \"\\t\"` is a delimiter)",
   "protocol_rows": "in the device paths of DEVICE_KINDS (libs/{sportiduino,sfr,srpid,huichang}, modules/{sportident,sfr,sportiduino,srpid,rfid_impinj,huichang}) a function without I/O calls gets a row (call `<protocol>`, direction decode/encode/both) when it has a non-empty bytes literal, `int.from_bytes`, `.to_bytes`, or byte arithmetic: `& | ^ << >>` with a hex mask or on an indexed value with an int, and, beyond the original list, `+ - * // %` on an indexed value with an int. encode = `.to_bytes` or a bytes literal that is not compared; decode = the rest. Named upper-case int constants referenced there are byte-constants",
   "row": "one per enclosing function, class body or module level with at least one I/O site; nested functions are rows of their own",
   "values": "literals in the same scope: keyword/positional parameters, strings classified by content, bytes and hex constants, ints in comparisons, subscripts and packing, and module or class constants referenced by name (tag at the assignment line, use_tag at the use)"
@@ -1394,11 +1396,19 @@
      "format": "text file",
      "line": 72,
      "tag": "[код: pysport@b548c35 sportorg/libs/ocad/ocad.py:72]"
+    },
+    {
+     "api": "file.readlines",
+     "direction": "read",
+     "format": "file object (parameter)",
+     "line": 77,
+     "tag": "[код: pysport@b548c35 sportorg/libs/ocad/ocad.py:77]"
     }
    ],
    "context": "lib:ocad",
    "direction": "read",
    "formats": [
+    "file object (parameter)",
     "text file"
    ],
    "function": "ClassesV8.parse",
@@ -3223,12 +3233,27 @@
      "format": "JSON",
      "line": 25,
      "tag": "[код: pysport@b548c35 sportorg/modules/backup/json.py:25]"
+    },
+    {
+     "api": "file.write",
+     "direction": "write",
+     "format": "file object (parameter)",
+     "line": 27,
+     "tag": "[код: pysport@b548c35 sportorg/modules/backup/json.py:27]"
+    },
+    {
+     "api": "file.write",
+     "direction": "write",
+     "format": "file object (parameter)",
+     "line": 29,
+     "tag": "[код: pysport@b548c35 sportorg/modules/backup/json.py:29]"
     }
    ],
    "context": "backup",
    "direction": "write",
    "formats": [
-    "JSON"
+    "JSON",
+    "file object (parameter)"
    ],
    "function": "dump",
    "module": "sportorg.modules.backup.json",
@@ -3239,11 +3264,25 @@
   {
    "calls": [
     {
+     "api": "file.read",
+     "direction": "read",
+     "format": "file object (parameter)",
+     "line": 52,
+     "tag": "[код: pysport@b548c35 sportorg/modules/backup/json.py:52]"
+    },
+    {
      "api": "orjson.loads",
      "direction": "read",
      "format": "JSON",
      "line": 52,
      "tag": "[код: pysport@b548c35 sportorg/modules/backup/json.py:52]"
+    },
+    {
+     "api": "file.read",
+     "direction": "read",
+     "format": "file object (parameter)",
+     "line": 54,
+     "tag": "[код: pysport@b548c35 sportorg/modules/backup/json.py:54]"
     },
     {
      "api": "orjson.loads",
@@ -3256,13 +3295,57 @@
    "context": "backup",
    "direction": "read",
    "formats": [
-    "JSON"
+    "JSON",
+    "file object (parameter)"
    ],
    "function": "get_races_from_file",
    "module": "sportorg.modules.backup.json",
    "path": "sportorg/modules/backup/json.py",
    "tag": "[код: pysport@b548c35 sportorg/modules/backup/json.py:52]",
    "values": []
+  },
+  {
+   "calls": [
+    {
+     "api": "file.write",
+     "direction": "write",
+     "format": "file object (parameter)",
+     "line": 18,
+     "tag": "[код: pysport@b548c35 sportorg/modules/backup/sfr_results_board.py:18]"
+    },
+    {
+     "api": "file.write",
+     "direction": "write",
+     "format": "file object (parameter)",
+     "line": 20,
+     "tag": "[код: pysport@b548c35 sportorg/modules/backup/sfr_results_board.py:20]"
+    }
+   ],
+   "context": "backup",
+   "direction": "write",
+   "formats": [
+    "file object (parameter)"
+   ],
+   "function": "dump",
+   "module": "sportorg.modules.backup.sfr_results_board",
+   "path": "sportorg/modules/backup/sfr_results_board.py",
+   "tag": "[код: pysport@b548c35 sportorg/modules/backup/sfr_results_board.py:18]",
+   "values": [
+    {
+     "kind": "delimiter",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/modules/backup/sfr_results_board.py:8]",
+     "text": "\"\\t\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/backup/sfr_results_board.py:8]"
+    },
+    {
+     "kind": "encoding",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/modules/backup/sfr_results_board.py:18]",
+     "text": "\"utf-8\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/backup/sfr_results_board.py:18]"
+    }
+   ]
   },
   {
    "calls": [
@@ -3759,6 +3842,20 @@
      "use_tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_orgeo_finish_csv.py:43]"
     },
     {
+     "kind": "delimiter",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_orgeo_finish_csv.py:44]",
+     "text": "\";\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_orgeo_finish_csv.py:44]"
+    },
+    {
+     "kind": "delimiter",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_orgeo_finish_csv.py:45]",
+     "text": "\"|\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_orgeo_finish_csv.py:45]"
+    },
+    {
      "kind": "offset-or-width",
      "origin": "constant POS_START",
      "tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_orgeo_finish_csv.py:35]",
@@ -3851,6 +3948,13 @@
    "path": "sportorg/modules/recovery/recovery_si_master_csv.py",
    "tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_si_master_csv.py:42]",
    "values": [
+    {
+     "kind": "delimiter",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_si_master_csv.py:35]",
+     "text": "\";\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_si_master_csv.py:35]"
+    },
     {
      "kind": "offset-or-width",
      "origin": "literal",
@@ -4150,6 +4254,285 @@
      "tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:45]",
      "text": "\".sfrx\"",
      "use_tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:45]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "f.write",
+     "direction": "write",
+     "format": "file object (parameter)",
+     "line": 83,
+     "tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:83]"
+    }
+   ],
+   "context": "SFR",
+   "direction": "write",
+   "formats": [
+    "file object (parameter)"
+   ],
+   "function": "_write_header",
+   "module": "sportorg.modules.sfr.sfrxexporter",
+   "path": "sportorg/modules/sfr/sfrxexporter.py",
+   "tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:83]",
+   "values": []
+  },
+  {
+   "calls": [
+    {
+     "api": "f.write",
+     "direction": "write",
+     "format": "file object (parameter)",
+     "line": 101,
+     "tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:101]"
+    }
+   ],
+   "context": "SFR",
+   "direction": "write",
+   "formats": [
+    "file object (parameter)"
+   ],
+   "function": "_write_days",
+   "module": "sportorg.modules.sfr.sfrxexporter",
+   "path": "sportorg/modules/sfr/sfrxexporter.py",
+   "tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:101]",
+   "values": []
+  },
+  {
+   "calls": [
+    {
+     "api": "f.write",
+     "direction": "write",
+     "format": "file object (parameter)",
+     "line": 108,
+     "tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:108]"
+    }
+   ],
+   "context": "SFR",
+   "direction": "write",
+   "formats": [
+    "file object (parameter)"
+   ],
+   "function": "_write_descriptions",
+   "module": "sportorg.modules.sfr.sfrxexporter",
+   "path": "sportorg/modules/sfr/sfrxexporter.py",
+   "tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:108]",
+   "values": []
+  },
+  {
+   "calls": [
+    {
+     "api": "f.write",
+     "direction": "write",
+     "format": "file object (parameter)",
+     "line": 115,
+     "tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:115]"
+    }
+   ],
+   "context": "SFR",
+   "direction": "write",
+   "formats": [
+    "file object (parameter)"
+   ],
+   "function": "_write_clubs",
+   "module": "sportorg.modules.sfr.sfrxexporter",
+   "path": "sportorg/modules/sfr/sfrxexporter.py",
+   "tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:115]",
+   "values": []
+  },
+  {
+   "calls": [
+    {
+     "api": "f.write",
+     "direction": "write",
+     "format": "file object (parameter)",
+     "line": 142,
+     "tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:142]"
+    }
+   ],
+   "context": "SFR",
+   "direction": "write",
+   "formats": [
+    "file object (parameter)"
+   ],
+   "function": "_write_groups",
+   "module": "sportorg.modules.sfr.sfrxexporter",
+   "path": "sportorg/modules/sfr/sfrxexporter.py",
+   "tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:142]",
+   "values": [
+    {
+     "kind": "offset-or-width",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:120]",
+     "text": "5",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:120]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "f.write",
+     "direction": "write",
+     "format": "file object (parameter)",
+     "line": 151,
+     "tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:151]"
+    }
+   ],
+   "context": "SFR",
+   "direction": "write",
+   "formats": [
+    "file object (parameter)"
+   ],
+   "function": "_write_teams",
+   "module": "sportorg.modules.sfr.sfrxexporter",
+   "path": "sportorg/modules/sfr/sfrxexporter.py",
+   "tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:151]",
+   "values": [
+    {
+     "kind": "offset-or-width",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:147]",
+     "text": "5",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:147]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "f.write",
+     "direction": "write",
+     "format": "file object (parameter)",
+     "line": 180,
+     "tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:180]"
+    }
+   ],
+   "context": "SFR",
+   "direction": "write",
+   "formats": [
+    "file object (parameter)"
+   ],
+   "function": "_write_courses",
+   "module": "sportorg.modules.sfr.sfrxexporter",
+   "path": "sportorg/modules/sfr/sfrxexporter.py",
+   "tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:180]",
+   "values": [
+    {
+     "kind": "offset-or-width",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:156]",
+     "text": "5",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:156]"
+    },
+    {
+     "kind": "offset-or-width",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:175]",
+     "text": "2",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:175]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "f.write",
+     "direction": "write",
+     "format": "file object (parameter)",
+     "line": 204,
+     "tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:204]"
+    }
+   ],
+   "context": "SFR",
+   "direction": "write",
+   "formats": [
+    "file object (parameter)"
+   ],
+   "function": "_write_controls",
+   "module": "sportorg.modules.sfr.sfrxexporter",
+   "path": "sportorg/modules/sfr/sfrxexporter.py",
+   "tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:204]",
+   "values": [
+    {
+     "kind": "offset-or-width",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:192]",
+     "text": "5",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:192]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "f.write",
+     "direction": "write",
+     "format": "file object (parameter)",
+     "line": 265,
+     "tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:265]"
+    }
+   ],
+   "context": "SFR",
+   "direction": "write",
+   "formats": [
+    "file object (parameter)"
+   ],
+   "function": "_write_competitors",
+   "module": "sportorg.modules.sfr.sfrxexporter",
+   "path": "sportorg/modules/sfr/sfrxexporter.py",
+   "tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:265]",
+   "values": [
+    {
+     "kind": "offset-or-width",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:209]",
+     "text": "5",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:209]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "f.write",
+     "direction": "write",
+     "format": "file object (parameter)",
+     "line": 338,
+     "tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:338]"
+    }
+   ],
+   "context": "SFR",
+   "direction": "write",
+   "formats": [
+    "file object (parameter)"
+   ],
+   "function": "_write_splits",
+   "module": "sportorg.modules.sfr.sfrxexporter",
+   "path": "sportorg/modules/sfr/sfrxexporter.py",
+   "tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:338]",
+   "values": [
+    {
+     "kind": "offset-or-width",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:315]",
+     "text": "1",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:315]"
+    },
+    {
+     "kind": "offset-or-width",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:316]",
+     "text": "1",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:316]"
+    },
+    {
+     "kind": "offset-or-width",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:328]",
+     "text": "5",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:328]"
     }
    ]
   },
@@ -4818,7 +5201,7 @@
     "device": 1
    },
    "SFR": {
-    "write": 1
+    "write": 11
    },
    "SPORTident": {
     "decode": 1,
@@ -4831,7 +5214,7 @@
    "backup": {
     "read": 2,
     "unknown": 1,
-    "write": 1
+    "write": 2
    },
    "lib:huichang": {
     "decode": 2,
@@ -4974,6 +5357,10 @@
    "docx": {
     "both": 1
    },
+   "file object (parameter)": {
+    "read": 2,
+    "write": 12
+   },
    "file system": {
     "write": 1
    },
@@ -5009,10 +5396,10 @@
   "by_value_kind": {
    "baudrate": 3,
    "byte-constant": 80,
-   "delimiter": 2,
-   "encoding": 42,
+   "delimiter": 6,
+   "encoding": 43,
    "extension": 14,
-   "offset-or-width": 98,
+   "offset-or-width": 107,
    "other": 18,
    "struct-format": 3,
    "timeout": 13,
@@ -5039,9 +5426,9 @@
    "printer",
    "serial"
   ],
-  "functions": 113,
-  "io_calls": 167,
-  "values": 277,
+  "functions": 124,
+  "io_calls": 184,
+  "values": 291,
   "without_reader": [
    "SPORTident serial",
    "file system"
