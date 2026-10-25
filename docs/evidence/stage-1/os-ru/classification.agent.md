@@ -75,10 +75,10 @@ Findings for the report:
 
 1. **No OS-specific code in the core.** OS01–OS05 have no hit in ranks 1–2. Windows-only behaviour lives in the device libraries (SFR via pywinusb, Impinj via pyImpinj on Python 3.8), the printing adapter (with a fallback for HTML templates, see finding 6), one GUI call (`os.startfile`) and the packaging.
 2. **Features unavailable outside Windows:** the SFR reader (O5, O18), the Impinj RFID reader (O19: by the install practice, not by code; and only on Python 3.8), and opening a saved .docx report (O11).
-3. **O11 is a discrepancy** (rule 9). On Linux/macOS saving a .docx report ends with an `AttributeError`. Proposed class: legacy bug. Raised to the maintainer.
+3. **O11 is a discrepancy** (rule 9). On Linux/macOS saving a .docx report ends with an `AttributeError`. Class: legacy bug (report Р1) `[мейнтейнер: 2026-10-25]`.
 4. **O6 does not fit the five categories:** Windows and Linux are supported, macOS needs an explicit port.
 5. **Russian specifics in the core are one block:** the rank scale `Qualification` with its tables and rank assignment (76 hits, national rule), plus the defaults `ru_RU` and `windows-1251` (6 hits). The one service-name hit (Telegram) is a false positive. Russian services outside the core (`orgeo.ru`, `mail.ru`, `yandex.ru`, Telegram dialogs) are listed in `hits.md` and are not classified here; the plan asks for the core only.
-6. **O8 is a probable discrepancy** (rule 9, found by the independent check on 2026-10-25 and confirmed by reading the code). The split-printing dialog offers "Internal printing" on every OS. Outside Windows that choice is passed to jinja2 as a template name, so split printing fails, by the code. Legacy is not run, so this is not confirmed by a run. Proposed class: legacy bug. Raised to the maintainer.
+6. **O8 is a probable discrepancy** (rule 9, found by the independent check on 2026-10-25 and confirmed by reading the code). The split-printing dialog offers "Internal printing" on every OS. Outside Windows that choice is passed to jinja2 as a template name, so split printing fails, by the code. Legacy is not run, so this is not confirmed by a run. Class: legacy bug `[мейнтейнер: 2026-10-25]`.
 
 Limits:
 

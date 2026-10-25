@@ -13,7 +13,7 @@ Sources of the facts:
   download the files again and compare.
 
 Person names are limited to the copyright holders named in licence notices, because attribution is
-the question. Commit authors are not listed (Stage 1 rule 4).
+the question; the maintainer decided to keep them `[мейнтейнер: 2026-10-25]`. Commit authors are not listed (Stage 1 rule 4).
 
 ## `sportident` 1.2.8 (runtime dependency of legacy)
 
