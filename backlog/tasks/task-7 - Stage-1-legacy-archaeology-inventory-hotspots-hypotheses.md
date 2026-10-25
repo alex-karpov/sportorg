@@ -4,7 +4,7 @@ title: 'Stage 1: legacy archaeology - inventory, hotspots, hypotheses'
 status: In Progress
 assignee: []
 created_date: 2026-10-24 12:05
-updated_date: '2026-10-25T07:52:00Z'
+updated_date: '2026-10-25T08:39:00Z'
 labels:
   - stage-1
 milestone: m-1
@@ -63,4 +63,6 @@ Per docs/brief.md, Stage 1. Read-only analysis of the pinned legacy clones (lega
 2026-10-25 [мейнтейнер: 2026-10-25] decisions on В1-В6 after the review session (scratchpad report stage-1-review-v1-v6.md, checked by the main session; its claim that codecs give no violations at any rank is wrong for V3: sportiduino/sfrreader/srpid/telegram import serial/pywinusb/requests): В1 H2 confirmed for sportorg/ (scope refined after the result, both numbers kept, brief clarified); В2 Р1 = legacy bug; В3 layer model (а″): libs adapters and I/O codecs -> rank 3, wdb_online_sender_dialog -> ui, pure parsers (iof, wo, wdb, template) stay rank 0, V2 dropped; В4 Р2 reclassified as package-metadata error (GPLv3+), evidence file with primary sources, ADR-0004 single-package exception for sportident, attribution question (Steinlin/Harston) to TASK-10; В5 extend defect classifier (sportorg/app/* -> sportorg/*, memory.py by changed functions) and check on a new 50-commit sample with another seed; В6 Backlog task for check_licenses (versions per name, dependency extras); WdbOnlineSenderDialog status noted in evidence.
 
 2026-10-25 Maintainer decisions on report questions 1-6 implemented. b49f9f5: libs split by role (V1 3+1, V3 3, V2 dropped), H2 confirmed on sportorg/ (78 over all files kept), defect classifier maps sportorg/app/* and classifies memory.py by changed functions (other 50 -> 44). Sample check 2 (seed 20261026, agent judgement): agreement 88 %, precision 92 %, recall ~51 % (CP 32-79 %), pooled ~59 % (41-79 %), class 9/23. Licences from primary sources (dependencies/licence-sources.agent.md), ADR-0004 single-package exception for sportident, attribution question in TASK-10, check_licenses fixes in TASK-11. Wording: sample checks and classification were done by the agent (*.agent.md), no human review. check.py green (266 tests), evidence reruns byte-identical, verify_locs 2867 tags / 0 problems, canaries defects 175/167 and H1 2911/219/partly re-run. Status stays In Progress until the fresh-session verification.
+
+2026-10-25: first independent verification (fresh agent session on 14277d5): items 1, 2, 3, 5 PROVEN; 4 and 6 PARTLY; criterion 4 PARTLY (.srb writer missing). Fixed: formats.py sees file-object parameters (.srb, SFRx export), H3 split QtCore vs UI, sample check 2 relabel #47 and intervals with precision uncertainty, O8 -> discrepancy Р8, O19 basis, fixture names removed from the report. Open for the maintainer: class of Р8, rewriting history for the names in 278826c, copyright-holder names in licence-sources.agent.md. A second fresh-session verification is needed before Done.
 <!-- SECTION:NOTES:END -->

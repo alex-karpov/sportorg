@@ -49,7 +49,7 @@ The agent read the subject, the files and, where needed, the diff. Texts are not
 | 24 | [история: pysport@868d5e3] | no | calc (keyword) | no | — | new feature (rogaining scores) |
 | 25 | [история: pysport@592e51c] | yes | time (keyword) | yes | start-draw | start interval added wrongly in the start-time manager |
 | 26 | [история: pysport@e4d5603] | yes | other (other) | yes | calc | default split code `'0'` → `''` |
-| 27 | [история: pysport@73d329f] | no | calc (memory-functions) | no | — | refactoring |
+| 27 | [история: pysport@73d329f] | no | calc (memory-functions) | no | — | the split matching in `get_course_splits` is replaced by a filter on `is_correct`; a behaviour change, but no fault named (corrected 2026-10-25 after the independent check: was "refactoring") |
 | 28 | [история: pysport@7a35a21] | no | import-export (path) | no | — | new feature |
 | 29 | [история: pysport@ffa73f9] | no | platform-build (keyword) | no | — | installer build path setting |
 | 30 | [история: pysport@f0d2dff] | no | calc (keyword) | **yes** | calc | relay ranking used finished laps instead of correct laps; no fix word |
@@ -69,7 +69,7 @@ The agent read the subject, the files and, where needed, the diff. Texts are not
 | 44 | [история: pysport@c48c611] | no | ui (keyword) | no | — | dialog placement |
 | 45 | [история: pysport@5a49ea9] | yes | other (other) | yes | other | `find()` helper passed a control keyword on as a filter |
 | 46 | [история: pysport@1c56296] | no | import-export (keyword) | no | — | new reader |
-| 47 | [история: pysport@f5b2b92] | yes | other (other) | **no** | — | "Fix" subject, but the change only moves a method and drops a docstring |
+| 47 | [история: pysport@f5b2b92] | yes | other (other) | yes | ui | "Fix" subject; database set-up and window building move from `__init__` to `mainloop` of the 2017 prototype `so_widget/app.py`, so the behaviour changes (relabelled 2026-10-25 after the independent check: was "no, only moves a method"; the class is borderline) |
 | 48 | [история: pysport@a4212b5] | yes | import-export (keyword) | yes | import-export | import |
 | 49 | [история: pysport@35a6d98] | yes | other (other) | yes | persistence | opening and creating a file |
 | 50 | [история: pysport@7d6a1bb] | yes | other (other) | yes | persistence | opening and creating a file |
@@ -79,33 +79,37 @@ The agent read the subject, the files and, where needed, the diff. Texts are not
 
 | | agent: fix | agent: non-fix |
 |---|---|---|
-| predicted fix (25) | 23 | 2 (#9, #47) |
+| predicted fix (25) | 24 | 1 (#9) |
 | predicted non-fix (25) | 4 (#23, #30, #35, #39) | 21 |
 
-- Agreement: 44 / 50 = **88 %**.
-- **Precision of "is fix":** 23 / 25 = **92 %**.
+- Agreement: 45 / 50 = **90 %**.
+- **Precision of "is fix":** 24 / 25 = **96 %** (exact 95 % Clopper–Pearson interval 79.7–99.9 %).
 - **Recall, estimated for the population** (strata 176 predicted fix and 966 predicted non-fix):
-  - estimated true fixes found: 0.92 × 176 ≈ 162;
+  - estimated true fixes found: 0.96 × 176 ≈ 169;
   - estimated fixes missed: 4/25 × 966 ≈ 155;
-  - recall ≈ **51 %**;
-  - the exact 95 % Clopper–Pearson interval of the miss rate 4/25 is 4.5–36.1 %, so recall lies between 32 % and 79 %.
-- **Both samples pooled** (100 commits, 3 of them in both):
-  - precision 47/50 = 94 %;
-  - miss rate 6/50 = 12 % (interval 4.5–24.3 %);
-  - recall ≈ 59 % (41–79 %).
+  - recall ≈ **52 %**.
+- **Interval of the recall.** Both rates are uncertain, so the interval takes both:
+  - each rate gets an exact 97.5 % Clopper–Pearson interval: precision 77.1–99.95 %, miss rate 3.7–38.9 %;
+  - the recall bounds come from the worst and best corners, so together they cover at least 95 % (Bonferroni);
+  - recall lies between **27 % and 83 %**;
+  - for comparison, the interval of the miss rate alone (as written before 2026-10-25) gives 33–79 %.
+- **Both samples pooled.** 97 distinct commits: the three commits of both samples (#9, #19, #41, all in the predicted-fix stratum) are counted once:
+  - precision 46/47 = 98 % (97.5 % interval 87.2–99.97 %);
+  - miss rate 6/50 = 12 % (97.5 % interval 3.9–26.2 %);
+  - recall ≈ **60 %**, between **38 % and 82 %** by the same method;
+  - the fix rule did not change between the samples, so pooling is fair for fix / non-fix. It is not fair for classes (below).
 - **What the rule misses:** the same pattern as in sample 1. The subject describes the fault ("error", a wrong value) or the fix without a fix word.
 
-**Class agreement** among the true fixes predicted as fixes: **9 / 23 = 39 %**.
-- The 14 disagreements:
-  - `other` while the change has a clear class (#3, #17, #19, #22, #26, #49, #50): templates under the old top-level `templates/`, `setup.py`, top-level 2017 files and `memory.py` methods without a keyword;
+**Class agreement** among the true fixes predicted as fixes: **9 / 24 = 38 %**. This is the only independent estimate of the class rule.
+- The 15 disagreements:
+  - `other` while the change has a clear class (#3, #17, #19, #22, #26, #47, #49, #50): templates under the old top-level `templates/`, `setup.py`, top-level 2017 files and `memory.py` methods without a keyword;
   - path to `ui` for the table-import dialog (#4, #5);
   - the `.po` file deciding `i18n` (#13);
   - keyword errors: "report" from "reporting bugs" (#20), "time" in a start-draw fix (#25), "read" in a file-format fix (#40);
   - `memory-functions` giving `device` for a GUI guard (#31).
-- **For comparison, on sample 1** the new classifier agrees with the agent's labels in 19/24 cases (79 %; before the change 18/24, 75 %). That sample was seen during the change.
-- **Pooled class agreement over both samples:** 28/47 = **60 %**.
+- **Sample 1 is not an independent check of classes.** The new classifier agrees with its labels in 19/24 cases (79 %; before the change 18/24, 75 %). The agent saw that sample while changing the classifier, so the number is not pooled with this one. (Before 2026-10-25 this file gave a pooled 28/47 = 60 %; the independent check pointed out that it mixes the tuning sample in.)
 - **Consequence:** the module × class table is a rough guide only. The class of a single commit is unreliable, especially before 2018 and for templates.
 
 **Limits:**
-- one agent labelled, no human review;
-- borderline class judgements in #4, #5, #25 and #31.
+- one agent labelled, no human review. The independent check (a fresh agent session on 2026-10-25) relabelled 10 rows (2, 7, …, 47) and disagreed on #47 only; that row is relabelled above;
+- borderline class judgements in #4, #5, #25, #31 and #47.

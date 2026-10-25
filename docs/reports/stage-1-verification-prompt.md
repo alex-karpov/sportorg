@@ -24,7 +24,7 @@ uv sync
 uv run python -m scripts.legacy fetch
 uv run python -m scripts.legacy verify          # ok: pysport@b548c35ba18f, templates@cd953823beb3 locked
 uv run python scripts/check.py                  # ok format / lint / types / imports / tests
-git log --oneline main..stage-1                 # коммиты этапа, последний — отчёт
+git log --oneline main..stage-1                 # коммиты этапа, последние — исправления по первой независимой проверке
 ```
 
 ## 2. Все числа воспроизводятся
@@ -50,7 +50,7 @@ uv run python -m scripts.legacy verify
 |---|---|---|
 | H1: 2910 строк, 218 коммитов, ранг 1 | `hypotheses/hypotheses.json` | `['H1']['numbers']` |
 | H2: 78 / 62 / 16 / 77, вердикт «подтверждена» по `sportorg/` | `hypotheses/hypotheses.json` | `['H2']['numbers']`, `['H2']['verdict']` |
-| H3: 12 модулей, 29 импортов | `hypotheses/hypotheses.json` | `['H3']['numbers']` |
+| H3: 12 модулей, 29 импортов; только `QtCore` 8 / 18; интерфейс 4 / 11; пакет `sportorg.gui` 3 / 3 | `hypotheses/hypotheses.json` | `['H3']['numbers']` |
 | H4: 7 / 7 / 7 / 3 | `hypotheses/hypotheses.json` | `['H4']['numbers']` |
 | H5: домен, 10 членов, 2 определения | `hypotheses/hypotheses.json` | `['H5']['numbers']` |
 | H6: маркеры, версии в lock, 60 файлов PySide2 | `hypotheses/hypotheses.json` | `['H6']['numbers']` |
@@ -63,40 +63,40 @@ uv run python -m scripts.legacy verify
 | Пакеты, лицензии, OSV 227, перекрёстные проверки | `dependencies/summary.json` | весь объект; `['crosscheck']` |
 | 1142 / 176 / 168 | `defects/counts.json` | `['counts']` |
 | Классы: ui 37, other 44, device 16, calc 15, import-export 15, …; правило: путь 62, ключевое слово 58, функции `memory.py` 4, остаток 44 | `defects/counts.json` | `['counts']['class_totals_product']`, `['counts']['class_decided_by_rule_product']` |
-| 113 функций, 167 вызовов, 277 значений | `formats/formats.json` | `['summary']` |
+| 124 функции, 184 вызова, 291 значение; строка `sportorg.modules.backup.sfr_results_board.dump` с `delimiter="\t"` | `formats/formats.json` | `['summary']`, `['rows']` |
 | 923 находки, по правилам | `os-ru/summary.json` | `['counts']` |
 | Полнота против `git grep` | `os-ru/recall.json` | весь объект |
-| ADR-0007: функции и ρ, рёбра, vulture, история, `sys.platform` | `tools/bench.json` | `['N1']` … `['N8']` |
+| ADR-0007: функции и ρ, рёбра, vulture, история, `sys.platform` | `tools/bench.json` | `['N1']`, `['N2']`, `['N3']`, `['N6']`, `['N8']`. N4 и N5 (OSV) — в `dependencies/crosscheck.json`; у N7 (issues через `gh api`) замера нет, только проверка лимита в ADR-0007 |
 
 ## 3. Теги `file:line`
 ```
 uv run python -m scripts.archaeology.verify_locs --evidence docs/evidence/stage-1 --sample 15 --seed <своё число>
 ```
-Ожидается `tags: 2867; problems: 0`. Возьми своё значение seed и сверь 15 напечатанных строк с тем, что утверждает соответствующая строка evidence: тот ли это класс, импорт, вызов, значение.
+Ожидается `tags: 2901; problems: 0`. Возьми своё значение seed и сверь 15 напечатанных строк с тем, что утверждает соответствующая строка evidence: тот ли это класс, импорт, вызов, значение.
 
 ## 4. Выборочные проверки и классификация агента: перепроверь часть независимо
-Файлы `*.agent.md` — суждения агента основной сессии, человек их не проверял. Твоя проверка — первая независимая.
+Файлы `*.agent.md` — суждения агента основной сессии, человек их не проверял. Первая независимая проверка агентом прошла 2026-10-25 (раздел «Независимая проверка» отчёта); её поправки помечены в файлах датой. Проверь заново, не опираясь на неё.
 - **`defects/sample-check-2.agent.md`** (классификатор после решения В5).
   - Выбери 10 строк, например через одну.
   - Прочитай `git -C .legacy/pysport show <sha>` и поставь свою метку «исправление/нет» и класс по критериям из начала файла.
   - Посчитай совпадение с метками файла.
   - Проверь арифметику раздела «Result»:
-    - точность 23/25;
-    - оценка полноты ≈ 51 % по долям 176/966 и интервал Клоппера — Пирсона для 4/25;
-    - объединение с первой выборкой ≈ 59 %;
-    - совпадение классов 9/23 и 28/47.
+    - точность 24/25;
+    - оценка полноты ≈ 52 % по долям 176/966 и интервал 27–83 % из двух интервалов Клоппера — Пирсона по 97,5 % (24/25 и 4/25);
+    - объединение с первой выборкой без повторов: 46/47 и 6/50, ≈ 60 % (38–82 %);
+    - совпадение классов 9/24.
   - Проверь, что столбцы «predicted» совпадают с текущим `defects/commits.json`.
-- **`defects/sample-check-1.agent.md`** — первая выборка, против прежнего классификатора. Её столбцы «predicted» устарели, так и должно быть. Проверь только арифметику: 24/25 и ≈ 69 %.
+- **`defects/sample-check-1.agent.md`** — первая выборка, против прежнего классификатора. Её столбцы «predicted» устарели, так и должно быть. Проверь только арифметику: 24/25, ≈ 69 % и интервал 33–96 % с учётом точности.
 - **`structure/dead-code-sample-check.agent.md`.**
   - Выбери 10 строк.
   - Проверь метки через `git -C .legacy/pysport grep -n -w <имя>` и `git -C .legacy/templates grep -n -w <имя>`, а для FP-convention — через вызовы `getattr` в `sportorg/gui/dialogs/dialog.py`.
   - Проверь раздел о `WdbOnlineSenderDialog`: `git -C .legacy/pysport grep -n -w WdbOnlineSenderDialog b548c35` и `git -C .legacy/pysport log --oneline -S"WdbOnlineSenderDialog" b548c35`.
 - **`os-ru/classification.agent.md`.** Это классификация всех находок, а не выборка.
   - Проверь покрытие: число находок по ОС (OS01–OS05) плюс находки с `core: true` в `os-ru/hits.json` должно равняться 686, и каждый тег должен стоять ровно в одной группе.
-  - Проверь по коду категории групп O5, O8, O11 и O19.
+  - Проверь по коду категории групп O5, O8, O11 и O19 и находку 6 (O8, расхождение Р8).
 - **`dependencies/licence-sources.agent.md`.**
   - Строки с пометкой «re-verified» сверь с кэшем: `pypi/sportident==1.2.8.json` (`info.license`, классификаторы, `urls[].digests.sha256`), `crates/unicode-ident==1.0.24.json`, а также с `git -C .legacy/pysport show b548c35:Cargo.lock`.
-  - Строки «review session» без сети не проверить, их нужно перечислить как непроверенные.
+  - Строки «review session» без сети не проверить, их нужно перечислить как непроверенные. Если загрузки сессии разбора ещё лежат в `/tmp/claude-1000/si` и `/tmp/claude-1000/u`, сверь их хеши с файлом и проверь по ним, что сможешь.
 - **Воспроизводимость выборок.** Они воспроизводятся командами, записанными в начале каждого файла выборочной проверки (`scripts.archaeology.sample`). Запусти их и сравни, что список совпадает.
 
 ## 5. Канарейки: скрипты реагируют на изменение данных
@@ -146,9 +146,11 @@ uv run python -m scripts.legacy verify
 ```
 grep -rnE '[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[a-z]{2,}' docs/evidence/stage-1 docs/reports/stage-1.md | grep -v 'pysport@\|templates@'
 grep -rnoE '\b[А-ЯЁ][а-яё]{2,}\b' docs/evidence/stage-1 | sort | uniq -c | sort -rn | head -30
+grep -rnoE '[А-ЯЁ][а-яё]+ [А-ЯЁ][а-яё]+|«[А-ЯЁ][а-яё]+»' docs/reports docs/*.md docs/evidence/stage-1
 ```
 - Первая команда должна быть пустой.
 - Во второй не должно быть имён людей.
+- Третья ищет пары слов с заглавной буквы и одиночные слова в кавычках в документах для мейнтейнера. Названия разделов в кавычках допустимы, имён людей быть не должно.
 - Проверь, что в `defects/` нет тем коммитов и заголовков issues и PR, а в evidence нигде нет авторов коммитов.
 
 ## 7. Итог

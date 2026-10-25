@@ -87,7 +87,7 @@ copied here (Stage 1 rule 4); the "why" column paraphrases them.
   - estimated true fixes among the predicted fixes: 0.96 × 176 ≈ 169;
   - estimated fixes the rule misses: 2/25 × 966 ≈ 77;
   - recall ≈ 169 / (169 + 77) ≈ **69 %**.
-  - With 2 misses in 25, the exact 95 % Clopper–Pearson interval of the miss rate is 1.0–26.0 %. Recall therefore lies between 40 % and 95 %.
+  - With 2 misses in 25, the exact 95 % Clopper–Pearson interval of the miss rate is 1.0–26.0 %. Recall therefore lies between 40 % and 95 %. (This interval takes the miss rate only. With the uncertainty of precision too, as in sample check 2, recall lies between 33 % and 96 %.)
 - What the rule misses: subjects that describe the faulty behaviour or the guard without a fix word (#16, #43).
 
 **Class agreement** among the 24 true fixes predicted as fixes: 18 / 24 = **75 %**.
