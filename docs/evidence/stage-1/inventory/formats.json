@@ -1,0 +1,1316 @@
+{
+ "chains": [
+  {
+   "action": "OpenAction",
+   "calls": [],
+   "class": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:113]",
+   "filters": [
+    {
+     "extensions": [
+      ".json"
+     ],
+     "label": "SportOrg file (*.json)",
+     "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:116]"
+    }
+   ],
+   "formats": [],
+   "item": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:83]",
+   "menu_path": [
+    "File",
+    "Open"
+   ],
+   "modules": []
+  },
+  {
+   "action": "ImportSportOrgAction",
+   "calls": [
+    "get_races_from_file",
+    "is_gzip_file"
+   ],
+   "class": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:926]",
+   "filters": [
+    {
+     "extensions": [
+      ".json"
+     ],
+     "label": "SportOrg (*.json)",
+     "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:929]"
+    }
+   ],
+   "formats": [
+    "SportOrg JSON (.json, gzip)"
+   ],
+   "item": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:116]",
+   "menu_path": [
+    "File",
+    "Import",
+    "Import from SportOrg file"
+   ],
+   "modules": [
+    "sportorg.modules.backup.file",
+    "sportorg.modules.backup.json"
+   ]
+  },
+  {
+   "action": "CSVWinorientImportAction",
+   "calls": [
+    "winorient.import_csv"
+   ],
+   "class": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:167]",
+   "filters": [
+    {
+     "extensions": [
+      ".csv"
+     ],
+     "label": "CSV Winorient (*.csv)",
+     "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:170]"
+    }
+   ],
+   "formats": [
+    "WinOrient (CSV, WDB)"
+   ],
+   "item": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:120]",
+   "menu_path": [
+    "File",
+    "Import",
+    "CSV Winorient"
+   ],
+   "modules": [
+    "sportorg.modules.winorient"
+   ]
+  },
+  {
+   "action": "WDBWinorientImportAction",
+   "calls": [
+    "winorient.import_wo_wdb"
+   ],
+   "class": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:203]",
+   "filters": [
+    {
+     "extensions": [
+      ".wdb"
+     ],
+     "label": "WDB Winorient (*.wdb)",
+     "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:206]"
+    }
+   ],
+   "formats": [
+    "WinOrient (CSV, WDB)"
+   ],
+   "item": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:126]",
+   "menu_path": [
+    "File",
+    "Import",
+    "WDB Winorient"
+   ],
+   "modules": [
+    "sportorg.modules.winorient",
+    "sportorg.modules.winorient.wdb"
+   ]
+  },
+  {
+   "action": "SFRXImportAction",
+   "calls": [
+    "sfrximporter.import_sfrx"
+   ],
+   "class": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:185]",
+   "filters": [
+    {
+     "extensions": [
+      ".sfrx"
+     ],
+     "label": "SFRX (*.sfrx)",
+     "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:188]"
+    }
+   ],
+   "formats": [
+    "SFRx"
+   ],
+   "item": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:131]",
+   "menu_path": [
+    "File",
+    "Import",
+    "SFRX"
+   ],
+   "modules": [
+    "sportorg.libs.sfr"
+   ]
+  },
+  {
+   "action": "OcadTXTv8ImportAction",
+   "calls": [
+    "ocad.import_txt_v8"
+   ],
+   "class": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:222]",
+   "filters": [
+    {
+     "extensions": [
+      ".txt"
+     ],
+     "label": "Ocad classes v8 (*.txt)",
+     "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:225]"
+    }
+   ],
+   "formats": [
+    "OCAD"
+   ],
+   "item": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:136]",
+   "menu_path": [
+    "File",
+    "Import",
+    "Ocad txt v8"
+   ],
+   "modules": [
+    "sportorg.modules.ocad",
+    "sportorg.modules.ocad.ocad"
+   ]
+  },
+  {
+   "action": "IOFEntryListImportAction",
+   "calls": [
+    "iof_xml.import_from_iof"
+   ],
+   "class": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:326]",
+   "filters": [
+    {
+     "extensions": [
+      ".xml"
+     ],
+     "label": "IOF xml (*.xml)",
+     "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:329]"
+    }
+   ],
+   "formats": [
+    "IOF XML"
+   ],
+   "item": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:140]",
+   "menu_path": [
+    "File",
+    "Import",
+    "IOF xml"
+   ],
+   "modules": [
+    "sportorg.modules.iof"
+   ]
+  },
+  {
+   "action": "RecoverySportidentMasterCsvAction",
+   "calls": [
+    "recovery_si_master_csv.recovery"
+   ],
+   "class": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:415]",
+   "filters": [
+    {
+     "extensions": [
+      ".csv"
+     ],
+     "label": "CSV file (*.csv)",
+     "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:419]"
+    }
+   ],
+   "formats": [
+    "Recovery import (CSV, HTML, SI log)"
+   ],
+   "item": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:144]",
+   "menu_path": [
+    "File",
+    "Import",
+    "SPORTident master station CSV"
+   ],
+   "modules": [
+    "sportorg.modules.recovery"
+   ]
+  },
+  {
+   "action": "RecoverySportorgSiLogAction",
+   "calls": [
+    "recovery_sportorg_si_log.recovery"
+   ],
+   "class": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:404]",
+   "filters": [
+    {
+     "extensions": [
+      ".log"
+     ],
+     "label": "SportOrg SI log (*.log)",
+     "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:408]"
+    }
+   ],
+   "formats": [
+    "Recovery import (CSV, HTML, SI log)"
+   ],
+   "item": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:149]",
+   "menu_path": [
+    "File",
+    "Import",
+    "SportOrg SI log"
+   ],
+   "modules": [
+    "sportorg.modules.recovery"
+   ]
+  },
+  {
+   "action": "RecoveryOrgeoFinishCsvAction",
+   "calls": [
+    "recovery_orgeo_finish_csv.recovery"
+   ],
+   "class": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:426]",
+   "filters": [
+    {
+     "extensions": [
+      ".csv"
+     ],
+     "label": "CSV file (*.csv)",
+     "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:430]"
+    }
+   ],
+   "formats": [
+    "Recovery import (CSV, HTML, SI log)"
+   ],
+   "item": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:154]",
+   "menu_path": [
+    "File",
+    "Import",
+    "Orgeo.ru CSV"
+   ],
+   "modules": [
+    "sportorg.modules.recovery"
+   ]
+  },
+  {
+   "action": "RecoverySportorgHtmlAction",
+   "calls": [
+    "get_races_from_file",
+    "recovery_sportorg_html.recovery"
+   ],
+   "class": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:386]",
+   "filters": [
+    {
+     "extensions": [
+      ".html"
+     ],
+     "label": "SportOrg HTML report (*.html)",
+     "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:390]"
+    }
+   ],
+   "formats": [
+    "Recovery import (CSV, HTML, SI log)",
+    "SportOrg JSON (.json, gzip)"
+   ],
+   "item": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:158]",
+   "menu_path": [
+    "File",
+    "Import",
+    "SportOrg HTML"
+   ],
+   "modules": [
+    "sportorg.modules.backup.json",
+    "sportorg.modules.recovery"
+   ]
+  },
+  {
+   "action": "WDBWinorientExportAction",
+   "calls": [
+    "WinOrientBinary",
+    "write_wdb"
+   ],
+   "class": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:240]",
+   "filters": [
+    {
+     "extensions": [
+      ".wdb"
+     ],
+     "label": "WDB file (*.wdb)",
+     "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:244]"
+    }
+   ],
+   "formats": [
+    "WinOrient (CSV, WDB)"
+   ],
+   "item": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:171]",
+   "menu_path": [
+    "File",
+    "Export",
+    "WDB Winorient"
+   ],
+   "modules": [
+    "sportorg.libs.winorient.wdb",
+    "sportorg.modules.winorient.wdb"
+   ]
+  },
+  {
+   "action": "IOFResultListExportAction",
+   "calls": [
+    "iof_xml.export_result_list"
+   ],
+   "class": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:267]",
+   "filters": [
+    {
+     "extensions": [
+      ".xml"
+     ],
+     "label": "IOF xml (*.xml)",
+     "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:271]"
+    }
+   ],
+   "formats": [
+    "IOF XML"
+   ],
+   "item": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:179]",
+   "menu_path": [
+    "File",
+    "Export",
+    "IOF xml",
+    "ResultList"
+   ],
+   "modules": [
+    "sportorg.modules.iof"
+   ]
+  },
+  {
+   "action": "IOFResultListAllSplitsExportAction",
+   "calls": [
+    "iof_xml.export_result_list"
+   ],
+   "class": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:286]",
+   "filters": [
+    {
+     "extensions": [
+      ".xml"
+     ],
+     "label": "IOF xml (*.xml)",
+     "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:290]"
+    }
+   ],
+   "formats": [
+    "IOF XML"
+   ],
+   "item": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:183]",
+   "menu_path": [
+    "File",
+    "Export",
+    "IOF xml",
+    "ResultListAllSplits"
+   ],
+   "modules": [
+    "sportorg.modules.iof"
+   ]
+  },
+  {
+   "action": "IOFEntryListExportAction",
+   "calls": [
+    "iof_xml.export_entry_list"
+   ],
+   "class": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:307]",
+   "filters": [
+    {
+     "extensions": [
+      ".xml"
+     ],
+     "label": "IOF xml (*.xml)",
+     "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:311]"
+    }
+   ],
+   "formats": [
+    "IOF XML"
+   ],
+   "item": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:187]",
+   "menu_path": [
+    "File",
+    "Export",
+    "IOF xml",
+    "EntrytList"
+   ],
+   "modules": [
+    "sportorg.modules.iof"
+   ]
+  },
+  {
+   "action": "IOFCompetitorListExportAction",
+   "calls": [
+    "iof_xml.export_competitor_list"
+   ],
+   "class": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:363]",
+   "filters": [
+    {
+     "extensions": [
+      ".xml"
+     ],
+     "label": "IOF xml (*.xml)",
+     "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:367]"
+    }
+   ],
+   "formats": [
+    "IOF XML"
+   ],
+   "item": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:191]",
+   "menu_path": [
+    "File",
+    "Export",
+    "IOF xml",
+    "CompetitorList"
+   ],
+   "modules": [
+    "sportorg.modules.iof"
+   ]
+  },
+  {
+   "action": "IOFStartListExportAction",
+   "calls": [
+    "iof_xml.export_start_list"
+   ],
+   "class": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:344]",
+   "filters": [
+    {
+     "extensions": [
+      ".xml"
+     ],
+     "label": "IOF xml (*.xml)",
+     "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:348]"
+    }
+   ],
+   "formats": [
+    "IOF XML"
+   ],
+   "item": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:195]",
+   "menu_path": [
+    "File",
+    "Export",
+    "IOF xml",
+    "StartList"
+   ],
+   "modules": [
+    "sportorg.modules.iof"
+   ]
+  },
+  {
+   "action": "SFRExportAction",
+   "calls": [
+    "export_sfrx"
+   ],
+   "class": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:987]",
+   "filters": [
+    {
+     "extensions": [
+      ".sfrx"
+     ],
+     "label": "SFRX (*.sfrx)",
+     "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:991]"
+    }
+   ],
+   "formats": [
+    "SFRx"
+   ],
+   "item": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:201]",
+   "menu_path": [
+    "File",
+    "Export",
+    "SFRX"
+   ],
+   "modules": [
+    "sportorg.modules.sfr.sfrxexporter"
+   ]
+  },
+  {
+   "action": "CreateReportAction",
+   "calls": [
+    "ReportDialog"
+   ],
+   "class": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:628]",
+   "filters": [],
+   "formats": [
+    "Report output (HTML, DOCX, CSV)"
+   ],
+   "item": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:388]",
+   "menu_path": [
+    "Results",
+    "Create report"
+   ],
+   "modules": [
+    "sportorg.gui.dialogs.report_dialog"
+   ]
+  },
+  {
+   "action": "CardReadoutAction",
+   "calls": [
+    "SFRReaderClient"
+   ],
+   "class": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:609]",
+   "filters": [],
+   "formats": [
+    "SFRx"
+   ],
+   "item": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:453]",
+   "menu_path": [
+    "Service",
+    "On/Off card readout"
+   ],
+   "modules": [
+    "sportorg.modules.sfr.sfrreader"
+   ]
+  },
+  {
+   "action": "PrinterSettingsAction",
+   "calls": [
+    "PrintPropertiesDialog"
+   ],
+   "class": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:812]",
+   "filters": [],
+   "formats": [
+    "Report templates (HTML)"
+   ],
+   "item": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:523]",
+   "menu_path": [
+    "Options",
+    "Printer settings"
+   ],
+   "modules": [
+    "sportorg.gui.dialogs.print_properties"
+   ]
+  }
+ ],
+ "extension_strings": [
+  {
+   "source": "[код: pysport@b548c35 sportorg/config.py:130]",
+   "text": ".log"
+  },
+  {
+   "source": "[код: pysport@b548c35 sportorg/gui/dialogs/report_dialog.py:210]",
+   "text": ".docx"
+  },
+  {
+   "source": "[код: pysport@b548c35 sportorg/gui/dialogs/report_dialog.py:235]",
+   "text": ".csv"
+  },
+  {
+   "source": "[код: pysport@b548c35 sportorg/gui/main_window.py:1156]",
+   "text": ".lock"
+  },
+  {
+   "source": "[код: pysport@b548c35 sportorg/gui/main_window.py:1182]",
+   "text": ".lock"
+  },
+  {
+   "source": "[код: pysport@b548c35 sportorg/language.py:44]",
+   "text": ".po"
+  },
+  {
+   "source": "[код: pysport@b548c35 sportorg/language.py:45]",
+   "text": ".mo"
+  },
+  {
+   "source": "[код: pysport@b548c35 sportorg/modules/backup/file.py:56]",
+   "text": ".tmp"
+  },
+  {
+   "source": "[код: pysport@b548c35 sportorg/modules/backup/file.py:60]",
+   "text": ".tmp"
+  },
+  {
+   "source": "[код: pysport@b548c35 sportorg/modules/backup/file.py:65]",
+   "text": ".tmp"
+  },
+  {
+   "source": "[код: pysport@b548c35 sportorg/modules/backup/file.py:69]",
+   "text": ".tmp"
+  },
+  {
+   "source": "[код: pysport@b548c35 sportorg/modules/backup/file.py:73]",
+   "text": ".srb"
+  },
+  {
+   "source": "[код: pysport@b548c35 sportorg/modules/printing/model.py:42]",
+   "text": ".html"
+  },
+  {
+   "source": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_sportorg_html.py:42]",
+   "text": ".json"
+  },
+  {
+   "source": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:32]",
+   "text": ".sfrx"
+  },
+  {
+   "source": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:45]",
+   "text": ".sfrx"
+  }
+ ],
+ "filters": [
+  {
+   "extensions": [
+    ".html"
+   ],
+   "label": "HTML file (*.html)",
+   "source": "[код: pysport@b548c35 sportorg/gui/dialogs/print_properties.py:85]"
+  },
+  {
+   "extensions": [
+    ".html"
+   ],
+   "label": "HTML file (*.html)",
+   "source": "[код: pysport@b548c35 sportorg/gui/dialogs/report_dialog.py:80]"
+  },
+  {
+   "extensions": [
+    ".docx"
+   ],
+   "label": "MS Word file (*.docx)",
+   "source": "[код: pysport@b548c35 sportorg/gui/dialogs/report_dialog.py:226]"
+  },
+  {
+   "extensions": [
+    ".csv"
+   ],
+   "label": "CSV file (*.csv)",
+   "source": "[код: pysport@b548c35 sportorg/gui/dialogs/report_dialog.py:251]"
+  },
+  {
+   "extensions": [
+    ".html"
+   ],
+   "label": "HTML file (*.html)",
+   "source": "[код: pysport@b548c35 sportorg/gui/dialogs/report_dialog.py:278]"
+  },
+  {
+   "extensions": [
+    ".json"
+   ],
+   "label": "SportOrg file (*.json)",
+   "source": "[код: pysport@b548c35 sportorg/gui/main_window.py:896]"
+  },
+  {
+   "extensions": [
+    ".json"
+   ],
+   "label": "SportOrg file (*.json)",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:116]"
+  },
+  {
+   "extensions": [
+    ".csv"
+   ],
+   "label": "CSV Winorient (*.csv)",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:170]"
+  },
+  {
+   "extensions": [
+    ".sfrx"
+   ],
+   "label": "SFRX (*.sfrx)",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:188]"
+  },
+  {
+   "extensions": [
+    ".wdb"
+   ],
+   "label": "WDB Winorient (*.wdb)",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:206]"
+  },
+  {
+   "extensions": [
+    ".txt"
+   ],
+   "label": "Ocad classes v8 (*.txt)",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:225]"
+  },
+  {
+   "extensions": [
+    ".wdb"
+   ],
+   "label": "WDB file (*.wdb)",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:244]"
+  },
+  {
+   "extensions": [
+    ".xml"
+   ],
+   "label": "IOF xml (*.xml)",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:271]"
+  },
+  {
+   "extensions": [
+    ".xml"
+   ],
+   "label": "IOF xml (*.xml)",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:290]"
+  },
+  {
+   "extensions": [
+    ".xml"
+   ],
+   "label": "IOF xml (*.xml)",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:311]"
+  },
+  {
+   "extensions": [
+    ".xml"
+   ],
+   "label": "IOF xml (*.xml)",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:329]"
+  },
+  {
+   "extensions": [
+    ".xml"
+   ],
+   "label": "IOF xml (*.xml)",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:348]"
+  },
+  {
+   "extensions": [
+    ".xml"
+   ],
+   "label": "IOF xml (*.xml)",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:367]"
+  },
+  {
+   "extensions": [
+    ".html"
+   ],
+   "label": "SportOrg HTML report (*.html)",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:390]"
+  },
+  {
+   "extensions": [
+    ".log"
+   ],
+   "label": "SportOrg SI log (*.log)",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:408]"
+  },
+  {
+   "extensions": [
+    ".csv"
+   ],
+   "label": "CSV file (*.csv)",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:419]"
+  },
+  {
+   "extensions": [
+    ".csv"
+   ],
+   "label": "CSV file (*.csv)",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:430]"
+  },
+  {
+   "extensions": [
+    ".json"
+   ],
+   "label": "SportOrg (*.json)",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:929]"
+  },
+  {
+   "extensions": [
+    ".sfrx"
+   ],
+   "label": "SFRX (*.sfrx)",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:991]"
+  },
+  {
+   "extensions": [
+    ".wdb"
+   ],
+   "label": "WDB Winorient (*.wdb)",
+   "source": "[код: pysport@b548c35 sportorg/libs/winorient/wdb_online_sender_dialog.py:31]"
+  },
+  {
+   "extensions": [
+    ".wdb"
+   ],
+   "label": "WDB file (*.wdb)",
+   "source": "[код: pysport@b548c35 sportorg/modules/winorient/wdb_number_setter.py:26]"
+  },
+  {
+   "extensions": [
+    ".wdb"
+   ],
+   "label": "WDB file (*.wdb)",
+   "source": "[код: pysport@b548c35 sportorg/modules/winorient/wdb_number_setter.py:29]"
+  },
+  {
+   "extensions": [
+    ".wdb"
+   ],
+   "label": "WDB file (*.wdb)",
+   "source": "[код: pysport@b548c35 sportorg/modules/winorient/wdb_number_setter.py:36]"
+  }
+ ],
+ "format_modules": [
+  {
+   "format": "IOF XML",
+   "prefix": "sportorg.modules.iof"
+  },
+  {
+   "format": "IOF XML",
+   "prefix": "sportorg.libs.iof"
+  },
+  {
+   "format": "WinOrient (CSV, WDB)",
+   "prefix": "sportorg.modules.winorient"
+  },
+  {
+   "format": "WinOrient (CSV, WDB)",
+   "prefix": "sportorg.libs.winorient"
+  },
+  {
+   "format": "OCAD",
+   "prefix": "sportorg.modules.ocad"
+  },
+  {
+   "format": "OCAD",
+   "prefix": "sportorg.libs.ocad"
+  },
+  {
+   "format": "SFRx",
+   "prefix": "sportorg.modules.sfr"
+  },
+  {
+   "format": "SFRx",
+   "prefix": "sportorg.libs.sfr"
+  },
+  {
+   "format": "SportOrg JSON (.json, gzip)",
+   "prefix": "sportorg.modules.backup"
+  },
+  {
+   "format": "SFR results board (.srb, TSV)",
+   "prefix": "sportorg.modules.backup.sfr_results_board"
+  },
+  {
+   "format": "Recovery import (CSV, HTML, SI log)",
+   "prefix": "sportorg.modules.recovery"
+  },
+  {
+   "format": "Report output (HTML, DOCX, CSV)",
+   "prefix": "sportorg.gui.dialogs.report_dialog"
+  },
+  {
+   "format": "Report templates (HTML)",
+   "prefix": "sportorg.gui.dialogs.print_properties"
+  },
+  {
+   "format": "Printing",
+   "prefix": "sportorg.modules.printing"
+  }
+ ],
+ "functions": [
+  {
+   "direction": "write",
+   "format": "IOF XML",
+   "function": "make_create_time",
+   "source": "[код: pysport@b548c35 sportorg/libs/iof/generator.py:12]"
+  },
+  {
+   "direction": "write",
+   "format": "IOF XML",
+   "function": "BaseElement.write",
+   "source": "[код: pysport@b548c35 sportorg/libs/iof/iof.py:50]"
+  },
+  {
+   "direction": "read",
+   "format": "IOF XML",
+   "function": "parse",
+   "source": "[код: pysport@b548c35 sportorg/libs/iof/parser.py:10]"
+  },
+  {
+   "direction": "read",
+   "format": "OCAD",
+   "function": "ClassesV8.parse",
+   "source": "[код: pysport@b548c35 sportorg/libs/ocad/ocad.py:66]"
+  },
+  {
+   "direction": "read",
+   "format": "OCAD",
+   "function": "parse_txt_v8",
+   "source": "[код: pysport@b548c35 sportorg/libs/ocad/ocad.py:177]"
+  },
+  {
+   "direction": "read",
+   "format": "OCAD",
+   "function": "IofXMLv3.parse",
+   "source": "[код: pysport@b548c35 sportorg/libs/ocad/ocad.py:201]"
+  },
+  {
+   "direction": "read",
+   "format": "OCAD",
+   "function": "parse_xml_v3",
+   "source": "[код: pysport@b548c35 sportorg/libs/ocad/ocad.py:207]"
+  },
+  {
+   "direction": "write",
+   "format": "SFRx",
+   "function": "SFRReader._send_command",
+   "source": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:117]"
+  },
+  {
+   "direction": "read",
+   "format": "SFRx",
+   "function": "SFRReader._read_card_id",
+   "source": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:246]"
+  },
+  {
+   "direction": "read",
+   "format": "SFRx",
+   "function": "SFRReader._read_bib",
+   "source": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:249]"
+  },
+  {
+   "direction": "read",
+   "format": "SFRx",
+   "function": "SFRReader._read_data_counter",
+   "source": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:253]"
+  },
+  {
+   "direction": "read",
+   "format": "SFRx",
+   "function": "SFRReader._read_data_punch",
+   "source": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:257]"
+  },
+  {
+   "direction": "read",
+   "format": "SFRx",
+   "function": "SFRReaderReadout.read_card",
+   "source": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:433]"
+  },
+  {
+   "direction": "read",
+   "format": "SFRx",
+   "function": "import_sfrx",
+   "source": "[код: pysport@b548c35 sportorg/libs/sfr/sfrximporter.py:20]"
+  },
+  {
+   "direction": "read",
+   "format": "SFRx",
+   "function": "SFRXParser.parse",
+   "source": "[код: pysport@b548c35 sportorg/libs/sfr/sfrxparser.py:17]"
+  },
+  {
+   "direction": "read",
+   "format": "SFRx",
+   "function": "parse",
+   "source": "[код: pysport@b548c35 sportorg/libs/sfr/sfrxparser.py:158]"
+  },
+  {
+   "direction": "read",
+   "format": "WinOrient (CSV, WDB)",
+   "function": "WDBPunch.parse_bytes",
+   "source": "[код: pysport@b548c35 sportorg/libs/winorient/wdb.py:83]"
+  },
+  {
+   "direction": "read",
+   "format": "WinOrient (CSV, WDB)",
+   "function": "WDBFinish.parse_bytes",
+   "source": "[код: pysport@b548c35 sportorg/libs/winorient/wdb.py:103]"
+  },
+  {
+   "direction": "write",
+   "format": "WinOrient (CSV, WDB)",
+   "function": "WDBFinish.create",
+   "source": "[код: pysport@b548c35 sportorg/libs/winorient/wdb.py:110]"
+  },
+  {
+   "direction": "read",
+   "format": "WinOrient (CSV, WDB)",
+   "function": "WDBChip.parse_bytes",
+   "source": "[код: pysport@b548c35 sportorg/libs/winorient/wdb.py:135]"
+  },
+  {
+   "direction": "read",
+   "format": "WinOrient (CSV, WDB)",
+   "function": "WDBTeam.parse_bytes",
+   "source": "[код: pysport@b548c35 sportorg/libs/winorient/wdb.py:191]"
+  },
+  {
+   "direction": "read",
+   "format": "WinOrient (CSV, WDB)",
+   "function": "WDBDistance.parse_bytes",
+   "source": "[код: pysport@b548c35 sportorg/libs/winorient/wdb.py:242]"
+  },
+  {
+   "direction": "read",
+   "format": "WinOrient (CSV, WDB)",
+   "function": "WDBGroup.parse_bytes",
+   "source": "[код: pysport@b548c35 sportorg/libs/winorient/wdb.py:321]"
+  },
+  {
+   "direction": "read",
+   "format": "WinOrient (CSV, WDB)",
+   "function": "WDBMan.parse_bytes",
+   "source": "[код: pysport@b548c35 sportorg/libs/winorient/wdb.py:393]"
+  },
+  {
+   "direction": "read",
+   "format": "WinOrient (CSV, WDB)",
+   "function": "WDBInfo.parse_bytes",
+   "source": "[код: pysport@b548c35 sportorg/libs/winorient/wdb.py:604]"
+  },
+  {
+   "direction": "read",
+   "format": "WinOrient (CSV, WDB)",
+   "function": "WDBAdventure.parse_bytes",
+   "source": "[код: pysport@b548c35 sportorg/libs/winorient/wdb.py:885]"
+  },
+  {
+   "direction": "read",
+   "format": "WinOrient (CSV, WDB)",
+   "function": "WDB.parse_bytes",
+   "source": "[код: pysport@b548c35 sportorg/libs/winorient/wdb.py:950]"
+  },
+  {
+   "direction": "read",
+   "format": "WinOrient (CSV, WDB)",
+   "function": "parse_wdb",
+   "source": "[код: pysport@b548c35 sportorg/libs/winorient/wdb.py:1206]"
+  },
+  {
+   "direction": "write",
+   "format": "WinOrient (CSV, WDB)",
+   "function": "write_wdb",
+   "source": "[код: pysport@b548c35 sportorg/libs/winorient/wdb.py:1215]"
+  },
+  {
+   "direction": "read",
+   "format": "WinOrient (CSV, WDB)",
+   "function": "WdbOnlineSender.read",
+   "source": "[код: pysport@b548c35 sportorg/libs/winorient/wdb_online_sender.py:52]"
+  },
+  {
+   "direction": "write",
+   "format": "WinOrient (CSV, WDB)",
+   "function": "WdbOnlineSender.send",
+   "source": "[код: pysport@b548c35 sportorg/libs/winorient/wdb_online_sender.py:96]"
+  },
+  {
+   "direction": "read",
+   "format": "WinOrient (CSV, WDB)",
+   "function": "CSVReader.parse",
+   "source": "[код: pysport@b548c35 sportorg/libs/winorient/wo.py:12]"
+  },
+  {
+   "direction": "read",
+   "format": "WinOrient (CSV, WDB)",
+   "function": "parse_csv",
+   "source": "[код: pysport@b548c35 sportorg/libs/winorient/wo.py:79]"
+  },
+  {
+   "direction": "write",
+   "format": "SportOrg JSON (.json, gzip)",
+   "function": "File.create",
+   "source": "[код: pysport@b548c35 sportorg/modules/backup/file.py:53]"
+  },
+  {
+   "direction": "write",
+   "format": "SportOrg JSON (.json, gzip)",
+   "function": "File.save",
+   "source": "[код: pysport@b548c35 sportorg/modules/backup/file.py:62]"
+  },
+  {
+   "direction": "read",
+   "format": "SportOrg JSON (.json, gzip)",
+   "function": "File.open",
+   "source": "[код: pysport@b548c35 sportorg/modules/backup/file.py:78]"
+  },
+  {
+   "direction": "write",
+   "format": "SportOrg JSON (.json, gzip)",
+   "function": "dump",
+   "source": "[код: pysport@b548c35 sportorg/modules/backup/json.py:19]"
+  },
+  {
+   "direction": "read",
+   "format": "SportOrg JSON (.json, gzip)",
+   "function": "load",
+   "source": "[код: pysport@b548c35 sportorg/modules/backup/json.py:34]"
+  },
+  {
+   "direction": "read",
+   "format": "SportOrg JSON (.json, gzip)",
+   "function": "get_races_from_file",
+   "source": "[код: pysport@b548c35 sportorg/modules/backup/json.py:50]"
+  },
+  {
+   "direction": "write",
+   "format": "SFR results board (.srb, TSV)",
+   "function": "dump",
+   "source": "[код: pysport@b548c35 sportorg/modules/backup/sfr_results_board.py:6]"
+  },
+  {
+   "direction": "write",
+   "format": "IOF XML",
+   "function": "export_result_list",
+   "source": "[код: pysport@b548c35 sportorg/modules/iof/iof_xml.py:33]"
+  },
+  {
+   "direction": "write",
+   "format": "IOF XML",
+   "function": "export_entry_list",
+   "source": "[код: pysport@b548c35 sportorg/modules/iof/iof_xml.py:41]"
+  },
+  {
+   "direction": "write",
+   "format": "IOF XML",
+   "function": "export_start_list",
+   "source": "[код: pysport@b548c35 sportorg/modules/iof/iof_xml.py:49]"
+  },
+  {
+   "direction": "write",
+   "format": "IOF XML",
+   "function": "export_competitor_list",
+   "source": "[код: pysport@b548c35 sportorg/modules/iof/iof_xml.py:57]"
+  },
+  {
+   "direction": "read",
+   "format": "IOF XML",
+   "function": "import_from_iof",
+   "source": "[код: pysport@b548c35 sportorg/modules/iof/iof_xml.py:65]"
+  },
+  {
+   "direction": "read",
+   "format": "IOF XML",
+   "function": "import_from_course_data",
+   "source": "[код: pysport@b548c35 sportorg/modules/iof/iof_xml.py:85]"
+  },
+  {
+   "direction": "read",
+   "format": "IOF XML",
+   "function": "import_from_variation_data",
+   "source": "[код: pysport@b548c35 sportorg/modules/iof/iof_xml.py:108]"
+  },
+  {
+   "direction": "write",
+   "format": "IOF XML",
+   "function": "create_person",
+   "source": "[код: pysport@b548c35 sportorg/modules/iof/iof_xml.py:142]"
+  },
+  {
+   "direction": "read",
+   "format": "IOF XML",
+   "function": "import_from_entry_list",
+   "source": "[код: pysport@b548c35 sportorg/modules/iof/iof_xml.py:216]"
+  },
+  {
+   "direction": "read",
+   "format": "IOF XML",
+   "function": "import_from_result_list",
+   "source": "[код: pysport@b548c35 sportorg/modules/iof/iof_xml.py:251]"
+  },
+  {
+   "direction": "read",
+   "format": "IOF XML",
+   "function": "import_from_event_data",
+   "source": "[код: pysport@b548c35 sportorg/modules/iof/iof_xml.py:316]"
+  },
+  {
+   "direction": "read",
+   "format": "OCAD",
+   "function": "import_txt_v8",
+   "source": "[код: pysport@b548c35 sportorg/modules/ocad/ocad.py:10]"
+  },
+  {
+   "direction": "write",
+   "format": "Recovery import (CSV, HTML, SI log)",
+   "function": "save_to_tmp_file",
+   "source": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_sportorg_html.py:39]"
+  },
+  {
+   "direction": "write",
+   "format": "SFRx",
+   "function": "export_sfr_data",
+   "source": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:15]"
+  },
+  {
+   "direction": "write",
+   "format": "SFRx",
+   "function": "export_sfrx",
+   "source": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:25]"
+  },
+  {
+   "direction": "write",
+   "format": "SFRx",
+   "function": "_write_header",
+   "source": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:54]"
+  },
+  {
+   "direction": "write",
+   "format": "SFRx",
+   "function": "_write_days",
+   "source": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:86]"
+  },
+  {
+   "direction": "write",
+   "format": "SFRx",
+   "function": "_write_descriptions",
+   "source": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:104]"
+  },
+  {
+   "direction": "write",
+   "format": "SFRx",
+   "function": "_write_clubs",
+   "source": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:111]"
+  },
+  {
+   "direction": "write",
+   "format": "SFRx",
+   "function": "_write_groups",
+   "source": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:118]"
+  },
+  {
+   "direction": "write",
+   "format": "SFRx",
+   "function": "_write_teams",
+   "source": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:145]"
+  },
+  {
+   "direction": "write",
+   "format": "SFRx",
+   "function": "_write_courses",
+   "source": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:154]"
+  },
+  {
+   "direction": "write",
+   "format": "SFRx",
+   "function": "_write_controls",
+   "source": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:183]"
+  },
+  {
+   "direction": "write",
+   "format": "SFRx",
+   "function": "_write_competitors",
+   "source": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:207]"
+  },
+  {
+   "direction": "write",
+   "format": "SFRx",
+   "function": "_write_splits",
+   "source": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:268]"
+  },
+  {
+   "direction": "read",
+   "format": "WinOrient (CSV, WDB)",
+   "function": "WinOrientBinary._read_file",
+   "source": "[код: pysport@b548c35 sportorg/modules/winorient/wdb.py:63]"
+  },
+  {
+   "direction": "write",
+   "format": "WinOrient (CSV, WDB)",
+   "function": "WinOrientBinary.create_objects",
+   "source": "[код: pysport@b548c35 sportorg/modules/winorient/wdb.py:74]"
+  },
+  {
+   "direction": "write",
+   "format": "WinOrient (CSV, WDB)",
+   "function": "WinOrientBinary.export",
+   "source": "[код: pysport@b548c35 sportorg/modules/winorient/wdb.py:194]"
+  },
+  {
+   "direction": "read",
+   "format": "WinOrient (CSV, WDB)",
+   "function": "import_csv",
+   "source": "[код: pysport@b548c35 sportorg/modules/winorient/winorient.py:10]"
+  },
+  {
+   "direction": "read",
+   "format": "WinOrient (CSV, WDB)",
+   "function": "import_wo_wdb",
+   "source": "[код: pysport@b548c35 sportorg/modules/winorient/winorient.py:89]"
+  }
+ ]
+}

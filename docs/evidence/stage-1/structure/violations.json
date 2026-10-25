@@ -1,0 +1,211 @@
+{
+ "libraries": [
+  {
+   "category": "gui",
+   "pattern": "PySide6",
+   "reason": "Qt 6 GUI toolkit"
+  },
+  {
+   "category": "gui",
+   "pattern": "PySide2",
+   "reason": "Qt 5 GUI toolkit (fallback binding of the Windows 7 build)"
+  },
+  {
+   "category": "gui",
+   "pattern": "PyQt5",
+   "reason": "Qt 5 GUI toolkit, alternative binding"
+  },
+  {
+   "category": "gui",
+   "pattern": "PyQt6",
+   "reason": "Qt 6 GUI toolkit, alternative binding"
+  },
+  {
+   "category": "device",
+   "pattern": "serial",
+   "reason": "pySerial: COM ports of SPORTident and other stations"
+  },
+  {
+   "category": "device",
+   "pattern": "pywinusb",
+   "reason": "USB HID devices on Windows (card readers)"
+  },
+  {
+   "category": "device",
+   "pattern": "pyImpinj",
+   "reason": "client of Impinj RFID readers"
+  },
+  {
+   "category": "device",
+   "pattern": "sportident",
+   "reason": "SPORTident reader library, talks to stations over serial"
+  },
+  {
+   "category": "network",
+   "pattern": "requests",
+   "reason": "HTTP client"
+  },
+  {
+   "category": "network",
+   "pattern": "aiohttp",
+   "reason": "asynchronous HTTP client and server"
+  },
+  {
+   "category": "network",
+   "pattern": "socket",
+   "reason": "raw sockets (TCP/UDP exchange with devices and clients)"
+  },
+  {
+   "category": "os-api",
+   "pattern": "win32*",
+   "reason": "pywin32 modules (win32api, win32print, win32ui, ...): Windows API"
+  },
+  {
+   "category": "os-api",
+   "pattern": "pywintypes",
+   "reason": "pywin32 support module"
+  },
+  {
+   "category": "os-api",
+   "pattern": "winreg",
+   "reason": "Windows registry"
+  },
+  {
+   "category": "os-api",
+   "pattern": "psutil",
+   "reason": "process and system information"
+  },
+  {
+   "category": "os-api",
+   "pattern": "webbrowser",
+   "reason": "starts the system browser"
+  },
+  {
+   "category": "audio",
+   "pattern": "playsound3",
+   "reason": "plays sound files through the OS audio system"
+  }
+ ],
+ "summary": {
+  "core_third_party_not_listed": {
+   "chardet": 1,
+   "dateutil": 2,
+   "importlib_resources": 1,
+   "jinja2": 1,
+   "polib": 1,
+   "sportorg_core": 1
+  },
+  "counts": {
+   "V1": {
+    "local": 1,
+    "module_level": 3
+   },
+   "V3": {
+    "local": 0,
+    "module_level": 3
+   }
+  },
+  "linter": {
+   "both": 4,
+   "dependencies_analysed": 588,
+   "entries": 4,
+   "exit": 1,
+   "files_analysed": 173,
+   "linter_direct_pairs": 4,
+   "linter_indirect_entries": 0,
+   "only_linter": [],
+   "only_v1": [],
+   "v1_pairs": 4
+  },
+  "modules_outside_model": [
+   "sportorg.data"
+  ],
+  "v1_by_layer_pair": {
+   "application -> ui": 3,
+   "foundation -> application": 1
+  },
+  "v1_excluding_vendored": {
+   "local": 1,
+   "module_level": 3
+  }
+ },
+ "violations": [
+  {
+   "dst": "sportorg.gui.global_access",
+   "dst_layer": "ui",
+   "kind": "V1",
+   "line": 21,
+   "local": false,
+   "path": "sportorg/modules/printing/printing.py",
+   "src": "sportorg.modules.printing.printing",
+   "src_layer": "application",
+   "tag": "[код: pysport@b548c35 sportorg/modules/printing/printing.py:21]"
+  },
+  {
+   "dst": "sportorg.gui.dialogs.bib_dialog",
+   "dst_layer": "ui",
+   "kind": "V1",
+   "line": 7,
+   "local": false,
+   "path": "sportorg/modules/sportident/result_generation.py",
+   "src": "sportorg.modules.sportident.result_generation",
+   "src_layer": "application",
+   "tag": "[код: pysport@b548c35 sportorg/modules/sportident/result_generation.py:7]"
+  },
+  {
+   "dst": "sportorg.gui.dialogs.file_dialog",
+   "dst_layer": "ui",
+   "kind": "V1",
+   "line": 6,
+   "local": false,
+   "path": "sportorg/modules/winorient/wdb_number_setter.py",
+   "src": "sportorg.modules.winorient.wdb_number_setter",
+   "src_layer": "application",
+   "tag": "[код: pysport@b548c35 sportorg/modules/winorient/wdb_number_setter.py:6]"
+  },
+  {
+   "dst": "sportorg.modules.configs.configs",
+   "dst_layer": "application",
+   "kind": "V1",
+   "line": 257,
+   "local": true,
+   "path": "sportorg/settings.py",
+   "src": "sportorg.settings",
+   "src_layer": "foundation",
+   "tag": "[код: pysport@b548c35 sportorg/settings.py:257]"
+  },
+  {
+   "dst": "playsound3",
+   "dst_layer": "external audio",
+   "kind": "V3",
+   "line": 7,
+   "local": false,
+   "path": "sportorg/common/audio.py",
+   "src": "sportorg.common.audio",
+   "src_layer": "foundation",
+   "tag": "[код: pysport@b548c35 sportorg/common/audio.py:7]"
+  },
+  {
+   "dst": "PySide2.QtCore",
+   "dst_layer": "external gui",
+   "kind": "V3",
+   "line": 5,
+   "local": false,
+   "path": "sportorg/utils/time.py",
+   "src": "sportorg.utils.time",
+   "src_layer": "foundation",
+   "tag": "[код: pysport@b548c35 sportorg/utils/time.py:5]"
+  },
+  {
+   "dst": "PySide6.QtCore",
+   "dst_layer": "external gui",
+   "kind": "V3",
+   "line": 2,
+   "local": false,
+   "path": "sportorg/utils/time.py",
+   "src": "sportorg.utils.time",
+   "src_layer": "foundation",
+   "tag": "[код: pysport@b548c35 sportorg/utils/time.py:2]"
+  }
+ ]
+}

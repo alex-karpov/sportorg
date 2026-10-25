@@ -1,0 +1,174 @@
+{
+ "cache_sha256": {
+  "ast-grep-cli": "864cf7cfe82cf4d1044efd35e09cd92eb42d530624d4fc50f99cc3f499786168",
+  "complexipy": "52e0338056d29b0001dfe68eacd5e365463b0a0cdd4e76c8b11cdc56bcf8c3a0",
+  "deadcode": "d8707e88a7523016f6f310117ffe1f5324bc998575d567018ad14336f04fa260",
+  "grimp": "ab9b3cc6daacffcc275d086dd517075af296b23a292b033db233c7595080c43e",
+  "import-linter": "467a8478f7d4eafd3c6eb5c8ad422d995053b6deb515fe145f145eee36bdb20d",
+  "lizard": "f22243c8bb44703b6e2e61a63c9c9d725f58bcff1edb0e26fba0fedeb659514a",
+  "pip-audit": "6eab39a220f58874f5c1576e73d18e399ad6cabc836d24e0dea5d70258ec24c9",
+  "pydeps": "4533e220f4c7a303b2ef59cf8996148c49be1ce5520e22310696ce0779eabfac",
+  "pydriller": "5ea48a52e08d968ce4c7fd309ad32b7e745d67f4aa35714a73ec202eb0b7e7a7",
+  "radon": "6a8f7927bd7bb3917bcc8bec7c3fc7db174b03fbc429af8b38b575790b8b6bab",
+  "ruff": "a0bfa6c63b7aa65599c7087ea5e3d27e166fa3dabc6c80ffbdd3d4d12924fefe",
+  "semgrep": "60f0aeabecc4e091aeb8f0bbe90e13ba1043e6ecac3bb1b41e44b35575b6ebb9",
+  "skylos": "f7d5ce0ecad82d01f17fa72847f767ae7111e7342f9fbf85e06db2a0350e6457",
+  "vulture": "ef4e841fb45dd2be52f9272da9271f730b6a176a3cf521ab5d634a66f83bc240"
+ },
+ "rows": [
+  {
+   "license": "MIT",
+   "name": "ruff",
+   "released": "2026-10-22",
+   "requires_python": ">=3.7",
+   "source": "https://github.com/astral-sh/ruff",
+   "status": "5 - Production/Stable",
+   "version": "0.17.2",
+   "wheels_3.14": "linux, macos, windows",
+   "wheels_3.15": "linux, macos, windows"
+  },
+  {
+   "license": "BSD 2-Clause License",
+   "name": "grimp",
+   "released": "2026-09-04",
+   "requires_python": ">=3.10",
+   "source": "",
+   "status": "5 - Production/Stable",
+   "version": "3.17",
+   "wheels_3.14": "linux, macos, windows",
+   "wheels_3.15": "linux, windows"
+  },
+  {
+   "license": "BSD 2-Clause License",
+   "name": "import-linter",
+   "released": "2026-09-04",
+   "requires_python": ">=3.10",
+   "source": "",
+   "status": "5 - Production/Stable",
+   "version": "2.15",
+   "wheels_3.14": "linux, macos, windows",
+   "wheels_3.15": "linux, macos, windows"
+  },
+  {
+   "license": "MIT",
+   "name": "radon",
+   "released": "2023-03-26",
+   "requires_python": "not declared",
+   "source": "https://github.com/rubik/radon",
+   "status": "5 - Production/Stable",
+   "version": "6.0.1",
+   "wheels_3.14": "linux, macos, windows",
+   "wheels_3.15": "linux, macos, windows"
+  },
+  {
+   "license": "MIT",
+   "name": "lizard",
+   "released": "2026-10-24",
+   "requires_python": "not declared",
+   "source": "https://github.com/terryyin/lizard",
+   "status": "5 - Production/Stable",
+   "version": "1.24.3",
+   "wheels_3.14": "linux, macos, windows",
+   "wheels_3.15": "linux, macos, windows"
+  },
+  {
+   "license": "MIT",
+   "name": "complexipy",
+   "released": "2026-10-19",
+   "requires_python": "<3.16,>=3.8",
+   "source": "https://github.com/rohaquinlop/complexipy",
+   "status": "5 - Production/Stable",
+   "version": "8.1.0",
+   "wheels_3.14": "linux, macos, windows",
+   "wheels_3.15": "linux, macos, windows"
+  },
+  {
+   "license": "MIT License (classifier)",
+   "name": "vulture",
+   "released": "2026-03-25",
+   "requires_python": ">=3.9",
+   "source": "https://github.com/jendrikseipp/vulture",
+   "status": "5 - Production/Stable",
+   "version": "2.16",
+   "wheels_3.14": "linux, macos, windows",
+   "wheels_3.15": "linux, macos, windows"
+  },
+  {
+   "license": "Apache-2.0",
+   "name": "skylos",
+   "released": "2026-10-23",
+   "requires_python": ">=3.10",
+   "source": "https://github.com/duriantaco/skylos",
+   "status": "4 - Beta",
+   "version": "5.0.0",
+   "wheels_3.14": "linux, macos, windows",
+   "wheels_3.15": "linux, macos, windows"
+  },
+  {
+   "license": "GNU Affero General Public License v3 (classifier)",
+   "name": "deadcode",
+   "released": "2024-08-09",
+   "requires_python": ">=3.10",
+   "source": "",
+   "status": "3 - Alpha",
+   "version": "2.4.1",
+   "wheels_3.14": "linux, macos, windows",
+   "wheels_3.15": "linux, macos, windows"
+  },
+  {
+   "license": "BSD-2-Clause",
+   "name": "pydeps",
+   "released": "2026-10-01",
+   "requires_python": ">=3.10",
+   "source": "https://github.com/thebjorn/pydeps",
+   "status": "5 - Production/Stable",
+   "version": "3.0.9",
+   "wheels_3.14": "linux, macos, windows",
+   "wheels_3.15": "linux, macos, windows"
+  },
+  {
+   "license": "Apache Software License (classifier)",
+   "name": "pip-audit",
+   "released": "2026-06-10",
+   "requires_python": ">=3.10",
+   "source": "https://github.com/pypa/pip-audit",
+   "status": "5 - Production/Stable",
+   "version": "2.10.1",
+   "wheels_3.14": "linux, macos, windows",
+   "wheels_3.15": "linux, macos, windows"
+  },
+  {
+   "license": "Apache License",
+   "name": "PyDriller",
+   "released": "2026-09-11",
+   "requires_python": ">=3.5",
+   "source": "https://github.com/ishepard/pydriller",
+   "status": "5 - Production/Stable",
+   "version": "2.12",
+   "wheels_3.14": "linux, macos, windows",
+   "wheels_3.15": "linux, macos, windows"
+  },
+  {
+   "license": "LGPL-2.1-or-later",
+   "name": "semgrep",
+   "released": "2026-10-22",
+   "requires_python": ">=3.10",
+   "source": "https://github.com/semgrep/semgrep",
+   "status": "not declared",
+   "version": "1.182.1",
+   "wheels_3.14": "linux, macos, windows",
+   "wheels_3.15": "none"
+  },
+  {
+   "license": "MIT License (classifier)",
+   "name": "ast-grep-cli",
+   "released": "2026-10-15",
+   "requires_python": "not declared",
+   "source": "https://github.com/ast-grep/ast-grep",
+   "status": "3 - Alpha",
+   "version": "0.51.0",
+   "wheels_3.14": "linux, macos, windows",
+   "wheels_3.15": "linux, macos, windows"
+  }
+ ]
+}

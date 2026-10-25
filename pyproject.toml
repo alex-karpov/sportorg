@@ -15,6 +15,8 @@ dev = [
   "pytest>=9.1.1",
   "import-linter>=2.15",
   "basedpyright>=1.40.2",
+  "vulture>=2.16",
+  "grimp>=3.17",
 ]
 
 [build-system]
@@ -51,6 +53,9 @@ suppress-none-returning = false
 [tool.ruff.lint.per-file-ignores]
 "tests/**" = ["S101", "PLR2004", "INP001", "ANN"]   # asserts, magic numbers and loose annotations are fine in tests
 "scripts/**" = ["T201", "INP001", "S603", "S607"]   # scripts print and run subprocesses by design
+# Stage 1 archaeology matches Russian legacy text: Cyrillic letters in strings are data, not look-alikes.
+"scripts/archaeology/**" = ["RUF001"]
+"tests/scripts/archaeology/**" = ["RUF001"]
 
 [tool.ruff.lint.pydocstyle]
 convention = "google"

@@ -5,6 +5,7 @@
 """
 
 import json
+import tomllib
 import urllib.request
 from typing import IO, TYPE_CHECKING, Protocol, TypeGuard
 from urllib.parse import urlparse
@@ -20,11 +21,15 @@ _HTTPS = "https"
 class _Open(Protocol):
     """Shape of ``OpenerDirector.open`` with a concrete (non-``Any``) return type."""
 
-    def __call__(self, fullurl: str, data: None = None, timeout: float = ...) -> IO[bytes]: ...
+    def __call__(
+        self, fullurl: str, data: bytes | None = None, timeout: float = ...
+    ) -> IO[bytes]: ...
 
 
 # Declaring the callable type is the single sanctioned place where ``Any`` is narrowed.
 _LOADS: Callable[[str | bytes], Json] = json.loads
+# TOML without dates (pyproject.toml, uv.lock, Cargo.lock) is a JSON value.
+_TOML_LOADS: Callable[[str], Json] = tomllib.loads
 
 
 def _opener(headers: Mapping[str, str] | None) -> _Open:
@@ -45,6 +50,12 @@ def _is_list(value: object) -> TypeGuard[list[Json]]:
 def parse_json(text: str | bytes) -> Json:
     """Parse JSON text into a typed ``Json`` value."""
     result: Json = _LOADS(text)
+    return result
+
+
+def parse_toml(text: str) -> Json:
+    """Parse TOML text (without dates) into a typed ``Json`` value."""
+    result: Json = _TOML_LOADS(text)
     return result
 
 
@@ -89,8 +100,9 @@ def fetch_bytes(
     *,
     headers: Mapping[str, str] | None = None,
     timeout: float = 30.0,
+    data: bytes | None = None,
 ) -> bytes:
-    """Download an https URL and return the response body.
+    """Download an https URL (POST ``data`` if given) and return the response body.
 
     Raises:
         ValueError: if the URL scheme is not https.
@@ -98,7 +110,7 @@ def fetch_bytes(
     if urlparse(url).scheme != _HTTPS:
         msg = f"only https URLs are allowed: {url}"
         raise ValueError(msg)
-    response = _opener(headers)(url, timeout=timeout)
+    response = _opener(headers)(url, data, timeout=timeout)
     try:
         return response.read()
     finally:

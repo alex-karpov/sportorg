@@ -1,0 +1,7 @@
+# Run from the repository root. Network: pypi.org (+ files.pythonhosted.org for uvx downloads).
+# In the Claude Code sandbox add UV_TOOL_DIR=$TMPDIR/uv-tools (~/.local/share/uv is read-only there).
+uv run python -m scripts.archaeology.fetch pypi ruff grimp import-linter radon lizard complexipy vulture skylos deadcode pydeps pip-audit pydriller semgrep ast-grep-cli
+uv run python -m scripts.archaeology.tool_bench candidates --out docs/evidence/stage-1/tools
+uv run python -m scripts.legacy_clone
+PYTHONDONTWRITEBYTECODE=1 uv run python -m scripts.archaeology.tool_runs --out docs/evidence/stage-1/tools --runs 5
+uv run python -m scripts.legacy verify

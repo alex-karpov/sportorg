@@ -1,0 +1,5446 @@
+{
+ "definitions": {
+  "device_methods": "[допущение] a call of one of DEVICE_METHODS (read, readline, write, flush, send, recv, reset_input_buffer, send_output_report, set_raw_data_handler, ...) on a name or attribute chain whose last part, case-insensitive and without leading underscores, is in DEVICE_VOCABULARY = {serial, ser, port, sock, socket, conn, device, dev, reader, station, hid}; direction comes from the method; format is the device format of the module path (e.g. Sportiduino serial, SFR HID), `socket` for sock/socket/conn, else `device stream`",
+  "direction": "read, write, both (read and write, or both in one call), device (only device calls), unknown (open with a non-literal mode)",
+  "file_parameter": "[допущение] a read/readline/readlines/write/writelines call on a parameter of the enclosing function named file, f, fp, fh, fd, fobj or stream (FILE_VOCABULARY) is an I/O site of kind `file object (parameter)` unless a device rule already matched it; its direction comes from the method",
+  "host": "a host or URL value is reported with kind url; newline and quotechar as delimiter",
+  "io_site": "a call matching the API tables of formats.py (open family with the mode's direction; csv/json/orjson/xml/lxml/struct/zip/gzip/docx/jinja2/INI/PO; serial, socket, HTTP, SPORTident, HID, Impinj, printer; Path.read_*/write_*)",
+  "local_names": "a non-empty string literal assigned to a local name is typed by that name like a constant (e.g. `sep = \"\\t\"` is a delimiter)",
+  "protocol_rows": "in the device paths of DEVICE_KINDS (libs/{sportiduino,sfr,srpid,huichang}, modules/{sportident,sfr,sportiduino,srpid,rfid_impinj,huichang}) a function without I/O calls gets a row (call `<protocol>`, direction decode/encode/both) when it has a non-empty bytes literal, `int.from_bytes`, `.to_bytes`, or byte arithmetic: `& | ^ << >>` with a hex mask or on an indexed value with an int, and, beyond the original list, `+ - * // %` on an indexed value with an int. encode = `.to_bytes` or a bytes literal that is not compared; decode = the rest. Named upper-case int constants referenced there are byte-constants",
+  "row": "one per enclosing function, class body or module level with at least one I/O site; nested functions are rows of their own",
+  "values": "literals in the same scope: keyword/positional parameters, strings classified by content, bytes and hex constants, ints in comparisons, subscripts and packing, and module or class constants referenced by name (tag at the assignment line, use_tag at the use)"
+ },
+ "rows": [
+  {
+   "calls": [
+    {
+     "api": "playsound3.playsound",
+     "direction": "read",
+     "format": "audio",
+     "line": 18,
+     "tag": "[код: pysport@b548c35 sportorg/common/audio.py:18]"
+    }
+   ],
+   "context": "other",
+   "direction": "read",
+   "formats": [
+    "audio"
+   ],
+   "function": "play",
+   "module": "sportorg.common.audio",
+   "path": "sportorg/common/audio.py",
+   "tag": "[код: pysport@b548c35 sportorg/common/audio.py:18]",
+   "values": []
+  },
+  {
+   "calls": [
+    {
+     "api": ".read_text",
+     "direction": "read",
+     "format": "text file",
+     "line": 87,
+     "tag": "[код: pysport@b548c35 sportorg/config.py:87]"
+    }
+   ],
+   "context": "other",
+   "direction": "read",
+   "formats": [
+    "text file"
+   ],
+   "function": "commit_version",
+   "module": "sportorg.config",
+   "path": "sportorg/config.py",
+   "tag": "[код: pysport@b548c35 sportorg/config.py:87]",
+   "values": [
+    {
+     "kind": "encoding",
+     "origin": "keyword encoding of .read_text",
+     "tag": "[код: pysport@b548c35 sportorg/config.py:87]",
+     "text": "\"utf-8\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/config.py:87]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "PySide2.QtPrintSupport.QPrinter",
+     "direction": "device",
+     "format": "printer",
+     "line": 133,
+     "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/print_properties.py:133]"
+    }
+   ],
+   "context": "other",
+   "direction": "device",
+   "formats": [
+    "printer"
+   ],
+   "function": "PrintPropertiesDialog.set_values",
+   "module": "sportorg.gui.dialogs.print_properties",
+   "path": "sportorg/gui/dialogs/print_properties.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/print_properties.py:133]",
+   "values": []
+  },
+  {
+   "calls": [
+    {
+     "api": "PySide2.QtPrintSupport.QPrinter",
+     "direction": "device",
+     "format": "printer",
+     "line": 151,
+     "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/print_properties.py:151]"
+    },
+    {
+     "api": "PySide2.QtPrintSupport.QPrintDialog",
+     "direction": "device",
+     "format": "printer",
+     "line": 152,
+     "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/print_properties.py:152]"
+    }
+   ],
+   "context": "other",
+   "direction": "device",
+   "formats": [
+    "printer"
+   ],
+   "function": "PrintPropertiesDialog.select_printer",
+   "module": "sportorg.gui.dialogs.print_properties",
+   "path": "sportorg/gui/dialogs/print_properties.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/print_properties.py:151]",
+   "values": []
+  },
+  {
+   "calls": [
+    {
+     "api": "open",
+     "direction": "write",
+     "format": "text file",
+     "line": 81,
+     "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/rent_cards_dialog.py:81]"
+    }
+   ],
+   "context": "other",
+   "direction": "write",
+   "formats": [
+    "text file"
+   ],
+   "function": "RentCardsDialog.apply_changes_impl",
+   "module": "sportorg.gui.dialogs.rent_cards_dialog",
+   "path": "sportorg/gui/dialogs/rent_cards_dialog.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/rent_cards_dialog.py:81]",
+   "values": [
+    {
+     "kind": "encoding",
+     "origin": "keyword encoding of open",
+     "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/rent_cards_dialog.py:81]",
+     "text": "\"utf-8\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/gui/dialogs/rent_cards_dialog.py:81]"
+    },
+    {
+     "kind": "other",
+     "origin": "mode of open",
+     "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/rent_cards_dialog.py:81]",
+     "text": "\"w\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/gui/dialogs/rent_cards_dialog.py:81]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "docxtpl.DocxTemplate",
+     "direction": "read",
+     "format": "docx",
+     "line": 213,
+     "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/report_dialog.py:213]"
+    },
+    {
+     "api": ".save",
+     "direction": "write",
+     "format": "docx",
+     "line": 232,
+     "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/report_dialog.py:232]"
+    },
+    {
+     "api": "codecs.open",
+     "direction": "write",
+     "format": "text file",
+     "line": 258,
+     "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/report_dialog.py:258]"
+    },
+    {
+     "api": "codecs.open",
+     "direction": "write",
+     "format": "text file",
+     "line": 285,
+     "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/report_dialog.py:285]"
+    }
+   ],
+   "context": "other",
+   "direction": "both",
+   "formats": [
+    "docx",
+    "text file"
+   ],
+   "function": "ReportDialog.apply_changes_impl",
+   "module": "sportorg.gui.dialogs.report_dialog",
+   "path": "sportorg/gui/dialogs/report_dialog.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/report_dialog.py:213]",
+   "values": [
+    {
+     "kind": "byte-constant",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/report_dialog.py:159]",
+     "text": "2",
+     "use_tag": "[код: pysport@b548c35 sportorg/gui/dialogs/report_dialog.py:159]"
+    },
+    {
+     "kind": "byte-constant",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/report_dialog.py:167]",
+     "text": "3",
+     "use_tag": "[код: pysport@b548c35 sportorg/gui/dialogs/report_dialog.py:167]"
+    },
+    {
+     "kind": "byte-constant",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/report_dialog.py:181]",
+     "text": "4",
+     "use_tag": "[код: pysport@b548c35 sportorg/gui/dialogs/report_dialog.py:181]"
+    },
+    {
+     "kind": "extension",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/report_dialog.py:210]",
+     "text": "\".docx\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/gui/dialogs/report_dialog.py:210]"
+    },
+    {
+     "kind": "extension",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/report_dialog.py:226]",
+     "text": "\"MS Word file (*.docx)\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/gui/dialogs/report_dialog.py:226]"
+    },
+    {
+     "kind": "extension",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/report_dialog.py:235]",
+     "text": "\".csv\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/gui/dialogs/report_dialog.py:235]"
+    },
+    {
+     "kind": "extension",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/report_dialog.py:251]",
+     "text": "\"CSV file (*.csv)\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/gui/dialogs/report_dialog.py:251]"
+    },
+    {
+     "kind": "encoding",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/report_dialog.py:258]",
+     "text": "\"utf-8\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/gui/dialogs/report_dialog.py:258]"
+    },
+    {
+     "kind": "other",
+     "origin": "mode of codecs.open",
+     "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/report_dialog.py:258]",
+     "text": "\"w\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/gui/dialogs/report_dialog.py:258]"
+    },
+    {
+     "kind": "extension",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/report_dialog.py:278]",
+     "text": "\"HTML file (*.html)\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/gui/dialogs/report_dialog.py:278]"
+    },
+    {
+     "kind": "encoding",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/report_dialog.py:285]",
+     "text": "\"utf-8\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/gui/dialogs/report_dialog.py:285]"
+    },
+    {
+     "kind": "other",
+     "origin": "mode of codecs.open",
+     "tag": "[код: pysport@b548c35 sportorg/gui/dialogs/report_dialog.py:285]",
+     "text": "\"w\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/gui/dialogs/report_dialog.py:285]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "open",
+     "direction": "read",
+     "format": "text file",
+     "line": 64,
+     "tag": "[код: pysport@b548c35 sportorg/gui/main.py:64]"
+    },
+    {
+     "api": "open",
+     "direction": "read",
+     "format": "text file",
+     "line": 72,
+     "tag": "[код: pysport@b548c35 sportorg/gui/main.py:72]"
+    }
+   ],
+   "context": "other",
+   "direction": "read",
+   "formats": [
+    "text file"
+   ],
+   "function": "Application.set_status_comments",
+   "module": "sportorg.gui.main",
+   "path": "sportorg/gui/main.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/main.py:64]",
+   "values": [
+    {
+     "kind": "encoding",
+     "origin": "keyword encoding of open",
+     "tag": "[код: pysport@b548c35 sportorg/gui/main.py:64]",
+     "text": "\"utf-8\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/gui/main.py:64]"
+    },
+    {
+     "kind": "encoding",
+     "origin": "keyword encoding of open",
+     "tag": "[код: pysport@b548c35 sportorg/gui/main.py:72]",
+     "text": "\"utf-8\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/gui/main.py:72]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "open",
+     "direction": "read",
+     "format": "text file",
+     "line": 81,
+     "tag": "[код: pysport@b548c35 sportorg/gui/main.py:81]"
+    }
+   ],
+   "context": "other",
+   "direction": "read",
+   "formats": [
+    "text file"
+   ],
+   "function": "Application.set_countries",
+   "module": "sportorg.gui.main",
+   "path": "sportorg/gui/main.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/main.py:81]",
+   "values": [
+    {
+     "kind": "encoding",
+     "origin": "keyword encoding of open",
+     "tag": "[код: pysport@b548c35 sportorg/gui/main.py:81]",
+     "text": "\"utf-8\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/gui/main.py:81]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "open",
+     "direction": "read",
+     "format": "text file",
+     "line": 90,
+     "tag": "[код: pysport@b548c35 sportorg/gui/main.py:90]"
+    }
+   ],
+   "context": "other",
+   "direction": "read",
+   "formats": [
+    "text file"
+   ],
+   "function": "Application.set_groups",
+   "module": "sportorg.gui.main",
+   "path": "sportorg/gui/main.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/main.py:90]",
+   "values": [
+    {
+     "kind": "encoding",
+     "origin": "keyword encoding of open",
+     "tag": "[код: pysport@b548c35 sportorg/gui/main.py:90]",
+     "text": "\"utf-8\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/gui/main.py:90]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "open",
+     "direction": "read",
+     "format": "text file",
+     "line": 99,
+     "tag": "[код: pysport@b548c35 sportorg/gui/main.py:99]"
+    }
+   ],
+   "context": "other",
+   "direction": "read",
+   "formats": [
+    "text file"
+   ],
+   "function": "Application.set_names",
+   "module": "sportorg.gui.main",
+   "path": "sportorg/gui/main.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/main.py:99]",
+   "values": [
+    {
+     "kind": "encoding",
+     "origin": "keyword encoding of open",
+     "tag": "[код: pysport@b548c35 sportorg/gui/main.py:99]",
+     "text": "\"utf-8\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/gui/main.py:99]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "open",
+     "direction": "read",
+     "format": "text file",
+     "line": 108,
+     "tag": "[код: pysport@b548c35 sportorg/gui/main.py:108]"
+    }
+   ],
+   "context": "other",
+   "direction": "read",
+   "formats": [
+    "text file"
+   ],
+   "function": "Application.set_middle_names",
+   "module": "sportorg.gui.main",
+   "path": "sportorg/gui/main.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/main.py:108]",
+   "values": [
+    {
+     "kind": "encoding",
+     "origin": "keyword encoding of open",
+     "tag": "[код: pysport@b548c35 sportorg/gui/main.py:108]",
+     "text": "\"utf-8\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/gui/main.py:108]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "open",
+     "direction": "read",
+     "format": "text file",
+     "line": 117,
+     "tag": "[код: pysport@b548c35 sportorg/gui/main.py:117]"
+    }
+   ],
+   "context": "other",
+   "direction": "read",
+   "formats": [
+    "text file"
+   ],
+   "function": "Application.set_regions",
+   "module": "sportorg.gui.main",
+   "path": "sportorg/gui/main.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/main.py:117]",
+   "values": [
+    {
+     "kind": "encoding",
+     "origin": "keyword encoding of open",
+     "tag": "[код: pysport@b548c35 sportorg/gui/main.py:117]",
+     "text": "\"utf-8\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/gui/main.py:117]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "open",
+     "direction": "read",
+     "format": "text file",
+     "line": 126,
+     "tag": "[код: pysport@b548c35 sportorg/gui/main.py:126]"
+    }
+   ],
+   "context": "other",
+   "direction": "read",
+   "formats": [
+    "text file"
+   ],
+   "function": "Application.set_ranking",
+   "module": "sportorg.gui.main",
+   "path": "sportorg/gui/main.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/main.py:126]",
+   "values": [
+    {
+     "kind": "encoding",
+     "origin": "keyword encoding of open",
+     "tag": "[код: pysport@b548c35 sportorg/gui/main.py:126]",
+     "text": "\"utf-8\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/gui/main.py:126]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "open",
+     "direction": "read",
+     "format": "text file",
+     "line": 135,
+     "tag": "[код: pysport@b548c35 sportorg/gui/main.py:135]"
+    }
+   ],
+   "context": "other",
+   "direction": "read",
+   "formats": [
+    "text file"
+   ],
+   "function": "Application.set_ranking_ardf",
+   "module": "sportorg.gui.main",
+   "path": "sportorg/gui/main.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/main.py:135]",
+   "values": [
+    {
+     "kind": "encoding",
+     "origin": "keyword encoding of open",
+     "tag": "[код: pysport@b548c35 sportorg/gui/main.py:135]",
+     "text": "\"utf-8\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/gui/main.py:135]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "open",
+     "direction": "read",
+     "format": "text file",
+     "line": 144,
+     "tag": "[код: pysport@b548c35 sportorg/gui/main.py:144]"
+    }
+   ],
+   "context": "other",
+   "direction": "read",
+   "formats": [
+    "text file"
+   ],
+   "function": "Application.set_rent_cards",
+   "module": "sportorg.gui.main",
+   "path": "sportorg/gui/main.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/main.py:144]",
+   "values": [
+    {
+     "kind": "encoding",
+     "origin": "keyword encoding of open",
+     "tag": "[код: pysport@b548c35 sportorg/gui/main.py:144]",
+     "text": "\"utf-8\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/gui/main.py:144]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "open",
+     "direction": "read",
+     "format": "text file",
+     "line": 1158,
+     "tag": "[код: pysport@b548c35 sportorg/gui/main_window.py:1158]"
+    },
+    {
+     "api": "open",
+     "direction": "write",
+     "format": "text file",
+     "line": 1176,
+     "tag": "[код: pysport@b548c35 sportorg/gui/main_window.py:1176]"
+    }
+   ],
+   "context": "other",
+   "direction": "both",
+   "formats": [
+    "text file"
+   ],
+   "function": "MainWindow.lock_file",
+   "module": "sportorg.gui.main_window",
+   "path": "sportorg/gui/main_window.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/main_window.py:1158]",
+   "values": [
+    {
+     "kind": "extension",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/gui/main_window.py:1156]",
+     "text": "\".lock\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/gui/main_window.py:1156]"
+    },
+    {
+     "kind": "other",
+     "origin": "mode of open",
+     "tag": "[код: pysport@b548c35 sportorg/gui/main_window.py:1176]",
+     "text": "\"w\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/gui/main_window.py:1176]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "open",
+     "direction": "read",
+     "format": "text file",
+     "line": 397,
+     "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:397]"
+    }
+   ],
+   "context": "other",
+   "direction": "read",
+   "formats": [
+    "text file"
+   ],
+   "function": "RecoverySportorgHtmlAction.execute",
+   "module": "sportorg.gui.menu.actions",
+   "path": "sportorg/gui/menu/actions.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:397]",
+   "values": [
+    {
+     "kind": "extension",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:390]",
+     "text": "\"SportOrg HTML report (*.html)\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:390]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "open",
+     "direction": "unknown",
+     "format": "text file",
+     "line": 949,
+     "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:949]"
+    },
+    {
+     "api": "open",
+     "direction": "unknown",
+     "format": "text file",
+     "line": 956,
+     "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:956]"
+    }
+   ],
+   "context": "other",
+   "direction": "unknown",
+   "formats": [
+    "text file"
+   ],
+   "function": "ImportSportOrgAction.execute",
+   "module": "sportorg.gui.menu.actions",
+   "path": "sportorg/gui/menu/actions.py",
+   "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:949]",
+   "values": [
+    {
+     "kind": "extension",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:929]",
+     "text": "\"SportOrg (*.json)\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:929]"
+    },
+    {
+     "kind": "encoding",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:944]",
+     "text": "\"utf-8\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:944]"
+    },
+    {
+     "kind": "encoding",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:954]",
+     "text": "\"utf-8\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:954]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "configparser.ConfigParser",
+     "direction": "both",
+     "format": "INI",
+     "line": 16,
+     "tag": "[код: pysport@b548c35 sportorg/language.py:16]"
+    },
+    {
+     "api": ".read",
+     "direction": "read",
+     "format": "INI",
+     "line": 18,
+     "tag": "[код: pysport@b548c35 sportorg/language.py:18]"
+    }
+   ],
+   "context": "other",
+   "direction": "both",
+   "formats": [
+    "INI"
+   ],
+   "function": "_get_conf_locale_old",
+   "module": "sportorg.language",
+   "path": "sportorg/language.py",
+   "tag": "[код: pysport@b548c35 sportorg/language.py:16]",
+   "values": []
+  },
+  {
+   "calls": [
+    {
+     "api": ".read_text",
+     "direction": "read",
+     "format": "text file",
+     "line": 31,
+     "tag": "[код: pysport@b548c35 sportorg/language.py:31]"
+    },
+    {
+     "api": "json.loads",
+     "direction": "read",
+     "format": "JSON",
+     "line": 31,
+     "tag": "[код: pysport@b548c35 sportorg/language.py:31]"
+    }
+   ],
+   "context": "other",
+   "direction": "read",
+   "formats": [
+    "JSON",
+    "text file"
+   ],
+   "function": "_get_conf_locale",
+   "module": "sportorg.language",
+   "path": "sportorg/language.py",
+   "tag": "[код: pysport@b548c35 sportorg/language.py:31]",
+   "values": [
+    {
+     "kind": "encoding",
+     "origin": "keyword encoding of .read_text",
+     "tag": "[код: pysport@b548c35 sportorg/language.py:31]",
+     "text": "\"utf-8\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/language.py:31]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "polib.pofile",
+     "direction": "read",
+     "format": "PO",
+     "line": 44,
+     "tag": "[код: pysport@b548c35 sportorg/language.py:44]"
+    }
+   ],
+   "context": "other",
+   "direction": "read",
+   "formats": [
+    "PO"
+   ],
+   "function": "generate_mo",
+   "module": "sportorg.language",
+   "path": "sportorg/language.py",
+   "tag": "[код: pysport@b548c35 sportorg/language.py:44]",
+   "values": [
+    {
+     "kind": "extension",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/language.py:44]",
+     "text": "\".po\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/language.py:44]"
+    },
+    {
+     "kind": "extension",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/language.py:45]",
+     "text": "\".mo\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/language.py:45]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "_serial.write",
+     "direction": "write",
+     "format": "Huichang serial",
+     "line": 87,
+     "tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:87]"
+    }
+   ],
+   "context": "lib:huichang",
+   "direction": "write",
+   "formats": [
+    "Huichang serial"
+   ],
+   "function": "Huichang.send_command",
+   "module": "sportorg.libs.huichang.huichang",
+   "path": "sportorg/libs/huichang/huichang.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:87]",
+   "values": [
+    {
+     "kind": "offset-or-width",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:80]",
+     "text": "1",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:80]"
+    },
+    {
+     "kind": "byte-constant",
+     "origin": "constant START_SEQUENCE",
+     "tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:29]",
+     "text": "b\"\\xaa\\xbb\\xff\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:82]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "<protocol>",
+     "direction": "encode",
+     "format": "Huichang serial",
+     "line": 107,
+     "tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:107]"
+    }
+   ],
+   "context": "lib:huichang",
+   "direction": "encode",
+   "formats": [
+    "Huichang serial"
+   ],
+   "function": "Huichang._set_master_mode",
+   "module": "sportorg.libs.huichang.huichang",
+   "path": "sportorg/libs/huichang/huichang.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:107]",
+   "values": [
+    {
+     "kind": "byte-constant",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:107]",
+     "text": "b\"\\x02\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:107]"
+    },
+    {
+     "kind": "byte-constant",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:109]",
+     "text": "b\"\\x01\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:109]"
+    },
+    {
+     "kind": "byte-constant",
+     "origin": "constant CMD_SET_MASTER_MODE",
+     "tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:33]",
+     "text": "b\"\\x28\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:110]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "serial.Serial",
+     "direction": "device",
+     "format": "serial",
+     "line": 132,
+     "tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:132]"
+    }
+   ],
+   "context": "lib:huichang",
+   "direction": "device",
+   "formats": [
+    "serial"
+   ],
+   "function": "Huichang._connect_master_station",
+   "module": "sportorg.libs.huichang.huichang",
+   "path": "sportorg/libs/huichang/huichang.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:132]",
+   "values": [
+    {
+     "kind": "baudrate",
+     "origin": "keyword baudrate of serial.Serial",
+     "tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:132]",
+     "text": "9600",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:132]"
+    },
+    {
+     "kind": "timeout",
+     "origin": "keyword timeout of serial.Serial",
+     "tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:132]",
+     "text": "3",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:132]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "serial.read",
+     "direction": "read",
+     "format": "Huichang serial",
+     "line": 159,
+     "tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:159]"
+    },
+    {
+     "api": "serial.read",
+     "direction": "read",
+     "format": "Huichang serial",
+     "line": 166,
+     "tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:166]"
+    },
+    {
+     "api": "serial.read",
+     "direction": "read",
+     "format": "Huichang serial",
+     "line": 167,
+     "tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:167]"
+    },
+    {
+     "api": "serial.read",
+     "direction": "read",
+     "format": "Huichang serial",
+     "line": 172,
+     "tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:172]"
+    },
+    {
+     "api": "serial.read",
+     "direction": "read",
+     "format": "Huichang serial",
+     "line": 173,
+     "tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:173]"
+    },
+    {
+     "api": "serial.read",
+     "direction": "read",
+     "format": "Huichang serial",
+     "line": 174,
+     "tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:174]"
+    },
+    {
+     "api": "serial.read",
+     "direction": "read",
+     "format": "Huichang serial",
+     "line": 175,
+     "tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:175]"
+    },
+    {
+     "api": "serial.read",
+     "direction": "read",
+     "format": "Huichang serial",
+     "line": 181,
+     "tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:181]"
+    },
+    {
+     "api": "serial.read",
+     "direction": "read",
+     "format": "Huichang serial",
+     "line": 191,
+     "tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:191]"
+    },
+    {
+     "api": "serial.read",
+     "direction": "read",
+     "format": "Huichang serial",
+     "line": 192,
+     "tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:192]"
+    },
+    {
+     "api": "serial.read",
+     "direction": "read",
+     "format": "Huichang serial",
+     "line": 204,
+     "tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:204]"
+    },
+    {
+     "api": "serial.read",
+     "direction": "read",
+     "format": "Huichang serial",
+     "line": 205,
+     "tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:205]"
+    }
+   ],
+   "context": "lib:huichang",
+   "direction": "read",
+   "formats": [
+    "Huichang serial"
+   ],
+   "function": "Huichang._read_response",
+   "module": "sportorg.libs.huichang.huichang",
+   "path": "sportorg/libs/huichang/huichang.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:159]",
+   "values": [
+    {
+     "kind": "byte-constant",
+     "origin": "constant START_SEQUENCE",
+     "tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:29]",
+     "text": "b\"\\xaa\\xbb\\xff\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:165]"
+    },
+    {
+     "kind": "byte-constant",
+     "origin": "constant START_SEQUENCE",
+     "tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:29]",
+     "text": "b\"\\xaa\\xbb\\xff\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:166]"
+    },
+    {
+     "kind": "byte-constant",
+     "origin": "constant START_SEQUENCE",
+     "tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:29]",
+     "text": "b\"\\xaa\\xbb\\xff\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:167]"
+    },
+    {
+     "kind": "offset-or-width",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:167]",
+     "text": "2",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:167]"
+    },
+    {
+     "kind": "byte-constant",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:171]",
+     "text": "b\"\\x1b\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:171]"
+    },
+    {
+     "kind": "byte-constant",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:172]",
+     "text": "b\"\\x40\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:172]"
+    },
+    {
+     "kind": "byte-constant",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:173]",
+     "text": "b\"\\x20\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:173]"
+    },
+    {
+     "kind": "byte-constant",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:174]",
+     "text": "b\"\\x0d\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:174]"
+    },
+    {
+     "kind": "byte-constant",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:175]",
+     "text": "b\"\\x0a\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:175]"
+    },
+    {
+     "kind": "byte-constant",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:182]",
+     "text": "b\"\\x1b\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:182]"
+    },
+    {
+     "kind": "byte-constant",
+     "origin": "constant CMD_CARD_DATA",
+     "tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:32]",
+     "text": "b\"\\x20\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:199]"
+    },
+    {
+     "kind": "byte-constant",
+     "origin": "constant CMD_CONTACT_CARD_DATA",
+     "tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:35]",
+     "text": "b\"\\x60\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:199]"
+    },
+    {
+     "kind": "offset-or-width",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:204]",
+     "text": "1",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:204]"
+    },
+    {
+     "kind": "byte-constant",
+     "origin": "constant CMD_CARD_BATTERY_LEVEL",
+     "tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:38]",
+     "text": "b\"\\xa1\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:212]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "<protocol>",
+     "direction": "decode",
+     "format": "Huichang serial",
+     "line": 237,
+     "tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:237]"
+    }
+   ],
+   "context": "lib:huichang",
+   "direction": "decode",
+   "formats": [
+    "Huichang serial"
+   ],
+   "function": "Huichang._process_response",
+   "module": "sportorg.libs.huichang.huichang",
+   "path": "sportorg/libs/huichang/huichang.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:237]",
+   "values": [
+    {
+     "kind": "byte-constant",
+     "origin": "constant CMD_TIME_SYNC",
+     "tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:31]",
+     "text": "b\"\\x0a\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:234]"
+    },
+    {
+     "kind": "byte-constant",
+     "origin": "constant CMD_SET_MASTER_MODE",
+     "tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:33]",
+     "text": "b\"\\x28\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:234]"
+    },
+    {
+     "kind": "byte-constant",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:237]",
+     "text": "b\"\\xcc\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:237]"
+    },
+    {
+     "kind": "byte-constant",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:240]",
+     "text": "b\"\\xee\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:240]"
+    },
+    {
+     "kind": "byte-constant",
+     "origin": "constant CMD_CARD_DATA",
+     "tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:32]",
+     "text": "b\"\\x20\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:242]"
+    },
+    {
+     "kind": "byte-constant",
+     "origin": "constant CMD_CONTACT_CARD_DATA",
+     "tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:35]",
+     "text": "b\"\\x60\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:242]"
+    },
+    {
+     "kind": "offset-or-width",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:244]",
+     "text": "4",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:244]"
+    },
+    {
+     "kind": "offset-or-width",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:245]",
+     "text": "5",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:245]"
+    },
+    {
+     "kind": "offset-or-width",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:245]",
+     "text": "9",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:245]"
+    },
+    {
+     "kind": "offset-or-width",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:246]",
+     "text": "10",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:246]"
+    },
+    {
+     "kind": "offset-or-width",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:246]",
+     "text": "14",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:246]"
+    },
+    {
+     "kind": "offset-or-width",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:247]",
+     "text": "15",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:247]"
+    },
+    {
+     "kind": "offset-or-width",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:247]",
+     "text": "18",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:247]"
+    },
+    {
+     "kind": "offset-or-width",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:250]",
+     "text": "18",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:250]"
+    },
+    {
+     "kind": "offset-or-width",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:250]",
+     "text": "4",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:250]"
+    },
+    {
+     "kind": "offset-or-width",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:252]",
+     "text": "1",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:252]"
+    },
+    {
+     "kind": "offset-or-width",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:252]",
+     "text": "4",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:252]"
+    },
+    {
+     "kind": "byte-constant",
+     "origin": "constant CMD_CARD_DATA",
+     "tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:32]",
+     "text": "b\"\\x20\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:255]"
+    },
+    {
+     "kind": "timeout",
+     "origin": "keyword timeout of self._read_response",
+     "tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:258]",
+     "text": "0.2",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:258]"
+    },
+    {
+     "kind": "byte-constant",
+     "origin": "constant CMD_CARD_BATTERY_LEVEL",
+     "tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:38]",
+     "text": "b\"\\xa1\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:259]"
+    },
+    {
+     "kind": "byte-constant",
+     "origin": "constant CMD_CARD_BATTERY_LEVEL",
+     "tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:38]",
+     "text": "b\"\\xa1\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:269]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "<protocol>",
+     "direction": "decode",
+     "format": "Huichang serial",
+     "line": 294,
+     "tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:294]"
+    }
+   ],
+   "context": "lib:huichang",
+   "direction": "decode",
+   "formats": [
+    "Huichang serial"
+   ],
+   "function": "Huichang.crc8",
+   "module": "sportorg.libs.huichang.huichang",
+   "path": "sportorg/libs/huichang/huichang.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:294]",
+   "values": [
+    {
+     "kind": "byte-constant",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:289]",
+     "text": "0xFF",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:289]"
+    },
+    {
+     "kind": "offset-or-width",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:293]",
+     "text": "8",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:293]"
+    },
+    {
+     "kind": "byte-constant",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:294]",
+     "text": "0x80",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:294]"
+    },
+    {
+     "kind": "byte-constant",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:295]",
+     "text": "0xFF",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:295]"
+    },
+    {
+     "kind": "offset-or-width",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:295]",
+     "text": "1",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:295]"
+    },
+    {
+     "kind": "byte-constant",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:297]",
+     "text": "0xFF",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:297]"
+    },
+    {
+     "kind": "offset-or-width",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:297]",
+     "text": "1",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:297]"
+    },
+    {
+     "kind": "byte-constant",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:298]",
+     "text": "0x00",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:298]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": ".write",
+     "direction": "write",
+     "format": "XML",
+     "line": 56,
+     "tag": "[код: pysport@b548c35 sportorg/libs/iof/iof.py:56]"
+    }
+   ],
+   "context": "lib:iof",
+   "direction": "write",
+   "formats": [
+    "XML"
+   ],
+   "function": "BaseElement.write",
+   "module": "sportorg.libs.iof.iof",
+   "path": "sportorg/libs/iof/iof.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/iof/iof.py:56]",
+   "values": []
+  },
+  {
+   "calls": [
+    {
+     "api": "xml.etree.ElementTree.parse",
+     "direction": "read",
+     "format": "XML",
+     "line": 15,
+     "tag": "[код: pysport@b548c35 sportorg/libs/iof/parser.py:15]"
+    }
+   ],
+   "context": "lib:iof",
+   "direction": "read",
+   "formats": [
+    "XML"
+   ],
+   "function": "parse",
+   "module": "sportorg.libs.iof.parser",
+   "path": "sportorg/libs/iof/parser.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/iof/parser.py:15]",
+   "values": [
+    {
+     "kind": "url",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/iof/parser.py:12]",
+     "text": "\"http://www.orienteering.org/datastandard/3.0\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/iof/parser.py:12]"
+    },
+    {
+     "kind": "url",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/iof/parser.py:13]",
+     "text": "\"http://orgeo.ru/iof-xml-extensions/3.0\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/iof/parser.py:13]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "open",
+     "direction": "read",
+     "format": "text file",
+     "line": 72,
+     "tag": "[код: pysport@b548c35 sportorg/libs/ocad/ocad.py:72]"
+    },
+    {
+     "api": "file.readlines",
+     "direction": "read",
+     "format": "file object (parameter)",
+     "line": 77,
+     "tag": "[код: pysport@b548c35 sportorg/libs/ocad/ocad.py:77]"
+    }
+   ],
+   "context": "lib:ocad",
+   "direction": "read",
+   "formats": [
+    "file object (parameter)",
+    "text file"
+   ],
+   "function": "ClassesV8.parse",
+   "module": "sportorg.libs.ocad.ocad",
+   "path": "sportorg/libs/ocad/ocad.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/ocad/ocad.py:72]",
+   "values": [
+    {
+     "kind": "encoding",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/ocad/ocad.py:71]",
+     "text": "\"windows-1251\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/ocad/ocad.py:71]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "xml.etree.ElementTree.parse",
+     "direction": "read",
+     "format": "XML",
+     "line": 202,
+     "tag": "[код: pysport@b548c35 sportorg/libs/ocad/ocad.py:202]"
+    }
+   ],
+   "context": "lib:ocad",
+   "direction": "read",
+   "formats": [
+    "XML"
+   ],
+   "function": "IofXMLv3.parse",
+   "module": "sportorg.libs.ocad.ocad",
+   "path": "sportorg/libs/ocad/ocad.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/ocad/ocad.py:202]",
+   "values": []
+  },
+  {
+   "calls": [
+    {
+     "api": ".open",
+     "direction": "read",
+     "format": "text file",
+     "line": 16,
+     "tag": "[код: pysport@b548c35 sportorg/libs/settings/__init__.py:16]"
+    },
+    {
+     "api": "json.dump",
+     "direction": "write",
+     "format": "JSON",
+     "line": 17,
+     "tag": "[код: pysport@b548c35 sportorg/libs/settings/__init__.py:17]"
+    }
+   ],
+   "context": "lib:settings",
+   "direction": "both",
+   "formats": [
+    "JSON",
+    "text file"
+   ],
+   "function": "save_settings",
+   "module": "sportorg.libs.settings",
+   "path": "sportorg/libs/settings/__init__.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/settings/__init__.py:16]",
+   "values": [
+    {
+     "kind": "encoding",
+     "origin": "keyword encoding of .open",
+     "tag": "[код: pysport@b548c35 sportorg/libs/settings/__init__.py:16]",
+     "text": "\"utf-8\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/settings/__init__.py:16]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": ".open",
+     "direction": "read",
+     "format": "text file",
+     "line": 39,
+     "tag": "[код: pysport@b548c35 sportorg/libs/settings/__init__.py:39]"
+    },
+    {
+     "api": "json.load",
+     "direction": "read",
+     "format": "JSON",
+     "line": 40,
+     "tag": "[код: pysport@b548c35 sportorg/libs/settings/__init__.py:40]"
+    }
+   ],
+   "context": "lib:settings",
+   "direction": "read",
+   "formats": [
+    "JSON",
+    "text file"
+   ],
+   "function": "_load_settings",
+   "module": "sportorg.libs.settings",
+   "path": "sportorg/libs/settings/__init__.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/settings/__init__.py:39]",
+   "values": [
+    {
+     "kind": "encoding",
+     "origin": "keyword encoding of .open",
+     "tag": "[код: pysport@b548c35 sportorg/libs/settings/__init__.py:39]",
+     "text": "\"utf-8\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/settings/__init__.py:39]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "open",
+     "direction": "write",
+     "format": "binary file",
+     "line": 74,
+     "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:74]"
+    }
+   ],
+   "context": "lib:sfr",
+   "direction": "write",
+   "formats": [
+    "binary file"
+   ],
+   "function": "SFRReader.__init__",
+   "module": "sportorg.libs.sfr.sfrreader",
+   "path": "sportorg/libs/sfr/sfrreader.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:74]",
+   "values": [
+    {
+     "kind": "other",
+     "origin": "mode of open",
+     "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:74]",
+     "text": "\"ab\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:74]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "<protocol>",
+     "direction": "decode",
+     "format": "SFR HID",
+     "line": 100,
+     "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:100]"
+    }
+   ],
+   "context": "lib:sfr",
+   "direction": "decode",
+   "formats": [
+    "SFR HID"
+   ],
+   "function": "SFRReader.check_sum",
+   "module": "sportorg.libs.sfr.sfrreader",
+   "path": "sportorg/libs/sfr/sfrreader.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:100]",
+   "values": [
+    {
+     "kind": "byte-constant",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:100]",
+     "text": "0xFF",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:100]"
+    },
+    {
+     "kind": "byte-constant",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:101]",
+     "text": "0x100",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:101]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "<protocol>",
+     "direction": "decode",
+     "format": "SFR HID",
+     "line": 250,
+     "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:250]"
+    }
+   ],
+   "context": "lib:sfr",
+   "direction": "decode",
+   "formats": [
+    "SFR HID"
+   ],
+   "function": "SFRReader._read_bib",
+   "module": "sportorg.libs.sfr.sfrreader",
+   "path": "sportorg/libs/sfr/sfrreader.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:250]",
+   "values": [
+    {
+     "kind": "offset-or-width",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:250]",
+     "text": "200",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:250]"
+    },
+    {
+     "kind": "offset-or-width",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:250]",
+     "text": "40000",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:250]"
+    },
+    {
+     "kind": "offset-or-width",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:250]",
+     "text": "5",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:250]"
+    },
+    {
+     "kind": "offset-or-width",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:250]",
+     "text": "6",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:250]"
+    },
+    {
+     "kind": "offset-or-width",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:250]",
+     "text": "7",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:250]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "<protocol>",
+     "direction": "decode",
+     "format": "SFR HID",
+     "line": 255,
+     "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:255]"
+    }
+   ],
+   "context": "lib:sfr",
+   "direction": "decode",
+   "formats": [
+    "SFR HID"
+   ],
+   "function": "SFRReader._read_data_counter",
+   "module": "sportorg.libs.sfr.sfrreader",
+   "path": "sportorg/libs/sfr/sfrreader.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:255]",
+   "values": [
+    {
+     "kind": "offset-or-width",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:255]",
+     "text": "1",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:255]"
+    },
+    {
+     "kind": "offset-or-width",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:255]",
+     "text": "5",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:255]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "pywinusb.hid.HidDeviceFilter",
+     "direction": "device",
+     "format": "HID",
+     "line": 281,
+     "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:281]"
+    },
+    {
+     "api": "device.set_raw_data_handler",
+     "direction": "read",
+     "format": "SFR HID",
+     "line": 296,
+     "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:296]"
+    }
+   ],
+   "context": "lib:sfr",
+   "direction": "both",
+   "formats": [
+    "HID",
+    "SFR HID"
+   ],
+   "function": "SFRReader._connect_reader",
+   "module": "sportorg.libs.sfr.sfrreader",
+   "path": "sportorg/libs/sfr/sfrreader.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:281]",
+   "values": [
+    {
+     "kind": "byte-constant",
+     "origin": "constant VENDOR_ID",
+     "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:41]",
+     "text": "0x2047",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:282]"
+    },
+    {
+     "kind": "byte-constant",
+     "origin": "constant PRODUCT_ID",
+     "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:42]",
+     "text": "0x301",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:282]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "<protocol>",
+     "direction": "decode",
+     "format": "SFR HID",
+     "line": 310,
+     "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:310]"
+    }
+   ],
+   "context": "lib:sfr",
+   "direction": "decode",
+   "formats": [
+    "SFR HID"
+   ],
+   "function": "SFRReader._decode_time",
+   "module": "sportorg.libs.sfr.sfrreader",
+   "path": "sportorg/libs/sfr/sfrreader.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:310]",
+   "values": [
+    {
+     "kind": "offset-or-width",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:309]",
+     "text": "2",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:309]"
+    },
+    {
+     "kind": "offset-or-width",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:310]",
+     "text": "10",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:310]"
+    },
+    {
+     "kind": "offset-or-width",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:310]",
+     "text": "16",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:310]"
+    },
+    {
+     "kind": "offset-or-width",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:311]",
+     "text": "10",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:311]"
+    },
+    {
+     "kind": "offset-or-width",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:311]",
+     "text": "16",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:311]"
+    },
+    {
+     "kind": "offset-or-width",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:312]",
+     "text": "10",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:312]"
+    },
+    {
+     "kind": "offset-or-width",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:312]",
+     "text": "16",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:312]"
+    },
+    {
+     "kind": "offset-or-width",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:312]",
+     "text": "2",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:312]"
+    },
+    {
+     "kind": "byte-constant",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:314]",
+     "text": "23",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:314]"
+    },
+    {
+     "kind": "byte-constant",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:314]",
+     "text": "59",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:314]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "<protocol>",
+     "direction": "decode",
+     "format": "SFR HID",
+     "line": 339,
+     "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:339]"
+    }
+   ],
+   "context": "lib:sfr",
+   "direction": "decode",
+   "formats": [
+    "SFR HID"
+   ],
+   "function": "SFRReader._decode_time_subseconds",
+   "module": "sportorg.libs.sfr.sfrreader",
+   "path": "sportorg/libs/sfr/sfrreader.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:339]",
+   "values": [
+    {
+     "kind": "offset-or-width",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:338]",
+     "text": "2",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:338]"
+    },
+    {
+     "kind": "offset-or-width",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:339]",
+     "text": "16",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:339]"
+    },
+    {
+     "kind": "offset-or-width",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:340]",
+     "text": "10",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:340]"
+    },
+    {
+     "kind": "offset-or-width",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:340]",
+     "text": "16",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:340]"
+    },
+    {
+     "kind": "offset-or-width",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:341]",
+     "text": "10",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:341]"
+    },
+    {
+     "kind": "offset-or-width",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:341]",
+     "text": "16",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:341]"
+    },
+    {
+     "kind": "offset-or-width",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:341]",
+     "text": "2",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:341]"
+    },
+    {
+     "kind": "offset-or-width",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:342]",
+     "text": "16",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:342]"
+    },
+    {
+     "kind": "byte-constant",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:344]",
+     "text": "59",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:344]"
+    },
+    {
+     "kind": "byte-constant",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:344]",
+     "text": "9",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:344]"
+    },
+    {
+     "kind": "byte-constant",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:352]",
+     "text": "20",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:352]"
+    },
+    {
+     "kind": "offset-or-width",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:356]",
+     "text": "20",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:356]"
+    },
+    {
+     "kind": "byte-constant",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:360]",
+     "text": "10",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:360]"
+    },
+    {
+     "kind": "offset-or-width",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:364]",
+     "text": "10",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:364]"
+    },
+    {
+     "kind": "byte-constant",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:366]",
+     "text": "10",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:366]"
+    },
+    {
+     "kind": "byte-constant",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:372]",
+     "text": "4",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:372]"
+    },
+    {
+     "kind": "offset-or-width",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:384]",
+     "text": "100000",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:384]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "<protocol>",
+     "direction": "decode",
+     "format": "SFR HID",
+     "line": 49,
+     "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrximporter.py:49]"
+    }
+   ],
+   "context": "lib:sfr",
+   "direction": "decode",
+   "formats": [
+    "SFR HID"
+   ],
+   "function": "import_sfrx",
+   "module": "sportorg.libs.sfr.sfrximporter",
+   "path": "sportorg/libs/sfr/sfrximporter.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrximporter.py:49]",
+   "values": [
+    {
+     "kind": "offset-or-width",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrximporter.py:23]",
+     "text": "1",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrximporter.py:23]"
+    },
+    {
+     "kind": "offset-or-width",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrximporter.py:49]",
+     "text": "1",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrximporter.py:49]"
+    },
+    {
+     "kind": "offset-or-width",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrximporter.py:138]",
+     "text": "1",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrximporter.py:138]"
+    },
+    {
+     "kind": "offset-or-width",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrximporter.py:171]",
+     "text": "2",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrximporter.py:171]"
+    },
+    {
+     "kind": "offset-or-width",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrximporter.py:174]",
+     "text": "4",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrximporter.py:174]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "<protocol>",
+     "direction": "decode",
+     "format": "SFR HID",
+     "line": 217,
+     "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrximporter.py:217]"
+    }
+   ],
+   "context": "lib:sfr",
+   "direction": "decode",
+   "formats": [
+    "SFR HID"
+   ],
+   "function": "convert_bib",
+   "module": "sportorg.libs.sfr.sfrximporter",
+   "path": "sportorg/libs/sfr/sfrximporter.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrximporter.py:217]",
+   "values": [
+    {
+     "kind": "byte-constant",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrximporter.py:214]",
+     "text": "10000",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrximporter.py:214]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "codecs.open",
+     "direction": "read",
+     "format": "text file",
+     "line": 18,
+     "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrxparser.py:18]"
+    }
+   ],
+   "context": "lib:sfr",
+   "direction": "read",
+   "formats": [
+    "text file"
+   ],
+   "function": "SFRXParser.parse",
+   "module": "sportorg.libs.sfr.sfrxparser",
+   "path": "sportorg/libs/sfr/sfrxparser.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrxparser.py:18]",
+   "values": [
+    {
+     "kind": "encoding",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrxparser.py:18]",
+     "text": "\"UTF-8\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrxparser.py:18]"
+    },
+    {
+     "kind": "other",
+     "origin": "mode of codecs.open",
+     "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrxparser.py:18]",
+     "text": "\"r\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrxparser.py:18]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "<protocol>",
+     "direction": "decode",
+     "format": "Sportiduino serial",
+     "line": 126,
+     "tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:126]"
+    }
+   ],
+   "context": "lib:sportiduino",
+   "direction": "decode",
+   "formats": [
+    "Sportiduino serial"
+   ],
+   "function": "Sportiduino.Version.__init__",
+   "module": "sportorg.libs.sportiduino.sportiduino",
+   "path": "sportorg/libs/sportiduino/sportiduino.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:126]",
+   "values": [
+    {
+     "kind": "byte-constant",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:120]",
+     "text": "100",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:120]"
+    },
+    {
+     "kind": "byte-constant",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:120]",
+     "text": "104",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:120]"
+    },
+    {
+     "kind": "offset-or-width",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:121]",
+     "text": "100",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:121]"
+    },
+    {
+     "kind": "offset-or-width",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:122]",
+     "text": "100",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:122]"
+    },
+    {
+     "kind": "offset-or-width",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:125]",
+     "text": "1",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:125]"
+    },
+    {
+     "kind": "offset-or-width",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:125]",
+     "text": "6",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:125]"
+    },
+    {
+     "kind": "byte-constant",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:126]",
+     "text": "0x0F",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:126]"
+    },
+    {
+     "kind": "offset-or-width",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:126]",
+     "text": "1",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:126]"
+    },
+    {
+     "kind": "offset-or-width",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:126]",
+     "text": "2",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:126]"
+    },
+    {
+     "kind": "byte-constant",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:127]",
+     "text": "0x03",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:127]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "<protocol>",
+     "direction": "decode",
+     "format": "Sportiduino serial",
+     "line": 156,
+     "tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:156]"
+    }
+   ],
+   "context": "lib:sportiduino",
+   "direction": "decode",
+   "formats": [
+    "Sportiduino serial"
+   ],
+   "function": "Sportiduino.Config.unpack",
+   "module": "sportorg.libs.sportiduino.sportiduino",
+   "path": "sportorg/libs/sportiduino/sportiduino.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:156]",
+   "values": [
+    {
+     "kind": "offset-or-width",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:156]",
+     "text": "15",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:156]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "serial.write",
+     "direction": "write",
+     "format": "Sportiduino serial",
+     "line": 189,
+     "tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:189]"
+    }
+   ],
+   "context": "lib:sportiduino",
+   "direction": "write",
+   "formats": [
+    "Sportiduino serial"
+   ],
+   "function": "Sportiduino.SerialProtocol.send_command",
+   "module": "sportorg.libs.sportiduino.sportiduino",
+   "path": "sportorg/libs/sportiduino/sportiduino.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:189]",
+   "values": [
+    {
+     "kind": "offset-or-width",
+     "origin": "constant MAX_DATA_LEN",
+     "tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:167]",
+     "text": "28",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:179]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "serial.read",
+     "direction": "read",
+     "format": "Sportiduino serial",
+     "line": 204,
+     "tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:204]"
+    },
+    {
+     "api": "serial.read",
+     "direction": "read",
+     "format": "Sportiduino serial",
+     "line": 215,
+     "tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:215]"
+    },
+    {
+     "api": "serial.read",
+     "direction": "read",
+     "format": "Sportiduino serial",
+     "line": 216,
+     "tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:216]"
+    },
+    {
+     "api": "serial.read",
+     "direction": "read",
+     "format": "Sportiduino serial",
+     "line": 230,
+     "tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:230]"
+    },
+    {
+     "api": "serial.read",
+     "direction": "read",
+     "format": "Sportiduino serial",
+     "line": 231,
+     "tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:231]"
+    }
+   ],
+   "context": "lib:sportiduino",
+   "direction": "read",
+   "formats": [
+    "Sportiduino serial"
+   ],
+   "function": "Sportiduino.SerialProtocol._read_response",
+   "module": "sportorg.libs.sportiduino.sportiduino",
+   "path": "sportorg/libs/sportiduino/sportiduino.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:204]",
+   "values": [
+    {
+     "kind": "offset-or-width",
+     "origin": "constant OFFSET",
+     "tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:166]",
+     "text": "0x1E",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:220]"
+    },
+    {
+     "kind": "offset-or-width",
+     "origin": "constant OFFSET",
+     "tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:166]",
+     "text": "0x1E",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:222]"
+    },
+    {
+     "kind": "offset-or-width",
+     "origin": "constant MAX_DATA_LEN",
+     "tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:167]",
+     "text": "28",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:229]"
+    },
+    {
+     "kind": "offset-or-width",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:256]",
+     "text": "1",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:256]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "<protocol>",
+     "direction": "encode",
+     "format": "Sportiduino serial",
+     "line": 436,
+     "tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:436]"
+    }
+   ],
+   "context": "lib:sportiduino",
+   "direction": "encode",
+   "formats": [
+    "Sportiduino serial"
+   ],
+   "function": "Sportiduino.init_card",
+   "module": "sportorg.libs.sportiduino.sportiduino",
+   "path": "sportorg/libs/sportiduino/sportiduino.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:436]",
+   "values": [
+    {
+     "kind": "byte-constant",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:436]",
+     "text": "b\"\\x00\\x00\\x00\\x00\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:436]"
+    },
+    {
+     "kind": "byte-constant",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:438]",
+     "text": "b\"\\x00\\x00\\x00\\x00\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:438]"
+    },
+    {
+     "kind": "offset-or-width",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:444]",
+     "text": "5",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:444]"
+    },
+    {
+     "kind": "offset-or-width",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:445]",
+     "text": "5",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:445]"
+    },
+    {
+     "kind": "byte-constant",
+     "origin": "constant CMD_INIT_CARD",
+     "tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:61]",
+     "text": "b\"\\x44\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:446]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "<protocol>",
+     "direction": "encode",
+     "format": "Sportiduino serial",
+     "line": 542,
+     "tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:542]"
+    }
+   ],
+   "context": "lib:sportiduino",
+   "direction": "encode",
+   "formats": [
+    "Sportiduino serial"
+   ],
+   "function": "Sportiduino.enable_continuous_read",
+   "module": "sportorg.libs.sportiduino.sportiduino",
+   "path": "sportorg/libs/sportiduino/sportiduino.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:542]",
+   "values": [
+    {
+     "kind": "byte-constant",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:542]",
+     "text": "b\"\\x01\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:542]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "<protocol>",
+     "direction": "encode",
+     "format": "Sportiduino serial",
+     "line": 546,
+     "tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:546]"
+    }
+   ],
+   "context": "lib:sportiduino",
+   "direction": "encode",
+   "formats": [
+    "Sportiduino serial"
+   ],
+   "function": "Sportiduino.disable_continuous_read",
+   "module": "sportorg.libs.sportiduino.sportiduino",
+   "path": "sportorg/libs/sportiduino/sportiduino.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:546]",
+   "values": [
+    {
+     "kind": "byte-constant",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:546]",
+     "text": "b\"\\x00\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:546]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "serial.Serial",
+     "direction": "device",
+     "format": "serial",
+     "line": 591,
+     "tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:591]"
+    },
+    {
+     "api": "_serial.reset_input_buffer",
+     "direction": "read",
+     "format": "Sportiduino serial",
+     "line": 600,
+     "tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:600]"
+    }
+   ],
+   "context": "lib:sportiduino",
+   "direction": "both",
+   "formats": [
+    "Sportiduino serial",
+    "serial"
+   ],
+   "function": "Sportiduino._connect_master_station",
+   "module": "sportorg.libs.sportiduino.sportiduino",
+   "path": "sportorg/libs/sportiduino/sportiduino.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:591]",
+   "values": [
+    {
+     "kind": "baudrate",
+     "origin": "keyword baudrate of serial.Serial",
+     "tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:591]",
+     "text": "38400",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:591]"
+    },
+    {
+     "kind": "timeout",
+     "origin": "keyword timeout of serial.Serial",
+     "tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:591]",
+     "text": "3",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:591]"
+    },
+    {
+     "kind": "timeout",
+     "origin": "keyword timeout of self.read_version",
+     "tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:617]",
+     "text": "2",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:617]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "<protocol>",
+     "direction": "both",
+     "format": "Sportiduino serial",
+     "line": 660,
+     "tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:660]"
+    }
+   ],
+   "context": "lib:sportiduino",
+   "direction": "both",
+   "formats": [
+    "Sportiduino serial"
+   ],
+   "function": "Sportiduino._to_str",
+   "module": "sportorg.libs.sportiduino.sportiduino",
+   "path": "sportorg/libs/sportiduino/sportiduino.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:660]",
+   "values": [
+    {
+     "kind": "offset-or-width",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:661]",
+     "text": "8",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:661]"
+    },
+    {
+     "kind": "offset-or-width",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:664]",
+     "text": "1",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:664]"
+    },
+    {
+     "kind": "byte-constant",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:665]",
+     "text": "0xFF",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:665]"
+    },
+    {
+     "kind": "offset-or-width",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:665]",
+     "text": "8",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:665]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "serial.Serial",
+     "direction": "device",
+     "format": "serial",
+     "line": 63,
+     "tag": "[код: pysport@b548c35 sportorg/libs/srpid/srpid.py:63]"
+    },
+    {
+     "api": "_serial.reset_input_buffer",
+     "direction": "read",
+     "format": "SRPID serial",
+     "line": 69,
+     "tag": "[код: pysport@b548c35 sportorg/libs/srpid/srpid.py:69]"
+    }
+   ],
+   "context": "lib:srpid",
+   "direction": "both",
+   "formats": [
+    "SRPID serial",
+    "serial"
+   ],
+   "function": "SRPid._conn_m_station",
+   "module": "sportorg.libs.srpid.srpid",
+   "path": "sportorg/libs/srpid/srpid.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/srpid/srpid.py:63]",
+   "values": [
+    {
+     "kind": "baudrate",
+     "origin": "keyword baudrate of serial.Serial",
+     "tag": "[код: pysport@b548c35 sportorg/libs/srpid/srpid.py:63]",
+     "text": "9600",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/srpid/srpid.py:63]"
+    },
+    {
+     "kind": "timeout",
+     "origin": "keyword timeout of serial.Serial",
+     "tag": "[код: pysport@b548c35 sportorg/libs/srpid/srpid.py:63]",
+     "text": "5",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/srpid/srpid.py:63]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "<protocol>",
+     "direction": "decode",
+     "format": "SRPID serial",
+     "line": 83,
+     "tag": "[код: pysport@b548c35 sportorg/libs/srpid/srpid.py:83]"
+    }
+   ],
+   "context": "lib:srpid",
+   "direction": "decode",
+   "formats": [
+    "SRPID serial"
+   ],
+   "function": "SRPid.read_ver",
+   "module": "sportorg.libs.srpid.srpid",
+   "path": "sportorg/libs/srpid/srpid.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/srpid/srpid.py:83]",
+   "values": [
+    {
+     "kind": "byte-constant",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/srpid/srpid.py:83]",
+     "text": "b\"\\x32\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/srpid/srpid.py:83]"
+    },
+    {
+     "kind": "byte-constant",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/srpid/srpid.py:84]",
+     "text": "b\"\\x72\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/srpid/srpid.py:84]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "_serial.write",
+     "direction": "write",
+     "format": "SRPID serial",
+     "line": 108,
+     "tag": "[код: pysport@b548c35 sportorg/libs/srpid/srpid.py:108]"
+    }
+   ],
+   "context": "lib:srpid",
+   "direction": "write",
+   "formats": [
+    "SRPID serial"
+   ],
+   "function": "SRPid._send_command",
+   "module": "sportorg.libs.srpid.srpid",
+   "path": "sportorg/libs/srpid/srpid.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/srpid/srpid.py:108]",
+   "values": [
+    {
+     "kind": "byte-constant",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/srpid/srpid.py:90]",
+     "text": "b\"\\0\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/srpid/srpid.py:90]"
+    },
+    {
+     "kind": "byte-constant",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/srpid/srpid.py:90]",
+     "text": "b\"\\xce\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/srpid/srpid.py:90]"
+    },
+    {
+     "kind": "byte-constant",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/srpid/srpid.py:93]",
+     "text": "b\"\\xc1\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/srpid/srpid.py:93]"
+    },
+    {
+     "kind": "byte-constant",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/srpid/srpid.py:95]",
+     "text": "b\"\\0\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/srpid/srpid.py:95]"
+    },
+    {
+     "kind": "byte-constant",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/srpid/srpid.py:96]",
+     "text": "b\"\\0\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/srpid/srpid.py:96]"
+    },
+    {
+     "kind": "byte-constant",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/srpid/srpid.py:97]",
+     "text": "b\"\\0\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/srpid/srpid.py:97]"
+    },
+    {
+     "kind": "byte-constant",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/srpid/srpid.py:98]",
+     "text": "b\"\\0\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/srpid/srpid.py:98]"
+    },
+    {
+     "kind": "byte-constant",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/srpid/srpid.py:99]",
+     "text": "b\"\\0\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/srpid/srpid.py:99]"
+    },
+    {
+     "kind": "byte-constant",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/srpid/srpid.py:100]",
+     "text": "b\"\\0\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/srpid/srpid.py:100]"
+    },
+    {
+     "kind": "byte-constant",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/srpid/srpid.py:101]",
+     "text": "b\"\\xce\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/srpid/srpid.py:101]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "<protocol>",
+     "direction": "decode",
+     "format": "SRPID serial",
+     "line": 134,
+     "tag": "[код: pysport@b548c35 sportorg/libs/srpid/srpid.py:134]"
+    }
+   ],
+   "context": "lib:srpid",
+   "direction": "decode",
+   "formats": [
+    "SRPID serial"
+   ],
+   "function": "SRPid.read_chip",
+   "module": "sportorg.libs.srpid.srpid",
+   "path": "sportorg/libs/srpid/srpid.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/srpid/srpid.py:134]",
+   "values": [
+    {
+     "kind": "byte-constant",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/srpid/srpid.py:134]",
+     "text": "b\"\\x2f\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/srpid/srpid.py:134]"
+    },
+    {
+     "kind": "byte-constant",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/srpid/srpid.py:135]",
+     "text": "b\"\\x70\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/srpid/srpid.py:135]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "_serial.read",
+     "direction": "read",
+     "format": "SRPID serial",
+     "line": 149,
+     "tag": "[код: pysport@b548c35 sportorg/libs/srpid/srpid.py:149]"
+    },
+    {
+     "api": "_serial.read",
+     "direction": "read",
+     "format": "SRPID serial",
+     "line": 158,
+     "tag": "[код: pysport@b548c35 sportorg/libs/srpid/srpid.py:158]"
+    },
+    {
+     "api": "_serial.read",
+     "direction": "read",
+     "format": "SRPID serial",
+     "line": 159,
+     "tag": "[код: pysport@b548c35 sportorg/libs/srpid/srpid.py:159]"
+    },
+    {
+     "api": "_serial.read",
+     "direction": "read",
+     "format": "SRPID serial",
+     "line": 161,
+     "tag": "[код: pysport@b548c35 sportorg/libs/srpid/srpid.py:161]"
+    },
+    {
+     "api": "_serial.read",
+     "direction": "read",
+     "format": "SRPID serial",
+     "line": 162,
+     "tag": "[код: pysport@b548c35 sportorg/libs/srpid/srpid.py:162]"
+    }
+   ],
+   "context": "lib:srpid",
+   "direction": "read",
+   "formats": [
+    "SRPID serial"
+   ],
+   "function": "SRPid._get_response",
+   "module": "sportorg.libs.srpid.srpid",
+   "path": "sportorg/libs/srpid/srpid.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/srpid/srpid.py:149]",
+   "values": [
+    {
+     "kind": "byte-constant",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/srpid/srpid.py:152]",
+     "text": "b\"\\xec\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/srpid/srpid.py:152]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "<protocol>",
+     "direction": "encode",
+     "format": "SRPID serial",
+     "line": 175,
+     "tag": "[код: pysport@b548c35 sportorg/libs/srpid/srpid.py:175]"
+    }
+   ],
+   "context": "lib:srpid",
+   "direction": "encode",
+   "formats": [
+    "SRPID serial"
+   ],
+   "function": "SRPid.beep_ok",
+   "module": "sportorg.libs.srpid.srpid",
+   "path": "sportorg/libs/srpid/srpid.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/srpid/srpid.py:175]",
+   "values": [
+    {
+     "kind": "byte-constant",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/srpid/srpid.py:175]",
+     "text": "b\"\\x36\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/srpid/srpid.py:175]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "<protocol>",
+     "direction": "both",
+     "format": "SRPID serial",
+     "line": 206,
+     "tag": "[код: pysport@b548c35 sportorg/libs/srpid/srpid.py:206]"
+    }
+   ],
+   "context": "lib:srpid",
+   "direction": "both",
+   "formats": [
+    "SRPID serial"
+   ],
+   "function": "SRPid._to_str",
+   "module": "sportorg.libs.srpid.srpid",
+   "path": "sportorg/libs/srpid/srpid.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/srpid/srpid.py:206]",
+   "values": [
+    {
+     "kind": "offset-or-width",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/srpid/srpid.py:207]",
+     "text": "8",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/srpid/srpid.py:207]"
+    },
+    {
+     "kind": "offset-or-width",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/srpid/srpid.py:210]",
+     "text": "1",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/srpid/srpid.py:210]"
+    },
+    {
+     "kind": "byte-constant",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/srpid/srpid.py:211]",
+     "text": "0xFF",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/srpid/srpid.py:211]"
+    },
+    {
+     "kind": "offset-or-width",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/srpid/srpid.py:211]",
+     "text": "8",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/srpid/srpid.py:211]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "<protocol>",
+     "direction": "decode",
+     "format": "SRPID serial",
+     "line": 216,
+     "tag": "[код: pysport@b548c35 sportorg/libs/srpid/srpid.py:216]"
+    }
+   ],
+   "context": "lib:srpid",
+   "direction": "decode",
+   "formats": [
+    "SRPID serial"
+   ],
+   "function": "SRPid._preprocess_response",
+   "module": "sportorg.libs.srpid.srpid",
+   "path": "sportorg/libs/srpid/srpid.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/srpid/srpid.py:216]",
+   "values": [
+    {
+     "kind": "byte-constant",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/srpid/srpid.py:216]",
+     "text": "b\"\\x76\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/srpid/srpid.py:216]"
+    },
+    {
+     "kind": "byte-constant",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/srpid/srpid.py:217]",
+     "text": "b\"\\x01\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/srpid/srpid.py:217]"
+    },
+    {
+     "kind": "byte-constant",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/srpid/srpid.py:219]",
+     "text": "b\"\\x02\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/srpid/srpid.py:219]"
+    },
+    {
+     "kind": "byte-constant",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/srpid/srpid.py:221]",
+     "text": "b\"\\x03\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/srpid/srpid.py:221]"
+    },
+    {
+     "kind": "byte-constant",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/srpid/srpid.py:225]",
+     "text": "b\"\\x75\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/srpid/srpid.py:225]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "requests.post",
+     "direction": "write",
+     "format": "HTTP",
+     "line": 27,
+     "tag": "[код: pysport@b548c35 sportorg/libs/telegram/telegram.py:27]"
+    }
+   ],
+   "context": "lib:telegram",
+   "direction": "write",
+   "formats": [
+    "HTTP"
+   ],
+   "function": "Telegram.send_message",
+   "module": "sportorg.libs.telegram.telegram",
+   "path": "sportorg/libs/telegram/telegram.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/telegram/telegram.py:27]",
+   "values": [
+    {
+     "kind": "url",
+     "origin": "first argument of requests.post",
+     "tag": "[код: pysport@b548c35 sportorg/libs/telegram/telegram.py:27]",
+     "text": "\"sendMessage\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/telegram/telegram.py:27]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "open",
+     "direction": "read",
+     "format": "text file",
+     "line": 42,
+     "tag": "[код: pysport@b548c35 sportorg/libs/template/template.py:42]"
+    },
+    {
+     "api": "jinja2.Template",
+     "direction": "read",
+     "format": "jinja2",
+     "line": 45,
+     "tag": "[код: pysport@b548c35 sportorg/libs/template/template.py:45]"
+    },
+    {
+     "api": ".render",
+     "direction": "write",
+     "format": "jinja2",
+     "line": 46,
+     "tag": "[код: pysport@b548c35 sportorg/libs/template/template.py:46]"
+    }
+   ],
+   "context": "lib:template",
+   "direction": "both",
+   "formats": [
+    "jinja2",
+    "text file"
+   ],
+   "function": "get_text_from_path",
+   "module": "sportorg.libs.template.template",
+   "path": "sportorg/libs/template/template.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/template/template.py:42]",
+   "values": [
+    {
+     "kind": "encoding",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/libs/template/template.py:41]",
+     "text": "\"utf-8\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/template/template.py:41]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "jinja2.Environment",
+     "direction": "read",
+     "format": "jinja2",
+     "line": 54,
+     "tag": "[код: pysport@b548c35 sportorg/libs/template/template.py:54]"
+    },
+    {
+     "api": "jinja2.FileSystemLoader",
+     "direction": "read",
+     "format": "jinja2",
+     "line": 54,
+     "tag": "[код: pysport@b548c35 sportorg/libs/template/template.py:54]"
+    },
+    {
+     "api": ".render",
+     "direction": "write",
+     "format": "jinja2",
+     "line": 61,
+     "tag": "[код: pysport@b548c35 sportorg/libs/template/template.py:61]"
+    }
+   ],
+   "context": "lib:template",
+   "direction": "both",
+   "formats": [
+    "jinja2"
+   ],
+   "function": "get_text_from_template",
+   "module": "sportorg.libs.template.template",
+   "path": "sportorg/libs/template/template.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/template/template.py:54]",
+   "values": []
+  },
+  {
+   "calls": [
+    {
+     "api": "open",
+     "direction": "read",
+     "format": "binary file",
+     "line": 1207,
+     "tag": "[код: pysport@b548c35 sportorg/libs/winorient/wdb.py:1207]"
+    }
+   ],
+   "context": "lib:winorient",
+   "direction": "read",
+   "formats": [
+    "binary file"
+   ],
+   "function": "parse_wdb",
+   "module": "sportorg.libs.winorient.wdb",
+   "path": "sportorg/libs/winorient/wdb.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/winorient/wdb.py:1207]",
+   "values": [
+    {
+     "kind": "other",
+     "origin": "mode of open",
+     "tag": "[код: pysport@b548c35 sportorg/libs/winorient/wdb.py:1207]",
+     "text": "\"rb\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/winorient/wdb.py:1207]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "open",
+     "direction": "write",
+     "format": "binary file",
+     "line": 1216,
+     "tag": "[код: pysport@b548c35 sportorg/libs/winorient/wdb.py:1216]"
+    }
+   ],
+   "context": "lib:winorient",
+   "direction": "write",
+   "formats": [
+    "binary file"
+   ],
+   "function": "write_wdb",
+   "module": "sportorg.libs.winorient.wdb",
+   "path": "sportorg/libs/winorient/wdb.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/winorient/wdb.py:1216]",
+   "values": [
+    {
+     "kind": "other",
+     "origin": "mode of open",
+     "tag": "[код: pysport@b548c35 sportorg/libs/winorient/wdb.py:1216]",
+     "text": "\"wb\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/winorient/wdb.py:1216]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "open",
+     "direction": "read",
+     "format": "text file",
+     "line": 13,
+     "tag": "[код: pysport@b548c35 sportorg/libs/winorient/wo.py:13]"
+    },
+    {
+     "api": "csv.reader",
+     "direction": "read",
+     "format": "CSV",
+     "line": 14,
+     "tag": "[код: pysport@b548c35 sportorg/libs/winorient/wo.py:14]"
+    }
+   ],
+   "context": "lib:winorient",
+   "direction": "read",
+   "formats": [
+    "CSV",
+    "text file"
+   ],
+   "function": "CSVReader.parse",
+   "module": "sportorg.libs.winorient.wo",
+   "path": "sportorg/libs/winorient/wo.py",
+   "tag": "[код: pysport@b548c35 sportorg/libs/winorient/wo.py:13]",
+   "values": [
+    {
+     "kind": "encoding",
+     "origin": "keyword encoding of open",
+     "tag": "[код: pysport@b548c35 sportorg/libs/winorient/wo.py:13]",
+     "text": "\"cp1251\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/winorient/wo.py:13]"
+    },
+    {
+     "kind": "delimiter",
+     "origin": "keyword delimiter of csv.reader",
+     "tag": "[код: pysport@b548c35 sportorg/libs/winorient/wo.py:14]",
+     "text": "\";\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/libs/winorient/wo.py:14]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": ".open",
+     "direction": "read",
+     "format": "text file",
+     "line": 13,
+     "tag": "[код: pysport@b548c35 sportorg/models/constant.py:13]"
+    }
+   ],
+   "context": "other",
+   "direction": "read",
+   "formats": [
+    "text file"
+   ],
+   "function": "_read_config_items",
+   "module": "sportorg.models.constant",
+   "path": "sportorg/models/constant.py",
+   "tag": "[код: pysport@b548c35 sportorg/models/constant.py:13]",
+   "values": [
+    {
+     "kind": "encoding",
+     "origin": "keyword encoding of .open",
+     "tag": "[код: pysport@b548c35 sportorg/models/constant.py:13]",
+     "text": "\"utf-8\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/models/constant.py:13]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "gzip.open",
+     "direction": "read",
+     "format": "gzip",
+     "line": 15,
+     "tag": "[код: pysport@b548c35 sportorg/modules/backup/file.py:15]"
+    }
+   ],
+   "context": "backup",
+   "direction": "read",
+   "formats": [
+    "gzip"
+   ],
+   "function": "is_gzip_file",
+   "module": "sportorg.modules.backup.file",
+   "path": "sportorg/modules/backup/file.py",
+   "tag": "[код: pysport@b548c35 sportorg/modules/backup/file.py:15]",
+   "values": []
+  },
+  {
+   "calls": [
+    {
+     "api": "open",
+     "direction": "unknown",
+     "format": "text file",
+     "line": 42,
+     "tag": "[код: pysport@b548c35 sportorg/modules/backup/file.py:42]"
+    },
+    {
+     "api": "open",
+     "direction": "unknown",
+     "format": "text file",
+     "line": 50,
+     "tag": "[код: pysport@b548c35 sportorg/modules/backup/file.py:50]"
+    }
+   ],
+   "context": "backup",
+   "direction": "unknown",
+   "formats": [
+    "text file"
+   ],
+   "function": "File._backup",
+   "module": "sportorg.modules.backup.file",
+   "path": "sportorg/modules/backup/file.py",
+   "tag": "[код: pysport@b548c35 sportorg/modules/backup/file.py:42]",
+   "values": [
+    {
+     "kind": "encoding",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/modules/backup/file.py:37]",
+     "text": "\"utf-8\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/backup/file.py:37]"
+    },
+    {
+     "kind": "encoding",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/modules/backup/file.py:48]",
+     "text": "\"utf-8\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/backup/file.py:48]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "orjson.dumps",
+     "direction": "write",
+     "format": "JSON",
+     "line": 25,
+     "tag": "[код: pysport@b548c35 sportorg/modules/backup/json.py:25]"
+    },
+    {
+     "api": "file.write",
+     "direction": "write",
+     "format": "file object (parameter)",
+     "line": 27,
+     "tag": "[код: pysport@b548c35 sportorg/modules/backup/json.py:27]"
+    },
+    {
+     "api": "file.write",
+     "direction": "write",
+     "format": "file object (parameter)",
+     "line": 29,
+     "tag": "[код: pysport@b548c35 sportorg/modules/backup/json.py:29]"
+    }
+   ],
+   "context": "backup",
+   "direction": "write",
+   "formats": [
+    "JSON",
+    "file object (parameter)"
+   ],
+   "function": "dump",
+   "module": "sportorg.modules.backup.json",
+   "path": "sportorg/modules/backup/json.py",
+   "tag": "[код: pysport@b548c35 sportorg/modules/backup/json.py:25]",
+   "values": []
+  },
+  {
+   "calls": [
+    {
+     "api": "file.read",
+     "direction": "read",
+     "format": "file object (parameter)",
+     "line": 52,
+     "tag": "[код: pysport@b548c35 sportorg/modules/backup/json.py:52]"
+    },
+    {
+     "api": "orjson.loads",
+     "direction": "read",
+     "format": "JSON",
+     "line": 52,
+     "tag": "[код: pysport@b548c35 sportorg/modules/backup/json.py:52]"
+    },
+    {
+     "api": "file.read",
+     "direction": "read",
+     "format": "file object (parameter)",
+     "line": 54,
+     "tag": "[код: pysport@b548c35 sportorg/modules/backup/json.py:54]"
+    },
+    {
+     "api": "orjson.loads",
+     "direction": "read",
+     "format": "JSON",
+     "line": 54,
+     "tag": "[код: pysport@b548c35 sportorg/modules/backup/json.py:54]"
+    }
+   ],
+   "context": "backup",
+   "direction": "read",
+   "formats": [
+    "JSON",
+    "file object (parameter)"
+   ],
+   "function": "get_races_from_file",
+   "module": "sportorg.modules.backup.json",
+   "path": "sportorg/modules/backup/json.py",
+   "tag": "[код: pysport@b548c35 sportorg/modules/backup/json.py:52]",
+   "values": []
+  },
+  {
+   "calls": [
+    {
+     "api": "file.write",
+     "direction": "write",
+     "format": "file object (parameter)",
+     "line": 18,
+     "tag": "[код: pysport@b548c35 sportorg/modules/backup/sfr_results_board.py:18]"
+    },
+    {
+     "api": "file.write",
+     "direction": "write",
+     "format": "file object (parameter)",
+     "line": 20,
+     "tag": "[код: pysport@b548c35 sportorg/modules/backup/sfr_results_board.py:20]"
+    }
+   ],
+   "context": "backup",
+   "direction": "write",
+   "formats": [
+    "file object (parameter)"
+   ],
+   "function": "dump",
+   "module": "sportorg.modules.backup.sfr_results_board",
+   "path": "sportorg/modules/backup/sfr_results_board.py",
+   "tag": "[код: pysport@b548c35 sportorg/modules/backup/sfr_results_board.py:18]",
+   "values": [
+    {
+     "kind": "delimiter",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/modules/backup/sfr_results_board.py:8]",
+     "text": "\"\\t\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/backup/sfr_results_board.py:8]"
+    },
+    {
+     "kind": "encoding",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/modules/backup/sfr_results_board.py:18]",
+     "text": "\"utf-8\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/backup/sfr_results_board.py:18]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "configparser.ConfigParser",
+     "direction": "both",
+     "format": "INI",
+     "line": 76,
+     "tag": "[код: pysport@b548c35 sportorg/modules/configs/configs.py:76]"
+    }
+   ],
+   "context": "other",
+   "direction": "both",
+   "formats": [
+    "INI"
+   ],
+   "function": "Config.__init__",
+   "module": "sportorg.modules.configs.configs",
+   "path": "sportorg/modules/configs/configs.py",
+   "tag": "[код: pysport@b548c35 sportorg/modules/configs/configs.py:76]",
+   "values": []
+  },
+  {
+   "calls": [
+    {
+     "api": ".write",
+     "direction": "write",
+     "format": "XML",
+     "line": 38,
+     "tag": "[код: pysport@b548c35 sportorg/modules/iof/iof_xml.py:38]"
+    },
+    {
+     "api": "open",
+     "direction": "write",
+     "format": "binary file",
+     "line": 38,
+     "tag": "[код: pysport@b548c35 sportorg/modules/iof/iof_xml.py:38]"
+    }
+   ],
+   "context": "IOF XML",
+   "direction": "write",
+   "formats": [
+    "XML",
+    "binary file"
+   ],
+   "function": "export_result_list",
+   "module": "sportorg.modules.iof.iof_xml",
+   "path": "sportorg/modules/iof/iof_xml.py",
+   "tag": "[код: pysport@b548c35 sportorg/modules/iof/iof_xml.py:38]",
+   "values": [
+    {
+     "kind": "encoding",
+     "origin": "keyword encoding of open",
+     "tag": "[код: pysport@b548c35 sportorg/modules/iof/iof_xml.py:38]",
+     "text": "\"UTF-8\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/iof/iof_xml.py:38]"
+    },
+    {
+     "kind": "other",
+     "origin": "mode of open",
+     "tag": "[код: pysport@b548c35 sportorg/modules/iof/iof_xml.py:38]",
+     "text": "\"wb\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/iof/iof_xml.py:38]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": ".write",
+     "direction": "write",
+     "format": "XML",
+     "line": 46,
+     "tag": "[код: pysport@b548c35 sportorg/modules/iof/iof_xml.py:46]"
+    },
+    {
+     "api": "open",
+     "direction": "write",
+     "format": "binary file",
+     "line": 46,
+     "tag": "[код: pysport@b548c35 sportorg/modules/iof/iof_xml.py:46]"
+    }
+   ],
+   "context": "IOF XML",
+   "direction": "write",
+   "formats": [
+    "XML",
+    "binary file"
+   ],
+   "function": "export_entry_list",
+   "module": "sportorg.modules.iof.iof_xml",
+   "path": "sportorg/modules/iof/iof_xml.py",
+   "tag": "[код: pysport@b548c35 sportorg/modules/iof/iof_xml.py:46]",
+   "values": [
+    {
+     "kind": "encoding",
+     "origin": "keyword encoding of open",
+     "tag": "[код: pysport@b548c35 sportorg/modules/iof/iof_xml.py:46]",
+     "text": "\"UTF-8\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/iof/iof_xml.py:46]"
+    },
+    {
+     "kind": "other",
+     "origin": "mode of open",
+     "tag": "[код: pysport@b548c35 sportorg/modules/iof/iof_xml.py:46]",
+     "text": "\"wb\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/iof/iof_xml.py:46]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": ".write",
+     "direction": "write",
+     "format": "XML",
+     "line": 54,
+     "tag": "[код: pysport@b548c35 sportorg/modules/iof/iof_xml.py:54]"
+    },
+    {
+     "api": "open",
+     "direction": "write",
+     "format": "binary file",
+     "line": 54,
+     "tag": "[код: pysport@b548c35 sportorg/modules/iof/iof_xml.py:54]"
+    }
+   ],
+   "context": "IOF XML",
+   "direction": "write",
+   "formats": [
+    "XML",
+    "binary file"
+   ],
+   "function": "export_start_list",
+   "module": "sportorg.modules.iof.iof_xml",
+   "path": "sportorg/modules/iof/iof_xml.py",
+   "tag": "[код: pysport@b548c35 sportorg/modules/iof/iof_xml.py:54]",
+   "values": [
+    {
+     "kind": "encoding",
+     "origin": "keyword encoding of open",
+     "tag": "[код: pysport@b548c35 sportorg/modules/iof/iof_xml.py:54]",
+     "text": "\"UTF-8\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/iof/iof_xml.py:54]"
+    },
+    {
+     "kind": "other",
+     "origin": "mode of open",
+     "tag": "[код: pysport@b548c35 sportorg/modules/iof/iof_xml.py:54]",
+     "text": "\"wb\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/iof/iof_xml.py:54]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": ".write",
+     "direction": "write",
+     "format": "XML",
+     "line": 62,
+     "tag": "[код: pysport@b548c35 sportorg/modules/iof/iof_xml.py:62]"
+    },
+    {
+     "api": "open",
+     "direction": "write",
+     "format": "binary file",
+     "line": 62,
+     "tag": "[код: pysport@b548c35 sportorg/modules/iof/iof_xml.py:62]"
+    }
+   ],
+   "context": "IOF XML",
+   "direction": "write",
+   "formats": [
+    "XML",
+    "binary file"
+   ],
+   "function": "export_competitor_list",
+   "module": "sportorg.modules.iof.iof_xml",
+   "path": "sportorg/modules/iof/iof_xml.py",
+   "tag": "[код: pysport@b548c35 sportorg/modules/iof/iof_xml.py:62]",
+   "values": [
+    {
+     "kind": "encoding",
+     "origin": "keyword encoding of open",
+     "tag": "[код: pysport@b548c35 sportorg/modules/iof/iof_xml.py:62]",
+     "text": "\"UTF-8\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/iof/iof_xml.py:62]"
+    },
+    {
+     "kind": "other",
+     "origin": "mode of open",
+     "tag": "[код: pysport@b548c35 sportorg/modules/iof/iof_xml.py:62]",
+     "text": "\"wb\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/iof/iof_xml.py:62]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "aiohttp.ClientSession",
+     "direction": "both",
+     "format": "HTTP",
+     "line": 17,
+     "tag": "[код: pysport@b548c35 sportorg/modules/live/live.py:17]"
+    },
+    {
+     "api": "aiohttp.ClientTimeout",
+     "direction": "both",
+     "format": "HTTP",
+     "line": 17,
+     "tag": "[код: pysport@b548c35 sportorg/modules/live/live.py:17]"
+    }
+   ],
+   "context": "live",
+   "direction": "both",
+   "formats": [
+    "HTTP"
+   ],
+   "function": "create_session",
+   "module": "sportorg.modules.live.live",
+   "path": "sportorg/modules/live/live.py",
+   "tag": "[код: pysport@b548c35 sportorg/modules/live/live.py:17]",
+   "values": []
+  },
+  {
+   "calls": [
+    {
+     "api": "json.dumps",
+     "direction": "write",
+     "format": "JSON",
+     "line": 50,
+     "tag": "[код: pysport@b548c35 sportorg/modules/live/orgeo.py:50]"
+    }
+   ],
+   "context": "live",
+   "direction": "write",
+   "formats": [
+    "JSON"
+   ],
+   "function": "Orgeo.send",
+   "module": "sportorg.modules.live.orgeo",
+   "path": "sportorg/modules/live/orgeo.py",
+   "tag": "[код: pysport@b548c35 sportorg/modules/live/orgeo.py:50]",
+   "values": [
+    {
+     "kind": "encoding",
+     "origin": "encode argument",
+     "tag": "[код: pysport@b548c35 sportorg/modules/live/orgeo.py:50]",
+     "text": "\"utf-8\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/live/orgeo.py:50]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "json.dumps",
+     "direction": "write",
+     "format": "JSON",
+     "line": 131,
+     "tag": "[код: pysport@b548c35 sportorg/modules/plugins/manager.py:131]"
+    }
+   ],
+   "context": "other",
+   "direction": "write",
+   "formats": [
+    "JSON"
+   ],
+   "function": "_json_dumps",
+   "module": "sportorg.modules.plugins.manager",
+   "path": "sportorg/modules/plugins/manager.py",
+   "tag": "[код: pysport@b548c35 sportorg/modules/plugins/manager.py:131]",
+   "values": []
+  },
+  {
+   "calls": [
+    {
+     "api": "json.dumps",
+     "direction": "write",
+     "format": "JSON",
+     "line": 135,
+     "tag": "[код: pysport@b548c35 sportorg/modules/plugins/manager.py:135]"
+    }
+   ],
+   "context": "other",
+   "direction": "write",
+   "formats": [
+    "JSON"
+   ],
+   "function": "_stable_json",
+   "module": "sportorg.modules.plugins.manager",
+   "path": "sportorg/modules/plugins/manager.py",
+   "tag": "[код: pysport@b548c35 sportorg/modules/plugins/manager.py:135]",
+   "values": []
+  },
+  {
+   "calls": [
+    {
+     "api": "json.loads",
+     "direction": "read",
+     "format": "JSON",
+     "line": 668,
+     "tag": "[код: pysport@b548c35 sportorg/modules/plugins/manager.py:668]"
+    }
+   ],
+   "context": "other",
+   "direction": "read",
+   "formats": [
+    "JSON"
+   ],
+   "function": "PluginProcess._read_loop",
+   "module": "sportorg.modules.plugins.manager",
+   "path": "sportorg/modules/plugins/manager.py",
+   "tag": "[код: pysport@b548c35 sportorg/modules/plugins/manager.py:668]",
+   "values": []
+  },
+  {
+   "calls": [
+    {
+     "api": "PySide2.QtPrintSupport.QPrinter",
+     "direction": "device",
+     "format": "printer",
+     "line": 61,
+     "tag": "[код: pysport@b548c35 sportorg/modules/printing/printing.py:61]"
+    }
+   ],
+   "context": "printing",
+   "direction": "device",
+   "formats": [
+    "printer"
+   ],
+   "function": "PrintProcess.run",
+   "module": "sportorg.modules.printing.printing",
+   "path": "sportorg/modules/printing/printing.py",
+   "tag": "[код: pysport@b548c35 sportorg/modules/printing/printing.py:61]",
+   "values": [
+    {
+     "kind": "byte-constant",
+     "origin": "constant qt_version",
+     "tag": "[код: pysport@b548c35 sportorg/modules/printing/printing.py:6]",
+     "text": "5",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/printing/printing.py:72]"
+    },
+    {
+     "kind": "byte-constant",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/modules/printing/printing.py:72]",
+     "text": "5",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/printing/printing.py:72]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "win32print.GetDefaultPrinter",
+     "direction": "device",
+     "format": "printer",
+     "line": 16,
+     "tag": "[код: pysport@b548c35 sportorg/modules/printing/printout_split.py:16]"
+    },
+    {
+     "api": "win32ui.CreateDC",
+     "direction": "device",
+     "format": "printer",
+     "line": 18,
+     "tag": "[код: pysport@b548c35 sportorg/modules/printing/printout_split.py:18]"
+    }
+   ],
+   "context": "printing",
+   "direction": "device",
+   "formats": [
+    "printer"
+   ],
+   "function": "SportorgPrinter.__init__",
+   "module": "sportorg.modules.printing.printout_split",
+   "path": "sportorg/modules/printing/printout_split.py",
+   "tag": "[код: pysport@b548c35 sportorg/modules/printing/printout_split.py:16]",
+   "values": []
+  },
+  {
+   "calls": [
+    {
+     "api": "win32ui.CreateFont",
+     "direction": "device",
+     "format": "printer",
+     "line": 47,
+     "tag": "[код: pysport@b548c35 sportorg/modules/printing/printout_split.py:47]"
+    }
+   ],
+   "context": "printing",
+   "direction": "device",
+   "formats": [
+    "printer"
+   ],
+   "function": "SportorgPrinter.print_line",
+   "module": "sportorg.modules.printing.printout_split",
+   "path": "sportorg/modules/printing/printout_split.py",
+   "tag": "[код: pysport@b548c35 sportorg/modules/printing/printout_split.py:47]",
+   "values": []
+  },
+  {
+   "calls": [
+    {
+     "api": "win32ui.CreateFont",
+     "direction": "device",
+     "format": "printer",
+     "line": 88,
+     "tag": "[код: pysport@b548c35 sportorg/modules/printing/printout_split.py:88]"
+    }
+   ],
+   "context": "printing",
+   "direction": "device",
+   "formats": [
+    "printer"
+   ],
+   "function": "SportorgPrinter.print_bib_line",
+   "module": "sportorg.modules.printing.printout_split",
+   "path": "sportorg/modules/printing/printout_split.py",
+   "tag": "[код: pysport@b548c35 sportorg/modules/printing/printout_split.py:88]",
+   "values": []
+  },
+  {
+   "calls": [
+    {
+     "api": "win32ui.CreateFont",
+     "direction": "device",
+     "format": "printer",
+     "line": 112,
+     "tag": "[код: pysport@b548c35 sportorg/modules/printing/printout_split.py:112]"
+    },
+    {
+     "api": "win32ui.CreateFont",
+     "direction": "device",
+     "format": "printer",
+     "line": 129,
+     "tag": "[код: pysport@b548c35 sportorg/modules/printing/printout_split.py:129]"
+    }
+   ],
+   "context": "printing",
+   "direction": "device",
+   "formats": [
+    "printer"
+   ],
+   "function": "SportorgPrinter.print_penalty_line",
+   "module": "sportorg.modules.printing.printout_split",
+   "path": "sportorg/modules/printing/printout_split.py",
+   "tag": "[код: pysport@b548c35 sportorg/modules/printing/printout_split.py:112]",
+   "values": [
+    {
+     "kind": "offset-or-width",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/modules/printing/printout_split.py:106]",
+     "text": "2",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/printing/printout_split.py:106]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "open",
+     "direction": "read",
+     "format": "text file",
+     "line": 47,
+     "tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_orgeo_finish_csv.py:47]"
+    },
+    {
+     "api": "csv.reader",
+     "direction": "read",
+     "format": "CSV",
+     "line": 48,
+     "tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_orgeo_finish_csv.py:48]"
+    }
+   ],
+   "context": "recovery",
+   "direction": "read",
+   "formats": [
+    "CSV",
+    "text file"
+   ],
+   "function": "recovery",
+   "module": "sportorg.modules.recovery.recovery_orgeo_finish_csv",
+   "path": "sportorg/modules/recovery/recovery_orgeo_finish_csv.py",
+   "tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_orgeo_finish_csv.py:47]",
+   "values": [
+    {
+     "kind": "encoding",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_orgeo_finish_csv.py:43]",
+     "text": "\"cp1251\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_orgeo_finish_csv.py:43]"
+    },
+    {
+     "kind": "delimiter",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_orgeo_finish_csv.py:44]",
+     "text": "\";\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_orgeo_finish_csv.py:44]"
+    },
+    {
+     "kind": "delimiter",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_orgeo_finish_csv.py:45]",
+     "text": "\"|\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_orgeo_finish_csv.py:45]"
+    },
+    {
+     "kind": "offset-or-width",
+     "origin": "constant POS_START",
+     "tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_orgeo_finish_csv.py:35]",
+     "text": "9",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_orgeo_finish_csv.py:50]"
+    },
+    {
+     "kind": "offset-or-width",
+     "origin": "constant POS_BIB",
+     "tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_orgeo_finish_csv.py:32]",
+     "text": "4",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_orgeo_finish_csv.py:53]"
+    },
+    {
+     "kind": "offset-or-width",
+     "origin": "constant POS_NAME",
+     "tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_orgeo_finish_csv.py:30]",
+     "text": "2",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_orgeo_finish_csv.py:57]"
+    },
+    {
+     "kind": "offset-or-width",
+     "origin": "constant POS_TEAM",
+     "tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_orgeo_finish_csv.py:31]",
+     "text": "3",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_orgeo_finish_csv.py:67]"
+    },
+    {
+     "kind": "offset-or-width",
+     "origin": "constant POS_START",
+     "tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_orgeo_finish_csv.py:35]",
+     "text": "9",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_orgeo_finish_csv.py:83]"
+    },
+    {
+     "kind": "offset-or-width",
+     "origin": "constant POS_START",
+     "tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_orgeo_finish_csv.py:35]",
+     "text": "9",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_orgeo_finish_csv.py:84]"
+    },
+    {
+     "kind": "offset-or-width",
+     "origin": "constant POS_CARD",
+     "tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_orgeo_finish_csv.py:33]",
+     "text": "5",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_orgeo_finish_csv.py:88]"
+    },
+    {
+     "kind": "offset-or-width",
+     "origin": "constant POS_CARD",
+     "tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_orgeo_finish_csv.py:33]",
+     "text": "5",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_orgeo_finish_csv.py:89]"
+    },
+    {
+     "kind": "offset-or-width",
+     "origin": "constant POS_RES",
+     "tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_orgeo_finish_csv.py:34]",
+     "text": "7",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_orgeo_finish_csv.py:91]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "open",
+     "direction": "read",
+     "format": "text file",
+     "line": 42,
+     "tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_si_master_csv.py:42]"
+    },
+    {
+     "api": "csv.reader",
+     "direction": "read",
+     "format": "CSV",
+     "line": 43,
+     "tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_si_master_csv.py:43]"
+    }
+   ],
+   "context": "recovery",
+   "direction": "read",
+   "formats": [
+    "CSV",
+    "text file"
+   ],
+   "function": "recovery",
+   "module": "sportorg.modules.recovery.recovery_si_master_csv",
+   "path": "sportorg/modules/recovery/recovery_si_master_csv.py",
+   "tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_si_master_csv.py:42]",
+   "values": [
+    {
+     "kind": "delimiter",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_si_master_csv.py:35]",
+     "text": "\";\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_si_master_csv.py:35]"
+    },
+    {
+     "kind": "offset-or-width",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_si_master_csv.py:39]",
+     "text": "2",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_si_master_csv.py:39]"
+    },
+    {
+     "kind": "encoding",
+     "origin": "keyword encoding of open",
+     "tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_si_master_csv.py:42]",
+     "text": "\"cp1251\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_si_master_csv.py:42]"
+    },
+    {
+     "kind": "offset-or-width",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_si_master_csv.py:45]",
+     "text": "45",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_si_master_csv.py:45]"
+    },
+    {
+     "kind": "offset-or-width",
+     "origin": "constant POS_CARD",
+     "tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_si_master_csv.py:28]",
+     "text": "2",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_si_master_csv.py:49]"
+    },
+    {
+     "kind": "offset-or-width",
+     "origin": "constant POS_START",
+     "tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_si_master_csv.py:29]",
+     "text": "15",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_si_master_csv.py:50]"
+    },
+    {
+     "kind": "offset-or-width",
+     "origin": "constant POS_FINISH",
+     "tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_si_master_csv.py:30]",
+     "text": "21",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_si_master_csv.py:51]"
+    },
+    {
+     "kind": "offset-or-width",
+     "origin": "constant POS_COUNT",
+     "tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_si_master_csv.py:31]",
+     "text": "44",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_si_master_csv.py:53]"
+    },
+    {
+     "kind": "offset-or-width",
+     "origin": "constant POS_COUNT",
+     "tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_si_master_csv.py:31]",
+     "text": "44",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_si_master_csv.py:54]"
+    },
+    {
+     "kind": "offset-or-width",
+     "origin": "constant POS_COUNT",
+     "tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_si_master_csv.py:31]",
+     "text": "44",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_si_master_csv.py:58]"
+    },
+    {
+     "kind": "offset-or-width",
+     "origin": "constant POS_COUNT",
+     "tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_si_master_csv.py:31]",
+     "text": "44",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_si_master_csv.py:59]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "open",
+     "direction": "read",
+     "format": "text file",
+     "line": 20,
+     "tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_sportorg_html.py:20]"
+    },
+    {
+     "api": "gzip.GzipFile",
+     "direction": "read",
+     "format": "gzip",
+     "line": 26,
+     "tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_sportorg_html.py:26]"
+    }
+   ],
+   "context": "recovery",
+   "direction": "read",
+   "formats": [
+    "gzip",
+    "text file"
+   ],
+   "function": "recovery",
+   "module": "sportorg.modules.recovery.recovery_sportorg_html",
+   "path": "sportorg/modules/recovery/recovery_sportorg_html.py",
+   "tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_sportorg_html.py:20]",
+   "values": [
+    {
+     "kind": "other",
+     "origin": "mode of open",
+     "tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_sportorg_html.py:20]",
+     "text": "\"r\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_sportorg_html.py:20]"
+    },
+    {
+     "kind": "offset-or-width",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_sportorg_html.py:23]",
+     "text": "-2",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_sportorg_html.py:23]"
+    },
+    {
+     "kind": "offset-or-width",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_sportorg_html.py:23]",
+     "text": "12",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_sportorg_html.py:23]"
+    },
+    {
+     "kind": "encoding",
+     "origin": "decode argument",
+     "tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_sportorg_html.py:27]",
+     "text": "\"utf-8\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_sportorg_html.py:27]"
+    },
+    {
+     "kind": "offset-or-width",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_sportorg_html.py:32]",
+     "text": "11",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_sportorg_html.py:32]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "open",
+     "direction": "write",
+     "format": "text file",
+     "line": 44,
+     "tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_sportorg_html.py:44]"
+    }
+   ],
+   "context": "recovery",
+   "direction": "write",
+   "formats": [
+    "text file"
+   ],
+   "function": "save_to_tmp_file",
+   "module": "sportorg.modules.recovery.recovery_sportorg_html",
+   "path": "sportorg/modules/recovery/recovery_sportorg_html.py",
+   "tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_sportorg_html.py:44]",
+   "values": [
+    {
+     "kind": "extension",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_sportorg_html.py:42]",
+     "text": ".json",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_sportorg_html.py:42]"
+    },
+    {
+     "kind": "encoding",
+     "origin": "keyword encoding of open",
+     "tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_sportorg_html.py:44]",
+     "text": "\"utf-8\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_sportorg_html.py:44]"
+    },
+    {
+     "kind": "other",
+     "origin": "mode of open",
+     "tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_sportorg_html.py:44]",
+     "text": "\"w\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_sportorg_html.py:44]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "open",
+     "direction": "read",
+     "format": "text file",
+     "line": 50,
+     "tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_sportorg_si_log.py:50]"
+    }
+   ],
+   "context": "recovery",
+   "direction": "read",
+   "formats": [
+    "text file"
+   ],
+   "function": "recovery",
+   "module": "sportorg.modules.recovery.recovery_sportorg_si_log",
+   "path": "sportorg/modules/recovery/recovery_sportorg_si_log.py",
+   "tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_sportorg_si_log.py:50]",
+   "values": [
+    {
+     "kind": "offset-or-width",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_sportorg_si_log.py:41]",
+     "text": "2",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/recovery/recovery_sportorg_si_log.py:41]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "pyImpinj.ImpinjR2KReader",
+     "direction": "device",
+     "format": "Impinj RFID",
+     "line": 53,
+     "tag": "[код: pysport@b548c35 sportorg/modules/rfid_impinj/rfid_impinj.py:53]"
+    }
+   ],
+   "context": "Impinj RFID",
+   "direction": "device",
+   "formats": [
+    "Impinj RFID"
+   ],
+   "function": "ImpinjThread.run",
+   "module": "sportorg.modules.rfid_impinj.rfid_impinj",
+   "path": "sportorg/modules/rfid_impinj/rfid_impinj.py",
+   "tag": "[код: pysport@b548c35 sportorg/modules/rfid_impinj/rfid_impinj.py:53]",
+   "values": [
+    {
+     "kind": "timeout",
+     "origin": "keyword timeout of tag_queue.get",
+     "tag": "[код: pysport@b548c35 sportorg/modules/rfid_impinj/rfid_impinj.py:74]",
+     "text": "0.1",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/rfid_impinj/rfid_impinj.py:74]"
+    },
+    {
+     "kind": "timeout",
+     "origin": "keyword timeout of self._queue.put",
+     "tag": "[код: pysport@b548c35 sportorg/modules/rfid_impinj/rfid_impinj.py:110]",
+     "text": "1",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/rfid_impinj/rfid_impinj.py:110]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "open",
+     "direction": "write",
+     "format": "text file",
+     "line": 32,
+     "tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:32]"
+    }
+   ],
+   "context": "SFR",
+   "direction": "write",
+   "formats": [
+    "text file"
+   ],
+   "function": "export_sfrx",
+   "module": "sportorg.modules.sfr.sfrxexporter",
+   "path": "sportorg/modules/sfr/sfrxexporter.py",
+   "tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:32]",
+   "values": [
+    {
+     "kind": "delimiter",
+     "origin": "keyword newline of open",
+     "tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:32]",
+     "text": "\"\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:32]"
+    },
+    {
+     "kind": "encoding",
+     "origin": "keyword encoding of open",
+     "tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:32]",
+     "text": "\"utf-8\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:32]"
+    },
+    {
+     "kind": "extension",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:32]",
+     "text": "\".sfrx\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:32]"
+    },
+    {
+     "kind": "other",
+     "origin": "mode of open",
+     "tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:32]",
+     "text": "\"w\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:32]"
+    },
+    {
+     "kind": "extension",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:45]",
+     "text": "\".sfrx\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:45]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "f.write",
+     "direction": "write",
+     "format": "file object (parameter)",
+     "line": 83,
+     "tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:83]"
+    }
+   ],
+   "context": "SFR",
+   "direction": "write",
+   "formats": [
+    "file object (parameter)"
+   ],
+   "function": "_write_header",
+   "module": "sportorg.modules.sfr.sfrxexporter",
+   "path": "sportorg/modules/sfr/sfrxexporter.py",
+   "tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:83]",
+   "values": []
+  },
+  {
+   "calls": [
+    {
+     "api": "f.write",
+     "direction": "write",
+     "format": "file object (parameter)",
+     "line": 101,
+     "tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:101]"
+    }
+   ],
+   "context": "SFR",
+   "direction": "write",
+   "formats": [
+    "file object (parameter)"
+   ],
+   "function": "_write_days",
+   "module": "sportorg.modules.sfr.sfrxexporter",
+   "path": "sportorg/modules/sfr/sfrxexporter.py",
+   "tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:101]",
+   "values": []
+  },
+  {
+   "calls": [
+    {
+     "api": "f.write",
+     "direction": "write",
+     "format": "file object (parameter)",
+     "line": 108,
+     "tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:108]"
+    }
+   ],
+   "context": "SFR",
+   "direction": "write",
+   "formats": [
+    "file object (parameter)"
+   ],
+   "function": "_write_descriptions",
+   "module": "sportorg.modules.sfr.sfrxexporter",
+   "path": "sportorg/modules/sfr/sfrxexporter.py",
+   "tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:108]",
+   "values": []
+  },
+  {
+   "calls": [
+    {
+     "api": "f.write",
+     "direction": "write",
+     "format": "file object (parameter)",
+     "line": 115,
+     "tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:115]"
+    }
+   ],
+   "context": "SFR",
+   "direction": "write",
+   "formats": [
+    "file object (parameter)"
+   ],
+   "function": "_write_clubs",
+   "module": "sportorg.modules.sfr.sfrxexporter",
+   "path": "sportorg/modules/sfr/sfrxexporter.py",
+   "tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:115]",
+   "values": []
+  },
+  {
+   "calls": [
+    {
+     "api": "f.write",
+     "direction": "write",
+     "format": "file object (parameter)",
+     "line": 142,
+     "tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:142]"
+    }
+   ],
+   "context": "SFR",
+   "direction": "write",
+   "formats": [
+    "file object (parameter)"
+   ],
+   "function": "_write_groups",
+   "module": "sportorg.modules.sfr.sfrxexporter",
+   "path": "sportorg/modules/sfr/sfrxexporter.py",
+   "tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:142]",
+   "values": [
+    {
+     "kind": "offset-or-width",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:120]",
+     "text": "5",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:120]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "f.write",
+     "direction": "write",
+     "format": "file object (parameter)",
+     "line": 151,
+     "tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:151]"
+    }
+   ],
+   "context": "SFR",
+   "direction": "write",
+   "formats": [
+    "file object (parameter)"
+   ],
+   "function": "_write_teams",
+   "module": "sportorg.modules.sfr.sfrxexporter",
+   "path": "sportorg/modules/sfr/sfrxexporter.py",
+   "tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:151]",
+   "values": [
+    {
+     "kind": "offset-or-width",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:147]",
+     "text": "5",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:147]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "f.write",
+     "direction": "write",
+     "format": "file object (parameter)",
+     "line": 180,
+     "tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:180]"
+    }
+   ],
+   "context": "SFR",
+   "direction": "write",
+   "formats": [
+    "file object (parameter)"
+   ],
+   "function": "_write_courses",
+   "module": "sportorg.modules.sfr.sfrxexporter",
+   "path": "sportorg/modules/sfr/sfrxexporter.py",
+   "tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:180]",
+   "values": [
+    {
+     "kind": "offset-or-width",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:156]",
+     "text": "5",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:156]"
+    },
+    {
+     "kind": "offset-or-width",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:175]",
+     "text": "2",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:175]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "f.write",
+     "direction": "write",
+     "format": "file object (parameter)",
+     "line": 204,
+     "tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:204]"
+    }
+   ],
+   "context": "SFR",
+   "direction": "write",
+   "formats": [
+    "file object (parameter)"
+   ],
+   "function": "_write_controls",
+   "module": "sportorg.modules.sfr.sfrxexporter",
+   "path": "sportorg/modules/sfr/sfrxexporter.py",
+   "tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:204]",
+   "values": [
+    {
+     "kind": "offset-or-width",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:192]",
+     "text": "5",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:192]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "f.write",
+     "direction": "write",
+     "format": "file object (parameter)",
+     "line": 265,
+     "tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:265]"
+    }
+   ],
+   "context": "SFR",
+   "direction": "write",
+   "formats": [
+    "file object (parameter)"
+   ],
+   "function": "_write_competitors",
+   "module": "sportorg.modules.sfr.sfrxexporter",
+   "path": "sportorg/modules/sfr/sfrxexporter.py",
+   "tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:265]",
+   "values": [
+    {
+     "kind": "offset-or-width",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:209]",
+     "text": "5",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:209]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "f.write",
+     "direction": "write",
+     "format": "file object (parameter)",
+     "line": 338,
+     "tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:338]"
+    }
+   ],
+   "context": "SFR",
+   "direction": "write",
+   "formats": [
+    "file object (parameter)"
+   ],
+   "function": "_write_splits",
+   "module": "sportorg.modules.sfr.sfrxexporter",
+   "path": "sportorg/modules/sfr/sfrxexporter.py",
+   "tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:338]",
+   "values": [
+    {
+     "kind": "offset-or-width",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:315]",
+     "text": "1",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:315]"
+    },
+    {
+     "kind": "offset-or-width",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:316]",
+     "text": "1",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:316]"
+    },
+    {
+     "kind": "offset-or-width",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:328]",
+     "text": "5",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:328]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "open",
+     "direction": "write",
+     "format": "text file",
+     "line": 20,
+     "tag": "[код: pysport@b548c35 sportorg/modules/sportident/backup.py:20]"
+    }
+   ],
+   "context": "SPORTident",
+   "direction": "write",
+   "formats": [
+    "text file"
+   ],
+   "function": "BackupProcess.run",
+   "module": "sportorg.modules.sportident.backup",
+   "path": "sportorg/modules/sportident/backup.py",
+   "tag": "[код: pysport@b548c35 sportorg/modules/sportident/backup.py:20]",
+   "values": [
+    {
+     "kind": "other",
+     "origin": "mode of open",
+     "tag": "[код: pysport@b548c35 sportorg/modules/sportident/backup.py:22]",
+     "text": "\"a\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/sportident/backup.py:20]"
+    },
+    {
+     "kind": "extension",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/modules/sportident/backup.py:21]",
+     "text": "\"si{}.log\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/sportident/backup.py:21]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "sportident.SIReaderReadout",
+     "direction": "device",
+     "format": "SPORTident lib",
+     "line": 52,
+     "tag": "[код: pysport@b548c35 sportorg/modules/sportident/sireader.py:52]"
+    },
+    {
+     "api": "sportident.SIReaderSRR",
+     "direction": "device",
+     "format": "SPORTident lib",
+     "line": 55,
+     "tag": "[код: pysport@b548c35 sportorg/modules/sportident/sireader.py:55]"
+    },
+    {
+     "api": "sportident.SIReaderControl",
+     "direction": "device",
+     "format": "SPORTident lib",
+     "line": 61,
+     "tag": "[код: pysport@b548c35 sportorg/modules/sportident/sireader.py:61]"
+    }
+   ],
+   "context": "SPORTident",
+   "direction": "device",
+   "formats": [
+    "SPORTident lib"
+   ],
+   "function": "SIReaderThread.run",
+   "module": "sportorg.modules.sportident.sireader",
+   "path": "sportorg/modules/sportident/sireader.py",
+   "tag": "[код: pysport@b548c35 sportorg/modules/sportident/sireader.py:52]",
+   "values": [
+    {
+     "kind": "timeout",
+     "origin": "keyword timeout of self._queue.put",
+     "tag": "[код: pysport@b548c35 sportorg/modules/sportident/sireader.py:85]",
+     "text": "1",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/sportident/sireader.py:85]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "<protocol>",
+     "direction": "decode",
+     "format": "SPORTident serial",
+     "line": 137,
+     "tag": "[код: pysport@b548c35 sportorg/modules/sportident/sireader.py:137]"
+    }
+   ],
+   "context": "SPORTident",
+   "direction": "decode",
+   "formats": [
+    "SPORTident serial"
+   ],
+   "function": "ResultThread._check_data",
+   "module": "sportorg.modules.sportident.sireader",
+   "path": "sportorg/modules/sportident/sireader.py",
+   "tag": "[код: pysport@b548c35 sportorg/modules/sportident/sireader.py:137]",
+   "values": [
+    {
+     "kind": "offset-or-width",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/modules/sportident/sireader.py:137]",
+     "text": "12",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/sportident/sireader.py:137]"
+    },
+    {
+     "kind": "offset-or-width",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/modules/sportident/sireader.py:137]",
+     "text": "24",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/sportident/sireader.py:137]"
+    },
+    {
+     "kind": "offset-or-width",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/modules/sportident/sireader.py:143]",
+     "text": "12",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/sportident/sireader.py:143]"
+    },
+    {
+     "kind": "offset-or-width",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/modules/sportident/sireader.py:143]",
+     "text": "3600",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/sportident/sireader.py:143]"
+    },
+    {
+     "kind": "offset-or-width",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/modules/sportident/sireader.py:147]",
+     "text": "12",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/sportident/sireader.py:147]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "serial.tools.list_ports.comports",
+     "direction": "device",
+     "format": "serial",
+     "line": 263,
+     "tag": "[код: pysport@b548c35 sportorg/modules/sportident/sireader.py:263]"
+    }
+   ],
+   "context": "SPORTident",
+   "direction": "device",
+   "formats": [
+    "serial"
+   ],
+   "function": "SIReaderClient.get_ports",
+   "module": "sportorg.modules.sportident.sireader",
+   "path": "sportorg/modules/sportident/sireader.py",
+   "tag": "[код: pysport@b548c35 sportorg/modules/sportident/sireader.py:263]",
+   "values": []
+  },
+  {
+   "calls": [
+    {
+     "api": "conn.sendall",
+     "direction": "write",
+     "format": "socket",
+     "line": 25,
+     "tag": "[код: pysport@b548c35 sportorg/modules/teamwork/client.py:25]"
+    }
+   ],
+   "context": "teamwork",
+   "direction": "write",
+   "formats": [
+    "socket"
+   ],
+   "function": "ClientSender.__call__",
+   "module": "sportorg.modules.teamwork.client",
+   "path": "sportorg/modules/teamwork/client.py",
+   "tag": "[код: pysport@b548c35 sportorg/modules/teamwork/client.py:25]",
+   "values": [
+    {
+     "kind": "timeout",
+     "origin": "keyword timeout of self._in_queue.get",
+     "tag": "[код: pysport@b548c35 sportorg/modules/teamwork/client.py:24]",
+     "text": "0.1",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/teamwork/client.py:24]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "conn.recv",
+     "direction": "read",
+     "format": "socket",
+     "line": 43,
+     "tag": "[код: pysport@b548c35 sportorg/modules/teamwork/client.py:43]"
+    },
+    {
+     "api": "orjson.loads",
+     "direction": "read",
+     "format": "JSON",
+     "line": 64,
+     "tag": "[код: pysport@b548c35 sportorg/modules/teamwork/client.py:64]"
+    }
+   ],
+   "context": "teamwork",
+   "direction": "read",
+   "formats": [
+    "JSON",
+    "socket"
+   ],
+   "function": "ClientReceiver.__call__",
+   "module": "sportorg.modules.teamwork.client",
+   "path": "sportorg/modules/teamwork/client.py",
+   "tag": "[код: pysport@b548c35 sportorg/modules/teamwork/client.py:43]",
+   "values": [
+    {
+     "kind": "offset-or-width",
+     "origin": "constant MSG_SIZE",
+     "tag": "[код: pysport@b548c35 sportorg/modules/teamwork/client.py:32]",
+     "text": "1024",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/teamwork/client.py:43]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "socket.socket",
+     "direction": "both",
+     "format": "socket",
+     "line": 114,
+     "tag": "[код: pysport@b548c35 sportorg/modules/teamwork/client.py:114]"
+    }
+   ],
+   "context": "teamwork",
+   "direction": "both",
+   "formats": [
+    "socket"
+   ],
+   "function": "ClientThread.run",
+   "module": "sportorg.modules.teamwork.client",
+   "path": "sportorg/modules/teamwork/client.py",
+   "tag": "[код: pysport@b548c35 sportorg/modules/teamwork/client.py:114]",
+   "values": [
+    {
+     "kind": "timeout",
+     "origin": "keyword timeout of selector.select",
+     "tag": "[код: pysport@b548c35 sportorg/modules/teamwork/client.py:131]",
+     "text": "1",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/teamwork/client.py:131]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "orjson.dumps",
+     "direction": "write",
+     "format": "JSON",
+     "line": 32,
+     "tag": "[код: pysport@b548c35 sportorg/modules/teamwork/command.py:32]"
+    }
+   ],
+   "context": "teamwork",
+   "direction": "write",
+   "formats": [
+    "JSON"
+   ],
+   "function": "Command.get_packet",
+   "module": "sportorg.modules.teamwork.command",
+   "path": "sportorg/modules/teamwork/command.py",
+   "tag": "[код: pysport@b548c35 sportorg/modules/teamwork/command.py:32]",
+   "values": []
+  },
+  {
+   "calls": [
+    {
+     "api": ".read_text",
+     "direction": "read",
+     "format": "text file",
+     "line": 57,
+     "tag": "[код: pysport@b548c35 sportorg/modules/teamwork/crypto.py:57]"
+    }
+   ],
+   "context": "teamwork",
+   "direction": "read",
+   "formats": [
+    "text file"
+   ],
+   "function": "load_teamwork_key_from_file",
+   "module": "sportorg.modules.teamwork.crypto",
+   "path": "sportorg/modules/teamwork/crypto.py",
+   "tag": "[код: pysport@b548c35 sportorg/modules/teamwork/crypto.py:57]",
+   "values": [
+    {
+     "kind": "encoding",
+     "origin": "keyword encoding of .read_text",
+     "tag": "[код: pysport@b548c35 sportorg/modules/teamwork/crypto.py:57]",
+     "text": "\"utf-8\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/teamwork/crypto.py:57]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "struct.calcsize",
+     "direction": "both",
+     "format": "struct",
+     "line": 86,
+     "tag": "[код: pysport@b548c35 sportorg/modules/teamwork/packet_header.py:86]"
+    }
+   ],
+   "context": "teamwork",
+   "direction": "both",
+   "formats": [
+    "struct"
+   ],
+   "function": "Header.<class>",
+   "module": "sportorg.modules.teamwork.packet_header",
+   "path": "sportorg/modules/teamwork/packet_header.py",
+   "tag": "[код: pysport@b548c35 sportorg/modules/teamwork/packet_header.py:86]",
+   "values": [
+    {
+     "kind": "struct-format",
+     "origin": "constant header_struck via first argument of struct.calcsize",
+     "tag": "[код: pysport@b548c35 sportorg/modules/teamwork/packet_header.py:85]",
+     "text": "\"=2s2H36sLQ\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/teamwork/packet_header.py:86]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "struct.unpack",
+     "direction": "read",
+     "format": "struct",
+     "line": 123,
+     "tag": "[код: pysport@b548c35 sportorg/modules/teamwork/packet_header.py:123]"
+    }
+   ],
+   "context": "teamwork",
+   "direction": "read",
+   "formats": [
+    "struct"
+   ],
+   "function": "Header.unpack_header",
+   "module": "sportorg.modules.teamwork.packet_header",
+   "path": "sportorg/modules/teamwork/packet_header.py",
+   "tag": "[код: pysport@b548c35 sportorg/modules/teamwork/packet_header.py:123]",
+   "values": [
+    {
+     "kind": "struct-format",
+     "origin": "constant header_struck via first argument of struct.unpack",
+     "tag": "[код: pysport@b548c35 sportorg/modules/teamwork/packet_header.py:85]",
+     "text": "\"=2s2H36sLQ\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/teamwork/packet_header.py:123]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "struct.pack",
+     "direction": "write",
+     "format": "struct",
+     "line": 147,
+     "tag": "[код: pysport@b548c35 sportorg/modules/teamwork/packet_header.py:147]"
+    }
+   ],
+   "context": "teamwork",
+   "direction": "write",
+   "formats": [
+    "struct"
+   ],
+   "function": "Header.pack_header",
+   "module": "sportorg.modules.teamwork.packet_header",
+   "path": "sportorg/modules/teamwork/packet_header.py",
+   "tag": "[код: pysport@b548c35 sportorg/modules/teamwork/packet_header.py:147]",
+   "values": [
+    {
+     "kind": "struct-format",
+     "origin": "constant header_struck via first argument of struct.pack",
+     "tag": "[код: pysport@b548c35 sportorg/modules/teamwork/packet_header.py:85]",
+     "text": "\"=2s2H36sLQ\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/teamwork/packet_header.py:147]"
+    },
+    {
+     "kind": "encoding",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/modules/teamwork/packet_header.py:152]",
+     "text": "\"ascii\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/teamwork/packet_header.py:152]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "sock.recv",
+     "direction": "read",
+     "format": "socket",
+     "line": 39,
+     "tag": "[код: pysport@b548c35 sportorg/modules/teamwork/server.py:39]"
+    }
+   ],
+   "context": "teamwork",
+   "direction": "read",
+   "formats": [
+    "socket"
+   ],
+   "function": "ServerReceiver.__call__",
+   "module": "sportorg.modules.teamwork.server",
+   "path": "sportorg/modules/teamwork/server.py",
+   "tag": "[код: pysport@b548c35 sportorg/modules/teamwork/server.py:39]",
+   "values": [
+    {
+     "kind": "offset-or-width",
+     "origin": "constant MSG_SIZE",
+     "tag": "[код: pysport@b548c35 sportorg/modules/teamwork/server.py:16]",
+     "text": "1024",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/teamwork/server.py:39]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "orjson.loads",
+     "direction": "read",
+     "format": "JSON",
+     "line": 75,
+     "tag": "[код: pysport@b548c35 sportorg/modules/teamwork/server.py:75]"
+    },
+    {
+     "api": "sock.sendall",
+     "direction": "write",
+     "format": "socket",
+     "line": 99,
+     "tag": "[код: pysport@b548c35 sportorg/modules/teamwork/server.py:99]"
+    }
+   ],
+   "context": "teamwork",
+   "direction": "both",
+   "formats": [
+    "JSON",
+    "socket"
+   ],
+   "function": "ServerReceiver._process_packet",
+   "module": "sportorg.modules.teamwork.server",
+   "path": "sportorg/modules/teamwork/server.py",
+   "tag": "[код: pysport@b548c35 sportorg/modules/teamwork/server.py:75]",
+   "values": []
+  },
+  {
+   "calls": [
+    {
+     "api": "sock.sendall",
+     "direction": "write",
+     "format": "socket",
+     "line": 157,
+     "tag": "[код: pysport@b548c35 sportorg/modules/teamwork/server.py:157]"
+    }
+   ],
+   "context": "teamwork",
+   "direction": "write",
+   "formats": [
+    "socket"
+   ],
+   "function": "ServerSender.__call__",
+   "module": "sportorg.modules.teamwork.server",
+   "path": "sportorg/modules/teamwork/server.py",
+   "tag": "[код: pysport@b548c35 sportorg/modules/teamwork/server.py:157]",
+   "values": [
+    {
+     "kind": "timeout",
+     "origin": "keyword timeout of self._in_queue.get",
+     "tag": "[код: pysport@b548c35 sportorg/modules/teamwork/server.py:150]",
+     "text": "0.1",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/teamwork/server.py:150]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "socket.socket",
+     "direction": "both",
+     "format": "socket",
+     "line": 415,
+     "tag": "[код: pysport@b548c35 sportorg/modules/teamwork/server.py:415]"
+    }
+   ],
+   "context": "teamwork",
+   "direction": "both",
+   "formats": [
+    "socket"
+   ],
+   "function": "ServerThread.run",
+   "module": "sportorg.modules.teamwork.server",
+   "path": "sportorg/modules/teamwork/server.py",
+   "tag": "[код: pysport@b548c35 sportorg/modules/teamwork/server.py:415]",
+   "values": [
+    {
+     "kind": "timeout",
+     "origin": "keyword timeout of selector.select",
+     "tag": "[код: pysport@b548c35 sportorg/modules/teamwork/server.py:455]",
+     "text": "1",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/teamwork/server.py:455]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "requests.get",
+     "direction": "read",
+     "format": "HTTP",
+     "line": 11,
+     "tag": "[код: pysport@b548c35 sportorg/modules/updater/checker.py:11]"
+    }
+   ],
+   "context": "other",
+   "direction": "read",
+   "formats": [
+    "HTTP"
+   ],
+   "function": "get_last_tag_name",
+   "module": "sportorg.modules.updater.checker",
+   "path": "sportorg/modules/updater/checker.py",
+   "tag": "[код: pysport@b548c35 sportorg/modules/updater/checker.py:11]",
+   "values": [
+    {
+     "kind": "timeout",
+     "origin": "keyword timeout of requests.get",
+     "tag": "[код: pysport@b548c35 sportorg/modules/updater/checker.py:12]",
+     "text": "5",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/updater/checker.py:11]"
+    },
+    {
+     "kind": "url",
+     "origin": "first argument of requests.get",
+     "tag": "[код: pysport@b548c35 sportorg/modules/updater/checker.py:12]",
+     "text": "\"https://api.github.com/repos/sportorg/pysport/releases/latest\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/updater/checker.py:11]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "open",
+     "direction": "read",
+     "format": "binary file",
+     "line": 65,
+     "tag": "[код: pysport@b548c35 sportorg/modules/winorient/wdb.py:65]"
+    }
+   ],
+   "context": "WinOrient",
+   "direction": "read",
+   "formats": [
+    "binary file"
+   ],
+   "function": "WinOrientBinary._read_file",
+   "module": "sportorg.modules.winorient.wdb",
+   "path": "sportorg/modules/winorient/wdb.py",
+   "tag": "[код: pysport@b548c35 sportorg/modules/winorient/wdb.py:65]",
+   "values": [
+    {
+     "kind": "other",
+     "origin": "mode of open",
+     "tag": "[код: pysport@b548c35 sportorg/modules/winorient/wdb.py:65]",
+     "text": "\"rb\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/modules/winorient/wdb.py:65]"
+    }
+   ]
+  },
+  {
+   "calls": [
+    {
+     "api": "shutil.copytree",
+     "direction": "write",
+     "format": "file system",
+     "line": 155,
+     "tag": "[код: pysport@b548c35 sportorg/paths.py:155]"
+    }
+   ],
+   "context": "other",
+   "direction": "write",
+   "formats": [
+    "file system"
+   ],
+   "function": "seed_if_first_run",
+   "module": "sportorg.paths",
+   "path": "sportorg/paths.py",
+   "tag": "[код: pysport@b548c35 sportorg/paths.py:155]",
+   "values": []
+  },
+  {
+   "calls": [
+    {
+     "api": "open",
+     "direction": "read",
+     "format": "binary file",
+     "line": 6,
+     "tag": "[код: pysport@b548c35 sportorg/utils/text.py:6]"
+    }
+   ],
+   "context": "other",
+   "direction": "read",
+   "formats": [
+    "binary file"
+   ],
+   "function": "detect_encoding",
+   "module": "sportorg.utils.text",
+   "path": "sportorg/utils/text.py",
+   "tag": "[код: pysport@b548c35 sportorg/utils/text.py:6]",
+   "values": [
+    {
+     "kind": "other",
+     "origin": "mode of open",
+     "tag": "[код: pysport@b548c35 sportorg/utils/text.py:6]",
+     "text": "\"rb\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/utils/text.py:6]"
+    },
+    {
+     "kind": "encoding",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/utils/text.py:15]",
+     "text": "\"UTF-8-SIG\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/utils/text.py:15]"
+    },
+    {
+     "kind": "encoding",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/utils/text.py:15]",
+     "text": "\"utf-8\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/utils/text.py:15]"
+    },
+    {
+     "kind": "encoding",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/utils/text.py:15]",
+     "text": "\"windows-1251\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/utils/text.py:15]"
+    },
+    {
+     "kind": "encoding",
+     "origin": "literal",
+     "tag": "[код: pysport@b548c35 sportorg/utils/text.py:22]",
+     "text": "\"utf-8\"",
+     "use_tag": "[код: pysport@b548c35 sportorg/utils/text.py:22]"
+    }
+   ]
+  }
+ ],
+ "summary": {
+  "by_context_direction": {
+   "IOF XML": {
+    "write": 4
+   },
+   "Impinj RFID": {
+    "device": 1
+   },
+   "SFR": {
+    "write": 11
+   },
+   "SPORTident": {
+    "decode": 1,
+    "device": 2,
+    "write": 1
+   },
+   "WinOrient": {
+    "read": 1
+   },
+   "backup": {
+    "read": 2,
+    "unknown": 1,
+    "write": 2
+   },
+   "lib:huichang": {
+    "decode": 2,
+    "device": 1,
+    "encode": 1,
+    "read": 1,
+    "write": 1
+   },
+   "lib:iof": {
+    "read": 1,
+    "write": 1
+   },
+   "lib:ocad": {
+    "read": 2
+   },
+   "lib:settings": {
+    "both": 1,
+    "read": 1
+   },
+   "lib:sfr": {
+    "both": 1,
+    "decode": 7,
+    "read": 1,
+    "write": 1
+   },
+   "lib:sportiduino": {
+    "both": 2,
+    "decode": 2,
+    "encode": 3,
+    "read": 1,
+    "write": 1
+   },
+   "lib:srpid": {
+    "both": 2,
+    "decode": 3,
+    "encode": 1,
+    "read": 1,
+    "write": 1
+   },
+   "lib:telegram": {
+    "write": 1
+   },
+   "lib:template": {
+    "both": 2
+   },
+   "lib:winorient": {
+    "read": 2,
+    "write": 1
+   },
+   "live": {
+    "both": 1,
+    "write": 1
+   },
+   "other": {
+    "both": 4,
+    "device": 2,
+    "read": 18,
+    "unknown": 1,
+    "write": 4
+   },
+   "printing": {
+    "device": 5
+   },
+   "recovery": {
+    "read": 4,
+    "write": 1
+   },
+   "teamwork": {
+    "both": 4,
+    "read": 4,
+    "write": 4
+   }
+  },
+  "by_kind_direction": {
+   "CSV": {
+    "read": 3
+   },
+   "HID": {
+    "device": 1
+   },
+   "HTTP": {
+    "both": 1,
+    "read": 1,
+    "write": 1
+   },
+   "Huichang serial": {
+    "decode": 2,
+    "encode": 1,
+    "read": 1,
+    "write": 1
+   },
+   "INI": {
+    "both": 2
+   },
+   "Impinj RFID": {
+    "device": 1
+   },
+   "JSON": {
+    "read": 6,
+    "write": 6
+   },
+   "PO": {
+    "read": 1
+   },
+   "SFR HID": {
+    "decode": 7,
+    "read": 1
+   },
+   "SPORTident lib": {
+    "device": 1
+   },
+   "SPORTident serial": {
+    "decode": 1
+   },
+   "SRPID serial": {
+    "both": 1,
+    "decode": 3,
+    "encode": 1,
+    "read": 2,
+    "write": 1
+   },
+   "Sportiduino serial": {
+    "both": 1,
+    "decode": 2,
+    "encode": 3,
+    "read": 2,
+    "write": 1
+   },
+   "XML": {
+    "read": 2,
+    "write": 5
+   },
+   "audio": {
+    "read": 1
+   },
+   "binary file": {
+    "read": 3,
+    "write": 6
+   },
+   "docx": {
+    "both": 1
+   },
+   "file object (parameter)": {
+    "read": 2,
+    "write": 12
+   },
+   "file system": {
+    "write": 1
+   },
+   "gzip": {
+    "read": 2
+   },
+   "jinja2": {
+    "both": 2
+   },
+   "printer": {
+    "device": 7
+   },
+   "serial": {
+    "device": 4
+   },
+   "socket": {
+    "both": 2,
+    "read": 2,
+    "write": 3
+   },
+   "struct": {
+    "both": 1,
+    "read": 1,
+    "write": 1
+   },
+   "text file": {
+    "both": 1,
+    "read": 24,
+    "unknown": 2,
+    "write": 5
+   }
+  },
+  "by_value_kind": {
+   "baudrate": 3,
+   "byte-constant": 80,
+   "delimiter": 6,
+   "encoding": 43,
+   "extension": 14,
+   "offset-or-width": 107,
+   "other": 18,
+   "struct-format": 3,
+   "timeout": 13,
+   "url": 4
+  },
+  "contexts_without_reader": [
+   "IOF XML",
+   "SFR",
+   "SPORTident",
+   "lib:telegram"
+  ],
+  "contexts_without_writer": [
+   "WinOrient",
+   "lib:ocad"
+  ],
+  "device_only_contexts": [
+   "Impinj RFID",
+   "printing"
+  ],
+  "device_only_formats": [
+   "HID",
+   "Impinj RFID",
+   "SPORTident lib",
+   "printer",
+   "serial"
+  ],
+  "functions": 124,
+  "io_calls": 184,
+  "values": 291,
+  "without_reader": [
+   "SPORTident serial",
+   "file system"
+  ],
+  "without_writer": [
+   "CSV",
+   "PO",
+   "SFR HID",
+   "SPORTident serial",
+   "audio",
+   "gzip"
+  ]
+ },
+ "unparsed": []
+}

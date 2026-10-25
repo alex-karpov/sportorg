@@ -1,0 +1,5500 @@
+[
+ {
+  "aliases": [
+   "CVE-2026-54279",
+   "PYSEC-2026-2112"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.14.1"
+  ],
+  "id": "GHSA-2fqr-mr3j-6wp8",
+  "label": "LOW",
+  "lock": "[код: pysport@b548c35 uv.lock:62]",
+  "package": "aiohttp",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:N/VA:N/SC:L/SI:N/SA:N/E:U",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "aiohttp: Host-Only Cookies Become Domain Cookies After CookieJar Persistence",
+  "version": "3.10.11",
+  "withdrawn": false
+ },
+ {
+  "aliases": [],
+  "class": "runtime",
+  "fixed": [
+   "3.14.4"
+  ],
+  "id": "GHSA-2g87-pp6c-29x5",
+  "label": "HIGH",
+  "lock": "[код: pysport@b548c35 uv.lock:62]",
+  "package": "aiohttp",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "aiohttp: Multiple instances of excessive or unbounded memory/CPU use",
+  "version": "3.10.11",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-34514",
+   "PYSEC-2026-2096"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.13.4"
+  ],
+  "id": "GHSA-2vrm-gr82-f7m5",
+  "label": "LOW",
+  "lock": "[код: pysport@b548c35 uv.lock:62]",
+  "package": "aiohttp",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:U",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "AIOHTTP has CRLF injection through multipart part content type header construction",
+  "version": "3.10.11",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-34517",
+   "PYSEC-2026-2099"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.13.4"
+  ],
+  "id": "GHSA-3wq7-rqq7-wx6j",
+  "label": "LOW",
+  "lock": "[код: pysport@b548c35 uv.lock:62]",
+  "package": "aiohttp",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:U",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "AIOHTTP has late size enforcement for non-file multipart fields causes memory DoS",
+  "version": "3.10.11",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-111063"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.14.4"
+  ],
+  "id": "GHSA-494j-54xm-rwp3",
+  "label": "LOW",
+  "lock": "[код: pysport@b548c35 uv.lock:62]",
+  "package": "aiohttp",
+  "py38_only": true,
+  "severity": [],
+  "summary": "AIOHTTP: Secure attribute not enforced for shared cookie",
+  "version": "3.10.11",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-54273",
+   "PYSEC-2026-2107"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.14.1"
+  ],
+  "id": "GHSA-4fvr-rgm6-gqmc",
+  "label": "MODERATE",
+  "lock": "[код: pysport@b548c35 uv.lock:62]",
+  "package": "aiohttp",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:U",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "aiohttp: HTTP/1 Pipelined Requests Queue Without Limit",
+  "version": "3.10.11",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-54275",
+   "PYSEC-2026-237"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.14.1"
+  ],
+  "id": "GHSA-4m7w-qmgq-4wj5",
+  "label": "LOW",
+  "lock": "[код: pysport@b548c35 uv.lock:62]",
+  "package": "aiohttp",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:U",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "aiohttp: TLS Server Hostname Override Is Ignored When Reusing HTTPS Connections",
+  "version": "3.10.11",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2025-69226",
+   "PYSEC-2026-1097"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.13.3"
+  ],
+  "id": "GHSA-54jq-c3m8-4m76",
+  "label": "LOW",
+  "lock": "[код: pysport@b548c35 uv.lock:62]",
+  "package": "aiohttp",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:U",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "AIOHTTP vulnerable to brute-force leak of internal static ﬁle path components",
+  "version": "3.10.11",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-111064"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.14.4"
+  ],
+  "id": "GHSA-5wr8-gcqf-gqf3",
+  "label": "HIGH",
+  "lock": "[код: pysport@b548c35 uv.lock:62]",
+  "package": "aiohttp",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "aiohttp server lacks an initial request/header timeout",
+  "version": "3.10.11",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-34520",
+   "PYSEC-2026-2102"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.13.4"
+  ],
+  "id": "GHSA-63hf-3vf5-4wqf",
+  "label": "LOW",
+  "lock": "[код: pysport@b548c35 uv.lock:62]",
+  "package": "aiohttp",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H",
+    "type": "CVSS_V3"
+   },
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:U",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "AIOHTTP's C parser (llhttp) accepts null bytes and control characters in response header values - header injection/security bypass",
+  "version": "3.10.11",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-54277",
+   "PYSEC-2026-2110"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.14.1"
+  ],
+  "id": "GHSA-63hw-fmq6-xxg2",
+  "label": "MODERATE",
+  "lock": "[код: pysport@b548c35 uv.lock:62]",
+  "package": "aiohttp",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:U",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "aiohttp: C HTTP Parser Bypasses max_line_size for Fragmented Lines",
+  "version": "3.10.11",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2025-69224",
+   "PYSEC-2026-1099"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.13.3"
+  ],
+  "id": "GHSA-69f9-5gxw-wvc2",
+  "label": "LOW",
+  "lock": "[код: pysport@b548c35 uv.lock:62]",
+  "package": "aiohttp",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:U",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "AIOHTTP's unicode processing of header values could cause parsing discrepancies",
+  "version": "3.10.11",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-111065"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.14.4"
+  ],
+  "id": "GHSA-6cjc-53gc-5rqm",
+  "label": "MODERATE",
+  "lock": "[код: pysport@b548c35 uv.lock:62]",
+  "package": "aiohttp",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "AIOHTTP: Connector pool exhaustion via Max-Age overflow",
+  "version": "3.10.11",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2025-69228",
+   "PYSEC-2026-1100"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.13.3"
+  ],
+  "id": "GHSA-6jhg-hg63-jvvf",
+  "label": "MODERATE",
+  "lock": "[код: pysport@b548c35 uv.lock:62]",
+  "package": "aiohttp",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:U",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "AIOHTTP vulnerable to  denial of service through large payloads",
+  "version": "3.10.11",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2025-69223",
+   "PYSEC-2026-1101"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.13.3"
+  ],
+  "id": "GHSA-6mq8-rvhq-8wgg",
+  "label": "HIGH",
+  "lock": "[код: pysport@b548c35 uv.lock:62]",
+  "package": "aiohttp",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+    "type": "CVSS_V3"
+   }
+  ],
+  "summary": "AIOHTTP's HTTP Parser auto_decompress feature is vulnerable to zip bomb",
+  "version": "3.10.11",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2025-53643",
+   "PYSEC-2026-1104"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.12.14"
+  ],
+  "id": "GHSA-9548-qrrj-x5pj",
+  "label": "LOW",
+  "lock": "[код: pysport@b548c35 uv.lock:62]",
+  "package": "aiohttp",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:U",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": " AIOHTTP is vulnerable to HTTP Request/Response Smuggling through incorrect parsing of chunked trailer sections",
+  "version": "3.10.11",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-34518",
+   "PYSEC-2026-2100"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.13.4"
+  ],
+  "id": "GHSA-966j-vmvw-g2g9",
+  "label": "LOW",
+  "lock": "[код: pysport@b548c35 uv.lock:62]",
+  "package": "aiohttp",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+    "type": "CVSS_V3"
+   },
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:U",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "AIOHTTP leaks Cookie and Proxy-Authorization headers on cross-origin redirect",
+  "version": "3.10.11",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-54280",
+   "PYSEC-2026-2113"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.14.1"
+  ],
+  "id": "GHSA-9x8q-7h8h-wcw9",
+  "label": "LOW",
+  "lock": "[код: pysport@b548c35 uv.lock:62]",
+  "package": "aiohttp",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:U",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "aiohttp: Payload Response Resources Are Not Closed After Mid-Body Disconnect",
+  "version": "3.10.11",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-111066"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.14.4"
+  ],
+  "id": "GHSA-9xw5-w5jj-pvcg",
+  "label": "HIGH",
+  "lock": "[код: pysport@b548c35 uv.lock:62]",
+  "package": "aiohttp",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "AIOHTTP: File descriptor exhaustion in multipart requests",
+  "version": "3.10.11",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-34525",
+   "PYSEC-2026-2103"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.13.4"
+  ],
+  "id": "GHSA-c427-h43c-vf67",
+  "label": "MODERATE",
+  "lock": "[код: pysport@b548c35 uv.lock:62]",
+  "package": "aiohttp",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:N/VI:L/VA:N/SC:L/SI:L/SA:N",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "AIOHTTP accepts duplicate Host headers",
+  "version": "3.10.11",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-69244",
+   "PYSEC-2026-3545"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.14.3"
+  ],
+  "id": "GHSA-cq5v-8q36-5273",
+  "label": "HIGH",
+  "lock": "[код: pysport@b548c35 uv.lock:62]",
+  "package": "aiohttp",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "AIOHTTP: Out-of-bounds heap read in C HTTP response parser error path (malformed chunked response)",
+  "version": "3.10.11",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-111748"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.14.4"
+  ],
+  "id": "GHSA-f9xw-jh8m-3mwq",
+  "label": "MODERATE",
+  "lock": "[код: pysport@b548c35 uv.lock:62]",
+  "package": "aiohttp",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "AIOHTTP: Absolute-form request targets can spoof Request.scheme",
+  "version": "3.10.11",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2025-69230",
+   "PYSEC-2026-1105"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.13.3"
+  ],
+  "id": "GHSA-fh55-r93g-j68g",
+  "label": "LOW",
+  "lock": "[код: pysport@b548c35 uv.lock:62]",
+  "package": "aiohttp",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:L/SC:N/SI:N/SA:N/E:U",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "AIOHTTP Vulnerable to Cookie Parser Warning Storm",
+  "version": "3.10.11",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-54278",
+   "PYSEC-2026-2111"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.14.1"
+  ],
+  "id": "GHSA-g3cq-j2xw-wf74",
+  "label": "MODERATE",
+  "lock": "[код: pysport@b548c35 uv.lock:62]",
+  "package": "aiohttp",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:U",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "aiohttp: Unread Compressed Request Bodies Bypass client_max_size During Cleanup",
+  "version": "3.10.11",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2025-69229",
+   "PYSEC-2026-1106"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.13.3"
+  ],
+  "id": "GHSA-g84x-mcqj-x9qq",
+  "label": "MODERATE",
+  "lock": "[код: pysport@b548c35 uv.lock:62]",
+  "package": "aiohttp",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:U",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "AIOHTTP vulnerable to DoS through chunked messages",
+  "version": "3.10.11",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-111749"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.14.4"
+  ],
+  "id": "GHSA-gx76-c99x-2c96",
+  "label": "LOW",
+  "lock": "[код: pysport@b548c35 uv.lock:62]",
+  "package": "aiohttp",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "AIOHTTP: Cookie from subdomain can remove Host-Only Scope from existing cookies",
+  "version": "3.10.11",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-34513",
+   "PYSEC-2026-2095"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.13.4"
+  ],
+  "id": "GHSA-hcc4-c3v8-rx92",
+  "label": "LOW",
+  "lock": "[код: pysport@b548c35 uv.lock:62]",
+  "package": "aiohttp",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:U",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "AIOHTTP Affected by Denial of Service (DoS) via Unbounded DNS Cache in TCPConnector",
+  "version": "3.10.11",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-47265",
+   "PYSEC-2026-2105"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.14.0"
+  ],
+  "id": "GHSA-hg6j-4rv6-33pg",
+  "label": "MODERATE",
+  "lock": "[код: pysport@b548c35 uv.lock:62]",
+  "package": "aiohttp",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:U",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "AIOHTTP is vulnerable to cross-origin redirect with per-request cookies",
+  "version": "3.10.11",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-54276",
+   "PYSEC-2026-2109"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.14.1"
+  ],
+  "id": "GHSA-hpj7-wq8m-9hgp",
+  "label": "MODERATE",
+  "lock": "[код: pysport@b548c35 uv.lock:62]",
+  "package": "aiohttp",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "aiohttp: DigestAuthMiddleware Applies Credentials to Cross-Origin Redirect Challenges",
+  "version": "3.10.11",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-34993",
+   "PYSEC-2026-2104"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.14.0"
+  ],
+  "id": "GHSA-jg22-mg44-37j8",
+  "label": "MODERATE",
+  "lock": "[код: pysport@b548c35 uv.lock:62]",
+  "package": "aiohttp",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:L/AC:H/PR:H/UI:R/S:C/C:L/I:H/A:L",
+    "type": "CVSS_V3"
+   }
+  ],
+  "summary": "AIOHTTP is Vulnerable to Deserialization of Untrusted Data",
+  "version": "3.10.11",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2025-69227",
+   "PYSEC-2026-1107"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.13.3"
+  ],
+  "id": "GHSA-jj3x-wxrx-4x23",
+  "label": "MODERATE",
+  "lock": "[код: pysport@b548c35 uv.lock:62]",
+  "package": "aiohttp",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:U",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "AIOHTTP vulnerable to DoS when bypassing asserts",
+  "version": "3.10.11",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-34516",
+   "PYSEC-2026-2098"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.13.4"
+  ],
+  "id": "GHSA-m5qp-6w8w-w647",
+  "label": "MODERATE",
+  "lock": "[код: pysport@b548c35 uv.lock:62]",
+  "package": "aiohttp",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+    "type": "CVSS_V3"
+   },
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:U",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "AIOHTTP has a Multipart Header Size Bypass",
+  "version": "3.10.11",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-50269",
+   "PYSEC-2026-2106"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.14.0"
+  ],
+  "id": "GHSA-m6qw-4cw2-hm4m",
+  "label": "LOW",
+  "lock": "[код: pysport@b548c35 uv.lock:62]",
+  "package": "aiohttp",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:U",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "aiohttp: CRLF injection in multipart headers",
+  "version": "3.10.11",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-69243",
+   "PYSEC-2026-3546"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.14.2"
+  ],
+  "id": "GHSA-mfx4-hv73-q22v",
+  "label": "MODERATE",
+  "lock": "[код: pysport@b548c35 uv.lock:62]",
+  "package": "aiohttp",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "AIOHTTP: HTTP request smuggling via WebSocket upgrade",
+  "version": "3.10.11",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-59881",
+   "PYSEC-2026-3547"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.14.2"
+  ],
+  "id": "GHSA-mq44-7p77-q5h7",
+  "label": "MODERATE",
+  "lock": "[код: pysport@b548c35 uv.lock:62]",
+  "package": "aiohttp",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "AIOHTTP: WebSocket client accepts compressed frames without negotiated permessage-deflate",
+  "version": "3.10.11",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2025-69225",
+   "PYSEC-2026-1109"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.13.3"
+  ],
+  "id": "GHSA-mqqc-3gqh-h2x8",
+  "label": "LOW",
+  "lock": "[код: pysport@b548c35 uv.lock:62]",
+  "package": "aiohttp",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:U",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "AIOHTTP has unicode match groups in regexes for ASCII protocol elements",
+  "version": "3.10.11",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-34519",
+   "PYSEC-2026-2101"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.13.4"
+  ],
+  "id": "GHSA-mwh4-6h8g-pg8w",
+  "label": "LOW",
+  "lock": "[код: pysport@b548c35 uv.lock:62]",
+  "package": "aiohttp",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:U",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "AIOHTTP has HTTP response splitting via \\r in reason phrase",
+  "version": "3.10.11",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-34515",
+   "PYSEC-2026-2097"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.13.4"
+  ],
+  "id": "GHSA-p998-jp59-783m",
+  "label": "MODERATE",
+  "lock": "[код: pysport@b548c35 uv.lock:62]",
+  "package": "aiohttp",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:U",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "AIOHTTP affected by UNC SSRF/NTLMv2 Credential Theft/Local File Read in static resource handler on Windows",
+  "version": "3.10.11",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-111750"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.14.4"
+  ],
+  "id": "GHSA-pqxq-w44r-73xw",
+  "label": "MODERATE",
+  "lock": "[код: pysport@b548c35 uv.lock:62]",
+  "package": "aiohttp",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:L/VA:L/SC:N/SI:L/SA:L",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "AIOHTTP: Pure-Python parser request smuggling",
+  "version": "3.10.11",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-22815",
+   "PYSEC-2026-2094"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.13.4"
+  ],
+  "id": "GHSA-w2fm-2cpv-w7v5",
+  "label": "MODERATE",
+  "lock": "[код: pysport@b548c35 uv.lock:62]",
+  "package": "aiohttp",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "aiohttp allows unlimited trailer headers, leading to possible uncapped memory usage",
+  "version": "3.10.11",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-54274",
+   "PYSEC-2026-2108"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.14.1"
+  ],
+  "id": "GHSA-xcgm-r5h9-7989",
+  "label": "MODERATE",
+  "lock": "[код: pysport@b548c35 uv.lock:62]",
+  "package": "aiohttp",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:U",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "aiohttp: Incomplete websocket frame payloads bypass memory limits",
+  "version": "3.10.11",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2025-69226",
+   "GHSA-54jq-c3m8-4m76"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.13.3"
+  ],
+  "id": "PYSEC-2026-1097",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:62]",
+  "package": "aiohttp",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:U",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "AIOHTTP vulnerable to brute-force leak of internal static ﬁle path components",
+  "version": "3.10.11",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2025-69224",
+   "GHSA-69f9-5gxw-wvc2"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.13.3"
+  ],
+  "id": "PYSEC-2026-1099",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:62]",
+  "package": "aiohttp",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:U",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "AIOHTTP's unicode processing of header values could cause parsing discrepancies",
+  "version": "3.10.11",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2025-69228",
+   "GHSA-6jhg-hg63-jvvf"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.13.3"
+  ],
+  "id": "PYSEC-2026-1100",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:62]",
+  "package": "aiohttp",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:U",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "AIOHTTP vulnerable to  denial of service through large payloads",
+  "version": "3.10.11",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2025-69223",
+   "GHSA-6mq8-rvhq-8wgg"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.13.3"
+  ],
+  "id": "PYSEC-2026-1101",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:62]",
+  "package": "aiohttp",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+    "type": "CVSS_V3"
+   }
+  ],
+  "summary": "AIOHTTP's HTTP Parser auto_decompress feature is vulnerable to zip bomb",
+  "version": "3.10.11",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2025-53643",
+   "GHSA-9548-qrrj-x5pj"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.12.14"
+  ],
+  "id": "PYSEC-2026-1104",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:62]",
+  "package": "aiohttp",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:U",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": " AIOHTTP is vulnerable to HTTP Request/Response Smuggling through incorrect parsing of chunked trailer sections",
+  "version": "3.10.11",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2025-69230",
+   "GHSA-fh55-r93g-j68g"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.13.3"
+  ],
+  "id": "PYSEC-2026-1105",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:62]",
+  "package": "aiohttp",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:L/SC:N/SI:N/SA:N/E:U",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "AIOHTTP Vulnerable to Cookie Parser Warning Storm",
+  "version": "3.10.11",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2025-69229",
+   "GHSA-g84x-mcqj-x9qq"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.13.3"
+  ],
+  "id": "PYSEC-2026-1106",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:62]",
+  "package": "aiohttp",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:U",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "AIOHTTP vulnerable to DoS through chunked messages",
+  "version": "3.10.11",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2025-69227",
+   "GHSA-jj3x-wxrx-4x23"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.13.3"
+  ],
+  "id": "PYSEC-2026-1107",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:62]",
+  "package": "aiohttp",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:U",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "AIOHTTP vulnerable to DoS when bypassing asserts",
+  "version": "3.10.11",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2025-69225",
+   "GHSA-mqqc-3gqh-h2x8"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.13.3"
+  ],
+  "id": "PYSEC-2026-1109",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:62]",
+  "package": "aiohttp",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:U",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "AIOHTTP has unicode match groups in regexes for ASCII protocol elements",
+  "version": "3.10.11",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-22815",
+   "GHSA-w2fm-2cpv-w7v5"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.13.4"
+  ],
+  "id": "PYSEC-2026-2094",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:62]",
+  "package": "aiohttp",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "",
+  "version": "3.10.11",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-34513",
+   "GHSA-hcc4-c3v8-rx92"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.13.4"
+  ],
+  "id": "PYSEC-2026-2095",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:62]",
+  "package": "aiohttp",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+    "type": "CVSS_V3"
+   }
+  ],
+  "summary": "",
+  "version": "3.10.11",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-34514",
+   "GHSA-2vrm-gr82-f7m5"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.13.4"
+  ],
+  "id": "PYSEC-2026-2096",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:62]",
+  "package": "aiohttp",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+    "type": "CVSS_V3"
+   }
+  ],
+  "summary": "",
+  "version": "3.10.11",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-34515",
+   "GHSA-p998-jp59-783m"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.13.4"
+  ],
+  "id": "PYSEC-2026-2097",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:62]",
+  "package": "aiohttp",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+    "type": "CVSS_V3"
+   }
+  ],
+  "summary": "",
+  "version": "3.10.11",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-34516",
+   "GHSA-m5qp-6w8w-w647"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.13.4"
+  ],
+  "id": "PYSEC-2026-2098",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:62]",
+  "package": "aiohttp",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "",
+  "version": "3.10.11",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-34517",
+   "GHSA-3wq7-rqq7-wx6j"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.13.4"
+  ],
+  "id": "PYSEC-2026-2099",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:62]",
+  "package": "aiohttp",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+    "type": "CVSS_V3"
+   }
+  ],
+  "summary": "",
+  "version": "3.10.11",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-34518",
+   "GHSA-966j-vmvw-g2g9"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.13.4"
+  ],
+  "id": "PYSEC-2026-2100",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:62]",
+  "package": "aiohttp",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+    "type": "CVSS_V3"
+   }
+  ],
+  "summary": "",
+  "version": "3.10.11",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-34519",
+   "GHSA-mwh4-6h8g-pg8w"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.13.4"
+  ],
+  "id": "PYSEC-2026-2101",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:62]",
+  "package": "aiohttp",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+    "type": "CVSS_V3"
+   }
+  ],
+  "summary": "",
+  "version": "3.10.11",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-34520",
+   "GHSA-63hf-3vf5-4wqf"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.13.4"
+  ],
+  "id": "PYSEC-2026-2102",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:62]",
+  "package": "aiohttp",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "",
+  "version": "3.10.11",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-34525",
+   "GHSA-c427-h43c-vf67"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.13.4"
+  ],
+  "id": "PYSEC-2026-2103",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:62]",
+  "package": "aiohttp",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+    "type": "CVSS_V3"
+   }
+  ],
+  "summary": "",
+  "version": "3.10.11",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-34993",
+   "GHSA-jg22-mg44-37j8"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.14.0"
+  ],
+  "id": "PYSEC-2026-2104",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:62]",
+  "package": "aiohttp",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
+    "type": "CVSS_V3"
+   }
+  ],
+  "summary": "",
+  "version": "3.10.11",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-47265",
+   "GHSA-hg6j-4rv6-33pg"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.14.0"
+  ],
+  "id": "PYSEC-2026-2105",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:62]",
+  "package": "aiohttp",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+    "type": "CVSS_V3"
+   }
+  ],
+  "summary": "",
+  "version": "3.10.11",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-50269",
+   "GHSA-m6qw-4cw2-hm4m"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.14.0"
+  ],
+  "id": "PYSEC-2026-2106",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:62]",
+  "package": "aiohttp",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+    "type": "CVSS_V3"
+   }
+  ],
+  "summary": "",
+  "version": "3.10.11",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-54273",
+   "GHSA-4fvr-rgm6-gqmc"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.14.1"
+  ],
+  "id": "PYSEC-2026-2107",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:62]",
+  "package": "aiohttp",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+    "type": "CVSS_V3"
+   }
+  ],
+  "summary": "",
+  "version": "3.10.11",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-54274",
+   "GHSA-xcgm-r5h9-7989"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.14.1"
+  ],
+  "id": "PYSEC-2026-2108",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:62]",
+  "package": "aiohttp",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+    "type": "CVSS_V3"
+   }
+  ],
+  "summary": "",
+  "version": "3.10.11",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-54276",
+   "GHSA-hpj7-wq8m-9hgp"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.14.1"
+  ],
+  "id": "PYSEC-2026-2109",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:62]",
+  "package": "aiohttp",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+    "type": "CVSS_V3"
+   }
+  ],
+  "summary": "",
+  "version": "3.10.11",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-54277",
+   "GHSA-63hw-fmq6-xxg2"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.14.1"
+  ],
+  "id": "PYSEC-2026-2110",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:62]",
+  "package": "aiohttp",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+    "type": "CVSS_V3"
+   }
+  ],
+  "summary": "",
+  "version": "3.10.11",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-54278",
+   "GHSA-g3cq-j2xw-wf74"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.14.1"
+  ],
+  "id": "PYSEC-2026-2111",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:62]",
+  "package": "aiohttp",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+    "type": "CVSS_V3"
+   }
+  ],
+  "summary": "",
+  "version": "3.10.11",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-54279",
+   "GHSA-2fqr-mr3j-6wp8"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.14.1"
+  ],
+  "id": "PYSEC-2026-2112",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:62]",
+  "package": "aiohttp",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+    "type": "CVSS_V3"
+   }
+  ],
+  "summary": "",
+  "version": "3.10.11",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-54280",
+   "GHSA-9x8q-7h8h-wcw9"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.14.1"
+  ],
+  "id": "PYSEC-2026-2113",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:62]",
+  "package": "aiohttp",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+    "type": "CVSS_V3"
+   }
+  ],
+  "summary": "",
+  "version": "3.10.11",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-54275",
+   "GHSA-4m7w-qmgq-4wj5"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.14.1"
+  ],
+  "id": "PYSEC-2026-237",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:62]",
+  "package": "aiohttp",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+    "type": "CVSS_V3"
+   }
+  ],
+  "summary": "",
+  "version": "3.10.11",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-69244",
+   "GHSA-cq5v-8q36-5273"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.14.3"
+  ],
+  "id": "PYSEC-2026-3545",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:62]",
+  "package": "aiohttp",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "AIOHTTP: Out-of-bounds heap read in C HTTP response parser error path (malformed chunked response)",
+  "version": "3.10.11",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-69243",
+   "GHSA-mfx4-hv73-q22v"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.14.2"
+  ],
+  "id": "PYSEC-2026-3546",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:62]",
+  "package": "aiohttp",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "AIOHTTP: HTTP request smuggling via WebSocket upgrade",
+  "version": "3.10.11",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-59881",
+   "GHSA-mq44-7p77-q5h7"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.14.2"
+  ],
+  "id": "PYSEC-2026-3547",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:62]",
+  "package": "aiohttp",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "AIOHTTP: WebSocket client accepts compressed frames without negotiated permessage-deflate",
+  "version": "3.10.11",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-54279",
+   "PYSEC-2026-2112"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.14.1"
+  ],
+  "id": "GHSA-2fqr-mr3j-6wp8",
+  "label": "LOW",
+  "lock": "[код: pysport@b548c35 uv.lock:178]",
+  "package": "aiohttp",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:N/VA:N/SC:L/SI:N/SA:N/E:U",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "aiohttp: Host-Only Cookies Become Domain Cookies After CookieJar Persistence",
+  "version": "3.13.1",
+  "withdrawn": false
+ },
+ {
+  "aliases": [],
+  "class": "runtime",
+  "fixed": [
+   "3.14.4"
+  ],
+  "id": "GHSA-2g87-pp6c-29x5",
+  "label": "HIGH",
+  "lock": "[код: pysport@b548c35 uv.lock:178]",
+  "package": "aiohttp",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "aiohttp: Multiple instances of excessive or unbounded memory/CPU use",
+  "version": "3.13.1",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-34514",
+   "PYSEC-2026-2096"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.13.4"
+  ],
+  "id": "GHSA-2vrm-gr82-f7m5",
+  "label": "LOW",
+  "lock": "[код: pysport@b548c35 uv.lock:178]",
+  "package": "aiohttp",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:U",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "AIOHTTP has CRLF injection through multipart part content type header construction",
+  "version": "3.13.1",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-34517",
+   "PYSEC-2026-2099"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.13.4"
+  ],
+  "id": "GHSA-3wq7-rqq7-wx6j",
+  "label": "LOW",
+  "lock": "[код: pysport@b548c35 uv.lock:178]",
+  "package": "aiohttp",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:U",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "AIOHTTP has late size enforcement for non-file multipart fields causes memory DoS",
+  "version": "3.13.1",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-111063"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.14.4"
+  ],
+  "id": "GHSA-494j-54xm-rwp3",
+  "label": "LOW",
+  "lock": "[код: pysport@b548c35 uv.lock:178]",
+  "package": "aiohttp",
+  "py38_only": false,
+  "severity": [],
+  "summary": "AIOHTTP: Secure attribute not enforced for shared cookie",
+  "version": "3.13.1",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-54273",
+   "PYSEC-2026-2107"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.14.1"
+  ],
+  "id": "GHSA-4fvr-rgm6-gqmc",
+  "label": "MODERATE",
+  "lock": "[код: pysport@b548c35 uv.lock:178]",
+  "package": "aiohttp",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:U",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "aiohttp: HTTP/1 Pipelined Requests Queue Without Limit",
+  "version": "3.13.1",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-54275",
+   "PYSEC-2026-237"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.14.1"
+  ],
+  "id": "GHSA-4m7w-qmgq-4wj5",
+  "label": "LOW",
+  "lock": "[код: pysport@b548c35 uv.lock:178]",
+  "package": "aiohttp",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:U",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "aiohttp: TLS Server Hostname Override Is Ignored When Reusing HTTPS Connections",
+  "version": "3.13.1",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2025-69226",
+   "PYSEC-2026-1097"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.13.3"
+  ],
+  "id": "GHSA-54jq-c3m8-4m76",
+  "label": "LOW",
+  "lock": "[код: pysport@b548c35 uv.lock:178]",
+  "package": "aiohttp",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:U",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "AIOHTTP vulnerable to brute-force leak of internal static ﬁle path components",
+  "version": "3.13.1",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-111064"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.14.4"
+  ],
+  "id": "GHSA-5wr8-gcqf-gqf3",
+  "label": "HIGH",
+  "lock": "[код: pysport@b548c35 uv.lock:178]",
+  "package": "aiohttp",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "aiohttp server lacks an initial request/header timeout",
+  "version": "3.13.1",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-34520",
+   "PYSEC-2026-2102"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.13.4"
+  ],
+  "id": "GHSA-63hf-3vf5-4wqf",
+  "label": "LOW",
+  "lock": "[код: pysport@b548c35 uv.lock:178]",
+  "package": "aiohttp",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H",
+    "type": "CVSS_V3"
+   },
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:U",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "AIOHTTP's C parser (llhttp) accepts null bytes and control characters in response header values - header injection/security bypass",
+  "version": "3.13.1",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-54277",
+   "PYSEC-2026-2110"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.14.1"
+  ],
+  "id": "GHSA-63hw-fmq6-xxg2",
+  "label": "MODERATE",
+  "lock": "[код: pysport@b548c35 uv.lock:178]",
+  "package": "aiohttp",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:U",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "aiohttp: C HTTP Parser Bypasses max_line_size for Fragmented Lines",
+  "version": "3.13.1",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2025-69224",
+   "PYSEC-2026-1099"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.13.3"
+  ],
+  "id": "GHSA-69f9-5gxw-wvc2",
+  "label": "LOW",
+  "lock": "[код: pysport@b548c35 uv.lock:178]",
+  "package": "aiohttp",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:U",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "AIOHTTP's unicode processing of header values could cause parsing discrepancies",
+  "version": "3.13.1",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-111065"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.14.4"
+  ],
+  "id": "GHSA-6cjc-53gc-5rqm",
+  "label": "MODERATE",
+  "lock": "[код: pysport@b548c35 uv.lock:178]",
+  "package": "aiohttp",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "AIOHTTP: Connector pool exhaustion via Max-Age overflow",
+  "version": "3.13.1",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2025-69228",
+   "PYSEC-2026-1100"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.13.3"
+  ],
+  "id": "GHSA-6jhg-hg63-jvvf",
+  "label": "MODERATE",
+  "lock": "[код: pysport@b548c35 uv.lock:178]",
+  "package": "aiohttp",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:U",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "AIOHTTP vulnerable to  denial of service through large payloads",
+  "version": "3.13.1",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2025-69223",
+   "PYSEC-2026-1101"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.13.3"
+  ],
+  "id": "GHSA-6mq8-rvhq-8wgg",
+  "label": "HIGH",
+  "lock": "[код: pysport@b548c35 uv.lock:178]",
+  "package": "aiohttp",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+    "type": "CVSS_V3"
+   }
+  ],
+  "summary": "AIOHTTP's HTTP Parser auto_decompress feature is vulnerable to zip bomb",
+  "version": "3.13.1",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-34518",
+   "PYSEC-2026-2100"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.13.4"
+  ],
+  "id": "GHSA-966j-vmvw-g2g9",
+  "label": "LOW",
+  "lock": "[код: pysport@b548c35 uv.lock:178]",
+  "package": "aiohttp",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+    "type": "CVSS_V3"
+   },
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:U",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "AIOHTTP leaks Cookie and Proxy-Authorization headers on cross-origin redirect",
+  "version": "3.13.1",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-54280",
+   "PYSEC-2026-2113"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.14.1"
+  ],
+  "id": "GHSA-9x8q-7h8h-wcw9",
+  "label": "LOW",
+  "lock": "[код: pysport@b548c35 uv.lock:178]",
+  "package": "aiohttp",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:U",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "aiohttp: Payload Response Resources Are Not Closed After Mid-Body Disconnect",
+  "version": "3.13.1",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-111066"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.14.4"
+  ],
+  "id": "GHSA-9xw5-w5jj-pvcg",
+  "label": "HIGH",
+  "lock": "[код: pysport@b548c35 uv.lock:178]",
+  "package": "aiohttp",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "AIOHTTP: File descriptor exhaustion in multipart requests",
+  "version": "3.13.1",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-34525",
+   "PYSEC-2026-2103"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.13.4"
+  ],
+  "id": "GHSA-c427-h43c-vf67",
+  "label": "MODERATE",
+  "lock": "[код: pysport@b548c35 uv.lock:178]",
+  "package": "aiohttp",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:N/VI:L/VA:N/SC:L/SI:L/SA:N",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "AIOHTTP accepts duplicate Host headers",
+  "version": "3.13.1",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-69244",
+   "PYSEC-2026-3545"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.14.3"
+  ],
+  "id": "GHSA-cq5v-8q36-5273",
+  "label": "HIGH",
+  "lock": "[код: pysport@b548c35 uv.lock:178]",
+  "package": "aiohttp",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "AIOHTTP: Out-of-bounds heap read in C HTTP response parser error path (malformed chunked response)",
+  "version": "3.13.1",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-111748"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.14.4"
+  ],
+  "id": "GHSA-f9xw-jh8m-3mwq",
+  "label": "MODERATE",
+  "lock": "[код: pysport@b548c35 uv.lock:178]",
+  "package": "aiohttp",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "AIOHTTP: Absolute-form request targets can spoof Request.scheme",
+  "version": "3.13.1",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2025-69230",
+   "PYSEC-2026-1105"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.13.3"
+  ],
+  "id": "GHSA-fh55-r93g-j68g",
+  "label": "LOW",
+  "lock": "[код: pysport@b548c35 uv.lock:178]",
+  "package": "aiohttp",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:L/SC:N/SI:N/SA:N/E:U",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "AIOHTTP Vulnerable to Cookie Parser Warning Storm",
+  "version": "3.13.1",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-54278",
+   "PYSEC-2026-2111"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.14.1"
+  ],
+  "id": "GHSA-g3cq-j2xw-wf74",
+  "label": "MODERATE",
+  "lock": "[код: pysport@b548c35 uv.lock:178]",
+  "package": "aiohttp",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:U",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "aiohttp: Unread Compressed Request Bodies Bypass client_max_size During Cleanup",
+  "version": "3.13.1",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2025-69229",
+   "PYSEC-2026-1106"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.13.3"
+  ],
+  "id": "GHSA-g84x-mcqj-x9qq",
+  "label": "MODERATE",
+  "lock": "[код: pysport@b548c35 uv.lock:178]",
+  "package": "aiohttp",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:U",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "AIOHTTP vulnerable to DoS through chunked messages",
+  "version": "3.13.1",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-111749"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.14.4"
+  ],
+  "id": "GHSA-gx76-c99x-2c96",
+  "label": "LOW",
+  "lock": "[код: pysport@b548c35 uv.lock:178]",
+  "package": "aiohttp",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "AIOHTTP: Cookie from subdomain can remove Host-Only Scope from existing cookies",
+  "version": "3.13.1",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-34513",
+   "PYSEC-2026-2095"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.13.4"
+  ],
+  "id": "GHSA-hcc4-c3v8-rx92",
+  "label": "LOW",
+  "lock": "[код: pysport@b548c35 uv.lock:178]",
+  "package": "aiohttp",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:U",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "AIOHTTP Affected by Denial of Service (DoS) via Unbounded DNS Cache in TCPConnector",
+  "version": "3.13.1",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-47265",
+   "PYSEC-2026-2105"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.14.0"
+  ],
+  "id": "GHSA-hg6j-4rv6-33pg",
+  "label": "MODERATE",
+  "lock": "[код: pysport@b548c35 uv.lock:178]",
+  "package": "aiohttp",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:U",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "AIOHTTP is vulnerable to cross-origin redirect with per-request cookies",
+  "version": "3.13.1",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-54276",
+   "PYSEC-2026-2109"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.14.1"
+  ],
+  "id": "GHSA-hpj7-wq8m-9hgp",
+  "label": "MODERATE",
+  "lock": "[код: pysport@b548c35 uv.lock:178]",
+  "package": "aiohttp",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "aiohttp: DigestAuthMiddleware Applies Credentials to Cross-Origin Redirect Challenges",
+  "version": "3.13.1",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-34993",
+   "PYSEC-2026-2104"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.14.0"
+  ],
+  "id": "GHSA-jg22-mg44-37j8",
+  "label": "MODERATE",
+  "lock": "[код: pysport@b548c35 uv.lock:178]",
+  "package": "aiohttp",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:L/AC:H/PR:H/UI:R/S:C/C:L/I:H/A:L",
+    "type": "CVSS_V3"
+   }
+  ],
+  "summary": "AIOHTTP is Vulnerable to Deserialization of Untrusted Data",
+  "version": "3.13.1",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2025-69227",
+   "PYSEC-2026-1107"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.13.3"
+  ],
+  "id": "GHSA-jj3x-wxrx-4x23",
+  "label": "MODERATE",
+  "lock": "[код: pysport@b548c35 uv.lock:178]",
+  "package": "aiohttp",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:U",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "AIOHTTP vulnerable to DoS when bypassing asserts",
+  "version": "3.13.1",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-34516",
+   "PYSEC-2026-2098"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.13.4"
+  ],
+  "id": "GHSA-m5qp-6w8w-w647",
+  "label": "MODERATE",
+  "lock": "[код: pysport@b548c35 uv.lock:178]",
+  "package": "aiohttp",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+    "type": "CVSS_V3"
+   },
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:U",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "AIOHTTP has a Multipart Header Size Bypass",
+  "version": "3.13.1",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-50269",
+   "PYSEC-2026-2106"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.14.0"
+  ],
+  "id": "GHSA-m6qw-4cw2-hm4m",
+  "label": "LOW",
+  "lock": "[код: pysport@b548c35 uv.lock:178]",
+  "package": "aiohttp",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:U",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "aiohttp: CRLF injection in multipart headers",
+  "version": "3.13.1",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-69243",
+   "PYSEC-2026-3546"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.14.2"
+  ],
+  "id": "GHSA-mfx4-hv73-q22v",
+  "label": "MODERATE",
+  "lock": "[код: pysport@b548c35 uv.lock:178]",
+  "package": "aiohttp",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "AIOHTTP: HTTP request smuggling via WebSocket upgrade",
+  "version": "3.13.1",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-59881",
+   "PYSEC-2026-3547"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.14.2"
+  ],
+  "id": "GHSA-mq44-7p77-q5h7",
+  "label": "MODERATE",
+  "lock": "[код: pysport@b548c35 uv.lock:178]",
+  "package": "aiohttp",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "AIOHTTP: WebSocket client accepts compressed frames without negotiated permessage-deflate",
+  "version": "3.13.1",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2025-69225",
+   "PYSEC-2026-1109"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.13.3"
+  ],
+  "id": "GHSA-mqqc-3gqh-h2x8",
+  "label": "LOW",
+  "lock": "[код: pysport@b548c35 uv.lock:178]",
+  "package": "aiohttp",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:U",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "AIOHTTP has unicode match groups in regexes for ASCII protocol elements",
+  "version": "3.13.1",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-34519",
+   "PYSEC-2026-2101"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.13.4"
+  ],
+  "id": "GHSA-mwh4-6h8g-pg8w",
+  "label": "LOW",
+  "lock": "[код: pysport@b548c35 uv.lock:178]",
+  "package": "aiohttp",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:U",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "AIOHTTP has HTTP response splitting via \\r in reason phrase",
+  "version": "3.13.1",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-34515",
+   "PYSEC-2026-2097"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.13.4"
+  ],
+  "id": "GHSA-p998-jp59-783m",
+  "label": "MODERATE",
+  "lock": "[код: pysport@b548c35 uv.lock:178]",
+  "package": "aiohttp",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:U",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "AIOHTTP affected by UNC SSRF/NTLMv2 Credential Theft/Local File Read in static resource handler on Windows",
+  "version": "3.13.1",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-111750"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.14.4"
+  ],
+  "id": "GHSA-pqxq-w44r-73xw",
+  "label": "MODERATE",
+  "lock": "[код: pysport@b548c35 uv.lock:178]",
+  "package": "aiohttp",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:L/VA:L/SC:N/SI:L/SA:L",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "AIOHTTP: Pure-Python parser request smuggling",
+  "version": "3.13.1",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-22815",
+   "PYSEC-2026-2094"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.13.4"
+  ],
+  "id": "GHSA-w2fm-2cpv-w7v5",
+  "label": "MODERATE",
+  "lock": "[код: pysport@b548c35 uv.lock:178]",
+  "package": "aiohttp",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "aiohttp allows unlimited trailer headers, leading to possible uncapped memory usage",
+  "version": "3.13.1",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-54274",
+   "PYSEC-2026-2108"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.14.1"
+  ],
+  "id": "GHSA-xcgm-r5h9-7989",
+  "label": "MODERATE",
+  "lock": "[код: pysport@b548c35 uv.lock:178]",
+  "package": "aiohttp",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:U",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "aiohttp: Incomplete websocket frame payloads bypass memory limits",
+  "version": "3.13.1",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2025-69226",
+   "GHSA-54jq-c3m8-4m76"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.13.3"
+  ],
+  "id": "PYSEC-2026-1097",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:178]",
+  "package": "aiohttp",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:U",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "AIOHTTP vulnerable to brute-force leak of internal static ﬁle path components",
+  "version": "3.13.1",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2025-69224",
+   "GHSA-69f9-5gxw-wvc2"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.13.3"
+  ],
+  "id": "PYSEC-2026-1099",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:178]",
+  "package": "aiohttp",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:U",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "AIOHTTP's unicode processing of header values could cause parsing discrepancies",
+  "version": "3.13.1",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2025-69228",
+   "GHSA-6jhg-hg63-jvvf"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.13.3"
+  ],
+  "id": "PYSEC-2026-1100",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:178]",
+  "package": "aiohttp",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:U",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "AIOHTTP vulnerable to  denial of service through large payloads",
+  "version": "3.13.1",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2025-69223",
+   "GHSA-6mq8-rvhq-8wgg"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.13.3"
+  ],
+  "id": "PYSEC-2026-1101",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:178]",
+  "package": "aiohttp",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+    "type": "CVSS_V3"
+   }
+  ],
+  "summary": "AIOHTTP's HTTP Parser auto_decompress feature is vulnerable to zip bomb",
+  "version": "3.13.1",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2025-69230",
+   "GHSA-fh55-r93g-j68g"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.13.3"
+  ],
+  "id": "PYSEC-2026-1105",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:178]",
+  "package": "aiohttp",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:L/SC:N/SI:N/SA:N/E:U",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "AIOHTTP Vulnerable to Cookie Parser Warning Storm",
+  "version": "3.13.1",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2025-69229",
+   "GHSA-g84x-mcqj-x9qq"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.13.3"
+  ],
+  "id": "PYSEC-2026-1106",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:178]",
+  "package": "aiohttp",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:U",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "AIOHTTP vulnerable to DoS through chunked messages",
+  "version": "3.13.1",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2025-69227",
+   "GHSA-jj3x-wxrx-4x23"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.13.3"
+  ],
+  "id": "PYSEC-2026-1107",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:178]",
+  "package": "aiohttp",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:U",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "AIOHTTP vulnerable to DoS when bypassing asserts",
+  "version": "3.13.1",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2025-69225",
+   "GHSA-mqqc-3gqh-h2x8"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.13.3"
+  ],
+  "id": "PYSEC-2026-1109",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:178]",
+  "package": "aiohttp",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:U",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "AIOHTTP has unicode match groups in regexes for ASCII protocol elements",
+  "version": "3.13.1",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-22815",
+   "GHSA-w2fm-2cpv-w7v5"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.13.4"
+  ],
+  "id": "PYSEC-2026-2094",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:178]",
+  "package": "aiohttp",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "",
+  "version": "3.13.1",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-34513",
+   "GHSA-hcc4-c3v8-rx92"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.13.4"
+  ],
+  "id": "PYSEC-2026-2095",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:178]",
+  "package": "aiohttp",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+    "type": "CVSS_V3"
+   }
+  ],
+  "summary": "",
+  "version": "3.13.1",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-34514",
+   "GHSA-2vrm-gr82-f7m5"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.13.4"
+  ],
+  "id": "PYSEC-2026-2096",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:178]",
+  "package": "aiohttp",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+    "type": "CVSS_V3"
+   }
+  ],
+  "summary": "",
+  "version": "3.13.1",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-34515",
+   "GHSA-p998-jp59-783m"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.13.4"
+  ],
+  "id": "PYSEC-2026-2097",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:178]",
+  "package": "aiohttp",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+    "type": "CVSS_V3"
+   }
+  ],
+  "summary": "",
+  "version": "3.13.1",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-34516",
+   "GHSA-m5qp-6w8w-w647"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.13.4"
+  ],
+  "id": "PYSEC-2026-2098",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:178]",
+  "package": "aiohttp",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "",
+  "version": "3.13.1",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-34517",
+   "GHSA-3wq7-rqq7-wx6j"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.13.4"
+  ],
+  "id": "PYSEC-2026-2099",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:178]",
+  "package": "aiohttp",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+    "type": "CVSS_V3"
+   }
+  ],
+  "summary": "",
+  "version": "3.13.1",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-34518",
+   "GHSA-966j-vmvw-g2g9"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.13.4"
+  ],
+  "id": "PYSEC-2026-2100",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:178]",
+  "package": "aiohttp",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+    "type": "CVSS_V3"
+   }
+  ],
+  "summary": "",
+  "version": "3.13.1",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-34519",
+   "GHSA-mwh4-6h8g-pg8w"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.13.4"
+  ],
+  "id": "PYSEC-2026-2101",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:178]",
+  "package": "aiohttp",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+    "type": "CVSS_V3"
+   }
+  ],
+  "summary": "",
+  "version": "3.13.1",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-34520",
+   "GHSA-63hf-3vf5-4wqf"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.13.4"
+  ],
+  "id": "PYSEC-2026-2102",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:178]",
+  "package": "aiohttp",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "",
+  "version": "3.13.1",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-34525",
+   "GHSA-c427-h43c-vf67"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.13.4"
+  ],
+  "id": "PYSEC-2026-2103",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:178]",
+  "package": "aiohttp",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+    "type": "CVSS_V3"
+   }
+  ],
+  "summary": "",
+  "version": "3.13.1",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-34993",
+   "GHSA-jg22-mg44-37j8"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.14.0"
+  ],
+  "id": "PYSEC-2026-2104",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:178]",
+  "package": "aiohttp",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
+    "type": "CVSS_V3"
+   }
+  ],
+  "summary": "",
+  "version": "3.13.1",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-47265",
+   "GHSA-hg6j-4rv6-33pg"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.14.0"
+  ],
+  "id": "PYSEC-2026-2105",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:178]",
+  "package": "aiohttp",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+    "type": "CVSS_V3"
+   }
+  ],
+  "summary": "",
+  "version": "3.13.1",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-50269",
+   "GHSA-m6qw-4cw2-hm4m"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.14.0"
+  ],
+  "id": "PYSEC-2026-2106",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:178]",
+  "package": "aiohttp",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+    "type": "CVSS_V3"
+   }
+  ],
+  "summary": "",
+  "version": "3.13.1",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-54273",
+   "GHSA-4fvr-rgm6-gqmc"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.14.1"
+  ],
+  "id": "PYSEC-2026-2107",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:178]",
+  "package": "aiohttp",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+    "type": "CVSS_V3"
+   }
+  ],
+  "summary": "",
+  "version": "3.13.1",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-54274",
+   "GHSA-xcgm-r5h9-7989"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.14.1"
+  ],
+  "id": "PYSEC-2026-2108",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:178]",
+  "package": "aiohttp",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+    "type": "CVSS_V3"
+   }
+  ],
+  "summary": "",
+  "version": "3.13.1",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-54276",
+   "GHSA-hpj7-wq8m-9hgp"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.14.1"
+  ],
+  "id": "PYSEC-2026-2109",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:178]",
+  "package": "aiohttp",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+    "type": "CVSS_V3"
+   }
+  ],
+  "summary": "",
+  "version": "3.13.1",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-54277",
+   "GHSA-63hw-fmq6-xxg2"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.14.1"
+  ],
+  "id": "PYSEC-2026-2110",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:178]",
+  "package": "aiohttp",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+    "type": "CVSS_V3"
+   }
+  ],
+  "summary": "",
+  "version": "3.13.1",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-54278",
+   "GHSA-g3cq-j2xw-wf74"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.14.1"
+  ],
+  "id": "PYSEC-2026-2111",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:178]",
+  "package": "aiohttp",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+    "type": "CVSS_V3"
+   }
+  ],
+  "summary": "",
+  "version": "3.13.1",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-54279",
+   "GHSA-2fqr-mr3j-6wp8"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.14.1"
+  ],
+  "id": "PYSEC-2026-2112",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:178]",
+  "package": "aiohttp",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+    "type": "CVSS_V3"
+   }
+  ],
+  "summary": "",
+  "version": "3.13.1",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-54280",
+   "GHSA-9x8q-7h8h-wcw9"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.14.1"
+  ],
+  "id": "PYSEC-2026-2113",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:178]",
+  "package": "aiohttp",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+    "type": "CVSS_V3"
+   }
+  ],
+  "summary": "",
+  "version": "3.13.1",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-54275",
+   "GHSA-4m7w-qmgq-4wj5"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.14.1"
+  ],
+  "id": "PYSEC-2026-237",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:178]",
+  "package": "aiohttp",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+    "type": "CVSS_V3"
+   }
+  ],
+  "summary": "",
+  "version": "3.13.1",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-69244",
+   "GHSA-cq5v-8q36-5273"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.14.3"
+  ],
+  "id": "PYSEC-2026-3545",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:178]",
+  "package": "aiohttp",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "AIOHTTP: Out-of-bounds heap read in C HTTP response parser error path (malformed chunked response)",
+  "version": "3.13.1",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-69243",
+   "GHSA-mfx4-hv73-q22v"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.14.2"
+  ],
+  "id": "PYSEC-2026-3546",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:178]",
+  "package": "aiohttp",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "AIOHTTP: HTTP request smuggling via WebSocket upgrade",
+  "version": "3.13.1",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-59881",
+   "GHSA-mq44-7p77-q5h7"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.14.2"
+  ],
+  "id": "PYSEC-2026-3547",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:178]",
+  "package": "aiohttp",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "AIOHTTP: WebSocket client accepts compressed frames without negotiated permessage-deflate",
+  "version": "3.13.1",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "PYSEC-2026-4320"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "2026.10.19"
+  ],
+  "id": "GHSA-6q48-6c7w-9gw2",
+  "label": "CRITICAL",
+  "lock": "[код: pysport@b548c35 uv.lock:448]",
+  "package": "certifi",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "certifi bundles emSign root CAs with compromised intermediate CA keys",
+  "version": "2025.10.5",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "GHSA-6q48-6c7w-9gw2"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "2026.10.19"
+  ],
+  "id": "PYSEC-2026-4320",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:448]",
+  "package": "certifi",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "certifi bundles emSign root CAs with compromised intermediate CA keys",
+  "version": "2025.10.5",
+  "withdrawn": false
+ },
+ {
+  "aliases": [],
+  "class": "runtime",
+  "fixed": [
+   "48.0.1"
+  ],
+  "id": "GHSA-537c-gmf6-5ccf",
+  "label": "HIGH",
+  "lock": "[код: pysport@b548c35 uv.lock:1113]",
+  "package": "cryptography",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+    "type": "CVSS_V3"
+   }
+  ],
+  "summary": "Vulnerable OpenSSL included in cryptography wheels",
+  "version": "46.0.6",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-69247",
+   "PYSEC-2026-3552"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "50.0.0"
+  ],
+  "id": "GHSA-g6cj-pr64-35w5",
+  "label": "HIGH",
+  "lock": "[код: pysport@b548c35 uv.lock:1113]",
+  "package": "cryptography",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "cryptography: PKCS#7 EnvelopedData decryption exposes a Bleichenbacher oracle through distinguishable errors and timing",
+  "version": "46.0.6",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-69249",
+   "PYSEC-2026-3553"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "49.0.0"
+  ],
+  "id": "GHSA-jwv3-5hgf-82ww",
+  "label": "HIGH",
+  "lock": "[код: pysport@b548c35 uv.lock:1113]",
+  "package": "cryptography",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "python-cryptography: Duplicate self-signed intermediates can cause exponential path-building",
+  "version": "46.0.6",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-69248",
+   "PYSEC-2026-3554"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "49.0.0"
+  ],
+  "id": "GHSA-m2h6-j472-rp4c",
+  "label": "MODERATE",
+  "lock": "[код: pysport@b548c35 uv.lock:1113]",
+  "package": "cryptography",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:L/VI:H/VA:N/SC:N/SI:N/SA:N/E:P",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "python-cryptography verifier accepts wildcard DNS names allowing escape from permittedSubtrees",
+  "version": "46.0.6",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-39892",
+   "PYSEC-2026-36"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "46.0.7"
+  ],
+  "id": "GHSA-p423-j2cm-9vmq",
+  "label": "MODERATE",
+  "lock": "[код: pysport@b548c35 uv.lock:1113]",
+  "package": "cryptography",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "Cryptography vulnerable to buffer overflow if non-contiguous buffers were passed to APIs",
+  "version": "46.0.6",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-69247",
+   "GHSA-g6cj-pr64-35w5"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "50.0.0"
+  ],
+  "id": "PYSEC-2026-3552",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:1113]",
+  "package": "cryptography",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "cryptography: PKCS#7 EnvelopedData decryption exposes a Bleichenbacher oracle through distinguishable errors and timing",
+  "version": "46.0.6",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-69249",
+   "GHSA-jwv3-5hgf-82ww"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "49.0.0"
+  ],
+  "id": "PYSEC-2026-3553",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:1113]",
+  "package": "cryptography",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "python-cryptography: Duplicate self-signed intermediates can cause exponential path-building",
+  "version": "46.0.6",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-69248",
+   "GHSA-m2h6-j472-rp4c"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "49.0.0"
+  ],
+  "id": "PYSEC-2026-3554",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:1113]",
+  "package": "cryptography",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:L/VI:H/VA:N/SC:N/SI:N/SA:N/E:P",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "python-cryptography verifier accepts wildcard DNS names allowing escape from permittedSubtrees",
+  "version": "46.0.6",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-39892",
+   "GHSA-p423-j2cm-9vmq"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "46.0.7"
+  ],
+  "id": "PYSEC-2026-36",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:1113]",
+  "package": "cryptography",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "type": "CVSS_V3"
+   }
+  ],
+  "summary": "",
+  "version": "46.0.6",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-22701",
+   "PYSEC-2026-1374"
+  ],
+  "class": "dev",
+  "fixed": [
+   "3.20.3"
+  ],
+  "id": "GHSA-qmgc-5h2g-mvrw",
+  "label": "MODERATE",
+  "lock": "[код: pysport@b548c35 uv.lock:1400]",
+  "package": "filelock",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:L/A:H",
+    "type": "CVSS_V3"
+   }
+  ],
+  "summary": "filelock Time-of-Check-Time-of-Use (TOCTOU) Symlink Vulnerability in SoftFileLock",
+  "version": "3.20.0",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2025-68146",
+   "PYSEC-2026-1375"
+  ],
+  "class": "dev",
+  "fixed": [
+   "3.20.1"
+  ],
+  "id": "GHSA-w853-jp5j-5j7f",
+  "label": "MODERATE",
+  "lock": "[код: pysport@b548c35 uv.lock:1400]",
+  "package": "filelock",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:H/A:H",
+    "type": "CVSS_V3"
+   }
+  ],
+  "summary": "filelock has a TOCTOU race condition which allows symlink attacks during lock file creation",
+  "version": "3.20.0",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-22701",
+   "GHSA-qmgc-5h2g-mvrw"
+  ],
+  "class": "dev",
+  "fixed": [
+   "3.20.3"
+  ],
+  "id": "PYSEC-2026-1374",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:1400]",
+  "package": "filelock",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:L/A:H",
+    "type": "CVSS_V3"
+   }
+  ],
+  "summary": "filelock Time-of-Check-Time-of-Use (TOCTOU) Symlink Vulnerability in SoftFileLock",
+  "version": "3.20.0",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2025-68146",
+   "GHSA-w853-jp5j-5j7f"
+  ],
+  "class": "dev",
+  "fixed": [
+   "3.20.1"
+  ],
+  "id": "PYSEC-2026-1375",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:1400]",
+  "package": "filelock",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:H/A:H",
+    "type": "CVSS_V3"
+   }
+  ],
+  "summary": "filelock has a TOCTOU race condition which allows symlink attacks during lock file creation",
+  "version": "3.20.0",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-45409",
+   "PYSEC-2026-215"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.15"
+  ],
+  "id": "GHSA-65pc-fj4g-8rjx",
+  "label": "MODERATE",
+  "lock": "[код: pysport@b548c35 uv.lock:1665]",
+  "package": "idna",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+    "type": "CVSS_V3"
+   },
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "Internationalized Domain Names in Applications (IDNA): Specially crafted inputs to idna.encode() can bypass CVE-2024-3651 fix",
+  "version": "3.11",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-45409",
+   "GHSA-65pc-fj4g-8rjx"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.15"
+  ],
+  "id": "PYSEC-2026-215",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:1665]",
+  "package": "idna",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+    "type": "CVSS_V3"
+   }
+  ],
+  "summary": "",
+  "version": "3.11",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2024-31636",
+   "PYSEC-2024-280"
+  ],
+  "class": "dev",
+  "fixed": [
+   "0.15.0"
+  ],
+  "id": "GHSA-377p-g8gr-5wpg",
+  "label": "LOW",
+  "lock": "[код: pysport@b548c35 uv.lock:1718]",
+  "package": "lief",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:L/I:L/A:N",
+    "type": "CVSS_V3"
+   }
+  ],
+  "summary": "LIEF obtain sensitive information via the name parameter",
+  "version": "0.14.1",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2025-15504",
+   "PYSEC-2026-1538"
+  ],
+  "class": "dev",
+  "fixed": [
+   "0.17.2"
+  ],
+  "id": "GHSA-mjjp-xjfg-97wg",
+  "label": "LOW",
+  "lock": "[код: pysport@b548c35 uv.lock:1718]",
+  "package": "lief",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L",
+    "type": "CVSS_V3"
+   },
+   {
+    "score": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:P",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "LIEF is vulnerable to segmentation fault",
+  "version": "0.14.1",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2024-31636",
+   "GHSA-377p-g8gr-5wpg"
+  ],
+  "class": "dev",
+  "fixed": [],
+  "id": "PYSEC-2024-280",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:1718]",
+  "package": "lief",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:L/I:L/A:N",
+    "type": "CVSS_V3"
+   }
+  ],
+  "summary": "",
+  "version": "0.14.1",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2025-15504",
+   "GHSA-mjjp-xjfg-97wg"
+  ],
+  "class": "dev",
+  "fixed": [
+   "0.17.2"
+  ],
+  "id": "PYSEC-2026-1538",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:1718]",
+  "package": "lief",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L",
+    "type": "CVSS_V3"
+   },
+   {
+    "score": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:P",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "LIEF is vulnerable to segmentation fault",
+  "version": "0.14.1",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2025-15504",
+   "PYSEC-2026-1538"
+  ],
+  "class": "dev",
+  "fixed": [
+   "0.17.2"
+  ],
+  "id": "GHSA-mjjp-xjfg-97wg",
+  "label": "LOW",
+  "lock": "[код: pysport@b548c35 uv.lock:1740]",
+  "package": "lief",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L",
+    "type": "CVSS_V3"
+   },
+   {
+    "score": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:P",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "LIEF is vulnerable to segmentation fault",
+  "version": "0.17.0",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2025-15504",
+   "GHSA-mjjp-xjfg-97wg"
+  ],
+  "class": "dev",
+  "fixed": [
+   "0.17.2"
+  ],
+  "id": "PYSEC-2026-1538",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:1740]",
+  "package": "lief",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L",
+    "type": "CVSS_V3"
+   },
+   {
+    "score": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:P",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "LIEF is vulnerable to segmentation fault",
+  "version": "0.17.0",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-41066",
+   "PYSEC-2026-87"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "6.1.0"
+  ],
+  "id": "GHSA-vfmq-68hx-4jfw",
+  "label": "HIGH",
+  "lock": "[код: pysport@b548c35 uv.lock:1767]",
+  "package": "lxml",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+    "type": "CVSS_V3"
+   }
+  ],
+  "summary": "lxml: Default configuration of iterparse() and ETCompatXMLParser() allows XXE to local files",
+  "version": "6.0.2",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-41066",
+   "GHSA-vfmq-68hx-4jfw"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "6.1.0"
+  ],
+  "id": "PYSEC-2026-87",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:1767]",
+  "package": "lxml",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+    "type": "CVSS_V3"
+   }
+  ],
+  "summary": "",
+  "version": "6.0.2",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-104874",
+   "PYSEC-2026-4244"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "6.9.1"
+  ],
+  "id": "GHSA-54p9-h82j-f925",
+  "label": "MODERATE",
+  "lock": "[код: pysport@b548c35 uv.lock:2232]",
+  "package": "multidict",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+    "type": "CVSS_V3"
+   }
+  ],
+  "summary": "Multidict: Reference leak in CIMultiDict/MultiDict items-view union and subtraction",
+  "version": "6.7.0",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-104874",
+   "GHSA-54p9-h82j-f925"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "6.9.1"
+  ],
+  "id": "PYSEC-2026-4244",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:2232]",
+  "package": "multidict",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+    "type": "CVSS_V3"
+   }
+  ],
+  "summary": "Multidict: Reference leak in CIMultiDict/MultiDict items-view union and subtraction",
+  "version": "6.7.0",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2025-67221",
+   "PYSEC-2026-107"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.11.6"
+  ],
+  "id": "GHSA-hx9q-6w63-j58v",
+  "label": "HIGH",
+  "lock": "[код: pysport@b548c35 uv.lock:2526]",
+  "package": "orjson",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:P",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "orjson does not limit recursion for deeply nested JSON documents",
+  "version": "3.10.15",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2025-67221",
+   "GHSA-hx9q-6w63-j58v"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.11.5"
+  ],
+  "id": "PYSEC-2026-107",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:2526]",
+  "package": "orjson",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+    "type": "CVSS_V3"
+   }
+  ],
+  "summary": "",
+  "version": "3.10.15",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2025-67221",
+   "PYSEC-2026-107"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.11.6"
+  ],
+  "id": "GHSA-hx9q-6w63-j58v",
+  "label": "HIGH",
+  "lock": "[код: pysport@b548c35 uv.lock:2621]",
+  "package": "orjson",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:P",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "orjson does not limit recursion for deeply nested JSON documents",
+  "version": "3.11.3",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2025-67221",
+   "GHSA-hx9q-6w63-j58v"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "3.11.5"
+  ],
+  "id": "PYSEC-2026-107",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:2621]",
+  "package": "orjson",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+    "type": "CVSS_V3"
+   }
+  ],
+  "summary": "",
+  "version": "3.11.3",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-4539",
+   "PYSEC-2026-2987"
+  ],
+  "class": "dev",
+  "fixed": [
+   "2.20.0"
+  ],
+  "id": "GHSA-5239-wwwm-4pmq",
+  "label": "LOW",
+  "lock": "[код: pysport@b548c35 uv.lock:3185]",
+  "package": "pygments",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L",
+    "type": "CVSS_V3"
+   },
+   {
+    "score": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:P",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "Pygments has Regular Expression Denial of Service (ReDoS) due to Inefficient Regex for GUID Matching",
+  "version": "2.19.2",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-4539",
+   "GHSA-5239-wwwm-4pmq"
+  ],
+  "class": "dev",
+  "fixed": [
+   "2.20.0"
+  ],
+  "id": "PYSEC-2026-2987",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:3185]",
+  "package": "pygments",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L",
+    "type": "CVSS_V3"
+   },
+   {
+    "score": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:P",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "Pygments has Regular Expression Denial of Service (ReDoS) due to Inefficient Regex for GUID Matching",
+  "version": "2.19.2",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2025-71176",
+   "PYSEC-2026-1845"
+  ],
+  "class": "dev",
+  "fixed": [
+   "9.0.3"
+  ],
+  "id": "GHSA-6w46-j5rx-g56g",
+  "label": "MODERATE",
+  "lock": "[код: pysport@b548c35 uv.lock:3368]",
+  "package": "pytest",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:L",
+    "type": "CVSS_V3"
+   }
+  ],
+  "summary": "pytest has vulnerable tmpdir handling",
+  "version": "8.3.5",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2025-71176",
+   "GHSA-6w46-j5rx-g56g"
+  ],
+  "class": "dev",
+  "fixed": [
+   "9.0.3"
+  ],
+  "id": "PYSEC-2026-1845",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:3368]",
+  "package": "pytest",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:L",
+    "type": "CVSS_V3"
+   }
+  ],
+  "summary": "pytest has vulnerable tmpdir handling",
+  "version": "8.3.5",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2025-71176",
+   "PYSEC-2026-1845"
+  ],
+  "class": "dev",
+  "fixed": [
+   "9.0.3"
+  ],
+  "id": "GHSA-6w46-j5rx-g56g",
+  "label": "MODERATE",
+  "lock": "[код: pysport@b548c35 uv.lock:3394]",
+  "package": "pytest",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:L",
+    "type": "CVSS_V3"
+   }
+  ],
+  "summary": "pytest has vulnerable tmpdir handling",
+  "version": "8.4.2",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2025-71176",
+   "GHSA-6w46-j5rx-g56g"
+  ],
+  "class": "dev",
+  "fixed": [
+   "9.0.3"
+  ],
+  "id": "PYSEC-2026-1845",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:3394]",
+  "package": "pytest",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:L",
+    "type": "CVSS_V3"
+   }
+  ],
+  "summary": "pytest has vulnerable tmpdir handling",
+  "version": "8.4.2",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-25645",
+   "PYSEC-2026-2275"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "2.33.0"
+  ],
+  "id": "GHSA-gc5v-m9x4-r6x2",
+  "label": "MODERATE",
+  "lock": "[код: pysport@b548c35 uv.lock:3722]",
+  "package": "requests",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:U/C:N/I:H/A:N",
+    "type": "CVSS_V3"
+   }
+  ],
+  "summary": "Requests has Insecure Temp File Reuse in its extract_zipped_paths() utility function",
+  "version": "2.32.4",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-25645",
+   "GHSA-gc5v-m9x4-r6x2"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "2.33.0"
+  ],
+  "id": "PYSEC-2026-2275",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:3722]",
+  "package": "requests",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N",
+    "type": "CVSS_V3"
+   }
+  ],
+  "summary": "",
+  "version": "2.32.4",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-25645",
+   "PYSEC-2026-2275"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "2.33.0"
+  ],
+  "id": "GHSA-gc5v-m9x4-r6x2",
+  "label": "MODERATE",
+  "lock": "[код: pysport@b548c35 uv.lock:3746]",
+  "package": "requests",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:U/C:N/I:H/A:N",
+    "type": "CVSS_V3"
+   }
+  ],
+  "summary": "Requests has Insecure Temp File Reuse in its extract_zipped_paths() utility function",
+  "version": "2.32.5",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-25645",
+   "GHSA-gc5v-m9x4-r6x2"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "2.33.0"
+  ],
+  "id": "PYSEC-2026-2275",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:3746]",
+  "package": "requests",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N",
+    "type": "CVSS_V3"
+   }
+  ],
+  "summary": "",
+  "version": "2.32.5",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "BIT-setuptools-2025-47273",
+   "CVE-2025-47273",
+   "PYSEC-2025-49"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "78.1.1"
+  ],
+  "id": "GHSA-5rjg-fvgr-3xxf",
+  "label": "HIGH",
+  "lock": "[код: pysport@b548c35 uv.lock:3798]",
+  "package": "setuptools",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N/E:P",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "setuptools has a path traversal vulnerability in PackageIndex.download that leads to Arbitrary File Write",
+  "version": "69.5.1",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "BIT-setuptools-2024-6345",
+   "CVE-2024-6345",
+   "PYSEC-2026-1918"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "70.0.0"
+  ],
+  "id": "GHSA-cx63-2mw6-8hw5",
+  "label": "HIGH",
+  "lock": "[код: pysport@b548c35 uv.lock:3798]",
+  "package": "setuptools",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+    "type": "CVSS_V3"
+   },
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:A/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "setuptools vulnerable to Command Injection via package URL",
+  "version": "69.5.1",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "BIT-setuptools-2026-59890",
+   "CVE-2026-59890",
+   "PYSEC-2026-3447"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "83.0.0"
+  ],
+  "id": "GHSA-h35f-9h28-mq5c",
+  "label": "MODERATE",
+  "lock": "[код: pysport@b548c35 uv.lock:3798]",
+  "package": "setuptools",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:L/A:N",
+    "type": "CVSS_V3"
+   }
+  ],
+  "summary": "setuptools: MANIFEST.in exclusion bypass in sdist via Unicode normalization collision (NFC/NFD) on macOS APFS/HFS+",
+  "version": "69.5.1",
+  "withdrawn": false
+ },
+ {
+  "aliases": [],
+  "class": "runtime",
+  "fixed": [
+   "84.1.0"
+  ],
+  "id": "GHSA-xmj3-9gf7-h52w",
+  "label": "LOW",
+  "lock": "[код: pysport@b548c35 uv.lock:3798]",
+  "package": "setuptools",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:L/AC:H/AT:P/PR:L/UI:A/VC:N/VI:L/VA:L/SC:N/SI:N/SA:N",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "setuptools: Windows path escape via namespace_packages.txt during legacy wheel installation  Description",
+  "version": "69.5.1",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "BIT-setuptools-2025-47273",
+   "CVE-2025-47273",
+   "GHSA-5rjg-fvgr-3xxf"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "250a6d17978f9f6ac3ac887091f2d32886fbbb0b",
+   "78.1.1"
+  ],
+  "id": "PYSEC-2025-49",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:3798]",
+  "package": "setuptools",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+    "type": "CVSS_V3"
+   }
+  ],
+  "summary": "",
+  "version": "69.5.1",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "BIT-setuptools-2024-6345",
+   "CVE-2024-6345",
+   "GHSA-cx63-2mw6-8hw5"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "70.0.0"
+  ],
+  "id": "PYSEC-2026-1918",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:3798]",
+  "package": "setuptools",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+    "type": "CVSS_V3"
+   },
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:A/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "setuptools vulnerable to Command Injection via package URL",
+  "version": "69.5.1",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "BIT-setuptools-2026-59890",
+   "CVE-2026-59890",
+   "GHSA-h35f-9h28-mq5c"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "83.0.0"
+  ],
+  "id": "PYSEC-2026-3447",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:3798]",
+  "package": "setuptools",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:L/A:N",
+    "type": "CVSS_V3"
+   }
+  ],
+  "summary": "",
+  "version": "69.5.1",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "BIT-setuptools-2026-59890",
+   "CVE-2026-59890",
+   "PYSEC-2026-3447"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "83.0.0"
+  ],
+  "id": "GHSA-h35f-9h28-mq5c",
+  "label": "MODERATE",
+  "lock": "[код: pysport@b548c35 uv.lock:3816]",
+  "package": "setuptools",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:L/A:N",
+    "type": "CVSS_V3"
+   }
+  ],
+  "summary": "setuptools: MANIFEST.in exclusion bypass in sdist via Unicode normalization collision (NFC/NFD) on macOS APFS/HFS+",
+  "version": "80.9.0",
+  "withdrawn": false
+ },
+ {
+  "aliases": [],
+  "class": "runtime",
+  "fixed": [
+   "84.1.0"
+  ],
+  "id": "GHSA-xmj3-9gf7-h52w",
+  "label": "LOW",
+  "lock": "[код: pysport@b548c35 uv.lock:3816]",
+  "package": "setuptools",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:L/AC:H/AT:P/PR:L/UI:A/VC:N/VI:L/VA:L/SC:N/SI:N/SA:N",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "setuptools: Windows path escape via namespace_packages.txt during legacy wheel installation  Description",
+  "version": "80.9.0",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "BIT-setuptools-2026-59890",
+   "CVE-2026-59890",
+   "GHSA-h35f-9h28-mq5c"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "83.0.0"
+  ],
+  "id": "PYSEC-2026-3447",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:3816]",
+  "package": "setuptools",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:L/A:N",
+    "type": "CVSS_V3"
+   }
+  ],
+  "summary": "",
+  "version": "80.9.0",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2025-66471",
+   "PYSEC-2026-1994"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "2.6.0"
+  ],
+  "id": "GHSA-2xpw-w6gg-jr37",
+  "label": "HIGH",
+  "lock": "[код: pysport@b548c35 uv.lock:4313]",
+  "package": "urllib3",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:H",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "urllib3 streaming API improperly handles highly compressed data",
+  "version": "2.2.3",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-21441",
+   "PYSEC-2026-1996"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "2.6.3"
+  ],
+  "id": "GHSA-38jv-5279-wg99",
+  "label": "HIGH",
+  "lock": "[код: pysport@b548c35 uv.lock:4313]",
+  "package": "urllib3",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+    "type": "CVSS_V3"
+   },
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:H",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "Decompression-bomb safeguards bypassed when following HTTP redirects (streaming API)",
+  "version": "2.2.3",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2025-50182",
+   "PYSEC-2026-1997"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "2.5.0"
+  ],
+  "id": "GHSA-48p4-8xcf-vxj5",
+  "label": "MODERATE",
+  "lock": "[код: pysport@b548c35 uv.lock:4313]",
+  "package": "urllib3",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:N/A:N",
+    "type": "CVSS_V3"
+   }
+  ],
+  "summary": "urllib3 does not control redirects in browsers and Node.js",
+  "version": "2.2.3",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-97687",
+   "PYSEC-2026-4175"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "2.8.0"
+  ],
+  "id": "GHSA-8988-9cw3-xx77",
+  "label": "HIGH",
+  "lock": "[код: pysport@b548c35 uv.lock:4313]",
+  "package": "urllib3",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "urllib3: HTTPS proxy TLS configuration may be ignored or overridden",
+  "version": "2.2.3",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2025-66418",
+   "PYSEC-2026-1998"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "2.6.0"
+  ],
+  "id": "GHSA-gm62-xv2j-4w53",
+  "label": "HIGH",
+  "lock": "[код: pysport@b548c35 uv.lock:4313]",
+  "package": "urllib3",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:H",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "urllib3 allows an unbounded number of links in the decompression chain",
+  "version": "2.2.3",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2025-50181",
+   "PYSEC-2026-1999"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "2.5.0"
+  ],
+  "id": "GHSA-pq67-6m6q-mj2v",
+  "label": "MODERATE",
+  "lock": "[код: pysport@b548c35 uv.lock:4313]",
+  "package": "urllib3",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:N/A:N",
+    "type": "CVSS_V3"
+   }
+  ],
+  "summary": "urllib3 redirects are not disabled when retries are disabled on PoolManager instantiation",
+  "version": "2.2.3",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-44431",
+   "PYSEC-2026-141"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "2.7.0"
+  ],
+  "id": "GHSA-qccp-gfcp-xxvc",
+  "label": "HIGH",
+  "lock": "[код: pysport@b548c35 uv.lock:4313]",
+  "package": "urllib3",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+    "type": "CVSS_V3"
+   },
+   {
+    "score": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "urllib3: Sensitive headers forwarded across origins in proxied low-level redirects",
+  "version": "2.2.3",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-97689",
+   "PYSEC-2026-4177"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "2.8.0"
+  ],
+  "id": "GHSA-vxq7-64xx-v4gw",
+  "label": "HIGH",
+  "lock": "[код: pysport@b548c35 uv.lock:4313]",
+  "package": "urllib3",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:H",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "urllib3: HTTPResponse.stream()/read_chunked() buffers an unbounded chunk-size line into memory",
+  "version": "2.2.3",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-44431",
+   "GHSA-qccp-gfcp-xxvc"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "2.7.0"
+  ],
+  "id": "PYSEC-2026-141",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:4313]",
+  "package": "urllib3",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+    "type": "CVSS_V3"
+   }
+  ],
+  "summary": "",
+  "version": "2.2.3",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2025-66471",
+   "GHSA-2xpw-w6gg-jr37"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "2.6.0"
+  ],
+  "id": "PYSEC-2026-1994",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:4313]",
+  "package": "urllib3",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:H",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "urllib3 streaming API improperly handles highly compressed data",
+  "version": "2.2.3",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-21441",
+   "GHSA-38jv-5279-wg99"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "2.6.3"
+  ],
+  "id": "PYSEC-2026-1996",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:4313]",
+  "package": "urllib3",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+    "type": "CVSS_V3"
+   },
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:H",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "Decompression-bomb safeguards bypassed when following HTTP redirects (streaming API)",
+  "version": "2.2.3",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2025-50182",
+   "GHSA-48p4-8xcf-vxj5"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "2.5.0"
+  ],
+  "id": "PYSEC-2026-1997",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:4313]",
+  "package": "urllib3",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:N/A:N",
+    "type": "CVSS_V3"
+   }
+  ],
+  "summary": "urllib3 does not control redirects in browsers and Node.js",
+  "version": "2.2.3",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2025-66418",
+   "GHSA-gm62-xv2j-4w53"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "2.6.0"
+  ],
+  "id": "PYSEC-2026-1998",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:4313]",
+  "package": "urllib3",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:H",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "urllib3 allows an unbounded number of links in the decompression chain",
+  "version": "2.2.3",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2025-50181",
+   "GHSA-pq67-6m6q-mj2v"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "2.5.0"
+  ],
+  "id": "PYSEC-2026-1999",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:4313]",
+  "package": "urllib3",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:N/A:N",
+    "type": "CVSS_V3"
+   }
+  ],
+  "summary": "urllib3 redirects are not disabled when retries are disabled on PoolManager instantiation",
+  "version": "2.2.3",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-97687",
+   "GHSA-8988-9cw3-xx77"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "2.8.0"
+  ],
+  "id": "PYSEC-2026-4175",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:4313]",
+  "package": "urllib3",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "urllib3: HTTPS proxy TLS configuration may be ignored or overridden",
+  "version": "2.2.3",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-97689",
+   "GHSA-vxq7-64xx-v4gw"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "2.8.0"
+  ],
+  "id": "PYSEC-2026-4177",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:4313]",
+  "package": "urllib3",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:H",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "urllib3: HTTPResponse.stream()/read_chunked() buffers an unbounded chunk-size line into memory",
+  "version": "2.2.3",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2025-66471",
+   "PYSEC-2026-1994"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "2.6.0"
+  ],
+  "id": "GHSA-2xpw-w6gg-jr37",
+  "label": "HIGH",
+  "lock": "[код: pysport@b548c35 uv.lock:4331]",
+  "package": "urllib3",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:H",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "urllib3 streaming API improperly handles highly compressed data",
+  "version": "2.5.0",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-21441",
+   "PYSEC-2026-1996"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "2.6.3"
+  ],
+  "id": "GHSA-38jv-5279-wg99",
+  "label": "HIGH",
+  "lock": "[код: pysport@b548c35 uv.lock:4331]",
+  "package": "urllib3",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+    "type": "CVSS_V3"
+   },
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:H",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "Decompression-bomb safeguards bypassed when following HTTP redirects (streaming API)",
+  "version": "2.5.0",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-97687",
+   "PYSEC-2026-4175"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "2.8.0"
+  ],
+  "id": "GHSA-8988-9cw3-xx77",
+  "label": "HIGH",
+  "lock": "[код: pysport@b548c35 uv.lock:4331]",
+  "package": "urllib3",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "urllib3: HTTPS proxy TLS configuration may be ignored or overridden",
+  "version": "2.5.0",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2025-66418",
+   "PYSEC-2026-1998"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "2.6.0"
+  ],
+  "id": "GHSA-gm62-xv2j-4w53",
+  "label": "HIGH",
+  "lock": "[код: pysport@b548c35 uv.lock:4331]",
+  "package": "urllib3",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:H",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "urllib3 allows an unbounded number of links in the decompression chain",
+  "version": "2.5.0",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-44431",
+   "PYSEC-2026-141"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "2.7.0"
+  ],
+  "id": "GHSA-qccp-gfcp-xxvc",
+  "label": "HIGH",
+  "lock": "[код: pysport@b548c35 uv.lock:4331]",
+  "package": "urllib3",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+    "type": "CVSS_V3"
+   },
+   {
+    "score": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "urllib3: Sensitive headers forwarded across origins in proxied low-level redirects",
+  "version": "2.5.0",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-97689",
+   "PYSEC-2026-4177"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "2.8.0"
+  ],
+  "id": "GHSA-vxq7-64xx-v4gw",
+  "label": "HIGH",
+  "lock": "[код: pysport@b548c35 uv.lock:4331]",
+  "package": "urllib3",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:H",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "urllib3: HTTPResponse.stream()/read_chunked() buffers an unbounded chunk-size line into memory",
+  "version": "2.5.0",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-44431",
+   "GHSA-qccp-gfcp-xxvc"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "2.7.0"
+  ],
+  "id": "PYSEC-2026-141",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:4331]",
+  "package": "urllib3",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+    "type": "CVSS_V3"
+   }
+  ],
+  "summary": "",
+  "version": "2.5.0",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2025-66471",
+   "GHSA-2xpw-w6gg-jr37"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "2.6.0"
+  ],
+  "id": "PYSEC-2026-1994",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:4331]",
+  "package": "urllib3",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:H",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "urllib3 streaming API improperly handles highly compressed data",
+  "version": "2.5.0",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-21441",
+   "GHSA-38jv-5279-wg99"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "2.6.3"
+  ],
+  "id": "PYSEC-2026-1996",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:4331]",
+  "package": "urllib3",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+    "type": "CVSS_V3"
+   },
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:H",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "Decompression-bomb safeguards bypassed when following HTTP redirects (streaming API)",
+  "version": "2.5.0",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2025-66418",
+   "GHSA-gm62-xv2j-4w53"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "2.6.0"
+  ],
+  "id": "PYSEC-2026-1998",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:4331]",
+  "package": "urllib3",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:H",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "urllib3 allows an unbounded number of links in the decompression chain",
+  "version": "2.5.0",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-97687",
+   "GHSA-8988-9cw3-xx77"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "2.8.0"
+  ],
+  "id": "PYSEC-2026-4175",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:4331]",
+  "package": "urllib3",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "urllib3: HTTPS proxy TLS configuration may be ignored or overridden",
+  "version": "2.5.0",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-97689",
+   "GHSA-vxq7-64xx-v4gw"
+  ],
+  "class": "runtime",
+  "fixed": [
+   "2.8.0"
+  ],
+  "id": "PYSEC-2026-4177",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:4331]",
+  "package": "urllib3",
+  "py38_only": false,
+  "severity": [
+   {
+    "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:H",
+    "type": "CVSS_V4"
+   }
+  ],
+  "summary": "urllib3: HTTPResponse.stream()/read_chunked() buffers an unbounded chunk-size line into memory",
+  "version": "2.5.0",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-24049",
+   "PYSEC-2026-2047"
+  ],
+  "class": "dev",
+  "fixed": [
+   "0.46.2"
+  ],
+  "id": "GHSA-8rrh-rw8j-w5fx",
+  "label": "HIGH",
+  "lock": "[код: pysport@b548c35 uv.lock:4351]",
+  "package": "wheel",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:H",
+    "type": "CVSS_V3"
+   }
+  ],
+  "summary": "Wheel Affected by Arbitrary File Permission Modification via Path Traversal in wheel unpack",
+  "version": "0.43.0",
+  "withdrawn": false
+ },
+ {
+  "aliases": [
+   "CVE-2026-24049",
+   "GHSA-8rrh-rw8j-w5fx"
+  ],
+  "class": "dev",
+  "fixed": [
+   "0.46.2"
+  ],
+  "id": "PYSEC-2026-2047",
+  "label": "",
+  "lock": "[код: pysport@b548c35 uv.lock:4351]",
+  "package": "wheel",
+  "py38_only": true,
+  "severity": [
+   {
+    "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:H",
+    "type": "CVSS_V3"
+   }
+  ],
+  "summary": "Wheel Affected by Arbitrary File Permission Modification via Path Traversal in wheel unpack",
+  "version": "0.43.0",
+  "withdrawn": false
+ }
+]

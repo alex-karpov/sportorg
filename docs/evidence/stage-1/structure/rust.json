@@ -1,0 +1,93 @@
+{
+ "crates": [
+  {
+   "cargo_lines": 12,
+   "commits": 2,
+   "crate": "crates.sportorg-core",
+   "files": 3,
+   "rust_lines": 327
+  },
+  {
+   "cargo_lines": 13,
+   "commits": 1,
+   "crate": "crates.sportorg-rust-example",
+   "files": 2,
+   "rust_lines": 9
+  },
+  {
+   "cargo_lines": 146,
+   "commits": 2,
+   "crate": "workspace",
+   "files": 2,
+   "rust_lines": 0
+  }
+ ],
+ "files": [
+  {
+   "commits": 2,
+   "crate": "workspace",
+   "kind": "cargo-lock",
+   "lines": 140,
+   "path": "Cargo.lock",
+   "tag": "[код: pysport@b548c35 Cargo.lock:1]"
+  },
+  {
+   "commits": 1,
+   "crate": "workspace",
+   "kind": "cargo-toml",
+   "lines": 6,
+   "path": "Cargo.toml",
+   "tag": "[код: pysport@b548c35 Cargo.toml:1]"
+  },
+  {
+   "commits": 1,
+   "crate": "crates.sportorg-core",
+   "kind": "cargo-toml",
+   "lines": 12,
+   "path": "crates/sportorg-core/Cargo.toml",
+   "tag": "[код: pysport@b548c35 crates/sportorg-core/Cargo.toml:1]"
+  },
+  {
+   "commits": 2,
+   "crate": "crates.sportorg-core",
+   "kind": "rust",
+   "lines": 18,
+   "path": "crates/sportorg-core/src/lib.rs",
+   "tag": "[код: pysport@b548c35 crates/sportorg-core/src/lib.rs:1]"
+  },
+  {
+   "commits": 1,
+   "crate": "crates.sportorg-core",
+   "kind": "rust",
+   "lines": 309,
+   "path": "crates/sportorg-core/src/otime.rs",
+   "tag": "[код: pysport@b548c35 crates/sportorg-core/src/otime.rs:1]"
+  },
+  {
+   "commits": 1,
+   "crate": "crates.sportorg-rust-example",
+   "kind": "cargo-toml",
+   "lines": 13,
+   "path": "crates/sportorg-rust-example/Cargo.toml",
+   "tag": "[код: pysport@b548c35 crates/sportorg-rust-example/Cargo.toml:1]"
+  },
+  {
+   "commits": 1,
+   "crate": "crates.sportorg-rust-example",
+   "kind": "rust",
+   "lines": 9,
+   "path": "crates/sportorg-rust-example/src/lib.rs",
+   "tag": "[код: pysport@b548c35 crates/sportorg-rust-example/src/lib.rs:1]"
+  }
+ ],
+ "summary": {
+  "cargo_lines": 171,
+  "crates": {
+   "crates.sportorg-core": 327,
+   "crates.sportorg-rust-example": 9,
+   "workspace": 0
+  },
+  "rust_files": 3,
+  "rust_lines": 336
+ }
+}

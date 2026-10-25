@@ -1,0 +1,5466 @@
+{
+ "own vs osv-scanner (Cargo.lock)": [
+  {
+   "ecosystem": "crates.io",
+   "id": "GHSA-36hh-v3qg-5jq4",
+   "matched": [
+    "GHSA-36hh-v3qg-5jq4",
+    "RUSTSEC-2026-0176"
+   ],
+   "package": "pyo3",
+   "reason": "",
+   "status": "both",
+   "version": "0.28.3"
+  },
+  {
+   "ecosystem": "crates.io",
+   "id": "GHSA-chgr-c6px-7xpp",
+   "matched": [
+    "GHSA-chgr-c6px-7xpp",
+    "RUSTSEC-2026-0177"
+   ],
+   "package": "pyo3",
+   "reason": "",
+   "status": "both",
+   "version": "0.28.3"
+  },
+  {
+   "ecosystem": "crates.io",
+   "id": "RUSTSEC-2026-0176",
+   "matched": [
+    "GHSA-36hh-v3qg-5jq4",
+    "RUSTSEC-2026-0176"
+   ],
+   "package": "pyo3",
+   "reason": "",
+   "status": "both",
+   "version": "0.28.3"
+  },
+  {
+   "ecosystem": "crates.io",
+   "id": "RUSTSEC-2026-0177",
+   "matched": [
+    "GHSA-chgr-c6px-7xpp",
+    "RUSTSEC-2026-0177"
+   ],
+   "package": "pyo3",
+   "reason": "",
+   "status": "both",
+   "version": "0.28.3"
+  }
+ ],
+ "own vs osv-scanner (uv.lock)": [
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-2fqr-mr3j-6wp8",
+   "matched": [
+    "GHSA-2fqr-mr3j-6wp8",
+    "PYSEC-2026-2112"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-2g87-pp6c-29x5",
+   "matched": [
+    "GHSA-2g87-pp6c-29x5"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-2vrm-gr82-f7m5",
+   "matched": [
+    "GHSA-2vrm-gr82-f7m5",
+    "PYSEC-2026-2096"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-3wq7-rqq7-wx6j",
+   "matched": [
+    "GHSA-3wq7-rqq7-wx6j",
+    "PYSEC-2026-2099"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-494j-54xm-rwp3",
+   "matched": [
+    "GHSA-494j-54xm-rwp3"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-4fvr-rgm6-gqmc",
+   "matched": [
+    "GHSA-4fvr-rgm6-gqmc",
+    "PYSEC-2026-2107"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-4m7w-qmgq-4wj5",
+   "matched": [
+    "GHSA-4m7w-qmgq-4wj5",
+    "PYSEC-2026-237"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-54jq-c3m8-4m76",
+   "matched": [
+    "GHSA-54jq-c3m8-4m76",
+    "PYSEC-2026-1097"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-5wr8-gcqf-gqf3",
+   "matched": [
+    "GHSA-5wr8-gcqf-gqf3"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-63hf-3vf5-4wqf",
+   "matched": [
+    "GHSA-63hf-3vf5-4wqf",
+    "PYSEC-2026-2102"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-63hw-fmq6-xxg2",
+   "matched": [
+    "GHSA-63hw-fmq6-xxg2",
+    "PYSEC-2026-2110"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-69f9-5gxw-wvc2",
+   "matched": [
+    "GHSA-69f9-5gxw-wvc2",
+    "PYSEC-2026-1099"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-6cjc-53gc-5rqm",
+   "matched": [
+    "GHSA-6cjc-53gc-5rqm"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-6jhg-hg63-jvvf",
+   "matched": [
+    "GHSA-6jhg-hg63-jvvf",
+    "PYSEC-2026-1100"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-6mq8-rvhq-8wgg",
+   "matched": [
+    "GHSA-6mq8-rvhq-8wgg",
+    "PYSEC-2026-1101"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-9548-qrrj-x5pj",
+   "matched": [
+    "GHSA-9548-qrrj-x5pj",
+    "PYSEC-2026-1104"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-966j-vmvw-g2g9",
+   "matched": [
+    "GHSA-966j-vmvw-g2g9",
+    "PYSEC-2026-2100"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-9x8q-7h8h-wcw9",
+   "matched": [
+    "GHSA-9x8q-7h8h-wcw9",
+    "PYSEC-2026-2113"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-9xw5-w5jj-pvcg",
+   "matched": [
+    "GHSA-9xw5-w5jj-pvcg"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-c427-h43c-vf67",
+   "matched": [
+    "GHSA-c427-h43c-vf67",
+    "PYSEC-2026-2103"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-cq5v-8q36-5273",
+   "matched": [
+    "GHSA-cq5v-8q36-5273",
+    "PYSEC-2026-3545"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-f9xw-jh8m-3mwq",
+   "matched": [
+    "GHSA-f9xw-jh8m-3mwq"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-fh55-r93g-j68g",
+   "matched": [
+    "GHSA-fh55-r93g-j68g",
+    "PYSEC-2026-1105"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-g3cq-j2xw-wf74",
+   "matched": [
+    "GHSA-g3cq-j2xw-wf74",
+    "PYSEC-2026-2111"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-g84x-mcqj-x9qq",
+   "matched": [
+    "GHSA-g84x-mcqj-x9qq",
+    "PYSEC-2026-1106"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-gx76-c99x-2c96",
+   "matched": [
+    "GHSA-gx76-c99x-2c96"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-hcc4-c3v8-rx92",
+   "matched": [
+    "GHSA-hcc4-c3v8-rx92",
+    "PYSEC-2026-2095"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-hg6j-4rv6-33pg",
+   "matched": [
+    "GHSA-hg6j-4rv6-33pg",
+    "PYSEC-2026-2105"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-hpj7-wq8m-9hgp",
+   "matched": [
+    "GHSA-hpj7-wq8m-9hgp",
+    "PYSEC-2026-2109"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-jg22-mg44-37j8",
+   "matched": [
+    "GHSA-jg22-mg44-37j8",
+    "PYSEC-2026-2104"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-jj3x-wxrx-4x23",
+   "matched": [
+    "GHSA-jj3x-wxrx-4x23",
+    "PYSEC-2026-1107"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-m5qp-6w8w-w647",
+   "matched": [
+    "GHSA-m5qp-6w8w-w647",
+    "PYSEC-2026-2098"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-m6qw-4cw2-hm4m",
+   "matched": [
+    "GHSA-m6qw-4cw2-hm4m",
+    "PYSEC-2026-2106"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-mfx4-hv73-q22v",
+   "matched": [
+    "GHSA-mfx4-hv73-q22v",
+    "PYSEC-2026-3546"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-mq44-7p77-q5h7",
+   "matched": [
+    "GHSA-mq44-7p77-q5h7",
+    "PYSEC-2026-3547"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-mqqc-3gqh-h2x8",
+   "matched": [
+    "GHSA-mqqc-3gqh-h2x8",
+    "PYSEC-2026-1109"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-mwh4-6h8g-pg8w",
+   "matched": [
+    "GHSA-mwh4-6h8g-pg8w",
+    "PYSEC-2026-2101"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-p998-jp59-783m",
+   "matched": [
+    "GHSA-p998-jp59-783m",
+    "PYSEC-2026-2097"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-pqxq-w44r-73xw",
+   "matched": [
+    "GHSA-pqxq-w44r-73xw"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-w2fm-2cpv-w7v5",
+   "matched": [
+    "GHSA-w2fm-2cpv-w7v5",
+    "PYSEC-2026-2094"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-xcgm-r5h9-7989",
+   "matched": [
+    "GHSA-xcgm-r5h9-7989",
+    "PYSEC-2026-2108"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-1097",
+   "matched": [
+    "GHSA-54jq-c3m8-4m76",
+    "PYSEC-2026-1097"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-1099",
+   "matched": [
+    "GHSA-69f9-5gxw-wvc2",
+    "PYSEC-2026-1099"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-1100",
+   "matched": [
+    "GHSA-6jhg-hg63-jvvf",
+    "PYSEC-2026-1100"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-1101",
+   "matched": [
+    "GHSA-6mq8-rvhq-8wgg",
+    "PYSEC-2026-1101"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-1104",
+   "matched": [
+    "GHSA-9548-qrrj-x5pj",
+    "PYSEC-2026-1104"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-1105",
+   "matched": [
+    "GHSA-fh55-r93g-j68g",
+    "PYSEC-2026-1105"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-1106",
+   "matched": [
+    "GHSA-g84x-mcqj-x9qq",
+    "PYSEC-2026-1106"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-1107",
+   "matched": [
+    "GHSA-jj3x-wxrx-4x23",
+    "PYSEC-2026-1107"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-1109",
+   "matched": [
+    "GHSA-mqqc-3gqh-h2x8",
+    "PYSEC-2026-1109"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-2094",
+   "matched": [
+    "GHSA-w2fm-2cpv-w7v5",
+    "PYSEC-2026-2094"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-2095",
+   "matched": [
+    "GHSA-hcc4-c3v8-rx92",
+    "PYSEC-2026-2095"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-2096",
+   "matched": [
+    "GHSA-2vrm-gr82-f7m5",
+    "PYSEC-2026-2096"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-2097",
+   "matched": [
+    "GHSA-p998-jp59-783m",
+    "PYSEC-2026-2097"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-2098",
+   "matched": [
+    "GHSA-m5qp-6w8w-w647",
+    "PYSEC-2026-2098"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-2099",
+   "matched": [
+    "GHSA-3wq7-rqq7-wx6j",
+    "PYSEC-2026-2099"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-2100",
+   "matched": [
+    "GHSA-966j-vmvw-g2g9",
+    "PYSEC-2026-2100"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-2101",
+   "matched": [
+    "GHSA-mwh4-6h8g-pg8w",
+    "PYSEC-2026-2101"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-2102",
+   "matched": [
+    "GHSA-63hf-3vf5-4wqf",
+    "PYSEC-2026-2102"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-2103",
+   "matched": [
+    "GHSA-c427-h43c-vf67",
+    "PYSEC-2026-2103"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-2104",
+   "matched": [
+    "GHSA-jg22-mg44-37j8",
+    "PYSEC-2026-2104"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-2105",
+   "matched": [
+    "GHSA-hg6j-4rv6-33pg",
+    "PYSEC-2026-2105"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-2106",
+   "matched": [
+    "GHSA-m6qw-4cw2-hm4m",
+    "PYSEC-2026-2106"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-2107",
+   "matched": [
+    "GHSA-4fvr-rgm6-gqmc",
+    "PYSEC-2026-2107"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-2108",
+   "matched": [
+    "GHSA-xcgm-r5h9-7989",
+    "PYSEC-2026-2108"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-2109",
+   "matched": [
+    "GHSA-hpj7-wq8m-9hgp",
+    "PYSEC-2026-2109"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-2110",
+   "matched": [
+    "GHSA-63hw-fmq6-xxg2",
+    "PYSEC-2026-2110"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-2111",
+   "matched": [
+    "GHSA-g3cq-j2xw-wf74",
+    "PYSEC-2026-2111"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-2112",
+   "matched": [
+    "GHSA-2fqr-mr3j-6wp8",
+    "PYSEC-2026-2112"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-2113",
+   "matched": [
+    "GHSA-9x8q-7h8h-wcw9",
+    "PYSEC-2026-2113"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-237",
+   "matched": [
+    "GHSA-4m7w-qmgq-4wj5",
+    "PYSEC-2026-237"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-3545",
+   "matched": [
+    "GHSA-cq5v-8q36-5273",
+    "PYSEC-2026-3545"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-3546",
+   "matched": [
+    "GHSA-mfx4-hv73-q22v",
+    "PYSEC-2026-3546"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-3547",
+   "matched": [
+    "GHSA-mq44-7p77-q5h7",
+    "PYSEC-2026-3547"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-2fqr-mr3j-6wp8",
+   "matched": [
+    "GHSA-2fqr-mr3j-6wp8",
+    "PYSEC-2026-2112"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-2g87-pp6c-29x5",
+   "matched": [
+    "GHSA-2g87-pp6c-29x5"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-2vrm-gr82-f7m5",
+   "matched": [
+    "GHSA-2vrm-gr82-f7m5",
+    "PYSEC-2026-2096"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-3wq7-rqq7-wx6j",
+   "matched": [
+    "GHSA-3wq7-rqq7-wx6j",
+    "PYSEC-2026-2099"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-494j-54xm-rwp3",
+   "matched": [
+    "GHSA-494j-54xm-rwp3"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-4fvr-rgm6-gqmc",
+   "matched": [
+    "GHSA-4fvr-rgm6-gqmc",
+    "PYSEC-2026-2107"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-4m7w-qmgq-4wj5",
+   "matched": [
+    "GHSA-4m7w-qmgq-4wj5",
+    "PYSEC-2026-237"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-54jq-c3m8-4m76",
+   "matched": [
+    "GHSA-54jq-c3m8-4m76",
+    "PYSEC-2026-1097"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-5wr8-gcqf-gqf3",
+   "matched": [
+    "GHSA-5wr8-gcqf-gqf3"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-63hf-3vf5-4wqf",
+   "matched": [
+    "GHSA-63hf-3vf5-4wqf",
+    "PYSEC-2026-2102"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-63hw-fmq6-xxg2",
+   "matched": [
+    "GHSA-63hw-fmq6-xxg2",
+    "PYSEC-2026-2110"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-69f9-5gxw-wvc2",
+   "matched": [
+    "GHSA-69f9-5gxw-wvc2",
+    "PYSEC-2026-1099"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-6cjc-53gc-5rqm",
+   "matched": [
+    "GHSA-6cjc-53gc-5rqm"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-6jhg-hg63-jvvf",
+   "matched": [
+    "GHSA-6jhg-hg63-jvvf",
+    "PYSEC-2026-1100"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-6mq8-rvhq-8wgg",
+   "matched": [
+    "GHSA-6mq8-rvhq-8wgg",
+    "PYSEC-2026-1101"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-966j-vmvw-g2g9",
+   "matched": [
+    "GHSA-966j-vmvw-g2g9",
+    "PYSEC-2026-2100"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-9x8q-7h8h-wcw9",
+   "matched": [
+    "GHSA-9x8q-7h8h-wcw9",
+    "PYSEC-2026-2113"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-9xw5-w5jj-pvcg",
+   "matched": [
+    "GHSA-9xw5-w5jj-pvcg"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-c427-h43c-vf67",
+   "matched": [
+    "GHSA-c427-h43c-vf67",
+    "PYSEC-2026-2103"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-cq5v-8q36-5273",
+   "matched": [
+    "GHSA-cq5v-8q36-5273",
+    "PYSEC-2026-3545"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-f9xw-jh8m-3mwq",
+   "matched": [
+    "GHSA-f9xw-jh8m-3mwq"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-fh55-r93g-j68g",
+   "matched": [
+    "GHSA-fh55-r93g-j68g",
+    "PYSEC-2026-1105"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-g3cq-j2xw-wf74",
+   "matched": [
+    "GHSA-g3cq-j2xw-wf74",
+    "PYSEC-2026-2111"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-g84x-mcqj-x9qq",
+   "matched": [
+    "GHSA-g84x-mcqj-x9qq",
+    "PYSEC-2026-1106"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-gx76-c99x-2c96",
+   "matched": [
+    "GHSA-gx76-c99x-2c96"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-hcc4-c3v8-rx92",
+   "matched": [
+    "GHSA-hcc4-c3v8-rx92",
+    "PYSEC-2026-2095"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-hg6j-4rv6-33pg",
+   "matched": [
+    "GHSA-hg6j-4rv6-33pg",
+    "PYSEC-2026-2105"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-hpj7-wq8m-9hgp",
+   "matched": [
+    "GHSA-hpj7-wq8m-9hgp",
+    "PYSEC-2026-2109"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-jg22-mg44-37j8",
+   "matched": [
+    "GHSA-jg22-mg44-37j8",
+    "PYSEC-2026-2104"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-jj3x-wxrx-4x23",
+   "matched": [
+    "GHSA-jj3x-wxrx-4x23",
+    "PYSEC-2026-1107"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-m5qp-6w8w-w647",
+   "matched": [
+    "GHSA-m5qp-6w8w-w647",
+    "PYSEC-2026-2098"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-m6qw-4cw2-hm4m",
+   "matched": [
+    "GHSA-m6qw-4cw2-hm4m",
+    "PYSEC-2026-2106"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-mfx4-hv73-q22v",
+   "matched": [
+    "GHSA-mfx4-hv73-q22v",
+    "PYSEC-2026-3546"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-mq44-7p77-q5h7",
+   "matched": [
+    "GHSA-mq44-7p77-q5h7",
+    "PYSEC-2026-3547"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-mqqc-3gqh-h2x8",
+   "matched": [
+    "GHSA-mqqc-3gqh-h2x8",
+    "PYSEC-2026-1109"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-mwh4-6h8g-pg8w",
+   "matched": [
+    "GHSA-mwh4-6h8g-pg8w",
+    "PYSEC-2026-2101"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-p998-jp59-783m",
+   "matched": [
+    "GHSA-p998-jp59-783m",
+    "PYSEC-2026-2097"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-pqxq-w44r-73xw",
+   "matched": [
+    "GHSA-pqxq-w44r-73xw"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-w2fm-2cpv-w7v5",
+   "matched": [
+    "GHSA-w2fm-2cpv-w7v5",
+    "PYSEC-2026-2094"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-xcgm-r5h9-7989",
+   "matched": [
+    "GHSA-xcgm-r5h9-7989",
+    "PYSEC-2026-2108"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-1097",
+   "matched": [
+    "GHSA-54jq-c3m8-4m76",
+    "PYSEC-2026-1097"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-1099",
+   "matched": [
+    "GHSA-69f9-5gxw-wvc2",
+    "PYSEC-2026-1099"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-1100",
+   "matched": [
+    "GHSA-6jhg-hg63-jvvf",
+    "PYSEC-2026-1100"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-1101",
+   "matched": [
+    "GHSA-6mq8-rvhq-8wgg",
+    "PYSEC-2026-1101"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-1105",
+   "matched": [
+    "GHSA-fh55-r93g-j68g",
+    "PYSEC-2026-1105"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-1106",
+   "matched": [
+    "GHSA-g84x-mcqj-x9qq",
+    "PYSEC-2026-1106"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-1107",
+   "matched": [
+    "GHSA-jj3x-wxrx-4x23",
+    "PYSEC-2026-1107"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-1109",
+   "matched": [
+    "GHSA-mqqc-3gqh-h2x8",
+    "PYSEC-2026-1109"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-2094",
+   "matched": [
+    "GHSA-w2fm-2cpv-w7v5",
+    "PYSEC-2026-2094"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-2095",
+   "matched": [
+    "GHSA-hcc4-c3v8-rx92",
+    "PYSEC-2026-2095"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-2096",
+   "matched": [
+    "GHSA-2vrm-gr82-f7m5",
+    "PYSEC-2026-2096"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-2097",
+   "matched": [
+    "GHSA-p998-jp59-783m",
+    "PYSEC-2026-2097"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-2098",
+   "matched": [
+    "GHSA-m5qp-6w8w-w647",
+    "PYSEC-2026-2098"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-2099",
+   "matched": [
+    "GHSA-3wq7-rqq7-wx6j",
+    "PYSEC-2026-2099"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-2100",
+   "matched": [
+    "GHSA-966j-vmvw-g2g9",
+    "PYSEC-2026-2100"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-2101",
+   "matched": [
+    "GHSA-mwh4-6h8g-pg8w",
+    "PYSEC-2026-2101"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-2102",
+   "matched": [
+    "GHSA-63hf-3vf5-4wqf",
+    "PYSEC-2026-2102"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-2103",
+   "matched": [
+    "GHSA-c427-h43c-vf67",
+    "PYSEC-2026-2103"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-2104",
+   "matched": [
+    "GHSA-jg22-mg44-37j8",
+    "PYSEC-2026-2104"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-2105",
+   "matched": [
+    "GHSA-hg6j-4rv6-33pg",
+    "PYSEC-2026-2105"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-2106",
+   "matched": [
+    "GHSA-m6qw-4cw2-hm4m",
+    "PYSEC-2026-2106"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-2107",
+   "matched": [
+    "GHSA-4fvr-rgm6-gqmc",
+    "PYSEC-2026-2107"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-2108",
+   "matched": [
+    "GHSA-xcgm-r5h9-7989",
+    "PYSEC-2026-2108"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-2109",
+   "matched": [
+    "GHSA-hpj7-wq8m-9hgp",
+    "PYSEC-2026-2109"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-2110",
+   "matched": [
+    "GHSA-63hw-fmq6-xxg2",
+    "PYSEC-2026-2110"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-2111",
+   "matched": [
+    "GHSA-g3cq-j2xw-wf74",
+    "PYSEC-2026-2111"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-2112",
+   "matched": [
+    "GHSA-2fqr-mr3j-6wp8",
+    "PYSEC-2026-2112"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-2113",
+   "matched": [
+    "GHSA-9x8q-7h8h-wcw9",
+    "PYSEC-2026-2113"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-237",
+   "matched": [
+    "GHSA-4m7w-qmgq-4wj5",
+    "PYSEC-2026-237"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-3545",
+   "matched": [
+    "GHSA-cq5v-8q36-5273",
+    "PYSEC-2026-3545"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-3546",
+   "matched": [
+    "GHSA-mfx4-hv73-q22v",
+    "PYSEC-2026-3546"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-3547",
+   "matched": [
+    "GHSA-mq44-7p77-q5h7",
+    "PYSEC-2026-3547"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-6q48-6c7w-9gw2",
+   "matched": [
+    "GHSA-6q48-6c7w-9gw2",
+    "PYSEC-2026-4320"
+   ],
+   "package": "certifi",
+   "reason": "",
+   "status": "both",
+   "version": "2025.10.5"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-4320",
+   "matched": [
+    "GHSA-6q48-6c7w-9gw2",
+    "PYSEC-2026-4320"
+   ],
+   "package": "certifi",
+   "reason": "",
+   "status": "both",
+   "version": "2025.10.5"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-537c-gmf6-5ccf",
+   "matched": [
+    "GHSA-537c-gmf6-5ccf"
+   ],
+   "package": "cryptography",
+   "reason": "",
+   "status": "both",
+   "version": "46.0.6"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-g6cj-pr64-35w5",
+   "matched": [
+    "GHSA-g6cj-pr64-35w5",
+    "PYSEC-2026-3552"
+   ],
+   "package": "cryptography",
+   "reason": "",
+   "status": "both",
+   "version": "46.0.6"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-jwv3-5hgf-82ww",
+   "matched": [
+    "GHSA-jwv3-5hgf-82ww",
+    "PYSEC-2026-3553"
+   ],
+   "package": "cryptography",
+   "reason": "",
+   "status": "both",
+   "version": "46.0.6"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-m2h6-j472-rp4c",
+   "matched": [
+    "GHSA-m2h6-j472-rp4c",
+    "PYSEC-2026-3554"
+   ],
+   "package": "cryptography",
+   "reason": "",
+   "status": "both",
+   "version": "46.0.6"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-p423-j2cm-9vmq",
+   "matched": [
+    "GHSA-p423-j2cm-9vmq",
+    "PYSEC-2026-36"
+   ],
+   "package": "cryptography",
+   "reason": "",
+   "status": "both",
+   "version": "46.0.6"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-3552",
+   "matched": [
+    "GHSA-g6cj-pr64-35w5",
+    "PYSEC-2026-3552"
+   ],
+   "package": "cryptography",
+   "reason": "",
+   "status": "both",
+   "version": "46.0.6"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-3553",
+   "matched": [
+    "GHSA-jwv3-5hgf-82ww",
+    "PYSEC-2026-3553"
+   ],
+   "package": "cryptography",
+   "reason": "",
+   "status": "both",
+   "version": "46.0.6"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-3554",
+   "matched": [
+    "GHSA-m2h6-j472-rp4c",
+    "PYSEC-2026-3554"
+   ],
+   "package": "cryptography",
+   "reason": "",
+   "status": "both",
+   "version": "46.0.6"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-36",
+   "matched": [
+    "GHSA-p423-j2cm-9vmq",
+    "PYSEC-2026-36"
+   ],
+   "package": "cryptography",
+   "reason": "",
+   "status": "both",
+   "version": "46.0.6"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-qmgc-5h2g-mvrw",
+   "matched": [
+    "GHSA-qmgc-5h2g-mvrw",
+    "PYSEC-2026-1374"
+   ],
+   "package": "filelock",
+   "reason": "",
+   "status": "both",
+   "version": "3.20.0"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-w853-jp5j-5j7f",
+   "matched": [
+    "GHSA-w853-jp5j-5j7f",
+    "PYSEC-2026-1375"
+   ],
+   "package": "filelock",
+   "reason": "",
+   "status": "both",
+   "version": "3.20.0"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-1374",
+   "matched": [
+    "GHSA-qmgc-5h2g-mvrw",
+    "PYSEC-2026-1374"
+   ],
+   "package": "filelock",
+   "reason": "",
+   "status": "both",
+   "version": "3.20.0"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-1375",
+   "matched": [
+    "GHSA-w853-jp5j-5j7f",
+    "PYSEC-2026-1375"
+   ],
+   "package": "filelock",
+   "reason": "",
+   "status": "both",
+   "version": "3.20.0"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-65pc-fj4g-8rjx",
+   "matched": [
+    "GHSA-65pc-fj4g-8rjx",
+    "PYSEC-2026-215"
+   ],
+   "package": "idna",
+   "reason": "",
+   "status": "both",
+   "version": "3.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-215",
+   "matched": [
+    "GHSA-65pc-fj4g-8rjx",
+    "PYSEC-2026-215"
+   ],
+   "package": "idna",
+   "reason": "",
+   "status": "both",
+   "version": "3.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-377p-g8gr-5wpg",
+   "matched": [
+    "GHSA-377p-g8gr-5wpg",
+    "PYSEC-2024-280"
+   ],
+   "package": "lief",
+   "reason": "",
+   "status": "both",
+   "version": "0.14.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-mjjp-xjfg-97wg",
+   "matched": [
+    "GHSA-mjjp-xjfg-97wg",
+    "PYSEC-2026-1538"
+   ],
+   "package": "lief",
+   "reason": "",
+   "status": "both",
+   "version": "0.14.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2024-280",
+   "matched": [
+    "GHSA-377p-g8gr-5wpg",
+    "PYSEC-2024-280"
+   ],
+   "package": "lief",
+   "reason": "",
+   "status": "both",
+   "version": "0.14.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-1538",
+   "matched": [
+    "GHSA-mjjp-xjfg-97wg",
+    "PYSEC-2026-1538"
+   ],
+   "package": "lief",
+   "reason": "",
+   "status": "both",
+   "version": "0.14.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-mjjp-xjfg-97wg",
+   "matched": [
+    "GHSA-mjjp-xjfg-97wg",
+    "PYSEC-2026-1538"
+   ],
+   "package": "lief",
+   "reason": "",
+   "status": "both",
+   "version": "0.17.0"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-1538",
+   "matched": [
+    "GHSA-mjjp-xjfg-97wg",
+    "PYSEC-2026-1538"
+   ],
+   "package": "lief",
+   "reason": "",
+   "status": "both",
+   "version": "0.17.0"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-vfmq-68hx-4jfw",
+   "matched": [
+    "GHSA-vfmq-68hx-4jfw",
+    "PYSEC-2026-87"
+   ],
+   "package": "lxml",
+   "reason": "",
+   "status": "both",
+   "version": "6.0.2"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-87",
+   "matched": [
+    "GHSA-vfmq-68hx-4jfw",
+    "PYSEC-2026-87"
+   ],
+   "package": "lxml",
+   "reason": "",
+   "status": "both",
+   "version": "6.0.2"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-54p9-h82j-f925",
+   "matched": [
+    "GHSA-54p9-h82j-f925",
+    "PYSEC-2026-4244"
+   ],
+   "package": "multidict",
+   "reason": "",
+   "status": "both",
+   "version": "6.7.0"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-4244",
+   "matched": [
+    "GHSA-54p9-h82j-f925",
+    "PYSEC-2026-4244"
+   ],
+   "package": "multidict",
+   "reason": "",
+   "status": "both",
+   "version": "6.7.0"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-hx9q-6w63-j58v",
+   "matched": [
+    "GHSA-hx9q-6w63-j58v",
+    "PYSEC-2026-107"
+   ],
+   "package": "orjson",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.15"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-107",
+   "matched": [
+    "GHSA-hx9q-6w63-j58v",
+    "PYSEC-2026-107"
+   ],
+   "package": "orjson",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.15"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-hx9q-6w63-j58v",
+   "matched": [
+    "GHSA-hx9q-6w63-j58v",
+    "PYSEC-2026-107"
+   ],
+   "package": "orjson",
+   "reason": "",
+   "status": "both",
+   "version": "3.11.3"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-107",
+   "matched": [
+    "GHSA-hx9q-6w63-j58v",
+    "PYSEC-2026-107"
+   ],
+   "package": "orjson",
+   "reason": "",
+   "status": "both",
+   "version": "3.11.3"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-5239-wwwm-4pmq",
+   "matched": [
+    "GHSA-5239-wwwm-4pmq",
+    "PYSEC-2026-2987"
+   ],
+   "package": "pygments",
+   "reason": "",
+   "status": "both",
+   "version": "2.19.2"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-2987",
+   "matched": [
+    "GHSA-5239-wwwm-4pmq",
+    "PYSEC-2026-2987"
+   ],
+   "package": "pygments",
+   "reason": "",
+   "status": "both",
+   "version": "2.19.2"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-6w46-j5rx-g56g",
+   "matched": [
+    "GHSA-6w46-j5rx-g56g",
+    "PYSEC-2026-1845"
+   ],
+   "package": "pytest",
+   "reason": "",
+   "status": "both",
+   "version": "8.3.5"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-1845",
+   "matched": [
+    "GHSA-6w46-j5rx-g56g",
+    "PYSEC-2026-1845"
+   ],
+   "package": "pytest",
+   "reason": "",
+   "status": "both",
+   "version": "8.3.5"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-6w46-j5rx-g56g",
+   "matched": [
+    "GHSA-6w46-j5rx-g56g",
+    "PYSEC-2026-1845"
+   ],
+   "package": "pytest",
+   "reason": "",
+   "status": "both",
+   "version": "8.4.2"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-1845",
+   "matched": [
+    "GHSA-6w46-j5rx-g56g",
+    "PYSEC-2026-1845"
+   ],
+   "package": "pytest",
+   "reason": "",
+   "status": "both",
+   "version": "8.4.2"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-gc5v-m9x4-r6x2",
+   "matched": [
+    "GHSA-gc5v-m9x4-r6x2",
+    "PYSEC-2026-2275"
+   ],
+   "package": "requests",
+   "reason": "",
+   "status": "both",
+   "version": "2.32.4"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-2275",
+   "matched": [
+    "GHSA-gc5v-m9x4-r6x2",
+    "PYSEC-2026-2275"
+   ],
+   "package": "requests",
+   "reason": "",
+   "status": "both",
+   "version": "2.32.4"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-gc5v-m9x4-r6x2",
+   "matched": [
+    "GHSA-gc5v-m9x4-r6x2",
+    "PYSEC-2026-2275"
+   ],
+   "package": "requests",
+   "reason": "",
+   "status": "both",
+   "version": "2.32.5"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-2275",
+   "matched": [
+    "GHSA-gc5v-m9x4-r6x2",
+    "PYSEC-2026-2275"
+   ],
+   "package": "requests",
+   "reason": "",
+   "status": "both",
+   "version": "2.32.5"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-5rjg-fvgr-3xxf",
+   "matched": [
+    "GHSA-5rjg-fvgr-3xxf",
+    "PYSEC-2025-49"
+   ],
+   "package": "setuptools",
+   "reason": "",
+   "status": "both",
+   "version": "69.5.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-cx63-2mw6-8hw5",
+   "matched": [
+    "GHSA-cx63-2mw6-8hw5",
+    "PYSEC-2026-1918"
+   ],
+   "package": "setuptools",
+   "reason": "",
+   "status": "both",
+   "version": "69.5.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-h35f-9h28-mq5c",
+   "matched": [
+    "GHSA-h35f-9h28-mq5c",
+    "PYSEC-2026-3447"
+   ],
+   "package": "setuptools",
+   "reason": "",
+   "status": "both",
+   "version": "69.5.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-xmj3-9gf7-h52w",
+   "matched": [
+    "GHSA-xmj3-9gf7-h52w"
+   ],
+   "package": "setuptools",
+   "reason": "",
+   "status": "both",
+   "version": "69.5.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2025-49",
+   "matched": [
+    "GHSA-5rjg-fvgr-3xxf",
+    "PYSEC-2025-49"
+   ],
+   "package": "setuptools",
+   "reason": "",
+   "status": "both",
+   "version": "69.5.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-1918",
+   "matched": [
+    "GHSA-cx63-2mw6-8hw5",
+    "PYSEC-2026-1918"
+   ],
+   "package": "setuptools",
+   "reason": "",
+   "status": "both",
+   "version": "69.5.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-3447",
+   "matched": [
+    "GHSA-h35f-9h28-mq5c",
+    "PYSEC-2026-3447"
+   ],
+   "package": "setuptools",
+   "reason": "",
+   "status": "both",
+   "version": "69.5.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-h35f-9h28-mq5c",
+   "matched": [
+    "GHSA-h35f-9h28-mq5c",
+    "PYSEC-2026-3447"
+   ],
+   "package": "setuptools",
+   "reason": "",
+   "status": "both",
+   "version": "80.9.0"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-xmj3-9gf7-h52w",
+   "matched": [
+    "GHSA-xmj3-9gf7-h52w"
+   ],
+   "package": "setuptools",
+   "reason": "",
+   "status": "both",
+   "version": "80.9.0"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-3447",
+   "matched": [
+    "GHSA-h35f-9h28-mq5c",
+    "PYSEC-2026-3447"
+   ],
+   "package": "setuptools",
+   "reason": "",
+   "status": "both",
+   "version": "80.9.0"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-2xpw-w6gg-jr37",
+   "matched": [
+    "GHSA-2xpw-w6gg-jr37",
+    "PYSEC-2026-1994"
+   ],
+   "package": "urllib3",
+   "reason": "",
+   "status": "both",
+   "version": "2.2.3"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-38jv-5279-wg99",
+   "matched": [
+    "GHSA-38jv-5279-wg99",
+    "PYSEC-2026-1996"
+   ],
+   "package": "urllib3",
+   "reason": "",
+   "status": "both",
+   "version": "2.2.3"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-48p4-8xcf-vxj5",
+   "matched": [
+    "GHSA-48p4-8xcf-vxj5",
+    "PYSEC-2026-1997"
+   ],
+   "package": "urllib3",
+   "reason": "",
+   "status": "both",
+   "version": "2.2.3"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-8988-9cw3-xx77",
+   "matched": [
+    "GHSA-8988-9cw3-xx77",
+    "PYSEC-2026-4175"
+   ],
+   "package": "urllib3",
+   "reason": "",
+   "status": "both",
+   "version": "2.2.3"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-gm62-xv2j-4w53",
+   "matched": [
+    "GHSA-gm62-xv2j-4w53",
+    "PYSEC-2026-1998"
+   ],
+   "package": "urllib3",
+   "reason": "",
+   "status": "both",
+   "version": "2.2.3"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-pq67-6m6q-mj2v",
+   "matched": [
+    "GHSA-pq67-6m6q-mj2v",
+    "PYSEC-2026-1999"
+   ],
+   "package": "urllib3",
+   "reason": "",
+   "status": "both",
+   "version": "2.2.3"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-qccp-gfcp-xxvc",
+   "matched": [
+    "GHSA-qccp-gfcp-xxvc",
+    "PYSEC-2026-141"
+   ],
+   "package": "urllib3",
+   "reason": "",
+   "status": "both",
+   "version": "2.2.3"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-vxq7-64xx-v4gw",
+   "matched": [
+    "GHSA-vxq7-64xx-v4gw",
+    "PYSEC-2026-4177"
+   ],
+   "package": "urllib3",
+   "reason": "",
+   "status": "both",
+   "version": "2.2.3"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-141",
+   "matched": [
+    "GHSA-qccp-gfcp-xxvc",
+    "PYSEC-2026-141"
+   ],
+   "package": "urllib3",
+   "reason": "",
+   "status": "both",
+   "version": "2.2.3"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-1994",
+   "matched": [
+    "GHSA-2xpw-w6gg-jr37",
+    "PYSEC-2026-1994"
+   ],
+   "package": "urllib3",
+   "reason": "",
+   "status": "both",
+   "version": "2.2.3"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-1996",
+   "matched": [
+    "GHSA-38jv-5279-wg99",
+    "PYSEC-2026-1996"
+   ],
+   "package": "urllib3",
+   "reason": "",
+   "status": "both",
+   "version": "2.2.3"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-1997",
+   "matched": [
+    "GHSA-48p4-8xcf-vxj5",
+    "PYSEC-2026-1997"
+   ],
+   "package": "urllib3",
+   "reason": "",
+   "status": "both",
+   "version": "2.2.3"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-1998",
+   "matched": [
+    "GHSA-gm62-xv2j-4w53",
+    "PYSEC-2026-1998"
+   ],
+   "package": "urllib3",
+   "reason": "",
+   "status": "both",
+   "version": "2.2.3"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-1999",
+   "matched": [
+    "GHSA-pq67-6m6q-mj2v",
+    "PYSEC-2026-1999"
+   ],
+   "package": "urllib3",
+   "reason": "",
+   "status": "both",
+   "version": "2.2.3"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-4175",
+   "matched": [
+    "GHSA-8988-9cw3-xx77",
+    "PYSEC-2026-4175"
+   ],
+   "package": "urllib3",
+   "reason": "",
+   "status": "both",
+   "version": "2.2.3"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-4177",
+   "matched": [
+    "GHSA-vxq7-64xx-v4gw",
+    "PYSEC-2026-4177"
+   ],
+   "package": "urllib3",
+   "reason": "",
+   "status": "both",
+   "version": "2.2.3"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-2xpw-w6gg-jr37",
+   "matched": [
+    "GHSA-2xpw-w6gg-jr37",
+    "PYSEC-2026-1994"
+   ],
+   "package": "urllib3",
+   "reason": "",
+   "status": "both",
+   "version": "2.5.0"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-38jv-5279-wg99",
+   "matched": [
+    "GHSA-38jv-5279-wg99",
+    "PYSEC-2026-1996"
+   ],
+   "package": "urllib3",
+   "reason": "",
+   "status": "both",
+   "version": "2.5.0"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-8988-9cw3-xx77",
+   "matched": [
+    "GHSA-8988-9cw3-xx77",
+    "PYSEC-2026-4175"
+   ],
+   "package": "urllib3",
+   "reason": "",
+   "status": "both",
+   "version": "2.5.0"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-gm62-xv2j-4w53",
+   "matched": [
+    "GHSA-gm62-xv2j-4w53",
+    "PYSEC-2026-1998"
+   ],
+   "package": "urllib3",
+   "reason": "",
+   "status": "both",
+   "version": "2.5.0"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-qccp-gfcp-xxvc",
+   "matched": [
+    "GHSA-qccp-gfcp-xxvc",
+    "PYSEC-2026-141"
+   ],
+   "package": "urllib3",
+   "reason": "",
+   "status": "both",
+   "version": "2.5.0"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-vxq7-64xx-v4gw",
+   "matched": [
+    "GHSA-vxq7-64xx-v4gw",
+    "PYSEC-2026-4177"
+   ],
+   "package": "urllib3",
+   "reason": "",
+   "status": "both",
+   "version": "2.5.0"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-141",
+   "matched": [
+    "GHSA-qccp-gfcp-xxvc",
+    "PYSEC-2026-141"
+   ],
+   "package": "urllib3",
+   "reason": "",
+   "status": "both",
+   "version": "2.5.0"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-1994",
+   "matched": [
+    "GHSA-2xpw-w6gg-jr37",
+    "PYSEC-2026-1994"
+   ],
+   "package": "urllib3",
+   "reason": "",
+   "status": "both",
+   "version": "2.5.0"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-1996",
+   "matched": [
+    "GHSA-38jv-5279-wg99",
+    "PYSEC-2026-1996"
+   ],
+   "package": "urllib3",
+   "reason": "",
+   "status": "both",
+   "version": "2.5.0"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-1998",
+   "matched": [
+    "GHSA-gm62-xv2j-4w53",
+    "PYSEC-2026-1998"
+   ],
+   "package": "urllib3",
+   "reason": "",
+   "status": "both",
+   "version": "2.5.0"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-4175",
+   "matched": [
+    "GHSA-8988-9cw3-xx77",
+    "PYSEC-2026-4175"
+   ],
+   "package": "urllib3",
+   "reason": "",
+   "status": "both",
+   "version": "2.5.0"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-4177",
+   "matched": [
+    "GHSA-vxq7-64xx-v4gw",
+    "PYSEC-2026-4177"
+   ],
+   "package": "urllib3",
+   "reason": "",
+   "status": "both",
+   "version": "2.5.0"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-8rrh-rw8j-w5fx",
+   "matched": [
+    "GHSA-8rrh-rw8j-w5fx",
+    "PYSEC-2026-2047"
+   ],
+   "package": "wheel",
+   "reason": "",
+   "status": "both",
+   "version": "0.43.0"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-2047",
+   "matched": [
+    "GHSA-8rrh-rw8j-w5fx",
+    "PYSEC-2026-2047"
+   ],
+   "package": "wheel",
+   "reason": "",
+   "status": "both",
+   "version": "0.43.0"
+  }
+ ],
+ "own vs uv audit (Python)": [
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-2fqr-mr3j-6wp8",
+   "matched": [
+    "GHSA-2fqr-mr3j-6wp8",
+    "PYSEC-2026-2112"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-2g87-pp6c-29x5",
+   "matched": [
+    "GHSA-2g87-pp6c-29x5"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-2vrm-gr82-f7m5",
+   "matched": [
+    "GHSA-2vrm-gr82-f7m5",
+    "PYSEC-2026-2096"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-3wq7-rqq7-wx6j",
+   "matched": [
+    "GHSA-3wq7-rqq7-wx6j",
+    "PYSEC-2026-2099"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-494j-54xm-rwp3",
+   "matched": [
+    "GHSA-494j-54xm-rwp3"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-4fvr-rgm6-gqmc",
+   "matched": [
+    "GHSA-4fvr-rgm6-gqmc",
+    "PYSEC-2026-2107"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-4m7w-qmgq-4wj5",
+   "matched": [
+    "GHSA-4m7w-qmgq-4wj5",
+    "PYSEC-2026-237"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-54jq-c3m8-4m76",
+   "matched": [
+    "GHSA-54jq-c3m8-4m76",
+    "PYSEC-2026-1097"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-5wr8-gcqf-gqf3",
+   "matched": [
+    "GHSA-5wr8-gcqf-gqf3"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-63hf-3vf5-4wqf",
+   "matched": [
+    "GHSA-63hf-3vf5-4wqf",
+    "PYSEC-2026-2102"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-63hw-fmq6-xxg2",
+   "matched": [
+    "GHSA-63hw-fmq6-xxg2",
+    "PYSEC-2026-2110"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-69f9-5gxw-wvc2",
+   "matched": [
+    "GHSA-69f9-5gxw-wvc2",
+    "PYSEC-2026-1099"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-6cjc-53gc-5rqm",
+   "matched": [
+    "GHSA-6cjc-53gc-5rqm"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-6jhg-hg63-jvvf",
+   "matched": [
+    "GHSA-6jhg-hg63-jvvf",
+    "PYSEC-2026-1100"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-6mq8-rvhq-8wgg",
+   "matched": [
+    "GHSA-6mq8-rvhq-8wgg",
+    "PYSEC-2026-1101"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-9548-qrrj-x5pj",
+   "matched": [
+    "GHSA-9548-qrrj-x5pj",
+    "PYSEC-2026-1104"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-966j-vmvw-g2g9",
+   "matched": [
+    "GHSA-966j-vmvw-g2g9",
+    "PYSEC-2026-2100"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-9x8q-7h8h-wcw9",
+   "matched": [
+    "GHSA-9x8q-7h8h-wcw9",
+    "PYSEC-2026-2113"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-9xw5-w5jj-pvcg",
+   "matched": [
+    "GHSA-9xw5-w5jj-pvcg"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-c427-h43c-vf67",
+   "matched": [
+    "GHSA-c427-h43c-vf67",
+    "PYSEC-2026-2103"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-cq5v-8q36-5273",
+   "matched": [
+    "GHSA-cq5v-8q36-5273",
+    "PYSEC-2026-3545"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-f9xw-jh8m-3mwq",
+   "matched": [
+    "GHSA-f9xw-jh8m-3mwq"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-fh55-r93g-j68g",
+   "matched": [
+    "GHSA-fh55-r93g-j68g",
+    "PYSEC-2026-1105"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-g3cq-j2xw-wf74",
+   "matched": [
+    "GHSA-g3cq-j2xw-wf74",
+    "PYSEC-2026-2111"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-g84x-mcqj-x9qq",
+   "matched": [
+    "GHSA-g84x-mcqj-x9qq",
+    "PYSEC-2026-1106"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-gx76-c99x-2c96",
+   "matched": [
+    "GHSA-gx76-c99x-2c96"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-hcc4-c3v8-rx92",
+   "matched": [
+    "GHSA-hcc4-c3v8-rx92",
+    "PYSEC-2026-2095"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-hg6j-4rv6-33pg",
+   "matched": [
+    "GHSA-hg6j-4rv6-33pg",
+    "PYSEC-2026-2105"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-hpj7-wq8m-9hgp",
+   "matched": [
+    "GHSA-hpj7-wq8m-9hgp",
+    "PYSEC-2026-2109"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-jg22-mg44-37j8",
+   "matched": [
+    "GHSA-jg22-mg44-37j8",
+    "PYSEC-2026-2104"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-jj3x-wxrx-4x23",
+   "matched": [
+    "GHSA-jj3x-wxrx-4x23",
+    "PYSEC-2026-1107"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-m5qp-6w8w-w647",
+   "matched": [
+    "GHSA-m5qp-6w8w-w647",
+    "PYSEC-2026-2098"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-m6qw-4cw2-hm4m",
+   "matched": [
+    "GHSA-m6qw-4cw2-hm4m",
+    "PYSEC-2026-2106"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-mfx4-hv73-q22v",
+   "matched": [
+    "GHSA-mfx4-hv73-q22v",
+    "PYSEC-2026-3546"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-mq44-7p77-q5h7",
+   "matched": [
+    "GHSA-mq44-7p77-q5h7",
+    "PYSEC-2026-3547"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-mqqc-3gqh-h2x8",
+   "matched": [
+    "GHSA-mqqc-3gqh-h2x8",
+    "PYSEC-2026-1109"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-mwh4-6h8g-pg8w",
+   "matched": [
+    "GHSA-mwh4-6h8g-pg8w",
+    "PYSEC-2026-2101"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-p998-jp59-783m",
+   "matched": [
+    "GHSA-p998-jp59-783m",
+    "PYSEC-2026-2097"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-pqxq-w44r-73xw",
+   "matched": [
+    "GHSA-pqxq-w44r-73xw"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-w2fm-2cpv-w7v5",
+   "matched": [
+    "GHSA-w2fm-2cpv-w7v5",
+    "PYSEC-2026-2094"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-xcgm-r5h9-7989",
+   "matched": [
+    "GHSA-xcgm-r5h9-7989",
+    "PYSEC-2026-2108"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-1097",
+   "matched": [
+    "GHSA-54jq-c3m8-4m76",
+    "PYSEC-2026-1097"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-1099",
+   "matched": [
+    "GHSA-69f9-5gxw-wvc2",
+    "PYSEC-2026-1099"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-1100",
+   "matched": [
+    "GHSA-6jhg-hg63-jvvf",
+    "PYSEC-2026-1100"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-1101",
+   "matched": [
+    "GHSA-6mq8-rvhq-8wgg",
+    "PYSEC-2026-1101"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-1104",
+   "matched": [
+    "GHSA-9548-qrrj-x5pj",
+    "PYSEC-2026-1104"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-1105",
+   "matched": [
+    "GHSA-fh55-r93g-j68g",
+    "PYSEC-2026-1105"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-1106",
+   "matched": [
+    "GHSA-g84x-mcqj-x9qq",
+    "PYSEC-2026-1106"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-1107",
+   "matched": [
+    "GHSA-jj3x-wxrx-4x23",
+    "PYSEC-2026-1107"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-1109",
+   "matched": [
+    "GHSA-mqqc-3gqh-h2x8",
+    "PYSEC-2026-1109"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-2094",
+   "matched": [
+    "GHSA-w2fm-2cpv-w7v5",
+    "PYSEC-2026-2094"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-2095",
+   "matched": [
+    "GHSA-hcc4-c3v8-rx92",
+    "PYSEC-2026-2095"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-2096",
+   "matched": [
+    "GHSA-2vrm-gr82-f7m5",
+    "PYSEC-2026-2096"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-2097",
+   "matched": [
+    "GHSA-p998-jp59-783m",
+    "PYSEC-2026-2097"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-2098",
+   "matched": [
+    "GHSA-m5qp-6w8w-w647",
+    "PYSEC-2026-2098"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-2099",
+   "matched": [
+    "GHSA-3wq7-rqq7-wx6j",
+    "PYSEC-2026-2099"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-2100",
+   "matched": [
+    "GHSA-966j-vmvw-g2g9",
+    "PYSEC-2026-2100"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-2101",
+   "matched": [
+    "GHSA-mwh4-6h8g-pg8w",
+    "PYSEC-2026-2101"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-2102",
+   "matched": [
+    "GHSA-63hf-3vf5-4wqf",
+    "PYSEC-2026-2102"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-2103",
+   "matched": [
+    "GHSA-c427-h43c-vf67",
+    "PYSEC-2026-2103"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-2104",
+   "matched": [
+    "GHSA-jg22-mg44-37j8",
+    "PYSEC-2026-2104"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-2105",
+   "matched": [
+    "GHSA-hg6j-4rv6-33pg",
+    "PYSEC-2026-2105"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-2106",
+   "matched": [
+    "GHSA-m6qw-4cw2-hm4m",
+    "PYSEC-2026-2106"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-2107",
+   "matched": [
+    "GHSA-4fvr-rgm6-gqmc",
+    "PYSEC-2026-2107"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-2108",
+   "matched": [
+    "GHSA-xcgm-r5h9-7989",
+    "PYSEC-2026-2108"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-2109",
+   "matched": [
+    "GHSA-hpj7-wq8m-9hgp",
+    "PYSEC-2026-2109"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-2110",
+   "matched": [
+    "GHSA-63hw-fmq6-xxg2",
+    "PYSEC-2026-2110"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-2111",
+   "matched": [
+    "GHSA-g3cq-j2xw-wf74",
+    "PYSEC-2026-2111"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-2112",
+   "matched": [
+    "GHSA-2fqr-mr3j-6wp8",
+    "PYSEC-2026-2112"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-2113",
+   "matched": [
+    "GHSA-9x8q-7h8h-wcw9",
+    "PYSEC-2026-2113"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-237",
+   "matched": [
+    "GHSA-4m7w-qmgq-4wj5",
+    "PYSEC-2026-237"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-3545",
+   "matched": [
+    "GHSA-cq5v-8q36-5273",
+    "PYSEC-2026-3545"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-3546",
+   "matched": [
+    "GHSA-mfx4-hv73-q22v",
+    "PYSEC-2026-3546"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-3547",
+   "matched": [
+    "GHSA-mq44-7p77-q5h7",
+    "PYSEC-2026-3547"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-2fqr-mr3j-6wp8",
+   "matched": [
+    "GHSA-2fqr-mr3j-6wp8",
+    "PYSEC-2026-2112"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-2g87-pp6c-29x5",
+   "matched": [
+    "GHSA-2g87-pp6c-29x5"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-2vrm-gr82-f7m5",
+   "matched": [
+    "GHSA-2vrm-gr82-f7m5",
+    "PYSEC-2026-2096"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-3wq7-rqq7-wx6j",
+   "matched": [
+    "GHSA-3wq7-rqq7-wx6j",
+    "PYSEC-2026-2099"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-494j-54xm-rwp3",
+   "matched": [
+    "GHSA-494j-54xm-rwp3"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-4fvr-rgm6-gqmc",
+   "matched": [
+    "GHSA-4fvr-rgm6-gqmc",
+    "PYSEC-2026-2107"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-4m7w-qmgq-4wj5",
+   "matched": [
+    "GHSA-4m7w-qmgq-4wj5",
+    "PYSEC-2026-237"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-54jq-c3m8-4m76",
+   "matched": [
+    "GHSA-54jq-c3m8-4m76",
+    "PYSEC-2026-1097"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-5wr8-gcqf-gqf3",
+   "matched": [
+    "GHSA-5wr8-gcqf-gqf3"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-63hf-3vf5-4wqf",
+   "matched": [
+    "GHSA-63hf-3vf5-4wqf",
+    "PYSEC-2026-2102"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-63hw-fmq6-xxg2",
+   "matched": [
+    "GHSA-63hw-fmq6-xxg2",
+    "PYSEC-2026-2110"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-69f9-5gxw-wvc2",
+   "matched": [
+    "GHSA-69f9-5gxw-wvc2",
+    "PYSEC-2026-1099"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-6cjc-53gc-5rqm",
+   "matched": [
+    "GHSA-6cjc-53gc-5rqm"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-6jhg-hg63-jvvf",
+   "matched": [
+    "GHSA-6jhg-hg63-jvvf",
+    "PYSEC-2026-1100"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-6mq8-rvhq-8wgg",
+   "matched": [
+    "GHSA-6mq8-rvhq-8wgg",
+    "PYSEC-2026-1101"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-966j-vmvw-g2g9",
+   "matched": [
+    "GHSA-966j-vmvw-g2g9",
+    "PYSEC-2026-2100"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-9x8q-7h8h-wcw9",
+   "matched": [
+    "GHSA-9x8q-7h8h-wcw9",
+    "PYSEC-2026-2113"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-9xw5-w5jj-pvcg",
+   "matched": [
+    "GHSA-9xw5-w5jj-pvcg"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-c427-h43c-vf67",
+   "matched": [
+    "GHSA-c427-h43c-vf67",
+    "PYSEC-2026-2103"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-cq5v-8q36-5273",
+   "matched": [
+    "GHSA-cq5v-8q36-5273",
+    "PYSEC-2026-3545"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-f9xw-jh8m-3mwq",
+   "matched": [
+    "GHSA-f9xw-jh8m-3mwq"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-fh55-r93g-j68g",
+   "matched": [
+    "GHSA-fh55-r93g-j68g",
+    "PYSEC-2026-1105"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-g3cq-j2xw-wf74",
+   "matched": [
+    "GHSA-g3cq-j2xw-wf74",
+    "PYSEC-2026-2111"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-g84x-mcqj-x9qq",
+   "matched": [
+    "GHSA-g84x-mcqj-x9qq",
+    "PYSEC-2026-1106"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-gx76-c99x-2c96",
+   "matched": [
+    "GHSA-gx76-c99x-2c96"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-hcc4-c3v8-rx92",
+   "matched": [
+    "GHSA-hcc4-c3v8-rx92",
+    "PYSEC-2026-2095"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-hg6j-4rv6-33pg",
+   "matched": [
+    "GHSA-hg6j-4rv6-33pg",
+    "PYSEC-2026-2105"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-hpj7-wq8m-9hgp",
+   "matched": [
+    "GHSA-hpj7-wq8m-9hgp",
+    "PYSEC-2026-2109"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-jg22-mg44-37j8",
+   "matched": [
+    "GHSA-jg22-mg44-37j8",
+    "PYSEC-2026-2104"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-jj3x-wxrx-4x23",
+   "matched": [
+    "GHSA-jj3x-wxrx-4x23",
+    "PYSEC-2026-1107"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-m5qp-6w8w-w647",
+   "matched": [
+    "GHSA-m5qp-6w8w-w647",
+    "PYSEC-2026-2098"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-m6qw-4cw2-hm4m",
+   "matched": [
+    "GHSA-m6qw-4cw2-hm4m",
+    "PYSEC-2026-2106"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-mfx4-hv73-q22v",
+   "matched": [
+    "GHSA-mfx4-hv73-q22v",
+    "PYSEC-2026-3546"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-mq44-7p77-q5h7",
+   "matched": [
+    "GHSA-mq44-7p77-q5h7",
+    "PYSEC-2026-3547"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-mqqc-3gqh-h2x8",
+   "matched": [
+    "GHSA-mqqc-3gqh-h2x8",
+    "PYSEC-2026-1109"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-mwh4-6h8g-pg8w",
+   "matched": [
+    "GHSA-mwh4-6h8g-pg8w",
+    "PYSEC-2026-2101"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-p998-jp59-783m",
+   "matched": [
+    "GHSA-p998-jp59-783m",
+    "PYSEC-2026-2097"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-pqxq-w44r-73xw",
+   "matched": [
+    "GHSA-pqxq-w44r-73xw"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-w2fm-2cpv-w7v5",
+   "matched": [
+    "GHSA-w2fm-2cpv-w7v5",
+    "PYSEC-2026-2094"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-xcgm-r5h9-7989",
+   "matched": [
+    "GHSA-xcgm-r5h9-7989",
+    "PYSEC-2026-2108"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-1097",
+   "matched": [
+    "GHSA-54jq-c3m8-4m76",
+    "PYSEC-2026-1097"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-1099",
+   "matched": [
+    "GHSA-69f9-5gxw-wvc2",
+    "PYSEC-2026-1099"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-1100",
+   "matched": [
+    "GHSA-6jhg-hg63-jvvf",
+    "PYSEC-2026-1100"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-1101",
+   "matched": [
+    "GHSA-6mq8-rvhq-8wgg",
+    "PYSEC-2026-1101"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-1105",
+   "matched": [
+    "GHSA-fh55-r93g-j68g",
+    "PYSEC-2026-1105"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-1106",
+   "matched": [
+    "GHSA-g84x-mcqj-x9qq",
+    "PYSEC-2026-1106"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-1107",
+   "matched": [
+    "GHSA-jj3x-wxrx-4x23",
+    "PYSEC-2026-1107"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-1109",
+   "matched": [
+    "GHSA-mqqc-3gqh-h2x8",
+    "PYSEC-2026-1109"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-2094",
+   "matched": [
+    "GHSA-w2fm-2cpv-w7v5",
+    "PYSEC-2026-2094"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-2095",
+   "matched": [
+    "GHSA-hcc4-c3v8-rx92",
+    "PYSEC-2026-2095"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-2096",
+   "matched": [
+    "GHSA-2vrm-gr82-f7m5",
+    "PYSEC-2026-2096"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-2097",
+   "matched": [
+    "GHSA-p998-jp59-783m",
+    "PYSEC-2026-2097"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-2098",
+   "matched": [
+    "GHSA-m5qp-6w8w-w647",
+    "PYSEC-2026-2098"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-2099",
+   "matched": [
+    "GHSA-3wq7-rqq7-wx6j",
+    "PYSEC-2026-2099"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-2100",
+   "matched": [
+    "GHSA-966j-vmvw-g2g9",
+    "PYSEC-2026-2100"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-2101",
+   "matched": [
+    "GHSA-mwh4-6h8g-pg8w",
+    "PYSEC-2026-2101"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-2102",
+   "matched": [
+    "GHSA-63hf-3vf5-4wqf",
+    "PYSEC-2026-2102"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-2103",
+   "matched": [
+    "GHSA-c427-h43c-vf67",
+    "PYSEC-2026-2103"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-2104",
+   "matched": [
+    "GHSA-jg22-mg44-37j8",
+    "PYSEC-2026-2104"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-2105",
+   "matched": [
+    "GHSA-hg6j-4rv6-33pg",
+    "PYSEC-2026-2105"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-2106",
+   "matched": [
+    "GHSA-m6qw-4cw2-hm4m",
+    "PYSEC-2026-2106"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-2107",
+   "matched": [
+    "GHSA-4fvr-rgm6-gqmc",
+    "PYSEC-2026-2107"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-2108",
+   "matched": [
+    "GHSA-xcgm-r5h9-7989",
+    "PYSEC-2026-2108"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-2109",
+   "matched": [
+    "GHSA-hpj7-wq8m-9hgp",
+    "PYSEC-2026-2109"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-2110",
+   "matched": [
+    "GHSA-63hw-fmq6-xxg2",
+    "PYSEC-2026-2110"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-2111",
+   "matched": [
+    "GHSA-g3cq-j2xw-wf74",
+    "PYSEC-2026-2111"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-2112",
+   "matched": [
+    "GHSA-2fqr-mr3j-6wp8",
+    "PYSEC-2026-2112"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-2113",
+   "matched": [
+    "GHSA-9x8q-7h8h-wcw9",
+    "PYSEC-2026-2113"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-237",
+   "matched": [
+    "GHSA-4m7w-qmgq-4wj5",
+    "PYSEC-2026-237"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-3545",
+   "matched": [
+    "GHSA-cq5v-8q36-5273",
+    "PYSEC-2026-3545"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-3546",
+   "matched": [
+    "GHSA-mfx4-hv73-q22v",
+    "PYSEC-2026-3546"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-3547",
+   "matched": [
+    "GHSA-mq44-7p77-q5h7",
+    "PYSEC-2026-3547"
+   ],
+   "package": "aiohttp",
+   "reason": "",
+   "status": "both",
+   "version": "3.13.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-6q48-6c7w-9gw2",
+   "matched": [
+    "GHSA-6q48-6c7w-9gw2",
+    "PYSEC-2026-4320"
+   ],
+   "package": "certifi",
+   "reason": "",
+   "status": "both",
+   "version": "2025.10.5"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-4320",
+   "matched": [
+    "GHSA-6q48-6c7w-9gw2",
+    "PYSEC-2026-4320"
+   ],
+   "package": "certifi",
+   "reason": "",
+   "status": "both",
+   "version": "2025.10.5"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-537c-gmf6-5ccf",
+   "matched": [
+    "GHSA-537c-gmf6-5ccf"
+   ],
+   "package": "cryptography",
+   "reason": "",
+   "status": "both",
+   "version": "46.0.6"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-g6cj-pr64-35w5",
+   "matched": [
+    "GHSA-g6cj-pr64-35w5",
+    "PYSEC-2026-3552"
+   ],
+   "package": "cryptography",
+   "reason": "",
+   "status": "both",
+   "version": "46.0.6"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-jwv3-5hgf-82ww",
+   "matched": [
+    "GHSA-jwv3-5hgf-82ww",
+    "PYSEC-2026-3553"
+   ],
+   "package": "cryptography",
+   "reason": "",
+   "status": "both",
+   "version": "46.0.6"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-m2h6-j472-rp4c",
+   "matched": [
+    "GHSA-m2h6-j472-rp4c",
+    "PYSEC-2026-3554"
+   ],
+   "package": "cryptography",
+   "reason": "",
+   "status": "both",
+   "version": "46.0.6"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-p423-j2cm-9vmq",
+   "matched": [
+    "GHSA-p423-j2cm-9vmq",
+    "PYSEC-2026-36"
+   ],
+   "package": "cryptography",
+   "reason": "",
+   "status": "both",
+   "version": "46.0.6"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-3552",
+   "matched": [
+    "GHSA-g6cj-pr64-35w5",
+    "PYSEC-2026-3552"
+   ],
+   "package": "cryptography",
+   "reason": "",
+   "status": "both",
+   "version": "46.0.6"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-3553",
+   "matched": [
+    "GHSA-jwv3-5hgf-82ww",
+    "PYSEC-2026-3553"
+   ],
+   "package": "cryptography",
+   "reason": "",
+   "status": "both",
+   "version": "46.0.6"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-3554",
+   "matched": [
+    "GHSA-m2h6-j472-rp4c",
+    "PYSEC-2026-3554"
+   ],
+   "package": "cryptography",
+   "reason": "",
+   "status": "both",
+   "version": "46.0.6"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-36",
+   "matched": [
+    "GHSA-p423-j2cm-9vmq",
+    "PYSEC-2026-36"
+   ],
+   "package": "cryptography",
+   "reason": "",
+   "status": "both",
+   "version": "46.0.6"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-qmgc-5h2g-mvrw",
+   "matched": [
+    "GHSA-qmgc-5h2g-mvrw",
+    "PYSEC-2026-1374"
+   ],
+   "package": "filelock",
+   "reason": "",
+   "status": "both",
+   "version": "3.20.0"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-w853-jp5j-5j7f",
+   "matched": [
+    "GHSA-w853-jp5j-5j7f",
+    "PYSEC-2026-1375"
+   ],
+   "package": "filelock",
+   "reason": "",
+   "status": "both",
+   "version": "3.20.0"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-1374",
+   "matched": [
+    "GHSA-qmgc-5h2g-mvrw",
+    "PYSEC-2026-1374"
+   ],
+   "package": "filelock",
+   "reason": "",
+   "status": "both",
+   "version": "3.20.0"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-1375",
+   "matched": [
+    "GHSA-w853-jp5j-5j7f",
+    "PYSEC-2026-1375"
+   ],
+   "package": "filelock",
+   "reason": "",
+   "status": "both",
+   "version": "3.20.0"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-65pc-fj4g-8rjx",
+   "matched": [
+    "GHSA-65pc-fj4g-8rjx",
+    "PYSEC-2026-215"
+   ],
+   "package": "idna",
+   "reason": "",
+   "status": "both",
+   "version": "3.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-215",
+   "matched": [
+    "GHSA-65pc-fj4g-8rjx",
+    "PYSEC-2026-215"
+   ],
+   "package": "idna",
+   "reason": "",
+   "status": "both",
+   "version": "3.11"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-377p-g8gr-5wpg",
+   "matched": [
+    "GHSA-377p-g8gr-5wpg",
+    "PYSEC-2024-280"
+   ],
+   "package": "lief",
+   "reason": "",
+   "status": "both",
+   "version": "0.14.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-mjjp-xjfg-97wg",
+   "matched": [
+    "GHSA-mjjp-xjfg-97wg",
+    "PYSEC-2026-1538"
+   ],
+   "package": "lief",
+   "reason": "",
+   "status": "both",
+   "version": "0.14.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2024-280",
+   "matched": [
+    "GHSA-377p-g8gr-5wpg",
+    "PYSEC-2024-280"
+   ],
+   "package": "lief",
+   "reason": "",
+   "status": "both",
+   "version": "0.14.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-1538",
+   "matched": [
+    "GHSA-mjjp-xjfg-97wg",
+    "PYSEC-2026-1538"
+   ],
+   "package": "lief",
+   "reason": "",
+   "status": "both",
+   "version": "0.14.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-mjjp-xjfg-97wg",
+   "matched": [
+    "GHSA-mjjp-xjfg-97wg",
+    "PYSEC-2026-1538"
+   ],
+   "package": "lief",
+   "reason": "",
+   "status": "both",
+   "version": "0.17.0"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-1538",
+   "matched": [
+    "GHSA-mjjp-xjfg-97wg",
+    "PYSEC-2026-1538"
+   ],
+   "package": "lief",
+   "reason": "",
+   "status": "both",
+   "version": "0.17.0"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-vfmq-68hx-4jfw",
+   "matched": [
+    "GHSA-vfmq-68hx-4jfw",
+    "PYSEC-2026-87"
+   ],
+   "package": "lxml",
+   "reason": "",
+   "status": "both",
+   "version": "6.0.2"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-87",
+   "matched": [
+    "GHSA-vfmq-68hx-4jfw",
+    "PYSEC-2026-87"
+   ],
+   "package": "lxml",
+   "reason": "",
+   "status": "both",
+   "version": "6.0.2"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-54p9-h82j-f925",
+   "matched": [
+    "GHSA-54p9-h82j-f925",
+    "PYSEC-2026-4244"
+   ],
+   "package": "multidict",
+   "reason": "",
+   "status": "both",
+   "version": "6.7.0"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-4244",
+   "matched": [
+    "GHSA-54p9-h82j-f925",
+    "PYSEC-2026-4244"
+   ],
+   "package": "multidict",
+   "reason": "",
+   "status": "both",
+   "version": "6.7.0"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-hx9q-6w63-j58v",
+   "matched": [
+    "GHSA-hx9q-6w63-j58v",
+    "PYSEC-2026-107"
+   ],
+   "package": "orjson",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.15"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-107",
+   "matched": [
+    "GHSA-hx9q-6w63-j58v",
+    "PYSEC-2026-107"
+   ],
+   "package": "orjson",
+   "reason": "",
+   "status": "both",
+   "version": "3.10.15"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-hx9q-6w63-j58v",
+   "matched": [
+    "GHSA-hx9q-6w63-j58v",
+    "PYSEC-2026-107"
+   ],
+   "package": "orjson",
+   "reason": "",
+   "status": "both",
+   "version": "3.11.3"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-107",
+   "matched": [
+    "GHSA-hx9q-6w63-j58v",
+    "PYSEC-2026-107"
+   ],
+   "package": "orjson",
+   "reason": "",
+   "status": "both",
+   "version": "3.11.3"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-5239-wwwm-4pmq",
+   "matched": [
+    "GHSA-5239-wwwm-4pmq",
+    "PYSEC-2026-2987"
+   ],
+   "package": "pygments",
+   "reason": "",
+   "status": "both",
+   "version": "2.19.2"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-2987",
+   "matched": [
+    "GHSA-5239-wwwm-4pmq",
+    "PYSEC-2026-2987"
+   ],
+   "package": "pygments",
+   "reason": "",
+   "status": "both",
+   "version": "2.19.2"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-6w46-j5rx-g56g",
+   "matched": [
+    "GHSA-6w46-j5rx-g56g",
+    "PYSEC-2026-1845"
+   ],
+   "package": "pytest",
+   "reason": "",
+   "status": "both",
+   "version": "8.3.5"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-1845",
+   "matched": [
+    "GHSA-6w46-j5rx-g56g",
+    "PYSEC-2026-1845"
+   ],
+   "package": "pytest",
+   "reason": "",
+   "status": "both",
+   "version": "8.3.5"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-6w46-j5rx-g56g",
+   "matched": [
+    "GHSA-6w46-j5rx-g56g",
+    "PYSEC-2026-1845"
+   ],
+   "package": "pytest",
+   "reason": "",
+   "status": "both",
+   "version": "8.4.2"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-1845",
+   "matched": [
+    "GHSA-6w46-j5rx-g56g",
+    "PYSEC-2026-1845"
+   ],
+   "package": "pytest",
+   "reason": "",
+   "status": "both",
+   "version": "8.4.2"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-gc5v-m9x4-r6x2",
+   "matched": [
+    "GHSA-gc5v-m9x4-r6x2",
+    "PYSEC-2026-2275"
+   ],
+   "package": "requests",
+   "reason": "",
+   "status": "both",
+   "version": "2.32.4"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-2275",
+   "matched": [
+    "GHSA-gc5v-m9x4-r6x2",
+    "PYSEC-2026-2275"
+   ],
+   "package": "requests",
+   "reason": "",
+   "status": "both",
+   "version": "2.32.4"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-gc5v-m9x4-r6x2",
+   "matched": [
+    "GHSA-gc5v-m9x4-r6x2",
+    "PYSEC-2026-2275"
+   ],
+   "package": "requests",
+   "reason": "",
+   "status": "both",
+   "version": "2.32.5"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-2275",
+   "matched": [
+    "GHSA-gc5v-m9x4-r6x2",
+    "PYSEC-2026-2275"
+   ],
+   "package": "requests",
+   "reason": "",
+   "status": "both",
+   "version": "2.32.5"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-5rjg-fvgr-3xxf",
+   "matched": [
+    "GHSA-5rjg-fvgr-3xxf",
+    "PYSEC-2025-49"
+   ],
+   "package": "setuptools",
+   "reason": "",
+   "status": "both",
+   "version": "69.5.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-cx63-2mw6-8hw5",
+   "matched": [
+    "GHSA-cx63-2mw6-8hw5",
+    "PYSEC-2026-1918"
+   ],
+   "package": "setuptools",
+   "reason": "",
+   "status": "both",
+   "version": "69.5.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-h35f-9h28-mq5c",
+   "matched": [
+    "GHSA-h35f-9h28-mq5c",
+    "PYSEC-2026-3447"
+   ],
+   "package": "setuptools",
+   "reason": "",
+   "status": "both",
+   "version": "69.5.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-xmj3-9gf7-h52w",
+   "matched": [
+    "GHSA-xmj3-9gf7-h52w"
+   ],
+   "package": "setuptools",
+   "reason": "",
+   "status": "both",
+   "version": "69.5.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2025-49",
+   "matched": [
+    "GHSA-5rjg-fvgr-3xxf",
+    "PYSEC-2025-49"
+   ],
+   "package": "setuptools",
+   "reason": "",
+   "status": "both",
+   "version": "69.5.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-1918",
+   "matched": [
+    "GHSA-cx63-2mw6-8hw5",
+    "PYSEC-2026-1918"
+   ],
+   "package": "setuptools",
+   "reason": "",
+   "status": "both",
+   "version": "69.5.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-3447",
+   "matched": [
+    "GHSA-h35f-9h28-mq5c",
+    "PYSEC-2026-3447"
+   ],
+   "package": "setuptools",
+   "reason": "",
+   "status": "both",
+   "version": "69.5.1"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-h35f-9h28-mq5c",
+   "matched": [
+    "GHSA-h35f-9h28-mq5c",
+    "PYSEC-2026-3447"
+   ],
+   "package": "setuptools",
+   "reason": "",
+   "status": "both",
+   "version": "80.9.0"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-xmj3-9gf7-h52w",
+   "matched": [
+    "GHSA-xmj3-9gf7-h52w"
+   ],
+   "package": "setuptools",
+   "reason": "",
+   "status": "both",
+   "version": "80.9.0"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-3447",
+   "matched": [
+    "GHSA-h35f-9h28-mq5c",
+    "PYSEC-2026-3447"
+   ],
+   "package": "setuptools",
+   "reason": "",
+   "status": "both",
+   "version": "80.9.0"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-2xpw-w6gg-jr37",
+   "matched": [
+    "GHSA-2xpw-w6gg-jr37",
+    "PYSEC-2026-1994"
+   ],
+   "package": "urllib3",
+   "reason": "",
+   "status": "both",
+   "version": "2.2.3"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-38jv-5279-wg99",
+   "matched": [
+    "GHSA-38jv-5279-wg99",
+    "PYSEC-2026-1996"
+   ],
+   "package": "urllib3",
+   "reason": "",
+   "status": "both",
+   "version": "2.2.3"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-48p4-8xcf-vxj5",
+   "matched": [
+    "GHSA-48p4-8xcf-vxj5",
+    "PYSEC-2026-1997"
+   ],
+   "package": "urllib3",
+   "reason": "",
+   "status": "both",
+   "version": "2.2.3"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-8988-9cw3-xx77",
+   "matched": [
+    "GHSA-8988-9cw3-xx77",
+    "PYSEC-2026-4175"
+   ],
+   "package": "urllib3",
+   "reason": "",
+   "status": "both",
+   "version": "2.2.3"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-gm62-xv2j-4w53",
+   "matched": [
+    "GHSA-gm62-xv2j-4w53",
+    "PYSEC-2026-1998"
+   ],
+   "package": "urllib3",
+   "reason": "",
+   "status": "both",
+   "version": "2.2.3"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-pq67-6m6q-mj2v",
+   "matched": [
+    "GHSA-pq67-6m6q-mj2v",
+    "PYSEC-2026-1999"
+   ],
+   "package": "urllib3",
+   "reason": "",
+   "status": "both",
+   "version": "2.2.3"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-qccp-gfcp-xxvc",
+   "matched": [
+    "GHSA-qccp-gfcp-xxvc",
+    "PYSEC-2026-141"
+   ],
+   "package": "urllib3",
+   "reason": "",
+   "status": "both",
+   "version": "2.2.3"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-vxq7-64xx-v4gw",
+   "matched": [
+    "GHSA-vxq7-64xx-v4gw",
+    "PYSEC-2026-4177"
+   ],
+   "package": "urllib3",
+   "reason": "",
+   "status": "both",
+   "version": "2.2.3"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-141",
+   "matched": [
+    "GHSA-qccp-gfcp-xxvc",
+    "PYSEC-2026-141"
+   ],
+   "package": "urllib3",
+   "reason": "",
+   "status": "both",
+   "version": "2.2.3"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-1994",
+   "matched": [
+    "GHSA-2xpw-w6gg-jr37",
+    "PYSEC-2026-1994"
+   ],
+   "package": "urllib3",
+   "reason": "",
+   "status": "both",
+   "version": "2.2.3"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-1996",
+   "matched": [
+    "GHSA-38jv-5279-wg99",
+    "PYSEC-2026-1996"
+   ],
+   "package": "urllib3",
+   "reason": "",
+   "status": "both",
+   "version": "2.2.3"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-1997",
+   "matched": [
+    "GHSA-48p4-8xcf-vxj5",
+    "PYSEC-2026-1997"
+   ],
+   "package": "urllib3",
+   "reason": "",
+   "status": "both",
+   "version": "2.2.3"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-1998",
+   "matched": [
+    "GHSA-gm62-xv2j-4w53",
+    "PYSEC-2026-1998"
+   ],
+   "package": "urllib3",
+   "reason": "",
+   "status": "both",
+   "version": "2.2.3"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-1999",
+   "matched": [
+    "GHSA-pq67-6m6q-mj2v",
+    "PYSEC-2026-1999"
+   ],
+   "package": "urllib3",
+   "reason": "",
+   "status": "both",
+   "version": "2.2.3"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-4175",
+   "matched": [
+    "GHSA-8988-9cw3-xx77",
+    "PYSEC-2026-4175"
+   ],
+   "package": "urllib3",
+   "reason": "",
+   "status": "both",
+   "version": "2.2.3"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-4177",
+   "matched": [
+    "GHSA-vxq7-64xx-v4gw",
+    "PYSEC-2026-4177"
+   ],
+   "package": "urllib3",
+   "reason": "",
+   "status": "both",
+   "version": "2.2.3"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-2xpw-w6gg-jr37",
+   "matched": [
+    "GHSA-2xpw-w6gg-jr37",
+    "PYSEC-2026-1994"
+   ],
+   "package": "urllib3",
+   "reason": "",
+   "status": "both",
+   "version": "2.5.0"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-38jv-5279-wg99",
+   "matched": [
+    "GHSA-38jv-5279-wg99",
+    "PYSEC-2026-1996"
+   ],
+   "package": "urllib3",
+   "reason": "",
+   "status": "both",
+   "version": "2.5.0"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-8988-9cw3-xx77",
+   "matched": [
+    "GHSA-8988-9cw3-xx77",
+    "PYSEC-2026-4175"
+   ],
+   "package": "urllib3",
+   "reason": "",
+   "status": "both",
+   "version": "2.5.0"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-gm62-xv2j-4w53",
+   "matched": [
+    "GHSA-gm62-xv2j-4w53",
+    "PYSEC-2026-1998"
+   ],
+   "package": "urllib3",
+   "reason": "",
+   "status": "both",
+   "version": "2.5.0"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-qccp-gfcp-xxvc",
+   "matched": [
+    "GHSA-qccp-gfcp-xxvc",
+    "PYSEC-2026-141"
+   ],
+   "package": "urllib3",
+   "reason": "",
+   "status": "both",
+   "version": "2.5.0"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-vxq7-64xx-v4gw",
+   "matched": [
+    "GHSA-vxq7-64xx-v4gw",
+    "PYSEC-2026-4177"
+   ],
+   "package": "urllib3",
+   "reason": "",
+   "status": "both",
+   "version": "2.5.0"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-141",
+   "matched": [
+    "GHSA-qccp-gfcp-xxvc",
+    "PYSEC-2026-141"
+   ],
+   "package": "urllib3",
+   "reason": "",
+   "status": "both",
+   "version": "2.5.0"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-1994",
+   "matched": [
+    "GHSA-2xpw-w6gg-jr37",
+    "PYSEC-2026-1994"
+   ],
+   "package": "urllib3",
+   "reason": "",
+   "status": "both",
+   "version": "2.5.0"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-1996",
+   "matched": [
+    "GHSA-38jv-5279-wg99",
+    "PYSEC-2026-1996"
+   ],
+   "package": "urllib3",
+   "reason": "",
+   "status": "both",
+   "version": "2.5.0"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-1998",
+   "matched": [
+    "GHSA-gm62-xv2j-4w53",
+    "PYSEC-2026-1998"
+   ],
+   "package": "urllib3",
+   "reason": "",
+   "status": "both",
+   "version": "2.5.0"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-4175",
+   "matched": [
+    "GHSA-8988-9cw3-xx77",
+    "PYSEC-2026-4175"
+   ],
+   "package": "urllib3",
+   "reason": "",
+   "status": "both",
+   "version": "2.5.0"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-4177",
+   "matched": [
+    "GHSA-vxq7-64xx-v4gw",
+    "PYSEC-2026-4177"
+   ],
+   "package": "urllib3",
+   "reason": "",
+   "status": "both",
+   "version": "2.5.0"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "GHSA-8rrh-rw8j-w5fx",
+   "matched": [
+    "GHSA-8rrh-rw8j-w5fx",
+    "PYSEC-2026-2047"
+   ],
+   "package": "wheel",
+   "reason": "",
+   "status": "both",
+   "version": "0.43.0"
+  },
+  {
+   "ecosystem": "PyPI",
+   "id": "PYSEC-2026-2047",
+   "matched": [
+    "GHSA-8rrh-rw8j-w5fx",
+    "PYSEC-2026-2047"
+   ],
+   "package": "wheel",
+   "reason": "",
+   "status": "both",
+   "version": "0.43.0"
+  }
+ ]
+}

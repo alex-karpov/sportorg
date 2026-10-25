@@ -1,0 +1,50 @@
+{
+ "OS01": {
+  "both": 20,
+  "grep": 20,
+  "only_grep": [],
+  "only_scanner": [],
+  "pattern": "sys\\.platform|\\bos\\.name\\b|\\bplatform\\.[A-Za-z_]+|getwindowsversion",
+  "scanner": 20
+ },
+ "OS02": {
+  "both": 6,
+  "grep": 6,
+  "only_grep": [],
+  "only_scanner": [],
+  "pattern": "^[[:space:]]*(import|from)[[:space:]]+(winreg|_winreg|msvcrt|win32[A-Za-z_0-9]*|pywintypes|pythoncom|wmi|fcntl|termios|pwd|grp|pywinusb|winsound)\\b|ctypes\\.(windll|WinDLL)",
+  "scanner": 6
+ },
+ "OS04-com": {
+  "both": 0,
+  "grep": 0,
+  "only_grep": [],
+  "only_scanner": [],
+  "pattern": "\\bCOM[0-9]+\\b",
+  "scanner": 0
+ },
+ "OS04-drive": {
+  "both": 1,
+  "grep": 1,
+  "only_grep": [],
+  "only_scanner": [],
+  "pattern": "[A-Z]:\\\\",
+  "scanner": 1
+ },
+ "RU04": {
+  "both": 9,
+  "grep": 9,
+  "only_grep": [],
+  "only_scanner": [],
+  "pattern": "cp-?1251|windows-1251|cp-?866|koi8 (-i)",
+  "scanner": 9
+ },
+ "RU05": {
+  "both": 8,
+  "grep": 8,
+  "only_grep": [],
+  "only_scanner": [],
+  "pattern": "[\\\"'](ru|RU|RUS|ru_RU|ru-RU)[\\\"']|Europe/Moscow|ru_RU|ru-RU",
+  "scanner": 8
+ }
+}

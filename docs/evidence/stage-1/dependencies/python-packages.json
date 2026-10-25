@@ -1,0 +1,3336 @@
+[
+ {
+  "class": "runtime",
+  "groups": [
+   "runtime"
+  ],
+  "licence": {
+   "source": "classifier",
+   "spdx": "PSF-2.0 OR LicenseRef-Proprietary",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:24]",
+  "name": "aiohappyeyeballs",
+  "py38_only": true,
+  "released": "2024-11-30",
+  "requires_python": ">=3.8",
+  "resolution_markers": [
+   "(python_full_version < '3.9' and platform_machine != 'aarch64' and platform_machine != 'armv7l' and platform_machine != 'i686' and platform_machine != 'ppc64le' and platform_machine != 's390x' and platform_machine != 'x86_64') or (python_full_version < '3.9' and sys_platform != 'linux')",
+   "python_full_version < '3.9' and platform_machine == 'aarch64' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'armv7l' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'i686' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'ppc64le' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 's390x' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'x86_64' and sys_platform == 'linux'"
+  ],
+  "source": "https://pypi.org/simple",
+  "version": "2.4.4",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "runtime",
+  "groups": [
+   "runtime"
+  ],
+  "licence": {
+   "source": "classifier",
+   "spdx": "PSF-2.0",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:42]",
+  "name": "aiohappyeyeballs",
+  "py38_only": false,
+  "released": "2025-03-12",
+  "requires_python": ">=3.9",
+  "resolution_markers": [
+   "python_full_version >= '3.14' and platform_machine == 'x86_64' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'i686' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'aarch64' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'armv7l' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'ppc64le' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 's390x' and sys_platform == 'linux'",
+   "(python_full_version >= '3.14' and platform_machine != 'aarch64' and platform_machine != 'armv7l' and platform_machine != 'i686' and platform_machine != 'ppc64le' and platform_machine != 's390x' and platform_machine != 'x86_64') or (python_full_version >= '3.14' and sys_platform != 'linux')",
+   "python_full_version >= '3.10' and python_full_version < '3.14'",
+   "python_full_version == '3.9.*'"
+  ],
+  "source": "https://pypi.org/simple",
+  "version": "2.6.1",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "runtime",
+  "groups": [
+   "runtime"
+  ],
+  "licence": {
+   "source": "classifier",
+   "spdx": "Apache-2.0",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:62]",
+  "name": "aiohttp",
+  "py38_only": true,
+  "released": "2024-11-13",
+  "requires_python": ">=3.8",
+  "resolution_markers": [
+   "(python_full_version < '3.9' and platform_machine != 'aarch64' and platform_machine != 'armv7l' and platform_machine != 'i686' and platform_machine != 'ppc64le' and platform_machine != 's390x' and platform_machine != 'x86_64') or (python_full_version < '3.9' and sys_platform != 'linux')",
+   "python_full_version < '3.9' and platform_machine == 'aarch64' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'armv7l' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'i686' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'ppc64le' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 's390x' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'x86_64' and sys_platform == 'linux'"
+  ],
+  "source": "https://pypi.org/simple",
+  "version": "3.10.11",
+  "vulnerability_ids": [
+   "GHSA-2fqr-mr3j-6wp8",
+   "GHSA-2g87-pp6c-29x5",
+   "GHSA-2vrm-gr82-f7m5",
+   "GHSA-3wq7-rqq7-wx6j",
+   "GHSA-494j-54xm-rwp3",
+   "GHSA-4fvr-rgm6-gqmc",
+   "GHSA-4m7w-qmgq-4wj5",
+   "GHSA-54jq-c3m8-4m76",
+   "GHSA-5wr8-gcqf-gqf3",
+   "GHSA-63hf-3vf5-4wqf",
+   "GHSA-63hw-fmq6-xxg2",
+   "GHSA-69f9-5gxw-wvc2",
+   "GHSA-6cjc-53gc-5rqm",
+   "GHSA-6jhg-hg63-jvvf",
+   "GHSA-6mq8-rvhq-8wgg",
+   "GHSA-9548-qrrj-x5pj",
+   "GHSA-966j-vmvw-g2g9",
+   "GHSA-9x8q-7h8h-wcw9",
+   "GHSA-9xw5-w5jj-pvcg",
+   "GHSA-c427-h43c-vf67",
+   "GHSA-cq5v-8q36-5273",
+   "GHSA-f9xw-jh8m-3mwq",
+   "GHSA-fh55-r93g-j68g",
+   "GHSA-g3cq-j2xw-wf74",
+   "GHSA-g84x-mcqj-x9qq",
+   "GHSA-gx76-c99x-2c96",
+   "GHSA-hcc4-c3v8-rx92",
+   "GHSA-hg6j-4rv6-33pg",
+   "GHSA-hpj7-wq8m-9hgp",
+   "GHSA-jg22-mg44-37j8",
+   "GHSA-jj3x-wxrx-4x23",
+   "GHSA-m5qp-6w8w-w647",
+   "GHSA-m6qw-4cw2-hm4m",
+   "GHSA-mfx4-hv73-q22v",
+   "GHSA-mq44-7p77-q5h7",
+   "GHSA-mqqc-3gqh-h2x8",
+   "GHSA-mwh4-6h8g-pg8w",
+   "GHSA-p998-jp59-783m",
+   "GHSA-pqxq-w44r-73xw",
+   "GHSA-w2fm-2cpv-w7v5",
+   "GHSA-xcgm-r5h9-7989",
+   "PYSEC-2026-1097",
+   "PYSEC-2026-1099",
+   "PYSEC-2026-1100",
+   "PYSEC-2026-1101",
+   "PYSEC-2026-1104",
+   "PYSEC-2026-1105",
+   "PYSEC-2026-1106",
+   "PYSEC-2026-1107",
+   "PYSEC-2026-1109",
+   "PYSEC-2026-2094",
+   "PYSEC-2026-2095",
+   "PYSEC-2026-2096",
+   "PYSEC-2026-2097",
+   "PYSEC-2026-2098",
+   "PYSEC-2026-2099",
+   "PYSEC-2026-2100",
+   "PYSEC-2026-2101",
+   "PYSEC-2026-2102",
+   "PYSEC-2026-2103",
+   "PYSEC-2026-2104",
+   "PYSEC-2026-2105",
+   "PYSEC-2026-2106",
+   "PYSEC-2026-2107",
+   "PYSEC-2026-2108",
+   "PYSEC-2026-2109",
+   "PYSEC-2026-2110",
+   "PYSEC-2026-2111",
+   "PYSEC-2026-2112",
+   "PYSEC-2026-2113",
+   "PYSEC-2026-237",
+   "PYSEC-2026-3545",
+   "PYSEC-2026-3546",
+   "PYSEC-2026-3547"
+  ]
+ },
+ {
+  "class": "runtime",
+  "groups": [
+   "runtime"
+  ],
+  "licence": {
+   "source": "free text",
+   "spdx": "Apache-2.0 AND MIT",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:178]",
+  "name": "aiohttp",
+  "py38_only": false,
+  "released": "2025-10-17",
+  "requires_python": ">=3.9",
+  "resolution_markers": [
+   "python_full_version >= '3.14' and platform_machine == 'x86_64' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'i686' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'aarch64' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'armv7l' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'ppc64le' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 's390x' and sys_platform == 'linux'",
+   "(python_full_version >= '3.14' and platform_machine != 'aarch64' and platform_machine != 'armv7l' and platform_machine != 'i686' and platform_machine != 'ppc64le' and platform_machine != 's390x' and platform_machine != 'x86_64') or (python_full_version >= '3.14' and sys_platform != 'linux')",
+   "python_full_version >= '3.10' and python_full_version < '3.14'",
+   "python_full_version == '3.9.*'"
+  ],
+  "source": "https://pypi.org/simple",
+  "version": "3.13.1",
+  "vulnerability_ids": [
+   "GHSA-2fqr-mr3j-6wp8",
+   "GHSA-2g87-pp6c-29x5",
+   "GHSA-2vrm-gr82-f7m5",
+   "GHSA-3wq7-rqq7-wx6j",
+   "GHSA-494j-54xm-rwp3",
+   "GHSA-4fvr-rgm6-gqmc",
+   "GHSA-4m7w-qmgq-4wj5",
+   "GHSA-54jq-c3m8-4m76",
+   "GHSA-5wr8-gcqf-gqf3",
+   "GHSA-63hf-3vf5-4wqf",
+   "GHSA-63hw-fmq6-xxg2",
+   "GHSA-69f9-5gxw-wvc2",
+   "GHSA-6cjc-53gc-5rqm",
+   "GHSA-6jhg-hg63-jvvf",
+   "GHSA-6mq8-rvhq-8wgg",
+   "GHSA-966j-vmvw-g2g9",
+   "GHSA-9x8q-7h8h-wcw9",
+   "GHSA-9xw5-w5jj-pvcg",
+   "GHSA-c427-h43c-vf67",
+   "GHSA-cq5v-8q36-5273",
+   "GHSA-f9xw-jh8m-3mwq",
+   "GHSA-fh55-r93g-j68g",
+   "GHSA-g3cq-j2xw-wf74",
+   "GHSA-g84x-mcqj-x9qq",
+   "GHSA-gx76-c99x-2c96",
+   "GHSA-hcc4-c3v8-rx92",
+   "GHSA-hg6j-4rv6-33pg",
+   "GHSA-hpj7-wq8m-9hgp",
+   "GHSA-jg22-mg44-37j8",
+   "GHSA-jj3x-wxrx-4x23",
+   "GHSA-m5qp-6w8w-w647",
+   "GHSA-m6qw-4cw2-hm4m",
+   "GHSA-mfx4-hv73-q22v",
+   "GHSA-mq44-7p77-q5h7",
+   "GHSA-mqqc-3gqh-h2x8",
+   "GHSA-mwh4-6h8g-pg8w",
+   "GHSA-p998-jp59-783m",
+   "GHSA-pqxq-w44r-73xw",
+   "GHSA-w2fm-2cpv-w7v5",
+   "GHSA-xcgm-r5h9-7989",
+   "PYSEC-2026-1097",
+   "PYSEC-2026-1099",
+   "PYSEC-2026-1100",
+   "PYSEC-2026-1101",
+   "PYSEC-2026-1105",
+   "PYSEC-2026-1106",
+   "PYSEC-2026-1107",
+   "PYSEC-2026-1109",
+   "PYSEC-2026-2094",
+   "PYSEC-2026-2095",
+   "PYSEC-2026-2096",
+   "PYSEC-2026-2097",
+   "PYSEC-2026-2098",
+   "PYSEC-2026-2099",
+   "PYSEC-2026-2100",
+   "PYSEC-2026-2101",
+   "PYSEC-2026-2102",
+   "PYSEC-2026-2103",
+   "PYSEC-2026-2104",
+   "PYSEC-2026-2105",
+   "PYSEC-2026-2106",
+   "PYSEC-2026-2107",
+   "PYSEC-2026-2108",
+   "PYSEC-2026-2109",
+   "PYSEC-2026-2110",
+   "PYSEC-2026-2111",
+   "PYSEC-2026-2112",
+   "PYSEC-2026-2113",
+   "PYSEC-2026-237",
+   "PYSEC-2026-3545",
+   "PYSEC-2026-3546",
+   "PYSEC-2026-3547"
+  ]
+ },
+ {
+  "class": "runtime",
+  "groups": [
+   "runtime"
+  ],
+  "licence": {
+   "source": "classifier",
+   "spdx": "Apache-2.0",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:326]",
+  "name": "aiosignal",
+  "py38_only": true,
+  "released": "2022-11-08",
+  "requires_python": ">=3.7",
+  "resolution_markers": [
+   "(python_full_version < '3.9' and platform_machine != 'aarch64' and platform_machine != 'armv7l' and platform_machine != 'i686' and platform_machine != 'ppc64le' and platform_machine != 's390x' and platform_machine != 'x86_64') or (python_full_version < '3.9' and sys_platform != 'linux')",
+   "python_full_version < '3.9' and platform_machine == 'aarch64' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'armv7l' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'i686' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'ppc64le' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 's390x' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'x86_64' and sys_platform == 'linux'"
+  ],
+  "source": "https://pypi.org/simple",
+  "version": "1.3.1",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "runtime",
+  "groups": [
+   "runtime"
+  ],
+  "licence": {
+   "source": "classifier",
+   "spdx": "Apache-2.0",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:347]",
+  "name": "aiosignal",
+  "py38_only": false,
+  "released": "2025-07-03",
+  "requires_python": ">=3.9",
+  "resolution_markers": [
+   "python_full_version >= '3.14' and platform_machine == 'x86_64' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'i686' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'aarch64' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'armv7l' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'ppc64le' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 's390x' and sys_platform == 'linux'",
+   "(python_full_version >= '3.14' and platform_machine != 'aarch64' and platform_machine != 'armv7l' and platform_machine != 'i686' and platform_machine != 'ppc64le' and platform_machine != 's390x' and platform_machine != 'x86_64') or (python_full_version >= '3.14' and sys_platform != 'linux')",
+   "python_full_version >= '3.10' and python_full_version < '3.14'",
+   "python_full_version == '3.9.*'"
+  ],
+  "source": "https://pypi.org/simple",
+  "version": "1.4.0",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "runtime",
+  "groups": [
+   "runtime"
+  ],
+  "licence": {
+   "source": "classifier",
+   "spdx": "Apache-2.0",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:371]",
+  "name": "async-timeout",
+  "py38_only": false,
+  "released": "2024-11-06",
+  "requires_python": ">=3.8",
+  "resolution_markers": [],
+  "source": "https://pypi.org/simple",
+  "version": "5.0.1",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "runtime",
+  "groups": [
+   "runtime"
+  ],
+  "licence": {
+   "source": "expression",
+   "spdx": "MIT",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:380]",
+  "name": "attrs",
+  "py38_only": true,
+  "released": "2025-03-13",
+  "requires_python": ">=3.8",
+  "resolution_markers": [
+   "(python_full_version < '3.9' and platform_machine != 'aarch64' and platform_machine != 'armv7l' and platform_machine != 'i686' and platform_machine != 'ppc64le' and platform_machine != 's390x' and platform_machine != 'x86_64') or (python_full_version < '3.9' and sys_platform != 'linux')",
+   "python_full_version < '3.9' and platform_machine == 'aarch64' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'armv7l' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'i686' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'ppc64le' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 's390x' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'x86_64' and sys_platform == 'linux'"
+  ],
+  "source": "https://pypi.org/simple",
+  "version": "25.3.0",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "runtime",
+  "groups": [
+   "runtime"
+  ],
+  "licence": {
+   "source": "expression",
+   "spdx": "MIT",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:398]",
+  "name": "attrs",
+  "py38_only": false,
+  "released": "2025-10-06",
+  "requires_python": ">=3.9",
+  "resolution_markers": [
+   "python_full_version >= '3.14' and platform_machine == 'x86_64' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'i686' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'aarch64' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'armv7l' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'ppc64le' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 's390x' and sys_platform == 'linux'",
+   "(python_full_version >= '3.14' and platform_machine != 'aarch64' and platform_machine != 'armv7l' and platform_machine != 'i686' and platform_machine != 'ppc64le' and platform_machine != 's390x' and platform_machine != 'x86_64') or (python_full_version >= '3.14' and sys_platform != 'linux')",
+   "python_full_version >= '3.10' and python_full_version < '3.14'",
+   "python_full_version == '3.9.*'"
+  ],
+  "source": "https://pypi.org/simple",
+  "version": "25.4.0",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "runtime",
+  "groups": [
+   "runtime"
+  ],
+  "licence": {
+   "source": "classifier",
+   "spdx": "BSD-3-Clause",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:418]",
+  "name": "babel",
+  "py38_only": false,
+  "released": "2025-02-01",
+  "requires_python": ">=3.8",
+  "resolution_markers": [],
+  "source": "https://pypi.org/simple",
+  "version": "2.17.0",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "runtime",
+  "groups": [
+   "runtime"
+  ],
+  "licence": {
+   "source": "classifier",
+   "spdx": "BSD-3-Clause",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:430]",
+  "name": "boltons",
+  "py38_only": false,
+  "released": "2020-08-12",
+  "requires_python": "",
+  "resolution_markers": [],
+  "source": "https://pypi.org/simple",
+  "version": "20.2.1",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "dev",
+  "groups": [
+   "dev:dev"
+  ],
+  "licence": {
+   "source": "classifier",
+   "spdx": "LGPL-2.1-or-later",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:439]",
+  "name": "cabarchive",
+  "py38_only": false,
+  "released": "2022-02-23",
+  "requires_python": "",
+  "resolution_markers": [],
+  "source": "https://pypi.org/simple",
+  "version": "0.2.4",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "runtime",
+  "groups": [
+   "runtime"
+  ],
+  "licence": {
+   "source": "classifier",
+   "spdx": "MPL-2.0",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:448]",
+  "name": "certifi",
+  "py38_only": false,
+  "released": "2025-10-05",
+  "requires_python": ">=3.7",
+  "resolution_markers": [],
+  "source": "https://pypi.org/simple",
+  "version": "2025.10.5",
+  "vulnerability_ids": [
+   "GHSA-6q48-6c7w-9gw2",
+   "PYSEC-2026-4320"
+  ]
+ },
+ {
+  "class": "runtime",
+  "groups": [
+   "runtime"
+  ],
+  "licence": {
+   "source": "classifier",
+   "spdx": "MIT",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:457]",
+  "name": "cffi",
+  "py38_only": true,
+  "released": "2024-09-04",
+  "requires_python": ">=3.8",
+  "resolution_markers": [
+   "(python_full_version < '3.9' and platform_machine != 'aarch64' and platform_machine != 'armv7l' and platform_machine != 'i686' and platform_machine != 'ppc64le' and platform_machine != 's390x' and platform_machine != 'x86_64') or (python_full_version < '3.9' and sys_platform != 'linux')",
+   "python_full_version < '3.9' and platform_machine == 'aarch64' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'armv7l' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'i686' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'ppc64le' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 's390x' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'x86_64' and sys_platform == 'linux'"
+  ],
+  "source": "https://pypi.org/simple",
+  "version": "1.17.1",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "runtime",
+  "groups": [
+   "runtime"
+  ],
+  "licence": {
+   "source": "expression",
+   "spdx": "MIT",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:543]",
+  "name": "cffi",
+  "py38_only": false,
+  "released": "2025-09-08",
+  "requires_python": ">=3.9",
+  "resolution_markers": [
+   "python_full_version >= '3.14' and platform_machine == 'x86_64' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'i686' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'aarch64' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'armv7l' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'ppc64le' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 's390x' and sys_platform == 'linux'",
+   "(python_full_version >= '3.14' and platform_machine != 'aarch64' and platform_machine != 'armv7l' and platform_machine != 'i686' and platform_machine != 'ppc64le' and platform_machine != 's390x' and platform_machine != 'x86_64') or (python_full_version >= '3.14' and sys_platform != 'linux')",
+   "python_full_version >= '3.10' and python_full_version < '3.14'",
+   "python_full_version == '3.9.*'"
+  ],
+  "source": "https://pypi.org/simple",
+  "version": "2.0.0",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "runtime",
+  "groups": [
+   "runtime"
+  ],
+  "licence": {
+   "source": "classifier",
+   "spdx": "LGPL-2.1-or-later",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:649]",
+  "name": "chardet",
+  "py38_only": false,
+  "released": "2023-08-01",
+  "requires_python": ">=3.7",
+  "resolution_markers": [],
+  "source": "https://pypi.org/simple",
+  "version": "5.2.0",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "runtime",
+  "groups": [
+   "runtime"
+  ],
+  "licence": {
+   "source": "free text",
+   "spdx": "MIT",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:658]",
+  "name": "charset-normalizer",
+  "py38_only": false,
+  "released": "2025-10-14",
+  "requires_python": ">=3.7",
+  "resolution_markers": [],
+  "source": "https://pypi.org/simple",
+  "version": "3.4.4",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "dev",
+  "groups": [
+   "dev:dev"
+  ],
+  "licence": {
+   "source": "classifier",
+   "spdx": "BSD-3-Clause",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:778]",
+  "name": "colorama",
+  "py38_only": false,
+  "released": "2022-10-25",
+  "requires_python": "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,!=3.5.*,!=3.6.*,>=2.7",
+  "resolution_markers": [],
+  "source": "https://pypi.org/simple",
+  "version": "0.4.6",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "dev",
+  "groups": [
+   "dev:dev"
+  ],
+  "licence": {
+   "source": "free text",
+   "spdx": "Apache-2.0",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:880]",
+  "name": "coverage",
+  "py38_only": false,
+  "released": "2025-09-21",
+  "requires_python": ">=3.9",
+  "resolution_markers": [
+   "python_full_version == '3.9.*'"
+  ],
+  "source": "https://pypi.org/simple",
+  "version": "7.10.7",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "dev",
+  "groups": [
+   "dev:dev"
+  ],
+  "licence": {
+   "source": "free text",
+   "spdx": "Apache-2.0",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:999]",
+  "name": "coverage",
+  "py38_only": false,
+  "released": "2025-10-15",
+  "requires_python": ">=3.10",
+  "resolution_markers": [
+   "python_full_version >= '3.14' and platform_machine == 'x86_64' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'i686' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'aarch64' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'armv7l' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'ppc64le' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 's390x' and sys_platform == 'linux'",
+   "(python_full_version >= '3.14' and platform_machine != 'aarch64' and platform_machine != 'armv7l' and platform_machine != 'i686' and platform_machine != 'ppc64le' and platform_machine != 's390x' and platform_machine != 'x86_64') or (python_full_version >= '3.14' and sys_platform != 'linux')",
+   "python_full_version >= '3.10' and python_full_version < '3.14'"
+  ],
+  "source": "https://pypi.org/simple",
+  "version": "7.11.0",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "dev",
+  "groups": [
+   "dev:dev"
+  ],
+  "licence": {
+   "source": "classifier",
+   "spdx": "Apache-2.0",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:787]",
+  "name": "coverage",
+  "py38_only": true,
+  "released": "2024-08-04",
+  "requires_python": ">=3.8",
+  "resolution_markers": [
+   "(python_full_version < '3.9' and platform_machine != 'aarch64' and platform_machine != 'armv7l' and platform_machine != 'i686' and platform_machine != 'ppc64le' and platform_machine != 's390x' and platform_machine != 'x86_64') or (python_full_version < '3.9' and sys_platform != 'linux')",
+   "python_full_version < '3.9' and platform_machine == 'aarch64' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'armv7l' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'i686' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'ppc64le' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 's390x' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'x86_64' and sys_platform == 'linux'"
+  ],
+  "source": "https://pypi.org/simple",
+  "version": "7.6.1",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "runtime",
+  "groups": [
+   "runtime"
+  ],
+  "licence": {
+   "source": "expression",
+   "spdx": "Apache-2.0 OR BSD-3-Clause",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:1113]",
+  "name": "cryptography",
+  "py38_only": false,
+  "released": "2026-03-25",
+  "requires_python": "!=3.9.0,!=3.9.1,>=3.8",
+  "resolution_markers": [],
+  "source": "https://pypi.org/simple",
+  "version": "46.0.6",
+  "vulnerability_ids": [
+   "GHSA-537c-gmf6-5ccf",
+   "GHSA-g6cj-pr64-35w5",
+   "GHSA-jwv3-5hgf-82ww",
+   "GHSA-m2h6-j472-rp4c",
+   "GHSA-p423-j2cm-9vmq",
+   "PYSEC-2026-3552",
+   "PYSEC-2026-3553",
+   "PYSEC-2026-3554",
+   "PYSEC-2026-36"
+  ]
+ },
+ {
+  "class": "dev",
+  "groups": [
+   "dev:dev"
+  ],
+  "licence": {
+   "source": "classifier",
+   "spdx": "PSF-2.0",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:1175]",
+  "name": "cx-freeze",
+  "py38_only": true,
+  "released": "2024-03-16",
+  "requires_python": ">=3.7.4",
+  "resolution_markers": [
+   "(python_full_version < '3.9' and platform_machine != 'aarch64' and platform_machine != 'armv7l' and platform_machine != 'i686' and platform_machine != 'ppc64le' and platform_machine != 's390x' and platform_machine != 'x86_64') or (python_full_version < '3.9' and sys_platform != 'linux')",
+   "python_full_version < '3.9' and platform_machine == 'aarch64' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'armv7l' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'i686' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'ppc64le' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 's390x' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'x86_64' and sys_platform == 'linux'"
+  ],
+  "source": "https://pypi.org/simple",
+  "version": "6.15.16",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "dev",
+  "groups": [
+   "dev:dev"
+  ],
+  "licence": {
+   "source": "expression",
+   "spdx": "PSF-2.0",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:1229]",
+  "name": "cx-freeze",
+  "py38_only": false,
+  "released": "2025-09-20",
+  "requires_python": ">=3.9",
+  "resolution_markers": [
+   "python_full_version >= '3.14' and platform_machine == 'x86_64' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'i686' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'aarch64' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'armv7l' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'ppc64le' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 's390x' and sys_platform == 'linux'",
+   "(python_full_version >= '3.14' and platform_machine != 'aarch64' and platform_machine != 'armv7l' and platform_machine != 'i686' and platform_machine != 'ppc64le' and platform_machine != 's390x' and platform_machine != 'x86_64') or (python_full_version >= '3.14' and sys_platform != 'linux')"
+  ],
+  "source": "https://pypi.org/simple",
+  "version": "8.4.1",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "dev",
+  "groups": [
+   "dev:dev"
+  ],
+  "licence": {
+   "source": "classifier",
+   "spdx": "BSD-3-Clause",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:1289]",
+  "name": "cx-logging",
+  "py38_only": true,
+  "released": "2024-03-23",
+  "requires_python": ">=3.8",
+  "resolution_markers": [
+   "(python_full_version < '3.9' and platform_machine != 'aarch64' and platform_machine != 'armv7l' and platform_machine != 'i686' and platform_machine != 'ppc64le' and platform_machine != 's390x' and platform_machine != 'x86_64') or (python_full_version < '3.9' and sys_platform != 'linux')"
+  ],
+  "source": "https://pypi.org/simple",
+  "version": "3.2.0",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "dev",
+  "groups": [
+   "dev:dev"
+  ],
+  "licence": {
+   "source": "classifier",
+   "spdx": "BSD-3-Clause",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:1310]",
+  "name": "cx-logging",
+  "py38_only": false,
+  "released": "2024-10-13",
+  "requires_python": ">=3.9",
+  "resolution_markers": [
+   "(python_full_version >= '3.14' and platform_machine != 'aarch64' and platform_machine != 'armv7l' and platform_machine != 'i686' and platform_machine != 'ppc64le' and platform_machine != 's390x' and platform_machine != 'x86_64') or (python_full_version >= '3.14' and sys_platform != 'linux')"
+  ],
+  "source": "https://pypi.org/simple",
+  "version": "3.2.1",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "dev",
+  "groups": [
+   "dev:dev"
+  ],
+  "licence": {
+   "source": "classifier",
+   "spdx": "MIT",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:1331]",
+  "name": "dmgbuild",
+  "py38_only": false,
+  "released": "2025-03-21",
+  "requires_python": ">=3.9",
+  "resolution_markers": [],
+  "source": "https://pypi.org/simple",
+  "version": "1.6.5",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "runtime",
+  "groups": [
+   "runtime"
+  ],
+  "licence": {
+   "source": "classifier",
+   "spdx": "MIT",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:1344]",
+  "name": "docxcompose",
+  "py38_only": false,
+  "released": "2022-12-14",
+  "requires_python": "",
+  "resolution_markers": [],
+  "source": "https://pypi.org/simple",
+  "version": "1.4.0",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "runtime",
+  "groups": [
+   "runtime"
+  ],
+  "licence": {
+   "source": "free text",
+   "spdx": "LGPL-2.1-only",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:1359]",
+  "name": "docxtpl",
+  "py38_only": false,
+  "released": "2025-07-15",
+  "requires_python": "",
+  "resolution_markers": [],
+  "source": "https://pypi.org/simple",
+  "version": "0.20.1",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "dev",
+  "groups": [
+   "dev:dev"
+  ],
+  "licence": {
+   "source": "classifier",
+   "spdx": "MIT",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:1375]",
+  "name": "ds-store",
+  "py38_only": false,
+  "released": "2022-11-24",
+  "requires_python": ">=3.7",
+  "resolution_markers": [],
+  "source": "https://pypi.org/simple",
+  "version": "1.3.1",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "dev",
+  "groups": [
+   "dev:dev"
+  ],
+  "licence": {
+   "source": "classifier",
+   "spdx": "MIT",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:1387]",
+  "name": "exceptiongroup",
+  "py38_only": false,
+  "released": "2025-05-10",
+  "requires_python": ">=3.7",
+  "resolution_markers": [],
+  "source": "https://pypi.org/simple",
+  "version": "1.3.0",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "dev",
+  "groups": [
+   "dev:dev"
+  ],
+  "licence": {
+   "source": "expression",
+   "spdx": "Unlicense",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:1400]",
+  "name": "filelock",
+  "py38_only": false,
+  "released": "2025-10-08",
+  "requires_python": ">=3.10",
+  "resolution_markers": [],
+  "source": "https://pypi.org/simple",
+  "version": "3.20.0",
+  "vulnerability_ids": [
+   "GHSA-qmgc-5h2g-mvrw",
+   "GHSA-w853-jp5j-5j7f",
+   "PYSEC-2026-1374",
+   "PYSEC-2026-1375"
+  ]
+ },
+ {
+  "class": "runtime",
+  "groups": [
+   "runtime"
+  ],
+  "licence": {
+   "source": "classifier",
+   "spdx": "Apache-2.0",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:1409]",
+  "name": "frozenlist",
+  "py38_only": true,
+  "released": "2024-10-23",
+  "requires_python": ">=3.8",
+  "resolution_markers": [
+   "(python_full_version < '3.9' and platform_machine != 'aarch64' and platform_machine != 'armv7l' and platform_machine != 'i686' and platform_machine != 'ppc64le' and platform_machine != 's390x' and platform_machine != 'x86_64') or (python_full_version < '3.9' and sys_platform != 'linux')",
+   "python_full_version < '3.9' and platform_machine == 'aarch64' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'armv7l' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'i686' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'ppc64le' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 's390x' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'x86_64' and sys_platform == 'linux'"
+  ],
+  "source": "https://pypi.org/simple",
+  "version": "1.5.0",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "runtime",
+  "groups": [
+   "runtime"
+  ],
+  "licence": {
+   "source": "free text",
+   "spdx": "Apache-2.0",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:1517]",
+  "name": "frozenlist",
+  "py38_only": false,
+  "released": "2025-10-06",
+  "requires_python": ">=3.9",
+  "resolution_markers": [
+   "python_full_version >= '3.14' and platform_machine == 'x86_64' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'i686' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'aarch64' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'armv7l' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'ppc64le' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 's390x' and sys_platform == 'linux'",
+   "(python_full_version >= '3.14' and platform_machine != 'aarch64' and platform_machine != 'armv7l' and platform_machine != 'i686' and platform_machine != 'ppc64le' and platform_machine != 's390x' and platform_machine != 'x86_64') or (python_full_version >= '3.14' and sys_platform != 'linux')",
+   "python_full_version >= '3.10' and python_full_version < '3.14'",
+   "python_full_version == '3.9.*'"
+  ],
+  "source": "https://pypi.org/simple",
+  "version": "1.8.0",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "runtime",
+  "groups": [
+   "runtime"
+  ],
+  "licence": {
+   "source": "expression",
+   "spdx": "BSD-3-Clause",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:1665]",
+  "name": "idna",
+  "py38_only": false,
+  "released": "2025-10-12",
+  "requires_python": ">=3.8",
+  "resolution_markers": [],
+  "source": "https://pypi.org/simple",
+  "version": "3.11",
+  "vulnerability_ids": [
+   "GHSA-65pc-fj4g-8rjx",
+   "PYSEC-2026-215"
+  ]
+ },
+ {
+  "class": "runtime",
+  "groups": [
+   "runtime"
+  ],
+  "licence": {
+   "source": "classifier",
+   "spdx": "Apache-2.0",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:1674]",
+  "name": "importlib-resources",
+  "py38_only": true,
+  "released": "2024-09-09",
+  "requires_python": ">=3.8",
+  "resolution_markers": [],
+  "source": "https://pypi.org/simple",
+  "version": "6.4.5",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "dev",
+  "groups": [
+   "dev:dev"
+  ],
+  "licence": {
+   "source": "expression",
+   "spdx": "MIT",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:1686]",
+  "name": "iniconfig",
+  "py38_only": false,
+  "released": "2025-03-19",
+  "requires_python": ">=3.8",
+  "resolution_markers": [],
+  "source": "https://pypi.org/simple",
+  "version": "2.1.0",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "runtime",
+  "groups": [
+   "runtime"
+  ],
+  "licence": {
+   "source": "classifier",
+   "spdx": "BSD-3-Clause",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:1695]",
+  "name": "jinja2",
+  "py38_only": false,
+  "released": "2025-03-05",
+  "requires_python": ">=3.7",
+  "resolution_markers": [],
+  "source": "https://pypi.org/simple",
+  "version": "3.1.6",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "extra",
+  "groups": [
+   "extra:win"
+  ],
+  "licence": {
+   "source": "classifier",
+   "spdx": "MIT",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:1708]",
+  "name": "libscrc",
+  "py38_only": true,
+  "released": "2019-12-27",
+  "requires_python": "",
+  "resolution_markers": [],
+  "source": "https://pypi.org/simple",
+  "version": "0.1.6",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "dev",
+  "groups": [
+   "dev:dev"
+  ],
+  "licence": {
+   "source": "free text",
+   "spdx": "Apache-2.0",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:1718]",
+  "name": "lief",
+  "py38_only": true,
+  "released": "2024-02-11",
+  "requires_python": ">=3.8",
+  "resolution_markers": [
+   "(python_full_version < '3.9' and platform_machine != 'aarch64' and platform_machine != 'armv7l' and platform_machine != 'i686' and platform_machine != 'ppc64le' and platform_machine != 's390x' and platform_machine != 'x86_64') or (python_full_version < '3.9' and sys_platform != 'linux')"
+  ],
+  "source": "https://pypi.org/simple",
+  "version": "0.14.1",
+  "vulnerability_ids": [
+   "GHSA-377p-g8gr-5wpg",
+   "GHSA-mjjp-xjfg-97wg",
+   "PYSEC-2024-280",
+   "PYSEC-2026-1538"
+  ]
+ },
+ {
+  "class": "dev",
+  "groups": [
+   "dev:dev"
+  ],
+  "licence": {
+   "source": "free text",
+   "spdx": "Apache-2.0",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:1740]",
+  "name": "lief",
+  "py38_only": false,
+  "released": "2025-09-14",
+  "requires_python": ">=3.8",
+  "resolution_markers": [
+   "(python_full_version >= '3.14' and platform_machine != 'aarch64' and platform_machine != 'armv7l' and platform_machine != 'i686' and platform_machine != 'ppc64le' and platform_machine != 's390x' and platform_machine != 'x86_64') or (python_full_version >= '3.14' and sys_platform != 'linux')"
+  ],
+  "source": "https://pypi.org/simple",
+  "version": "0.17.0",
+  "vulnerability_ids": [
+   "GHSA-mjjp-xjfg-97wg",
+   "PYSEC-2026-1538"
+  ]
+ },
+ {
+  "class": "runtime",
+  "groups": [
+   "runtime"
+  ],
+  "licence": {
+   "source": "free text",
+   "spdx": "BSD-3-Clause",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:1767]",
+  "name": "lxml",
+  "py38_only": false,
+  "released": "2025-09-22",
+  "requires_python": ">=3.8",
+  "resolution_markers": [],
+  "source": "https://pypi.org/simple",
+  "version": "6.0.2",
+  "vulnerability_ids": [
+   "GHSA-vfmq-68hx-4jfw",
+   "PYSEC-2026-87"
+  ]
+ },
+ {
+  "class": "dev",
+  "groups": [
+   "dev:dev"
+  ],
+  "licence": {
+   "source": "classifier",
+   "spdx": "MIT",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:1914]",
+  "name": "mac-alias",
+  "py38_only": false,
+  "released": "2022-12-06",
+  "requires_python": ">=3.7",
+  "resolution_markers": [],
+  "source": "https://pypi.org/simple",
+  "version": "2.2.2",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "runtime",
+  "groups": [
+   "runtime"
+  ],
+  "licence": {
+   "source": "classifier",
+   "spdx": "BSD-3-Clause",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:1923]",
+  "name": "markupsafe",
+  "py38_only": true,
+  "released": "2024-02-02",
+  "requires_python": ">=3.7",
+  "resolution_markers": [
+   "(python_full_version < '3.9' and platform_machine != 'aarch64' and platform_machine != 'armv7l' and platform_machine != 'i686' and platform_machine != 'ppc64le' and platform_machine != 's390x' and platform_machine != 'x86_64') or (python_full_version < '3.9' and sys_platform != 'linux')",
+   "python_full_version < '3.9' and platform_machine == 'aarch64' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'armv7l' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'i686' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'ppc64le' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 's390x' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'x86_64' and sys_platform == 'linux'"
+  ],
+  "source": "https://pypi.org/simple",
+  "version": "2.1.5",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "runtime",
+  "groups": [
+   "runtime"
+  ],
+  "licence": {
+   "source": "expression",
+   "spdx": "BSD-3-Clause",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:1990]",
+  "name": "markupsafe",
+  "py38_only": false,
+  "released": "2025-09-27",
+  "requires_python": ">=3.9",
+  "resolution_markers": [
+   "python_full_version >= '3.14' and platform_machine == 'x86_64' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'i686' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'aarch64' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'armv7l' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'ppc64le' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 's390x' and sys_platform == 'linux'",
+   "(python_full_version >= '3.14' and platform_machine != 'aarch64' and platform_machine != 'armv7l' and platform_machine != 'i686' and platform_machine != 'ppc64le' and platform_machine != 's390x' and platform_machine != 'x86_64') or (python_full_version >= '3.14' and sys_platform != 'linux')",
+   "python_full_version >= '3.10' and python_full_version < '3.14'",
+   "python_full_version == '3.9.*'"
+  ],
+  "source": "https://pypi.org/simple",
+  "version": "3.0.3",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "dev",
+  "groups": [
+   "dev:dev"
+  ],
+  "licence": {
+   "source": "expression",
+   "spdx": "MIT OR Apache-2.0",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:2097]",
+  "name": "maturin",
+  "py38_only": false,
+  "released": "2026-04-09",
+  "requires_python": ">=3.7",
+  "resolution_markers": [],
+  "source": "https://pypi.org/simple",
+  "version": "1.13.1",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "runtime",
+  "groups": [
+   "runtime"
+  ],
+  "licence": {
+   "source": "classifier",
+   "spdx": "Apache-2.0",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:2121]",
+  "name": "multidict",
+  "py38_only": true,
+  "released": "2024-09-09",
+  "requires_python": ">=3.8",
+  "resolution_markers": [
+   "(python_full_version < '3.9' and platform_machine != 'aarch64' and platform_machine != 'armv7l' and platform_machine != 'i686' and platform_machine != 'ppc64le' and platform_machine != 's390x' and platform_machine != 'x86_64') or (python_full_version < '3.9' and sys_platform != 'linux')",
+   "python_full_version < '3.9' and platform_machine == 'aarch64' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'armv7l' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'i686' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'ppc64le' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 's390x' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'x86_64' and sys_platform == 'linux'"
+  ],
+  "source": "https://pypi.org/simple",
+  "version": "6.1.0",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "runtime",
+  "groups": [
+   "runtime"
+  ],
+  "licence": {
+   "source": "free text",
+   "spdx": "Apache-2.0",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:2232]",
+  "name": "multidict",
+  "py38_only": false,
+  "released": "2025-10-06",
+  "requires_python": ">=3.9",
+  "resolution_markers": [
+   "python_full_version >= '3.14' and platform_machine == 'x86_64' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'i686' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'aarch64' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'armv7l' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'ppc64le' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 's390x' and sys_platform == 'linux'",
+   "(python_full_version >= '3.14' and platform_machine != 'aarch64' and platform_machine != 'armv7l' and platform_machine != 'i686' and platform_machine != 'ppc64le' and platform_machine != 's390x' and platform_machine != 'x86_64') or (python_full_version >= '3.14' and sys_platform != 'linux')",
+   "python_full_version >= '3.10' and python_full_version < '3.14'",
+   "python_full_version == '3.9.*'"
+  ],
+  "source": "https://pypi.org/simple",
+  "version": "6.7.0",
+  "vulnerability_ids": [
+   "GHSA-54p9-h82j-f925",
+   "PYSEC-2026-4244"
+  ]
+ },
+ {
+  "class": "dev",
+  "groups": [
+   "dev:dev"
+  ],
+  "licence": {
+   "source": "classifier",
+   "spdx": "MIT",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:2399]",
+  "name": "mypy",
+  "py38_only": true,
+  "released": "2024-12-30",
+  "requires_python": ">=3.8",
+  "resolution_markers": [
+   "(python_full_version < '3.9' and platform_machine != 'aarch64' and platform_machine != 'armv7l' and platform_machine != 'i686' and platform_machine != 'ppc64le' and platform_machine != 's390x' and platform_machine != 'x86_64') or (python_full_version < '3.9' and sys_platform != 'linux')",
+   "python_full_version < '3.9' and platform_machine == 'aarch64' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'armv7l' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'i686' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'ppc64le' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 's390x' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'x86_64' and sys_platform == 'linux'"
+  ],
+  "source": "https://pypi.org/simple",
+  "version": "1.14.1",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "dev",
+  "groups": [
+   "dev:dev"
+  ],
+  "licence": {
+   "source": "classifier",
+   "spdx": "MIT",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:2458]",
+  "name": "mypy",
+  "py38_only": false,
+  "released": "2025-09-19",
+  "requires_python": ">=3.9",
+  "resolution_markers": [
+   "python_full_version >= '3.14' and platform_machine == 'x86_64' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'i686' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'aarch64' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'armv7l' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'ppc64le' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 's390x' and sys_platform == 'linux'",
+   "(python_full_version >= '3.14' and platform_machine != 'aarch64' and platform_machine != 'armv7l' and platform_machine != 'i686' and platform_machine != 'ppc64le' and platform_machine != 's390x' and platform_machine != 'x86_64') or (python_full_version >= '3.14' and sys_platform != 'linux')"
+  ],
+  "source": "https://pypi.org/simple",
+  "version": "1.18.2",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "dev",
+  "groups": [
+   "dev:dev"
+  ],
+  "licence": {
+   "source": "not declared",
+   "spdx": "",
+   "verdict": "unknown"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:2517]",
+  "name": "mypy-extensions",
+  "py38_only": false,
+  "released": "2025-04-22",
+  "requires_python": ">=3.8",
+  "resolution_markers": [],
+  "source": "https://pypi.org/simple",
+  "version": "1.1.0",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "runtime",
+  "groups": [
+   "runtime"
+  ],
+  "licence": {
+   "source": "classifier",
+   "spdx": "Apache-2.0 OR MIT",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:2526]",
+  "name": "orjson",
+  "py38_only": true,
+  "released": "2025-01-18",
+  "requires_python": ">=3.8",
+  "resolution_markers": [
+   "(python_full_version < '3.9' and platform_machine != 'aarch64' and platform_machine != 'armv7l' and platform_machine != 'i686' and platform_machine != 'ppc64le' and platform_machine != 's390x' and platform_machine != 'x86_64') or (python_full_version < '3.9' and sys_platform != 'linux')",
+   "python_full_version < '3.9' and platform_machine == 'aarch64' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'armv7l' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'i686' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'ppc64le' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 's390x' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'x86_64' and sys_platform == 'linux'"
+  ],
+  "source": "https://pypi.org/simple",
+  "version": "3.10.15",
+  "vulnerability_ids": [
+   "GHSA-hx9q-6w63-j58v",
+   "PYSEC-2026-107"
+  ]
+ },
+ {
+  "class": "runtime",
+  "groups": [
+   "runtime"
+  ],
+  "licence": {
+   "source": "expression",
+   "spdx": "Apache-2.0 OR MIT",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:2621]",
+  "name": "orjson",
+  "py38_only": false,
+  "released": "2025-08-26",
+  "requires_python": ">=3.9",
+  "resolution_markers": [
+   "python_full_version >= '3.14' and platform_machine == 'x86_64' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'i686' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'aarch64' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'armv7l' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'ppc64le' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 's390x' and sys_platform == 'linux'",
+   "(python_full_version >= '3.14' and platform_machine != 'aarch64' and platform_machine != 'armv7l' and platform_machine != 'i686' and platform_machine != 'ppc64le' and platform_machine != 's390x' and platform_machine != 'x86_64') or (python_full_version >= '3.14' and sys_platform != 'linux')",
+   "python_full_version >= '3.10' and python_full_version < '3.14'",
+   "python_full_version == '3.9.*'"
+  ],
+  "source": "https://pypi.org/simple",
+  "version": "3.11.3",
+  "vulnerability_ids": [
+   "GHSA-hx9q-6w63-j58v",
+   "PYSEC-2026-107"
+  ]
+ },
+ {
+  "class": "dev",
+  "groups": [
+   "dev:dev"
+  ],
+  "licence": {
+   "source": "classifier",
+   "spdx": "Apache-2.0 OR BSD-3-Clause",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:2722]",
+  "name": "packaging",
+  "py38_only": false,
+  "released": "2025-04-19",
+  "requires_python": ">=3.8",
+  "resolution_markers": [],
+  "source": "https://pypi.org/simple",
+  "version": "25.0",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "dev",
+  "groups": [
+   "dev:dev"
+  ],
+  "licence": {
+   "source": "classifier",
+   "spdx": "MIT",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:2731]",
+  "name": "pastel",
+  "py38_only": false,
+  "released": "2020-09-16",
+  "requires_python": ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*",
+  "resolution_markers": [],
+  "source": "https://pypi.org/simple",
+  "version": "0.2.1",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "dev",
+  "groups": [
+   "dev:dev"
+  ],
+  "licence": {
+   "source": "classifier",
+   "spdx": "Apache-2.0 OR GPL-3.0-or-later",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:2740]",
+  "name": "patchelf",
+  "py38_only": false,
+  "released": "2025-07-23",
+  "requires_python": ">=3.7",
+  "resolution_markers": [],
+  "source": "https://pypi.org/simple",
+  "version": "0.17.2.4",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "dev",
+  "groups": [
+   "dev:dev"
+  ],
+  "licence": {
+   "source": "classifier",
+   "spdx": "MPL-2.0",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:2754]",
+  "name": "pathspec",
+  "py38_only": false,
+  "released": "2023-12-10",
+  "requires_python": ">=3.8",
+  "resolution_markers": [],
+  "source": "https://pypi.org/simple",
+  "version": "0.12.1",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "runtime",
+  "groups": [
+   "runtime"
+  ],
+  "licence": {
+   "source": "classifier",
+   "spdx": "MIT",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:2763]",
+  "name": "playsound3",
+  "py38_only": true,
+  "released": "2025-09-30",
+  "requires_python": ">=3.7",
+  "resolution_markers": [
+   "(python_full_version < '3.9' and platform_machine != 'aarch64' and platform_machine != 'armv7l' and platform_machine != 'i686' and platform_machine != 'ppc64le' and platform_machine != 's390x' and platform_machine != 'x86_64') or (python_full_version < '3.9' and sys_platform != 'linux')",
+   "python_full_version < '3.9' and platform_machine == 'aarch64' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'armv7l' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'i686' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'ppc64le' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 's390x' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'x86_64' and sys_platform == 'linux'"
+  ],
+  "source": "https://pypi.org/simple",
+  "version": "3.2.7",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "runtime",
+  "groups": [
+   "runtime"
+  ],
+  "licence": {
+   "source": "classifier",
+   "spdx": "MIT",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:2784]",
+  "name": "playsound3",
+  "py38_only": false,
+  "released": "2025-10-01",
+  "requires_python": ">=3.9",
+  "resolution_markers": [
+   "python_full_version >= '3.14' and platform_machine == 'x86_64' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'i686' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'aarch64' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'armv7l' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'ppc64le' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 's390x' and sys_platform == 'linux'",
+   "(python_full_version >= '3.14' and platform_machine != 'aarch64' and platform_machine != 'armv7l' and platform_machine != 'i686' and platform_machine != 'ppc64le' and platform_machine != 's390x' and platform_machine != 'x86_64') or (python_full_version >= '3.14' and sys_platform != 'linux')",
+   "python_full_version >= '3.10' and python_full_version < '3.14'",
+   "python_full_version == '3.9.*'"
+  ],
+  "source": "https://pypi.org/simple",
+  "version": "3.2.8",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "dev",
+  "groups": [
+   "dev:dev"
+  ],
+  "licence": {
+   "source": "classifier",
+   "spdx": "MIT",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:2807]",
+  "name": "pluggy",
+  "py38_only": true,
+  "released": "2024-04-20",
+  "requires_python": ">=3.8",
+  "resolution_markers": [
+   "(python_full_version < '3.9' and platform_machine != 'aarch64' and platform_machine != 'armv7l' and platform_machine != 'i686' and platform_machine != 'ppc64le' and platform_machine != 's390x' and platform_machine != 'x86_64') or (python_full_version < '3.9' and sys_platform != 'linux')",
+   "python_full_version < '3.9' and platform_machine == 'aarch64' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'armv7l' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'i686' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'ppc64le' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 's390x' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'x86_64' and sys_platform == 'linux'"
+  ],
+  "source": "https://pypi.org/simple",
+  "version": "1.5.0",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "dev",
+  "groups": [
+   "dev:dev"
+  ],
+  "licence": {
+   "source": "classifier",
+   "spdx": "MIT",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:2825]",
+  "name": "pluggy",
+  "py38_only": false,
+  "released": "2025-05-15",
+  "requires_python": ">=3.9",
+  "resolution_markers": [
+   "python_full_version >= '3.14' and platform_machine == 'x86_64' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'i686' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'aarch64' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'armv7l' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'ppc64le' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 's390x' and sys_platform == 'linux'",
+   "(python_full_version >= '3.14' and platform_machine != 'aarch64' and platform_machine != 'armv7l' and platform_machine != 'i686' and platform_machine != 'ppc64le' and platform_machine != 's390x' and platform_machine != 'x86_64') or (python_full_version >= '3.14' and sys_platform != 'linux')",
+   "python_full_version >= '3.10' and python_full_version < '3.14'",
+   "python_full_version == '3.9.*'"
+  ],
+  "source": "https://pypi.org/simple",
+  "version": "1.6.0",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "dev",
+  "groups": [
+   "dev:dev"
+  ],
+  "licence": {
+   "source": "classifier",
+   "spdx": "MIT",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:2845]",
+  "name": "poethepoet",
+  "py38_only": false,
+  "released": "2024-11-09",
+  "requires_python": ">=3.8",
+  "resolution_markers": [],
+  "source": "https://pypi.org/simple",
+  "version": "0.30.0",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "runtime",
+  "groups": [
+   "runtime"
+  ],
+  "licence": {
+   "source": "classifier",
+   "spdx": "MIT",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:2859]",
+  "name": "polib",
+  "py38_only": false,
+  "released": "2023-02-23",
+  "requires_python": "",
+  "resolution_markers": [],
+  "source": "https://pypi.org/simple",
+  "version": "1.2.0",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "runtime",
+  "groups": [
+   "runtime"
+  ],
+  "licence": {
+   "source": "classifier",
+   "spdx": "Apache-2.0",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:2868]",
+  "name": "propcache",
+  "py38_only": true,
+  "released": "2024-10-07",
+  "requires_python": ">=3.8",
+  "resolution_markers": [
+   "(python_full_version < '3.9' and platform_machine != 'aarch64' and platform_machine != 'armv7l' and platform_machine != 'i686' and platform_machine != 'ppc64le' and platform_machine != 's390x' and platform_machine != 'x86_64') or (python_full_version < '3.9' and sys_platform != 'linux')",
+   "python_full_version < '3.9' and platform_machine == 'aarch64' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'armv7l' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'i686' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'ppc64le' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 's390x' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'x86_64' and sys_platform == 'linux'"
+  ],
+  "source": "https://pypi.org/simple",
+  "version": "0.2.0",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "runtime",
+  "groups": [
+   "runtime"
+  ],
+  "licence": {
+   "source": "classifier",
+   "spdx": "Apache-2.0",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:2982]",
+  "name": "propcache",
+  "py38_only": false,
+  "released": "2025-10-08",
+  "requires_python": ">=3.9",
+  "resolution_markers": [
+   "python_full_version >= '3.14' and platform_machine == 'x86_64' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'i686' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'aarch64' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'armv7l' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'ppc64le' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 's390x' and sys_platform == 'linux'",
+   "(python_full_version >= '3.14' and platform_machine != 'aarch64' and platform_machine != 'armv7l' and platform_machine != 'i686' and platform_machine != 'ppc64le' and platform_machine != 's390x' and platform_machine != 'x86_64') or (python_full_version >= '3.14' and sys_platform != 'linux')",
+   "python_full_version >= '3.10' and python_full_version < '3.14'",
+   "python_full_version == '3.9.*'"
+  ],
+  "source": "https://pypi.org/simple",
+  "version": "0.4.1",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "runtime",
+  "groups": [
+   "runtime"
+  ],
+  "licence": {
+   "source": "free text",
+   "spdx": "BSD-3-Clause",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:3122]",
+  "name": "psutil",
+  "py38_only": false,
+  "released": "2025-09-17",
+  "requires_python": ">=3.6",
+  "resolution_markers": [],
+  "source": "https://pypi.org/simple",
+  "version": "7.1.0",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "dev",
+  "groups": [
+   "dev:dev"
+  ],
+  "licence": {
+   "source": "classifier",
+   "spdx": "MIT",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:3138]",
+  "name": "py-cpuinfo",
+  "py38_only": false,
+  "released": "2022-10-25",
+  "requires_python": "",
+  "resolution_markers": [],
+  "source": "https://pypi.org/simple",
+  "version": "9.0.0",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "runtime",
+  "groups": [
+   "runtime"
+  ],
+  "licence": {
+   "source": "classifier",
+   "spdx": "BSD-3-Clause",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:3147]",
+  "name": "pycparser",
+  "py38_only": false,
+  "released": "2025-09-09",
+  "requires_python": ">=3.8",
+  "resolution_markers": [
+   "(python_full_version < '3.9' and platform_machine != 'aarch64' and platform_machine != 'armv7l' and platform_machine != 'i686' and platform_machine != 'ppc64le' and platform_machine != 's390x' and platform_machine != 'x86_64') or (python_full_version < '3.9' and sys_platform != 'linux')",
+   "python_full_version < '3.9' and platform_machine == 'aarch64' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'armv7l' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'i686' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'ppc64le' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 's390x' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'x86_64' and sys_platform == 'linux'",
+   "python_full_version == '3.9.*'"
+  ],
+  "source": "https://pypi.org/simple",
+  "version": "2.23",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "runtime",
+  "groups": [
+   "runtime"
+  ],
+  "licence": {
+   "source": "expression",
+   "spdx": "BSD-3-Clause",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:3166]",
+  "name": "pycparser",
+  "py38_only": false,
+  "released": "2026-01-21",
+  "requires_python": ">=3.10",
+  "resolution_markers": [
+   "python_full_version >= '3.14' and platform_machine == 'x86_64' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'i686' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'aarch64' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'armv7l' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'ppc64le' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 's390x' and sys_platform == 'linux'",
+   "(python_full_version >= '3.14' and platform_machine != 'aarch64' and platform_machine != 'armv7l' and platform_machine != 'i686' and platform_machine != 'ppc64le' and platform_machine != 's390x' and platform_machine != 'x86_64') or (python_full_version >= '3.14' and sys_platform != 'linux')",
+   "python_full_version >= '3.10' and python_full_version < '3.14'"
+  ],
+  "source": "https://pypi.org/simple",
+  "version": "3.0",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "dev",
+  "groups": [
+   "dev:dev"
+  ],
+  "licence": {
+   "source": "classifier",
+   "spdx": "BSD-3-Clause",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:3185]",
+  "name": "pygments",
+  "py38_only": false,
+  "released": "2025-06-21",
+  "requires_python": ">=3.8",
+  "resolution_markers": [],
+  "source": "https://pypi.org/simple",
+  "version": "2.19.2",
+  "vulnerability_ids": [
+   "GHSA-5239-wwwm-4pmq",
+   "PYSEC-2026-2987"
+  ]
+ },
+ {
+  "class": "extra",
+  "groups": [
+   "extra:win"
+  ],
+  "licence": {
+   "source": "classifier",
+   "spdx": "MIT",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:3194]",
+  "name": "pyimpinj",
+  "py38_only": true,
+  "released": "2020-03-02",
+  "requires_python": "",
+  "resolution_markers": [],
+  "source": "https://pypi.org/simple",
+  "version": "1.2",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "runtime",
+  "groups": [
+   "extra:win",
+   "runtime"
+  ],
+  "licence": {
+   "source": "classifier",
+   "spdx": "BSD-3-Clause",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:3206]",
+  "name": "pyserial",
+  "py38_only": false,
+  "released": "2020-11-23",
+  "requires_python": "",
+  "resolution_markers": [],
+  "source": "https://pypi.org/simple",
+  "version": "3.5",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "extra",
+  "groups": [
+   "extra:gui"
+  ],
+  "licence": {
+   "source": "free text",
+   "spdx": "LGPL-3.0-only OR GPL-2.0-only OR GPL-3.0-only",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:3240]",
+  "name": "pyside6",
+  "py38_only": false,
+  "released": "2025-10-08",
+  "requires_python": "<3.14,>=3.9",
+  "resolution_markers": [
+   "python_full_version >= '3.14' and platform_machine == 'x86_64' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'i686' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'aarch64' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'armv7l' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'ppc64le' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 's390x' and sys_platform == 'linux'",
+   "(python_full_version >= '3.14' and platform_machine != 'aarch64' and platform_machine != 'armv7l' and platform_machine != 'i686' and platform_machine != 'ppc64le' and platform_machine != 's390x' and platform_machine != 'x86_64') or (python_full_version >= '3.14' and sys_platform != 'linux')",
+   "python_full_version >= '3.10' and python_full_version < '3.14'",
+   "python_full_version == '3.9.*'"
+  ],
+  "source": "https://pypi.org/simple",
+  "version": "6.10.0",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "extra",
+  "groups": [
+   "extra:gui"
+  ],
+  "licence": {
+   "source": "classifier",
+   "spdx": "License :: OSI Approved :: GNU Library or Lesser General Public License (LGPL) OR LicenseRef-Proprietary",
+   "verdict": "unknown"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:3215]",
+  "name": "pyside6",
+  "py38_only": true,
+  "released": "2024-04-02",
+  "requires_python": "<3.13,>=3.8",
+  "resolution_markers": [
+   "(python_full_version < '3.9' and platform_machine != 'aarch64' and platform_machine != 'armv7l' and platform_machine != 'i686' and platform_machine != 'ppc64le' and platform_machine != 's390x' and platform_machine != 'x86_64') or (python_full_version < '3.9' and sys_platform != 'linux')",
+   "python_full_version < '3.9' and platform_machine == 'aarch64' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'armv7l' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'i686' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'ppc64le' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 's390x' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'x86_64' and sys_platform == 'linux'"
+  ],
+  "source": "https://pypi.org/simple",
+  "version": "6.6.3.1",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "extra",
+  "groups": [
+   "extra:gui"
+  ],
+  "licence": {
+   "source": "free text",
+   "spdx": "LGPL-3.0-only OR GPL-2.0-only OR GPL-3.0-only",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:3292]",
+  "name": "pyside6-addons",
+  "py38_only": false,
+  "released": "2025-10-08",
+  "requires_python": "<3.14,>=3.9",
+  "resolution_markers": [
+   "python_full_version >= '3.14' and platform_machine == 'x86_64' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'i686' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'aarch64' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'armv7l' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'ppc64le' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 's390x' and sys_platform == 'linux'",
+   "(python_full_version >= '3.14' and platform_machine != 'aarch64' and platform_machine != 'armv7l' and platform_machine != 'i686' and platform_machine != 'ppc64le' and platform_machine != 's390x' and platform_machine != 'x86_64') or (python_full_version >= '3.14' and sys_platform != 'linux')",
+   "python_full_version >= '3.10' and python_full_version < '3.14'",
+   "python_full_version == '3.9.*'"
+  ],
+  "source": "https://pypi.org/simple",
+  "version": "6.10.0",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "extra",
+  "groups": [
+   "extra:gui"
+  ],
+  "licence": {
+   "source": "classifier",
+   "spdx": "License :: OSI Approved :: GNU Library or Lesser General Public License (LGPL) OR LicenseRef-Proprietary",
+   "verdict": "unknown"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:3268]",
+  "name": "pyside6-addons",
+  "py38_only": true,
+  "released": "2024-04-02",
+  "requires_python": "<3.13,>=3.8",
+  "resolution_markers": [
+   "(python_full_version < '3.9' and platform_machine != 'aarch64' and platform_machine != 'armv7l' and platform_machine != 'i686' and platform_machine != 'ppc64le' and platform_machine != 's390x' and platform_machine != 'x86_64') or (python_full_version < '3.9' and sys_platform != 'linux')",
+   "python_full_version < '3.9' and platform_machine == 'aarch64' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'armv7l' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'i686' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'ppc64le' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 's390x' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'x86_64' and sys_platform == 'linux'"
+  ],
+  "source": "https://pypi.org/simple",
+  "version": "6.6.3.1",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "extra",
+  "groups": [
+   "extra:gui"
+  ],
+  "licence": {
+   "source": "free text",
+   "spdx": "LGPL-3.0-only OR GPL-2.0-only OR GPL-3.0-only",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:3342]",
+  "name": "pyside6-essentials",
+  "py38_only": false,
+  "released": "2025-10-08",
+  "requires_python": "<3.14,>=3.9",
+  "resolution_markers": [
+   "python_full_version >= '3.14' and platform_machine == 'x86_64' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'i686' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'aarch64' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'armv7l' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'ppc64le' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 's390x' and sys_platform == 'linux'",
+   "(python_full_version >= '3.14' and platform_machine != 'aarch64' and platform_machine != 'armv7l' and platform_machine != 'i686' and platform_machine != 'ppc64le' and platform_machine != 's390x' and platform_machine != 'x86_64') or (python_full_version >= '3.14' and sys_platform != 'linux')",
+   "python_full_version >= '3.10' and python_full_version < '3.14'",
+   "python_full_version == '3.9.*'"
+  ],
+  "source": "https://pypi.org/simple",
+  "version": "6.10.0",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "extra",
+  "groups": [
+   "extra:gui"
+  ],
+  "licence": {
+   "source": "classifier",
+   "spdx": "License :: OSI Approved :: GNU Library or Lesser General Public License (LGPL) OR LicenseRef-Proprietary",
+   "verdict": "unknown"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:3319]",
+  "name": "pyside6-essentials",
+  "py38_only": true,
+  "released": "2024-04-02",
+  "requires_python": "<3.13,>=3.8",
+  "resolution_markers": [
+   "(python_full_version < '3.9' and platform_machine != 'aarch64' and platform_machine != 'armv7l' and platform_machine != 'i686' and platform_machine != 'ppc64le' and platform_machine != 's390x' and platform_machine != 'x86_64') or (python_full_version < '3.9' and sys_platform != 'linux')",
+   "python_full_version < '3.9' and platform_machine == 'aarch64' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'armv7l' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'i686' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'ppc64le' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 's390x' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'x86_64' and sys_platform == 'linux'"
+  ],
+  "source": "https://pypi.org/simple",
+  "version": "6.6.3.1",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "dev",
+  "groups": [
+   "dev:dev"
+  ],
+  "licence": {
+   "source": "classifier",
+   "spdx": "MIT",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:3368]",
+  "name": "pytest",
+  "py38_only": true,
+  "released": "2025-03-02",
+  "requires_python": ">=3.8",
+  "resolution_markers": [
+   "(python_full_version < '3.9' and platform_machine != 'aarch64' and platform_machine != 'armv7l' and platform_machine != 'i686' and platform_machine != 'ppc64le' and platform_machine != 's390x' and platform_machine != 'x86_64') or (python_full_version < '3.9' and sys_platform != 'linux')",
+   "python_full_version < '3.9' and platform_machine == 'aarch64' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'armv7l' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'i686' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'ppc64le' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 's390x' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'x86_64' and sys_platform == 'linux'"
+  ],
+  "source": "https://pypi.org/simple",
+  "version": "8.3.5",
+  "vulnerability_ids": [
+   "GHSA-6w46-j5rx-g56g",
+   "PYSEC-2026-1845"
+  ]
+ },
+ {
+  "class": "dev",
+  "groups": [
+   "dev:dev"
+  ],
+  "licence": {
+   "source": "classifier",
+   "spdx": "MIT",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:3394]",
+  "name": "pytest",
+  "py38_only": false,
+  "released": "2025-09-04",
+  "requires_python": ">=3.9",
+  "resolution_markers": [
+   "python_full_version >= '3.14' and platform_machine == 'x86_64' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'i686' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'aarch64' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'armv7l' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'ppc64le' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 's390x' and sys_platform == 'linux'",
+   "(python_full_version >= '3.14' and platform_machine != 'aarch64' and platform_machine != 'armv7l' and platform_machine != 'i686' and platform_machine != 'ppc64le' and platform_machine != 's390x' and platform_machine != 'x86_64') or (python_full_version >= '3.14' and sys_platform != 'linux')",
+   "python_full_version >= '3.10' and python_full_version < '3.14'",
+   "python_full_version == '3.9.*'"
+  ],
+  "source": "https://pypi.org/simple",
+  "version": "8.4.2",
+  "vulnerability_ids": [
+   "GHSA-6w46-j5rx-g56g",
+   "PYSEC-2026-1845"
+  ]
+ },
+ {
+  "class": "dev",
+  "groups": [
+   "dev:dev"
+  ],
+  "licence": {
+   "source": "classifier",
+   "spdx": "BSD-3-Clause",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:3423]",
+  "name": "pytest-benchmark",
+  "py38_only": false,
+  "released": "2022-10-25",
+  "requires_python": ">=3.7",
+  "resolution_markers": [],
+  "source": "https://pypi.org/simple",
+  "version": "4.0.0",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "dev",
+  "groups": [
+   "dev:dev"
+  ],
+  "licence": {
+   "source": "classifier",
+   "spdx": "MIT",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:3437]",
+  "name": "pytest-cov",
+  "py38_only": true,
+  "released": "2024-03-24",
+  "requires_python": ">=3.8",
+  "resolution_markers": [
+   "(python_full_version < '3.9' and platform_machine != 'aarch64' and platform_machine != 'armv7l' and platform_machine != 'i686' and platform_machine != 'ppc64le' and platform_machine != 's390x' and platform_machine != 'x86_64') or (python_full_version < '3.9' and sys_platform != 'linux')",
+   "python_full_version < '3.9' and platform_machine == 'aarch64' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'armv7l' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'i686' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'ppc64le' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 's390x' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'x86_64' and sys_platform == 'linux'"
+  ],
+  "source": "https://pypi.org/simple",
+  "version": "5.0.0",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "dev",
+  "groups": [
+   "dev:dev"
+  ],
+  "licence": {
+   "source": "expression",
+   "spdx": "MIT",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:3459]",
+  "name": "pytest-cov",
+  "py38_only": false,
+  "released": "2025-09-09",
+  "requires_python": ">=3.9",
+  "resolution_markers": [
+   "python_full_version >= '3.14' and platform_machine == 'x86_64' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'i686' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'aarch64' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'armv7l' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'ppc64le' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 's390x' and sys_platform == 'linux'",
+   "(python_full_version >= '3.14' and platform_machine != 'aarch64' and platform_machine != 'armv7l' and platform_machine != 'i686' and platform_machine != 'ppc64le' and platform_machine != 's390x' and platform_machine != 'x86_64') or (python_full_version >= '3.14' and sys_platform != 'linux')",
+   "python_full_version >= '3.10' and python_full_version < '3.14'",
+   "python_full_version == '3.9.*'"
+  ],
+  "source": "https://pypi.org/simple",
+  "version": "7.0.0",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "dev",
+  "groups": [
+   "dev:dev"
+  ],
+  "licence": {
+   "source": "classifier",
+   "spdx": "MIT",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:3485]",
+  "name": "pytest-deadfixtures",
+  "py38_only": false,
+  "released": "2020-07-23",
+  "requires_python": "",
+  "resolution_markers": [],
+  "source": "https://pypi.org/simple",
+  "version": "2.2.1",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "dev",
+  "groups": [
+   "dev:dev"
+  ],
+  "licence": {
+   "source": "classifier",
+   "spdx": "MIT",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:3498]",
+  "name": "pytest-mock",
+  "py38_only": true,
+  "released": "2025-05-26",
+  "requires_python": ">=3.8",
+  "resolution_markers": [
+   "(python_full_version < '3.9' and platform_machine != 'aarch64' and platform_machine != 'armv7l' and platform_machine != 'i686' and platform_machine != 'ppc64le' and platform_machine != 's390x' and platform_machine != 'x86_64') or (python_full_version < '3.9' and sys_platform != 'linux')",
+   "python_full_version < '3.9' and platform_machine == 'aarch64' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'armv7l' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'i686' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'ppc64le' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 's390x' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'x86_64' and sys_platform == 'linux'"
+  ],
+  "source": "https://pypi.org/simple",
+  "version": "3.14.1",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "dev",
+  "groups": [
+   "dev:dev"
+  ],
+  "licence": {
+   "source": "classifier",
+   "spdx": "MIT",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:3519]",
+  "name": "pytest-mock",
+  "py38_only": false,
+  "released": "2025-09-16",
+  "requires_python": ">=3.9",
+  "resolution_markers": [
+   "python_full_version >= '3.14' and platform_machine == 'x86_64' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'i686' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'aarch64' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'armv7l' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'ppc64le' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 's390x' and sys_platform == 'linux'",
+   "(python_full_version >= '3.14' and platform_machine != 'aarch64' and platform_machine != 'armv7l' and platform_machine != 'i686' and platform_machine != 'ppc64le' and platform_machine != 's390x' and platform_machine != 'x86_64') or (python_full_version >= '3.14' and sys_platform != 'linux')",
+   "python_full_version >= '3.10' and python_full_version < '3.14'",
+   "python_full_version == '3.9.*'"
+  ],
+  "source": "https://pypi.org/simple",
+  "version": "3.15.1",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "runtime",
+  "groups": [
+   "runtime"
+  ],
+  "licence": {
+   "source": "classifier",
+   "spdx": "Apache-2.0 OR BSD-3-Clause",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:3542]",
+  "name": "python-dateutil",
+  "py38_only": false,
+  "released": "2024-03-01",
+  "requires_python": "!=3.0.*,!=3.1.*,!=3.2.*,>=2.7",
+  "resolution_markers": [],
+  "source": "https://pypi.org/simple",
+  "version": "2.9.0.post0",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "runtime",
+  "groups": [
+   "runtime"
+  ],
+  "licence": {
+   "source": "classifier",
+   "spdx": "MIT",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:3554]",
+  "name": "python-docx",
+  "py38_only": true,
+  "released": "2024-05-01",
+  "requires_python": ">=3.7",
+  "resolution_markers": [
+   "(python_full_version < '3.9' and platform_machine != 'aarch64' and platform_machine != 'armv7l' and platform_machine != 'i686' and platform_machine != 'ppc64le' and platform_machine != 's390x' and platform_machine != 'x86_64') or (python_full_version < '3.9' and sys_platform != 'linux')",
+   "python_full_version < '3.9' and platform_machine == 'aarch64' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'armv7l' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'i686' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'ppc64le' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 's390x' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'x86_64' and sys_platform == 'linux'"
+  ],
+  "source": "https://pypi.org/simple",
+  "version": "1.1.2",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "runtime",
+  "groups": [
+   "runtime"
+  ],
+  "licence": {
+   "source": "classifier",
+   "spdx": "MIT",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:3576]",
+  "name": "python-docx",
+  "py38_only": false,
+  "released": "2025-06-16",
+  "requires_python": ">=3.9",
+  "resolution_markers": [
+   "python_full_version >= '3.14' and platform_machine == 'x86_64' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'i686' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'aarch64' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'armv7l' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'ppc64le' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 's390x' and sys_platform == 'linux'",
+   "(python_full_version >= '3.14' and platform_machine != 'aarch64' and platform_machine != 'armv7l' and platform_machine != 'i686' and platform_machine != 'ppc64le' and platform_machine != 's390x' and platform_machine != 'x86_64') or (python_full_version >= '3.14' and sys_platform != 'linux')",
+   "python_full_version >= '3.10' and python_full_version < '3.14'",
+   "python_full_version == '3.9.*'"
+  ],
+  "source": "https://pypi.org/simple",
+  "version": "1.2.0",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "runtime",
+  "groups": [
+   "runtime"
+  ],
+  "licence": {
+   "source": "classifier",
+   "spdx": "MIT",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:3600]",
+  "name": "pytz",
+  "py38_only": true,
+  "released": "2025-03-25",
+  "requires_python": "",
+  "resolution_markers": [],
+  "source": "https://pypi.org/simple",
+  "version": "2025.2",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "runtime",
+  "groups": [
+   "extra:win",
+   "runtime"
+  ],
+  "licence": {
+   "source": "classifier",
+   "spdx": "PSF-2.0",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:3609]",
+  "name": "pywin32",
+  "py38_only": false,
+  "released": "2025-07-14",
+  "requires_python": "",
+  "resolution_markers": [],
+  "source": "https://pypi.org/simple",
+  "version": "311",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "runtime",
+  "groups": [
+   "runtime"
+  ],
+  "licence": {
+   "source": "classifier",
+   "spdx": "BSD-3-Clause",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:3636]",
+  "name": "pywinusb",
+  "py38_only": false,
+  "released": "2016-12-12",
+  "requires_python": "",
+  "resolution_markers": [],
+  "source": "https://pypi.org/simple",
+  "version": "0.4.2",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "dev",
+  "groups": [
+   "dev:dev"
+  ],
+  "licence": {
+   "source": "classifier",
+   "spdx": "MIT",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:3642]",
+  "name": "pyyaml",
+  "py38_only": false,
+  "released": "2025-09-25",
+  "requires_python": ">=3.8",
+  "resolution_markers": [],
+  "source": "https://pypi.org/simple",
+  "version": "6.0.3",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "runtime",
+  "groups": [
+   "runtime"
+  ],
+  "licence": {
+   "source": "classifier",
+   "spdx": "Apache-2.0",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:3722]",
+  "name": "requests",
+  "py38_only": true,
+  "released": "2025-06-09",
+  "requires_python": ">=3.8",
+  "resolution_markers": [
+   "(python_full_version < '3.9' and platform_machine != 'aarch64' and platform_machine != 'armv7l' and platform_machine != 'i686' and platform_machine != 'ppc64le' and platform_machine != 's390x' and platform_machine != 'x86_64') or (python_full_version < '3.9' and sys_platform != 'linux')",
+   "python_full_version < '3.9' and platform_machine == 'aarch64' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'armv7l' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'i686' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'ppc64le' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 's390x' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'x86_64' and sys_platform == 'linux'"
+  ],
+  "source": "https://pypi.org/simple",
+  "version": "2.32.4",
+  "vulnerability_ids": [
+   "GHSA-gc5v-m9x4-r6x2",
+   "PYSEC-2026-2275"
+  ]
+ },
+ {
+  "class": "runtime",
+  "groups": [
+   "runtime"
+  ],
+  "licence": {
+   "source": "classifier",
+   "spdx": "Apache-2.0",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:3746]",
+  "name": "requests",
+  "py38_only": false,
+  "released": "2025-08-18",
+  "requires_python": ">=3.9",
+  "resolution_markers": [
+   "python_full_version >= '3.14' and platform_machine == 'x86_64' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'i686' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'aarch64' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'armv7l' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'ppc64le' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 's390x' and sys_platform == 'linux'",
+   "(python_full_version >= '3.14' and platform_machine != 'aarch64' and platform_machine != 'armv7l' and platform_machine != 'i686' and platform_machine != 'ppc64le' and platform_machine != 's390x' and platform_machine != 'x86_64') or (python_full_version >= '3.14' and sys_platform != 'linux')",
+   "python_full_version >= '3.10' and python_full_version < '3.14'",
+   "python_full_version == '3.9.*'"
+  ],
+  "source": "https://pypi.org/simple",
+  "version": "2.32.5",
+  "vulnerability_ids": [
+   "GHSA-gc5v-m9x4-r6x2",
+   "PYSEC-2026-2275"
+  ]
+ },
+ {
+  "class": "dev",
+  "groups": [
+   "dev:dev"
+  ],
+  "licence": {
+   "source": "classifier",
+   "spdx": "MIT",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:3772]",
+  "name": "ruff",
+  "py38_only": false,
+  "released": "2025-09-04",
+  "requires_python": ">=3.7",
+  "resolution_markers": [],
+  "source": "https://pypi.org/simple",
+  "version": "0.12.12",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "runtime",
+  "groups": [
+   "dev:dev",
+   "runtime"
+  ],
+  "licence": {
+   "source": "classifier",
+   "spdx": "MIT",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:3798]",
+  "name": "setuptools",
+  "py38_only": true,
+  "released": "2024-04-13",
+  "requires_python": ">=3.8",
+  "resolution_markers": [
+   "(python_full_version < '3.9' and platform_machine != 'aarch64' and platform_machine != 'armv7l' and platform_machine != 'i686' and platform_machine != 'ppc64le' and platform_machine != 's390x' and platform_machine != 'x86_64') or (python_full_version < '3.9' and sys_platform != 'linux')",
+   "python_full_version < '3.9' and platform_machine == 'aarch64' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'armv7l' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'i686' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'ppc64le' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 's390x' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'x86_64' and sys_platform == 'linux'"
+  ],
+  "source": "https://pypi.org/simple",
+  "version": "69.5.1",
+  "vulnerability_ids": [
+   "GHSA-5rjg-fvgr-3xxf",
+   "GHSA-cx63-2mw6-8hw5",
+   "GHSA-h35f-9h28-mq5c",
+   "GHSA-xmj3-9gf7-h52w",
+   "PYSEC-2025-49",
+   "PYSEC-2026-1918",
+   "PYSEC-2026-3447"
+  ]
+ },
+ {
+  "class": "runtime",
+  "groups": [
+   "dev:dev",
+   "runtime"
+  ],
+  "licence": {
+   "source": "expression",
+   "spdx": "MIT",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:3816]",
+  "name": "setuptools",
+  "py38_only": false,
+  "released": "2025-05-27",
+  "requires_python": ">=3.9",
+  "resolution_markers": [
+   "python_full_version >= '3.14' and platform_machine == 'x86_64' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'i686' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'aarch64' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'armv7l' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'ppc64le' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 's390x' and sys_platform == 'linux'",
+   "(python_full_version >= '3.14' and platform_machine != 'aarch64' and platform_machine != 'armv7l' and platform_machine != 'i686' and platform_machine != 'ppc64le' and platform_machine != 's390x' and platform_machine != 'x86_64') or (python_full_version >= '3.14' and sys_platform != 'linux')",
+   "python_full_version >= '3.10' and python_full_version < '3.14'",
+   "python_full_version == '3.9.*'"
+  ],
+  "source": "https://pypi.org/simple",
+  "version": "80.9.0",
+  "vulnerability_ids": [
+   "GHSA-h35f-9h28-mq5c",
+   "GHSA-xmj3-9gf7-h52w",
+   "PYSEC-2026-3447"
+  ]
+ },
+ {
+  "class": "extra",
+  "groups": [
+   "extra:gui"
+  ],
+  "licence": {
+   "source": "free text",
+   "spdx": "LGPL-3.0-only OR GPL-2.0-only OR GPL-3.0-only",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:3856]",
+  "name": "shiboken6",
+  "py38_only": false,
+  "released": "2025-10-08",
+  "requires_python": "<3.14,>=3.9",
+  "resolution_markers": [
+   "python_full_version >= '3.14' and platform_machine == 'x86_64' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'i686' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'aarch64' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'armv7l' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'ppc64le' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 's390x' and sys_platform == 'linux'",
+   "(python_full_version >= '3.14' and platform_machine != 'aarch64' and platform_machine != 'armv7l' and platform_machine != 'i686' and platform_machine != 'ppc64le' and platform_machine != 's390x' and platform_machine != 'x86_64') or (python_full_version >= '3.14' and sys_platform != 'linux')",
+   "python_full_version >= '3.10' and python_full_version < '3.14'",
+   "python_full_version == '3.9.*'"
+  ],
+  "source": "https://pypi.org/simple",
+  "version": "6.10.0",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "extra",
+  "groups": [
+   "extra:gui"
+  ],
+  "licence": {
+   "source": "classifier",
+   "spdx": "License :: OSI Approved :: GNU Library or Lesser General Public License (LGPL) OR LicenseRef-Proprietary",
+   "verdict": "unknown"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:3836]",
+  "name": "shiboken6",
+  "py38_only": true,
+  "released": "2024-04-02",
+  "requires_python": "<3.13,>=3.8",
+  "resolution_markers": [
+   "(python_full_version < '3.9' and platform_machine != 'aarch64' and platform_machine != 'armv7l' and platform_machine != 'i686' and platform_machine != 'ppc64le' and platform_machine != 's390x' and platform_machine != 'x86_64') or (python_full_version < '3.9' and sys_platform != 'linux')",
+   "python_full_version < '3.9' and platform_machine == 'aarch64' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'armv7l' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'i686' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'ppc64le' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 's390x' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'x86_64' and sys_platform == 'linux'"
+  ],
+  "source": "https://pypi.org/simple",
+  "version": "6.6.3.1",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "runtime",
+  "groups": [
+   "runtime"
+  ],
+  "licence": {
+   "source": "classifier",
+   "spdx": "MIT",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:3879]",
+  "name": "six",
+  "py38_only": false,
+  "released": "2024-12-04",
+  "requires_python": "!=3.0.*,!=3.1.*,!=3.2.*,>=2.7",
+  "resolution_markers": [],
+  "source": "https://pypi.org/simple",
+  "version": "1.17.0",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "runtime",
+  "groups": [
+   "runtime"
+  ],
+  "licence": {
+   "source": "classifier",
+   "spdx": "LicenseRef-Proprietary",
+   "verdict": "problem"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:3888]",
+  "name": "sportident",
+  "py38_only": false,
+  "released": "2024-06-01",
+  "requires_python": "<4.0.0,>=3.8.1",
+  "resolution_markers": [],
+  "source": "https://pypi.org/simple",
+  "version": "1.2.8",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "dev",
+  "groups": [
+   "dev:dev"
+  ],
+  "licence": {
+   "source": "expression",
+   "spdx": "BSD-3-Clause",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:4012]",
+  "name": "striprtf",
+  "py38_only": false,
+  "released": "2025-03-27",
+  "requires_python": ">=3.8",
+  "resolution_markers": [],
+  "source": "https://pypi.org/simple",
+  "version": "0.0.29",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "dev",
+  "groups": [
+   "dev:dev"
+  ],
+  "licence": {
+   "source": "classifier",
+   "spdx": "MIT",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:4021]",
+  "name": "toml",
+  "py38_only": false,
+  "released": "2020-11-01",
+  "requires_python": ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*",
+  "resolution_markers": [],
+  "source": "https://pypi.org/simple",
+  "version": "0.10.2",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "dev",
+  "groups": [
+   "dev:dev"
+  ],
+  "licence": {
+   "source": "expression",
+   "spdx": "MIT",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:4030]",
+  "name": "tomli",
+  "py38_only": false,
+  "released": "2025-10-08",
+  "requires_python": ">=3.8",
+  "resolution_markers": [],
+  "source": "https://pypi.org/simple",
+  "version": "2.3.0",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "dev",
+  "groups": [
+   "dev:dev"
+  ],
+  "licence": {
+   "source": "classifier",
+   "spdx": "Apache-2.0",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:4079]",
+  "name": "types-polib",
+  "py38_only": true,
+  "released": "2024-12-21",
+  "requires_python": ">=3.8",
+  "resolution_markers": [
+   "(python_full_version < '3.9' and platform_machine != 'aarch64' and platform_machine != 'armv7l' and platform_machine != 'i686' and platform_machine != 'ppc64le' and platform_machine != 's390x' and platform_machine != 'x86_64') or (python_full_version < '3.9' and sys_platform != 'linux')",
+   "python_full_version < '3.9' and platform_machine == 'aarch64' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'armv7l' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'i686' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'ppc64le' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 's390x' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'x86_64' and sys_platform == 'linux'"
+  ],
+  "source": "https://pypi.org/simple",
+  "version": "1.2.0.20241221",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "dev",
+  "groups": [
+   "dev:dev"
+  ],
+  "licence": {
+   "source": "expression",
+   "spdx": "Apache-2.0",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:4097]",
+  "name": "types-polib",
+  "py38_only": false,
+  "released": "2025-04-01",
+  "requires_python": ">=3.9",
+  "resolution_markers": [
+   "python_full_version >= '3.14' and platform_machine == 'x86_64' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'i686' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'aarch64' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'armv7l' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'ppc64le' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 's390x' and sys_platform == 'linux'",
+   "(python_full_version >= '3.14' and platform_machine != 'aarch64' and platform_machine != 'armv7l' and platform_machine != 'i686' and platform_machine != 'ppc64le' and platform_machine != 's390x' and platform_machine != 'x86_64') or (python_full_version >= '3.14' and sys_platform != 'linux')",
+   "python_full_version >= '3.10' and python_full_version < '3.14'",
+   "python_full_version == '3.9.*'"
+  ],
+  "source": "https://pypi.org/simple",
+  "version": "1.2.0.20250401",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "dev",
+  "groups": [
+   "dev:dev"
+  ],
+  "licence": {
+   "source": "classifier",
+   "spdx": "Apache-2.0",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:4117]",
+  "name": "types-python-dateutil",
+  "py38_only": true,
+  "released": "2024-12-06",
+  "requires_python": ">=3.8",
+  "resolution_markers": [
+   "(python_full_version < '3.9' and platform_machine != 'aarch64' and platform_machine != 'armv7l' and platform_machine != 'i686' and platform_machine != 'ppc64le' and platform_machine != 's390x' and platform_machine != 'x86_64') or (python_full_version < '3.9' and sys_platform != 'linux')",
+   "python_full_version < '3.9' and platform_machine == 'aarch64' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'armv7l' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'i686' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'ppc64le' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 's390x' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'x86_64' and sys_platform == 'linux'"
+  ],
+  "source": "https://pypi.org/simple",
+  "version": "2.9.0.20241206",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "dev",
+  "groups": [
+   "dev:dev"
+  ],
+  "licence": {
+   "source": "expression",
+   "spdx": "Apache-2.0",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:4135]",
+  "name": "types-python-dateutil",
+  "py38_only": false,
+  "released": "2025-10-08",
+  "requires_python": ">=3.9",
+  "resolution_markers": [
+   "python_full_version >= '3.14' and platform_machine == 'x86_64' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'i686' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'aarch64' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'armv7l' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'ppc64le' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 's390x' and sys_platform == 'linux'",
+   "(python_full_version >= '3.14' and platform_machine != 'aarch64' and platform_machine != 'armv7l' and platform_machine != 'i686' and platform_machine != 'ppc64le' and platform_machine != 's390x' and platform_machine != 'x86_64') or (python_full_version >= '3.14' and sys_platform != 'linux')",
+   "python_full_version >= '3.10' and python_full_version < '3.14'",
+   "python_full_version == '3.9.*'"
+  ],
+  "source": "https://pypi.org/simple",
+  "version": "2.9.0.20251008",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "dev",
+  "groups": [
+   "dev:dev"
+  ],
+  "licence": {
+   "source": "classifier",
+   "spdx": "Apache-2.0",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:4155]",
+  "name": "types-pywin32",
+  "py38_only": true,
+  "released": "2024-12-21",
+  "requires_python": ">=3.8",
+  "resolution_markers": [
+   "(python_full_version < '3.9' and platform_machine != 'aarch64' and platform_machine != 'armv7l' and platform_machine != 'i686' and platform_machine != 'ppc64le' and platform_machine != 's390x' and platform_machine != 'x86_64') or (python_full_version < '3.9' and sys_platform != 'linux')",
+   "python_full_version < '3.9' and platform_machine == 'aarch64' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'armv7l' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'i686' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'ppc64le' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 's390x' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'x86_64' and sys_platform == 'linux'"
+  ],
+  "source": "https://pypi.org/simple",
+  "version": "308.0.0.20241221",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "dev",
+  "groups": [
+   "dev:dev"
+  ],
+  "licence": {
+   "source": "expression",
+   "spdx": "Apache-2.0",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:4173]",
+  "name": "types-pywin32",
+  "py38_only": false,
+  "released": "2025-10-08",
+  "requires_python": ">=3.9",
+  "resolution_markers": [
+   "python_full_version >= '3.14' and platform_machine == 'x86_64' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'i686' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'aarch64' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'armv7l' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'ppc64le' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 's390x' and sys_platform == 'linux'",
+   "(python_full_version >= '3.14' and platform_machine != 'aarch64' and platform_machine != 'armv7l' and platform_machine != 'i686' and platform_machine != 'ppc64le' and platform_machine != 's390x' and platform_machine != 'x86_64') or (python_full_version >= '3.14' and sys_platform != 'linux')",
+   "python_full_version >= '3.10' and python_full_version < '3.14'",
+   "python_full_version == '3.9.*'"
+  ],
+  "source": "https://pypi.org/simple",
+  "version": "311.0.0.20251008",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "dev",
+  "groups": [
+   "dev:dev"
+  ],
+  "licence": {
+   "source": "classifier",
+   "spdx": "Apache-2.0",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:4193]",
+  "name": "types-requests",
+  "py38_only": true,
+  "released": "2024-10-16",
+  "requires_python": ">=3.8",
+  "resolution_markers": [
+   "(python_full_version < '3.9' and platform_machine != 'aarch64' and platform_machine != 'armv7l' and platform_machine != 'i686' and platform_machine != 'ppc64le' and platform_machine != 's390x' and platform_machine != 'x86_64') or (python_full_version < '3.9' and sys_platform != 'linux')",
+   "python_full_version < '3.9' and platform_machine == 'aarch64' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'armv7l' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'i686' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'ppc64le' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 's390x' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'x86_64' and sys_platform == 'linux'"
+  ],
+  "source": "https://pypi.org/simple",
+  "version": "2.32.0.20241016",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "dev",
+  "groups": [
+   "dev:dev"
+  ],
+  "licence": {
+   "source": "expression",
+   "spdx": "Apache-2.0",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:4214]",
+  "name": "types-requests",
+  "py38_only": false,
+  "released": "2025-09-13",
+  "requires_python": ">=3.9",
+  "resolution_markers": [
+   "python_full_version >= '3.14' and platform_machine == 'x86_64' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'i686' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'aarch64' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'armv7l' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'ppc64le' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 's390x' and sys_platform == 'linux'",
+   "(python_full_version >= '3.14' and platform_machine != 'aarch64' and platform_machine != 'armv7l' and platform_machine != 'i686' and platform_machine != 'ppc64le' and platform_machine != 's390x' and platform_machine != 'x86_64') or (python_full_version >= '3.14' and sys_platform != 'linux')",
+   "python_full_version >= '3.10' and python_full_version < '3.14'",
+   "python_full_version == '3.9.*'"
+  ],
+  "source": "https://pypi.org/simple",
+  "version": "2.32.4.20250913",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "dev",
+  "groups": [
+   "dev:dev"
+  ],
+  "licence": {
+   "source": "classifier",
+   "spdx": "Apache-2.0",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:4237]",
+  "name": "types-six",
+  "py38_only": true,
+  "released": "2024-12-05",
+  "requires_python": ">=3.8",
+  "resolution_markers": [
+   "(python_full_version < '3.9' and platform_machine != 'aarch64' and platform_machine != 'armv7l' and platform_machine != 'i686' and platform_machine != 'ppc64le' and platform_machine != 's390x' and platform_machine != 'x86_64') or (python_full_version < '3.9' and sys_platform != 'linux')",
+   "python_full_version < '3.9' and platform_machine == 'aarch64' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'armv7l' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'i686' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'ppc64le' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 's390x' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'x86_64' and sys_platform == 'linux'"
+  ],
+  "source": "https://pypi.org/simple",
+  "version": "1.17.0.20241205",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "dev",
+  "groups": [
+   "dev:dev"
+  ],
+  "licence": {
+   "source": "expression",
+   "spdx": "Apache-2.0",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:4255]",
+  "name": "types-six",
+  "py38_only": false,
+  "released": "2025-10-09",
+  "requires_python": ">=3.9",
+  "resolution_markers": [
+   "python_full_version >= '3.14' and platform_machine == 'x86_64' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'i686' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'aarch64' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'armv7l' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'ppc64le' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 's390x' and sys_platform == 'linux'",
+   "(python_full_version >= '3.14' and platform_machine != 'aarch64' and platform_machine != 'armv7l' and platform_machine != 'i686' and platform_machine != 'ppc64le' and platform_machine != 's390x' and platform_machine != 'x86_64') or (python_full_version >= '3.14' and sys_platform != 'linux')",
+   "python_full_version >= '3.10' and python_full_version < '3.14'",
+   "python_full_version == '3.9.*'"
+  ],
+  "source": "https://pypi.org/simple",
+  "version": "1.17.0.20251009",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "runtime",
+  "groups": [
+   "dev:dev",
+   "runtime"
+  ],
+  "licence": {
+   "source": "expression",
+   "spdx": "PSF-2.0",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:4275]",
+  "name": "typing-extensions",
+  "py38_only": true,
+  "released": "2025-04-10",
+  "requires_python": ">=3.8",
+  "resolution_markers": [
+   "(python_full_version < '3.9' and platform_machine != 'aarch64' and platform_machine != 'armv7l' and platform_machine != 'i686' and platform_machine != 'ppc64le' and platform_machine != 's390x' and platform_machine != 'x86_64') or (python_full_version < '3.9' and sys_platform != 'linux')",
+   "python_full_version < '3.9' and platform_machine == 'aarch64' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'armv7l' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'i686' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'ppc64le' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 's390x' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'x86_64' and sys_platform == 'linux'"
+  ],
+  "source": "https://pypi.org/simple",
+  "version": "4.13.2",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "runtime",
+  "groups": [
+   "dev:dev",
+   "runtime"
+  ],
+  "licence": {
+   "source": "expression",
+   "spdx": "PSF-2.0",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:4293]",
+  "name": "typing-extensions",
+  "py38_only": false,
+  "released": "2025-08-25",
+  "requires_python": ">=3.9",
+  "resolution_markers": [
+   "python_full_version >= '3.14' and platform_machine == 'x86_64' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'i686' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'aarch64' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'armv7l' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'ppc64le' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 's390x' and sys_platform == 'linux'",
+   "(python_full_version >= '3.14' and platform_machine != 'aarch64' and platform_machine != 'armv7l' and platform_machine != 'i686' and platform_machine != 'ppc64le' and platform_machine != 's390x' and platform_machine != 'x86_64') or (python_full_version >= '3.14' and sys_platform != 'linux')",
+   "python_full_version >= '3.10' and python_full_version < '3.14'",
+   "python_full_version == '3.9.*'"
+  ],
+  "source": "https://pypi.org/simple",
+  "version": "4.15.0",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "runtime",
+  "groups": [
+   "dev:dev",
+   "runtime"
+  ],
+  "licence": {
+   "source": "classifier",
+   "spdx": "MIT",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:4313]",
+  "name": "urllib3",
+  "py38_only": true,
+  "released": "2024-09-12",
+  "requires_python": ">=3.8",
+  "resolution_markers": [
+   "(python_full_version < '3.9' and platform_machine != 'aarch64' and platform_machine != 'armv7l' and platform_machine != 'i686' and platform_machine != 'ppc64le' and platform_machine != 's390x' and platform_machine != 'x86_64') or (python_full_version < '3.9' and sys_platform != 'linux')",
+   "python_full_version < '3.9' and platform_machine == 'aarch64' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'armv7l' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'i686' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'ppc64le' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 's390x' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'x86_64' and sys_platform == 'linux'"
+  ],
+  "source": "https://pypi.org/simple",
+  "version": "2.2.3",
+  "vulnerability_ids": [
+   "GHSA-2xpw-w6gg-jr37",
+   "GHSA-38jv-5279-wg99",
+   "GHSA-48p4-8xcf-vxj5",
+   "GHSA-8988-9cw3-xx77",
+   "GHSA-gm62-xv2j-4w53",
+   "GHSA-pq67-6m6q-mj2v",
+   "GHSA-qccp-gfcp-xxvc",
+   "GHSA-vxq7-64xx-v4gw",
+   "PYSEC-2026-141",
+   "PYSEC-2026-1994",
+   "PYSEC-2026-1996",
+   "PYSEC-2026-1997",
+   "PYSEC-2026-1998",
+   "PYSEC-2026-1999",
+   "PYSEC-2026-4175",
+   "PYSEC-2026-4177"
+  ]
+ },
+ {
+  "class": "runtime",
+  "groups": [
+   "dev:dev",
+   "runtime"
+  ],
+  "licence": {
+   "source": "expression",
+   "spdx": "MIT",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:4331]",
+  "name": "urllib3",
+  "py38_only": false,
+  "released": "2025-06-18",
+  "requires_python": ">=3.9",
+  "resolution_markers": [
+   "python_full_version >= '3.14' and platform_machine == 'x86_64' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'i686' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'aarch64' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'armv7l' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'ppc64le' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 's390x' and sys_platform == 'linux'",
+   "(python_full_version >= '3.14' and platform_machine != 'aarch64' and platform_machine != 'armv7l' and platform_machine != 'i686' and platform_machine != 'ppc64le' and platform_machine != 's390x' and platform_machine != 'x86_64') or (python_full_version >= '3.14' and sys_platform != 'linux')",
+   "python_full_version >= '3.10' and python_full_version < '3.14'",
+   "python_full_version == '3.9.*'"
+  ],
+  "source": "https://pypi.org/simple",
+  "version": "2.5.0",
+  "vulnerability_ids": [
+   "GHSA-2xpw-w6gg-jr37",
+   "GHSA-38jv-5279-wg99",
+   "GHSA-8988-9cw3-xx77",
+   "GHSA-gm62-xv2j-4w53",
+   "GHSA-qccp-gfcp-xxvc",
+   "GHSA-vxq7-64xx-v4gw",
+   "PYSEC-2026-141",
+   "PYSEC-2026-1994",
+   "PYSEC-2026-1996",
+   "PYSEC-2026-1998",
+   "PYSEC-2026-4175",
+   "PYSEC-2026-4177"
+  ]
+ },
+ {
+  "class": "dev",
+  "groups": [
+   "dev:dev"
+  ],
+  "licence": {
+   "source": "classifier",
+   "spdx": "MIT",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:4351]",
+  "name": "wheel",
+  "py38_only": true,
+  "released": "2024-03-11",
+  "requires_python": ">=3.8",
+  "resolution_markers": [],
+  "source": "https://pypi.org/simple",
+  "version": "0.43.0",
+  "vulnerability_ids": [
+   "GHSA-8rrh-rw8j-w5fx",
+   "PYSEC-2026-2047"
+  ]
+ },
+ {
+  "class": "runtime",
+  "groups": [
+   "runtime"
+  ],
+  "licence": {
+   "source": "classifier",
+   "spdx": "Apache-2.0",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:4360]",
+  "name": "yarl",
+  "py38_only": true,
+  "released": "2024-10-13",
+  "requires_python": ">=3.8",
+  "resolution_markers": [
+   "(python_full_version < '3.9' and platform_machine != 'aarch64' and platform_machine != 'armv7l' and platform_machine != 'i686' and platform_machine != 'ppc64le' and platform_machine != 's390x' and platform_machine != 'x86_64') or (python_full_version < '3.9' and sys_platform != 'linux')",
+   "python_full_version < '3.9' and platform_machine == 'aarch64' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'armv7l' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'i686' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'ppc64le' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 's390x' and sys_platform == 'linux'",
+   "python_full_version < '3.9' and platform_machine == 'x86_64' and sys_platform == 'linux'"
+  ],
+  "source": "https://pypi.org/simple",
+  "version": "1.15.2",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "runtime",
+  "groups": [
+   "runtime"
+  ],
+  "licence": {
+   "source": "classifier",
+   "spdx": "Apache-2.0",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:4479]",
+  "name": "yarl",
+  "py38_only": false,
+  "released": "2025-10-06",
+  "requires_python": ">=3.9",
+  "resolution_markers": [
+   "python_full_version >= '3.14' and platform_machine == 'x86_64' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'i686' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'aarch64' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'armv7l' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 'ppc64le' and sys_platform == 'linux'",
+   "python_full_version >= '3.14' and platform_machine == 's390x' and sys_platform == 'linux'",
+   "(python_full_version >= '3.14' and platform_machine != 'aarch64' and platform_machine != 'armv7l' and platform_machine != 'i686' and platform_machine != 'ppc64le' and platform_machine != 's390x' and platform_machine != 'x86_64') or (python_full_version >= '3.14' and sys_platform != 'linux')",
+   "python_full_version >= '3.10' and python_full_version < '3.14'",
+   "python_full_version == '3.9.*'"
+  ],
+  "source": "https://pypi.org/simple",
+  "version": "1.22.0",
+  "vulnerability_ids": []
+ },
+ {
+  "class": "runtime",
+  "groups": [
+   "runtime"
+  ],
+  "licence": {
+   "source": "classifier",
+   "spdx": "MIT",
+   "verdict": "ok"
+  },
+  "lock": "[код: pysport@b548c35 uv.lock:4632]",
+  "name": "zipp",
+  "py38_only": true,
+  "released": "2024-09-13",
+  "requires_python": ">=3.8",
+  "resolution_markers": [],
+  "source": "https://pypi.org/simple",
+  "version": "3.20.2",
+  "vulnerability_ids": []
+ }
+]

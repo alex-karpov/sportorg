@@ -1,0 +1,1462 @@
+{
+ "counts": {
+  "actions": 82,
+  "distinct_action_names": 82,
+  "duplicate_class_names": 0,
+  "nodes": 102,
+  "registered_classes": 84,
+  "resolved": 82,
+  "separators": 5,
+  "submenus": 15,
+  "unresolved": 0,
+  "unused_classes": 2,
+  "with_feature": 12,
+  "with_shortcut": 35
+ },
+ "duplicate_class_names": [],
+ "items": [
+  {
+   "action": null,
+   "class_line": null,
+   "extra": {},
+   "kind": "submenu",
+   "path": [
+    "File"
+   ],
+   "shortcut": "",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:68]",
+   "title_key": "File"
+  },
+  {
+   "action": "NewAction",
+   "class_line": 103,
+   "extra": {
+    "icon": "config.icon_dir('file.svg')"
+   },
+   "kind": "action",
+   "path": [
+    "File",
+    "New"
+   ],
+   "shortcut": "Ctrl+N",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:71]",
+   "title_key": "New"
+  },
+  {
+   "action": "SaveAction",
+   "class_line": 108,
+   "extra": {
+    "icon": "config.icon_dir('save.svg')"
+   },
+   "kind": "action",
+   "path": [
+    "File",
+    "Save"
+   ],
+   "shortcut": "Ctrl+S",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:77]",
+   "title_key": "Save"
+  },
+  {
+   "action": "OpenAction",
+   "class_line": 113,
+   "extra": {
+    "icon": "config.icon_dir('folder.svg')"
+   },
+   "kind": "action",
+   "path": [
+    "File",
+    "Open"
+   ],
+   "shortcut": "Ctrl+O",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:83]",
+   "title_key": "Open"
+  },
+  {
+   "action": "SaveAsAction",
+   "class_line": 121,
+   "extra": {
+    "icon": "config.icon_dir('save.svg')"
+   },
+   "kind": "action",
+   "path": [
+    "File",
+    "Save As"
+   ],
+   "shortcut": "Ctrl+Shift+S",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:89]",
+   "title_key": "Save As"
+  },
+  {
+   "action": null,
+   "class_line": null,
+   "extra": {},
+   "kind": "separator",
+   "path": [
+    "File",
+    "<separator>"
+   ],
+   "shortcut": "",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:95]",
+   "title_key": ""
+  },
+  {
+   "action": "SettingsAction",
+   "class_line": 157,
+   "extra": {
+    "icon": "config.icon_dir('settings.svg')"
+   },
+   "kind": "action",
+   "path": [
+    "File",
+    "Settings"
+   ],
+   "shortcut": "Ctrl+Alt+S",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:98]",
+   "title_key": "Settings"
+  },
+  {
+   "action": "EventSettingsAction",
+   "class_line": 162,
+   "extra": {
+    "icon": "config.icon_dir('form.svg')"
+   },
+   "kind": "action",
+   "path": [
+    "File",
+    "Event Settings"
+   ],
+   "shortcut": "Ctrl+I",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:104]",
+   "title_key": "Event Settings"
+  },
+  {
+   "action": null,
+   "class_line": null,
+   "extra": {},
+   "kind": "separator",
+   "path": [
+    "File",
+    "<separator>"
+   ],
+   "shortcut": "",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:110]",
+   "title_key": ""
+  },
+  {
+   "action": null,
+   "class_line": null,
+   "extra": {},
+   "kind": "submenu",
+   "path": [
+    "File",
+    "Import"
+   ],
+   "shortcut": "",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:113]",
+   "title_key": "Import"
+  },
+  {
+   "action": "ImportSportOrgAction",
+   "class_line": 926,
+   "extra": {},
+   "kind": "action",
+   "path": [
+    "File",
+    "Import",
+    "Import from SportOrg file"
+   ],
+   "shortcut": "",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:116]",
+   "title_key": "Import from SportOrg file"
+  },
+  {
+   "action": "CSVWinorientImportAction",
+   "class_line": 167,
+   "extra": {
+    "feature": "settings.FEATURE_WINORIENT",
+    "icon": "config.icon_dir('csv.svg')"
+   },
+   "kind": "action",
+   "path": [
+    "File",
+    "Import",
+    "CSV Winorient"
+   ],
+   "shortcut": "",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:120]",
+   "title_key": "CSV Winorient"
+  },
+  {
+   "action": "WDBWinorientImportAction",
+   "class_line": 203,
+   "extra": {
+    "feature": "settings.FEATURE_WINORIENT"
+   },
+   "kind": "action",
+   "path": [
+    "File",
+    "Import",
+    "WDB Winorient"
+   ],
+   "shortcut": "",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:126]",
+   "title_key": "WDB Winorient"
+  },
+  {
+   "action": "SFRXImportAction",
+   "class_line": 185,
+   "extra": {
+    "feature": "settings.FEATURE_SFR"
+   },
+   "kind": "action",
+   "path": [
+    "File",
+    "Import",
+    "SFRX"
+   ],
+   "shortcut": "",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:131]",
+   "title_key": "SFRX"
+  },
+  {
+   "action": "OcadTXTv8ImportAction",
+   "class_line": 222,
+   "extra": {},
+   "kind": "action",
+   "path": [
+    "File",
+    "Import",
+    "Ocad txt v8"
+   ],
+   "shortcut": "",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:136]",
+   "title_key": "Ocad txt v8"
+  },
+  {
+   "action": "IOFEntryListImportAction",
+   "class_line": 326,
+   "extra": {},
+   "kind": "action",
+   "path": [
+    "File",
+    "Import",
+    "IOF xml"
+   ],
+   "shortcut": "",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:140]",
+   "title_key": "IOF xml"
+  },
+  {
+   "action": "RecoverySportidentMasterCsvAction",
+   "class_line": 415,
+   "extra": {
+    "feature": "settings.FEATURE_SPORTIDENT"
+   },
+   "kind": "action",
+   "path": [
+    "File",
+    "Import",
+    "SPORTident master station CSV"
+   ],
+   "shortcut": "",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:144]",
+   "title_key": "SPORTident master station CSV"
+  },
+  {
+   "action": "RecoverySportorgSiLogAction",
+   "class_line": 404,
+   "extra": {
+    "feature": "settings.FEATURE_SPORTIDENT"
+   },
+   "kind": "action",
+   "path": [
+    "File",
+    "Import",
+    "SportOrg SI log"
+   ],
+   "shortcut": "",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:149]",
+   "title_key": "SportOrg SI log"
+  },
+  {
+   "action": "RecoveryOrgeoFinishCsvAction",
+   "class_line": 426,
+   "extra": {},
+   "kind": "action",
+   "path": [
+    "File",
+    "Import",
+    "Orgeo.ru CSV"
+   ],
+   "shortcut": "",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:154]",
+   "title_key": "Orgeo.ru CSV"
+  },
+  {
+   "action": "RecoverySportorgHtmlAction",
+   "class_line": 386,
+   "extra": {},
+   "kind": "action",
+   "path": [
+    "File",
+    "Import",
+    "SportOrg HTML"
+   ],
+   "shortcut": "",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:158]",
+   "title_key": "SportOrg HTML"
+  },
+  {
+   "action": "ImportPersonsAction",
+   "class_line": 728,
+   "extra": {},
+   "kind": "action",
+   "path": [
+    "File",
+    "Import",
+    "Import persons from table (clipboard)"
+   ],
+   "shortcut": "",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:162]",
+   "title_key": "Import persons from table (clipboard)"
+  },
+  {
+   "action": null,
+   "class_line": null,
+   "extra": {},
+   "kind": "submenu",
+   "path": [
+    "File",
+    "Export"
+   ],
+   "shortcut": "",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:168]",
+   "title_key": "Export"
+  },
+  {
+   "action": "WDBWinorientExportAction",
+   "class_line": 240,
+   "extra": {
+    "feature": "settings.FEATURE_WINORIENT"
+   },
+   "kind": "action",
+   "path": [
+    "File",
+    "Export",
+    "WDB Winorient"
+   ],
+   "shortcut": "",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:171]",
+   "title_key": "WDB Winorient"
+  },
+  {
+   "action": null,
+   "class_line": null,
+   "extra": {},
+   "kind": "submenu",
+   "path": [
+    "File",
+    "Export",
+    "IOF xml"
+   ],
+   "shortcut": "",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:176]",
+   "title_key": "IOF xml"
+  },
+  {
+   "action": "IOFResultListExportAction",
+   "class_line": 267,
+   "extra": {},
+   "kind": "action",
+   "path": [
+    "File",
+    "Export",
+    "IOF xml",
+    "ResultList"
+   ],
+   "shortcut": "",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:179]",
+   "title_key": "ResultList"
+  },
+  {
+   "action": "IOFResultListAllSplitsExportAction",
+   "class_line": 286,
+   "extra": {},
+   "kind": "action",
+   "path": [
+    "File",
+    "Export",
+    "IOF xml",
+    "ResultListAllSplits"
+   ],
+   "shortcut": "",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:183]",
+   "title_key": "ResultListAllSplits"
+  },
+  {
+   "action": "IOFEntryListExportAction",
+   "class_line": 307,
+   "extra": {},
+   "kind": "action",
+   "path": [
+    "File",
+    "Export",
+    "IOF xml",
+    "EntrytList"
+   ],
+   "shortcut": "",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:187]",
+   "title_key": "EntrytList"
+  },
+  {
+   "action": "IOFCompetitorListExportAction",
+   "class_line": 363,
+   "extra": {},
+   "kind": "action",
+   "path": [
+    "File",
+    "Export",
+    "IOF xml",
+    "CompetitorList"
+   ],
+   "shortcut": "",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:191]",
+   "title_key": "CompetitorList"
+  },
+  {
+   "action": "IOFStartListExportAction",
+   "class_line": 344,
+   "extra": {},
+   "kind": "action",
+   "path": [
+    "File",
+    "Export",
+    "IOF xml",
+    "StartList"
+   ],
+   "shortcut": "",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:195]",
+   "title_key": "StartList"
+  },
+  {
+   "action": "SFRExportAction",
+   "class_line": 987,
+   "extra": {
+    "feature": "settings.FEATURE_SFR"
+   },
+   "kind": "action",
+   "path": [
+    "File",
+    "Export",
+    "SFRX"
+   ],
+   "shortcut": "",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:201]",
+   "title_key": "SFRX"
+  },
+  {
+   "action": null,
+   "class_line": null,
+   "extra": {},
+   "kind": "submenu",
+   "path": [
+    "Edit"
+   ],
+   "shortcut": "",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:210]",
+   "title_key": "Edit"
+  },
+  {
+   "action": "AddObjectAction",
+   "class_line": 437,
+   "extra": {
+    "icon": "config.icon_dir('add.svg')",
+    "tabs": "list(range(5))"
+   },
+   "kind": "action",
+   "path": [
+    "Edit",
+    "Add object"
+   ],
+   "shortcut": "['insert', 'i']",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:213]",
+   "title_key": "Add object"
+  },
+  {
+   "action": "DeleteAction",
+   "class_line": 442,
+   "extra": {
+    "icon": "config.icon_dir('delete.svg')",
+    "tabs": "list(range(5))"
+   },
+   "kind": "action",
+   "path": [
+    "Edit",
+    "Delete"
+   ],
+   "shortcut": "Del",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:220]",
+   "title_key": "Delete"
+  },
+  {
+   "action": "CopyAction",
+   "class_line": 131,
+   "extra": {
+    "tabs": "list(range(5))"
+   },
+   "kind": "action",
+   "path": [
+    "Edit",
+    "Copy"
+   ],
+   "shortcut": "Ctrl+C",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:227]",
+   "title_key": "Copy"
+  },
+  {
+   "action": "DuplicateAction",
+   "class_line": 145,
+   "extra": {
+    "tabs": "list(range(5))"
+   },
+   "kind": "action",
+   "path": [
+    "Edit",
+    "Duplicate"
+   ],
+   "shortcut": "Ctrl+D",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:233]",
+   "title_key": "Duplicate"
+  },
+  {
+   "action": "TextExchangeAction",
+   "class_line": 447,
+   "extra": {},
+   "kind": "action",
+   "path": [
+    "Edit",
+    "Text exchange"
+   ],
+   "shortcut": "Ctrl+T",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:239]",
+   "title_key": "Text exchange"
+  },
+  {
+   "action": "MassEditAction",
+   "class_line": 454,
+   "extra": {
+    "tabs": "[0, 2, 4]"
+   },
+   "kind": "action",
+   "path": [
+    "Edit",
+    "Mass edit"
+   ],
+   "shortcut": "Ctrl+E",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:244]",
+   "title_key": "Mass edit"
+  },
+  {
+   "action": null,
+   "class_line": null,
+   "extra": {},
+   "kind": "submenu",
+   "path": [
+    "View"
+   ],
+   "shortcut": "",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:252]",
+   "title_key": "View"
+  },
+  {
+   "action": "RefreshAction",
+   "class_line": 470,
+   "extra": {
+    "icon": "config.icon_dir('refresh.svg')"
+   },
+   "kind": "action",
+   "path": [
+    "View",
+    "Refresh"
+   ],
+   "shortcut": "F5",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:255]",
+   "title_key": "Refresh"
+  },
+  {
+   "action": "FilterAction",
+   "class_line": 475,
+   "extra": {
+    "icon": "config.icon_dir('filter.svg')",
+    "tabs": "list(range(5))"
+   },
+   "kind": "action",
+   "path": [
+    "View",
+    "Filter"
+   ],
+   "shortcut": "F2",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:261]",
+   "title_key": "Filter"
+  },
+  {
+   "action": "FilterResetAction",
+   "class_line": 482,
+   "extra": {
+    "icon": "config.icon_dir('filter_reset.svg')",
+    "tabs": "list(range(5))"
+   },
+   "kind": "action",
+   "path": [
+    "View",
+    "Filter reset"
+   ],
+   "shortcut": "Ctrl+F2",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:268]",
+   "title_key": "Filter reset"
+  },
+  {
+   "action": "SearchAction",
+   "class_line": 490,
+   "extra": {
+    "icon": "config.icon_dir('search.svg')",
+    "tabs": "list(range(5))"
+   },
+   "kind": "action",
+   "path": [
+    "View",
+    "Search"
+   ],
+   "shortcut": "Ctrl+F",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:275]",
+   "title_key": "Search"
+  },
+  {
+   "action": null,
+   "class_line": null,
+   "extra": {},
+   "kind": "separator",
+   "path": [
+    "View",
+    "<separator>"
+   ],
+   "shortcut": "",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:282]",
+   "title_key": ""
+  },
+  {
+   "action": "ToStartPreparationAction",
+   "class_line": 499,
+   "extra": {},
+   "kind": "action",
+   "path": [
+    "View",
+    "Start Preparation"
+   ],
+   "shortcut": "Ctrl+1",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:285]",
+   "title_key": "Start Preparation"
+  },
+  {
+   "action": "ToRaceResultsAction",
+   "class_line": 504,
+   "extra": {},
+   "kind": "action",
+   "path": [
+    "View",
+    "Race Results"
+   ],
+   "shortcut": "Ctrl+2",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:290]",
+   "title_key": "Race Results"
+  },
+  {
+   "action": "ToGroupsAction",
+   "class_line": 509,
+   "extra": {},
+   "kind": "action",
+   "path": [
+    "View",
+    "Groups"
+   ],
+   "shortcut": "Ctrl+3",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:295]",
+   "title_key": "Groups"
+  },
+  {
+   "action": "ToCoursesAction",
+   "class_line": 514,
+   "extra": {},
+   "kind": "action",
+   "path": [
+    "View",
+    "Courses"
+   ],
+   "shortcut": "Ctrl+4",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:300]",
+   "title_key": "Courses"
+  },
+  {
+   "action": "ToTeamsAction",
+   "class_line": 519,
+   "extra": {},
+   "kind": "action",
+   "path": [
+    "View",
+    "Teams"
+   ],
+   "shortcut": "Ctrl+5",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:305]",
+   "title_key": "Teams"
+  },
+  {
+   "action": "ToLogsAction",
+   "class_line": 524,
+   "extra": {},
+   "kind": "action",
+   "path": [
+    "View",
+    "Logs"
+   ],
+   "shortcut": "Ctrl+6",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:310]",
+   "title_key": "Logs"
+  },
+  {
+   "action": null,
+   "class_line": null,
+   "extra": {},
+   "kind": "submenu",
+   "path": [
+    "Start Preparation"
+   ],
+   "shortcut": "",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:317]",
+   "title_key": "Start Preparation"
+  },
+  {
+   "action": "StartPreparationAction",
+   "class_line": 529,
+   "extra": {},
+   "kind": "action",
+   "path": [
+    "Start Preparation",
+    "Start Preparation"
+   ],
+   "shortcut": "F6",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:320]",
+   "title_key": "Start Preparation"
+  },
+  {
+   "action": "GuessCoursesAction",
+   "class_line": 535,
+   "extra": {},
+   "kind": "action",
+   "path": [
+    "Start Preparation",
+    "Guess courses"
+   ],
+   "shortcut": "",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:325]",
+   "title_key": "Guess courses"
+  },
+  {
+   "action": "GuessCorridorsAction",
+   "class_line": 541,
+   "extra": {},
+   "kind": "action",
+   "path": [
+    "Start Preparation",
+    "Guess corridors"
+   ],
+   "shortcut": "",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:329]",
+   "title_key": "Guess corridors"
+  },
+  {
+   "action": "RelayNumberAction",
+   "class_line": 547,
+   "extra": {
+    "tabs": "[0]"
+   },
+   "kind": "action",
+   "path": [
+    "Start Preparation",
+    "Relay number assign mode"
+   ],
+   "shortcut": "",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:333]",
+   "title_key": "Relay number assign mode"
+  },
+  {
+   "action": "StartTimeChangeAction",
+   "class_line": 559,
+   "extra": {},
+   "kind": "action",
+   "path": [
+    "Start Preparation",
+    "Start time change"
+   ],
+   "shortcut": "",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:338]",
+   "title_key": "Start time change"
+  },
+  {
+   "action": "StartHandicapAction",
+   "class_line": 565,
+   "extra": {},
+   "kind": "action",
+   "path": [
+    "Start Preparation",
+    "Handicap start time"
+   ],
+   "shortcut": "",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:342]",
+   "title_key": "Handicap start time"
+  },
+  {
+   "action": "RelayCloneAction",
+   "class_line": 571,
+   "extra": {},
+   "kind": "action",
+   "path": [
+    "Start Preparation",
+    "Clone relay legs"
+   ],
+   "shortcut": "",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:346]",
+   "title_key": "Clone relay legs"
+  },
+  {
+   "action": "CopyBibToCardNumber",
+   "class_line": 577,
+   "extra": {},
+   "kind": "action",
+   "path": [
+    "Start Preparation",
+    "Use bib as card number"
+   ],
+   "shortcut": "",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:350]",
+   "title_key": "Use bib as card number"
+  },
+  {
+   "action": "CopyCardNumberToBib",
+   "class_line": 588,
+   "extra": {},
+   "kind": "action",
+   "path": [
+    "Start Preparation",
+    "Use card number as bib"
+   ],
+   "shortcut": "",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:354]",
+   "title_key": "Use card number as bib"
+  },
+  {
+   "action": "MarkedRouteCourseGeneration",
+   "class_line": 969,
+   "extra": {},
+   "kind": "action",
+   "path": [
+    "Start Preparation",
+    "Marked route course generation"
+   ],
+   "shortcut": "",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:358]",
+   "title_key": "Marked route course generation"
+  },
+  {
+   "action": "ExtractPersonMiddleName",
+   "class_line": 975,
+   "extra": {},
+   "kind": "action",
+   "path": [
+    "Start Preparation",
+    "Extract person middle name"
+   ],
+   "shortcut": "",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:362]",
+   "title_key": "Extract person middle name"
+  },
+  {
+   "action": null,
+   "class_line": null,
+   "extra": {},
+   "kind": "submenu",
+   "path": [
+    "Race"
+   ],
+   "shortcut": "",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:368]",
+   "title_key": "Race"
+  },
+  {
+   "action": "ManualFinishAction",
+   "class_line": 599,
+   "extra": {
+    "icon": "config.icon_dir('flag.svg')"
+   },
+   "kind": "action",
+   "path": [
+    "Race",
+    "Manual finish"
+   ],
+   "shortcut": "F3",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:371]",
+   "title_key": "Manual finish"
+  },
+  {
+   "action": "AddSPORTidentResultAction",
+   "class_line": 758,
+   "extra": {
+    "feature": "settings.FEATURE_SPORTIDENT"
+   },
+   "kind": "action",
+   "path": [
+    "Race",
+    "Add SPORTident result"
+   ],
+   "shortcut": "F7",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:377]",
+   "title_key": "Add SPORTident result"
+  },
+  {
+   "action": null,
+   "class_line": null,
+   "extra": {},
+   "kind": "submenu",
+   "path": [
+    "Results"
+   ],
+   "shortcut": "",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:385]",
+   "title_key": "Results"
+  },
+  {
+   "action": "CreateReportAction",
+   "class_line": 628,
+   "extra": {},
+   "kind": "action",
+   "path": [
+    "Results",
+    "Create report"
+   ],
+   "shortcut": "Ctrl+P",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:388]",
+   "title_key": "Create report"
+  },
+  {
+   "action": "SplitPrintoutAction",
+   "class_line": 633,
+   "extra": {},
+   "kind": "action",
+   "path": [
+    "Results",
+    "Split printout"
+   ],
+   "shortcut": "Ctrl+L",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:393]",
+   "title_key": "Split printout"
+  },
+  {
+   "action": null,
+   "class_line": null,
+   "extra": {},
+   "kind": "separator",
+   "path": [
+    "Results",
+    "<separator>"
+   ],
+   "shortcut": "",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:398]",
+   "title_key": ""
+  },
+  {
+   "action": "RecheckingAction",
+   "class_line": 638,
+   "extra": {},
+   "kind": "action",
+   "path": [
+    "Results",
+    "Rechecking"
+   ],
+   "shortcut": "Ctrl+R",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:401]",
+   "title_key": "Rechecking"
+  },
+  {
+   "action": "GroupFinderAction",
+   "class_line": 645,
+   "extra": {
+    "tabs": "[1]"
+   },
+   "kind": "action",
+   "path": [
+    "Results",
+    "Find group by punches"
+   ],
+   "shortcut": "Ctrl+G",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:406]",
+   "title_key": "Find group by punches"
+  },
+  {
+   "action": "PenaltyCalculationAction",
+   "class_line": 665,
+   "extra": {},
+   "kind": "action",
+   "path": [
+    "Results",
+    "Penalty calculation"
+   ],
+   "shortcut": "",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:412]",
+   "title_key": "Penalty calculation"
+  },
+  {
+   "action": "PenaltyRemovingAction",
+   "class_line": 676,
+   "extra": {},
+   "kind": "action",
+   "path": [
+    "Results",
+    "Penalty removing"
+   ],
+   "shortcut": "",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:416]",
+   "title_key": "Penalty removing"
+  },
+  {
+   "action": "ChangeStatusAction",
+   "class_line": 687,
+   "extra": {
+    "tabs": "[1]"
+   },
+   "kind": "action",
+   "path": [
+    "Results",
+    "Change status"
+   ],
+   "shortcut": "F4",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:420]",
+   "title_key": "Change status"
+  },
+  {
+   "action": "SetDNSNumbersAction",
+   "class_line": 722,
+   "extra": {},
+   "kind": "action",
+   "path": [
+    "Results",
+    "Set DNS numbers"
+   ],
+   "shortcut": "",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:426]",
+   "title_key": "Set DNS numbers"
+  },
+  {
+   "action": "ControlTimeChangeAction",
+   "class_line": 734,
+   "extra": {},
+   "kind": "action",
+   "path": [
+    "Results",
+    "Control time change"
+   ],
+   "shortcut": "",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:430]",
+   "title_key": "Control time change"
+  },
+  {
+   "action": "CPDeleteAction",
+   "class_line": 740,
+   "extra": {},
+   "kind": "action",
+   "path": [
+    "Results",
+    "Delete CP"
+   ],
+   "shortcut": "",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:434]",
+   "title_key": "Delete CP"
+  },
+  {
+   "action": "SplitDeleteAction",
+   "class_line": 746,
+   "extra": {},
+   "kind": "action",
+   "path": [
+    "Results",
+    "Delete Split"
+   ],
+   "shortcut": "",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:435]",
+   "title_key": "Delete Split"
+  },
+  {
+   "action": "MergeResultsAction",
+   "class_line": 752,
+   "extra": {},
+   "kind": "action",
+   "path": [
+    "Results",
+    "Merge results"
+   ],
+   "shortcut": "",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:436]",
+   "title_key": "Merge results"
+  },
+  {
+   "action": "AssignResultByBibAction",
+   "class_line": 910,
+   "extra": {},
+   "kind": "action",
+   "path": [
+    "Results",
+    "Assign result by bib"
+   ],
+   "shortcut": "",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:440]",
+   "title_key": "Assign result by bib"
+  },
+  {
+   "action": "AssignResultByCardNumberAction",
+   "class_line": 918,
+   "extra": {},
+   "kind": "action",
+   "path": [
+    "Results",
+    "Assign result by card number"
+   ],
+   "shortcut": "",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:444]",
+   "title_key": "Assign result by card number"
+  },
+  {
+   "action": null,
+   "class_line": null,
+   "extra": {},
+   "kind": "submenu",
+   "path": [
+    "Service"
+   ],
+   "shortcut": "",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:450]",
+   "title_key": "Service"
+  },
+  {
+   "action": "CardReadoutAction",
+   "class_line": 609,
+   "extra": {
+    "feature": "settings.FEATURE_SPORTIDENT",
+    "icon": "config.icon_dir('sportident.png')"
+   },
+   "kind": "action",
+   "path": [
+    "Service",
+    "On/Off card readout"
+   ],
+   "shortcut": "F8",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:453]",
+   "title_key": "On/Off card readout"
+  },
+  {
+   "action": "HuichangManagementAction",
+   "class_line": 982,
+   "extra": {
+    "feature": "settings.FEATURE_HUICHANG",
+    "id": "'huichang_management'"
+   },
+   "kind": "action",
+   "path": [
+    "Service",
+    "Huichang management"
+   ],
+   "shortcut": "",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:460]",
+   "title_key": "Huichang management"
+  },
+  {
+   "action": null,
+   "class_line": null,
+   "extra": {
+    "icon": "config.icon_dir('network.svg')"
+   },
+   "kind": "submenu",
+   "path": [
+    "Service",
+    "Teamwork"
+   ],
+   "shortcut": "",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:466]",
+   "title_key": "Teamwork"
+  },
+  {
+   "action": "TeamworkSendAction",
+   "class_line": 785,
+   "extra": {
+    "tabs": "list(range(5))"
+   },
+   "kind": "action",
+   "path": [
+    "Service",
+    "Teamwork",
+    "Send selected"
+   ],
+   "shortcut": "Ctrl+Shift+K",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:470]",
+   "title_key": "Send selected"
+  },
+  {
+   "action": null,
+   "class_line": null,
+   "extra": {},
+   "kind": "separator",
+   "path": [
+    "Service",
+    "Teamwork",
+    "<separator>"
+   ],
+   "shortcut": "",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:476]",
+   "title_key": ""
+  },
+  {
+   "action": "TeamworkEnableAction",
+   "class_line": 779,
+   "extra": {},
+   "kind": "action",
+   "path": [
+    "Service",
+    "Teamwork",
+    "On/Off"
+   ],
+   "shortcut": "",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:479]",
+   "title_key": "On/Off"
+  },
+  {
+   "action": null,
+   "class_line": null,
+   "extra": {
+    "feature": "settings.FEATURE_TELEGRAM"
+   },
+   "kind": "submenu",
+   "path": [
+    "Service",
+    "Telegram"
+   ],
+   "shortcut": "",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:485]",
+   "title_key": "Telegram"
+  },
+  {
+   "action": "TelegramSendAction",
+   "class_line": 841,
+   "extra": {
+    "tabs": "[1]"
+   },
+   "kind": "action",
+   "path": [
+    "Service",
+    "Telegram",
+    "Send results"
+   ],
+   "shortcut": "",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:489]",
+   "title_key": "Send results"
+  },
+  {
+   "action": null,
+   "class_line": null,
+   "extra": {},
+   "kind": "submenu",
+   "path": [
+    "Service",
+    "Online"
+   ],
+   "shortcut": "",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:496]",
+   "title_key": "Online"
+  },
+  {
+   "action": "OnlineSendAction",
+   "class_line": 859,
+   "extra": {
+    "tabs": "[0, 1, 2, 3, 4]"
+   },
+   "kind": "action",
+   "path": [
+    "Service",
+    "Online",
+    "Send selected"
+   ],
+   "shortcut": "Ctrl+K",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:499]",
+   "title_key": "Send selected"
+  },
+  {
+   "action": null,
+   "class_line": null,
+   "extra": {},
+   "kind": "submenu",
+   "path": [
+    "Options"
+   ],
+   "shortcut": "",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:509]",
+   "title_key": "Options"
+  },
+  {
+   "action": "TimekeepingSettingsAction",
+   "class_line": 768,
+   "extra": {
+    "icon": "config.icon_dir('stopwatch.svg')"
+   },
+   "kind": "action",
+   "path": [
+    "Options",
+    "Timekeeping settings"
+   ],
+   "shortcut": "F9",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:512]",
+   "title_key": "Timekeeping settings"
+  },
+  {
+   "action": "TeamworkSettingsAction",
+   "class_line": 774,
+   "extra": {
+    "icon": "config.icon_dir('network.svg')"
+   },
+   "kind": "action",
+   "path": [
+    "Options",
+    "Teamwork"
+   ],
+   "shortcut": "",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:518]",
+   "title_key": "Teamwork"
+  },
+  {
+   "action": "PrinterSettingsAction",
+   "class_line": 812,
+   "extra": {
+    "icon": "config.icon_dir('printer.svg')"
+   },
+   "kind": "action",
+   "path": [
+    "Options",
+    "Printer settings"
+   ],
+   "shortcut": "",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:523]",
+   "title_key": "Printer settings"
+  },
+  {
+   "action": "LiveSettingsAction",
+   "class_line": 817,
+   "extra": {
+    "icon": "config.icon_dir('live.svg')"
+   },
+   "kind": "action",
+   "path": [
+    "Options",
+    "Live"
+   ],
+   "shortcut": "",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:528]",
+   "title_key": "Live"
+  },
+  {
+   "action": "TelegramSettingsAction",
+   "class_line": 836,
+   "extra": {
+    "feature": "settings.FEATURE_TELEGRAM"
+   },
+   "kind": "action",
+   "path": [
+    "Options",
+    "Telegram"
+   ],
+   "shortcut": "",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:533]",
+   "title_key": "Telegram"
+  },
+  {
+   "action": "RentCardsAction",
+   "class_line": 963,
+   "extra": {},
+   "kind": "action",
+   "path": [
+    "Options",
+    "Rent cards"
+   ],
+   "shortcut": "",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:538]",
+   "title_key": "Rent cards"
+  },
+  {
+   "action": "PluginsSettingsAction",
+   "class_line": 823,
+   "extra": {},
+   "kind": "action",
+   "path": [
+    "Options",
+    "Plugins"
+   ],
+   "shortcut": "",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:542]",
+   "title_key": "Plugins"
+  },
+  {
+   "action": null,
+   "class_line": null,
+   "extra": {},
+   "kind": "submenu",
+   "path": [
+    "Help"
+   ],
+   "shortcut": "",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:548]",
+   "title_key": "Help"
+  },
+  {
+   "action": "AboutAction",
+   "class_line": 891,
+   "extra": {},
+   "kind": "action",
+   "path": [
+    "Help",
+    "About"
+   ],
+   "shortcut": "F1",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:551]",
+   "title_key": "About"
+  },
+  {
+   "action": "CheckUpdatesAction",
+   "class_line": 896,
+   "extra": {},
+   "kind": "action",
+   "path": [
+    "Help",
+    "Check updates"
+   ],
+   "shortcut": "",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/menu.py:556]",
+   "title_key": "Check updates"
+  }
+ ],
+ "unresolved": [],
+ "unused_classes": [
+  {
+   "class": "OpenRecentAction",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:126]"
+  },
+  {
+   "class": "LiveToggleAction",
+   "source": "[код: pysport@b548c35 sportorg/gui/menu/actions.py:828]"
+  }
+ ]
+}
