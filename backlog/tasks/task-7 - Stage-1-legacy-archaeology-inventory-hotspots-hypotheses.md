@@ -1,10 +1,10 @@
 ---
 id: TASK-7
 title: 'Stage 1: legacy archaeology - inventory, hotspots, hypotheses'
-status: In Progress
+status: Done
 assignee: []
 created_date: 2026-10-24 12:05
-updated_date: '2026-10-25T09:35:00Z'
+updated_date: '2026-10-25T09:37:00Z'
 labels:
   - stage-1
 milestone: m-1
@@ -69,4 +69,6 @@ Per docs/brief.md, Stage 1. Read-only analysis of the pinned legacy clones (lega
 2026-10-25 maintainer decisions after the verification: Р8 is a legacy bug; history is not rewritten (the fixture names in 278826c are fictional); copyright-holder names in licence-sources.agent.md stay.
 
 2026-10-25: second independent verification (fresh agent session on 7a0f6b3): all six TASK-7 criteria PROVEN; prompt items 1-3, 5, 6 PROVEN, 4 PARTLY. Fixed: Р1/O11 (exception caught and logged), os-ru recall covers 5 of 11 rules, two tags carry two hits, rho also for files with functions (0.48), UTC dates of the cache, commit list; sample check 2 relabelled #18 (fix) and #33 (non-fix), recall now ~46 % (23-76 %); canary 5 for formats and os_ru added to the prompt.
+
+2026-10-25: closed by the maintainer after the second independent verification.
 <!-- SECTION:NOTES:END -->
