@@ -40,7 +40,7 @@ The agent read the subject, the files and, where needed, the diff. Texts are not
 | 15 | [история: pysport@029e041] | yes | online (keyword) | yes | online | live upload |
 | 16 | [история: pysport@bf6c804] | yes | device (path) | yes | device | Sportiduino driver fixes |
 | 17 | [история: pysport@7e6a8c3] | yes | other (other) | yes | platform-build | setup script |
-| 18 | [история: pysport@0f3a0a8] | no | other (other) | no | — | new feature (control-point ranges) |
+| 18 | [история: pysport@0f3a0a8] | no | other (other) | **yes** | calc | control-point sets such as `%(31,32,35-45)`. Before it the documented list form `%(31,32,33)` always failed: `template.find('-')` returns −1, which is true, so the list went to the range branch and raised `ValueError`, which `except KeyError` does not catch (relabelled 2026-10-25 after the second independent check: was "no, new feature") |
 | 19 | [история: pysport@af08823] | yes | other (other) | yes | import-export | organization contact in IOF XML (same commit as #20 of sample 1) |
 | 20 | [история: pysport@920270d] | yes | report-print (keyword) | yes | ui | bugs reported by a user, fixed in the table model of the GUI |
 | 21 | [история: pysport@27072f9] | no | other (other) | no | — | dependency list |
@@ -55,7 +55,7 @@ The agent read the subject, the files and, where needed, the diff. Texts are not
 | 30 | [история: pysport@f0d2dff] | no | calc (keyword) | **yes** | calc | relay ranking used finished laps instead of correct laps; no fix word |
 | 31 | [история: pysport@3c6b20e] | yes | device (memory-functions) | yes | ui | guards against missing tables in the main window |
 | 32 | [история: pysport@86cdb59] | no | online (keyword) | no | — | new module |
-| 33 | [история: pysport@fc7a97b] | yes | report-print (keyword) | yes | report-print | templates |
+| 33 | [история: pysport@fc7a97b] | yes | report-print (keyword) | **no** | — | "fixed" subject, but the change is template layout (title block, header order) and an HTML export with its own style; no wrong behaviour is corrected (relabelled 2026-10-25 after the second independent check: was "yes, report-print") |
 | 34 | [история: pysport@89f819d] | no | ui (path) | no | — | removal |
 | 35 | [история: pysport@01ff985] | no | ui (path) | **yes** | ui | edit dialogs rejected an unchanged name as a duplicate; no fix word |
 | 36 | [история: pysport@0b50f5a] | no | calc (keyword) | no | — | new feature |
@@ -79,28 +79,28 @@ The agent read the subject, the files and, where needed, the diff. Texts are not
 
 | | agent: fix | agent: non-fix |
 |---|---|---|
-| predicted fix (25) | 24 | 1 (#9) |
-| predicted non-fix (25) | 4 (#23, #30, #35, #39) | 21 |
+| predicted fix (25) | 23 | 2 (#9, #33) |
+| predicted non-fix (25) | 5 (#18, #23, #30, #35, #39) | 20 |
 
-- Agreement: 45 / 50 = **90 %**.
-- **Precision of "is fix":** 24 / 25 = **96 %** (exact 95 % Clopper–Pearson interval 79.7–99.9 %).
+- Agreement: 43 / 50 = **86 %**.
+- **Precision of "is fix":** 23 / 25 = **92 %** (exact 95 % Clopper–Pearson interval 74.0–99.0 %).
 - **Recall, estimated for the population** (strata 176 predicted fix and 966 predicted non-fix):
-  - estimated true fixes found: 0.96 × 176 ≈ 169;
-  - estimated fixes missed: 4/25 × 966 ≈ 155;
-  - recall ≈ **52 %**.
+  - estimated true fixes found: 0.92 × 176 ≈ 162;
+  - estimated fixes missed: 5/25 × 966 ≈ 193;
+  - recall ≈ **46 %**.
 - **Interval of the recall.** Both rates are uncertain, so the interval takes both:
-  - each rate gets an exact 97.5 % Clopper–Pearson interval: precision 77.1–99.95 %, miss rate 3.7–38.9 %;
+  - each rate gets an exact 97.5 % Clopper–Pearson interval: precision 71.3–99.3 %, miss rate 5.7–43.6 %;
   - the recall bounds come from the worst and best corners, so together they cover at least 95 % (Bonferroni);
-  - recall lies between **27 % and 83 %**;
-  - for comparison, the interval of the miss rate alone (as written before 2026-10-25) gives 33–79 %.
+  - recall lies between **23 % and 76 %**;
+  - for comparison, the 95 % interval of the miss rate alone gives 29–71 %.
 - **Both samples pooled.** 97 distinct commits: the three commits of both samples (#9, #19, #41, all in the predicted-fix stratum) are counted once:
-  - precision 46/47 = 98 % (97.5 % interval 87.2–99.97 %);
-  - miss rate 6/50 = 12 % (97.5 % interval 3.9–26.2 %);
-  - recall ≈ **60 %**, between **38 % and 82 %** by the same method;
+  - precision 45/47 = 96 % (97.5 % interval 83.8–99.6 %);
+  - miss rate 7/50 = 14 % (97.5 % interval 5.1–28.6 %);
+  - recall ≈ **56 %**, between **35 % and 78 %** by the same method;
   - the fix rule did not change between the samples, so pooling is fair for fix / non-fix. It is not fair for classes (below).
 - **What the rule misses:** the same pattern as in sample 1. The subject describes the fault ("error", a wrong value) or the fix without a fix word.
 
-**Class agreement** among the true fixes predicted as fixes: **9 / 24 = 38 %**. This is the only independent estimate of the class rule.
+**Class agreement** among the true fixes predicted as fixes: **8 / 23 = 35 %**. This is the only independent estimate of the class rule.
 - The 15 disagreements:
   - `other` while the change has a clear class (#3, #17, #19, #22, #26, #47, #49, #50): templates under the old top-level `templates/`, `setup.py`, top-level 2017 files and `memory.py` methods without a keyword;
   - path to `ui` for the table-import dialog (#4, #5);
@@ -111,5 +111,6 @@ The agent read the subject, the files and, where needed, the diff. Texts are not
 - **Consequence:** the module × class table is a rough guide only. The class of a single commit is unreliable, especially before 2018 and for templates.
 
 **Limits:**
-- one agent labelled, no human review. The independent check (a fresh agent session on 2026-10-25) relabelled 10 rows (2, 7, …, 47) and disagreed on #47 only; that row is relabelled above;
+- one agent labelled, no human review. Two independent checks (fresh agent sessions on 2026-10-25) relabelled 10 rows each. The first (rows 2, 7, …, 47) disagreed on #47; the second (rows 3, 8, …, 48) on #18 and #33. The main session's agent re-read those diffs, agreed, and relabelled the three rows above;
+- the recall estimate rests on 5 misses in 25 commits, so one label moves it by several points;
 - borderline class judgements in #4, #5, #25, #31 and #47.
