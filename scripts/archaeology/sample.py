@@ -1,12 +1,12 @@
-"""Seeded samples of evidence rows for the manual checks of Phase D.
+"""Seeded samples of evidence rows for the agent's sample checks of Phase D.
 
 Run from the repo root:
     uv run python -m scripts.archaeology.sample \
         --json docs/evidence/stage-1/structure/dead-code.json \
         --key findings --n 30 --seed 20261025 --fields kind,name,confidence,name_in_string,tag
 
-Prints a Markdown table of the chosen rows in their input order; the manual verdict columns are
-added by hand in the ``*.manual.md`` file that records this command.
+Prints a Markdown table of the chosen rows in their input order; the agent adds its verdict
+columns in the ``*.agent.md`` file that records this command.
 """
 
 from __future__ import annotations

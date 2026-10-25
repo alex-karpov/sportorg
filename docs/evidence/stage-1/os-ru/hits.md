@@ -13,12 +13,12 @@ Produced by `scripts/archaeology/os_ru.py` on pysport@b548c35; see README.md.
 | no | ui | code | `sys.platform` | win32 | [код: pysport@b548c35 sportorg/gui/theme.py:100] |
 | no | ui | code | `sys.platform` | darwin | [код: pysport@b548c35 sportorg/gui/theme.py:102] |
 | no | ui | code | `sys.platform` | linux | [код: pysport@b548c35 sportorg/gui/theme.py:104] |
-| no | vendored | code | `platform.system` | Windows | [код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:30] |
-| no | vendored | code | `platform.system` | Windows | [код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:278] |
-| no | vendored | code | `platform.system` |  | [код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:279] |
-| no | vendored | code | `platform.system` | Linux | [код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:313] |
-| no | vendored | code | `platform.system` | Windows | [код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:320] |
-| no | vendored | code | `platform.system` |  | [код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:324] |
+| no | application | code | `platform.system` | Windows | [код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:30] |
+| no | application | code | `platform.system` | Windows | [код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:278] |
+| no | application | code | `platform.system` |  | [код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:279] |
+| no | application | code | `platform.system` | Linux | [код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:313] |
+| no | application | code | `platform.system` | Windows | [код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:320] |
+| no | application | code | `platform.system` |  | [код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:324] |
 | no | application | code | `os.name` | nt | [код: pysport@b548c35 sportorg/modules/plugins/manager.py:519] |
 | no | application | code | `platform.system` | Windows | [код: pysport@b548c35 sportorg/modules/printing/model.py:42] |
 | no | application | code | `platform.system` | Windows | [код: pysport@b548c35 sportorg/modules/printing/printout_split.py:7] |
@@ -32,7 +32,7 @@ Produced by `scripts/archaeology/os_ru.py` on pysport@b548c35; see README.md.
 | core | layer | kind | token | detail | location |
 |---|---|---|---|---|---|
 | no | ui | code | `winreg` |  | [код: pysport@b548c35 sportorg/gui/theme.py:110] |
-| no | vendored | code | `pywinusb.hid` |  | [код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:31] |
+| no | application | code | `pywinusb.hid` |  | [код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:31] |
 | no | application | code | `win32con` |  | [код: pysport@b548c35 sportorg/modules/printing/printout_split.py:8] |
 | no | application | code | `win32print` |  | [код: pysport@b548c35 sportorg/modules/printing/printout_split.py:9] |
 | no | application | code | `win32ui` |  | [код: pysport@b548c35 sportorg/modules/printing/printout_split.py:10] |
@@ -68,7 +68,7 @@ Produced by `scripts/archaeology/os_ru.py` on pysport@b548c35; see README.md.
 | no | ui | string | `e\Microsoft` | backslash | [код: pysport@b548c35 sportorg/gui/theme.py:112] |
 | no | ui | string | `s\CurrentVersion` | backslash | [код: pysport@b548c35 sportorg/gui/theme.py:112] |
 | no | ui | string | `s\Personalize` | backslash | [код: pysport@b548c35 sportorg/gui/theme.py:112] |
-| no | vendored | string | `/dev/ttyACM0` | tty | [код: pysport@b548c35 sportorg/libs/huichang/huichang.py:311] |
+| no | application | string | `/dev/ttyACM0` | tty | [код: pysport@b548c35 sportorg/libs/huichang/huichang.py:311] |
 | no | application | docstring | `C:\` | drive | [код: pysport@b548c35 sportorg/modules/recovery/recovery_sportorg_si_log.py:2] |
 | no | application | docstring | `g\log` | backslash | [код: pysport@b548c35 sportorg/modules/recovery/recovery_sportorg_si_log.py:2] |
 | no | outside | string | `.exe` | ext | [код: pysport@b548c35 tests/test_paths.py:37] |
@@ -665,11 +665,11 @@ Produced by `scripts/archaeology/os_ru.py` on pysport@b548c35; see README.md.
 | yes | domain | string | `МС` | data-literal | [код: pysport@b548c35 sportorg/models/memory.py:2383] |
 | yes | domain | string | `МСМК` | data-literal | [код: pysport@b548c35 sportorg/models/memory.py:2384] |
 | no | ui | comment | `<text omitted: 47 chars>` | comment | [код: pysport@b548c35 sportorg/gui/tabs/persons.py:109] |
-| no | vendored | string | `cнят` | comparison | [код: pysport@b548c35 sportorg/libs/sfr/sfrximporter.py:269] |
-| no | vendored | string | `<text omitted: 12 chars>` | comparison | [код: pysport@b548c35 sportorg/libs/sfr/sfrximporter.py:271] |
-| no | vendored | string | `<text omitted: 10 chars>` | comparison | [код: pysport@b548c35 sportorg/libs/sfr/sfrximporter.py:273] |
-| no | vendored | string | `н/с` | comparison | [код: pysport@b548c35 sportorg/libs/sfr/sfrximporter.py:275] |
-| no | vendored | string | `<text omitted: 8 chars>` | comparison | [код: pysport@b548c35 sportorg/libs/sfr/sfrxparser.py:37] |
+| no | application | string | `cнят` | comparison | [код: pysport@b548c35 sportorg/libs/sfr/sfrximporter.py:269] |
+| no | application | string | `<text omitted: 12 chars>` | comparison | [код: pysport@b548c35 sportorg/libs/sfr/sfrximporter.py:271] |
+| no | application | string | `<text omitted: 10 chars>` | comparison | [код: pysport@b548c35 sportorg/libs/sfr/sfrximporter.py:273] |
+| no | application | string | `н/с` | comparison | [код: pysport@b548c35 sportorg/libs/sfr/sfrximporter.py:275] |
+| no | application | string | `<text omitted: 8 chars>` | comparison | [код: pysport@b548c35 sportorg/libs/sfr/sfrxparser.py:37] |
 | no | vendored | docstring | `<text omitted: 121 chars>` | docstring | [код: pysport@b548c35 sportorg/libs/winorient/wdb.py:32-35] |
 | no | application | docstring | `<text omitted: 233 chars>` | docstring | [код: pysport@b548c35 sportorg/modules/live/orgeo.py:208-213] |
 | no | application | docstring | `<text omitted: 627 chars>` | docstring | [код: pysport@b548c35 sportorg/modules/recovery/recovery_orgeo_finish_csv.py:1-14] |
@@ -852,8 +852,8 @@ Produced by `scripts/archaeology/os_ru.py` on pysport@b548c35; see README.md.
 | no | ui | string | `Qualification` |  | [код: pysport@b548c35 sportorg/gui/dialogs/text_io.py:412] |
 | no | ui | code | `Qualification.get_qual_by_name` |  | [код: pysport@b548c35 sportorg/gui/dialogs/text_io.py:413] |
 | no | ui | string | `Qualification` |  | [код: pysport@b548c35 sportorg/gui/tabs/memory_model.py:330] |
-| no | vendored | code | `Qualification` | import | [код: pysport@b548c35 sportorg/libs/sfr/sfrximporter.py:7] |
-| no | vendored | code | `Qualification` |  | [код: pysport@b548c35 sportorg/libs/sfr/sfrximporter.py:124] |
+| no | application | code | `Qualification` | import | [код: pysport@b548c35 sportorg/libs/sfr/sfrximporter.py:7] |
+| no | application | code | `Qualification` |  | [код: pysport@b548c35 sportorg/libs/sfr/sfrximporter.py:124] |
 | no | application | code | `Qualification` | import | [код: pysport@b548c35 sportorg/modules/iof/iof_xml.py:17] |
 | no | application | code | `Qualification.get_qual_by_name` |  | [код: pysport@b548c35 sportorg/modules/iof/iof_xml.py:204] |
 | no | application | code | `Qualification` | import | [код: pysport@b548c35 sportorg/modules/sfr/sfrxexporter.py:7] |
@@ -931,14 +931,14 @@ Produced by `scripts/archaeology/os_ru.py` on pysport@b548c35; see README.md.
 | no | vendored | string | `orgeo.ru` |  | [код: pysport@b548c35 sportorg/libs/iof/parser.py:13] |
 | no | vendored | string | `orgeo` |  | [код: pysport@b548c35 sportorg/libs/iof/parser.py:170] |
 | no | vendored | string | `orgeo` |  | [код: pysport@b548c35 sportorg/libs/iof/parser.py:173] |
-| no | vendored | comment | `mail.ru` |  | [код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:20] |
-| no | vendored | comment | `www.sportsystem.ru` |  | [код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:20] |
-| no | vendored | string | `orgeo` |  | [код: pysport@b548c35 sportorg/libs/sfr/sfrxparser.py:52] |
-| no | vendored | docstring | `yandex` |  | [код: pysport@b548c35 sportorg/libs/srpid/srpid.py:3] |
-| no | vendored | docstring | `yandex.ru` |  | [код: pysport@b548c35 sportorg/libs/srpid/srpid.py:3] |
-| no | vendored | string | `telegram` |  | [код: pysport@b548c35 sportorg/libs/telegram/telegram.py:5] |
-| no | vendored | string | `orgeo` |  | [код: pysport@b548c35 sportorg/libs/winorient/wdb_online_sender_dialog.py:40] |
-| no | vendored | string | `orgeo.ru` |  | [код: pysport@b548c35 sportorg/libs/winorient/wdb_online_sender_dialog.py:40] |
+| no | application | comment | `mail.ru` |  | [код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:20] |
+| no | application | comment | `www.sportsystem.ru` |  | [код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:20] |
+| no | application | string | `orgeo` |  | [код: pysport@b548c35 sportorg/libs/sfr/sfrxparser.py:52] |
+| no | application | docstring | `yandex` |  | [код: pysport@b548c35 sportorg/libs/srpid/srpid.py:3] |
+| no | application | docstring | `yandex.ru` |  | [код: pysport@b548c35 sportorg/libs/srpid/srpid.py:3] |
+| no | application | string | `telegram` |  | [код: pysport@b548c35 sportorg/libs/telegram/telegram.py:5] |
+| no | ui | string | `orgeo` |  | [код: pysport@b548c35 sportorg/libs/winorient/wdb_online_sender_dialog.py:40] |
+| no | ui | string | `orgeo.ru` |  | [код: pysport@b548c35 sportorg/libs/winorient/wdb_online_sender_dialog.py:40] |
 | no | application | string | `Orgeo` |  | [код: pysport@b548c35 sportorg/modules/live/orgeo.py:172] |
 | no | application | docstring | `orgeo` |  | [код: pysport@b548c35 sportorg/modules/recovery/recovery_orgeo_finish_csv.py:2] |
 | no | application | docstring | `orgeo.ru` |  | [код: pysport@b548c35 sportorg/modules/recovery/recovery_orgeo_finish_csv.py:2] |
@@ -959,7 +959,7 @@ Produced by `scripts/archaeology/os_ru.py` on pysport@b548c35; see README.md.
 |---|---|---|---|---|---|
 | yes | foundation | string | `windows-1251` |  | [код: pysport@b548c35 sportorg/utils/text.py:15] |
 | yes | foundation | comment | `windows-1251` |  | [код: pysport@b548c35 sportorg/utils/text.py:22] |
-| no | vendored | string | `windows-1251` |  | [код: pysport@b548c35 sportorg/libs/ocad/ocad.py:71] |
+| no | application | string | `windows-1251` |  | [код: pysport@b548c35 sportorg/libs/ocad/ocad.py:71] |
 | no | vendored | docstring | `Windows-1251` |  | [код: pysport@b548c35 sportorg/libs/winorient/wdb.py:7] |
 | no | vendored | string | `windows-1251` |  | [код: pysport@b548c35 sportorg/libs/winorient/wdb.py:8] |
 | no | vendored | docstring | `windows-1251` |  | [код: pysport@b548c35 sportorg/libs/winorient/wdb.py:34] |

@@ -179,55 +179,51 @@
  },
  "layers": {
   "OS01": {
-   "application": 3,
+   "application": 9,
    "outside": 6,
-   "ui": 5,
-   "vendored": 6
+   "ui": 5
   },
   "OS02": {
-   "application": 3,
+   "application": 4,
    "outside": 1,
-   "ui": 1,
-   "vendored": 1
+   "ui": 1
   },
   "OS03": {
    "ui": 1
   },
   "OS04": {
-   "application": 2,
+   "application": 3,
    "outside": 18,
-   "ui": 3,
-   "vendored": 1
+   "ui": 3
   },
   "OS05": {
    "outside": 552
   },
   "OS06": {},
   "RU01": {
-   "application": 17,
+   "application": 22,
    "domain": 25,
    "outside": 91,
    "ui": 1,
-   "vendored": 6
+   "vendored": 1
   },
   "RU02": {
-   "application": 10,
+   "application": 12,
    "domain": 51,
    "outside": 36,
-   "ui": 17,
-   "vendored": 2
+   "ui": 17
   },
   "RU03": {
-   "application": 10,
+   "application": 16,
    "foundation": 1,
    "outside": 3,
-   "ui": 21,
-   "vendored": 12
+   "ui": 23,
+   "vendored": 4
   },
   "RU04": {
-   "application": 2,
+   "application": 3,
    "foundation": 2,
-   "vendored": 5
+   "vendored": 4
   },
   "RU05": {
    "application": 3,

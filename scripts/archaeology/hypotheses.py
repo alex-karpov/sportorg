@@ -210,7 +210,8 @@ def h2_race(snap: Snapshot) -> Verdict:
             calling.add(path)
     in_sportorg = [p for p in uses if p.startswith("sportorg/")]
     total = len(uses)
-    near = abs(total - CLAIMED_RACE_FILES) <= RACE_TOLERANCE * CLAIMED_RACE_FILES
+    scoped = len(in_sportorg)
+    near = abs(scoped - CLAIMED_RACE_FILES) <= RACE_TOLERANCE * CLAIMED_RACE_FILES
     numbers: dict[str, int | str] = {
         "files_using_race": total,
         "files_using_race_in_sportorg": len(in_sportorg),
@@ -218,7 +219,7 @@ def h2_race(snap: Snapshot) -> Verdict:
         "files_calling_race": len(calling),
     }
     verdict: VerdictName = "partly" if near else "refuted"
-    if total == CLAIMED_RACE_FILES:
+    if scoped == CLAIMED_RACE_FILES:
         verdict = "confirmed"
     sources = tuple(Loc(snap.repo, p, lines[0]) for p, lines in sorted(uses.items()))
     return Verdict(
@@ -226,8 +227,10 @@ def h2_race(snap: Snapshot) -> Verdict:
         "глобальный `race()` используется в 62 файлах",
         "a file uses the global race() if it imports the name `race` from sportorg.models.memory"
         " (absolute or relative, module level or inside a function) or accesses `memory.race` after"
-        " importing the memory module; memory.py itself excluded; all tracked .py files. Verdict:"
-        " confirmed if exactly 62, partly if within ±20 %, refuted otherwise.",
+        " importing the memory module; memory.py itself excluded. Counted over all tracked .py"
+        " files and over sportorg/. Verdict on sportorg/: confirmed if exactly 62, partly if within"
+        " ±20 %, refuted otherwise. The scope sportorg/ was set after the result was known (the run"
+        " fixed beforehand counted all files: 78, refuted) [мейнтейнер: 2026-10-25].",
         numbers,
         verdict,
         sources,

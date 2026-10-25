@@ -6,10 +6,13 @@ import json
 from typing import TYPE_CHECKING
 
 from scripts.archaeology import defects as d
-from scripts.archaeology.common import Commit, FileChange
+from scripts.archaeology.common import Commit, FileChange, git_log
 
 if TYPE_CHECKING:
+    from pathlib import Path
+
     from scripts._json import Json
+    from tests.scripts.archaeology.conftest import Commit as CommitFactory
 
 
 def _commit(subject: str, *files: tuple[str, int], merge: bool = False) -> Commit:
@@ -114,3 +117,58 @@ def test_issue_rows_never_contain_titles() -> None:
     ]
     assert rows[0].created_year == 2024
     assert rows[0].closed_year == 2025
+
+
+def test_old_app_layout_maps_to_current_modules() -> None:
+    cases = {
+        "sportorg/app/gui/dialogs/a.py": "sportorg/gui/dialogs/a.py",
+        "sportorg/app/models/memory.py": "sportorg/models/memory.py",
+        "sportorg/app/modules/backup/b.py": "sportorg/modules/backup/b.py",
+        "sportorg/app/plugins/sportident/c.py": "sportorg/modules/sportident/c.py",
+        "sportorg/app/controllers/dialogs/d.py": "sportorg/gui/dialogs/d.py",
+        "sportorg/lib/ocad/e.py": "sportorg/libs/ocad/e.py",
+        "sportorg/core/otime.py": "sportorg/common/otime.py",
+        "sportorg/gui/menu/f.py": "sportorg/gui/menu/f.py",
+        "app.py": "app.py",
+    }
+    for old, new in cases.items():
+        assert d.normalise_path(old) == new
+    commit = _commit("fix: stuff", ("sportorg/app/models/result/a.py", 5))
+    assert d.classify(commit) == "calc"
+    row = d.commit_row(commit)
+    assert row.modules == ("sportorg.models.result",)
+    assert row.files == (("sportorg/app/models/result/a.py", "sportorg.models.result"),)
+    assert d.module_of_path("sportorg/app/gui/dialogs/x.py") == "sportorg.gui.dialogs"
+
+
+def test_memory_functions_decide_class() -> None:
+    diff = (
+        "@@ -10,0 +11,2 @@ class Foo:\n"
+        "@@ -40 +41 @@ def get_split_places(self, x):\n"
+        "@@ -50 +51 @@ def helper(self):\n"
+    )
+    assert d.hunk_words(diff) == "foo get split places helper"
+    assert d.memory_class(diff) == "calc"
+    assert d.memory_class("@@ -1 +1 @@ class PersonRecovery(Model):\n") == "persistence"
+
+
+def test_memory_functions_ambiguous_keeps_fallback() -> None:
+    # "result" is calc, "save" is persistence: two classes, no decision.
+    assert d.memory_class("@@ -1 +1 @@ def save_result(self):\n") is None
+    assert d.memory_class("@@ -1 +1 @@ def helper(self):\n") is None
+    assert d.memory_class("") is None
+
+
+def test_memory_rule_reads_git_hunks(repo: Path, commit: CommitFactory) -> None:
+    body = "x = 1\n\n\ndef helper():\n    return 1\n\n\ndef load_backup():\n    return 2\n"
+    commit("init", {"sportorg/models/memory.py": body.encode()})
+    commit(
+        "fix: stuff", {"sportorg/models/memory.py": body.replace("return 2", "return 3").encode()}
+    )
+    fixes = git_log(repo, "HEAD~1..HEAD")
+    assert d.decide(fixes[0], repo) == ("persistence", "memory-functions")
+    assert d.decide(fixes[0], None) == (d.OTHER, "other")
+    keyword = _commit("fix: wrong penalty", ("sportorg/models/memory.py", 1))
+    assert d.decide(keyword, repo) == ("calc", "keyword")
+    paths = _commit("fix: stuff", ("sportorg/gui/x.py", 1))
+    assert d.decide(paths, repo) == ("ui", "path")

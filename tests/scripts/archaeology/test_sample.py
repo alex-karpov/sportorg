@@ -1,4 +1,4 @@
-"""Tests for scripts/archaeology/sample.py: seeded samples for the manual checks of Phase D."""
+"""Tests for scripts/archaeology/sample.py: seeded samples for the agent's sample checks."""
 
 from __future__ import annotations
 

@@ -80,46 +80,37 @@ Legacy pin: pysport@b548c35. Produced by `scripts/archaeology/structure.py` (com
    "dateutil": 2,
    "importlib_resources": 1,
    "jinja2": 1,
-   "lxml": 2,
-   "pip": 1,
    "polib": 1,
-   "six": 2,
    "sportorg_core": 1
   },
   "counts": {
    "V1": {
     "local": 1,
-    "module_level": 16
-   },
-   "V2": {
-    "local": 0,
-    "module_level": 13
+    "module_level": 3
    },
    "V3": {
     "local": 0,
-    "module_level": 12
+    "module_level": 3
    }
   },
   "linter": {
-   "both": 16,
+   "both": 4,
    "dependencies_analysed": 588,
-   "entries": 16,
+   "entries": 4,
    "exit": 1,
    "files_analysed": 173,
-   "linter_direct_pairs": 16,
+   "linter_direct_pairs": 4,
    "linter_indirect_entries": 0,
    "only_linter": [],
    "only_v1": [],
-   "v1_pairs": 16
+   "v1_pairs": 4
   },
   "modules_outside_model": [
    "sportorg.data"
   ],
   "v1_by_layer_pair": {
    "application -> ui": 3,
-   "foundation -> application": 1,
-   "vendored -> domain": 5,
-   "vendored -> foundation": 8
+   "foundation -> application": 1
   },
   "v1_excluding_vendored": {
    "local": 1,

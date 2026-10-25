@@ -21,7 +21,7 @@
  },
  "H2": {
   "claim": "глобальный `race()` используется в 62 файлах",
-  "definition": "a file uses the global race() if it imports the name `race` from sportorg.models.memory (absolute or relative, module level or inside a function) or accesses `memory.race` after importing the memory module; memory.py itself excluded; all tracked .py files. Verdict: confirmed if exactly 62, partly if within ±20 %, refuted otherwise.",
+  "definition": "a file uses the global race() if it imports the name `race` from sportorg.models.memory (absolute or relative, module level or inside a function) or accesses `memory.race` after importing the memory module; memory.py itself excluded. Counted over all tracked .py files and over sportorg/. Verdict on sportorg/: confirmed if exactly 62, partly if within ±20 %, refuted otherwise. The scope sportorg/ was set after the result was known (the run fixed beforehand counted all files: 78, refuted) [мейнтейнер: 2026-10-25].",
   "numbers": {
    "files_calling_race": 77,
    "files_using_race": 78,
@@ -108,7 +108,7 @@
    "[код: pysport@b548c35 tests/test_teamwork.py:12]",
    "[код: pysport@b548c35 tests/test_winorient.py:1]"
   ],
-  "verdict": "refuted"
+  "verdict": "confirmed"
  },
  "H3": {
   "claim": "GUI импортируется вне `sportorg/gui`, в том числе в генерации результатов",
@@ -190,11 +190,10 @@
    "definitions": 2,
    "layer": "domain",
    "members": "NOT_QUALIFIED, I_Y, II_Y, III_Y, I, II, III, KMS, MS, MSMK",
-   "referencing_files_application": 4,
+   "referencing_files_application": 5,
    "referencing_files_domain": 3,
    "referencing_files_outside": 4,
-   "referencing_files_ui": 4,
-   "referencing_files_vendored": 1
+   "referencing_files_ui": 4
   },
   "sources": [
    "[код: pysport@b548c35 sportorg/models/memory.py:2314-2397]",

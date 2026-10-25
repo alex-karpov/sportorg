@@ -9,32 +9,45 @@
   "repos/sportorg/pysport/labels?per_page=100": "c7bbedce526c1b06006e3c8bb9dca8d94a6e6fd755051f44632b940326c8c5a3"
  },
  "counts": {
+  "class_decided_by_rule_all_fixes": {
+   "keyword": 58,
+   "memory-functions": 4,
+   "other": 44,
+   "path": 62,
+   "type": 8
+  },
+  "class_decided_by_rule_product": {
+   "keyword": 58,
+   "memory-functions": 4,
+   "other": 44,
+   "path": 62
+  },
   "class_totals_all_fixes": {
-   "calc": 13,
-   "device": 14,
+   "calc": 15,
+   "device": 16,
    "docs-only": 2,
    "i18n": 4,
    "import-export": 15,
    "online": 9,
-   "other": 50,
+   "other": 44,
    "persistence": 10,
    "platform-build": 10,
    "report-print": 12,
    "time": 2,
-   "ui": 35
+   "ui": 37
   },
   "class_totals_product": {
-   "calc": 13,
-   "device": 14,
+   "calc": 15,
+   "device": 16,
    "i18n": 4,
    "import-export": 15,
    "online": 9,
-   "other": 50,
+   "other": 44,
    "persistence": 10,
    "platform-build": 4,
    "report-print": 12,
    "time": 2,
-   "ui": 35
+   "ui": 37
   },
   "fix_commits": 176,
   "fix_like_but_excluded_by_type": {
@@ -49,12 +62,12 @@
   "merges": 198,
   "module_class_product": {
    "other": {
-    "calc": 5,
-    "device": 2,
+    "calc": 6,
+    "device": 3,
     "i18n": 4,
     "import-export": 3,
     "online": 3,
-    "other": 27,
+    "other": 25,
     "persistence": 3,
     "platform-build": 3,
     "report-print": 7,
@@ -66,57 +79,30 @@
     "other": 1,
     "ui": 1
    },
-   "sportorg.app.controller": {
-    "other": 1
-   },
-   "sportorg.app.controllers": {
-    "other": 2,
-    "persistence": 2,
-    "ui": 1
-   },
-   "sportorg.app.gui": {
-    "persistence": 1
-   },
-   "sportorg.app.models": {
-    "calc": 1,
-    "device": 1,
-    "other": 4,
-    "ui": 1
-   },
-   "sportorg.app.modules": {
-    "device": 1,
-    "persistence": 1
-   },
-   "sportorg.app.plugins": {
-    "device": 1,
-    "import-export": 1,
-    "other": 1,
-    "persistence": 1
-   },
    "sportorg.common": {
+    "calc": 1,
     "online": 1
    },
    "sportorg.core": {
-    "calc": 1,
     "report-print": 1
    },
    "sportorg.gui": {
-    "calc": 4,
-    "device": 5,
+    "calc": 5,
+    "device": 7,
     "i18n": 2,
     "import-export": 1,
     "online": 3,
-    "other": 7,
-    "persistence": 2,
-    "ui": 10
+    "other": 5,
+    "persistence": 5,
+    "ui": 13
    },
    "sportorg.gui.dialogs": {
     "calc": 2,
-    "device": 2,
+    "device": 3,
     "i18n": 2,
     "import-export": 1,
     "online": 2,
-    "other": 5,
+    "other": 4,
     "report-print": 2,
     "ui": 19
    },
@@ -135,16 +121,10 @@
     "i18n": 2,
     "other": 2,
     "report-print": 1,
-    "ui": 4
+    "ui": 5
    },
    "sportorg.gui.utils": {
     "ui": 2
-   },
-   "sportorg.lib.template": {
-    "other": 1
-   },
-   "sportorg.lib.winorient": {
-    "calc": 1
    },
    "sportorg.libs.huichang": {
     "device": 1
@@ -175,29 +155,30 @@
     "import-export": 1
    },
    "sportorg.libs.template": {
+    "other": 1,
     "report-print": 2
    },
    "sportorg.libs.winorient": {
-    "calc": 1,
+    "calc": 2,
     "import-export": 3,
     "online": 1
    },
    "sportorg.models": {
-    "calc": 5,
-    "device": 4,
+    "calc": 8,
+    "device": 7,
     "i18n": 1,
     "import-export": 1,
     "online": 2,
     "other": 17,
     "persistence": 1,
     "report-print": 2,
-    "ui": 4
+    "ui": 5
    },
    "sportorg.models.result": {
-    "calc": 8,
-    "device": 1,
+    "calc": 9,
+    "device": 2,
     "i18n": 1,
-    "other": 4,
+    "other": 2,
     "persistence": 1,
     "report-print": 1,
     "ui": 2
@@ -212,7 +193,7 @@
     "calc": 1,
     "device": 1,
     "import-export": 1,
-    "persistence": 6
+    "persistence": 8
    },
    "sportorg.modules.configs": {
     "other": 2
@@ -233,7 +214,7 @@
     "online": 6
    },
    "sportorg.modules.ocad": {
-    "import-export": 1
+    "import-export": 2
    },
    "sportorg.modules.printing": {
     "calc": 1,
@@ -252,10 +233,11 @@
    },
    "sportorg.modules.sportident": {
     "calc": 1,
-    "device": 4,
+    "device": 6,
     "import-export": 1,
     "online": 2,
-    "other": 2
+    "other": 1,
+    "ui": 1
    },
    "sportorg.modules.sportiduino": {
     "device": 1
@@ -271,7 +253,7 @@
    },
    "sportorg.modules.winorient": {
     "calc": 1,
-    "device": 1,
+    "device": 2,
     "i18n": 1,
     "import-export": 3,
     "other": 1
@@ -287,31 +269,23 @@
     "other": 1
    },
    "tests": {
-    "calc": 1,
+    "calc": 2,
     "import-export": 1,
     "online": 1,
-    "other": 5,
+    "other": 4,
     "persistence": 1
    }
   },
   "module_fix": {
    "other": 71,
    "sportorg": 5,
-   "sportorg.app.controller": 1,
-   "sportorg.app.controllers": 5,
-   "sportorg.app.gui": 1,
-   "sportorg.app.models": 7,
-   "sportorg.app.modules": 2,
-   "sportorg.app.plugins": 4,
-   "sportorg.common": 1,
-   "sportorg.core": 2,
-   "sportorg.gui": 34,
+   "sportorg.common": 2,
+   "sportorg.core": 1,
+   "sportorg.gui": 41,
    "sportorg.gui.dialogs": 35,
    "sportorg.gui.menu": 22,
-   "sportorg.gui.tabs": 13,
+   "sportorg.gui.tabs": 14,
    "sportorg.gui.utils": 2,
-   "sportorg.lib.template": 1,
-   "sportorg.lib.winorient": 1,
    "sportorg.libs.huichang": 1,
    "sportorg.libs.iof": 5,
    "sportorg.libs.ocad": 3,
@@ -319,26 +293,26 @@
    "sportorg.libs.sfr": 5,
    "sportorg.libs.sportident": 2,
    "sportorg.libs.sportiduino": 2,
-   "sportorg.libs.template": 2,
-   "sportorg.libs.winorient": 5,
-   "sportorg.models": 37,
+   "sportorg.libs.template": 3,
+   "sportorg.libs.winorient": 6,
+   "sportorg.models": 44,
    "sportorg.models.result": 18,
    "sportorg.models.start": 5,
-   "sportorg.modules.backup": 9,
+   "sportorg.modules.backup": 11,
    "sportorg.modules.configs": 2,
    "sportorg.modules.huichang": 1,
    "sportorg.modules.iof": 5,
    "sportorg.modules.live": 9,
-   "sportorg.modules.ocad": 1,
+   "sportorg.modules.ocad": 2,
    "sportorg.modules.printing": 8,
    "sportorg.modules.recovery": 3,
    "sportorg.modules.rfid_impinj": 1,
-   "sportorg.modules.sportident": 10,
+   "sportorg.modules.sportident": 12,
    "sportorg.modules.sportiduino": 1,
    "sportorg.modules.srpid": 1,
    "sportorg.modules.teamwork": 3,
    "sportorg.modules.telegram": 2,
-   "sportorg.modules.winorient": 7,
+   "sportorg.modules.winorient": 8,
    "sportorg.ttk": 1,
    "sportorg.utils": 4,
    "sportorg.winorient": 1,
@@ -350,16 +324,8 @@
    "other": 548,
    "sportorg": 96,
    "sportorg.app": 2,
-   "sportorg.app.contoller": 4,
-   "sportorg.app.controller": 30,
-   "sportorg.app.controllers": 110,
-   "sportorg.app.gui": 56,
-   "sportorg.app.models": 140,
-   "sportorg.app.modules": 41,
-   "sportorg.app.plugins": 82,
-   "sportorg.app.view": 6,
-   "sportorg.common": 24,
-   "sportorg.core": 49,
+   "sportorg.common": 45,
+   "sportorg.core": 32,
    "sportorg.core.backup": 2,
    "sportorg.data": 1,
    "sportorg.data.configs": 1,
@@ -369,58 +335,57 @@
    "sportorg.data.styles": 1,
    "sportorg.data.templates": 1,
    "sportorg.etc": 2,
-   "sportorg.gui": 192,
-   "sportorg.gui.dialogs": 304,
+   "sportorg.gui": 324,
+   "sportorg.gui.dialogs": 415,
    "sportorg.gui.menu": 140,
-   "sportorg.gui.tabs": 105,
+   "sportorg.gui.tabs": 149,
    "sportorg.gui.utils": 15,
-   "sportorg.lib": 2,
-   "sportorg.lib.iof": 3,
-   "sportorg.lib.jinja2": 2,
-   "sportorg.lib.ocad": 11,
-   "sportorg.lib.sportident": 3,
-   "sportorg.lib.template": 5,
-   "sportorg.lib.winorient": 30,
-   "sportorg.libs": 10,
+   "sportorg.libs": 11,
    "sportorg.libs.huichang": 4,
-   "sportorg.libs.iof": 30,
-   "sportorg.libs.ocad": 15,
+   "sportorg.libs.iof": 32,
+   "sportorg.libs.jinja2": 2,
+   "sportorg.libs.ocad": 25,
    "sportorg.libs.settings": 4,
    "sportorg.libs.sfr": 23,
-   "sportorg.libs.sportident": 12,
+   "sportorg.libs.sportident": 14,
    "sportorg.libs.sportiduino": 13,
    "sportorg.libs.srpid": 7,
    "sportorg.libs.telegram": 5,
-   "sportorg.libs.template": 14,
-   "sportorg.libs.winorient": 34,
-   "sportorg.models": 230,
+   "sportorg.libs.template": 18,
+   "sportorg.libs.winorient": 63,
+   "sportorg.models": 367,
    "sportorg.models.api": 2,
    "sportorg.models.processes": 3,
-   "sportorg.models.result": 136,
-   "sportorg.models.start": 55,
-   "sportorg.modules": 1,
-   "sportorg.modules.backup": 44,
+   "sportorg.models.result": 145,
+   "sportorg.models.start": 56,
+   "sportorg.modules": 5,
+   "sportorg.modules.backup": 62,
    "sportorg.modules.configs": 27,
+   "sportorg.modules.example": 6,
+   "sportorg.modules.export": 3,
    "sportorg.modules.huichang": 2,
    "sportorg.modules.iof": 32,
+   "sportorg.modules.jinja2": 2,
    "sportorg.modules.live": 52,
-   "sportorg.modules.ocad": 10,
+   "sportorg.modules.ocad": 32,
    "sportorg.modules.plugins": 1,
-   "sportorg.modules.printing": 57,
+   "sportorg.modules.printing": 64,
    "sportorg.modules.recovery": 8,
    "sportorg.modules.rfid_impinj": 10,
+   "sportorg.modules.server": 6,
    "sportorg.modules.sfr": 20,
    "sportorg.modules.sound": 9,
-   "sportorg.modules.sportident": 81,
+   "sportorg.modules.sportident": 125,
    "sportorg.modules.sportiduino": 19,
    "sportorg.modules.srpid": 8,
    "sportorg.modules.teamwork": 39,
    "sportorg.modules.telegram": 9,
+   "sportorg.modules.template": 6,
    "sportorg.modules.testing": 8,
    "sportorg.modules.updater": 4,
-   "sportorg.modules.utils": 3,
+   "sportorg.modules.utils": 23,
    "sportorg.modules.web": 2,
-   "sportorg.modules.winorient": 53,
+   "sportorg.modules.winorient": 107,
    "sportorg.ocad": 2,
    "sportorg.so_import": 2,
    "sportorg.so_import.winorient": 3,
@@ -434,21 +399,13 @@
   "module_product": {
    "other": 64,
    "sportorg": 4,
-   "sportorg.app.controller": 1,
-   "sportorg.app.controllers": 5,
-   "sportorg.app.gui": 1,
-   "sportorg.app.models": 7,
-   "sportorg.app.modules": 2,
-   "sportorg.app.plugins": 4,
-   "sportorg.common": 1,
-   "sportorg.core": 2,
-   "sportorg.gui": 34,
+   "sportorg.common": 2,
+   "sportorg.core": 1,
+   "sportorg.gui": 41,
    "sportorg.gui.dialogs": 35,
    "sportorg.gui.menu": 22,
-   "sportorg.gui.tabs": 13,
+   "sportorg.gui.tabs": 14,
    "sportorg.gui.utils": 2,
-   "sportorg.lib.template": 1,
-   "sportorg.lib.winorient": 1,
    "sportorg.libs.huichang": 1,
    "sportorg.libs.iof": 5,
    "sportorg.libs.ocad": 3,
@@ -456,26 +413,26 @@
    "sportorg.libs.sfr": 5,
    "sportorg.libs.sportident": 2,
    "sportorg.libs.sportiduino": 2,
-   "sportorg.libs.template": 2,
-   "sportorg.libs.winorient": 5,
-   "sportorg.models": 37,
+   "sportorg.libs.template": 3,
+   "sportorg.libs.winorient": 6,
+   "sportorg.models": 44,
    "sportorg.models.result": 18,
    "sportorg.models.start": 5,
-   "sportorg.modules.backup": 9,
+   "sportorg.modules.backup": 11,
    "sportorg.modules.configs": 2,
    "sportorg.modules.huichang": 1,
    "sportorg.modules.iof": 5,
    "sportorg.modules.live": 9,
-   "sportorg.modules.ocad": 1,
+   "sportorg.modules.ocad": 2,
    "sportorg.modules.printing": 8,
    "sportorg.modules.recovery": 3,
    "sportorg.modules.rfid_impinj": 1,
-   "sportorg.modules.sportident": 10,
+   "sportorg.modules.sportident": 12,
    "sportorg.modules.sportiduino": 1,
    "sportorg.modules.srpid": 1,
    "sportorg.modules.teamwork": 3,
    "sportorg.modules.telegram": 2,
-   "sportorg.modules.winorient": 7,
+   "sportorg.modules.winorient": 8,
    "sportorg.ttk": 1,
    "sportorg.utils": 4,
    "sportorg.winorient": 1,
@@ -581,7 +538,7 @@
    "type": "fix"
   },
   {
-   "class": "other",
+   "class": "calc",
    "commit": "57ac99d",
    "found": true,
    "is_fix": true,

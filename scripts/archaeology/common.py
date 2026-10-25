@@ -209,11 +209,28 @@ def module_name(path: str) -> tuple[str, bool]:
     return ".".join(parts), False
 
 
+# ``sportorg/libs`` by role [мейнтейнер: 2026-10-25] (Stage 1 report, question 3, option a2):
+# adapters to the domain and codecs that do device or network I/O are application code; the one
+# dialog is UI; the pure parsers (iof, wo, wdb, template, settings) stay "vendored" at rank 0.
+LIBS_UI: Final = ("sportorg.libs.winorient.wdb_online_sender_dialog",)
+LIBS_APPLICATION: Final = (
+    "sportorg.libs.huichang.huichang",
+    "sportorg.libs.iof.generator",
+    "sportorg.libs.ocad.ocad",
+    "sportorg.libs.sfr.sfrreader",
+    "sportorg.libs.sfr.sfrximporter",
+    "sportorg.libs.sfr.sfrxparser",
+    "sportorg.libs.sportiduino.sportiduino",
+    "sportorg.libs.srpid.srpid",
+    "sportorg.libs.telegram.telegram",
+    "sportorg.libs.winorient.wdb_online_sender",
+)
+
 # (rank, layer, module prefixes); the legacy layer model of the plan, approved 2026-10-25.
 _LAYERS: Final = (
     (5, "entry", ("sportorg.startup",)),
-    (4, "ui", ("sportorg.gui",)),
-    (3, "application", ("sportorg.modules", "sportorg.rust_example")),
+    (4, "ui", ("sportorg.gui", *LIBS_UI)),
+    (3, "application", ("sportorg.modules", "sportorg.rust_example", *LIBS_APPLICATION)),
     (2, "domain", ("sportorg.models",)),
     (0, "vendored", ("sportorg.libs",)),
     (

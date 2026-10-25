@@ -32,6 +32,8 @@ from scripts import legacy
 from scripts._json import Json, as_int, as_str, parse_json
 from scripts.archaeology import tool_bench as tb
 from scripts.archaeology.common import (
+    LIBS_APPLICATION,
+    LIBS_UI,
     PYSPORT,
     Commit,
     Loc,
@@ -59,7 +61,7 @@ LEGACY_REL: Final = ".legacy/pysport"
 TOP_HOTSPOTS: Final = 30
 TOP_MODULES: Final = 20
 ROOT_PACKAGE: Final = "sportorg"
-VIOLATION_KINDS: Final = ("V1", "V2", "V3")
+VIOLATION_KINDS: Final = ("V1", "V3")  # V2 dropped [мейнтейнер: 2026-10-25] (report question 3)
 _CORE_MAX_RANK: Final = 2
 _WARNING_RE: Final = re.compile(r"^(?P<path>.+?):(?P<line>\d+): (?P<message>.*)$", re.DOTALL)
 _WORD_RE: Final = re.compile(r"\w+")
@@ -84,8 +86,8 @@ NAMELESS_KINDS: Final = frozenset({"unreachable code", "redundant if-condition"}
 # ``common.layer_of`` (checked in the tests): rank = 5 - index.
 CONTRACT_LAYERS: Final = (
     ("sportorg.startup",),
-    ("sportorg.gui",),
-    ("sportorg.modules", "sportorg.rust_example"),
+    ("sportorg.gui", *LIBS_UI),
+    ("sportorg.modules", "sportorg.rust_example", *LIBS_APPLICATION),
     ("sportorg.models",),
     (
         "sportorg.common",
@@ -95,7 +97,15 @@ CONTRACT_LAYERS: Final = (
         "sportorg.language",
         "sportorg.paths",
     ),
-    ("sportorg.libs",),
+    # rank-0 libs listed one by one: a layer may not contain a module of another layer
+    (
+        "sportorg.libs.iof.iof",
+        "sportorg.libs.iof.parser",
+        "sportorg.libs.settings",
+        "sportorg.libs.template",
+        "sportorg.libs.winorient.wdb",
+        "sportorg.libs.winorient.wo",
+    ),
 )
 
 
@@ -383,29 +393,14 @@ class Violation:
         return Loc(PYSPORT, self.path, self.line).tag()
 
 
-def _lib_of(module: str) -> str | None:
-    parts = module.split(".")
-    if parts[:2] == [ROOT_PACKAGE, "libs"] and len(parts) > 2:  # noqa: PLR2004 - sportorg.libs.<lib>
-        return parts[2]
-    return None
-
-
-def _same_lib(module: str, lib: str) -> bool:
-    prefix = f"{ROOT_PACKAGE}.libs.{lib}"
-    return module == prefix or module.startswith(f"{prefix}.")
-
-
 def find_violations(ex: Extraction) -> list[Violation]:
-    """V1 upward edge, V2 vendored lib importing another ``sportorg.*``, V3 GUI/I/O in the core."""
+    """V1 upward edge, V3 GUI/I/O library in ranks 0-2."""
     found: list[Violation] = []
     for edge in ex.edges:
         (src_rank, src_layer), (dst_rank, dst_layer) = layer_of(edge.src), layer_of(edge.dst)
         row = (edge.src, src_layer, edge.dst, dst_layer, edge.path, edge.line, edge.local)
         if 0 <= src_rank < dst_rank:
             found.append(Violation("V1", *row))
-        lib = _lib_of(edge.src)
-        if lib is not None and not _same_lib(edge.dst, lib):
-            found.append(Violation("V2", *row))
     for ext in ex.externals:
         src_rank, src_layer = layer_of(ext.src)
         lib = io_library(ext.module)
@@ -965,9 +960,10 @@ def write_violations(
             ((k, counts[k]["module_level"], counts[k]["local"]) for k in VIOLATION_KINDS),
         ),
         (
-            "V1 = upward edge (rank r to rank > r), V2 = `sportorg.libs.<a>` importing another "
-            "`sportorg.*`, V3 = ranks 0-2 importing a GUI or I/O library (list in "
-            "`violations.json`, `libraries`). One edge can be both V1 and V2."
+            "V1 = upward edge (rank r to rank > r), V3 = ranks 0-2 importing a GUI or I/O library "
+            "(list in `violations.json`, `libraries`). `sportorg/libs` is split by role "
+            "(`common.LIBS_APPLICATION`, `common.LIBS_UI`) and V2 is dropped "
+            "[мейнтейнер: 2026-10-25] (report question 3)."
         ),
         "## import-linter `layers` contract\n\n```json\n" + _dumps(dict(linter)) + "\n```",
     ]

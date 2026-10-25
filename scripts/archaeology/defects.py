@@ -14,6 +14,7 @@ from __future__ import annotations
 import argparse
 import re
 import sys
+import tempfile
 from collections import Counter, defaultdict
 from dataclasses import dataclass
 from pathlib import Path
@@ -27,6 +28,7 @@ from scripts.archaeology.common import (
     Commit,
     assert_tree_clean,
     git_log,
+    git_raw,
     module_of,
     pin_short,
     repo_root,
@@ -96,6 +98,41 @@ KEYWORDS: Final[dict[str, tuple[str, ...]]] = {
     PLATFORM: _words("build, install, ci$, freeze, windows, linux, mac$, path$, сборк"),
     "ui": _words("dialog, menu, tab$, table, window, theme, button, окно, диалог"),
 }
+
+# Layout before commit ef2a741 ("Moved from app", 2017-11-24) -> current layout; first match wins.
+# [допущение] read off ``git -C .legacy/pysport show --stat ef2a741`` (app/gui, app/models,
+# app/modules, lib) and ``git log --follow`` of ``common/otime.py`` and ``common/template.py``
+# (``core/``); ``app/plugins`` and ``app/controllers`` are earlier names of modules and gui
+# [допущение: by the same file names, e.g. plugins/sportident, controllers/dialogs].
+LAYOUT_MAP: Final[tuple[tuple[str, str], ...]] = (
+    ("sportorg/app/gui/", "sportorg/gui/"),
+    ("sportorg/app/models/", "sportorg/models/"),
+    ("sportorg/app/modules/", "sportorg/modules/"),
+    ("sportorg/app/plugins/", "sportorg/modules/"),
+    ("sportorg/app/controllers/", "sportorg/gui/"),
+    ("sportorg/app/controller/", "sportorg/gui/"),
+    ("sportorg/app/contoller/", "sportorg/gui/"),
+    ("sportorg/app/view/", "sportorg/gui/"),
+    ("sportorg/lib/", "sportorg/libs/"),
+    ("sportorg/core/otime.py", "sportorg/common/otime.py"),
+    ("sportorg/core/template.py", "sportorg/common/template.py"),
+)
+MEMORY: Final = "sportorg/models/memory.py"
+# Rules that decide a class, recorded per commit.
+RULE_KEYWORD: Final = "keyword"
+RULE_MEMORY: Final = "memory-functions"
+RULE_PATH: Final = "path"
+RULE_OTHER: Final = "other"
+RULE_TYPE: Final = "type"  # ci/build subject type or docs-only: decided before the keywords
+RULES: Final = (RULE_KEYWORD, RULE_MEMORY, RULE_PATH, RULE_OTHER, RULE_TYPE)
+# ``git`` finds no enclosing function in Python by default (only column-0 lines), so a throwaway
+# attributes file in the temp dir gives the diff driver a ``def``/``class`` funcname regex.
+_FUNCNAME_ARGS: Final = (
+    "-c",
+    "diff.pydef.xfuncname=^[ \t]*((class|def)[ \t]+[A-Za-z_].*)$",
+)
+_HUNK_RE: Final = re.compile(r"^@@ [^@]*@@ *(?:class|def) +(\w+)", re.MULTILINE)
+_CAMEL_RE: Final = re.compile(r"[A-Z]+(?![a-z])|[A-Z]?[a-z]+|\d+")
 
 # Path table (plan): (class, path prefixes, exact paths, substrings).
 _DEVICE_MODULES: Final = ("sportident", "sfr", "sportiduino", "srpid", "rfid_impinj", "huichang")
@@ -223,11 +260,59 @@ def path_class(path: str) -> str | None:
     return None
 
 
+def normalise_path(path: str) -> str:
+    """Current-layout path of a path of the 2017 layout (``LAYOUT_MAP``); others unchanged."""
+    for old, new in LAYOUT_MAP:
+        if path.startswith(old):
+            return new + path[len(old) :]
+    return path
+
+
+def module_of_path(path: str) -> str:
+    return module_of(normalise_path(path))
+
+
 def _changed(commit: Commit) -> dict[str, int]:
     lines: dict[str, int] = defaultdict(int)
     for change in commit.files:
-        lines[module_of(change.path)] += (change.added or 0) + (change.deleted or 0)
+        lines[module_of_path(change.path)] += (change.added or 0) + (change.deleted or 0)
     return dict(lines)
+
+
+def hunk_words(diff: str) -> str:
+    """Words of the ``def``/``class`` names in the ``@@ ... @@ <context>`` headers of a diff."""
+    words: list[str] = []
+    for hunk in _HUNK_RE.finditer(diff):
+        for part in str(hunk.group(1)).split("_"):
+            words.extend(str(w.group(0)).lower() for w in _CAMEL_RE.finditer(part))
+    return " ".join(words)
+
+
+def memory_class(diff: str) -> str | None:
+    """The one class that the keywords name in the changed function names, else ``None``."""
+    matched = keyword_classes(hunk_words(diff))
+    return next(iter(matched)) if len(matched) == 1 else None
+
+
+def _memory_diff(commit: Commit, root: Path) -> str:
+    paths = [c.path for c in commit.files if normalise_path(c.path) == MEMORY]
+    if not paths:
+        return ""
+    with tempfile.TemporaryDirectory() as tmp:
+        attrs = Path(tmp) / "attributes"
+        attrs.write_text("*.py diff=pydef\n", encoding="utf-8", newline="\n")
+        return git_raw(
+            root,
+            "-c",
+            f"core.attributesFile={attrs}",
+            *_FUNCNAME_ARGS,
+            "show",
+            "--format=",
+            "-U0",
+            commit.sha,
+            "--",
+            *paths,
+        )
 
 
 def _class_of_top_module(commit: Commit) -> str:
@@ -237,9 +322,9 @@ def _class_of_top_module(commit: Commit) -> str:
     top = min(lines, key=lambda m: (-lines[m], m))
     by_class: Counter[str] = Counter()
     for change in commit.files:
-        if module_of(change.path) != top:
+        if module_of_path(change.path) != top:
             continue
-        cls = path_class(change.path)
+        cls = path_class(normalise_path(change.path))
         if cls is not None:
             by_class[cls] += (change.added or 0) + (change.deleted or 0) + 1
     if not by_class:
@@ -247,15 +332,27 @@ def _class_of_top_module(commit: Commit) -> str:
     return min(by_class, key=lambda c: (-by_class[c], CLASSES.index(c)))
 
 
-def classify(commit: Commit) -> str:
+def decide(commit: Commit, root: Path | None = None) -> tuple[str, str]:
+    """Class and the rule that decided it; ``root`` enables the memory.py function rule."""
     if conventional_type(commit.subject) in PLATFORM_TYPES:
-        return PLATFORM
+        return PLATFORM, RULE_TYPE
     if is_docs_only(commit):
-        return DOCS_ONLY
+        return DOCS_ONLY, RULE_TYPE
     matched = keyword_classes(commit.subject)
     if len(matched) == 1:
-        return next(iter(matched))
-    return _class_of_top_module(commit)
+        return next(iter(matched)), RULE_KEYWORD
+    cls = _class_of_top_module(commit)
+    if cls != OTHER:
+        return cls, RULE_PATH
+    if root is not None:
+        by_functions = memory_class(_memory_diff(commit, root))
+        if by_functions is not None:
+            return by_functions, RULE_MEMORY
+    return OTHER, RULE_OTHER
+
+
+def classify(commit: Commit) -> str:
+    return decide(commit)[0]
 
 
 def is_product_defect(commit: Commit) -> bool:
@@ -274,9 +371,11 @@ class Row:
     kind: str
     fix: bool
     cls: str
+    rule: str
     product: bool
     modules: tuple[str, ...]
     lines: tuple[tuple[str, int], ...]
+    files: tuple[tuple[str, str], ...]
 
     def tag(self) -> str:
         return f"[история: pysport@{self.sha}]"
@@ -289,9 +388,11 @@ class Row:
             "type": self.kind,
             "is_fix": self.fix,
             "class": self.cls,
+            "class_rule": self.rule,
             "product_defect": self.product,
             "modules": list(self.modules),
             "lines": _ints(dict(self.lines)),
+            "files": [{"path": p, "module": m} for p, m in self.files],
         }
 
     @property
@@ -299,18 +400,21 @@ class Row:
         return self.date[:4]
 
 
-def commit_row(commit: Commit) -> Row:
+def commit_row(commit: Commit, root: Path | None = None) -> Row:
     lines = _changed(commit)
+    cls, rule = decide(commit, root)
     return Row(
         sha=commit.sha[:SHA_LEN],
         date=commit.date,
         is_merge=commit.is_merge,
         kind=conventional_type(commit.subject) or "none",
         fix=is_fix(commit),
-        cls=classify(commit),
+        cls=cls,
+        rule=rule,
         product=is_product_defect(commit),
         modules=tuple(sorted(lines)),
         lines=tuple(sorted(lines.items())),
+        files=tuple(sorted((c.path, module_of_path(c.path)) for c in commit.files)),
     )
 
 
@@ -421,6 +525,8 @@ class Stats:
     excluded_by_type: dict[str, int]
     rule1: int
     rule2: int
+    class_rule_product: dict[str, int]
+    class_rule_all: dict[str, int]
 
 
 def _rule_counts(commits: Sequence[Commit]) -> tuple[int, int, Counter[str]]:
@@ -450,6 +556,8 @@ def compute(rows: Sequence[Row], commits: Sequence[Commit]) -> Stats:
     year: dict[str, Counter[str]] = defaultdict(Counter)
     platform_types: Counter[str] = Counter()
     platform_year: Counter[str] = Counter()
+    rule_all: Counter[str] = Counter()
+    rule_product: Counter[str] = Counter()
     for r in rows:
         year[r.year]["all"] += 1
         if r.is_merge:
@@ -462,6 +570,7 @@ def compute(rows: Sequence[Row], commits: Sequence[Commit]) -> Stats:
             continue
         year[r.year]["fix"] += 1
         class_all[r.cls] += 1
+        rule_all[r.rule] += 1
         for m in r.modules:
             module_fix[m] += 1
         if r.kind in PLATFORM_TYPES:
@@ -470,6 +579,7 @@ def compute(rows: Sequence[Row], commits: Sequence[Commit]) -> Stats:
         if r.product:
             year[r.year]["product"] += 1
             class_product[r.cls] += 1
+            rule_product[r.rule] += 1
             for m in r.modules:
                 module_product[m] += 1
                 module_class[m][r.cls] += 1
@@ -493,6 +603,8 @@ def compute(rows: Sequence[Row], commits: Sequence[Commit]) -> Stats:
         excluded_by_type=dict(excluded),
         rule1=rule1,
         rule2=rule2,
+        class_rule_product=dict(rule_product),
+        class_rule_all=dict(rule_all),
     )
 
 
@@ -508,6 +620,8 @@ def stats_json(s: Stats) -> Json:
         "fixes_docs_only": s.docs_only_fixes,
         "class_totals_all_fixes": _ints(s.class_all),
         "class_totals_product": _ints(s.class_product),
+        "class_decided_by_rule_all_fixes": _ints(s.class_rule_all),
+        "class_decided_by_rule_product": _ints(s.class_rule_product),
         "module_class_product": _nested(s.module_class),
         "module_non_merge": _ints(s.module_all),
         "module_fix": _ints(s.module_fix),
@@ -612,9 +726,17 @@ def tables_md(s: Stats) -> str:
 
 def commits_md(rows: Sequence[Row]) -> str:
     return _md(
-        ["commit", "date", "type", "class", "product", "modules"],
+        ["commit", "date", "type", "class", "rule", "product", "modules"],
         [
-            (r.tag(), r.date, r.kind, r.cls, "yes" if r.product else "no", ", ".join(r.modules))
+            (
+                r.tag(),
+                r.date,
+                r.kind,
+                r.cls,
+                r.rule,
+                "yes" if r.product else "no",
+                ", ".join(r.modules),
+            )
             for r in rows
             if r.fix
         ],
@@ -717,6 +839,10 @@ def _top_share(s: Stats) -> str:
     return ", ".join(f"`{m}` {100 * v:.1f} %" for m, v in best)
 
 
+def _fmt(table: Mapping[str, int]) -> str:
+    return ", ".join(f"{k} {table[k]}" for k in RULES if k in table)
+
+
 def _readme(
     s: Stats,
     stage0: Sequence[Mapping[str, Json]],
@@ -751,6 +877,11 @@ def _readme(
         excluded_n=sum(s.excluded_by_type.values()),
         excluded=excluded,
         classes=classes,
+        rules_product=_fmt(s.class_rule_product),
+        rules_all=_fmt(s.class_rule_all),
+        other_product=s.class_product.get(OTHER, 0),
+        layout_map="\n".join(f"  `{old}` -> `{new}`" for old, new in LAYOUT_MAP),
+        memory=MEMORY,
         top_module=_top(s.module_product),
         min_share=MIN_SHARE_COMMITS,
         top_share=_top_share(s),
@@ -800,6 +931,28 @@ the module with the most changed lines (path table, `classify()`); otherwise `ot
   `memory.py` needs a keyword, so it is not in the path table.
 - A `ci:`/`build:` commit is class `{platform}` whether or not it is a fix.
 
+Extensions of 2026-10-25 (maintainer, question В5 of `docs/reports/stage-1.md`):
+- Old layout. Paths are normalised before the path table and before the module is computed
+  (`normalise_path`, constant `LAYOUT_MAP`; first prefix wins):
+{layout_map}
+  [допущение: mapping read off `git -C .legacy/pysport show --stat ef2a741` ("Moved from app",
+  2017-11-24) for `app/gui`, `app/models`, `app/modules`, `lib`; `app/plugins`,
+  `app/controllers` (also `controller`, the typo `contoller`, `view`) are earlier names and are
+  mapped by the same file names, and `core/otime.py`, `core/template.py` by `git log --follow`
+  of the current files]. Top-level files of the 2017 layout (`app.py`, `SportOrg.pyw`, ...)
+  and the rest of `core/` are not clearly mappable and stay `other`. `commits.json` keeps the
+  original path and the normalised module per file (`files`); `modules` and `lines` use
+  the normalised modules.
+- `{memory}` by changed functions. If the keywords decide nothing and the path fallback gives
+  `other`, and the commit changed `{memory}` (or its old-layout path), the headers of
+  `git show --format= -U0 <sha> -- <path>` are read. A throwaway attributes file gives git a
+  `def`/`class` funcname pattern, so the context is the innermost enclosing `def` or `class`.
+  The names are split into words (snake_case, CamelCase), only names are used, not parameters.
+  The keyword classifier runs on these words: exactly one class decides, otherwise the commit
+  stays `other`.
+- `class_rule` in `commits.json`: `keyword`, `memory-functions`, `path` (module fallback),
+  `other`; `type` for `ci:`/`build:` and docs-only commits, which are decided before the keywords.
+
 Issues and PRs: class from labels first, mapping `{label_class}` [допущение: only these two
 labels name a class; `bug`, `feature`, `enhancement`, `question`, `python` do not], then the
 keyword classifier on the title in memory (exactly one class), otherwise `{unclassified}`.
@@ -813,6 +966,13 @@ keyword classifier on the title in memory (exactly one class), otherwise `{uncla
 - Fix-like subjects excluded by type (a `feat`/`docs`/... type with a fix word): {excluded_n}
   ({excluded}).
 - Class totals of product defects: {classes}.
+- Product defects by deciding rule: {rules_product}. All fix commits: {rules_all}.
+- Before this extension (same pin): product classes calc 13, time 2, device 14, import-export 15,
+  report-print 12, online 9, persistence 10, i18n 4, platform-build 4, ui 35, other 50; all fix
+  commits: calc 13, time 2, device 14, import-export 15, report-print 12, online 9, persistence 10,
+  i18n 4, platform-build 10, ui 35, other 50, docs-only 2. Now `other` is {other_product}
+  of the product defects. The remaining `other` are top-level files of the 2017 layout,
+  `.travis.yml`, tests, and `memory.py` changes whose function names name no class or several.
 - Top modules by product-defect count: {top_module}.
 - Top modules by fix share (at least {min_share} non-merge commits): {top_share}.
 - Stage 0 heuristic: {s0_fix} of {s0_n} candidates are fixes under the new rule, {s0_product}
@@ -827,8 +987,9 @@ keyword classifier on the title in memory (exactly one class), otherwise `{uncla
   not a fix by the rule, and a fix with a neutral subject is missed.
 - Keywords such as `time`, `result`, `read` match many unrelated subjects; two matching
   classes fall to the path table.
-- Precision and recall are unknown until the manual sample of 50 commits (Phase D, main
-  session, `sample.manual.md`).
+- Precision and recall come from the agent's sample checks of 50 commits (Phase D, main
+  session): `sample-check-1.agent.md` for the classifier before the change of 2026-10-25,
+  `sample-check-2.agent.md` for the current one.
 - Issues and PRs are a snapshot from the cache; the issues API gives `merged_at` only inside
   `pull_request`. Cache SHA-256 values are in the header of every `.md`.
 - No author, login or e-mail is read into any output; subjects and titles are used in memory
@@ -852,7 +1013,7 @@ def main(argv: list[str] | None = None) -> int:
     root = repo_root(PYSPORT)
     pin = legacy.find_pin(PYSPORT).commit
     commits = git_log(root, pin)
-    rows = [commit_row(c) for c in commits]
+    rows = [commit_row(c, root) for c in commits]
     stats = compute(rows, commits)
     stage0 = compare_stage0(commits, rows)
 

@@ -108,7 +108,7 @@ def test_extract_reports_unparsed_and_syntax_warnings() -> None:
     assert [u.path for u in ex.unparsed] == ["sportorg/bad.py"]
 
 
-def test_violation_kinds_v1_v2_v3() -> None:
+def test_violation_kinds_v1_v3() -> None:
     py = {
         "sportorg/__init__.py": "",
         "sportorg/startup.py": "from sportorg.gui import main\n",
@@ -136,8 +136,6 @@ def test_violation_kinds_v1_v2_v3() -> None:
         ("V1", "sportorg.common.otime", "sportorg.models.memory", 3, False),
         ("V1", "sportorg.libs.a.y", "sportorg.common.otime", 1, False),
         ("V1", "sportorg.modules.run", "sportorg.gui.main", 2, True),
-        ("V2", "sportorg.libs.a.x", "sportorg.libs.b.z", 2, False),
-        ("V2", "sportorg.libs.a.y", "sportorg.common.otime", 1, False),
         ("V3", "sportorg.common.otime", "win32api", 1, False),
         ("V3", "sportorg.libs.a.y", "requests", 2, False),
         ("V3", "sportorg.models.memory", "PySide6", 2, False),
@@ -147,7 +145,7 @@ def test_violation_kinds_v1_v2_v3() -> None:
     assert layers == {("V1", "application", "ui")}
     counts = s.violation_counts(found)
     assert counts["V1"] == {"module_level": 2, "local": 1}
-    assert counts["V2"] == {"module_level": 2, "local": 0}
+    assert "V2" not in counts  # dropped by the maintainer on 2026-10-25 (report question 3)
     assert counts["V3"] == {"module_level": 4, "local": 0}
 
 
@@ -172,7 +170,7 @@ def test_layers_contract_lists_only_existing_modules() -> None:
         "sportorg.models.memory",
         "sportorg.common.otime",
         "sportorg.config",
-        "sportorg.libs.a.x",
+        "sportorg.libs.template.template",
     }
     text = s.layers_contract(modules)
     assert "root_package = sportorg\n" in text
@@ -184,7 +182,7 @@ def test_layers_contract_lists_only_existing_modules() -> None:
         "sportorg.modules",
         "sportorg.models",
         "sportorg.common : sportorg.config",
-        "sportorg.libs",
+        "sportorg.libs.template",
     ]
 
 
@@ -296,3 +294,13 @@ def test_spearman_of_hotspots() -> None:
 def test_contract_layers_agree_with_layer_of() -> None:
     for index, layer in enumerate(s.CONTRACT_LAYERS):
         assert {layer_of(prefix)[0] for prefix in layer} == {5 - index}
+
+
+def test_contract_layers_do_not_overlap() -> None:
+    members = [(index, m) for index, layer in enumerate(s.CONTRACT_LAYERS) for m in layer]
+    for i, a in members:
+        for j, b in members:
+            if i != j:
+                assert not b.startswith(f"{a}."), (a, b)
+    assert "sportorg.libs.sportiduino.sportiduino" in s.CONTRACT_LAYERS[2]
+    assert "sportorg.libs.winorient.wdb_online_sender_dialog" in s.CONTRACT_LAYERS[1]

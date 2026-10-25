@@ -918,9 +918,10 @@ def readme(result: ScanResult, skipped: list[str], report: dict[str, dict[str, J
         "",
         _p(
             "Produced by `scripts/archaeology/os_ru.py` (commands in `commands.txt`). The script",
-            " lists hits with `file:line`; it classifies nothing (classification is manual, TASK-7",
-            " criterion 5). Files: `hits.{json,md}` (all hits, core first), `summary.{json,md}`",
-            " (rule x core/outside x kind), `recall.{json,md}` (against `git grep`).",
+            " lists hits with `file:line`; it classifies nothing (the agent classifies them in",
+            " `classification.agent.md`, TASK-7 criterion 5). Files: `hits.{json,md}` (all hits,",
+            " core first), `summary.{json,md}` (rule x core/outside x kind), `recall.{json,md}`",
+            " (against `git grep`).",
         ),
         "",
         "## Definitions",

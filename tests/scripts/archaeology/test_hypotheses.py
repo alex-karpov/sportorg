@@ -150,3 +150,14 @@ def test_h6_reads_markers_and_lock_versions() -> None:
     assert verdict.numbers["lock_within_win7_limits"] == 0
     assert verdict.numbers["win7_mentions"] == 1
     assert verdict.verdict == "partly"
+
+
+def test_h2_verdict_uses_the_sportorg_scope() -> None:
+    py = {MEMORY: "def race(): ...\n"}
+    py |= {f"sportorg/m{i}.py": "from sportorg.models.memory import race\n" for i in range(62)}
+    py |= {f"tests/t{i}.py": "from sportorg.models.memory import race\n" for i in range(16)}
+    verdict = h.h2_race(_snapshot(py))
+    assert verdict.numbers["files_using_race"] == 78
+    assert verdict.numbers["files_using_race_in_sportorg"] == 62
+    assert verdict.verdict == "confirmed"
+    assert "мейнтейнер: 2026-10-25" in verdict.definition

@@ -5603,10 +5603,10 @@
    "fan_in": 2,
    "fan_out": 2,
    "import_statements": 2,
-   "layer": "vendored",
+   "layer": "application",
    "local_import_statements": 0,
    "module": "sportorg.libs.huichang.huichang",
-   "rank": 0
+   "rank": 3
   },
   {
    "fan_in": 0,
@@ -5621,10 +5621,10 @@
    "fan_in": 1,
    "fan_out": 3,
    "import_statements": 3,
-   "layer": "vendored",
+   "layer": "application",
    "local_import_statements": 0,
    "module": "sportorg.libs.iof.generator",
-   "rank": 0
+   "rank": 3
   },
   {
    "fan_in": 0,
@@ -5657,10 +5657,10 @@
    "fan_in": 1,
    "fan_out": 1,
    "import_statements": 1,
-   "layer": "vendored",
+   "layer": "application",
    "local_import_statements": 0,
    "module": "sportorg.libs.ocad.ocad",
-   "rank": 0
+   "rank": 3
   },
   {
    "fan_in": 1,
@@ -5684,28 +5684,28 @@
    "fan_in": 1,
    "fan_out": 0,
    "import_statements": 0,
-   "layer": "vendored",
+   "layer": "application",
    "local_import_statements": 0,
    "module": "sportorg.libs.sfr.sfrreader",
-   "rank": 0
+   "rank": 3
   },
   {
    "fan_in": 1,
    "fan_out": 4,
    "import_statements": 5,
-   "layer": "vendored",
+   "layer": "application",
    "local_import_statements": 0,
    "module": "sportorg.libs.sfr.sfrximporter",
-   "rank": 0
+   "rank": 3
   },
   {
    "fan_in": 1,
    "fan_out": 1,
    "import_statements": 1,
-   "layer": "vendored",
+   "layer": "application",
    "local_import_statements": 0,
    "module": "sportorg.libs.sfr.sfrxparser",
-   "rank": 0
+   "rank": 3
   },
   {
    "fan_in": 0,
@@ -5720,10 +5720,10 @@
    "fan_in": 1,
    "fan_out": 0,
    "import_statements": 0,
-   "layer": "vendored",
+   "layer": "application",
    "local_import_statements": 0,
    "module": "sportorg.libs.sportiduino.sportiduino",
-   "rank": 0
+   "rank": 3
   },
   {
    "fan_in": 0,
@@ -5738,10 +5738,10 @@
    "fan_in": 1,
    "fan_out": 0,
    "import_statements": 0,
-   "layer": "vendored",
+   "layer": "application",
    "local_import_statements": 0,
    "module": "sportorg.libs.srpid.srpid",
-   "rank": 0
+   "rank": 3
   },
   {
    "fan_in": 0,
@@ -5756,10 +5756,10 @@
    "fan_in": 1,
    "fan_out": 0,
    "import_statements": 0,
-   "layer": "vendored",
+   "layer": "application",
    "local_import_statements": 0,
    "module": "sportorg.libs.telegram.telegram",
-   "rank": 0
+   "rank": 3
   },
   {
    "fan_in": 0,
@@ -5801,19 +5801,19 @@
    "fan_in": 1,
    "fan_out": 3,
    "import_statements": 3,
-   "layer": "vendored",
+   "layer": "application",
    "local_import_statements": 0,
    "module": "sportorg.libs.winorient.wdb_online_sender",
-   "rank": 0
+   "rank": 3
   },
   {
    "fan_in": 0,
    "fan_out": 1,
    "import_statements": 1,
-   "layer": "vendored",
+   "layer": "ui",
    "local_import_statements": 0,
    "module": "sportorg.libs.winorient.wdb_online_sender_dialog",
-   "rank": 0
+   "rank": 4
   },
   {
    "fan_in": 1,

@@ -33,6 +33,38 @@ the module with the most changed lines (path table, `classify()`); otherwise `ot
   `memory.py` needs a keyword, so it is not in the path table.
 - A `ci:`/`build:` commit is class `platform-build` whether or not it is a fix.
 
+Extensions of 2026-10-25 (maintainer, question В5 of `docs/reports/stage-1.md`):
+- Old layout. Paths are normalised before the path table and before the module is computed
+  (`normalise_path`, constant `LAYOUT_MAP`; first prefix wins):
+  `sportorg/app/gui/` -> `sportorg/gui/`
+  `sportorg/app/models/` -> `sportorg/models/`
+  `sportorg/app/modules/` -> `sportorg/modules/`
+  `sportorg/app/plugins/` -> `sportorg/modules/`
+  `sportorg/app/controllers/` -> `sportorg/gui/`
+  `sportorg/app/controller/` -> `sportorg/gui/`
+  `sportorg/app/contoller/` -> `sportorg/gui/`
+  `sportorg/app/view/` -> `sportorg/gui/`
+  `sportorg/lib/` -> `sportorg/libs/`
+  `sportorg/core/otime.py` -> `sportorg/common/otime.py`
+  `sportorg/core/template.py` -> `sportorg/common/template.py`
+  [допущение: mapping read off `git -C .legacy/pysport show --stat ef2a741` ("Moved from app",
+  2017-11-24) for `app/gui`, `app/models`, `app/modules`, `lib`; `app/plugins`,
+  `app/controllers` (also `controller`, the typo `contoller`, `view`) are earlier names and are
+  mapped by the same file names, and `core/otime.py`, `core/template.py` by `git log --follow`
+  of the current files]. Top-level files of the 2017 layout (`app.py`, `SportOrg.pyw`, ...)
+  and the rest of `core/` are not clearly mappable and stay `other`. `commits.json` keeps the
+  original path and the normalised module per file (`files`); `modules` and `lines` use
+  the normalised modules.
+- `sportorg/models/memory.py` by changed functions. If the keywords decide nothing and the path fallback gives
+  `other`, and the commit changed `sportorg/models/memory.py` (or its old-layout path), the headers of
+  `git show --format= -U0 <sha> -- <path>` are read. A throwaway attributes file gives git a
+  `def`/`class` funcname pattern, so the context is the innermost enclosing `def` or `class`.
+  The names are split into words (snake_case, CamelCase), only names are used, not parameters.
+  The keyword classifier runs on these words: exactly one class decides, otherwise the commit
+  stays `other`.
+- `class_rule` in `commits.json`: `keyword`, `memory-functions`, `path` (module fallback),
+  `other`; `type` for `ci:`/`build:` and docs-only commits, which are decided before the keywords.
+
 Issues and PRs: class from labels first, mapping `{'github_actions': 'platform-build', 'dependencies': 'platform-build'}` [допущение: only these two
 labels name a class; `bug`, `feature`, `enhancement`, `question`, `python` do not], then the
 keyword classifier on the title in memory (exactly one class), otherwise `unclassified`.
@@ -45,9 +77,16 @@ keyword classifier on the title in memory (exactly one class), otherwise `unclas
   6 of type ci/build.
 - Fix-like subjects excluded by type (a `feat`/`docs`/... type with a fix word): 11
   (docs 1, feat 2, refactor 5, style 3).
-- Class totals of product defects: calc 13, time 2, device 14, import-export 15, report-print 12, online 9, persistence 10, i18n 4, platform-build 4, ui 35, other 50.
-- Top modules by product-defect count: `other` 64, `sportorg.models` 37, `sportorg.gui.dialogs` 35, `sportorg.gui` 34, `sportorg.gui.menu` 22.
-- Top modules by fix share (at least 10 non-merge commits): `sportorg.libs.sfr` 21.7 %, `sportorg.modules.backup` 20.5 %, `sportorg.libs.ocad` 20.0 %, `sportorg.gui` 17.7 %, `sportorg.modules.live` 17.3 %.
+- Class totals of product defects: calc 15, time 2, device 16, import-export 15, report-print 12, online 9, persistence 10, i18n 4, platform-build 4, ui 37, other 44.
+- Product defects by deciding rule: keyword 58, memory-functions 4, path 62, other 44. All fix commits: keyword 58, memory-functions 4, path 62, other 44, type 8.
+- Before this extension (same pin): product classes calc 13, time 2, device 14, import-export 15,
+  report-print 12, online 9, persistence 10, i18n 4, platform-build 4, ui 35, other 50; all fix
+  commits: calc 13, time 2, device 14, import-export 15, report-print 12, online 9, persistence 10,
+  i18n 4, platform-build 10, ui 35, other 50, docs-only 2. Now `other` is 44
+  of the product defects. The remaining `other` are top-level files of the 2017 layout,
+  `.travis.yml`, tests, and `memory.py` changes whose function names name no class or several.
+- Top modules by product-defect count: `other` 64, `sportorg.models` 44, `sportorg.gui` 41, `sportorg.gui.dialogs` 35, `sportorg.gui.menu` 22.
+- Top modules by fix share (at least 10 non-merge commits): `sportorg.libs.sfr` 21.7 %, `sportorg.modules.backup` 17.7 %, `sportorg.modules.live` 17.3 %, `sportorg.libs.template` 16.7 %, `tests` 16.4 %.
 - Stage 0 heuristic: 9 of 11 candidates are fixes under the new rule, 9
   are product defects.
 - Issues 46, PRs 532. Issues by class: {'calc': 5, 'device': 5, 'i18n': 1, 'import-export': 1, 'platform-build': 3, 'report-print': 1, 'time': 1, 'unclassified': 29}. PRs by class: {'calc': 55, 'device': 28, 'i18n': 12, 'import-export': 17, 'online': 13, 'persistence': 12, 'platform-build': 58, 'report-print': 22, 'time': 12, 'ui': 21, 'unclassified': 282}.
@@ -60,8 +99,9 @@ keyword classifier on the title in memory (exactly one class), otherwise `unclas
   not a fix by the rule, and a fix with a neutral subject is missed.
 - Keywords such as `time`, `result`, `read` match many unrelated subjects; two matching
   classes fall to the path table.
-- Precision and recall are unknown until the manual sample of 50 commits (Phase D, main
-  session, `sample.manual.md`).
+- Precision and recall come from the agent's sample checks of 50 commits (Phase D, main
+  session): `sample-check-1.agent.md` for the classifier before the change of 2026-10-25,
+  `sample-check-2.agent.md` for the current one.
 - Issues and PRs are a snapshot from the cache; the issues API gives `merged_at` only inside
   `pull_request`. Cache SHA-256 values are in the header of every `.md`.
 - No author, login or e-mail is read into any output; subjects and titles are used in memory

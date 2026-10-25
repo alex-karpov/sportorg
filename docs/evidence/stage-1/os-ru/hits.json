@@ -67,7 +67,7 @@
    "core": false,
    "detail": "Windows",
    "kind": "code",
-   "layer": "vendored",
+   "layer": "application",
    "rule": "OS01",
    "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:30]",
    "token": "platform.system"
@@ -76,7 +76,7 @@
    "core": false,
    "detail": "Windows",
    "kind": "code",
-   "layer": "vendored",
+   "layer": "application",
    "rule": "OS01",
    "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:278]",
    "token": "platform.system"
@@ -85,7 +85,7 @@
    "core": false,
    "detail": "",
    "kind": "code",
-   "layer": "vendored",
+   "layer": "application",
    "rule": "OS01",
    "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:279]",
    "token": "platform.system"
@@ -94,7 +94,7 @@
    "core": false,
    "detail": "Linux",
    "kind": "code",
-   "layer": "vendored",
+   "layer": "application",
    "rule": "OS01",
    "tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:313]",
    "token": "platform.system"
@@ -103,7 +103,7 @@
    "core": false,
    "detail": "Windows",
    "kind": "code",
-   "layer": "vendored",
+   "layer": "application",
    "rule": "OS01",
    "tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:320]",
    "token": "platform.system"
@@ -112,7 +112,7 @@
    "core": false,
    "detail": "",
    "kind": "code",
-   "layer": "vendored",
+   "layer": "application",
    "rule": "OS01",
    "tag": "[код: pysport@b548c35 sportorg/libs/sportiduino/sportiduino.py:324]",
    "token": "platform.system"
@@ -193,7 +193,7 @@
    "core": false,
    "detail": "",
    "kind": "code",
-   "layer": "vendored",
+   "layer": "application",
    "rule": "OS02",
    "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:31]",
    "token": "pywinusb.hid"
@@ -427,7 +427,7 @@
    "core": false,
    "detail": "tty",
    "kind": "string",
-   "layer": "vendored",
+   "layer": "application",
    "rule": "OS04",
    "tag": "[код: pysport@b548c35 sportorg/libs/huichang/huichang.py:311]",
    "token": "/dev/ttyACM0"
@@ -5665,7 +5665,7 @@
    "core": false,
    "detail": "comparison",
    "kind": "string",
-   "layer": "vendored",
+   "layer": "application",
    "rule": "RU01",
    "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrximporter.py:269]",
    "token": "cнят"
@@ -5674,7 +5674,7 @@
    "core": false,
    "detail": "comparison",
    "kind": "string",
-   "layer": "vendored",
+   "layer": "application",
    "rule": "RU01",
    "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrximporter.py:271]",
    "token": "<text omitted: 12 chars>"
@@ -5683,7 +5683,7 @@
    "core": false,
    "detail": "comparison",
    "kind": "string",
-   "layer": "vendored",
+   "layer": "application",
    "rule": "RU01",
    "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrximporter.py:273]",
    "token": "<text omitted: 10 chars>"
@@ -5692,7 +5692,7 @@
    "core": false,
    "detail": "comparison",
    "kind": "string",
-   "layer": "vendored",
+   "layer": "application",
    "rule": "RU01",
    "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrximporter.py:275]",
    "token": "н/с"
@@ -5701,7 +5701,7 @@
    "core": false,
    "detail": "comparison",
    "kind": "string",
-   "layer": "vendored",
+   "layer": "application",
    "rule": "RU01",
    "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrxparser.py:37]",
    "token": "<text omitted: 8 chars>"
@@ -7303,7 +7303,7 @@
    "core": false,
    "detail": "import",
    "kind": "code",
-   "layer": "vendored",
+   "layer": "application",
    "rule": "RU02",
    "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrximporter.py:7]",
    "token": "Qualification"
@@ -7312,7 +7312,7 @@
    "core": false,
    "detail": "",
    "kind": "code",
-   "layer": "vendored",
+   "layer": "application",
    "rule": "RU02",
    "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrximporter.py:124]",
    "token": "Qualification"
@@ -7969,7 +7969,7 @@
    "core": false,
    "detail": "",
    "kind": "comment",
-   "layer": "vendored",
+   "layer": "application",
    "rule": "RU03",
    "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:20]",
    "token": "mail.ru"
@@ -7978,7 +7978,7 @@
    "core": false,
    "detail": "",
    "kind": "comment",
-   "layer": "vendored",
+   "layer": "application",
    "rule": "RU03",
    "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrreader.py:20]",
    "token": "www.sportsystem.ru"
@@ -7987,7 +7987,7 @@
    "core": false,
    "detail": "",
    "kind": "string",
-   "layer": "vendored",
+   "layer": "application",
    "rule": "RU03",
    "tag": "[код: pysport@b548c35 sportorg/libs/sfr/sfrxparser.py:52]",
    "token": "orgeo"
@@ -7996,7 +7996,7 @@
    "core": false,
    "detail": "",
    "kind": "docstring",
-   "layer": "vendored",
+   "layer": "application",
    "rule": "RU03",
    "tag": "[код: pysport@b548c35 sportorg/libs/srpid/srpid.py:3]",
    "token": "yandex"
@@ -8005,7 +8005,7 @@
    "core": false,
    "detail": "",
    "kind": "docstring",
-   "layer": "vendored",
+   "layer": "application",
    "rule": "RU03",
    "tag": "[код: pysport@b548c35 sportorg/libs/srpid/srpid.py:3]",
    "token": "yandex.ru"
@@ -8014,7 +8014,7 @@
    "core": false,
    "detail": "",
    "kind": "string",
-   "layer": "vendored",
+   "layer": "application",
    "rule": "RU03",
    "tag": "[код: pysport@b548c35 sportorg/libs/telegram/telegram.py:5]",
    "token": "telegram"
@@ -8023,7 +8023,7 @@
    "core": false,
    "detail": "",
    "kind": "string",
-   "layer": "vendored",
+   "layer": "ui",
    "rule": "RU03",
    "tag": "[код: pysport@b548c35 sportorg/libs/winorient/wdb_online_sender_dialog.py:40]",
    "token": "orgeo"
@@ -8032,7 +8032,7 @@
    "core": false,
    "detail": "",
    "kind": "string",
-   "layer": "vendored",
+   "layer": "ui",
    "rule": "RU03",
    "tag": "[код: pysport@b548c35 sportorg/libs/winorient/wdb_online_sender_dialog.py:40]",
    "token": "orgeo.ru"
@@ -8176,7 +8176,7 @@
    "core": false,
    "detail": "",
    "kind": "string",
-   "layer": "vendored",
+   "layer": "application",
    "rule": "RU04",
    "tag": "[код: pysport@b548c35 sportorg/libs/ocad/ocad.py:71]",
    "token": "windows-1251"
