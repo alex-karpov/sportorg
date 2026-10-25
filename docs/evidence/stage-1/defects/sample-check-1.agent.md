@@ -1,6 +1,6 @@
-# Defect classifier: manual check of 50 commits (вручную)
+# Defect classifier: sample check 1 of 50 commits (agent judgement)
 
-The labels in this file were assigned by hand by the main session on 2026-10-25. The sample itself was
+The labels in this file are the judgement of the main session's agent (Claude Code, Opus 5.5) on 2026-10-25, not script output; no human reviewed them. **Classifier of commit 75474c0, before the maintainer's change of 2026-10-25 (question 5 of the report); the current classifier is checked in `sample-check-2.agent.md`. The "predicted" columns here no longer match `commits.json`.** The sample itself was
 chosen by a script: 25 commits predicted as fixes and 25 predicted as non-fixes, non-merge only.
 
 ```
@@ -10,7 +10,7 @@ uv run python -m scripts.archaeology.sample --json docs/evidence/stage-1/defects
 ```
 
 ## Criteria
-For each commit I read the subject, the changed files and, when the subject did not say enough, the diff
+For each commit the agent read the subject, the changed files and, when the subject did not say enough, the diff
 (`git -C .legacy/pysport show <sha>`). Issue #276 was read from the cache. The texts themselves are not
 copied here (Stage 1 rule 4); the "why" column paraphrases them.
 - **fix**: the commit corrects behaviour that was wrong: a crash, a wrong result, a broken function,
@@ -20,7 +20,7 @@ copied here (Stage 1 rule 4); the "why" column paraphrases them.
   not from which files it touches. `unknown` is not used: every commit could be read.
 
 ## Sample
-| # | commit | predicted fix | predicted class | fix (manual) | class (manual) | why |
+| # | commit | predicted fix | predicted class | fix (agent) | class (agent) | why |
 |---|---|---|---|---|---|---|
 | 1 | [история: pysport@57ac99d] | yes | other | yes | calc | overtime check for multi-day races used the wrong day |
 | 2 | [история: pysport@2048303] | yes | other | yes | ui | deleting table rows removed wrong records (row index instead of id) |
@@ -76,7 +76,7 @@ copied here (Stage 1 rule 4); the "why" column paraphrases them.
 ## Result
 **Fix / non-fix** (confusion in the sample):
 
-| | manual fix | manual non-fix |
+| | agent: fix | agent: non-fix |
 |---|---|---|
 | predicted fix (25) | 24 | 1 (#11) |
 | predicted non-fix (25) | 2 (#16, #43) | 23 |
@@ -95,6 +95,6 @@ copied here (Stage 1 rule 4); the "why" column paraphrases them.
 - This matches W4's own warning: `other` holds 30 % of product defects.
 
 **Limits:**
-- one labeller;
+- one agent labelled, no human review;
 - 50 commits;
 - the class judgements in #2, #19, #36 and #44 are borderline. Read class percentages as ±10 points at best.

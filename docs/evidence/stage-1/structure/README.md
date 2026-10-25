@@ -50,38 +50,39 @@ Import graph:
 - Most imported: `sportorg.models.memory` (fan-in 71), `sportorg.language` (60), `sportorg.config` (48), `sportorg.gui.global_access` (48). Largest fan-out: `sportorg.gui.menu.actions` (66), `sportorg.gui.main_window` (38).
 - 1 `SyntaxWarning` (invalid escape sequence) at `sportorg/gui/dialogs/about.py:747`. 0 files fail to parse.
 
-Layer violations (module level / local):
+Layer violations (module level / local), after `sportorg/libs` was split by role and V2 dropped
+[мейнтейнер: 2026-10-25] (report question 3; module lists `common.LIBS_APPLICATION`, `common.LIBS_UI`):
 
 | Kind | Module level | Local |
 |---|---|---|
-| V1 | 16 | 1 |
-| V2 | 13 | 0 |
-| V3 | 12 | 0 |
+| V1 | 3 | 1 |
+| V3 | 3 | 0 |
 
-- V1 by layer pair: vendored to foundation 8, vendored to domain 5, application to ui 3, foundation to application 1 (local: `sportorg/settings.py:257` into `sportorg.modules.configs.configs`). Without vendored sources V1 is 3 module level + 1 local. All 13 V2 edges are also V1 (a vendored lib imports a higher layer).
-- import-linter `layers`: exit 1 (broken), analysed 173 files and 588 dependencies, 16 entries, all direct (0 indirect chains). Its 16 module pairs equal the 16 distinct V1 pairs (own V1 has 17 statements because `sportorg/libs/sfr/sfrximporter.py:6` and `:7` import the same module; the contract lists module pairs, not statements). The contract also follows indirect chains and groups by layer pair; in this graph no indirect chain exists, so the counts agree. It does not see the `recovery` namespace package (173 files against 177 modules), which has no V1 edge, and it does not report V2 or V3.
-- V3: 12 statements in 8 modules: Qt in `sportorg/utils/time.py` (PySide6 and the PySide2 fallback) and `sportorg/libs/winorient/wdb_online_sender_dialog.py`, `serial` or `pywinusb` in 4 vendored device libs (huichang, sfr, sportiduino, srpid), `requests` in `sportorg/libs/telegram/telegram.py`, `playsound3` in `sportorg/common/audio.py`.
+- V1 by layer pair: application to ui 3 (`modules/printing/printing.py:21`, `modules/sportident/result_generation.py:7`, `modules/winorient/wdb_number_setter.py:6`), foundation to application 1 (local: `sportorg/settings.py:257` into `sportorg.modules.configs.configs`).
+- import-linter `layers`: exit 1 (broken), analysed 173 files and 588 dependencies, 4 entries, all direct (0 indirect chains). Its 4 module pairs equal the 4 distinct V1 pairs. It does not see the `recovery` namespace package (173 files against 177 modules), which has no V1 edge, and it does not report V3.
+- V3: 3 statements in 2 modules: Qt in `sportorg/utils/time.py` (PySide6 and the PySide2 fallback), `playsound3` in `sportorg/common/audio.py`.
+- Before the split (first version of this evidence, commit ab28161): V1 16 + 1 local, V2 13, V3 12. Most of the difference is the vendored libs that import `common`, `models`, `utils` and `language`. Those libs are now adapters or codecs (rank 3), or ui.
 
-Dead code (vulture `--min-confidence 0`): 282 findings (278 at 60 %, 4 at 100 %): unused class 92, method 81, variable 50, attribute 41, function 12, property 3, redundant if-condition 2, unreachable code 1. `name_in_string` is set on 109 findings (unused class 86, variable 21, property 2); `name_is_string` on 108. Nothing is judged here: the main session samples 30 by hand.
+Dead code (vulture `--min-confidence 0`): 282 findings (278 at 60 %, 4 at 100 %): unused class 92, method 81, variable 50, attribute 41, function 12, property 3, redundant if-condition 2, unreachable code 1. `name_in_string` is set on 109 findings (unused class 86, variable 21, property 2); `name_is_string` on 108. Nothing is judged here. The main session's agent checks a sample of 30 in `dead-code-sample-check.agent.md`; no human reviewed it.
 
 Rust: 3 `.rs` files, 336 lines (`crates/sportorg-core` 327, `crates/sportorg-rust-example` 9); `Cargo.toml` and `Cargo.lock` 171 lines (the two workspace-root files 146 of them). Non-merge commits: `sportorg-core` 2, `sportorg-rust-example` 1, workspace root 2.
 
 ## Limits
 
 - The graph is static: `importlib`, `__import__`, string dispatch and `TYPE_CHECKING`-only imports are not distinguished; `try/except ImportError` fallbacks (PySide6 / PySide2) are counted as two imports.
-- V3 matches module roots only. `sportorg/libs/winorient/wdb_online_sender.py:6` imports `requests` as `from pip._vendor import requests`, which the list does not match. The third-party roots imported from ranks 0-2 and not in the list are in `violations.json` (`core_third_party_not_listed`): `chardet`, `dateutil`, `importlib_resources`, `jinja2`, `lxml`, `pip`, `polib`, `six`, `sportorg_core`.
+- V3 matches module roots only. `sportorg/libs/winorient/wdb_online_sender.py:6` imports `requests` as `from pip._vendor import requests`, which the list does not match. The third-party roots imported from ranks 0-2 and not in the list are in `violations.json` (`core_third_party_not_listed`): `chardet`, `dateutil`, `importlib_resources`, `jinja2`, `polib`, `sportorg_core`.
 - Commit counts follow current paths (`--no-renames`); the hotspot score is a ranking, not a defect count.
 - Complexity counts functions only; large data modules and module-level code score low.
 - Tests, benches and other non-package `.py` files are in the hotspot table but not in the graph or the violations.
 
 ## Open questions (not decided here)
 
-1. Vendored libs (`sportorg/libs/**`) import the application's own `common`, `models`, `utils`, `language` (13 edges, all V1 and V2). Are they vendored third-party code or project code under the `libs` name? This decides whether V1/V2 are defects or a layer-model gap.
+1. Vendored libs (`sportorg/libs/**`) import the application's own `common`, `models`, `utils`, `language`. Decided [мейнтейнер: 2026-10-25]: project code, split by role (see above).
 2. `sportorg.data` (a package with `configs/*.txt` data) is outside the layer model. Which rank does it belong to?
 3. `sportorg_core` (the Rust extension) is imported from `sportorg/common/otime.py:6` (core). The model does not name it: foundation or adapter?
 4. `from pip._vendor import requests` (`sportorg/libs/winorient/wdb_online_sender.py:6`): a dependency on pip internals. Local practice or bug; not classified here.
 5. The namespace package `sportorg.modules.recovery` has no `__init__.py`, so grimp and import-linter miss it. Intentional or an omission; relevant for any tool that reads the package structure.
 
 Checks:
-- `verify_locs`: 1067 tags, 0 problems (seed 1, 10-tag sample compared by eye with the source lines the command prints).
+- `verify_locs`: 1070 tags after the split, 0 problems (first version: 1067; seed 1, 10-tag sample compared by eye with the source lines the command prints).
 - Two runs produce byte-identical files (`cmp`).

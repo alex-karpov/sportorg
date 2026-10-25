@@ -49,7 +49,7 @@ uv run python -m scripts.legacy verify
 | Число в отчёте | Файл | Ключ |
 |---|---|---|
 | H1: 2910 строк, 218 коммитов, ранг 1 | `hypotheses/hypotheses.json` | `['H1']['numbers']` |
-| H2: 78 / 62 / 16 / 77 | `hypotheses/hypotheses.json` | `['H2']['numbers']` |
+| H2: 78 / 62 / 16 / 77, вердикт «подтверждена» по `sportorg/` | `hypotheses/hypotheses.json` | `['H2']['numbers']`, `['H2']['verdict']` |
 | H3: 12 модулей, 29 импортов | `hypotheses/hypotheses.json` | `['H3']['numbers']` |
 | H4: 7 / 7 / 7 / 3 | `hypotheses/hypotheses.json` | `['H4']['numbers']` |
 | H5: домен, 10 членов, 2 определения | `hypotheses/hypotheses.json` | `['H5']['numbers']` |
@@ -58,10 +58,11 @@ uv run python -m scripts.legacy verify
 | Шаблоны 62 + 8 | `inventory/templates.json` | `['templates_repo']`, `['pysport']` (длины списков) |
 | 220 файлов, 2333 функции, 33 086 SLOC, ρ 0,64, топ-10 | `structure/summary.json` | `['hotspots']` |
 | Рёбра 603 / 588 / 15 | `structure/summary.json` | `['imports']` |
-| V1 / V2 / V3 | `structure/summary.json` | `['violations']` |
+| V1 3 + 1 локальный, V3 3; import-linter 4 пары | `structure/summary.json` | `['violations']['counts']`, `['violations']['linter']` |
 | 282 находки vulture, 109 с `name_in_string` | `structure/summary.json` | `['dead_code']` |
 | Пакеты, лицензии, OSV 227, перекрёстные проверки | `dependencies/summary.json` | весь объект; `['crosscheck']` |
 | 1142 / 176 / 168 | `defects/counts.json` | `['counts']` |
+| Классы: ui 37, other 44, device 16, calc 15, import-export 15, …; правило: путь 62, ключевое слово 58, функции `memory.py` 4, остаток 44 | `defects/counts.json` | `['counts']['class_totals_product']`, `['counts']['class_decided_by_rule_product']` |
 | 113 функций, 167 вызовов, 277 значений | `formats/formats.json` | `['summary']` |
 | 923 находки, по правилам | `os-ru/summary.json` | `['counts']` |
 | Полнота против `git grep` | `os-ru/recall.json` | весь объект |
@@ -71,20 +72,32 @@ uv run python -m scripts.legacy verify
 ```
 uv run python -m scripts.archaeology.verify_locs --evidence docs/evidence/stage-1 --sample 15 --seed <своё число>
 ```
-Ожидается `tags: 2872; problems: 0`. Возьми своё значение seed и сверь 15 напечатанных строк с тем, что утверждает соответствующая строка evidence: тот ли это класс, импорт, вызов, значение.
+Ожидается `tags: 2867; problems: 0`. Возьми своё значение seed и сверь 15 напечатанных строк с тем, что утверждает соответствующая строка evidence: тот ли это класс, импорт, вызов, значение.
 
-## 4. Ручные проверки: перепроверь часть независимо
-- **`defects/sample.manual.md`.**
+## 4. Выборочные проверки и классификация агента: перепроверь часть независимо
+Файлы `*.agent.md` — суждения агента основной сессии, человек их не проверял. Твоя проверка — первая независимая.
+- **`defects/sample-check-2.agent.md`** (классификатор после решения В5).
   - Выбери 10 строк, например через одну.
   - Прочитай `git -C .legacy/pysport show <sha>` и поставь свою метку «исправление/нет» и класс по критериям из начала файла.
-  - Посчитай совпадение с метками файла. Проверь арифметику раздела «Result»: точность 24/25, оценку полноты ≈ 69 % по долям 176/966 и интервал Клоппера — Пирсона.
-- **`structure/dead-code-sample.manual.md`.**
+  - Посчитай совпадение с метками файла.
+  - Проверь арифметику раздела «Result»:
+    - точность 23/25;
+    - оценка полноты ≈ 51 % по долям 176/966 и интервал Клоппера — Пирсона для 4/25;
+    - объединение с первой выборкой ≈ 59 %;
+    - совпадение классов 9/23 и 28/47.
+  - Проверь, что столбцы «predicted» совпадают с текущим `defects/commits.json`.
+- **`defects/sample-check-1.agent.md`** — первая выборка, против прежнего классификатора. Её столбцы «predicted» устарели, так и должно быть. Проверь только арифметику: 24/25 и ≈ 69 %.
+- **`structure/dead-code-sample-check.agent.md`.**
   - Выбери 10 строк.
   - Проверь метки через `git -C .legacy/pysport grep -n -w <имя>` и `git -C .legacy/templates grep -n -w <имя>`, а для FP-convention — через вызовы `getattr` в `sportorg/gui/dialogs/dialog.py`.
-- **`os-ru/classification.manual.md`.**
+  - Проверь раздел о `WdbOnlineSenderDialog`: `git -C .legacy/pysport grep -n -w WdbOnlineSenderDialog b548c35` и `git -C .legacy/pysport log --oneline -S"WdbOnlineSenderDialog" b548c35`.
+- **`os-ru/classification.agent.md`.** Это классификация всех находок, а не выборка.
   - Проверь покрытие: число находок по ОС (OS01–OS05) плюс находки с `core: true` в `os-ru/hits.json` должно равняться 686, и каждый тег должен стоять ровно в одной группе.
   - Проверь по коду категории групп O5, O8, O11 и O19.
-- **Воспроизводимость выборок.** Они воспроизводятся командами, записанными в начале каждого `*.manual.md` (`scripts.archaeology.sample`). Запусти их и сравни, что список совпадает.
+- **`dependencies/licence-sources.agent.md`.**
+  - Строки с пометкой «re-verified» сверь с кэшем: `pypi/sportident==1.2.8.json` (`info.license`, классификаторы, `urls[].digests.sha256`), `crates/unicode-ident==1.0.24.json`, а также с `git -C .legacy/pysport show b548c35:Cargo.lock`.
+  - Строки «review session» без сети не проверить, их нужно перечислить как непроверенные.
+- **Воспроизводимость выборок.** Они воспроизводятся командами, записанными в начале каждого файла выборочной проверки (`scripts.archaeology.sample`). Запусти их и сравни, что список совпадает.
 
 ## 5. Канарейки: скрипты реагируют на изменение данных
 Скрипты читают legacy как `<закреплённый коммит>:<путь>`. Переменная `ARCHAEOLOGY_LEGACY_BASE=.legacy-run` направляет их на изменяемую копию, а `git replace` подменяет в этой копии закреплённый коммит. Каждую канарейку начинай со свежих копий:

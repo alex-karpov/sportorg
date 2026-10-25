@@ -53,3 +53,20 @@ allowlist of row 7 is the same set for both.
 
 Revisit: the maintainer asks the pysport authors (c) (Backlog TASK-10); if they state that version 3
 only was meant, the project switches to GPL-3.0-only (`pyproject.toml`, README, this section).
+
+## Licence exceptions for row 7 (2026-10-25)
+Decision `[мейнтейнер: 2026-10-25]` (Stage 1 report, question 4):
+- **`sportident` 1.2.8: single-package exception.** It is not a dependency of the project yet. If it
+  becomes one, `scripts/check_licenses.py` treats it as GPL-3.0-or-later for exactly this version and
+  these files: sdist SHA-256 `be1afe93…2938b`, wheel SHA-256 `ad66dd66…9761d`.
+  - Why: the PyPI classifier `Other/Proprietary License` is a poetry-core artefact. The declared licence
+    is `GPLv3+`, and the file headers and `LICENSE` are GPLv3 "or later". The primary sources are in
+    `docs/evidence/stage-1/dependencies/licence-sources.agent.md`.
+  - Rejected option: widen the allowlist. That would pass every package with this classifier.
+  - Any other version needs the same check again.
+  - The attribution of the original copyright holders of `sireader` is kept if this code is used
+    (question in TASK-10).
+- **`Unicode-3.0`** goes into the allowlist when Rust enters the project, with a line here. FSF lists
+  it as GPL-compatible (same evidence file). Today the project has no Rust, so nothing changes.
+
+Revisit: a new `sportident` version; Rust code in the project.

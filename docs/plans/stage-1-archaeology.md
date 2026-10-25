@@ -30,8 +30,8 @@ TASK-7; the maintainer's Stage 1 prompt of 2026-10-25 (its rules are copied into
   must print `ok: pysport@b548c35ba18f, templates@cd953823beb3 locked` after every direction.
 - Every number comes from a script in `scripts/`; its output lives in
   `docs/evidence/stage-1/<direction>/`, the exact command (run from the repo root) in `commands.txt`
-  of that directory. Outputs are never edited by hand. Manual classification is a separate file named
-  `*.manual.md` with its criteria at the top.
+  of that directory. Outputs are never edited by hand. Judgement (sample checks, classification) is a separate file
+  named `*.agent.md` with its criteria at the top; it is the agent's judgement, not reviewed by a human.
 - Outputs are deterministic: sorted keys and rows, no wall-clock timestamps; each output header names
   the pins (`pysport@b548c35`, `templates@cd95382`). Network-derived outputs also name the cache file
   and its SHA-256 and are reproducible offline from the cache (`--cache-dir`).
@@ -83,7 +83,7 @@ docs/evidence/stage-1/
   os-ru/        W6, criterion 5
 ```
 Each directory: `README.md` (what, definitions, key numbers, limits), `commands.txt`, machine output
-`*.json`, human table `*.md`, manual files `*.manual.md`.
+`*.json`, human table `*.md`, agent judgement files `*.agent.md`.
 
 ## Tool candidates (decided in Task 2 by measurement, ADR-0007)
 
@@ -98,19 +98,19 @@ Each directory: `README.md` (what, definitions, key numbers, limits), `commands.
 | N7 issues/PRs | (a) `gh api` (installed; the earlier "invalid token" was the sandbox blocking api.github.com, token valid 2026-10-25); (b) own client over `scripts._json.fetch_bytes`, unauthenticated (60 req/h) | — | (a) |
 | N8 OS / Russian-specific scans, hard-coded values | (a) own `tokenize`+`ast` scanner; (b) ast-grep (`ast-grep-cli` wheels); (c) semgrep; (d) plain `git grep` | — | (a), measured against (d) for recall on the same patterns |
 
-## Legacy layer model (for violations) — `[допущение]`, to be approved by the maintainer
+## Legacy layer model (for violations) — approved `[мейнтейнер: 2026-10-25]`, `libs` split by role the same day (report question 3)
 
 | Rank | Layer | Modules | May import |
 |---|---|---|---|
 | 5 | entry | `sportorg.startup` | everything |
-| 4 | ui | `sportorg.gui.**` | ranks ≤ 4 |
-| 3 | application / adapters | `sportorg.modules.**`, `sportorg.rust_example` | ranks ≤ 3 |
+| 4 | ui | `sportorg.gui.**`, `sportorg.libs.winorient.wdb_online_sender_dialog` (`common.LIBS_UI`) | ranks ≤ 4 |
+| 3 | application / adapters | `sportorg.modules.**`, `sportorg.rust_example`, device/service adapters and I/O codecs in `sportorg.libs` (`common.LIBS_APPLICATION`) | ranks ≤ 3 |
 | 2 | domain | `sportorg.models.**` | ranks ≤ 2 |
 | 1 | foundation | `sportorg` (package), `sportorg.common.**`, `sportorg.utils.**`, `sportorg.config`, `sportorg.settings`, `sportorg.language`, `sportorg.paths` | ranks ≤ 1 |
-| 0 | vendored | `sportorg.libs.<lib>.**` | only the same `<lib>` and third-party |
+| 0 | vendored | the rest of `sportorg.libs.**` (pure parsers, settings, templates) | ranks ≤ 0 |
 
-Violations reported: (V1) an edge from rank *r* to a module of rank > *r*; (V2) `libs.<a>` importing
-any other `sportorg.*`; (V3) ranks ≤ 2 importing GUI or I/O libraries (`PySide6`, `PySide2`, `serial`,
+Violations reported: (V1) an edge from rank *r* to a module of rank > *r*; (V2, dropped on 2026-10-25
+with the split of `libs`) `libs.<a>` importing any other `sportorg.*`; (V3) ranks ≤ 2 importing GUI or I/O libraries (`PySide6`, `PySide2`, `serial`,
 `requests`, `socket`, `win32*`, …). Each edge: `file:line`, module-level or function-local (local
 imports are listed separately — they often hide cycles).
 
@@ -153,7 +153,7 @@ the module with most changed lines (path table); otherwise `other`. Counts: modu
 counts once per module it touches), plus per-module fix share = fix commits / all commits touching it.
 
 **Validation (Phase D, main session):** seeded random sample of 50 non-merge commits, stratified 25
-predicted-fix + 25 predicted-non-fix, labelled by hand (`defects/sample.manual.md`) → precision and
+predicted-fix + 25 predicted-non-fix, labelled by the main session's agent (`defects/sample-check-1.agent.md`; after the classifier change of 2026-10-25 a second sample with another seed, `sample-check-2.agent.md`) → precision and
 recall of "is fix", and class agreement among true fixes. Issues/PRs: number, state, labels, is-PR,
 class from labels first, then the same keyword classifier on the title (title stays in the cache).
 
@@ -194,7 +194,7 @@ Batches (≤ 3 subagents at once, `sonnet`/medium): batch 1 = W1, W2, W5; batch 
 - `@dataclass(frozen=True) class ImportRef: module: str; names: tuple[str, ...]; line: int; local: bool`; `iter_imports(source: str, module: str) -> list[ImportRef]` resolves relative imports; raises `UnparsedError(path, reason)` on syntax/encoding errors.
 - `write_outputs(out_dir: Path, stem: str, data: Json, table_md: str, header: str) -> None` — sorted-key JSON + Markdown, LF, trailing newline.
 - `assert_tree_clean(repo: Path) -> None` — raises if `git status --porcelain --ignored` is non-empty.
-- `verify_locs.py`: `check(locs: list[Loc]) -> list[str]` (problems: missing file, line out of range at the pin, read via `git show <pin>:<path>`); CLI `--evidence DIR --sample N --seed S` prints problems and N random tags with their source line for manual comparison.
+- `verify_locs.py`: `check(locs: list[Loc]) -> list[str]` (problems: missing file, line out of range at the pin, read via `git show <pin>:<path>`); CLI `--evidence DIR --sample N --seed S` prints problems and N random tags with their source line for comparison by eye.
 
 - [ ] **Step 1:** Write failing tests: `test_loc_tag_single_and_range`, `test_parse_tags_roundtrip`,
   `test_parse_git_log_basic` (2 commits, numstat), `test_parse_git_log_cyrillic_path_and_subject`,
@@ -317,9 +317,9 @@ numbers, open questions. Consumes Task 1 interfaces; W3/W4 consume Task 4 `load_
 - [ ] Rerun the direction's commands from `commands.txt`; `git diff --exit-code docs/evidence/stage-1/<dir>` → no diff.
 - [ ] `verify_locs --evidence docs/evidence/stage-1/<dir> --sample 10 --seed <n>` → no problems; compare the
   10 printed lines by eye; record them in `<dir>/README.md`.
-- [ ] W4: `defects/sample.manual.md` (50 commits, criteria at top) → precision/recall/class agreement in README.
-- [ ] W2: dead-code false-positive sample (30 items) → `structure/dead-code-sample.manual.md`.
-- [ ] W6: `os-ru/classification.manual.md` — every core hit and every OS hit classified (OS: all three /
+- [ ] W4: `defects/sample-check-1.agent.md` (50 commits, criteria at top) → precision/recall/class agreement in README.
+- [ ] W2: dead-code false-positive sample (30 items) → `structure/dead-code-sample-check.agent.md`.
+- [ ] W6: `os-ru/classification.agent.md` — every core hit and every OS hit classified (OS: all three /
   Windows-only with fallback / Windows-only without fallback / not-Windows / false positive, with why;
   RU: national rule / locale default or translation / national integration / false positive).
 - [ ] `scripts.legacy verify` ok; `check.py` green; commit `docs(stage-1): <direction> evidence`;

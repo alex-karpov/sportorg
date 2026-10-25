@@ -1,6 +1,6 @@
-# OS-specific code and Russian specifics: manual classification (вручную)
+# OS-specific code and Russian specifics: classification by the agent
 
-The labels in this file were assigned by hand by the main session on 2026-10-25 from `hits.json` (`scripts/archaeology/os_ru.py`). Plan Task 11: every core hit and every OS hit is classified. Coverage was checked: 686 hits = 603 OS hits (OS01–OS05; OS06 has none) + 83 core hits (RU01–RU05 with core = yes). Each hit sits in exactly one group below. Hits are grouped by the code they belong to; every tag of a group is listed except O16, which lists the line range.
+The labels in this file are the judgement of the main session's agent (Claude Code, Opus 5.5) on 2026-10-25, not script output; no human reviewed them. Source: `hits.json` (`scripts/archaeology/os_ru.py`). Plan Task 11: every core hit and every OS hit is classified. Coverage was checked: 686 hits = 603 OS hits (OS01–OS05; OS06 has none) + 83 core hits (RU01–RU05 with core = yes). Each hit sits in exactly one group below. Hits are grouped by the code they belong to; every tag of a group is listed except O16, which lists the line range.
 
 ## Criteria
 
@@ -81,6 +81,6 @@ Findings for the report:
 
 Limits:
 
-- One labeller.
+- One agent labelled, no human review.
 - The OS categories describe the code paths read, not runs on three OSes; legacy is not run in Stage 1.
 - O16 is classified as a block.

@@ -1,6 +1,6 @@
-# Dead code: manual check of 30 vulture findings (вручную)
+# Dead code: sample check of 30 vulture findings (agent judgement)
 
-The labels in this file were assigned by hand by the main session on 2026-10-25. The sample itself was
+The labels in this file are the judgement of the main session's agent (Claude Code, Opus 5.5) on 2026-10-25, not script output; no human reviewed them. The sample itself was
 chosen by a script:
 
 ```
@@ -9,7 +9,7 @@ uv run python -m scripts.archaeology.sample --json docs/evidence/stage-1/structu
 ```
 
 ## Criteria
-Each finding was checked against both pinned repositories (`git grep -n -w <name>` in pysport and in
+The agent checked each finding against both pinned repositories (`git grep -n -w <name>` in pysport and in
 templates, then reading the context):
 - **TP**: truly unused. Nothing refers to the name: no call, no read, no string, no name-built
   `getattr`, no use in templates. Unreachable code counts as TP when every branch before it returns.
@@ -76,4 +76,19 @@ templates, then reading the context):
   - raw vulture output: 40 %, so the condition holds;
   - with the `name_in_string` filter: 58 %, so it does not.
   - Consequence for later stages: vulture findings are usable only together with `name_in_string`. The FP-convention class is still unflagged: methods the dialog base class reaches through name-built `getattr` (`convert_*`, `parse_*`, `on_*_changed`, `on_*_button_clicked`, `on_*_finished`, `on_*_clicked`).
-- **Limit:** with a sample of 30, every percentage is uncertain by roughly ±15 points.
+- **Limits:** one agent labelled, no human review; with a sample of 30, every percentage is uncertain by roughly ±15 points.
+
+## Status of `WdbOnlineSenderDialog` (outside the sample)
+The maintainer asked for its status `[мейнтейнер: 2026-10-25]`. Agent judgement on facts the main
+session re-checked at the pin:
+- **Not part of the application.**
+  - The class is created only under `if __name__ == "__main__"` [код: pysport@b548c35 sportorg/libs/winorient/wdb_online_sender_dialog.py:75-78].
+  - `WdbOnlineSender` is created only by this dialog [код: pysport@b548c35 sportorg/libs/winorient/wdb_online_sender_dialog.py:62].
+  - `git grep -w` finds no other reference to either name or to the module in pysport.
+- **Never wired into the application.** `git log -S"WdbOnlineSenderDialog"` finds only the commit that added it [история: pysport@511c1ac].
+- **vulture does not report it,** because it counts the call under `__main__` as a use. Among the dead-code findings are only the `ONLINE_*` constants of `wdb_online_sender.py` (#22 above).
+- **What it is:** a standalone script (`python -m sportorg.libs.winorient.wdb_online_sender_dialog`).
+  - It watches a WinOrient WDB file and sends the data to an online results service.
+  - Its default URL is hard-coded to one event, with an access key [код: pysport@b548c35 sportorg/libs/winorient/wdb_online_sender_dialog.py:40].
+- **Status:** dead for the application. Whether anyone runs the script cannot be known from the code. It is not ported to the new project unless someone asks for it.
+- **Layer model:** placed in `ui` (`common.LIBS_UI`) [мейнтейнер: 2026-10-25].
