@@ -15,7 +15,8 @@ console output is discarded: only test ids and outcomes (from JUnit XML) reach t
 Usage::
 
     uv run python -m scripts.legacy_env probe --out DIR --python 3.14 --python 3.13 ...
-    uv run python -m scripts.legacy_env sync --python 3.13
+    uv run python -m scripts.legacy_env sync --python 3.8                    # .venv (first line)
+    uv run python -m scripts.legacy_env sync --python 3.13 --env .venv-3.13  # second oracle lane
     uv run python -m scripts.legacy_env tests --out DIR --name NAME --qt-platform offscreen|none
     uv run python -m scripts.legacy_env status    # copies at their pin, nothing left behind
     uv run python -m scripts.legacy_env restore   # clean the copies back to HEAD, keep .venv*
@@ -451,14 +452,25 @@ def tests_command(out: Path, name: str, qt_platform: str | None) -> int:
     return 0
 
 
-def sync_command(python: str) -> int:
+def sync_env_dir(name: str | None) -> Path:
+    """Environment directory in the copy: ``.venv`` or another top-level ``.venv*`` (a lane)."""
+    if name is None:
+        return clone_path() / ".venv"
+    if not name.startswith(".venv") or "/" in name or "\\" in name or ".." in name:
+        msg = f"environment name must be a top-level .venv* directory of the copy, got {name!r}"
+        raise ValueError(msg)
+    return clone_path() / name
+
+
+def sync_command(python: str, env_name: str | None = None) -> int:
     clone = clone_path()
-    result = sync(clone, clone / ".venv", python)
-    print(f"uv sync --python {python}: exit {result.returncode}")
+    env_dir = sync_env_dir(env_name)
+    result = sync(clone, env_dir, python)
+    print(f"uv sync --python {python} into {env_dir.name}: exit {result.returncode}")
     if result.returncode:
         print(_error_line(result.stdout + result.stderr) or result.stderr[-2000:])
         return 1
-    print(f"{env_python(clone / '.venv')}: Python {python_version(env_python(clone / '.venv'))}")
+    print(f"{env_python(env_dir)}: Python {python_version(env_python(env_dir))}")
     return 0
 
 
@@ -487,6 +499,7 @@ class Options(argparse.Namespace):
     python: list[str] | None = None
     name: str = ""
     qt_platform: str = "offscreen"
+    env: str | None = None
 
 
 def parse_args(argv: list[str] | None) -> Options:
@@ -499,6 +512,7 @@ def parse_args(argv: list[str] | None) -> Options:
     probe.add_argument("--python", action="append", required=True)
     sync_p = sub.add_parser("sync", help="create .legacy-run/pysport/.venv")
     sync_p.add_argument("--python", action="append", required=True)
+    sync_p.add_argument("--env", help="environment directory in the copy (default .venv)")
     tests = sub.add_parser("tests", help="run legacy tests in .legacy-run/pysport/.venv")
     tests.add_argument("--out", type=Path, required=True)
     tests.add_argument("--name", required=True)
@@ -514,7 +528,7 @@ def main(argv: list[str] | None = None) -> int:
     if args.command == "probe":
         return probe_command(args.out, pythons)
     if args.command == "sync":
-        return sync_command(pythons[-1])
+        return sync_command(pythons[-1], args.env)
     if args.command == "tests":
         platform = None if args.qt_platform == "none" else args.qt_platform
         return tests_command(args.out, args.name, platform)

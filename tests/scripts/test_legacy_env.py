@@ -8,6 +8,8 @@ from __future__ import annotations
 import json
 from typing import TYPE_CHECKING
 
+import pytest
+
 from scripts import legacy, legacy_env
 from scripts.legacy import Pin
 from scripts.legacy_env import CaseOutcome, LegacyRun
@@ -246,3 +248,20 @@ def test_unstable_tests_are_the_teamwork_server_client_tests() -> None:
         f"tests/test_teamwork.py::{name}" for name in names
     )
     assert set(legacy_env.UNSTABLE_TESTS.values()) == {legacy_env.TEAMWORK_REASON}
+
+
+def test_sync_env_dir_defaults_to_venv() -> None:
+    assert legacy_env.sync_env_dir(None) == legacy_env.clone_path() / ".venv"
+
+
+def test_sync_env_dir_accepts_a_second_lane() -> None:
+    args = legacy_env.parse_args(["sync", "--python", "3.13", "--env", ".venv-3.13"])
+
+    assert legacy_env.sync_env_dir(args.env) == legacy_env.clone_path() / ".venv-3.13"
+
+
+@pytest.mark.parametrize("name", ["env-3.13", "../.venv", ".venv/x", ""])
+def test_sync_env_dir_rejects_names_the_copy_would_not_keep(name: str) -> None:
+    # only top-level .venv* directories survive clean_clone and pass clone_problems
+    with pytest.raises(ValueError, match=r"\.venv"):
+        legacy_env.sync_env_dir(name)

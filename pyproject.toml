@@ -35,6 +35,8 @@ line-length = 100
 src = ["src", "tests", "scripts"]
 # Deliberately broken files used to measure type checkers (ADR-0002); never checked.
 extend-exclude = ["scripts/typecheck_fixtures", "scripts/typecheck_configs"]
+# The oracle driver runs under legacy's interpreter, Python 3.8 (ADR-0009 T1, T3).
+per-file-target-version = { "scripts/oracle_driver/**" = "py38" }
 
 [tool.ruff.lint]
 select = ["ALL"]
@@ -114,6 +116,18 @@ reportUnusedCallResult = false
 enableTypeIgnoreComments = true
 venvPath = "."
 venv = ".venv"
+
+# The oracle driver runs under legacy's Python 3.8 and imports legacy modules; it is checked against
+# hand-written stubs of the legacy API it uses, so CI needs no legacy checkout (ADR-0009 T3).
+[[tool.basedpyright.executionEnvironments]]
+root = "scripts/oracle_driver"
+pythonVersion = "3.8"
+extraPaths = ["scripts/oracle_driver/stubs", "."]
+# The stubs stand in for legacy sources that exist only in .legacy-run/pysport/.venv.
+reportMissingModuleSource = "none"
+
+[[tool.basedpyright.executionEnvironments]]
+root = "."
 
 [tool.ruff.lint.isort]
 known-first-party = ["sportorg_ng", "scripts", "tests"]
