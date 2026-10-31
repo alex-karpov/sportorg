@@ -347,3 +347,53 @@ Follow-up of 2026-11-01:
   hooks) reads it, and the guard tests clear the outer variables. Regression tests:
   `test_pre_commit_variables_are_ignored_without_the_flag`, `test_canary_ignores_the_pre_push_environment`.
 - Not done, by the maintainer's choice: listing the sandbox mount points in `.git/info/exclude`.
+
+### S2 — 2026-11-01 (Claude Code, Opus 5.5)
+
+Done (AC #1):
+- `uv run python scripts/oracle.py RACE_FILE [--out DIR]` recalculates a race file in legacy
+  (`pysport@b548c35`) without GUI or display and writes normalized results (schema v1), the values
+  stored in the file and a field-by-field comparison. Legacy runs only as a separate process
+  (`scripts/oracle_driver/driver.py` under `.legacy-run/pysport/.venv`, CPython 3.8.20; second lane
+  `.venv-3.13`, 3.13.17, made by `scripts.legacy_env sync --env`). The driver whitelists fields, so
+  names, birth dates and chip numbers never leave the legacy process.
+- Synthetic races (`scripts/corpus/synth.py`): individual, two-leg relay, rogaine by score.
+- Evidence `stage-2/oracle/`: both lanes byte-identical on all inputs, reruns byte-identical, the
+  canary fires (bib 101: 1st → 3rd, 30:00 → 33:00); legacy `test.json` (personal data) as counts
+  and hashes only: 1 race, 2 results, 1 stored value differs (`diff_ms` 0 vs null, F1).
+- ADR-0009 T3 (driver checked as Python 3.8 against hand-written stubs: 0 errors, against legacy
+  sources 26, without legacy as in CI 89), T4 (file transport, whitelists), T5 (clock, startup
+  tables, recalculation order) — proposed. Risk R22 (`scores_formula` is evaluated with `eval`).
+- Final review by a sub-agent (Sonnet, medium): 0 critical, 3 important, 7 minor; two defects fixed
+  by TDD (non-UTF-8 file named `NotUtf8RaceFile`; stdout as UTF-8 bytes), the rest documented or
+  deferred (ledger in `.superpowers/sdd/stage-2-oracle/progress.md`, not committed).
+- `check.py` green (432 tests); integration tests on the real legacy run locally and are skipped in
+  CI, which has no legacy checkout. All stage evidence rerun with an empty diff.
+
+Rulings (deviations from this plan's S2 draft): stored values read from the file's JSON by the
+driver, not by `get_races_from_file` (it drops the computed fields); raw snapshot in a temporary
+file, not stdout; `--no-recalc` dropped (stored.json always written); `--out` optional (stdout);
+`scripts/oracle.py` is a file shim for `scripts/oracle_cli.py`; driver split into `snapshot.py` (pure)
+and `driver.py`, run as `python -m`; type checking by stubs (c), not (a); `status_comment` and
+clock-dependent fields out of schema v1.
+
+Commits: `a8dcdab` feat(oracle), `5d2aa62` docs(stage-2) evidence + ADR-0009 T3–T5 + R22, `55652da`
+fix(oracle) review fixes, and the commit with this log.
+
+Open questions for the maintainer:
+1. ADR-0009 T3–T5: accept? T5 in particular: the clock fixed at `00:00:00` by default; status
+   comments and ranking tables from the shipped configs; legacy `settings.json` not read (defaults).
+   Recommendation: accept; revisit when the corpus shows operators' own tables or settings.
+2. Findings F2–F4 and F6 (`oracle/findings.agent.md`): classify (legacy bug / local practice / rule
+   gap). F6 also asks which state the oracle should reproduce for a multi-race file that is not a
+   multi-day event (recommended: each race in its own context, as built). F1: keep `diff_ms` 0 vs
+   null as a *representation* difference (recommended).
+3. Files that are neither gzip nor UTF-8: refuse and count them in the S3 manifest (recommended),
+   try cp1251, or re-encode them while preparing the corpus.
+4. R22: before the corpus runs (S3–S4), report files with `scores_mode = formula` and their formulas
+   and run them only with your word (recommended), or accept the risk for the maintainer's own files.
+5. AC #1 is left unchecked: its evidence comes from this session only, and AGENTS.md rule 3 asks for
+   a repeat in a fresh session. Check it after S9 (recommended) or now.
+
+Next: S3 (anonymization and corpus manifest), in a fresh session; by D4 (a) the corpus is handed over
+before S3 starts.
