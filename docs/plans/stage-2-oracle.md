@@ -335,7 +335,12 @@ Follow-up of 2026-11-01:
 - The maintainer pushed `stage-2`. CI run 41222366113 (`dab1040`) is green on all seven jobs: the
   `golden` step is `ok` on Linux, Windows and macOS (3.14 and 3.15) and on the clean machine, and 329
   tests pass, the canary among them. AC #7 checked in TASK-8.
-- Pre-push hook `protected-files` (`python -m scripts.golden_guard protected`, TDD) lists changed files
+- Pre-push hook `protected-files` (`python -m scripts.golden_guard protected --pre-push`, TDD) lists changed files
   that define the checks, with the `git diff` command. It is informational, condition 3 of ADR-0008.
   In pre-push, `range` and `protected` take the pushed ref (`PRE_COMMIT_TO_REF`) as head.
+- Fix (2026-11-01): the first push of `e6b9bdd` was stopped by the pre-push `tests` hook, with 5 failures.
+  Cause: `golden_guard` read `PRE_COMMIT_TO_REF` implicitly, and pre-commit exports it to every pre-push
+  hook, so the CLI tests and the canary saw the pushed sha. Now only `--pre-push` (passed by the
+  hooks) reads it, and the guard tests clear the outer variables. Regression tests:
+  `test_pre_commit_variables_are_ignored_without_the_flag`, `test_canary_ignores_the_pre_push_environment`.
 - Not done, by the maintainer's choice: listing the sandbox mount points in `.git/info/exclude`.

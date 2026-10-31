@@ -443,7 +443,9 @@ def run_canary(source: Path, workdir: Path) -> dict[str, int]:
     head = clone.git("rev-parse", "HEAD")
     clone.write("tests/golden/canary.json", "{}\n")
     clone.commit("canary: golden file without approval")
-    env = os.environ | {"GOLDEN_BASE": head}
+    # Hermetic: a pre-push hook exports PRE_COMMIT_* (the pushed ref); the canary sets its own base.
+    outer = {k: v for k, v in os.environ.items() if not k.startswith("PRE_COMMIT_")}
+    env = outer | {"GOLDEN_BASE": head}
     command = [sys.executable, str(clone.path / "scripts" / "check.py"), "--only", "golden"]
 
     def run() -> int:

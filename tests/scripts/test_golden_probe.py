@@ -14,6 +14,8 @@ from scripts.golden_probe import Raw
 if TYPE_CHECKING:
     from pathlib import Path
 
+    import pytest
+
 IDENTITY = ("-c", "user.name=test", "-c", "user.email=test@example.invalid")
 
 
@@ -75,6 +77,17 @@ def test_git_facts_counts_agent_commits(tmp_path: Path) -> None:
 
 
 def test_canary_on_a_clone_of_this_repository(tmp_path: Path) -> None:
+    result = golden_probe.run_canary(golden_probe.ROOT, tmp_path)
+
+    assert result == {"without_trailer": 1, "with_trailer": 0}
+
+
+def test_canary_ignores_the_pre_push_environment(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    # The canary runs inside the pre-push `tests` hook, where pre-commit exports the pushed ref.
+    monkeypatch.setenv("PRE_COMMIT_TO_REF", legacy.git("rev-parse", "HEAD", cwd=golden_probe.ROOT))
+
     result = golden_probe.run_canary(golden_probe.ROOT, tmp_path)
 
     assert result == {"without_trailer": 1, "with_trailer": 0}

@@ -34,6 +34,13 @@ def git(repo: Path, *args: str) -> str:
     return legacy.git(*IDENTITY, *args, cwd=repo)
 
 
+@pytest.fixture(autouse=True)
+def _no_outer_environment(monkeypatch: pytest.MonkeyPatch) -> None:
+    """The CI step and pre-push hooks export these; a test sets them itself when it needs them."""
+    for name in ("GOLDEN_BASE", "PRE_COMMIT_FROM_REF", "PRE_COMMIT_TO_REF"):
+        monkeypatch.delenv(name, raising=False)
+
+
 @pytest.fixture
 def repo(tmp_path: Path) -> Path:
     path = tmp_path / "repo"
@@ -408,7 +415,7 @@ def test_cli_protected_without_changes(
     assert "no protected files changed" in capsys.readouterr().out
 
 
-def test_cli_head_comes_from_the_pushed_ref(
+def test_pre_push_flag_takes_the_pushed_ref(
     repo: Path, commit: Commit, monkeypatch: pytest.MonkeyPatch, capsys: pytest.CaptureFixture[str]
 ) -> None:
     git(repo, "switch", "--quiet", "-c", "other", "main")
@@ -416,19 +423,29 @@ def test_cli_head_comes_from_the_pushed_ref(
     other = git(repo, "rev-parse", "HEAD")
     git(repo, "switch", "--quiet", "work")
     monkeypatch.chdir(repo)
-    monkeypatch.delenv("GOLDEN_BASE", raising=False)
     monkeypatch.setenv("PRE_COMMIT_TO_REF", other)
 
-    assert golden_guard.main(["protected"]) == 0
+    assert golden_guard.main(["protected", "--pre-push"]) == 0
     assert ".github/workflows/ci.yml" in capsys.readouterr().out
 
 
-def test_cli_deleting_a_remote_ref_checks_nothing(
+def test_pre_commit_variables_are_ignored_without_the_flag(
+    repo: Path, commit: Commit, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    # pre-commit exports PRE_COMMIT_TO_REF to every pre-push hook, the test run included.
+    monkeypatch.chdir(repo)
+    monkeypatch.setenv("PRE_COMMIT_TO_REF", "deadbeef" * 5)
+    commit("add golden", {"tests/golden/a.json": "{}"})
+
+    assert golden_guard.main(["range"]) == 1
+
+
+def test_pre_push_deleting_a_remote_ref_checks_nothing(
     repo: Path, monkeypatch: pytest.MonkeyPatch, capsys: pytest.CaptureFixture[str]
 ) -> None:
     monkeypatch.chdir(repo)
     monkeypatch.setenv("PRE_COMMIT_TO_REF", "0" * 40)
 
-    assert golden_guard.main(["protected"]) == 0
-    assert golden_guard.main(["range"]) == 0
+    assert golden_guard.main(["protected", "--pre-push"]) == 0
+    assert golden_guard.main(["range", "--pre-push"]) == 0
     assert "deleting" in capsys.readouterr().out

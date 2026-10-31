@@ -43,15 +43,15 @@ repos:
         stages: [commit-msg]
         always_run: true
       - id: golden-range
-        name: golden guard over unpushed commits (on push)
-        entry: uv run --no-sync python scripts/check.py --only golden
+        name: golden guard over the pushed commits (on push)
+        entry: uv run --no-sync python -m scripts.golden_guard range --pre-push
         language: system
         pass_filenames: false
         always_run: true
         stages: [pre-push]
       - id: protected-files
         name: protected files changed (review the diff; ADR-0008 condition 3)
-        entry: uv run --no-sync python -m scripts.golden_guard protected
+        entry: uv run --no-sync python -m scripts.golden_guard protected --pre-push
         language: system
         pass_filenames: false
         always_run: true

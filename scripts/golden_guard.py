@@ -17,13 +17,14 @@ The trailer can be typed by anyone who can commit; ADR-0008 records that limit.
 ``protected`` lists the files that define the checks (CI, hooks, ``check.py``, the guard, project
 configuration, golden files) changed in the same range, with the ``git diff`` command to review.
 It never fails: it makes condition 3 of ADR-0008 visible on every push (pre-push hook, verbose).
-In a pre-push hook the head is the pushed ref (``PRE_COMMIT_TO_REF``, set by pre-commit); pushing a
-deletion checks nothing.
+With ``--pre-push`` (only the git hooks pass it) the head is the pushed ref (``PRE_COMMIT_TO_REF``,
+set by pre-commit) and pushing a deletion checks nothing. Without the flag the variable is ignored:
+pre-commit exports it to every pre-push hook, the test run included.
 
 Usage::
 
-    uv run python -m scripts.golden_guard range [--base REV] [--head REV]
-    uv run python -m scripts.golden_guard protected [--base REV] [--head REV]
+    uv run python -m scripts.golden_guard range [--base REV] [--head REV] [--pre-push]
+    uv run python -m scripts.golden_guard protected [--base REV] [--head REV] [--pre-push]
     uv run python -m scripts.golden_guard commit-msg FILE        # git commit-msg hook
 
 Exit codes: 0 ok, 1 unapproved golden changes, 2 history or usage error.
@@ -276,6 +277,7 @@ class Options(argparse.Namespace):
     command: str = ""
     base: str | None = None
     head: str = "HEAD"
+    pre_push: bool = False
     message_file: Path = Path()
 
 
@@ -285,14 +287,16 @@ def parse_args(argv: list[str] | None) -> Options:
     )
     sub = parser.add_subparsers(dest="command", required=True)
     base = os.environ.get("GOLDEN_BASE")
-    head = os.environ.get("PRE_COMMIT_TO_REF") or "HEAD"
     for name, text in (
         ("range", "check committed history"),
         ("protected", "list changed files that define the checks"),
     ):
         cmd = sub.add_parser(name, help=text)
         cmd.add_argument("--base", default=base, help="default: $GOLDEN_BASE")
-        cmd.add_argument("--head", default=head, help="default: $PRE_COMMIT_TO_REF, else HEAD")
+        cmd.add_argument("--head", default="HEAD")
+        cmd.add_argument(
+            "--pre-push", action="store_true", help="head = $PRE_COMMIT_TO_REF (git pre-push hook)"
+        )
     msg = sub.add_parser("commit-msg", help="check staged changes against a commit message")
     msg.add_argument("message_file", type=Path)
     return parser.parse_args(argv, namespace=Options())
@@ -330,13 +334,16 @@ def main(argv: list[str] | None = None) -> int:
     try:
         if args.command == "commit-msg":
             return _commit_msg_command(args.message_file, cwd=cwd)
-        if args.head.strip() == ZERO_SHA:
-            print("pre-push: deleting a remote ref, nothing to check")
-            return 0
+        head = args.head
+        if args.pre_push:
+            head = os.environ.get("PRE_COMMIT_TO_REF") or head
+            if head.strip() == ZERO_SHA:
+                print("pre-push: deleting a remote ref, nothing to check")
+                return 0
         if args.command == "protected":
-            _protected_report(args.head, base=args.base, cwd=cwd)
+            _protected_report(head, base=args.base, cwd=cwd)
             return 0
-        return _range_command(args.head, base=args.base, cwd=cwd)
+        return _range_command(head, base=args.base, cwd=cwd)
     except GuardError as error:
         print(f"golden guard: error: {error}")
         return 2

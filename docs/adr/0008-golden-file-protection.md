@@ -113,7 +113,7 @@ The move to (c2) (session "S1b") is deferred to a later stage.
    `.github/`, `.pre-commit-config.yaml`, `.claude/settings.json`, `AGENTS.md`, `pyproject.toml`,
    `scripts/check.py`, `scripts/golden_*.py`, `scripts/hooks/` and `tests/golden/`. Without the review,
    the agent removes the check itself. This holds for (a) too. Since 2026-11-01 the pre-push hook
-   `protected-files` (`python -m scripts.golden_guard protected`) prints these files and the `git diff`
+   `protected-files` (`python -m scripts.golden_guard protected --pre-push`) prints these files and the `git diff`
    command on every push. It informs and never blocks: the review itself is the maintainer's.
 
 ## Revisit
