@@ -7,4 +7,7 @@ uv run python -m scripts.legacy_env sync --python 3.8
 uv run python -m scripts.legacy_env tests --out docs/evidence/stage-2/legacy-env --name legacy-tests-offscreen --qt-platform offscreen
 uv run python -m scripts.legacy_env tests --out docs/evidence/stage-2/legacy-env --name legacy-tests-noplatform --qt-platform none
 uv run python -m scripts.legacy_env status
+# Run by the maintainer in a plain WSL terminal, outside the Claude Code sandbox (2026-10-31). Inside the
+# sandbox /tmp is read-only and the three test_reader tests fail, so the agent cannot reproduce this file there.
+uv run python -m scripts.legacy_env tests --out docs/evidence/stage-2/legacy-env --name legacy-tests-outside-sandbox --qt-platform offscreen
 uv run python -m scripts.legacy verify

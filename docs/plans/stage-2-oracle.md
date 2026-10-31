@@ -325,5 +325,8 @@ Maintainer's answers of 2026-10-31, applied in the same session:
 - Q3: `~/.cache/sportorg-stage2/` allowed in the sandbox; the cached `gh api` responses moved there
   unchanged, `facts.json` reproduced without a diff.
 - Q5: hooks reinstalled (`commit-msg` present).
-- Q1: explanation asked for; still open. Q4: instruction given for a run of the legacy tests outside the
-  sandbox (`--name legacy-tests-outside-sandbox`); its result is brought to S2.
+- Q4: the maintainer ran the legacy tests outside the sandbox (`legacy-tests-outside-sandbox.md`, 3.8.20):
+  `test_reader::test_sportident` and `::test_sportiduino` pass there, `::test_huichang` still fails, cause
+  unknown (finding for S5).
+- Q1: still open; the maintainer asked for instructions to meet the conditions of the signed manifest
+  (signing key and GitHub token out of the agent's reach, review of the checking code before push).

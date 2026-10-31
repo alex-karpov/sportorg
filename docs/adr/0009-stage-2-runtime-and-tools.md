@@ -18,8 +18,13 @@
 - `tests/test_reader.py` (3 tests) fails in every run inside the sandbox: its fixture creates ptys at
   `/tmp/pty0` and `/tmp/pty1` with `socat` `[код: pysport@b548c35 tests/test_reader.py:166-175]`, and the
   sandbox makes `/tmp` read-only. These tests stay in the runs: the failure is deterministic and it is
-  documented. Outside the sandbox they are expected to run `[допущение]`; S5 meets the same limit when it
-  replays dumps through virtual ports.
+  documented. Outside the sandbox (run by the maintainer on 2026-10-31,
+  `legacy-tests-outside-sandbox.md`) `test_sportident` and `test_sportiduino` pass. `test_huichang`
+  still fails, for a reason not yet known: the test decodes card times from synthetic bytes
+  `[код: pysport@b548c35 tests/test_reader.py:114-125,341-390]`, and without the assertion message
+  it is open whether the cause is the time zone, timing or legacy itself. Finding for S5; Huichang is
+  not in the maintainer's hardware list (D5). S5 meets the same `/tmp` limit when it replays dumps
+  through virtual ports.
 - Legacy pytest runs with `--showlocals` and DEBUG logging over `tests/data/test.json`, which contains
   personal data `[мейнтейнер: 2026-10-31]`. Only test ids and outcomes are kept. The console output is
   discarded, and the copy is cleaned before and after each run (`clean_clone`): a legacy test leaves

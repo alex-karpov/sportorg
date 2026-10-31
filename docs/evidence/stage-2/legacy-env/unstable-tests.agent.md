@@ -39,5 +39,6 @@ Not unstable but environment-dependent: `tests/test_reader.py::test_huichang`, `
 `::test_sportiduino` fail in every run inside the sandbox. Their fixture starts `socat` with ptys at the
 fixed paths `/tmp/pty0` and `/tmp/pty1` `[код: pysport@b548c35 tests/test_reader.py:166-175]`, and the
 sandbox makes `/tmp` read-only: `socat … E unlink("/tmp/pty0"): Read-only file system` (checked by
-hand in this session). They stay in the evidence runs. Outside the sandbox they are expected to run
-`[допущение]`; S5 (device replay) has to deal with the same limit.
+hand in this session). They stay in the evidence runs. Outside the sandbox (the maintainer's run of 2026-10-31,
+`legacy-tests-outside-sandbox.md`) `test_sportident` and `test_sportiduino` pass and `test_huichang`
+fails, so the sandbox explains two of the three. S5 (device replay) has to deal with the same limit.
