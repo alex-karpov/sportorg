@@ -268,6 +268,56 @@ def test_commit_message_with_trailer_and_comments_passes(repo: Path) -> None:
     assert golden_guard.check_commit_message(message, cwd=repo) is None
 
 
+def _merge_in_progress(repo: Path, commit: Commit) -> Path:
+    """``work`` merging ``side`` with ``--no-commit``; ``side`` adds an approved golden file."""
+    git(repo, "switch", "--quiet", "-c", "side", "main")
+    commit("side golden" + APPROVED, {"tests/golden/s.json": "{}"})
+    git(repo, "switch", "--quiet", "work")
+    commit("work", {"work.txt": "w"})
+    git(repo, "merge", "--quiet", "--no-ff", "--no-commit", "side")
+    message = repo / "MSG"
+    message.write_text("merge side\n", encoding="utf-8")
+    return message
+
+
+def test_commit_message_of_a_clean_merge_of_an_approved_branch_passes(
+    repo: Path, commit: Commit
+) -> None:
+    message = _merge_in_progress(repo, commit)
+
+    assert golden_guard.check_commit_message(message, cwd=repo) is None
+
+
+def test_commit_message_of_an_evil_merge_needs_trailer(repo: Path, commit: Commit) -> None:
+    message = _merge_in_progress(repo, commit)
+    (repo / "tests" / "golden" / "m.json").write_text("{}", encoding="utf-8")
+    git(repo, "add", "tests/golden/m.json")
+
+    found = golden_guard.check_commit_message(message, cwd=repo)
+
+    assert found == Violation("(staged)", "merge side", ("tests/golden/m.json",))
+
+
+def test_replace_refs_do_not_approve(repo: Path, commit: Commit) -> None:
+    sha = commit("add golden", {"tests/golden/a.json": "{}"})
+    forged = git(repo, "commit-tree", f"{sha}^{{tree}}", "-p", f"{sha}^", "-m", "add" + APPROVED)
+    git(repo, "replace", sha, forged)
+
+    found = golden_guard.check_range("HEAD", base=None, cwd=repo)
+
+    assert [v.commit for v in found] == [sha]
+
+
+def test_unknown_base_on_default_branch_names_a_rewritten_history(
+    repo: Path, commit: Commit
+) -> None:
+    git(repo, "switch", "--quiet", "main")
+    commit("pushed to main", {"tests/golden/a.json": "{}"})
+
+    with pytest.raises(GuardError, match="force push"):
+        golden_guard.check_range("HEAD", base="deadbeef" * 5, cwd=repo)
+
+
 def test_commit_message_without_golden_change_passes(repo: Path) -> None:
     (repo / "code.py").write_text("x = 1\n", encoding="utf-8")
     git(repo, "add", "code.py")

@@ -42,6 +42,19 @@ prototype in `scripts/golden_probe.py`, OpenSSH 10.2p1 on WSL2 Ubuntu.
 | the committer (an agent) writes the approval itself | detected | **passed** | **passed** | detected |
 | matches expected, of 9 | | 8 | 8 | 9 |
 
+The nine rows are not nine independent measurements of each mechanism. For (c1) and (c2) "approval
+words in the body" means a commit with no signature at all, so that row tests only that an unsigned
+change is detected; it says nothing about how (c) reads text.
+
+Limits of the hooks, found by the review of 2026-11-01 (the CI check is the protection, the hooks
+are early warnings):
+- the `commit-msg` hook sees only what is staged, so an `--amend` that drops the trailer and changes
+  no file passes it; `range` catches it in `check.py`, on push and in CI;
+- pre-commit gives pre-push hooks only the first pushed ref, so a push of several refs at once checks
+  that one locally; CI checks each;
+- `git replace` refs are ignored by the guard (`--no-replace-objects`), so a local replacement cannot
+  give an unapproved commit a trailer.
+
 Canary on a clone of this repository (`canary.json`): a golden commit without the trailer makes
 `scripts/check.py --only golden` exit 1; the same commit with the trailer exits 0.
 

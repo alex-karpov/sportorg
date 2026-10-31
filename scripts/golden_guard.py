@@ -19,7 +19,8 @@ configuration, golden files) changed in the same range, with the ``git diff`` co
 It never fails: it makes condition 3 of ADR-0008 visible on every push (pre-push hook, verbose).
 With ``--pre-push`` (only the git hooks pass it) the head is the pushed ref (``PRE_COMMIT_TO_REF``,
 set by pre-commit) and pushing a deletion checks nothing. Without the flag the variable is ignored:
-pre-commit exports it to every pre-push hook, the test run included.
+pre-commit exports it to every pre-push hook, the test run included. pre-commit sets it from the
+first pushed ref only, so a push of several refs checks that one locally; CI checks each.
 
 Usage::
 
@@ -77,7 +78,8 @@ class Violation:
 
 def _git(*args: str, cwd: Path, stdin: str | None = None) -> str:
     result = subprocess.run(
-        ["git", "--no-optional-locks", *args],
+        # Replace refs could swap an unapproved commit for one that carries the trailer.
+        ["git", "--no-optional-locks", "--no-replace-objects", *args],
         cwd=cwd,
         input=stdin,
         capture_output=True,
@@ -186,7 +188,8 @@ def range_commits(head: str, *, base: str | None, cwd: Path) -> list[str]:
             msg = (
                 f"base {base} is not in the local history and the range since the merge-base "
                 f"with {DEFAULT_BRANCH} is empty: fetch the full history "
-                "(actions/checkout fetch-depth: 0)"
+                "(actions/checkout fetch-depth: 0), or, if a force push rewrote the history, "
+                "pass a base that still exists"
             )
             raise GuardError(msg)
         print(f"note: base {base} not found; checked the commits since the merge-base instead")
@@ -235,10 +238,31 @@ def _review_range(
     return reviewed
 
 
+def _merge_heads(*, cwd: Path) -> list[str]:
+    """The commits being merged (``MERGE_HEAD``), empty outside a merge."""
+    path = Path(_git("rev-parse", "--git-path", "MERGE_HEAD", cwd=cwd).strip())
+    path = path if path.is_absolute() else cwd / path
+    return path.read_text(encoding="utf-8").split() if path.is_file() else []
+
+
+def _staged(*against: str, cwd: Path) -> set[str]:
+    return set(
+        _split_z(_git("diff", "--cached", "--no-renames", "--name-only", "-z", *against, cwd=cwd))
+    )
+
+
 def check_commit_message(message_file: Path, *, cwd: Path) -> Violation | None:
-    """For the commit-msg hook: staged golden changes need the trailer in the message."""
-    staged = _git("diff", "--cached", "--no-renames", "--name-only", "-z", cwd=cwd)
-    paths = tuple(sorted(p for p in _split_z(staged) if is_golden(p)))
+    """For the commit-msg hook: staged golden changes need the trailer in the message.
+
+    In a merge only what differs from every parent counts, as in ``range`` (``--cc``): golden
+    commits merged from another branch were checked there. The hook is an early warning: an
+    ``--amend`` that only drops the trailer stages nothing and passes it; ``range`` (check.py,
+    pre-push, CI) is the protection.
+    """
+    staged = _staged(cwd=cwd)
+    for parent in _merge_heads(cwd=cwd):
+        staged &= _staged(parent, cwd=cwd)
+    paths = tuple(sorted(p for p in staged if is_golden(p)))
     if not paths:
         return None
     message = message_file.read_text(encoding="utf-8")

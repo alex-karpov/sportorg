@@ -56,6 +56,9 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y git curl ca-certificates
       - name: README Linux and macOS steps
+        env:
+          # CI only (not in README): the golden guard checks the pushed commits on main too (ADR-0008)
+          GOLDEN_BASE: ${{ github.event.pull_request.base.sha || github.event.before }}
         run: |
           set -e
           curl -LsSf https://astral.sh/uv/install.sh | sh
