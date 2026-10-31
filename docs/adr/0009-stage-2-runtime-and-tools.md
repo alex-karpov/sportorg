@@ -1,7 +1,7 @@
 # ADR-0009: Stage 2 runtime and tools
 
 - Status: accepted (Stage 2, S1) for T1–T2; T1 decided by the maintainer on 2026-10-31; T3–T5
-  proposed (Stage 2, S2, 2026-11-01), open for the maintainer; later sessions of Stage 2 add rows
+  (Stage 2, S2) accepted by the maintainer on 2026-11-01; later sessions of Stage 2 add rows
 - Date: 2026-10-31
 - Scope: runtimes and tools that run or measure the pinned legacy (`pysport@b548c35`) for Backlog
   TASK-8. Brief rule «Как выбирать инструменты»: ≥ 2 alternatives, data from a script, overlaps

@@ -397,3 +397,33 @@ Open questions for the maintainer:
 
 Next: S3 (anonymization and corpus manifest), in a fresh session; by D4 (a) the corpus is handed over
 before S3 starts.
+
+### After S2 — 2026-11-01 (Claude Code, Opus 5.5): reviews and the maintainer's answers
+
+- Reviews by sub-agents on Fable, an exception to stage rule 10 by the maintainer's word: S1 (range
+  `aeb6cb7..afc139d`, its first review) and S2 again (`afc139d..f4a4fe5`). Both "with fixes", no
+  critical findings. Important: S1 — the `commit-msg` hook refuses a clean merge of a branch whose
+  golden commits are approved (`golden_guard.py:238-247`); the crash path of legacy test runs has no
+  test (`test_legacy_env.py:73-78`). S2 — a stored `null` of `diff`/`penalty_time`/`credit_time`
+  counts as `not_stored`, which hides real differences (`oracle_normalize.py:63`,
+  `oracle_compare.py:53-56`). 11 + 7 minor. Nothing fixed yet: the maintainer chooses (ledger).
+  The reasons for the models of rule 10 are not recorded anywhere; the rule comes from the Stage 1
+  prompt, where it covered the mechanical directions W1–W6.
+- Maintainer's answers `[мейнтейнер: 2026-11-01]`: ADR-0009 T3–T5 accepted. F1 kept as a
+  representation difference. F2 is a legacy bug, with three correct ways to show a runner out of
+  competition (`oracle/findings.agent.md`). R22: the S3 manifest lists files with
+  `scores_mode = formula` and their formulas; they run only with the maintainer's consent.
+- F3, F4, F6: the maintainer checks them in legacy's GUI. Inputs `f3_rogaine_tie`, `f4_slow_leader`,
+  `f6_two_races` from `scripts/corpus/synth.py` (TDD), the oracle's output in `stage-2/oracle/`,
+  guide `docs/reports/stage-2-check-f3-f4-f6.md`.
+- Personal data in legacy's test code (not in its data files): `tests/test_winorient.py`,
+  `test_json.py`, `test_gzip.py`, `test_wdb.py` and `test_teamwork.py` hold names, a chip number and
+  a birth year copied from the files with personal data. None of them is in this repository's tree
+  (count-only check); one surname is in the history of `main`, `docs/reports/stage-1.md` between
+  `278826c` and `b4eba5d`, which removed it. The list went to the maintainer in the session, not to
+  the repository.
+
+Open for the maintainer: the fix pass for the review findings; question 3 of S2 (files neither gzip
+nor UTF-8: legacy 1.7.0–1.7.1 save in the system's encoding by default) and question 5 (when to check
+AC #1), both explained in the session; the results of the F3/F4/F6 check; what to do with the
+surname in the history of `main`.

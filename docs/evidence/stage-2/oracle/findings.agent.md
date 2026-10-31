@@ -55,3 +55,22 @@ recalculation, not findings.
 4. F1: may the comparison treat `diff_ms` `0` and `null` as equal? Options: (a) keep it as a
    difference of class *representation* (recommended: nothing is hidden, the corpus will show how
    common it is); (b) map `null` to `0` in the normalizer; (c) leave `diff_ms` out of the comparison.
+
+## Maintainer's answers `[мейнтейнер: 2026-11-01]`
+
+- F1: representation, kept as a difference (question 4, option (a)).
+- F2: **legacy bug**. A protocol shows a runner out of competition in one of three ways: (1) not
+  at all (official protocols of a competition); (2) after every runner with a place, before the
+  disqualified; (3) among the others by time, with the time behind measured from the runner in
+  first place. In none of them is the time behind measured from a runner out of competition. The
+  oracle keeps legacy's value (it reproduces legacy), so golden files will hold it; the new
+  implementation follows this answer.
+- F3, F4, F6: the maintainer checks them in legacy's GUI. One input per finding:
+  `inputs/f3_rogaine_tie.json`, `inputs/f4_slow_leader.json`, `inputs/f6_two_races.json`, the
+  oracle's output in `synthetic/<name>/`, the guide in `docs/reports/stage-2-check-f3-f4-f6.md`;
+  tests `test_f3_…`, `test_f4_…`, `test_f6_…` in `tests/scripts/oracle/test_oracle_cli.py`.
+  Questions 1 (F3, F4) and 2 (F6) stay open until then. The state of race 2 of `f6_two_races`
+  right after open (no points, places by time, as `[код]` of F6 predicts) was seen once in a
+  one-off run of the agent and is not kept as evidence; `synthetic/f6_two_races/` holds the
+  oracle's own-context output, which shows F4 too (both runners behind the leader are faster).
+- Question 3 (files that are neither gzip nor UTF-8): open; the maintainer asked for details.

@@ -6,7 +6,7 @@ title: >-
 status: In Progress
 assignee: []
 created_date: 2026-10-24 12:06
-updated_date: '2026-10-31T18:08:00Z'
+updated_date: '2026-10-31T19:26:00Z'
 labels:
   - stage-2
 milestone: m-2
@@ -44,4 +44,6 @@ S1 follow-up 2 (2026-10-31): maintainer ran legacy tests outside the sandbox (3.
 S1 follow-up 3 (2026-11-01): AC #7 checked: CI run 41222366113 (stage-2@dab1040) green on all 7 jobs, golden step ok on Linux/Windows/macOS 3.14+3.15 and the clean machine, 329 tests incl. the canary. Signed manifest (c2) deferred to a later stage by the maintainer (ADR-0008). Pre-push hook protected-files added (condition 3, informational).
 
 S2 (2026-11-01): oracle seam for AC #1: uv run python scripts/oracle.py RACE_FILE [--out DIR] (driver under .legacy-run/pysport/.venv 3.8.20, second lane .venv-3.13 3.13.17; whitelisted snapshot, schema v1, stored-vs-recalculated comparison). Evidence docs/evidence/stage-2/oracle: lanes and reruns byte-identical, canary fired, legacy test.json counts only (1 stored value differs, F1). ADR-0009 T3-T5 proposed, risk R22. check.py green, 432 tests. AC #1 unchecked until verification in a fresh session. Open questions: plan Session log S2 (1-5). Next: S3.
+
+After S2 (2026-11-01): Fable reviews of S1 and S2 (exception to stage rule 10): with fixes, 0 critical, 3 important (commit-msg hook on a clean merge; crash path of legacy test runs untested; stored null counted as not_stored); fix pass awaits the maintainer. Maintainer: ADR-0009 T3-T5 accepted; F1 representation; F2 legacy bug (three ways to show out-of-competition runners); R22 formula files listed in the S3 manifest, run only with consent. F3/F4/F6 check files and guide docs/reports/stage-2-check-f3-f4-f6.md. Open: plan Session log 'After S2'.
 <!-- SECTION:NOTES:END -->
