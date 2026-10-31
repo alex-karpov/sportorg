@@ -221,7 +221,9 @@ environment of `scripts/legacy_env.py: hermetic_env` (T2).
   `counts_only(report)`.
 - `scripts/corpus/synth.py`: `RACES = {individual, relay, rogaine}`, `--out DIR`.
 - `scripts/oracle_evidence.py run|typecheck --out DIR`; `scripts.legacy_env sync --env .venv-3.13`.
-- Schema v1 (final for S2): `docs/evidence/stage-2/oracle/README.md`.
+- Schema v1 (final for S2): `docs/evidence/stage-2/oracle/README.md`. After the review of
+  2026-11-01: schema v2 (absent stored fields left out), `--state after-open`, cp1251 files, clock
+  `23:59:59` by default; `RACES` also holds `f3_rogaine_tie`, `f4_slow_leader`, `f6_two_races`.
 
 **Tests:** normalizer by TDD on synthetic raw dicts; `test_two_runs_byte_identical`;
 canary `test_finish_change_moves_place` (change one finish → time and place change).
@@ -239,6 +241,11 @@ environment variable, no key → error), `scripts/corpus/leakcheck.py` (no origi
 output), invariant test: oracle(anonymized) == oracle(original) on statuses, times, places;
 manifest (hash of original and anonymized copy, SportOrg version, sport, start format) is the only
 corpus file in the repository. Card number renumbered inside the same card-type range.
+Added by the maintainer's answers of 2026-11-01: the manifest records each file's format (`gzip`,
+`utf-8`, `cp1251`; ADR-0009 T6) and the anonymizer reads files by the same rule as the oracle; it
+lists files with `scores_mode = formula` and their formulas, which run only with the maintainer's
+consent (R22). The leak check also scans every evidence file before it is committed, test ids of
+legacy test runs included (review finding S1-12).
 **Done when:** reproducible, leak check and invariant green on synthetic data and on the corpus if present.
 
 ## S4 — golden master (AC #3)
@@ -427,3 +434,35 @@ Open for the maintainer: the fix pass for the review findings; question 3 of S2 
 nor UTF-8: legacy 1.7.0–1.7.1 save in the system's encoding by default) and question 5 (when to check
 AC #1), both explained in the session; the results of the F3/F4/F6 check; what to do with the
 surname in the history of `main`.
+
+### Fix pass — 2026-11-01 (Claude Code, Opus 5.5)
+
+Maintainer's answers: Q3 (b), Q5 (b), default clock `23:59:59`, the fix pass as recommended; the
+real/fictional split of the names in legacy's test code confirmed, the surname in the history of
+`main` stays. F3, F4, F6 confirmed in the GUI (`b548c35`, Python 3.13.5); their classification and
+the state for F6 are still open.
+
+Fixed, each by TDD (ledger lines `Final: fixed`):
+- S1: the `commit-msg` hook in merges; `--no-replace-objects`; the fail-closed message; CI
+  clean-install with `GOLDEN_BASE`; `hermetic_env` drops whole variable families; an hour for the
+  first `uv sync` and a message on timeout; the crash path of legacy test runs tested (mutation
+  checked). Documented: the `--amend` and multi-ref limits of the hooks, the (c) rows of ADR-0008.
+- S2: schema v2 (stored nulls compared, absent fields left out); cp1251 files (ADR-0009 T6); clock
+  `23:59:59` (T5); `--state after-open`, equal to the recalculation for one-race files, evidence for
+  F6; driver timeout and missing interpreter as `OracleError`; `main --out` tested; `counts_only`
+  without the race id; the citation `result_tools.py:106`; the README lists what `init_model` and
+  `load()` do that the oracle leaves out.
+- Deferred by the recommendation: S1-9 (`status` and a left-over `.venv-probe-*`, with the next
+  probe), S1-12 (the S3 leak check, written into S3 above).
+
+Evidence: golden-guard and legacy-env reruns identical; oracle evidence regenerated (schema v2,
+clock, `after-open/`) and rerun identical; changed numbers: legacy `test.json` `credit_ms` from
+"same 2" to "not stored 2" (the old rule counted an absent key against `null` as the same), typecheck
+(a) 32 and (a') 99 errors (the driver uses more of legacy), (c) 0. `check.py` green, 471 tests.
+AC #1 checked in TASK-8 after this pass (Q5 (b)); S9 verifies the stage again.
+
+Commits: `a476b8d`, `8558c25` (check files, answers), `74edb7a`, `113bf0d` (S1 fixes), `87d1ad5`
+(S2 fixes), and the commit with this log.
+
+Open for the maintainer: classification of F3 and F4; which state the oracle reproduces for F6
+(own context, as now, or `after-open`, or both).
