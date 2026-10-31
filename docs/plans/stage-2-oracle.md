@@ -276,3 +276,44 @@ As in `docs/reports/stage-2-prompt.md`.
 ## Session log
 
 (Entries appended at the end of each session: what was done, commits, open questions.)
+
+### S1 — 2026-10-31 (Claude Code, Opus 5.5)
+
+The session prompt said both "S1" and "execute only S2"; S1 had not been done, so the maintainer chose S1.
+
+Done:
+- AC #7: `scripts/golden_guard.py` (step `golden` in `check.py`, CI with `fetch-depth: 0` and
+  `GOLDEN_BASE`, pre-commit commit-msg and pre-push hooks), AGENTS.md rule 5; ADR-0008 from the scenario
+  matrix (`scripts/golden_probe.py`): trailer 8/9, signed manifest with signers in the repo 8/9, with
+  the signer pinned outside 9/9. Canary on a clone of this repository: exit 1 without the trailer,
+  0 with it. AC #7 stays unchecked until a CI run shows the step (nothing pushed).
+- Legacy runtime: `scripts/legacy_env.py`, ADR-0009 T1–T2. 3.14.9 is rejected by `<=3.14`; 3.14.0,
+  3.13.17 and 3.8.20 give the same legacy results (282 passed, 3 failed, 10 skipped of 295).
+  `.venv` = 3.13.17, 3.8.20 as the second oracle lane in S2. Recalculation tests: 40 passed, 8 skipped,
+  the same with and without a Qt platform. Five teamwork tests deselected as unstable; the three
+  `test_reader` tests fail in the sandbox (`/tmp` read-only for `socat`).
+- Evidence `stage-2/golden-guard/`, `stage-2/legacy-env/`: two consecutive runs byte-identical; rerun at
+  the end of the session with an empty diff.
+
+Commits: `c557196` feat(golden), `5683289` docs(stage-2) plan + prompt, `c7c5978` ADR-0008,
+`90a5d8c` feat(legacy-env), and the commit with this log.
+
+Open questions for the maintainer:
+1. ADR-0008: stop forged approvals now (signed manifest, signer pinned outside the repo) or keep the
+   trailer check? Recommendation: keep (a) until agents commit unattended or a key out of their reach exists.
+2. ADR-0009 T1: which Python is the oracle of record — 3.13.17 with 3.8.20 as a reported second lane
+   (recommended), 3.8.20 (Python of the release builds), or 3.13.17 only?
+3. The sandbox does not allow writing to `~/.cache/sportorg-stage2/` (stage rule 11); running outside it
+   was refused. This session's raw `gh api` responses are in the session scratchpad (hashes in
+   `facts.json`). Options: add the path to the sandbox write list in `.claude/settings.local.json`
+   (recommended), or keep a per-session cache and refetch.
+4. `tests/test_reader.py` needs a writable `/tmp`: run it once outside the sandbox to confirm that it
+   passes there (recommended before S5), or leave it as a recorded sandbox limit.
+5. Run `uvx --python 3.14 pre-commit@4.7.0 install` again to get the new `commit-msg` hook. In the
+   sandbox, a commit with unstaged files needs `PRE_COMMIT_HOME=$TMPDIR/pre-commit` (the default store
+   is read-only).
+
+Findings (not decisions): five tests of legacy `tests/test_teamwork.py` are timing-dependent
+(`unstable-tests.agent.md`); legacy tests leave `tests/data/test.json.tmp` behind.
+
+Next: S2 (oracle seam), in a fresh session.

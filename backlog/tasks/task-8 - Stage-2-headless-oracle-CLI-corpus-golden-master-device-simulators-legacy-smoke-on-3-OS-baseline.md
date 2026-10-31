@@ -3,10 +3,10 @@ id: TASK-8
 title: >-
   Stage 2: headless oracle CLI, corpus, golden master, device simulators, legacy
   smoke on 3 OS, baseline
-status: To Do
+status: In Progress
 assignee: []
-created_date: '2026-10-24 12:06'
-updated_date: '2026-10-24 15:20'
+created_date: 2026-10-24 12:06
+updated_date: '2026-10-31T16:20:00Z'
 labels:
   - stage-2
 milestone: m-2
@@ -31,3 +31,9 @@ Blocked by data request items 1-4 (corpus, protocols, personal-data decision, de
 - [ ] #6 Baseline: branch coverage, mutation score, complexity, operator task timings, split print time
 - [ ] #7 Agent-neutral protection of tests/golden/** in CI before the first golden file: a changed golden file fails CI unless the commit carries the maintainer's approval (mechanism recorded in an ADR)
 <!-- AC:END -->
+
+## Implementation Notes
+
+<!-- SECTION:NOTES:BEGIN -->
+S1 (2026-10-31): plan docs/plans/stage-2-oracle.md; AC #7 implemented (scripts/golden_guard.py, check.py step golden, CI fetch-depth 0 + GOLDEN_BASE, ADR-0008, canary in tests/scripts/test_golden_probe.py), unchecked until a CI run shows it; legacy runtime .legacy-run/pysport/.venv on CPython 3.13.17 (ADR-0009 T1, 3.8.20 as second oracle lane), legacy tests headless: 282 passed, 3 failed (sandbox /tmp), 10 skipped of 295, 5 unstable teamwork tests deselected; evidence docs/evidence/stage-2/{golden-guard,legacy-env}. Open questions: plan Session log S1 (1-5). Next: S2.
+<!-- SECTION:NOTES:END -->
