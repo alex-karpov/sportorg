@@ -326,6 +326,54 @@ def test_rogaine_scores(synth_dir: Path) -> None:
     assert [results[b]["place"] for b in (3, 1, 2, 4)] == [1, 2, 3, 3]
 
 
+def _places_and_scores(results: dict[int, dict[str, Json]]) -> dict[int, tuple[Json, Json]]:
+    return {bib: (r["place"], r["rogaine_score"]) for bib, r in results.items()}
+
+
+@requires_legacy
+def test_f3_fewer_points_with_the_same_time_share_a_place(synth_dir: Path) -> None:
+    """Finding F3: a shared place compares the time only, also by score.
+
+    [код: pysport@b548c35 sportorg/models/result/result_calculation.py:156,169-174]
+    """
+    results = _by_bib(_legacy(synth_dir / "f3_rogaine_tie.json"))
+
+    assert _places_and_scores(results) == {1: (1, 10), 2: (2, 7), 3: (2, 5)}
+
+
+@requires_legacy
+def test_f4_time_behind_a_slower_leader_wraps_over_midnight(synth_dir: Path) -> None:
+    """Finding F4: a negative time behind gets a day added.
+
+    [код: pysport@b548c35 sportorg/common/otime.py:150-155,
+    sportorg/models/result/result_calculation.py:157]
+    """
+    results = _by_bib(_legacy(synth_dir / "f4_slow_leader.json"))
+
+    assert _places_and_scores(results) == {1: (1, 10), 2: (2, 7), 3: (3, 5)}
+    assert {bib: r["diff_ms"] for bib, r in results.items()} == {
+        1: None,
+        2: 24 * 60 * 60_000 - 5 * 60_000,
+        3: 3 * 60_000,
+    }
+
+
+@requires_legacy
+def test_f6_second_race_ranked_by_points_in_its_own_context(synth_dir: Path) -> None:
+    """Finding F6: the oracle ranks the non-current rogaine by points (ADR-0009 T5).
+
+    By time the order would be the reverse: bib 3 in 40:00, bib 2 in 45:00, bib 1 in 50:00.
+    """
+    races = as_list(as_dict(_legacy(synth_dir / "f6_two_races.json").results)["races"])
+    rogaine = {
+        r["bib"]: (r["place"], r["rogaine_score"])
+        for r in map(as_dict, as_list(as_dict(races[1])["results"]))
+    }
+
+    assert len(races) == 2
+    assert rogaine == {1: (1, 10), 2: (2, 7), 3: (3, 5)}
+
+
 def test_driver_command_uses_absolute_paths_without_resolving_links() -> None:
     cmd = oracle_cli.driver_command(
         Path(".legacy-run/pysport/.venv-3.13/bin/python"),

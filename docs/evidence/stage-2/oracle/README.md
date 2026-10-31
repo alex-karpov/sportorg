@@ -13,6 +13,7 @@ uv run python scripts/oracle.py RACE_FILE --out DIR    # results.json, stored.js
 | File | What it shows |
 |---|---|
 | `inputs/{individual,relay,rogaine}.json` | synthetic race files in legacy's JSON format (no personal data: "Synthetic Runner NNN", chip 0, no birth date) |
+| `inputs/{f3_rogaine_tie,f4_slow_leader,f6_two_races}.json` | one finding each (F3, F4, F6 of `findings.agent.md`), for the maintainer's check in legacy's GUI (`docs/reports/stage-2-check-f3-f4-f6.md`); `f6_two_races` holds two races, the first current, not a multi-day event |
 | `synthetic/<race>/results.json` | legacy's recalculation, normalized (schema below), first lane |
 | `synthetic/<race>/stored.json` | the values stored in the file, normalized the same way (synthetic files store no computed values) |
 | `synthetic/<race>/comparison.json` | stored vs recalculated, field by field (`scripts/oracle_compare.py`) |

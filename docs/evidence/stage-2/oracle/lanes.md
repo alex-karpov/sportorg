@@ -7,3 +7,6 @@ Each input runs three times: twice on the first lane and once on the second. `ru
 | inputs/individual.json | 3.8.20 | True | 3.13.17: True |
 | inputs/relay.json | 3.8.20 | True | 3.13.17: True |
 | inputs/rogaine.json | 3.8.20 | True | 3.13.17: True |
+| inputs/f3_rogaine_tie.json | 3.8.20 | True | 3.13.17: True |
+| inputs/f4_slow_leader.json | 3.8.20 | True | 3.13.17: True |
+| inputs/f6_two_races.json | 3.8.20 | True | 3.13.17: True |

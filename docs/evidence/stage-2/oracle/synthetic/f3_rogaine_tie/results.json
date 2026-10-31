@@ -1,0 +1,142 @@
+{
+ "races": [
+  {
+   "processing_mode": "scores",
+   "race_id": "b9c63846-ed0b-5edf-88c2-910feddf0c01",
+   "race_index": 0,
+   "race_type": "INDIVIDUAL_RACE",
+   "relay_teams": [],
+   "results": [
+    {
+     "bib": 1,
+     "credit_ms": null,
+     "diff_ms": null,
+     "diff_scores": 0,
+     "finish_ms": 38400000,
+     "group": "Open",
+     "order": 0,
+     "penalty_laps": 0,
+     "penalty_ms": null,
+     "person_id": "3fa58028-dee7-518e-9523-803c0f280cb5",
+     "place": 1,
+     "rank": "NOT_QUALIFIED",
+     "result_id": "8abb923b-8e8e-50ac-9cc6-69afed96c946",
+     "rogaine_penalty": 0,
+     "rogaine_score": 10,
+     "scores": 0,
+     "scores_ardf": 0,
+     "splits": [
+      {
+       "code": "41",
+       "course_index": 1,
+       "is_correct": true,
+       "leg_ms": 300000,
+       "leg_place": 0,
+       "relative_ms": 300000,
+       "relative_place": 0,
+       "time_ms": 36300000
+      },
+      {
+       "code": "61",
+       "course_index": 2,
+       "is_correct": true,
+       "leg_ms": 300000,
+       "leg_place": 0,
+       "relative_ms": 600000,
+       "relative_place": 0,
+       "time_ms": 36600000
+      }
+     ],
+     "start_ms": 36000000,
+     "status": "OK",
+     "system": "SPORTIDENT",
+     "time_ms": 2400000
+    },
+    {
+     "bib": 2,
+     "credit_ms": null,
+     "diff_ms": 300000,
+     "diff_scores": 3,
+     "finish_ms": 38700000,
+     "group": "Open",
+     "order": 0,
+     "penalty_laps": 0,
+     "penalty_ms": null,
+     "person_id": "529531f1-ba12-5973-b5c0-429578a3da83",
+     "place": 2,
+     "rank": "NOT_QUALIFIED",
+     "result_id": "c0789d72-53bd-5b0f-b557-57e916d7a8f5",
+     "rogaine_penalty": 0,
+     "rogaine_score": 7,
+     "scores": 0,
+     "scores_ardf": 0,
+     "splits": [
+      {
+       "code": "31",
+       "course_index": 1,
+       "is_correct": true,
+       "leg_ms": 300000,
+       "leg_place": 0,
+       "relative_ms": 300000,
+       "relative_place": 0,
+       "time_ms": 36300000
+      },
+      {
+       "code": "41",
+       "course_index": 2,
+       "is_correct": true,
+       "leg_ms": 300000,
+       "leg_place": 0,
+       "relative_ms": 600000,
+       "relative_place": 0,
+       "time_ms": 36600000
+      }
+     ],
+     "start_ms": 36000000,
+     "status": "OK",
+     "system": "SPORTIDENT",
+     "time_ms": 2700000
+    },
+    {
+     "bib": 3,
+     "credit_ms": null,
+     "diff_ms": 300000,
+     "diff_scores": 5,
+     "finish_ms": 38700000,
+     "group": "Open",
+     "order": 0,
+     "penalty_laps": 0,
+     "penalty_ms": null,
+     "person_id": "bde7a47f-64b6-5427-b3db-d0b664e37fa8",
+     "place": 2,
+     "rank": "NOT_QUALIFIED",
+     "result_id": "73a1df2e-4b26-5014-ab84-ca922915a73a",
+     "rogaine_penalty": 0,
+     "rogaine_score": 5,
+     "scores": 0,
+     "scores_ardf": 0,
+     "splits": [
+      {
+       "code": "52",
+       "course_index": 1,
+       "is_correct": true,
+       "leg_ms": 300000,
+       "leg_place": 0,
+       "relative_ms": 300000,
+       "relative_place": 0,
+       "time_ms": 36300000
+      }
+     ],
+     "start_ms": 36000000,
+     "status": "OK",
+     "system": "SPORTIDENT",
+     "time_ms": 2700000
+    }
+   ],
+   "time_accuracy": 0,
+   "time_rounding": "math"
+  }
+ ],
+ "schema": "sportorg-ng/oracle-results",
+ "schema_version": 1
+}

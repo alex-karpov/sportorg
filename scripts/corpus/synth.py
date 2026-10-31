@@ -2,9 +2,12 @@
 
 Three races, each built so that the legacy recalculation has something to decide (S2 of the
 Stage 2 plan): an individual race (places, a tie, a missing punch, an extra punch, out of
-competition, DNS, time rounding, overtime), a two-leg relay, and a rogaine by score. The file
-format follows legacy ``to_dict``/``update_data`` [код: pysport@b548c35 sportorg/models/memory.py]
-and ``_race_migrate`` [код: pysport@b548c35 sportorg/modules/backup/json.py:84-104].
+competition, DNS, time rounding, overtime), a two-leg relay, and a rogaine by score. Three more
+files isolate one finding each, for the maintainer to open in legacy's GUI: ``f3_rogaine_tie``,
+``f4_slow_leader`` and ``f6_two_races`` (``docs/evidence/stage-2/oracle/findings.agent.md``). The
+file format follows legacy ``to_dict``/``update_data``
+[код: pysport@b548c35 sportorg/models/memory.py] and ``_race_migrate``
+[код: pysport@b548c35 sportorg/modules/backup/json.py:84-104].
 
 No personal data: every person is "Synthetic Runner NNN", chip numbers are 0, birth dates are
 absent. Ids are UUID5 of fixed names, so a rerun writes the same bytes.
@@ -23,8 +26,10 @@ import uuid
 from pathlib import Path
 from typing import TYPE_CHECKING, Final
 
+from scripts._json import as_dict, as_list
+
 if TYPE_CHECKING:
-    from collections.abc import Callable, Sequence
+    from collections.abc import Callable, Mapping, Sequence
 
     from scripts._json import Json
 
@@ -47,6 +52,7 @@ class RaceBuilder:
         self.race_type: int = race_type
         self.settings: dict[str, Json] = settings
         self.relay_leg_count: int = 3
+        self.short_title: str = ""
         self.organizations: list[Json] = []
         self.courses: list[Json] = []
         self.groups: list[Json] = []
@@ -186,7 +192,7 @@ class RaceBuilder:
             "data": {
                 "title": f"Synthetic {self.name}",
                 "description": "",
-                "short_title": "",
+                "short_title": self.short_title,
                 "location": "",
                 "chief_referee": "",
                 "secretary": "",
@@ -279,12 +285,11 @@ def relay() -> Json:
     return race.document()
 
 
-def rogaine() -> Json:
+def _rogaine_race(name: str, plans: Mapping[int, tuple[tuple[str, ...], int]]) -> RaceBuilder:
     """Rogaine by score, 60:00 limit, one point per minute over it, score = code // 10.
 
-    [код: pysport@b548c35 sportorg/models/result/result_checker.py:36-47,458-527]. A 12 points in
-    55:00; B 7 in 50:00; C 18 in 62:30 (3 penalty points); D 31-31-41 (the duplicate counts once)
-    in 50:00, as B; E 5 points in 50:00, as B and D.
+    [код: pysport@b548c35 sportorg/models/result/result_checker.py:36-47,458-527]. ``plans``:
+    bib → (codes punched, one every 5 minutes; finish after the start).
     """
     settings: dict[str, Json] = {
         "result_processing_mode": "scores",
@@ -293,26 +298,88 @@ def rogaine() -> Json:
         "time_accuracy": 0,
         "time_rounding": "math",
     }
-    race = RaceBuilder("rogaine", INDIVIDUAL, settings)
+    race = RaceBuilder(name, INDIVIDUAL, settings)
     group = race.group("Open", None, max_time=60 * MIN)
-    plans: dict[int, tuple[tuple[str, ...], int]] = {
-        1: (("31", "41", "52"), 55 * MIN),
-        2: (("31", "41"), 50 * MIN),
-        3: (("31", "41", "52", "61"), 62 * MIN + 30 * SEC),
-        4: (("31", "31", "41"), 50 * MIN),
-        5: (("52",), 50 * MIN),
-    }
     for bib, (codes, finish) in plans.items():
         pid = race.person(bib, group, start=START)
         punches = [(code, START + (i + 1) * 5 * MIN) for i, code in enumerate(codes)]
         race.result(pid, finish=START + finish, punches=punches)
-    return race.document()
+    return race
+
+
+def rogaine() -> Json:
+    """Rogaine with ties, penalty points and a duplicate punch.
+
+    A 12 points in 55:00; B 7 in 50:00; C 18 in 62:30 (3 penalty points); D 31-31-41 (the
+    duplicate counts once) in 50:00, as B; E 5 points in 50:00, as B and D.
+    """
+    return _rogaine_race(
+        "rogaine",
+        {
+            1: (("31", "41", "52"), 55 * MIN),
+            2: (("31", "41"), 50 * MIN),
+            3: (("31", "41", "52", "61"), 62 * MIN + 30 * SEC),
+            4: (("31", "31", "41"), 50 * MIN),
+            5: (("52",), 50 * MIN),
+        },
+    ).document()
+
+
+# Points 10, 7, 5: codes 41+61, 31+41, 52 (score = code // 10).
+TEN, SEVEN, FIVE = ("41", "61"), ("31", "41"), ("52",)
+
+
+def f3_rogaine_tie() -> Json:
+    """Finding F3: 10 points in 40:00, 7 in 45:00, 5 in 45:00.
+
+    Legacy gives 5 points the same place as 7, because a shared place compares the time only
+    [код: pysport@b548c35 sportorg/models/result/result_calculation.py:156,169-174]. The leader
+    is the fastest, so the time behind stays positive (no F4 here).
+    """
+    plans = {1: (TEN, 40 * MIN), 2: (SEVEN, 45 * MIN), 3: (FIVE, 45 * MIN)}
+    return _rogaine_race("f3_rogaine_tie", plans).document()
+
+
+def f4_slow_leader() -> Json:
+    """Finding F4: 10 points in 55:00, 7 in 50:00, 5 in 58:00; no shared time (no F3 here).
+
+    The 7-point runner is 5:00 faster than the leader: legacy's time behind is -5:00 plus a day
+    [код: pysport@b548c35 sportorg/common/otime.py:150-155,
+    sportorg/models/result/result_calculation.py:157].
+    """
+    plans = {1: (TEN, 55 * MIN), 2: (SEVEN, 50 * MIN), 3: (FIVE, 58 * MIN)}
+    return _rogaine_race("f4_slow_leader", plans).document()
+
+
+def f6_two_races() -> Json:
+    """Finding F6: one file, two races, not a multi-day event; the first race is current.
+
+    Race 1 is ``individual``; race 2 a rogaine where the order by points (10 in 50:00, 7 in
+    45:00, 5 in 40:00) is the reverse of the order by time. On open, legacy recalculates race 2
+    while race 1 is current, so race 2 is not checked (no points)
+    [код: pysport@b548c35 sportorg/modules/backup/json.py:42-44,
+    sportorg/models/result/result_tools.py:106, sportorg/models/result/result_checker.py:98-99];
+    a switch to race 2 does not recalculate it outside a multi-day event
+    [код: pysport@b548c35 sportorg/gui/dialogs/settings.py:317-329,
+    sportorg/gui/main_window.py:678-687].
+    """
+    first = as_dict(as_list(as_dict(individual())["races"])[0])
+    as_dict(first["data"])["short_title"] = "Race 1 individual"
+    second = _rogaine_race(
+        "f6_rogaine", {1: (TEN, 50 * MIN), 2: (SEVEN, 45 * MIN), 3: (FIVE, 40 * MIN)}
+    )
+    second.short_title = "Race 2 rogaine"
+    races: list[Json] = [first, as_list(as_dict(second.document())["races"])[0]]
+    return {"version": LEGACY_VERSION, "current_race": 0, "races": races}
 
 
 RACES: Final[dict[str, Callable[[], Json]]] = {
     "individual": individual,
     "relay": relay,
     "rogaine": rogaine,
+    "f3_rogaine_tie": f3_rogaine_tie,
+    "f4_slow_leader": f4_slow_leader,
+    "f6_two_races": f6_two_races,
 }
 
 

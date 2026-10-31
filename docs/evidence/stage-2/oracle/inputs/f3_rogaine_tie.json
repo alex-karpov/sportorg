@@ -1,0 +1,208 @@
+{
+ "current_race": 0,
+ "races": [
+  {
+   "courses": [],
+   "data": {
+    "chief_referee": "",
+    "description": "",
+    "end_datetime": null,
+    "location": "",
+    "race_type": 0,
+    "relay_leg_count": 3,
+    "secretary": "",
+    "short_title": "",
+    "start_datetime": null,
+    "title": "Synthetic f3_rogaine_tie",
+    "url": ""
+   },
+   "groups": [
+    {
+     "__type": null,
+     "course_id": null,
+     "first_number": 0,
+     "id": "4e554c86-5f2e-5dad-91fe-a57576f2b5e4",
+     "is_any_course": false,
+     "long_name": "",
+     "max_age": 0,
+     "max_time": 3600000,
+     "max_year": 0,
+     "min_age": 0,
+     "min_year": 0,
+     "name": "Open",
+     "object": "Group",
+     "order_in_corridor": 0,
+     "price": 0,
+     "ranking": null,
+     "relay_legs": 0,
+     "start_corridor": 0,
+     "start_interval": 0
+    }
+   ],
+   "id": "b9c63846-ed0b-5edf-88c2-910feddf0c01",
+   "object": "Race",
+   "organizations": [],
+   "persons": [
+    {
+     "bib": 1,
+     "birth_date": null,
+     "card_number": 0,
+     "comment": "",
+     "group_id": "4e554c86-5f2e-5dad-91fe-a57576f2b5e4",
+     "id": "3fa58028-dee7-518e-9523-803c0f280cb5",
+     "is_out_of_competition": false,
+     "is_paid": false,
+     "is_personal": false,
+     "is_rented_card": false,
+     "middle_name": "",
+     "name": "Synthetic",
+     "national_code": 0,
+     "object": "Person",
+     "organization_id": null,
+     "qual": 0,
+     "start_group": 0,
+     "start_time": 36000000,
+     "surname": "Runner 001",
+     "world_code": "",
+     "year": 0
+    },
+    {
+     "bib": 2,
+     "birth_date": null,
+     "card_number": 0,
+     "comment": "",
+     "group_id": "4e554c86-5f2e-5dad-91fe-a57576f2b5e4",
+     "id": "529531f1-ba12-5973-b5c0-429578a3da83",
+     "is_out_of_competition": false,
+     "is_paid": false,
+     "is_personal": false,
+     "is_rented_card": false,
+     "middle_name": "",
+     "name": "Synthetic",
+     "national_code": 0,
+     "object": "Person",
+     "organization_id": null,
+     "qual": 0,
+     "start_group": 0,
+     "start_time": 36000000,
+     "surname": "Runner 002",
+     "world_code": "",
+     "year": 0
+    },
+    {
+     "bib": 3,
+     "birth_date": null,
+     "card_number": 0,
+     "comment": "",
+     "group_id": "4e554c86-5f2e-5dad-91fe-a57576f2b5e4",
+     "id": "bde7a47f-64b6-5427-b3db-d0b664e37fa8",
+     "is_out_of_competition": false,
+     "is_paid": false,
+     "is_personal": false,
+     "is_rented_card": false,
+     "middle_name": "",
+     "name": "Synthetic",
+     "national_code": 0,
+     "object": "Person",
+     "organization_id": null,
+     "qual": 0,
+     "start_group": 0,
+     "start_time": 36000000,
+     "surname": "Runner 003",
+     "world_code": "",
+     "year": 0
+    }
+   ],
+   "results": [
+    {
+     "assigned_rank": 0,
+     "bib": 0,
+     "card_number": 0,
+     "credit_time": null,
+     "days": 0,
+     "finish_time": 38400000,
+     "id": "8abb923b-8e8e-50ac-9cc6-69afed96c946",
+     "object": "ResultSportident",
+     "penalty_laps": 0,
+     "penalty_time": null,
+     "person_id": "3fa58028-dee7-518e-9523-803c0f280cb5",
+     "place": 0,
+     "scores": 0,
+     "splits": [
+      {
+       "code": "41",
+       "time": 36300000
+      },
+      {
+       "code": "61",
+       "time": 36600000
+      }
+     ],
+     "start_time": null,
+     "status": 1,
+     "status_comment": ""
+    },
+    {
+     "assigned_rank": 0,
+     "bib": 0,
+     "card_number": 0,
+     "credit_time": null,
+     "days": 0,
+     "finish_time": 38700000,
+     "id": "c0789d72-53bd-5b0f-b557-57e916d7a8f5",
+     "object": "ResultSportident",
+     "penalty_laps": 0,
+     "penalty_time": null,
+     "person_id": "529531f1-ba12-5973-b5c0-429578a3da83",
+     "place": 0,
+     "scores": 0,
+     "splits": [
+      {
+       "code": "31",
+       "time": 36300000
+      },
+      {
+       "code": "41",
+       "time": 36600000
+      }
+     ],
+     "start_time": null,
+     "status": 1,
+     "status_comment": ""
+    },
+    {
+     "assigned_rank": 0,
+     "bib": 0,
+     "card_number": 0,
+     "credit_time": null,
+     "days": 0,
+     "finish_time": 38700000,
+     "id": "73a1df2e-4b26-5014-ab84-ca922915a73a",
+     "object": "ResultSportident",
+     "penalty_laps": 0,
+     "penalty_time": null,
+     "person_id": "bde7a47f-64b6-5427-b3db-d0b664e37fa8",
+     "place": 0,
+     "scores": 0,
+     "splits": [
+      {
+       "code": "52",
+       "time": 36300000
+      }
+     ],
+     "start_time": null,
+     "status": 1,
+     "status_comment": ""
+    }
+   ],
+   "settings": {
+    "result_processing_mode": "scores",
+    "result_processing_score_mode": "rogain",
+    "result_processing_scores_minute_penalty": 1,
+    "time_accuracy": 0,
+    "time_rounding": "math"
+   }
+  }
+ ],
+ "version": "v1.8.0b2"
+}

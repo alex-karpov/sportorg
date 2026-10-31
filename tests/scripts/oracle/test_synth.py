@@ -118,49 +118,67 @@ def _races() -> list[tuple[str, dict[str, Json]]]:
 
 @pytest.mark.parametrize(("name", "doc"), _races())
 def test_race_files_have_the_keys_legacy_requires(name: str, doc: dict[str, Json]) -> None:
-    (race,) = as_list(doc["races"])
-    race_dict = as_dict(race)
-    assert REQUIRED["race"] <= race_dict.keys(), name
-    assert REQUIRED["data"] <= as_dict(race_dict["data"]).keys()
-    for course in map(as_dict, as_list(race_dict["courses"])):
-        assert REQUIRED["course"] <= course.keys()
-        assert all(REQUIRED["control"] <= as_dict(c).keys() for c in as_list(course["controls"]))
-    for group in map(as_dict, as_list(race_dict["groups"])):
-        assert REQUIRED["group"] <= group.keys()
-    for person in map(as_dict, as_list(race_dict["persons"])):
-        assert REQUIRED["person"] <= person.keys()
-    for result in map(as_dict, as_list(race_dict["results"])):
-        assert REQUIRED["result"] <= result.keys()
-        assert all(REQUIRED["split"] <= as_dict(s).keys() for s in as_list(result["splits"]))
+    for race_dict in map(as_dict, as_list(doc["races"])):
+        assert REQUIRED["race"] <= race_dict.keys(), name
+        assert REQUIRED["data"] <= as_dict(race_dict["data"]).keys()
+        for course in map(as_dict, as_list(race_dict["courses"])):
+            assert REQUIRED["course"] <= course.keys()
+            controls = as_list(course["controls"])
+            assert all(REQUIRED["control"] <= as_dict(c).keys() for c in controls)
+        for group in map(as_dict, as_list(race_dict["groups"])):
+            assert REQUIRED["group"] <= group.keys()
+        for person in map(as_dict, as_list(race_dict["persons"])):
+            assert REQUIRED["person"] <= person.keys()
+        for result in map(as_dict, as_list(race_dict["results"])):
+            assert REQUIRED["result"] <= result.keys()
+            assert all(REQUIRED["split"] <= as_dict(s).keys() for s in as_list(result["splits"]))
 
 
 @pytest.mark.parametrize(("name", "doc"), _races())
 def test_ids_are_uuids_and_references_resolve(name: str, doc: dict[str, Json]) -> None:
-    race = as_dict(as_list(doc["races"])[0])
-    ids: dict[str, set[str]] = {}
-    for key in ("courses", "groups", "persons", "results", "organizations"):
-        ids[key] = {i for item in as_list(race[key]) if isinstance(i := as_dict(item)["id"], str)}
-    for found in ids.values():
-        for value in found:
-            uuid.UUID(value)
-    groups = map(as_dict, as_list(race["groups"]))
-    assert all(g["course_id"] in ids["courses"] | {None} for g in groups), name
-    persons = list(map(as_dict, as_list(race["persons"])))
-    assert all(p["group_id"] in ids["groups"] for p in persons)
-    assert all(p["organization_id"] in ids["organizations"] | {None} for p in persons)
-    results = map(as_dict, as_list(race["results"]))
-    assert all(r["person_id"] in ids["persons"] for r in results)
+    for race in map(as_dict, as_list(doc["races"])):
+        ids: dict[str, set[str]] = {}
+        for key in ("courses", "groups", "persons", "results", "organizations"):
+            items = map(as_dict, as_list(race[key]))
+            ids[key] = {i for item in items if isinstance(i := item["id"], str)}
+        for found in ids.values():
+            for value in found:
+                uuid.UUID(value)
+        groups = map(as_dict, as_list(race["groups"]))
+        assert all(g["course_id"] in ids["courses"] | {None} for g in groups), name
+        persons = list(map(as_dict, as_list(race["persons"])))
+        assert all(p["group_id"] in ids["groups"] for p in persons)
+        assert all(p["organization_id"] in ids["organizations"] | {None} for p in persons)
+        results = map(as_dict, as_list(race["results"]))
+        assert all(r["person_id"] in ids["persons"] for r in results)
 
 
 @pytest.mark.parametrize(("name", "doc"), _races())
 def test_no_personal_data_shapes(name: str, doc: dict[str, Json]) -> None:
-    race = as_dict(as_list(doc["races"])[0])
-    for person in map(as_dict, as_list(race["persons"])):
-        assert person["card_number"] == 0, name
-        assert person["birth_date"] is None
-        assert person["name"] == "Synthetic"
-    for result in map(as_dict, as_list(race["results"])):
-        assert result.get("card_number", 0) == 0
+    for race in map(as_dict, as_list(doc["races"])):
+        for person in map(as_dict, as_list(race["persons"])):
+            assert person["card_number"] == 0, name
+            assert person["birth_date"] is None
+            assert person["name"] == "Synthetic"
+        for result in map(as_dict, as_list(race["results"])):
+            assert result.get("card_number", 0) == 0
+
+
+def test_files_for_the_maintainer_check_of_f3_f4_f6() -> None:
+    assert {"f3_rogaine_tie", "f4_slow_leader", "f6_two_races"} <= synth.RACES.keys()
+
+
+def test_two_race_file_is_one_event_that_is_not_multi_day() -> None:
+    doc = as_dict(synth.f6_two_races())
+    first, second = map(as_dict, as_list(doc["races"]))
+
+    assert doc["current_race"] == 0
+    assert as_dict(first["data"])["race_type"] == synth.INDIVIDUAL
+    assert as_dict(second["settings"])["result_processing_mode"] == "scores"
+    assert first["id"] != second["id"]
+    titles = [as_dict(r["data"])["short_title"] for r in (first, second)]
+    assert all(titles), "the race list in the GUI shows short_title"
+    assert len(set(titles)) == 2
 
 
 def test_generation_is_deterministic() -> None:
