@@ -14,9 +14,16 @@ branch it fails closed, because the range would otherwise be empty.
 The trailer is parsed by ``git interpret-trailers``: text in the body is not an approval.
 The trailer can be typed by anyone who can commit; ADR-0008 records that limit.
 
+``protected`` lists the files that define the checks (CI, hooks, ``check.py``, the guard, project
+configuration, golden files) changed in the same range, with the ``git diff`` command to review.
+It never fails: it makes condition 3 of ADR-0008 visible on every push (pre-push hook, verbose).
+In a pre-push hook the head is the pushed ref (``PRE_COMMIT_TO_REF``, set by pre-commit); pushing a
+deletion checks nothing.
+
 Usage::
 
     uv run python -m scripts.golden_guard range [--base REV] [--head REV]
+    uv run python -m scripts.golden_guard protected [--base REV] [--head REV]
     uv run python -m scripts.golden_guard commit-msg FILE        # git commit-msg hook
 
 Exit codes: 0 ok, 1 unapproved golden changes, 2 history or usage error.
@@ -25,6 +32,7 @@ Exit codes: 0 ok, 1 unapproved golden changes, 2 history or usage error.
 from __future__ import annotations
 
 import argparse
+import fnmatch
 import os
 import subprocess
 import sys
@@ -36,6 +44,19 @@ TRAILER = "Golden-Approved-By"
 DEFAULT_BRANCH = "main"
 ZERO_SHA = "0" * 40
 STAGED = "(staged)"
+# Files that define what "green" means and how golden files are protected (ADR-0008, condition 3).
+# A trailing "/" marks a directory; other entries are fnmatch patterns on the repository path.
+PROTECTED = (
+    ".github/",
+    ".pre-commit-config.yaml",
+    ".claude/settings.json",
+    "AGENTS.md",
+    "pyproject.toml",
+    "scripts/check.py",
+    "scripts/golden_*.py",
+    "scripts/hooks/",
+    f"{GOLDEN_DIR}/",
+)
 HINT = (
     f'Add a "{TRAILER}: <maintainer>" trailer to the commit only after the maintainer confirmed '
     "the change (AGENTS.md rule 5, ADR-0008)."
@@ -79,6 +100,18 @@ def is_golden(path: str) -> bool:
     normalized = path.replace("\\", "/").casefold()
     golden = GOLDEN_DIR.casefold()
     return normalized == golden or normalized.startswith(golden + "/")
+
+
+def is_protected(path: str) -> bool:
+    """Whether ``path`` is one of the files that define the checks (case-insensitive)."""
+    normalized = path.replace("\\", "/").casefold()
+    for pattern in (p.casefold() for p in PROTECTED):
+        if pattern.endswith("/"):
+            if normalized.startswith(pattern) or normalized == pattern[:-1]:
+                return True
+        elif fnmatch.fnmatchcase(normalized, pattern):
+            return True
+    return False
 
 
 def approvals(message: str, *, cwd: Path) -> list[str]:
@@ -161,6 +194,17 @@ def range_commits(head: str, *, base: str | None, cwd: Path) -> list[str]:
     return commits + [c for c in _rev_list(base_sha, head_sha, cwd=cwd) if c not in seen]
 
 
+def protected_changes(head: str = "HEAD", *, base: str | None, cwd: Path) -> list[str]:
+    """Protected paths changed by the commits of the range (see ``range_commits``), sorted."""
+    paths = {
+        path
+        for commit in range_commits(head, base=base, cwd=cwd)
+        for path in changed_paths(commit, cwd=cwd)
+        if is_protected(path)
+    }
+    return sorted(paths)
+
+
 def _subject(message: str) -> str:
     for line in message.splitlines():
         if line.strip() and not line.startswith("#"):
@@ -215,6 +259,19 @@ def _print_violation(violation: Violation) -> None:
         print(f"  {path}")
 
 
+def _protected_report(head: str, *, base: str | None, cwd: Path) -> None:
+    paths = protected_changes(head, base=base, cwd=cwd)
+    if not paths:
+        print("protected files: no protected files changed")
+        return
+    head_sha = _resolve(head, cwd=cwd) or head
+    since = _merge_base(head_sha, cwd=cwd) or base or ""
+    print(f"protected files changed ({len(paths)}): review the diff before it reaches main")
+    for path in paths:
+        print(f"  {path}")
+    print(f"review: git diff {since[:12]}..{head_sha[:12]} -- " + " ".join(paths))
+
+
 class Options(argparse.Namespace):
     command: str = ""
     base: str | None = None
@@ -227,12 +284,44 @@ def parse_args(argv: list[str] | None) -> Options:
         description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter
     )
     sub = parser.add_subparsers(dest="command", required=True)
-    rng = sub.add_parser("range", help="check committed history")
-    rng.add_argument("--base", default=os.environ.get("GOLDEN_BASE"), help="default: $GOLDEN_BASE")
-    rng.add_argument("--head", default="HEAD")
+    base = os.environ.get("GOLDEN_BASE")
+    head = os.environ.get("PRE_COMMIT_TO_REF") or "HEAD"
+    for name, text in (
+        ("range", "check committed history"),
+        ("protected", "list changed files that define the checks"),
+    ):
+        cmd = sub.add_parser(name, help=text)
+        cmd.add_argument("--base", default=base, help="default: $GOLDEN_BASE")
+        cmd.add_argument("--head", default=head, help="default: $PRE_COMMIT_TO_REF, else HEAD")
     msg = sub.add_parser("commit-msg", help="check staged changes against a commit message")
     msg.add_argument("message_file", type=Path)
     return parser.parse_args(argv, namespace=Options())
+
+
+def _commit_msg_command(message_file: Path, *, cwd: Path) -> int:
+    violation = check_commit_message(message_file, cwd=cwd)
+    if violation is None:
+        return 0
+    _print_violation(violation)
+    print(HINT)
+    return 1
+
+
+def _range_command(head: str, *, base: str | None, cwd: Path) -> int:
+    reviewed = _review_range(head, base=base, cwd=cwd)
+    for path in uncommitted_golden(cwd=cwd):
+        print(f"note: uncommitted change under {GOLDEN_DIR}/: {path} (commit it with the trailer)")
+    for _, approved in reviewed:
+        if approved is not None:
+            print(f"approved by {approved[0]}: {approved[1]}")
+    violations = [v for v, _ in reviewed if v is not None]
+    for violation in violations:
+        _print_violation(violation)
+    if violations:
+        print(HINT)
+        return 1
+    print(f"ok: no unapproved changes under {GOLDEN_DIR}/ ({len(reviewed)} golden commits)")
+    return 0
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -240,30 +329,17 @@ def main(argv: list[str] | None = None) -> int:
     cwd = Path.cwd()
     try:
         if args.command == "commit-msg":
-            violation = check_commit_message(args.message_file, cwd=cwd)
-            if violation is None:
-                return 0
-            _print_violation(violation)
-            print(HINT)
-            return 1
-        reviewed = _review_range(args.head, base=args.base, cwd=cwd)
-        dirty = uncommitted_golden(cwd=cwd)
+            return _commit_msg_command(args.message_file, cwd=cwd)
+        if args.head.strip() == ZERO_SHA:
+            print("pre-push: deleting a remote ref, nothing to check")
+            return 0
+        if args.command == "protected":
+            _protected_report(args.head, base=args.base, cwd=cwd)
+            return 0
+        return _range_command(args.head, base=args.base, cwd=cwd)
     except GuardError as error:
         print(f"golden guard: error: {error}")
         return 2
-    violations = [v for v, _ in reviewed if v is not None]
-    for _, approved in reviewed:
-        if approved is not None:
-            print(f"approved by {approved[0]}: {approved[1]}")
-    for path in dirty:
-        print(f"note: uncommitted change under {GOLDEN_DIR}/: {path} (commit it with the trailer)")
-    if violations:
-        for violation in violations:
-            _print_violation(violation)
-        print(HINT)
-        return 1
-    print(f"ok: no unapproved changes under {GOLDEN_DIR}/ ({len(reviewed)} golden commits)")
-    return 0
 
 
 if __name__ == "__main__":

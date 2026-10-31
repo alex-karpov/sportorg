@@ -1,6 +1,7 @@
 # ADR-0008: Golden-file protection that does not depend on the agent
 
-- Status: accepted (Stage 2, S1). The maintainer's question about the stronger variant is open: see "Open question"
+- Status: accepted (Stage 2, S1); the signed manifest (c2) is deferred to a later stage
+  `[мейнтейнер: 2026-11-01]`, see "Maintainer's decision"
 - Date: 2026-10-31
 - Scope: `tests/golden/**` (AGENTS.md rule 5), Backlog TASK-8 AC #7. Prerequisite for the first
   golden file (Stage 2 rules, item 5).
@@ -89,17 +90,31 @@ Facts (`facts.json`, history at `aeb6cb7`, GitHub API of 2026-10-31):
   before the commit that will carry the trailer. The commit-msg hook checks the staged changes against
   the message. Run `pre-commit install` again to get the new `commit-msg` hook type.
 
-Not yet observed: a CI run with the new step (nothing pushed in S1). The first push of `stage-2`
-shows it. The canary test runs in that same CI job.
+Observed in CI `[история: GitHub Actions run 41222366113, stage-2@dab1040, 2026-10-31]`. All seven jobs
+passed: Linux, Windows and macOS on 3.14 and 3.15, plus the clean machine. In each, the `golden` step
+printed `ok: no unapproved changes under tests/golden/`. `GOLDEN_BASE` was zeros (the first push of the
+branch), so the check fell back to the merge-base with `main` as designed. 329 tests passed, the canary
+among them. A red CI run caused by a real unapproved golden commit was not observed. The canary runs the
+same command (`scripts/check.py --only golden`) on a clone inside those jobs.
 
-## Open question (maintainer)
-Should forged approvals be stopped now (c2), and not only made visible (a)?
-- (i) Keep (a) now. Move to (c2) when agents commit unattended (devcontainer, cloud) or when a key
-  out of the agent's reach exists. **Recommended**: today the agent and the maintainer share the
-  account, the token and the machine, so (c2) would add ceremony without adding strength.
-- (ii) Set up (c2) now: a dedicated ssh key with a passphrase that is never loaded into the agent's
-  ssh-agent, its public key in a GitHub Actions variable, and a CI step that verifies the manifest.
-- (iii) Add (b) as well, after a second collaborator account exists.
+## Maintainer's decision `[мейнтейнер: 2026-11-01]`
+The question was: stop forged approvals now with (c2), or only make them visible with (a)? Options were
+(i) keep (a) now, (ii) set up (c2) now, (iii) add (b) once a second collaborator exists. Decision: (i).
+The move to (c2) (session "S1b") is deferred to a later stage.
+
+(c2) adds strength only when all three conditions hold at once; one unmet condition leaves a bypass:
+1. **The signing key is out of the agent's reach.** A dedicated key with a passphrase, never loaded
+   into an ssh-agent, or a hardware key that needs a touch. Without it, the agent signs a changed
+   manifest itself.
+2. **The agent's GitHub token cannot change repository variables or settings.** A fine-grained token
+   without Administration, Variables or Secrets; admin actions only in the browser. Without it, the
+   agent replaces the trusted public key.
+3. **Changes to the checking code are reviewed before they reach `main`.** That code is
+   `.github/`, `.pre-commit-config.yaml`, `.claude/settings.json`, `AGENTS.md`, `pyproject.toml`,
+   `scripts/check.py`, `scripts/golden_*.py`, `scripts/hooks/` and `tests/golden/`. Without the review,
+   the agent removes the check itself. This holds for (a) too. Since 2026-11-01 the pre-push hook
+   `protected-files` (`python -m scripts.golden_guard protected`) prints these files and the `git diff`
+   command on every push. It informs and never blocks: the review itself is the maintainer's.
 
 ## Revisit
 - an agent commit with the trailer is found without a recorded confirmation of the maintainer;

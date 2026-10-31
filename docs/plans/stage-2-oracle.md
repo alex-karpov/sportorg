@@ -328,5 +328,14 @@ Maintainer's answers of 2026-10-31, applied in the same session:
 - Q4: the maintainer ran the legacy tests outside the sandbox (`legacy-tests-outside-sandbox.md`, 3.8.20):
   `test_reader::test_sportident` and `::test_sportiduino` pass there, `::test_huichang` still fails, cause
   unknown (finding for S5).
-- Q1: still open; the maintainer asked for instructions to meet the conditions of the signed manifest
-  (signing key and GitHub token out of the agent's reach, review of the checking code before push).
+- Q1: decided 2026-11-01: keep the trailer check; the signed manifest (session "S1b") is deferred to a
+  later stage. The three conditions it needs are in ADR-0008, "Maintainer's decision".
+
+Follow-up of 2026-11-01:
+- The maintainer pushed `stage-2`. CI run 41222366113 (`dab1040`) is green on all seven jobs: the
+  `golden` step is `ok` on Linux, Windows and macOS (3.14 and 3.15) and on the clean machine, and 329
+  tests pass, the canary among them. AC #7 checked in TASK-8.
+- Pre-push hook `protected-files` (`python -m scripts.golden_guard protected`, TDD) lists changed files
+  that define the checks, with the `git diff` command. It is informational, condition 3 of ADR-0008.
+  In pre-push, `range` and `protected` take the pushed ref (`PRE_COMMIT_TO_REF`) as head.
+- Not done, by the maintainer's choice: listing the sandbox mount points in `.git/info/exclude`.

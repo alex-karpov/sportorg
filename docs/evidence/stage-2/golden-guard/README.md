@@ -17,4 +17,5 @@ Notes:
   sandbox did not yet allow that path, and copied there unchanged after the maintainer allowed it the same
   day. The rerun from that cache reproduces `facts.json` byte for byte. On a machine without the cache the
   command fetches them again, and `facts.json` then changes if the GitHub settings have changed.
-- CI has not run the new step yet (nothing pushed in S1).
+- CI ran the new step on all seven jobs of run 41222366113 (`stage-2@dab1040`, 2026-10-31): `ok` everywhere,
+  329 tests including the canary passed (ADR-0008, Decision).

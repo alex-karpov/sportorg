@@ -6,7 +6,7 @@ title: >-
 status: In Progress
 assignee: []
 created_date: 2026-10-24 12:06
-updated_date: '2026-10-31T16:47:00Z'
+updated_date: '2026-10-31T17:08:00Z'
 labels:
   - stage-2
 milestone: m-2
@@ -29,7 +29,7 @@ Blocked by data request items 1-4 (corpus, protocols, personal-data decision, de
 - [ ] #4 Recorded device dumps replay through virtual COM ports
 - [ ] #5 Legacy smoke (GUI, SportIdent read, print) on Windows, Linux, macOS with logs
 - [ ] #6 Baseline: branch coverage, mutation score, complexity, operator task timings, split print time
-- [ ] #7 Agent-neutral protection of tests/golden/** in CI before the first golden file: a changed golden file fails CI unless the commit carries the maintainer's approval (mechanism recorded in an ADR)
+- [x] #7 Agent-neutral protection of tests/golden/** in CI before the first golden file: a changed golden file fails CI unless the commit carries the maintainer's approval (mechanism recorded in an ADR)
 <!-- AC:END -->
 
 ## Implementation Notes
@@ -40,4 +40,6 @@ S1 (2026-10-31): plan docs/plans/stage-2-oracle.md; AC #7 implemented (scripts/g
 S1 follow-up (2026-10-31, maintainer): oracle first line CPython 3.8.20 (.venv re-synced), 3.13.17 second lane (ADR-0009 T1); gh api cache moved to ~/.cache/sportorg-stage2/github; commit-msg hook installed. Open: ADR-0008 question (signed manifest), legacy tests outside the sandbox (maintainer runs, result to S2).
 
 S1 follow-up 2 (2026-10-31): maintainer ran legacy tests outside the sandbox (3.8.20): test_reader sportident and sportiduino pass, huichang fails, cause unknown (finding for S5); evidence legacy-tests-outside-sandbox.*
+
+S1 follow-up 3 (2026-11-01): AC #7 checked: CI run 41222366113 (stage-2@dab1040) green on all 7 jobs, golden step ok on Linux/Windows/macOS 3.14+3.15 and the clean machine, 329 tests incl. the canary. Signed manifest (c2) deferred to a later stage by the maintainer (ADR-0008). Pre-push hook protected-files added (condition 3, informational).
 <!-- SECTION:NOTES:END -->

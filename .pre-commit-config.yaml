@@ -49,6 +49,14 @@ repos:
         pass_filenames: false
         always_run: true
         stages: [pre-push]
+      - id: protected-files
+        name: protected files changed (review the diff; ADR-0008 condition 3)
+        entry: uv run --no-sync python -m scripts.golden_guard protected
+        language: system
+        pass_filenames: false
+        always_run: true
+        verbose: true   # informational: print the list even though the hook never fails
+        stages: [pre-push]
       - id: tests
         name: pytest (on push)
         entry: uv run --no-sync python scripts/check.py --only tests

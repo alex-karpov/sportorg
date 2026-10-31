@@ -344,3 +344,91 @@ def test_cli_commit_msg(repo: Path, monkeypatch: pytest.MonkeyPatch) -> None:
     message.write_text("add golden\n", encoding="utf-8")
 
     assert golden_guard.main(["commit-msg", str(message)]) == 1
+
+
+@pytest.mark.parametrize(
+    ("path", "expected"),
+    [
+        (".github/workflows/ci.yml", True),
+        (".pre-commit-config.yaml", True),
+        (".claude/settings.json", True),
+        ("AGENTS.md", True),
+        ("pyproject.toml", True),
+        ("scripts/check.py", True),
+        ("Scripts/Check.py", True),
+        ("scripts/golden_guard.py", True),
+        ("scripts/golden_probe.py", True),
+        ("scripts/hooks/guard.py", True),
+        ("tests/golden/a.json", True),
+        ("scripts/check_licenses.py", False),
+        ("scripts/legacy_env.py", False),
+        ("src/sportorg_ng/core/version.py", False),
+        ("docs/AGENTS.md", False),
+    ],
+)
+def test_is_protected(path: str, *, expected: bool) -> None:
+    assert golden_guard.is_protected(path) is expected
+
+
+def test_protected_changes_since_main(repo: Path, commit: Commit) -> None:
+    commit("ci", {".github/workflows/ci.yml": "on: push\n", "src/a.py": "x = 1\n"})
+    commit("config", {"pyproject.toml": "[project]\n"})
+
+    assert golden_guard.protected_changes("HEAD", base=None, cwd=repo) == [
+        ".github/workflows/ci.yml",
+        "pyproject.toml",
+    ]
+
+
+def test_cli_protected_lists_files_and_review_command(
+    repo: Path, commit: Commit, monkeypatch: pytest.MonkeyPatch, capsys: pytest.CaptureFixture[str]
+) -> None:
+    monkeypatch.chdir(repo)
+    monkeypatch.delenv("GOLDEN_BASE", raising=False)
+    monkeypatch.delenv("PRE_COMMIT_TO_REF", raising=False)
+    commit("ci", {".github/workflows/ci.yml": "on: push\n"})
+
+    code = golden_guard.main(["protected"])
+
+    out = capsys.readouterr().out
+    assert code == 0
+    assert "  .github/workflows/ci.yml" in out
+    assert "git diff " in out
+
+
+def test_cli_protected_without_changes(
+    repo: Path, commit: Commit, monkeypatch: pytest.MonkeyPatch, capsys: pytest.CaptureFixture[str]
+) -> None:
+    monkeypatch.chdir(repo)
+    monkeypatch.delenv("GOLDEN_BASE", raising=False)
+    monkeypatch.delenv("PRE_COMMIT_TO_REF", raising=False)
+    commit("code", {"src/a.py": "x = 1\n"})
+
+    assert golden_guard.main(["protected"]) == 0
+    assert "no protected files changed" in capsys.readouterr().out
+
+
+def test_cli_head_comes_from_the_pushed_ref(
+    repo: Path, commit: Commit, monkeypatch: pytest.MonkeyPatch, capsys: pytest.CaptureFixture[str]
+) -> None:
+    git(repo, "switch", "--quiet", "-c", "other", "main")
+    commit("ci", {".github/workflows/ci.yml": "on: push\n"})
+    other = git(repo, "rev-parse", "HEAD")
+    git(repo, "switch", "--quiet", "work")
+    monkeypatch.chdir(repo)
+    monkeypatch.delenv("GOLDEN_BASE", raising=False)
+    monkeypatch.setenv("PRE_COMMIT_TO_REF", other)
+
+    assert golden_guard.main(["protected"]) == 0
+    assert ".github/workflows/ci.yml" in capsys.readouterr().out
+
+
+def test_cli_deleting_a_remote_ref_checks_nothing(
+    repo: Path, monkeypatch: pytest.MonkeyPatch, capsys: pytest.CaptureFixture[str]
+) -> None:
+    monkeypatch.chdir(repo)
+    monkeypatch.setenv("PRE_COMMIT_TO_REF", "0" * 40)
+
+    assert golden_guard.main(["protected"]) == 0
+    assert golden_guard.main(["range"]) == 0
+    assert "deleting" in capsys.readouterr().out
