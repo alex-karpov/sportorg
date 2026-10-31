@@ -69,7 +69,8 @@ def _format_error(error: Json) -> str:
         ":".join(str(part) for part in as_list(frame)) for frame in as_list(report.get("frames"))
     ]
     where = "\n  ".join(frames[-8:])
-    return f"legacy raised {as_str(report.get('type'), '?')} (message hidden), at:\n  {where}"
+    kind = as_str(report.get("type"), "?")
+    return f"the driver or legacy raised {kind} (message hidden), at:\n  {where}"
 
 
 def driver_command(
@@ -219,7 +220,10 @@ def main(argv: Sequence[str] | None = None) -> int:
         sys.stderr.write(f"oracle: {exc}\n")
         return 1
     if args.out is None:
-        sys.stdout.write(dumps(run.results))
+        # bytes: a redirected stdout on Windows would add the locale encoding and CRLF
+        sys.stdout.flush()
+        sys.stdout.buffer.write(dumps(run.results).encode("utf-8"))
+        sys.stdout.buffer.flush()
         return 0
     write_run(run, args.out)
     races = as_list(as_dict(run.results).get("races"))

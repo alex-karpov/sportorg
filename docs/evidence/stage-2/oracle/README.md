@@ -39,11 +39,17 @@ uv run python scripts/oracle.py RACE_FILE --out DIR    # results.json, stored.js
      `settings.json` is not read, its defaults apply `[допущение: an operator's settings.json is not part of the race file]`;
   3. `stored`: the file's own JSON, read the way legacy opens it (gzip if the file is gzip, otherwise
      UTF-8) `[код: pysport@b548c35 sportorg/modules/backup/file.py:28-51]`; legacy's own load would drop
-     the computed values the file holds `[код: pysport@b548c35 sportorg/models/memory.py:472-478,650-692]`;
+     the computed values the file holds `[код: pysport@b548c35 sportorg/models/memory.py:472-478,650-692]`.
+     A file that is neither gzip nor UTF-8 is refused (`NotUtf8RaceFile`): legacy would retry in the
+     machine's locale encoding (cp1251 on Russian Windows), which the oracle does not guess;
   4. `recalculated`: `File(path).open()` (legacy's load, which already recalculates), then for every
      race: make it current, rebuild indexes, `recalculate_results(race_object=race())`, as the GUI does
      for a multi-day event `[код: pysport@b548c35 sportorg/gui/main_window.py:678-686]`; each race is
-     then serialized with `Race.to_dict()` while it is current.
+     then serialized with `Race.to_dict()` while it is current. For a file with several races that is
+     not a multi-day event the GUI does not do this pass: there a non-current race shows what `load()`
+     computed while another race was current (`findings.agent.md`, F6). The oracle gives each race
+     the result it has when it is alone in a file
+     (`test_oracle_cli.py::test_each_race_of_a_multi_race_file_in_its_own_context`).
 - Personal data: the driver copies only whitelisted keys (`scripts/oracle_driver/snapshot.py`), so
   names, birth dates, chip numbers, organizations, comments and `status_comment` never leave the
   legacy process. A legacy error is reported as its type and stack frames without the message; the
@@ -80,3 +86,8 @@ relay team: {"group", "bib", "place", "order", "time_ms", "correct_legs", "statu
   strings (`result`, `result_current`), `speed`.
 - `comparison.json` matches results by `result_id`; per field it counts `same`, `different` and
   `not_stored` (the file has no value; not a difference) and lists each difference with both values.
+- What the comparison cannot see: a file holds only what its SportOrg version saved. Older files
+  have no `result_msec`, `start_msec`, `finish_msec` (legacy `test.json`: `time_ms`, `start_ms`,
+  `finish_ms` all `not_stored`), so their times are not compared, only status, place, splits and the
+  other stored fields. Relay teams are never stored in a file, so `relay_teams` is not compared.
+  Results that share a `result_id` count once.

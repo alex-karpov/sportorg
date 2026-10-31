@@ -85,6 +85,15 @@ def load_startup_tables() -> None:
     )
 
 
+class NotUtf8RaceFile(Exception):  # noqa: N818 - the name is the message: reports drop messages
+    """The race file is neither gzip nor UTF-8 text.
+
+    Legacy then retries in the machine's locale encoding (cp1251 on Russian Windows)
+    [код: pysport@b548c35 sportorg/modules/backup/file.py:45-51]. The oracle runs in C.UTF-8 and
+    does not guess an encoding.
+    """
+
+
 def read_file(path: str) -> tuple[object, str]:
     """Parsed JSON of a race file and its format (``gzip`` or ``text``)."""
     if is_gzip_file(path):
@@ -92,8 +101,7 @@ def read_file(path: str) -> tuple[object, str]:
     try:
         text = Path(path).read_text(encoding="utf-8")
     except UnicodeDecodeError:
-        # legacy retries in the locale encoding (file.py:45-51); C.UTF-8 in the hermetic environment
-        text = Path(path).read_text(encoding=None)
+        raise NotUtf8RaceFile from None
     return orjson.loads(text), "text"
 
 

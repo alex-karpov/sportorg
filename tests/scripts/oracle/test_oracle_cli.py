@@ -7,6 +7,8 @@ are skipped where that runtime does not exist (CI has no legacy checkout).
 
 from __future__ import annotations
 
+import gzip
+import io
 import os
 import subprocess
 import sys
@@ -20,6 +22,7 @@ from scripts._json import Json, as_dict, as_list, parse_json
 from scripts.corpus import synth
 from scripts.legacy import ROOT
 from scripts.legacy_env import clone_path, env_python
+from scripts.oracle_normalize import dumps
 
 if TYPE_CHECKING:
     from collections.abc import Callable
@@ -336,3 +339,142 @@ def test_driver_command_uses_absolute_paths_without_resolving_links() -> None:
     assert cmd[1:3] == ["-m", FAKE]
     assert cmd[3] == str(Path.cwd() / "in/race.json")
     assert cmd[4:] == ["raw.json", "--now", "00:00:00"]
+
+
+def test_main_writes_utf8_with_lf_whatever_the_console(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    """A redirected stdout on Windows has the locale encoding and CRLF; the output must not."""
+    groups: list[Json] = [{"id": "g1", "name": "\u0416" + "21"}]  # a Cyrillic group name
+    race: dict[str, Json] = {**RAW_RACE, "groups": groups}
+    payload: dict[str, Json] = {**PAYLOAD, "recalculated": {"races": [race]}}
+    race_file = _fake_file(tmp_path, payload)
+    raw = io.BytesIO()
+    console = io.TextIOWrapper(raw, encoding="cp1251", newline="\r\n")
+    monkeypatch.setattr(oracle_cli, "DRIVER_MODULE", FAKE)
+
+    def this_python(_venv: Path) -> Path:
+        return Path(sys.executable)
+
+    monkeypatch.setattr(oracle_cli, "env_python", this_python)
+    monkeypatch.setattr(sys, "stdout", console)
+
+    code = oracle_cli.main([str(race_file)])
+    console.flush()
+
+    assert code == 0
+    expected = dumps(_fake_oracle(race_file).results).encode("utf-8")
+    assert raw.getvalue() == expected
+
+
+# ---------------------------------------------------------------- integration: review fixes
+
+SECRETS: dict[str, Json] = {
+    "name": "Secretname",
+    "surname": "Secretsurname",
+    "middle_name": "Secretmiddle",
+    "comment": "Secretcomment",
+    "world_code": "SecretWRE",
+    "birth_date": "2011-03-04",
+    "card_number": 7654321,
+}
+
+
+def _with_secrets(doc: dict[str, Json]) -> None:
+    race = as_dict(as_list(doc["races"])[0])
+    as_dict(race["data"]).update(
+        {"title": "Secrettitle", "location": "Secretplace", "chief_referee": "Secretjudge"}
+    )
+    club: dict[str, Json] = {
+        "object": "Organization",
+        "id": synth.RaceBuilder("x", 0, {}).id("organization", "secret"),
+        "name": "Secretclub",
+        "contact": "Secretcontact",
+    }
+    race["organizations"] = [club]
+    for person in map(as_dict, as_list(race["persons"])):
+        person.update(SECRETS)
+        person["organization_id"] = club["id"]
+    for result in map(as_dict, as_list(race["results"])):
+        result.update({"card_number": 7654321, "status_comment": "Secretstatus"})
+
+
+@requires_legacy
+def test_no_personal_data_reaches_any_output(synth_dir: Path, tmp_path: Path) -> None:
+    race_file = _edited(synth_dir / "individual.json", tmp_path / "s.json", _with_secrets)
+    run = _legacy(race_file)
+
+    texts = [dumps(doc) for doc in (run.results, run.stored, run.comparison, run.run)]
+    secrets = ["Secret", "7654321", "2011"]
+    assert [s for s in secrets for text in texts if s in text] == []
+    assert _outcome(_by_bib(run)[101])[:2] == ("OK", 1)  # the race itself is unchanged
+
+
+@requires_legacy
+def test_a_legacy_error_is_sanitized_end_to_end(synth_dir: Path, tmp_path: Path) -> None:
+    def bad_status(doc: dict[str, Json]) -> None:
+        race = as_dict(as_list(doc["races"])[0])
+        as_dict(as_list(race["results"])[0])["status"] = "Secretsurname-7654321"
+
+    race_file = _edited(synth_dir / "individual.json", tmp_path / "bad.json", bad_status)
+    with pytest.raises(oracle_cli.OracleError) as info:
+        _legacy(race_file)
+
+    text = str(info.value)
+    assert "ValueError" in text
+    assert "sportorg/models/memory.py" in text
+    assert "Secret" not in text
+    assert "7654321" not in text
+
+
+@requires_legacy
+def test_gzip_file_gives_the_same_results(synth_dir: Path, tmp_path: Path) -> None:
+    source = synth_dir / "individual.json"
+    packed = tmp_path / "individual.json"
+    packed.write_bytes(gzip.compress(source.read_bytes(), mtime=0))
+
+    plain, zipped = _legacy(source), _legacy(packed)
+
+    assert dumps(zipped.results) == dumps(plain.results)
+    assert as_dict(zipped.run)["file_format"] == "gzip"
+
+
+@requires_legacy
+def test_a_file_that_is_not_utf8_is_refused_by_name(synth_dir: Path, tmp_path: Path) -> None:
+    """Legacy retries in the machine's locale (cp1251 on Russian Windows); the oracle won't guess.
+
+    [код: pysport@b548c35 sportorg/modules/backup/file.py:45-51]
+    """
+    cyrillic = "\u041c21"  # M21 with a Cyrillic EM: not ASCII, so the encoding matters
+    text = (synth_dir / "individual.json").read_text(encoding="utf-8").replace("M21", cyrillic)
+    race_file = tmp_path / "cp1251.json"
+    race_file.write_bytes(text.encode("cp1251"))
+
+    with pytest.raises(oracle_cli.OracleError) as info:
+        _legacy(race_file)
+
+    message = str(info.value)
+    assert "NotUtf8RaceFile" in message
+    assert "driver or legacy raised" in message
+
+
+@requires_legacy
+def test_each_race_of_a_multi_race_file_in_its_own_context(synth_dir: Path, tmp_path: Path) -> None:
+    """A rogaine as the second, non-current race is scored as when it is alone in a file.
+
+    Legacy's load recalculates every race against the current one (``_check_all`` reads
+    ``race()``) [код: pysport@b548c35 sportorg/models/result/result_tools.py:105]; the oracle then
+    recalculates each race as the current one (ADR-0009 T5).
+    """
+    first = as_dict(parse_json((synth_dir / "individual.json").read_text(encoding="utf-8")))
+    second = as_dict(parse_json((synth_dir / "rogaine.json").read_text(encoding="utf-8")))
+    races: list[Json] = [*as_list(first["races"]), *as_list(second["races"])]
+    both: dict[str, Json] = {**first, "races": races}
+    race_file = tmp_path / "two.json"
+    race_file.write_text(synth.dumps(both), encoding="utf-8")
+
+    combined = as_list(as_dict(_legacy(race_file).results)["races"])
+    alone = as_list(as_dict(_legacy(synth_dir / "rogaine.json").results)["races"])
+
+    assert len(combined) == 2
+    assert as_dict(combined[1])["results"] == as_dict(alone[0])["results"]
