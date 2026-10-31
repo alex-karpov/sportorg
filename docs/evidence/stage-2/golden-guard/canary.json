@@ -1,0 +1,11 @@
+{
+ "command": "scripts/check.py --only golden (GOLDEN_BASE = HEAD before the canary commit)",
+ "exit_codes": {
+  "with_trailer": 0,
+  "without_trailer": 1
+ },
+ "expected": {
+  "with_trailer": 0,
+  "without_trailer": 1
+ }
+}

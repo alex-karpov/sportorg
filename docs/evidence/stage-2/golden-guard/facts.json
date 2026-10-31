@@ -1,0 +1,24 @@
+{
+ "git": {
+  "agent_commit_authors": 1,
+  "agent_commits": 27,
+  "authors": 2,
+  "commits": 30,
+  "signed_commits": 2
+ },
+ "github": {
+  "collaborators": 1,
+  "main_protected": false,
+  "owner_type": "User",
+  "rulesets": 0,
+  "visibility": "public"
+ },
+ "github_cache_sha256": {
+  "collaborators": "3a2b5bd0479af1c899feef44eb695051c01aa7969e6481a85ced738d56ac3df5",
+  "protection": "37cc4256ce44f4e5bf0cf5faf098a93137d6ebeb545f7309c8f0787f042a6472",
+  "repo": "ba98e6291479d2027b307d23b33e09111837c3b1576389091d99d4e2c608937a",
+  "rulesets": "68df1aa5536d7c628dea716845491f33a78d3e5a9442f11dabd3da58e0e3d0ec"
+ },
+ "repo": "alex-karpov/sportorg",
+ "rev": "aeb6cb752161cd6c62e419a3c8405223d35c2574"
+}
