@@ -6,6 +6,9 @@ Synthetic inputs only: no legacy environment, no network.
 from __future__ import annotations
 
 import json
+import os
+import subprocess
+from pathlib import Path
 from typing import TYPE_CHECKING
 
 import pytest
@@ -15,7 +18,7 @@ from scripts.legacy import Pin
 from scripts.legacy_env import CaseOutcome, LegacyRun
 
 if TYPE_CHECKING:
-    from pathlib import Path
+    from collections.abc import Mapping, Sequence
 
 IDENTITY = ("-c", "user.name=test", "-c", "user.email=test@example.invalid")
 
@@ -105,6 +108,29 @@ def test_hermetic_env(tmp_path: Path) -> None:
     assert env["PYTHONDONTWRITEBYTECODE"] == "1"
     assert env["QT_QPA_PLATFORM"] == "offscreen"
     assert env["SPORTORG_TEMPLATES_PATH"] == str(templates)
+
+
+def test_hermetic_env_drops_variables_that_change_legacy_runs(tmp_path: Path) -> None:
+    outer = {
+        "PYTEST_ADDOPTS": "-x",
+        "PYTEST_PLUGINS": "evil",
+        "QT_PLUGIN_PATH": "/qt",
+        "QT_QPA_PLATFORMTHEME": "gtk3",
+        "LC_MESSAGES": "ru_RU.UTF-8",
+        "LANGUAGE": "ru",
+        "SPORTORG_DEBUG": "1",
+        "COVERAGE_PROCESS_START": ".coveragerc",
+        "PYTHONWARNINGS": "error",
+        "PYTHONSAFEPATH": "1",
+        "PYTHONNOUSERSITE": "1",
+    }
+    base = {"PATH": "/usr/bin", "UV_CACHE_DIR": "/cache", **outer}
+
+    env = legacy_env.hermetic_env(base, home=tmp_path, qt_platform=None, templates=tmp_path)
+
+    assert env["PATH"] == "/usr/bin"
+    assert env["UV_CACHE_DIR"] == "/cache"
+    assert not outer.keys() & env.keys()
 
 
 def test_hermetic_env_without_platform_drops_qt_variable(tmp_path: Path) -> None:
@@ -265,3 +291,87 @@ def test_sync_env_dir_rejects_names_the_copy_would_not_keep(name: str) -> None:
     # only top-level .venv* directories survive clean_clone and pass clone_problems
     with pytest.raises(ValueError, match=r"\.venv"):
         legacy_env.sync_env_dir(name)
+
+
+@pytest.mark.parametrize("junit_text", [None, ""], ids=["no-junit", "empty-junit"])
+def test_a_crashed_test_run_is_recorded_as_a_crash(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch, junit_text: str | None
+) -> None:
+    """The process path: pytest dies (exit 134) before JUnit is complete; the env is hermetic."""
+    clone = tmp_path / "clone"
+    clone.mkdir()
+    seen: dict[str, Mapping[str, str]] = {}
+
+    def fake_run(
+        cmd: Sequence[str | Path],
+        *,
+        cwd: Path,
+        env: Mapping[str, str] | None = None,
+        timeout: float = 0,
+    ) -> subprocess.CompletedProcess[str]:
+        del cwd, timeout
+        args = [str(c) for c in cmd]
+        if "pytest" not in args:
+            return subprocess.CompletedProcess(args, 0, "", "")
+        assert env is not None
+        seen["env"] = env
+        runtime = Path(env["XDG_RUNTIME_DIR"])
+        assert runtime.is_dir()
+        if os.name == "posix":
+            assert runtime.stat().st_mode & 0o777 == 0o700
+        junit = Path(next(a for a in args if a.startswith("--junitxml=")).split("=", 1)[1])
+        if junit_text is not None:
+            junit.write_text(junit_text, encoding="utf-8")
+        return subprocess.CompletedProcess(args, 134, "", "")
+
+    def fake_version(_exe: Path) -> str:
+        return "3.8.20"
+
+    def no_cleaning(_clone: Path) -> None:
+        return None
+
+    monkeypatch.setattr(legacy_env, "_run", fake_run)
+    monkeypatch.setattr(legacy_env, "python_version", fake_version)
+    monkeypatch.setattr(legacy_env, "clean_clone", no_cleaning)
+    monkeypatch.setenv("DISPLAY", ":0")
+
+    run = legacy_env.run_legacy_tests(clone, tmp_path / "python", qt_platform="offscreen")
+
+    assert run.outcomes is None
+    assert run.exit_code == 134
+    assert legacy_env.summarize(run, [])["crashed"] is True
+    env = seen["env"]
+    assert "DISPLAY" not in env
+    assert env["QT_QPA_PLATFORM"] == "offscreen"
+    assert env["SPORTORG_TEMPLATES_PATH"] == str(legacy_env.templates_ru())
+    assert Path(env["HOME"]) != Path.home()
+
+
+def test_sync_has_room_for_a_first_download(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    seen: dict[str, float] = {}
+
+    def fake_run(cmd: Sequence[str], **kwargs: float) -> subprocess.CompletedProcess[str]:
+        seen["timeout"] = kwargs["timeout"]
+        return subprocess.CompletedProcess(cmd, 0, "", "")
+
+    monkeypatch.setattr(subprocess, "run", fake_run)
+
+    legacy_env.sync(tmp_path, tmp_path / ".venv", "3.8")
+
+    # a managed CPython and PySide6 on a slow network (S7: borrowed machines)
+    assert seen["timeout"] >= 3600
+
+
+def test_sync_timeout_is_reported_without_a_traceback(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch, capsys: pytest.CaptureFixture[str]
+) -> None:
+    def fake_run(cmd: Sequence[str], **kwargs: float) -> subprocess.CompletedProcess[str]:
+        raise subprocess.TimeoutExpired(cmd, kwargs["timeout"])
+
+    monkeypatch.setattr(subprocess, "run", fake_run)
+    monkeypatch.setattr(legacy_env, "clone_path", lambda: tmp_path)
+
+    assert legacy_env.sync_command("3.8") == 1
+    assert "timed out" in capsys.readouterr().out

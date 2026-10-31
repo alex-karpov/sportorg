@@ -58,7 +58,12 @@ REMOVED_VARIABLES = (
     "PYTHONHOME",
     "QT_QPA_PLATFORM",
     "UV_PROJECT_ENVIRONMENT",
+    "LANGUAGE",
 )
+# Whole families that can change a legacy run (pytest options and plugins, Qt plugins and themes,
+# locale categories, legacy's own switches, coverage, interpreter flags). Names the environment
+# sets itself (PYTHONHASHSEED, LC_ALL, QT_QPA_PLATFORM, ...) are set again after the removal.
+REMOVED_PREFIXES = ("PYTEST_", "QT_", "LC_", "SPORTORG_", "COVERAGE_", "PYTHON")
 ENV_EXCLUDES = ("/.venv", "/.venv-*")
 SYNC_ARGS = ("sync", "--frozen", "--extra", "gui", "--python-preference", "only-managed")
 TEST_TIMEOUT = 1800
@@ -77,6 +82,9 @@ UNSTABLE_TESTS: dict[str, str] = {
     )
 }
 SETUP_TIMEOUT = 300
+# The first sync downloads a managed CPython and the GUI packages (PySide6): give a slow network an
+# hour; a later sync only links from uv's cache.
+SYNC_TIMEOUT = 3600
 
 
 @dataclass(frozen=True, slots=True)
@@ -167,7 +175,11 @@ def hermetic_env(
     base: Mapping[str, str], *, home: Path, qt_platform: str | None, templates: Path
 ) -> dict[str, str]:
     """Environment for running legacy code: no display, no project venv, fixed TZ and locale."""
-    env = {k: v for k, v in base.items() if k not in REMOVED_VARIABLES}
+    env = {
+        k: v
+        for k, v in base.items()
+        if k not in REMOVED_VARIABLES and not k.startswith(REMOVED_PREFIXES)
+    }
     env |= {
         "HOME": str(home),
         "USERPROFILE": str(home),
@@ -284,7 +296,12 @@ def _uv_env(env_dir: Path) -> dict[str, str]:
 
 def sync(clone: Path, env_dir: Path, python: str) -> subprocess.CompletedProcess[str]:
     uv = shutil.which("uv") or "uv"
-    return _run([uv, *SYNC_ARGS, "--python", python], cwd=clone, env=_uv_env(env_dir))
+    return _run(
+        [uv, *SYNC_ARGS, "--python", python],
+        cwd=clone,
+        env=_uv_env(env_dir),
+        timeout=SYNC_TIMEOUT,
+    )
 
 
 def python_version(python_exe: Path) -> str:
@@ -465,7 +482,14 @@ def sync_env_dir(name: str | None) -> Path:
 def sync_command(python: str, env_name: str | None = None) -> int:
     clone = clone_path()
     env_dir = sync_env_dir(env_name)
-    result = sync(clone, env_dir, python)
+    try:
+        result = sync(clone, env_dir, python)
+    except subprocess.TimeoutExpired:
+        print(
+            f"uv sync --python {python} into {env_dir.name}: timed out after {SYNC_TIMEOUT} s; "
+            "run it again (uv keeps what it downloaded)"
+        )
+        return 1
     print(f"uv sync --python {python} into {env_dir.name}: exit {result.returncode}")
     if result.returncode:
         print(_error_line(result.stdout + result.stderr) or result.stderr[-2000:])

@@ -14,7 +14,11 @@ own lock file; managed Pythons are in `.legacy-run/python`.
 
 How a legacy test run is made hermetic (`scripts/legacy_env.py`):
 - temporary HOME and XDG directories, `TZ=UTC`, `LANG=LC_ALL=C.UTF-8`, `PYTHONHASHSEED=0`,
-  `PYTHONDONTWRITEBYTECODE=1`, no `DISPLAY`, `WAYLAND_DISPLAY`, `VIRTUAL_ENV`, `PYTHONPATH`;
+  `PYTHONDONTWRITEBYTECODE=1`, no `DISPLAY`, `WAYLAND_DISPLAY`, `VIRTUAL_ENV`, `PYTHONPATH`,
+  `LANGUAGE`, and no variable of the families `PYTEST_*`, `QT_*`, `LC_*`, `SPORTORG_*`,
+  `COVERAGE_*`, `PYTHON*` from the outer environment (the ones above are set again);
+- a test run that times out (`TEST_TIMEOUT`, 30 min) stops with a traceback and writes no evidence;
+  `sync` has an hour for its first download and reports a timeout as a message;
 - templates from `.legacy-run/templates/ru` (`SPORTORG_TEMPLATES_PATH`);
 - before pytest, `python -m sportorg.language` compiles the translations, as legacy's `poe test` does;
 - the copy is cleaned back to its pin before and after each run (environments `.venv*` are kept);
