@@ -1,0 +1,1214 @@
+{
+ "counts": {
+  "error": 0,
+  "failed": 3,
+  "passed": 282,
+  "skipped": 10,
+  "total": 295
+ },
+ "crashed": false,
+ "deselected": [
+  "tests/test_teamwork.py::test_teamwork",
+  "tests/test_teamwork.py::test_teamwork_keepalive_and_server_disconnect",
+  "tests/test_teamwork.py::test_teamwork_with_encryption",
+  "tests/test_teamwork.py::test_teamwork_disconnect_on_encryption_mismatch",
+  "tests/test_teamwork.py::test_teamwork_race_id_mismatch_requires_confirmation"
+ ],
+ "exit_code": 1,
+ "python": "3.13.17",
+ "qt_platform": "none",
+ "recalc_counts": {
+  "error": 0,
+  "failed": 0,
+  "passed": 40,
+  "skipped": 8,
+  "total": 48
+ },
+ "recalc_modules": [
+  "tests/test_relay_results.py",
+  "tests/test_result_calculation.py"
+ ],
+ "setup_exit": 0,
+ "tests": [
+  {
+   "id": "tests.iof.test_parse_files::test_parse[competitorList.xml]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.iof.test_parse_files::test_parse[entryList.xml]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.iof.test_parse_files::test_parse[resultList.xml]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.iof.test_parse_files::test_parse[resultList_ok.xml]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.iof.test_parse_files::test_parse[startList.xml]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_constant::test_get_countries_loads_from_config_file",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_constant::test_get_groups_loads_from_config_file",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_credit_calculation::test_credit_calculation_when_credit_time_disabled",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_credit_calculation::test_credit_calculation_when_credit_time_enabled",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_first_run_settings::test_existing_settings_json_is_not_overwritten_by_config_ini",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_first_run_settings::test_first_run_without_config_ini_keeps_the_shipped_defaults",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_first_run_settings::test_first_run_writes_settings_json",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_first_run_settings::test_legacy_config_ini_is_still_imported",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_first_run_settings::test_sound_paths_resolve_from_the_package_rather_than_being_stored",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_gzip::test_save_and_open_gzip",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_iss::test_app_version",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_iss::test_version_info",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_json::test_open_json_file",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_language::test_duplicates",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_live::test_live_thread",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_memory_model::test_filter_contain_to_action[--True]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_memory_model::test_filter_contain_to_action[-Ivan-True]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_memory_model::test_filter_contain_to_action[1993-1993-True]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_memory_model::test_filter_contain_to_action[1993-4651993-True]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_memory_model::test_filter_contain_to_action[Ivan--False]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_memory_model::test_filter_contain_to_action[Ivan-Aleksey-False]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_memory_model::test_filter_contain_to_action[Ivan-Ivan-True]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_memory_model::test_filter_contain_to_action[Ivan-Ivanov-True]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_memory_model::test_filter_contain_to_action[Ivan-Sidorov Ivan Petrovich-True]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_memory_model::test_filter_contain_to_action[Ivan-Sidorov Ivan-True]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_memory_model::test_filter_contain_to_action[\\u0418\\u0432\\u0430\\u043d-\\u0418\\u0432\\u0430\\u043d-True]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_memory_model::test_filter_contain_to_action[ivan-Ivan-False]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_memory_model::test_filter_doesnt_contain_to_action[--True]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_memory_model::test_filter_doesnt_contain_to_action[-Ivan-False]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_memory_model::test_filter_doesnt_contain_to_action[1993-1993-False]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_memory_model::test_filter_doesnt_contain_to_action[1993-4651993-False]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_memory_model::test_filter_doesnt_contain_to_action[Ivan--True]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_memory_model::test_filter_doesnt_contain_to_action[Ivan-Aleksey-True]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_memory_model::test_filter_doesnt_contain_to_action[Ivan-Ivan-False]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_memory_model::test_filter_doesnt_contain_to_action[Ivan-Ivanov-False]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_memory_model::test_filter_doesnt_contain_to_action[Ivan-Sidorov Ivan Petrovich-False]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_memory_model::test_filter_doesnt_contain_to_action[Ivan-Sidorov Ivan-False]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_memory_model::test_filter_doesnt_contain_to_action[\\u0418\\u0432\\u0430\\u043d-\\u0418\\u0432\\u0430\\u043d-False]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_memory_model::test_filter_doesnt_contain_to_action[ivan-Ivan-True]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_memory_model::test_filter_equal_to_action[--True]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_memory_model::test_filter_equal_to_action[-Ivan-False]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_memory_model::test_filter_equal_to_action[1993-1993-True]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_memory_model::test_filter_equal_to_action[1993-4651993-False]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_memory_model::test_filter_equal_to_action[Ivan--False]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_memory_model::test_filter_equal_to_action[Ivan-Aleksey-False]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_memory_model::test_filter_equal_to_action[Ivan-Ivan-True]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_memory_model::test_filter_equal_to_action[Ivan-Ivanov Ivan Ivanovich-False]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_memory_model::test_filter_equal_to_action[Ivan-Ivanov Ivan-False]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_memory_model::test_filter_equal_to_action[Ivan-Ivanov-False]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_memory_model::test_filter_equal_to_action[\\u0418\\u0432\\u0430\\u043d-\\u0418\\u0432\\u0430\\u043d-True]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_memory_model::test_filter_equal_to_action[ivan-Ivan-False]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_memory_model::test_filter_wrong_action[--True]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_memory_model::test_filter_wrong_action[-Ivan-True]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_memory_model::test_filter_wrong_action[Ivan--True]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_memory_model::test_filter_wrong_action[Ivan-Aleksey-True]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_memory_model::test_filter_wrong_action[Ivan-Ivan-True]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_menu_features::test_feature_menu_items_visible_by_default",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_menu_features::test_menu_items_hidden_when_feature_disabled[huichang-actions1]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_menu_features::test_menu_items_hidden_when_feature_disabled[sfr-actions0]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_menu_features::test_menu_items_hidden_when_feature_disabled[sportident-actions2]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_menu_features::test_menu_items_hidden_when_feature_disabled[telegram-actions4]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_menu_features::test_menu_items_hidden_when_feature_disabled[winorient-actions3]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_menu_features::test_punch_system_features_enabled_by_default",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_ocad::test_courses",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_ocad::test_get_item",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_ocad::test_groups",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_ocad::test_v8_parse",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_ocad_integration::test_import_txt_v8",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_otime::test_otime[PythonOTime-time10-time20-37:05:35]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_otime::test_otime[PythonOTime-time11-time21-37:15:35]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_otime::test_otime[PythonOTime-time12-time22-74:05:35]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_otime::test_otime[PythonOTime-time13-time23-26:05:35]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_otime::test_otime[PythonOTime-time14-time24-00:05:35]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_otime::test_otime[PythonOTime-time15-time25-185:00:00]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_otime::test_otime_eq[PythonOTime]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_otime::test_otime_round_accepts_int[PythonOTime-0-1200]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_otime::test_otime_round_accepts_int[PythonOTime-1-1200]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_otime::test_otime_round_accepts_int[PythonOTime-2-1300]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_otime::test_otime_sum[PythonOTime]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_otime::test_parse_time_rounding[down-1]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_otime::test_parse_time_rounding[math-0]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_otime::test_parse_time_rounding[up-2]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_otime::test_parse_time_rounding_invalid",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_paths::test_a_frozen_build_seeds_but_a_source_checkout_does_not",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_paths::test_app_dir_is_beside_the_executable_when_frozen",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_paths::test_app_dir_is_the_repository_root_when_running_from_source",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_paths::test_copy_failure_is_not_fatal",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_paths::test_data_directory_wins_over_the_package",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_paths::test_ensure_dirs_creates_data_and_logs",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_paths::test_ensure_dirs_reports_an_unwritable_root",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_paths::test_existing_directory_is_left_alone",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_paths::test_existing_settings_suppress_seeding",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_paths::test_falls_back_to_the_package",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_paths::test_missing_package_directory_is_not_fatal",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_paths::test_override_wins",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_paths::test_seeds_every_directory_on_a_first_run",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_paths::test_settings_and_directory_both_present_seeds_nothing",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_paths::test_working_directory_does_not_affect_resolution",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_penalty_checking::test_basic_syntax",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_penalty_checking::test_marked_route_yes_no",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_penalty_checking::test_non_obvious_behavior",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_penalty_checking::test_penalty_calculation_function",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_plugins::test_plugin_client_applies_incoming_person_update",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_plugins::test_plugin_process_initializes_and_handles_updates",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_plugins::test_plugin_settings_are_normalized",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_plugins::test_result_entities_use_result_update_method",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_qualification::test_get_qual_by_name_is_case_insensitive_for_kms_and_ms",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_qualification::test_get_qual_by_name_supports_common_aliases",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_race_partial::test_build_partial_courses_in_model_order",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_race_partial::test_build_partial_courses_matched_by_id_not_structure",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_race_partial::test_build_partial_empty_returns_none",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_race_partial::test_build_partial_excludes_other_groups",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_race_partial::test_build_partial_group_without_course_excluded_from_courses",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_race_partial::test_build_partial_groups_in_model_order",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_race_partial::test_build_partial_orgs_in_model_order",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_race_partial::test_build_partial_results_filtered",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_race_partial::test_partial_for_courses_empty_returns_none",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_race_partial::test_partial_for_courses_filters_by_course",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_race_partial::test_partial_for_courses_matches_by_id_not_structure",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_race_partial::test_partial_for_courses_multi",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_race_partial::test_partial_for_groups_empty_returns_none",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_race_partial::test_partial_for_groups_excludes_other_persons",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_race_partial::test_partial_for_groups_filters_persons",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_race_partial::test_partial_for_groups_order_follows_model",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_race_partial::test_partial_for_multi_day_ids_matches_across_race_objects",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_race_partial::test_partial_for_multi_day_ids_matches_selected_athlete",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_race_partial::test_partial_for_multi_day_ids_no_match_returns_empty_valid_dict",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_race_partial::test_partial_for_multi_day_ids_person_order_follows_model",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_race_partial::test_partial_for_orgs_empty_returns_none",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_race_partial::test_partial_for_orgs_filters_persons",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_race_partial::test_partial_for_orgs_multi",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_race_partial::test_partial_for_persons_empty_returns_none",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_race_partial::test_partial_for_persons_reorders_by_model",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_race_partial::test_partial_for_persons_subset",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_race_partial::test_partial_for_results_empty_returns_none",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_race_partial::test_partial_for_results_excludes_unselected_result_of_same_person",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_race_partial::test_partial_for_results_output_in_model_order",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_race_partial::test_partial_for_results_persons_in_model_order",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_race_partial::test_partial_for_results_subset",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_reader::test_huichang",
+   "outcome": "failed"
+  },
+  {
+   "id": "tests.test_reader::test_sportident",
+   "outcome": "failed"
+  },
+  {
+   "id": "tests.test_reader::test_sportiduino",
+   "outcome": "failed"
+  },
+  {
+   "id": "tests.test_relay_results.TestRelayResults::test_01_team_with_best_result",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_relay_results.TestRelayResults::test_02_team_with_same_organization",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_relay_results.TestRelayResults::test_03_team_with_not_best_result",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_relay_results.TestRelayResults::test_04_team_with_athletes_from_different_organizations",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_relay_results.TestRelayResults::test_05_team_from_same_organization",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_relay_results.TestRelayResults::test_06_team_from_same_organization",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_relay_results.TestRelayResults::test_07_team_with_worst_result",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_relay_results.TestRelayResults::test_08_team_with_out_of_competition",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_relay_results.TestRelayResults::test_09_incomplete_team_with_more_legs_with_better_result",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_relay_results.TestRelayResults::test_10_team_with_not_all_legs_finished",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_relay_results.TestRelayResults::test_11_incomplete_team_with_more_legs_with_worse_result",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_relay_results.TestRelayResults::test_12_team_with_fewer_legs",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_relay_results.TestRelayResults::test_13_full_team_with_more_legs_before_dsq",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_relay_results.TestRelayResults::test_14_full_team_with_less_legs_before_dsq",
+   "outcome": "skipped"
+  },
+  {
+   "id": "tests.test_relay_results.TestRelayResults::test_15_incomplete_dsq_team_with_better_result",
+   "outcome": "skipped"
+  },
+  {
+   "id": "tests.test_relay_results.TestRelayResults::test_16_full_dsq_team_same_completed_legs_worse_result",
+   "outcome": "skipped"
+  },
+  {
+   "id": "tests.test_relay_results.TestRelayResults::test_17_incomplete_dsq_team_with_less_legs",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_relay_results.TestRelayResults::test_18_not_started_team",
+   "outcome": "skipped"
+  },
+  {
+   "id": "tests.test_relay_results.TestRelayResultsBestTeamPlacing::test_01_team_with_best_result",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_relay_results.TestRelayResultsBestTeamPlacing::test_02_team_with_not_best_result",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_relay_results.TestRelayResultsBestTeamPlacing::test_03_team_with_worst_result",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_relay_results.TestRelayResultsBestTeamPlacing::test_04_team_with_same_organization",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_relay_results.TestRelayResultsBestTeamPlacing::test_05_team_from_same_organization",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_relay_results.TestRelayResultsBestTeamPlacing::test_06_team_from_same_organization",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_relay_results.TestRelayResultsBestTeamPlacing::test_07_team_with_athletes_from_different_organizations",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_relay_results.TestRelayResultsBestTeamPlacing::test_08_team_with_out_of_competition",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_relay_results.TestRelayResultsBestTeamPlacing::test_09_incomplete_team_with_more_legs_with_better_result",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_relay_results.TestRelayResultsBestTeamPlacing::test_10_team_with_not_all_legs_finished",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_relay_results.TestRelayResultsBestTeamPlacing::test_11_incomplete_team_with_more_legs_with_worse_result",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_relay_results.TestRelayResultsBestTeamPlacing::test_12_team_with_fewer_legs",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_relay_results.TestRelayResultsBestTeamPlacing::test_13_full_team_with_more_legs_before_dsq",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_relay_results.TestRelayResultsBestTeamPlacing::test_14_full_team_with_less_legs_before_dsq",
+   "outcome": "skipped"
+  },
+  {
+   "id": "tests.test_relay_results.TestRelayResultsBestTeamPlacing::test_15_incomplete_dsq_team_with_better_result",
+   "outcome": "skipped"
+  },
+  {
+   "id": "tests.test_relay_results.TestRelayResultsBestTeamPlacing::test_16_full_dsq_team_same_completed_legs_worse_result",
+   "outcome": "skipped"
+  },
+  {
+   "id": "tests.test_relay_results.TestRelayResultsBestTeamPlacing::test_17_incomplete_dsq_team_with_less_legs",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_relay_results.TestRelayResultsBestTeamPlacing::test_18_not_started_team",
+   "outcome": "skipped"
+  },
+  {
+   "id": "tests.test_relay_results::test_create_relay_data",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_result_calculation::test_context_invalidate_group",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_result_calculation::test_partial_recalculation_preserves_other_relay_groups",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_result_calculation::test_partial_recalculation_process_results",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_result_calculation::test_partial_recalculation_rechecks_affected_groups",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_result_calculation::test_partial_recalculation_updates_previous_and_new_groups",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_result_calculation::test_sort_key_ardf_mode",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_result_calculation::test_sort_key_scores_mode",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_result_calculation::test_sort_key_shared_context_reuses_cache",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_result_calculation::test_sort_key_status_ordering",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_result_calculation::test_sort_key_time_mode",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_result_calculation::test_sort_key_zero_time_last",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_result_checking::test_calculate_fixed_score[1-controls0-0]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_result_checking::test_calculate_fixed_score[1-controls1-4]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_result_checking::test_calculate_fixed_score[1-controls3-4]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_result_checking::test_calculate_fixed_score[1-controls4-3]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_result_checking::test_calculate_fixed_score[1-controls5-2]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_result_checking::test_calculate_fixed_score[2-controls2-8]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_result_checking::test_calculate_rogaine_penalty[1-5-max_time0-finish0-0]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_result_checking::test_calculate_rogaine_penalty[1-5-max_time1-finish1-0]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_result_checking::test_calculate_rogaine_penalty[1-5-max_time2-finish2-1]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_result_checking::test_calculate_rogaine_penalty[1-5-max_time3-finish3-1]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_result_checking::test_calculate_rogaine_penalty[1-5-max_time4-finish4-1]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_result_checking::test_calculate_rogaine_penalty[1-5-max_time5-finish5-2]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_result_checking::test_calculate_rogaine_penalty[1-5-max_time6-finish6-5]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_result_checking::test_calculate_rogaine_penalty[1-5-max_time7-finish7-5]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_result_checking::test_calculate_rogaine_penalty[1-5-max_time8-finish8-5]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_result_checking::test_calculate_rogaine_score[controls0-0]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_result_checking::test_calculate_rogaine_score[controls1-12]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_result_checking::test_calculate_rogaine_score[controls2-10]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_result_checking::test_calculate_rogaine_score[controls3-105]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_result_checking::test_calculate_rogaine_score[controls4-6]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_result_checking::test_calculate_score_allow_duplicates[fixed-controls10-4]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_result_checking::test_calculate_score_allow_duplicates[fixed-controls11-5]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_result_checking::test_calculate_score_allow_duplicates[fixed-controls6-0]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_result_checking::test_calculate_score_allow_duplicates[fixed-controls7-2]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_result_checking::test_calculate_score_allow_duplicates[fixed-controls8-4]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_result_checking::test_calculate_score_allow_duplicates[fixed-controls9-5]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_result_checking::test_calculate_score_allow_duplicates[rogain-controls0-0]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_result_checking::test_calculate_score_allow_duplicates[rogain-controls1-6]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_result_checking::test_calculate_score_allow_duplicates[rogain-controls2-12]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_result_checking::test_calculate_score_allow_duplicates[rogain-controls3-15]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_result_checking::test_calculate_score_allow_duplicates[rogain-controls4-10]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_result_checking::test_calculate_score_allow_duplicates[rogain-controls5-12]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_result_checking::test_controls_as_int",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_result_checking::test_controls_as_str",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_result_checking::test_controls_with_optional_code_ranges",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_result_checking::test_controls_with_optional_codes",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_result_checking::test_course_butterfly",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_result_checking::test_course_free_order",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_result_checking::test_course_pre_ordered",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_result_checking::test_free_course_order_any_controls",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_result_checking::test_free_course_order_unique_controls",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_result_checking::test_get_number_code_blank_string",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_result_checking::test_non_obvious_behavior",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_result_checking::test_overtime_individual_race_exceeds_max_time",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_result_checking::test_overtime_individual_race_within_max_time",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_result_checking::test_overtime_multi_day_race_current_day_exceeds_max_time",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_result_checking::test_overtime_multi_day_race_current_day_within_max_time",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_result_checking::test_penalty_calculation_supports_suffix_free_order_templates[course0-splits0]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_result_checking::test_penalty_calculation_supports_suffix_free_order_templates[course1-splits1]",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_settings_migration::test_dead_default_template_dir_is_cleared",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_settings_migration::test_empty_resolves_from_the_program_directory",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_settings_migration::test_first_run_records_the_current_version",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_settings_migration::test_legacy_file_is_migrated",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_settings_migration::test_live_path_is_kept",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_settings_migration::test_migration_does_not_repeat",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_settings_migration::test_offline_user_path_is_kept",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_settings_migration::test_override_is_used_verbatim",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_sfrx::test_import_sfrx",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_sfrxexporter.TestSFRxExporter::test_export_sfrx_different_result_statuses",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_sfrxexporter.TestSFRxExporter::test_export_sfrx_exception_handling",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_sfrxexporter.TestSFRxExporter::test_export_sfrx_no_race_data",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_sfrxexporter.TestSFRxExporter::test_export_sfrx_success",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_sfrxexporter.TestSFRxExporter::test_export_sfrx_with_relay",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_split_calculation::test_course_without_controls_assigns_sequential_indexes",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_split_calculation::test_equal_leg_times_competition_ranking",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_split_calculation::test_extra_incorrect_punch_is_skipped",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_split_calculation::test_final_ordering_individual_by_result",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_split_calculation::test_final_ordering_relay_by_place",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_split_calculation::test_missing_punch_gets_no_place",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_split_calculation::test_person_splits_leg_and_relative_times",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_split_calculation::test_set_places_ranking_ties_and_leader",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_srb_generation::test_srb_generation",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_teamwork::test_generate_teamwork_key",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_teamwork::test_load_teamwork_key_from_file",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_templates::test_generate_report",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_theme::test_apply_theme_dark_applies_dark_window_color",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_theme::test_apply_theme_handles_none_app",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_theme::test_apply_theme_invalid_value_falls_back_to_system",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_theme::test_apply_theme_light_uses_fusion_and_default_palette",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_theme::test_apply_theme_system_resolves_through_detector",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_theme::test_build_dark_palette_window_color",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_theme::test_build_light_palette_returns_default_qpalette",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_theme::test_build_light_palette_window_color",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_theme::test_detect_system_theme_returns_known_value",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_theme::test_detect_system_theme_swallows_exceptions",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_theme::test_detect_system_theme_uses_qt_colorscheme_when_available",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_theme::test_detect_system_theme_windows_registry_light",
+   "outcome": "skipped"
+  },
+  {
+   "id": "tests.test_theme::test_theme_constants_exposed",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_theme_settings::test_settings_default_theme_is_system",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_theme_settings::test_settings_load_without_theme_key_falls_back_to_default",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_theme_settings::test_settings_round_trip_preserves_theme",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_wdb::test_WDBChip_parsing",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_wdb::test_WDBDistance_parsing",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_wdb::test_WDBFinish_parsing",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_wdb::test_WDBGroup_parsing",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_wdb::test_WDBMan_parsing",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_wdb::test_WDBPunch_parsing",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_wdb::test_WDBTeam_parsing",
+   "outcome": "passed"
+  },
+  {
+   "id": "tests.test_wdb::test_WDB_read_file",
+   "outcome": "skipped"
+  },
+  {
+   "id": "tests.test_winorient::test_import_csv",
+   "outcome": "passed"
+  }
+ ]
+}

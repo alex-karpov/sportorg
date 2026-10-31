@@ -1,0 +1,10 @@
+# Run from the repository root. Network on a first run only: pypi.org and files.pythonhosted.org (legacy packages);
+# github.com and its release download hosts (managed CPython builds, kept in .legacy-run/python).
+uv run python -m scripts.legacy_clone --name pysport
+uv run python -m scripts.legacy_clone --name templates
+uv run python -m scripts.legacy_env probe --out docs/evidence/stage-2/legacy-env --python 3.14 --python 3.14.0 --python 3.13 --python 3.8
+uv run python -m scripts.legacy_env sync --python 3.13
+uv run python -m scripts.legacy_env tests --out docs/evidence/stage-2/legacy-env --name legacy-tests-offscreen --qt-platform offscreen
+uv run python -m scripts.legacy_env tests --out docs/evidence/stage-2/legacy-env --name legacy-tests-noplatform --qt-platform none
+uv run python -m scripts.legacy_env status
+uv run python -m scripts.legacy verify

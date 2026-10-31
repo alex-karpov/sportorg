@@ -159,8 +159,8 @@ committer. Canary = the (a) column, also asserted in `test_golden_probe.py` so i
 ### Task 3: Legacy runtime (`scripts/legacy_env.py`)
 
 **Files:** Create `scripts/legacy_env.py`, `tests/scripts/test_legacy_env.py`,
-`docs/adr/0009-stage-2-runtime-and-tools.md` (row T1),
-`docs/evidence/stage-2/legacy-env/{README.md,commands.txt,python-probe.{json,md},legacy-tests-offscreen.{json,md},legacy-tests-noplatform.{json,md}}`.
+`docs/adr/0009-stage-2-runtime-and-tools.md` (rows T1–T2),
+`docs/evidence/stage-2/legacy-env/{README.md,commands.txt,python-probe.{json,md},legacy-tests-offscreen.{json,md},legacy-tests-noplatform.{json,md},unstable-tests.agent.md}`.
 
 **Interfaces:**
 - Produces:
@@ -169,15 +169,20 @@ committer. Canary = the (a) column, also asserted in `test_golden_probe.py` so i
   - `hermetic_env(base: Mapping[str, str], *, home: Path, qt_platform: str | None) -> dict[str, str]`
   - `parse_junit(xml_text: str) -> list[TestOutcome]` with `TestOutcome(test_id: str, outcome: Literal["passed","failed","error","skipped"])`
   - `recalc_test_modules(clone: Path) -> list[str]` — legacy test modules that call `recalculate_results`
+  - `summarize(run: LegacyRun, recalc_modules) -> dict[str, Json]`, `counts_text`, `not_passed`
+  - `clean_clone(clone: Path) -> None` — back to HEAD, untracked and ignored files removed, `.venv*` kept
+  - `clone_problems(pin: Pin, *, base: Path | None) -> list[str]` — HEAD at pin, nothing left behind
+  - `UNSTABLE_TESTS: dict[str, str]` (node id → reason), `pytest_command(python, junit, deselect)`
   - CLI: `probe --out DIR --python V…` (sync each candidate into `.venv-probe-<V>`, run legacy tests,
     remove the probe env), `sync --python V`, `tests --out DIR --name N --qt-platform offscreen|none`,
-    `status` (both clones at their pin, `git status --porcelain` empty).
-- Legacy tests run as `python -m pytest -p no:cacheprovider --junitxml=<tmp>` in the clone with
-  `PYTHONDONTWRITEBYTECODE=1`; only `test_id` and outcome reach evidence.
+    `status` (both copies at their pin, nothing untracked or ignored except `.venv*`), `restore`.
+- Legacy tests run as `python -m pytest -p no:cacheprovider --junitxml=<tmp> --deselect …` in a
+  clean copy; only `test_id` and outcome reach evidence.
 
 - [ ] Step 1: tests for `parse_junit`, `hermetic_env`, crash handling, `recalc_test_modules`; fail; implement; pass.
 - [ ] Step 2: `probe` over 3.14 (dev), 3.14.0, 3.13, 3.8 (release builds, `[код: pysport@b548c35 .github/workflows/release.yml:24]`).
-- [ ] Step 3: choose by data (ADR-0009 T1), `sync`, run `tests` with `offscreen` and without a platform.
+- [ ] Step 3: choose by data (ADR-0009 T1), `sync`, run `tests` with `offscreen` and without a platform;
+  two consecutive runs must be byte-identical (unstable tests: `unstable-tests.agent.md`).
 - [ ] Step 4: commit `feat(legacy-env): reproducible legacy runtime and its test results`.
 
 ---
@@ -187,6 +192,11 @@ committer. Canary = the (a) column, also asserted in `test_golden_probe.py` so i
 **Files:** `scripts/oracle.py` (CLI), `scripts/oracle_driver/` (runs under the legacy interpreter;
 stdlib + `sportorg` only), `scripts/oracle_normalize.py`, `scripts/corpus/synth.py`, tests in
 `tests/scripts/oracle/`, evidence `docs/evidence/stage-2/oracle/`.
+
+**Runtime (ADR-0009 T1):** `.legacy-run/pysport/.venv` on CPython 3.13.17; the oracle also runs on
+3.8.20 (Python of legacy's release builds) in a second environment, and any difference between the two
+outputs is reported, not resolved. Headless with `QT_QPA_PLATFORM=offscreen` and the hermetic
+environment of `scripts/legacy_env.py: hermetic_env` (T2).
 
 **Decisions to make at the start of S2 (record in ADR-0009):**
 - How the driver is type-checked: (a) a basedpyright `executionEnvironments` entry for
