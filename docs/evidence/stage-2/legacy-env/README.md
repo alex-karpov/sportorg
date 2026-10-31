@@ -7,7 +7,7 @@ own lock file; managed Pythons are in `.legacy-run/python`.
 | File | What it shows |
 |---|---|
 | `python-probe.md`, `.json` | candidates 3.14 (resolves to 3.14.9), 3.14.0, 3.13, 3.8: `uv sync --frozen --extra gui` result and legacy test counts per candidate, ids of tests that did not pass |
-| `legacy-tests-offscreen.md`, `.json` | legacy tests in `.venv` (3.13.17), `QT_QPA_PLATFORM=offscreen`, no display: every test id and outcome; recalculation tests separately |
+| `legacy-tests-offscreen.md`, `.json` | legacy tests in `.venv` (3.8.20, first line of the oracle by the maintainer's decision of 2026-10-31), `QT_QPA_PLATFORM=offscreen`, no display: every test id and outcome; recalculation tests separately |
 | `legacy-tests-noplatform.md`, `.json` | the same without `QT_QPA_PLATFORM` |
 | `unstable-tests.agent.md` | agent observation: which legacy tests change outcome between identical runs and why they are deselected; why `test_reader` fails in the sandbox |
 

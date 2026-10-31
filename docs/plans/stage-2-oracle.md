@@ -193,9 +193,10 @@ committer. Canary = the (a) column, also asserted in `test_golden_probe.py` so i
 stdlib + `sportorg` only), `scripts/oracle_normalize.py`, `scripts/corpus/synth.py`, tests in
 `tests/scripts/oracle/`, evidence `docs/evidence/stage-2/oracle/`.
 
-**Runtime (ADR-0009 T1):** `.legacy-run/pysport/.venv` on CPython 3.13.17; the oracle also runs on
-3.8.20 (Python of legacy's release builds) in a second environment, and any difference between the two
-outputs is reported, not resolved. Headless with `QT_QPA_PLATFORM=offscreen` and the hermetic
+**Runtime (ADR-0009 T1, `[мейнтейнер: 2026-10-31]`):** first line `.legacy-run/pysport/.venv` on
+CPython 3.8.20 (release builds are made on 3.8, most of the corpus was produced with them), so the
+driver must run on Python 3.8; second lane on 3.13.17 in its own environment, and any difference
+between the two outputs is reported, not resolved. Headless with `QT_QPA_PLATFORM=offscreen` and the hermetic
 environment of `scripts/legacy_env.py: hermetic_env` (T2).
 
 **Decisions to make at the start of S2 (record in ADR-0009):**
@@ -317,3 +318,12 @@ Findings (not decisions): five tests of legacy `tests/test_teamwork.py` are timi
 (`unstable-tests.agent.md`); legacy tests leave `tests/data/test.json.tmp` behind.
 
 Next: S2 (oracle seam), in a fresh session.
+
+Maintainer's answers of 2026-10-31, applied in the same session:
+- Q2: 3.8.20 is the first line of the oracle, 3.13.17 the second (ADR-0009 T1 changed; `.venv` re-synced
+  on 3.8.20, legacy test evidence rerun: same counts, only the Python line changed).
+- Q3: `~/.cache/sportorg-stage2/` allowed in the sandbox; the cached `gh api` responses moved there
+  unchanged, `facts.json` reproduced without a diff.
+- Q5: hooks reinstalled (`commit-msg` present).
+- Q1: explanation asked for; still open. Q4: instruction given for a run of the legacy tests outside the
+  sandbox (`--name legacy-tests-outside-sandbox`); its result is brought to S2.

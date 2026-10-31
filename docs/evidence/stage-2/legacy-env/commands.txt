@@ -3,7 +3,7 @@
 uv run python -m scripts.legacy_clone --name pysport
 uv run python -m scripts.legacy_clone --name templates
 uv run python -m scripts.legacy_env probe --out docs/evidence/stage-2/legacy-env --python 3.14 --python 3.14.0 --python 3.13 --python 3.8
-uv run python -m scripts.legacy_env sync --python 3.13
+uv run python -m scripts.legacy_env sync --python 3.8
 uv run python -m scripts.legacy_env tests --out docs/evidence/stage-2/legacy-env --name legacy-tests-offscreen --qt-platform offscreen
 uv run python -m scripts.legacy_env tests --out docs/evidence/stage-2/legacy-env --name legacy-tests-noplatform --qt-platform none
 uv run python -m scripts.legacy_env status

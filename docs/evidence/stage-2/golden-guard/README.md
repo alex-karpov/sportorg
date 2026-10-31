@@ -12,8 +12,9 @@ Notes:
 - The (c) columns are a prototype written for the measurement, not product code. They need `ssh-keygen -Y`;
   without it they read `unavailable`. Measured with OpenSSH 10.2p1 (WSL2 Ubuntu). Windows and macOS
   were not measured.
-- Session S1 (2026-10-31): the sandbox did not allow writing to `~/.cache/sportorg-stage2/`, and running
-  outside it was refused, so the raw `gh api` responses of this run are in the session scratchpad. They are
-  not kept after the session. The SHA-256 values in `facts.json` identify them. A rerun with the
-  `commands.txt` path fetches them again, and `facts.json` changes only if the GitHub settings have changed.
+- The raw `gh api` responses of 2026-10-31 are in `~/.cache/sportorg-stage2/github/` with `MANIFEST.json`
+  (fetch time and SHA-256 per response). They were first written to the session scratchpad, because the
+  sandbox did not yet allow that path, and copied there unchanged after the maintainer allowed it the same
+  day. The rerun from that cache reproduces `facts.json` byte for byte. On a machine without the cache the
+  command fetches them again, and `facts.json` then changes if the GitHub settings have changed.
 - CI has not run the new step yet (nothing pushed in S1).

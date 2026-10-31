@@ -1,6 +1,6 @@
 # Legacy tests: legacy-tests-noplatform
 
-Python 3.13.17, `QT_QPA_PLATFORM` = none, no `DISPLAY`/`WAYLAND_DISPLAY`. Translation setup exit 0, pytest exit 1, crashed: False.
+Python 3.8.20, `QT_QPA_PLATFORM` = none, no `DISPLAY`/`WAYLAND_DISPLAY`. Translation setup exit 0, pytest exit 1, crashed: False.
 
 - all tests: error 0, failed 3, passed 282, skipped 10, total 295
 - recalculation tests (`tests/test_relay_results.py`, `tests/test_result_calculation.py`): error 0, failed 0, passed 40, skipped 8, total 48

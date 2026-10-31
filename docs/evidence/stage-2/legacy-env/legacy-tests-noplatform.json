@@ -15,7 +15,7 @@
   "tests/test_teamwork.py::test_teamwork_race_id_mismatch_requires_confirmation"
  ],
  "exit_code": 1,
- "python": "3.13.17",
+ "python": "3.8.20",
  "qt_platform": "none",
  "recalc_counts": {
   "error": 0,
