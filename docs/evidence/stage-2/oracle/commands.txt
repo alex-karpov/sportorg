@@ -7,6 +7,8 @@ uv run python -m scripts.oracle_evidence run --out docs/evidence/stage-2/oracle
 uv run python -m scripts.oracle_evidence typecheck --out docs/evidence/stage-2/oracle
 # The AC #1 command itself, on one input (results on stdout; --out DIR writes the four files)
 uv run python scripts/oracle.py docs/evidence/stage-2/oracle/inputs/individual.json
+# The state the GUI shows after File > Open, before a recheck (finding F6)
+uv run python scripts/oracle.py docs/evidence/stage-2/oracle/inputs/f6_two_races.json --state after-open
 # Tests: normalizer, comparison, driver whitelists, generator, CLI; the integration tests (canary,
 # byte-identical reruns, outcomes) run where the legacy runtime exists and are skipped elsewhere (CI)
 uv run pytest tests/scripts/oracle -q

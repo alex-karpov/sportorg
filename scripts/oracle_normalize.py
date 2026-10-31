@@ -1,4 +1,4 @@
-"""Normalize raw legacy snapshots from the oracle driver into the oracle schema (version 1).
+"""Normalize raw legacy snapshots from the oracle driver into the oracle schema (version 2).
 
 The driver (``scripts/oracle_driver/driver.py``) runs under the legacy interpreter and emits a
 whitelisted subset of legacy ``to_dict`` output per race, with legacy's own enum tables. This
@@ -6,7 +6,11 @@ module turns one snapshot (``stored`` or ``recalculated``) into the normalized d
 identifiers, enum names, integer milliseconds, canonical order. It only copies the keys it knows,
 so a name, birth date or chip number in the raw input never reaches the output.
 
-Schema v1 is described in ``docs/evidence/stage-2/oracle/README.md``.
+The ``stored`` side leaves out every field whose raw key the file does not have, so ``null`` there
+means the file holds ``null`` (legacy writes a zero time behind, penalty or credit so
+[код: pysport@b548c35 sportorg/models/memory.py:612,614,615]); the recalculated side has every
+field. Version 2 added that distinction; the schema is described in
+``docs/evidence/stage-2/oracle/README.md``.
 """
 
 from __future__ import annotations
@@ -21,7 +25,7 @@ if TYPE_CHECKING:
     from collections.abc import Mapping
 
 SCHEMA: Final = "sportorg-ng/oracle-results"
-SCHEMA_VERSION: Final = 1
+SCHEMA_VERSION: Final = 2
 UNPLACED: Final = sys.maxsize
 
 # normalized key → raw key of legacy ``Result.to_dict``
@@ -51,6 +55,12 @@ SPLIT_NUMBERS: Final = (
     ("leg_place", "leg_place"),
     ("relative_place", "relative_place"),
     ("course_index", "course_index"),
+)
+# normalized key → legacy enum table → raw key
+ENUM_FIELDS: Final = (
+    ("system", "SystemType", "system_type"),
+    ("status", "ResultStatus", "status"),
+    ("rank", "Qualification", "assigned_rank"),
 )
 TEAM_NUMBERS: Final = (
     ("place", "place"),
@@ -95,10 +105,21 @@ def _place_key(place: Json | None) -> int:
     return number if number is not None and number > 0 else UNPLACED
 
 
-def _split(raw: Mapping[str, Json]) -> dict[str, Json]:
-    split: dict[str, Json] = {"code": _text(raw.get("code"))}
-    split |= {key: _number(raw.get(src)) for key, src in SPLIT_NUMBERS}
-    split["is_correct"] = _flag(raw.get("is_correct"))
+def _present(raw: Mapping[str, Json], src: str, *, stored: bool) -> bool:
+    return not stored or src in raw
+
+
+def _split(raw: Mapping[str, Json], *, stored: bool) -> dict[str, Json]:
+    split: dict[str, Json] = {}
+    if _present(raw, "code", stored=stored):
+        split["code"] = _text(raw.get("code"))
+    split |= {
+        key: _number(raw.get(src))
+        for key, src in SPLIT_NUMBERS
+        if _present(raw, src, stored=stored)
+    }
+    if _present(raw, "is_correct", stored=stored):
+        split["is_correct"] = _flag(raw.get("is_correct"))
     return split
 
 
@@ -107,6 +128,8 @@ def _result(
     persons: Mapping[str, Mapping[str, Json]],
     groups: Mapping[str, str],
     enums: Mapping[str, Json],
+    *,
+    stored: bool,
 ) -> dict[str, Json]:
     person_id = _text(raw.get("person_id"))
     person = persons.get(person_id) if person_id is not None else None
@@ -121,12 +144,17 @@ def _result(
         "person_id": person_id,
         "group": group,
         "bib": bib,
-        "system": _enum(enums, "SystemType", raw.get("system_type")),
-        "status": _enum(enums, "ResultStatus", raw.get("status")),
-        "rank": _enum(enums, "Qualification", raw.get("assigned_rank")),
     }
-    result |= {key: _number(raw.get(src)) for key, src in RESULT_NUMBERS}
-    result["splits"] = [_split(as_dict(s)) for s in as_list(raw.get("splits"))]
+    for key, table, src in ENUM_FIELDS:
+        if _present(raw, src, stored=stored):
+            result[key] = _enum(enums, table, raw.get(src))
+    result |= {
+        key: _number(raw.get(src))
+        for key, src in RESULT_NUMBERS
+        if _present(raw, src, stored=stored)
+    }
+    splits = as_list(raw.get("splits"))
+    result["splits"] = [_split(as_dict(s), stored=stored) for s in splits]
     return result
 
 
@@ -166,7 +194,7 @@ def _team_key(team: Mapping[str, Json]) -> tuple[bool, str, int, int]:
     )
 
 
-def _race(raw: Mapping[str, Json], enums: Mapping[str, Json]) -> dict[str, Json]:
+def _race(raw: Mapping[str, Json], enums: Mapping[str, Json], *, stored: bool) -> dict[str, Json]:
     groups = {
         gid: _text(g.get("name")) or ""
         for g in map(as_dict, as_list(raw.get("groups")))
@@ -178,7 +206,10 @@ def _race(raw: Mapping[str, Json], enums: Mapping[str, Json]) -> dict[str, Json]
         if (pid := _text(p.get("id"))) is not None
     }
     settings = as_dict(raw.get("settings"))
-    results = [_result(as_dict(r), persons, groups, enums) for r in as_list(raw.get("results"))]
+    results = [
+        _result(as_dict(r), persons, groups, enums, stored=stored)
+        for r in as_list(raw.get("results"))
+    ]
     results.sort(key=_result_key)
     teams = [_team(as_dict(t), groups) for t in as_list(raw.get("relay_teams"))]
     teams.sort(key=_team_key)
@@ -194,9 +225,14 @@ def _race(raw: Mapping[str, Json], enums: Mapping[str, Json]) -> dict[str, Json]
     }
 
 
-def normalize(snapshot: Json, enums: Mapping[str, Json]) -> Json:
-    """Normalized document (schema v1) of one raw snapshot ``{"races": [...]}``."""
-    races = [_race(as_dict(r), enums) for r in as_list(as_dict(snapshot).get("races"))]
+def normalize(snapshot: Json, enums: Mapping[str, Json], *, stored: bool = False) -> Json:
+    """Normalized document of one raw snapshot ``{"races": [...]}``.
+
+    ``stored``: the snapshot is the file's own JSON; fields it does not hold are left out.
+    """
+    races = [
+        _race(as_dict(r), enums, stored=stored) for r in as_list(as_dict(snapshot).get("races"))
+    ]
     return {"schema": SCHEMA, "schema_version": SCHEMA_VERSION, "races": list[Json](races)}
 
 

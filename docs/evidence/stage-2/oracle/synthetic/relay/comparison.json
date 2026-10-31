@@ -54,8 +54,8 @@
     },
     "diff_ms": {
      "different": 0,
-     "not_stored": 0,
-     "same": 6
+     "not_stored": 6,
+     "same": 0
     },
     "diff_scores": {
      "different": 0,

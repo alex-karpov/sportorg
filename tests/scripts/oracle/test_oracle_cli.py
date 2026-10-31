@@ -22,6 +22,7 @@ from scripts._json import Json, as_dict, as_list, parse_json
 from scripts.corpus import synth
 from scripts.legacy import ROOT
 from scripts.legacy_env import clone_path, env_python
+from scripts.oracle_driver.snapshot import DEFAULT_NOW
 from scripts.oracle_normalize import dumps
 
 if TYPE_CHECKING:
@@ -52,8 +53,11 @@ def _fake_file(tmp_path: Path, payload: Json) -> Path:
     return path
 
 
-def _fake_oracle(race_file: Path, *, now: str = "00:00:00") -> oracle_cli.OracleRun:
-    return oracle_cli.oracle(race_file, python_exe=Path(sys.executable), now=now, module=FAKE)
+def _fake_oracle(
+    race_file: Path, *, now: str = DEFAULT_NOW, state: str = "recalculated"
+) -> oracle_cli.OracleRun:
+    settings = oracle_cli.RunSettings(now=now, state=state, module=FAKE)
+    return oracle_cli.oracle(race_file, python_exe=Path(sys.executable), settings=settings)
 
 
 def test_oracle_normalizes_both_snapshots_and_compares_them(tmp_path: Path) -> None:
@@ -66,7 +70,7 @@ def test_oracle_normalizes_both_snapshots_and_compares_them(tmp_path: Path) -> N
     assert as_dict(as_dict(run.comparison)["races"]) is not None
     meta = as_dict(run.run)
     assert meta["python"] == "3.14.x"
-    assert meta["schema_version"] == 1
+    assert meta["schema_version"] == 2
     assert isinstance(meta["input_sha256"], str)
     assert len(meta["input_sha256"]) == 64
 
@@ -75,6 +79,52 @@ def test_oracle_passes_the_clock(tmp_path: Path) -> None:
     run = _fake_oracle(_fake_file(tmp_path, PAYLOAD), now="12:34:56")
 
     assert as_dict(run.run)["now_arg"] == "12:34:56"
+
+
+def test_default_clock_is_the_last_second_of_the_day(tmp_path: Path) -> None:
+    """The default clock is 23:59:59 [мейнтейнер: 2026-11-01].
+
+    ``OTime`` is false at 00:00:00 only, and legacy branches on that; 23:59:59 is true and keeps a
+    time without a finish from wrapping over midnight
+    [код: pysport@b548c35 sportorg/common/otime.py:104-105, sportorg/models/memory.py:544,879].
+    """
+    run = oracle_cli.oracle(
+        _fake_file(tmp_path, PAYLOAD),
+        python_exe=Path(sys.executable),
+        settings=oracle_cli.RunSettings(module=FAKE),
+    )
+
+    assert as_dict(run.run)["now_arg"] == "23:59:59"
+
+
+def test_state_is_passed_to_the_driver_and_recorded(tmp_path: Path) -> None:
+    run = as_dict(_fake_oracle(_fake_file(tmp_path, PAYLOAD), state="after-open").run)
+
+    assert run["state_arg"] == "after-open"
+    assert run["state"] == "after-open"
+
+
+def test_driver_timeout_is_an_oracle_error_without_its_stderr(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    monkeypatch.setattr(oracle_cli, "DRIVER_TIMEOUT", 1)
+
+    with pytest.raises(oracle_cli.OracleError) as info:
+        _fake_oracle(_fake_file(tmp_path, {"sleep": 30}))
+
+    assert "did not finish in 1 s" in str(info.value)
+    assert info.value.__cause__ is None
+    assert info.value.__suppress_context__
+    assert "Ivanov" not in str(info.value)
+
+
+def test_missing_interpreter_is_an_oracle_error(tmp_path: Path) -> None:
+    with pytest.raises(oracle_cli.OracleError, match="cannot start"):
+        oracle_cli.oracle(
+            _fake_file(tmp_path, PAYLOAD),
+            python_exe=tmp_path / "no-python",
+            settings=oracle_cli.RunSettings(module=FAKE),
+        )
 
 
 def test_legacy_error_is_reported_without_its_message(tmp_path: Path) -> None:
@@ -141,6 +191,24 @@ def test_main_prints_results_without_out(
     )
 
 
+def test_main_with_out_writes_the_four_files_and_a_summary(
+    tmp_path: Path, capsys: pytest.CaptureFixture[str], monkeypatch: pytest.MonkeyPatch
+) -> None:
+    monkeypatch.setattr(oracle_cli, "DRIVER_MODULE", FAKE)
+
+    def this_python(_venv: Path) -> Path:
+        return Path(sys.executable)
+
+    monkeypatch.setattr(oracle_cli, "env_python", this_python)
+    out = tmp_path / "out"
+
+    code = oracle_cli.main([str(_fake_file(tmp_path, PAYLOAD)), "--out", str(out)])
+
+    assert code == 0
+    assert sorted(p.name for p in out.iterdir()) == sorted(oracle_cli.OUTPUT_FILES)
+    assert capsys.readouterr().out == f"{out}: 1 results in 1 races, 0 stored values differ\n"
+
+
 def test_entry_point_runs_as_a_file() -> None:
     done = subprocess.run(  # noqa: S603 - fixed argv: this interpreter and a repository script
         [sys.executable, str(ROOT / "scripts" / "oracle.py"), "--help"],
@@ -170,8 +238,11 @@ def synth_dir(tmp_path_factory: pytest.TempPathFactory) -> Path:
     return out
 
 
-def _legacy(race_file: Path, *, now: str = "00:00:00") -> oracle_cli.OracleRun:
-    return oracle_cli.oracle(race_file, python_exe=LEGACY_PYTHON, now=now)
+def _legacy(
+    race_file: Path, *, now: str = DEFAULT_NOW, state: str = "recalculated"
+) -> oracle_cli.OracleRun:
+    settings = oracle_cli.RunSettings(now=now, state=state)
+    return oracle_cli.oracle(race_file, python_exe=LEGACY_PYTHON, settings=settings)
 
 
 def _by_bib(run: oracle_cli.OracleRun) -> dict[int, dict[str, Json]]:
@@ -207,7 +278,7 @@ def test_ac1_command_runs_without_display(synth_dir: Path) -> None:
 
     assert done.returncode == 0, done.stderr
     doc = as_dict(parse_json(done.stdout))
-    assert doc["schema_version"] == 1
+    assert doc["schema_version"] == 2
     assert len(as_list(as_dict(as_list(doc["races"])[0])["results"])) == 11
 
 
@@ -287,8 +358,10 @@ def test_finish_change_moves_place(
 def test_clock_is_an_input(synth_dir: Path, individual: oracle_cli.OracleRun) -> None:
     later = _legacy(synth_dir / "individual.json", now="12:00:00")
 
-    assert as_dict(individual.run)["now_ms"] == 0
+    assert as_dict(individual.run)["now_ms"] == 86_399_000  # the default, 23:59:59
     assert as_dict(later.run)["now_ms"] == 12 * 3_600_000
+    # DNS bib 106 started at 10:05:00: without a finish its time is the clock minus the start
+    assert _by_bib(individual)[106]["time_ms"] == 86_399_000 - 36_300_000
     assert as_dict(individual.run)["clock_dependent_results"] == 1
     # only the DNS result has no finish: only its time follows the clock
     changed = [
@@ -379,14 +452,13 @@ def test_driver_command_uses_absolute_paths_without_resolving_links() -> None:
         Path(".legacy-run/pysport/.venv-3.13/bin/python"),
         Path("in/race.json"),
         Path("raw.json"),
-        now="00:00:00",
-        module=FAKE,
+        oracle_cli.RunSettings(now="00:00:00", module=FAKE),
     )
 
     assert cmd[0] == str(Path.cwd() / ".legacy-run/pysport/.venv-3.13/bin/python")
     assert cmd[1:3] == ["-m", FAKE]
     assert cmd[3] == str(Path.cwd() / "in/race.json")
-    assert cmd[4:] == ["raw.json", "--now", "00:00:00"]
+    assert cmd[4:] == ["raw.json", "--now", "00:00:00", "--state", "recalculated"]
 
 
 def test_main_writes_utf8_with_lf_whatever_the_console(
@@ -487,23 +559,74 @@ def test_gzip_file_gives_the_same_results(synth_dir: Path, tmp_path: Path) -> No
     assert as_dict(zipped.run)["file_format"] == "gzip"
 
 
-@requires_legacy
-def test_a_file_that_is_not_utf8_is_refused_by_name(synth_dir: Path, tmp_path: Path) -> None:
-    """Legacy retries in the machine's locale (cp1251 on Russian Windows); the oracle won't guess.
+def _cyrillic(source: Path) -> str:
+    """The file's text with a Cyrillic group name: not ASCII, so the encoding matters."""
+    return source.read_text(encoding="utf-8").replace("M21", "\u041c21")
 
-    [код: pysport@b548c35 sportorg/modules/backup/file.py:45-51]
+
+@requires_legacy
+def test_a_cp1251_file_is_read_as_on_russian_windows(synth_dir: Path, tmp_path: Path) -> None:
+    """A cp1251 file is read as legacy reads it on Russian Windows.
+
+    Q3 (b) [мейнтейнер: 2026-11-01]. Legacy retries in the locale; SportOrg 1.7.0-1.7.1 save so
+    [код: pysport@b548c35 sportorg/modules/backup/file.py:45-51] [история: pysport f26c80f].
     """
-    cyrillic = "\u041c21"  # M21 with a Cyrillic EM: not ASCII, so the encoding matters
-    text = (synth_dir / "individual.json").read_text(encoding="utf-8").replace("M21", cyrillic)
-    race_file = tmp_path / "cp1251.json"
-    race_file.write_bytes(text.encode("cp1251"))
+    utf8, cp1251 = tmp_path / "utf8.json", tmp_path / "cp1251.json"
+    text = _cyrillic(synth_dir / "individual.json")
+    utf8.write_bytes(text.encode("utf-8"))
+    cp1251.write_bytes(text.encode("cp1251"))
+
+    plain, legacy_encoded = _legacy(utf8), _legacy(cp1251)
+
+    assert dumps(legacy_encoded.results) == dumps(plain.results)
+    assert dumps(legacy_encoded.stored) == dumps(plain.stored)
+    assert as_dict(plain.run)["file_format"] == "utf-8"
+    assert as_dict(legacy_encoded.run)["file_format"] == "cp1251"
+
+
+@requires_legacy
+def test_a_file_neither_utf8_nor_cp1251_is_refused_by_name(synth_dir: Path, tmp_path: Path) -> None:
+    """Byte 0x98 is undefined in cp1251 and invalid alone in UTF-8."""
+    race_file = tmp_path / "unknown.json"
+    text = _cyrillic(synth_dir / "individual.json").encode("cp1251")
+    changed = text.replace(b'"Runner 101"', b'"Runner \x98"')
+    assert changed != text
+    race_file.write_bytes(changed)
 
     with pytest.raises(oracle_cli.OracleError) as info:
         _legacy(race_file)
 
     message = str(info.value)
-    assert "NotUtf8RaceFile" in message
+    assert "UndecodableRaceFile" in message
     assert "driver or legacy raised" in message
+
+
+SINGLE_RACE_INPUTS = ("individual", "relay", "rogaine", "f3_rogaine_tie", "f4_slow_leader")
+
+
+@requires_legacy
+@pytest.mark.parametrize("name", SINGLE_RACE_INPUTS)
+def test_after_open_equals_the_recalculation_for_one_race(synth_dir: Path, name: str) -> None:
+    """For a file with one race the oracle's second pass changes nothing (ADR-0009 T5)."""
+    race_file = synth_dir / f"{name}.json"
+
+    opened = _legacy(race_file, state="after-open")
+
+    assert dumps(opened.results) == dumps(_legacy(race_file).results)
+    assert as_dict(opened.run)["state"] == "after-open"
+
+
+@requires_legacy
+def test_f6_after_open_the_second_race_is_ranked_by_time_without_points(synth_dir: Path) -> None:
+    """Finding F6: what the GUI shows for race 2 after open and a switch, before a recheck."""
+    opened = _legacy(synth_dir / "f6_two_races.json", state="after-open")
+    races = as_list(as_dict(opened.results)["races"])
+    rogaine = {
+        r["bib"]: (r["place"], r["rogaine_score"])
+        for r in map(as_dict, as_list(as_dict(races[1])["results"]))
+    }
+
+    assert rogaine == {1: (3, 0), 2: (2, 0), 3: (1, 0)}
 
 
 @requires_legacy
@@ -511,7 +634,7 @@ def test_each_race_of_a_multi_race_file_in_its_own_context(synth_dir: Path, tmp_
     """A rogaine as the second, non-current race is scored as when it is alone in a file.
 
     Legacy's load recalculates every race against the current one (``_check_all`` reads
-    ``race()``) [код: pysport@b548c35 sportorg/models/result/result_tools.py:105]; the oracle then
+    ``race()``) [код: pysport@b548c35 sportorg/models/result/result_tools.py:106]; the oracle then
     recalculates each race as the current one (ADR-0009 T5).
     """
     first = as_dict(parse_json((synth_dir / "individual.json").read_text(encoding="utf-8")))

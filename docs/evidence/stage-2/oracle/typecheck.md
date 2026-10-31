@@ -4,8 +4,8 @@
 
 | set-up | files | errors | warnings | rules |
 |---|---|---|---|---|
-| (a) legacy sources and packages: the legacy 3.8 interpreter | 4 | 26 | 0 | reportMissingTypeStubs 6, reportUnknownArgumentType 5, reportUnknownMemberType 11, reportUnknownVariableType 4 |
-| (a') as (a) where no legacy exists (CI): the project interpreter | 4 | 89 | 0 | reportAny 1, reportMissingImports 7, reportUnknownArgumentType 13, reportUnknownMemberType 40, reportUnknownParameterType 3, reportUnknownVariableType 25 |
+| (a) legacy sources and packages: the legacy 3.8 interpreter | 4 | 32 | 0 | reportMissingTypeStubs 7, reportUnknownArgumentType 5, reportUnknownMemberType 15, reportUnknownVariableType 5 |
+| (a') as (a) where no legacy exists (CI): the project interpreter | 4 | 99 | 0 | reportAny 1, reportMissingImports 8, reportUnknownArgumentType 13, reportUnknownMemberType 46, reportUnknownParameterType 3, reportUnknownVariableType 28 |
 | (c) hand-written stubs, the project interpreter | 4 | 0 | 0 | none |
 
 Python 3.9+ constructs in a 3.8 probe module, set-up (c):

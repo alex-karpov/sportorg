@@ -10,536 +10,270 @@
     {
      "bib": 104,
      "credit_ms": null,
-     "diff_ms": null,
-     "diff_scores": null,
-     "finish_ms": null,
      "group": "M21",
-     "order": null,
      "penalty_laps": 0,
      "penalty_ms": null,
      "person_id": "001b881c-4a33-5560-90b0-d2f3aa38d2a0",
      "place": 0,
      "rank": "NOT_QUALIFIED",
      "result_id": "fe63d283-a05c-5bf1-875f-ac704dcfc794",
-     "rogaine_penalty": null,
-     "rogaine_score": null,
      "scores": 0,
-     "scores_ardf": null,
      "splits": [
       {
        "code": "31",
-       "course_index": null,
-       "is_correct": null,
-       "leg_ms": null,
-       "leg_place": null,
-       "relative_ms": null,
-       "relative_place": null,
        "time_ms": 36480000
       },
       {
        "code": "33",
-       "course_index": null,
-       "is_correct": null,
-       "leg_ms": null,
-       "leg_place": null,
-       "relative_ms": null,
-       "relative_place": null,
        "time_ms": 37680000
       }
      ],
-     "start_ms": null,
-     "status": "OK",
-     "system": null,
-     "time_ms": null
+     "status": "OK"
     },
     {
      "bib": 102,
      "credit_ms": null,
-     "diff_ms": null,
-     "diff_scores": null,
-     "finish_ms": null,
      "group": "M21",
-     "order": null,
      "penalty_laps": 0,
      "penalty_ms": null,
      "person_id": "48ee9c8c-26b0-5810-8dc0-3e7d36e66e51",
      "place": 0,
      "rank": "NOT_QUALIFIED",
      "result_id": "f58aa09d-1e65-5bdb-9718-138bbd9df666",
-     "rogaine_penalty": null,
-     "rogaine_score": null,
      "scores": 0,
-     "scores_ardf": null,
      "splits": [
       {
        "code": "31",
-       "course_index": null,
-       "is_correct": null,
-       "leg_ms": null,
-       "leg_place": null,
-       "relative_ms": null,
-       "relative_place": null,
        "time_ms": 36360000
       },
       {
        "code": "32",
-       "course_index": null,
-       "is_correct": null,
-       "leg_ms": null,
-       "leg_place": null,
-       "relative_ms": null,
-       "relative_place": null,
        "time_ms": 36960000
       },
       {
        "code": "33",
-       "course_index": null,
-       "is_correct": null,
-       "leg_ms": null,
-       "leg_place": null,
-       "relative_ms": null,
-       "relative_place": null,
        "time_ms": 37560000
       }
      ],
-     "start_ms": null,
-     "status": "OK",
-     "system": null,
-     "time_ms": null
+     "status": "OK"
     },
     {
      "bib": 101,
      "credit_ms": null,
-     "diff_ms": null,
-     "diff_scores": null,
-     "finish_ms": null,
      "group": "M21",
-     "order": null,
      "penalty_laps": 0,
      "penalty_ms": null,
      "person_id": "6230b5f2-7c8a-5517-9859-37d2413e64d5",
      "place": 0,
      "rank": "NOT_QUALIFIED",
      "result_id": "a2e52454-02f3-599a-8162-026f03f53aaf",
-     "rogaine_penalty": null,
-     "rogaine_score": null,
      "scores": 0,
-     "scores_ardf": null,
      "splits": [
       {
        "code": "31",
-       "course_index": null,
-       "is_correct": null,
-       "leg_ms": null,
-       "leg_place": null,
-       "relative_ms": null,
-       "relative_place": null,
        "time_ms": 36300000
       },
       {
        "code": "32",
-       "course_index": null,
-       "is_correct": null,
-       "leg_ms": null,
-       "leg_place": null,
-       "relative_ms": null,
-       "relative_place": null,
        "time_ms": 36900000
       },
       {
        "code": "33",
-       "course_index": null,
-       "is_correct": null,
-       "leg_ms": null,
-       "leg_place": null,
-       "relative_ms": null,
-       "relative_place": null,
        "time_ms": 37500000
       }
      ],
-     "start_ms": null,
-     "status": "OK",
-     "system": null,
-     "time_ms": null
+     "status": "OK"
     },
     {
      "bib": 105,
      "credit_ms": null,
-     "diff_ms": null,
-     "diff_scores": null,
-     "finish_ms": null,
      "group": "M21",
-     "order": null,
      "penalty_laps": 0,
      "penalty_ms": null,
      "person_id": "b38b605e-b90c-5b0d-a882-576ab50731a2",
      "place": 0,
      "rank": "NOT_QUALIFIED",
      "result_id": "1768c2ee-3ddd-5a9e-b4c9-16bb185cd732",
-     "rogaine_penalty": null,
-     "rogaine_score": null,
      "scores": 0,
-     "scores_ardf": null,
      "splits": [
       {
        "code": "31",
-       "course_index": null,
-       "is_correct": null,
-       "leg_ms": null,
-       "leg_place": null,
-       "relative_ms": null,
-       "relative_place": null,
        "time_ms": 36540000
       },
       {
        "code": "32",
-       "course_index": null,
-       "is_correct": null,
-       "leg_ms": null,
-       "leg_place": null,
-       "relative_ms": null,
-       "relative_place": null,
        "time_ms": 37140000
       },
       {
        "code": "33",
-       "course_index": null,
-       "is_correct": null,
-       "leg_ms": null,
-       "leg_place": null,
-       "relative_ms": null,
-       "relative_place": null,
        "time_ms": 37740000
       }
      ],
-     "start_ms": null,
-     "status": "OK",
-     "system": null,
-     "time_ms": null
+     "status": "OK"
     },
     {
      "bib": 107,
      "credit_ms": null,
-     "diff_ms": null,
-     "diff_scores": null,
-     "finish_ms": null,
      "group": "M21",
-     "order": null,
      "penalty_laps": 0,
      "penalty_ms": null,
      "person_id": "c0ff5b7a-9a49-5fd1-b185-e9fdb249783b",
      "place": 0,
      "rank": "NOT_QUALIFIED",
      "result_id": "a98a7792-4253-50f9-9a72-bc2e3711d81c",
-     "rogaine_penalty": null,
-     "rogaine_score": null,
      "scores": 0,
-     "scores_ardf": null,
      "splits": [
       {
        "code": "31",
-       "course_index": null,
-       "is_correct": null,
-       "leg_ms": null,
-       "leg_place": null,
-       "relative_ms": null,
-       "relative_place": null,
        "time_ms": 36660000
       },
       {
        "code": "99",
-       "course_index": null,
-       "is_correct": null,
-       "leg_ms": null,
-       "leg_place": null,
-       "relative_ms": null,
-       "relative_place": null,
        "time_ms": 36960000
       },
       {
        "code": "32",
-       "course_index": null,
-       "is_correct": null,
-       "leg_ms": null,
-       "leg_place": null,
-       "relative_ms": null,
-       "relative_place": null,
        "time_ms": 37260000
       },
       {
        "code": "33",
-       "course_index": null,
-       "is_correct": null,
-       "leg_ms": null,
-       "leg_place": null,
-       "relative_ms": null,
-       "relative_place": null,
        "time_ms": 37860000
       }
      ],
-     "start_ms": null,
-     "status": "OK",
-     "system": null,
-     "time_ms": null
+     "status": "OK"
     },
     {
      "bib": 106,
      "credit_ms": null,
-     "diff_ms": null,
-     "diff_scores": null,
-     "finish_ms": null,
      "group": "M21",
-     "order": null,
      "penalty_laps": 0,
      "penalty_ms": null,
      "person_id": "fa997b1d-d80a-57b1-84b2-ea87694abe23",
      "place": 0,
      "rank": "NOT_QUALIFIED",
      "result_id": "7bcb2415-1a8d-5056-8829-1030fe0982ac",
-     "rogaine_penalty": null,
-     "rogaine_score": null,
      "scores": 0,
-     "scores_ardf": null,
      "splits": [],
-     "start_ms": null,
-     "status": "DID_NOT_START",
-     "system": null,
-     "time_ms": null
+     "status": "DID_NOT_START"
     },
     {
      "bib": 103,
      "credit_ms": null,
-     "diff_ms": null,
-     "diff_scores": null,
-     "finish_ms": null,
      "group": "M21",
-     "order": null,
      "penalty_laps": 0,
      "penalty_ms": null,
      "person_id": "fc6e9c28-b89f-59b6-8ab5-99319ddc4618",
      "place": 0,
      "rank": "NOT_QUALIFIED",
      "result_id": "864634f7-3322-5c96-ac9d-3179bbdc96cd",
-     "rogaine_penalty": null,
-     "rogaine_score": null,
      "scores": 0,
-     "scores_ardf": null,
      "splits": [
       {
        "code": "31",
-       "course_index": null,
-       "is_correct": null,
-       "leg_ms": null,
-       "leg_place": null,
-       "relative_ms": null,
-       "relative_place": null,
        "time_ms": 36420000
       },
       {
        "code": "32",
-       "course_index": null,
-       "is_correct": null,
-       "leg_ms": null,
-       "leg_place": null,
-       "relative_ms": null,
-       "relative_place": null,
        "time_ms": 37020000
       },
       {
        "code": "33",
-       "course_index": null,
-       "is_correct": null,
-       "leg_ms": null,
-       "leg_place": null,
-       "relative_ms": null,
-       "relative_place": null,
        "time_ms": 37620000
       }
      ],
-     "start_ms": null,
-     "status": "OK",
-     "system": null,
-     "time_ms": null
+     "status": "OK"
     },
     {
      "bib": 301,
      "credit_ms": null,
-     "diff_ms": null,
-     "diff_scores": null,
-     "finish_ms": null,
      "group": "M60",
-     "order": null,
      "penalty_laps": 0,
      "penalty_ms": null,
      "person_id": "393912d9-df7d-59ff-8af1-38110f972328",
      "place": 0,
      "rank": "NOT_QUALIFIED",
      "result_id": "24583fdb-8da5-5dc6-a77a-07936f9275df",
-     "rogaine_penalty": null,
-     "rogaine_score": null,
      "scores": 0,
-     "scores_ardf": null,
      "splits": [
       {
        "code": "41",
-       "course_index": null,
-       "is_correct": null,
-       "leg_ms": null,
-       "leg_place": null,
-       "relative_ms": null,
-       "relative_place": null,
        "time_ms": 37200000
       },
       {
        "code": "42",
-       "course_index": null,
-       "is_correct": null,
-       "leg_ms": null,
-       "leg_place": null,
-       "relative_ms": null,
-       "relative_place": null,
        "time_ms": 37800000
       }
      ],
-     "start_ms": null,
-     "status": "OK",
-     "system": null,
-     "time_ms": null
+     "status": "OK"
     },
     {
      "bib": 302,
      "credit_ms": null,
-     "diff_ms": null,
-     "diff_scores": null,
-     "finish_ms": null,
      "group": "M60",
-     "order": null,
      "penalty_laps": 0,
      "penalty_ms": null,
      "person_id": "53333c3b-2a11-5bbe-8b9c-29356b82809d",
      "place": 0,
      "rank": "NOT_QUALIFIED",
      "result_id": "38a3b911-d30c-5fe7-84d5-29036c55a3a5",
-     "rogaine_penalty": null,
-     "rogaine_score": null,
      "scores": 0,
-     "scores_ardf": null,
      "splits": [
       {
        "code": "41",
-       "course_index": null,
-       "is_correct": null,
-       "leg_ms": null,
-       "leg_place": null,
-       "relative_ms": null,
-       "relative_place": null,
        "time_ms": 37260000
       },
       {
        "code": "42",
-       "course_index": null,
-       "is_correct": null,
-       "leg_ms": null,
-       "leg_place": null,
-       "relative_ms": null,
-       "relative_place": null,
        "time_ms": 37860000
       }
      ],
-     "start_ms": null,
-     "status": "OK",
-     "system": null,
-     "time_ms": null
+     "status": "OK"
     },
     {
      "bib": 202,
      "credit_ms": null,
-     "diff_ms": null,
-     "diff_scores": null,
-     "finish_ms": null,
      "group": "W21",
-     "order": null,
      "penalty_laps": 0,
      "penalty_ms": null,
      "person_id": "07cb281f-ace3-5099-b15f-f11d541a2fee",
      "place": 0,
      "rank": "NOT_QUALIFIED",
      "result_id": "5021485a-580b-55fb-a09b-22c4c8db57b2",
-     "rogaine_penalty": null,
-     "rogaine_score": null,
      "scores": 0,
-     "scores_ardf": null,
      "splits": [
       {
        "code": "41",
-       "course_index": null,
-       "is_correct": null,
-       "leg_ms": null,
-       "leg_place": null,
-       "relative_ms": null,
-       "relative_place": null,
        "time_ms": 36600000
       },
       {
        "code": "42",
-       "course_index": null,
-       "is_correct": null,
-       "leg_ms": null,
-       "leg_place": null,
-       "relative_ms": null,
-       "relative_place": null,
        "time_ms": 37200000
       }
      ],
-     "start_ms": null,
-     "status": "OK",
-     "system": null,
-     "time_ms": null
+     "status": "OK"
     },
     {
      "bib": 201,
      "credit_ms": null,
-     "diff_ms": null,
-     "diff_scores": null,
-     "finish_ms": null,
      "group": "W21",
-     "order": null,
      "penalty_laps": 0,
      "penalty_ms": null,
      "person_id": "3ebe80b5-6c3b-5a18-a17a-f8ceb5af40ee",
      "place": 0,
      "rank": "NOT_QUALIFIED",
      "result_id": "5a48e6dd-7552-54d7-80e4-1306f47881b4",
-     "rogaine_penalty": null,
-     "rogaine_score": null,
      "scores": 0,
-     "scores_ardf": null,
      "splits": [
       {
        "code": "41",
-       "course_index": null,
-       "is_correct": null,
-       "leg_ms": null,
-       "leg_place": null,
-       "relative_ms": null,
-       "relative_place": null,
        "time_ms": 36600000
       },
       {
        "code": "42",
-       "course_index": null,
-       "is_correct": null,
-       "leg_ms": null,
-       "leg_place": null,
-       "relative_ms": null,
-       "relative_place": null,
        "time_ms": 37200000
       }
      ],
-     "start_ms": null,
-     "status": "OK",
-     "system": null,
-     "time_ms": null
+     "status": "OK"
     }
    ],
    "time_accuracy": 0,
@@ -555,127 +289,67 @@
     {
      "bib": 2,
      "credit_ms": null,
-     "diff_ms": null,
-     "diff_scores": null,
-     "finish_ms": null,
      "group": "Open",
-     "order": null,
      "penalty_laps": 0,
      "penalty_ms": null,
      "person_id": "90d355ee-27c9-5889-b2d7-7416e8d4b50e",
      "place": 0,
      "rank": "NOT_QUALIFIED",
      "result_id": "30a3fd7c-6e91-5409-97c6-673ae60023f6",
-     "rogaine_penalty": null,
-     "rogaine_score": null,
      "scores": 0,
-     "scores_ardf": null,
      "splits": [
       {
        "code": "31",
-       "course_index": null,
-       "is_correct": null,
-       "leg_ms": null,
-       "leg_place": null,
-       "relative_ms": null,
-       "relative_place": null,
        "time_ms": 36300000
       },
       {
        "code": "41",
-       "course_index": null,
-       "is_correct": null,
-       "leg_ms": null,
-       "leg_place": null,
-       "relative_ms": null,
-       "relative_place": null,
        "time_ms": 36600000
       }
      ],
-     "start_ms": null,
-     "status": "OK",
-     "system": null,
-     "time_ms": null
+     "status": "OK"
     },
     {
      "bib": 3,
      "credit_ms": null,
-     "diff_ms": null,
-     "diff_scores": null,
-     "finish_ms": null,
      "group": "Open",
-     "order": null,
      "penalty_laps": 0,
      "penalty_ms": null,
      "person_id": "b12a49b3-0abf-54ad-a7de-209aea94b534",
      "place": 0,
      "rank": "NOT_QUALIFIED",
      "result_id": "fa6e4ffe-ec62-5f49-b082-6a495802a1e4",
-     "rogaine_penalty": null,
-     "rogaine_score": null,
      "scores": 0,
-     "scores_ardf": null,
      "splits": [
       {
        "code": "52",
-       "course_index": null,
-       "is_correct": null,
-       "leg_ms": null,
-       "leg_place": null,
-       "relative_ms": null,
-       "relative_place": null,
        "time_ms": 36300000
       }
      ],
-     "start_ms": null,
-     "status": "OK",
-     "system": null,
-     "time_ms": null
+     "status": "OK"
     },
     {
      "bib": 1,
      "credit_ms": null,
-     "diff_ms": null,
-     "diff_scores": null,
-     "finish_ms": null,
      "group": "Open",
-     "order": null,
      "penalty_laps": 0,
      "penalty_ms": null,
      "person_id": "b74cc579-77b9-53ec-aaf7-ef81353cbf66",
      "place": 0,
      "rank": "NOT_QUALIFIED",
      "result_id": "e28ffb8f-15db-55bf-8d61-ab8d7fe2b45c",
-     "rogaine_penalty": null,
-     "rogaine_score": null,
      "scores": 0,
-     "scores_ardf": null,
      "splits": [
       {
        "code": "41",
-       "course_index": null,
-       "is_correct": null,
-       "leg_ms": null,
-       "leg_place": null,
-       "relative_ms": null,
-       "relative_place": null,
        "time_ms": 36300000
       },
       {
        "code": "61",
-       "course_index": null,
-       "is_correct": null,
-       "leg_ms": null,
-       "leg_place": null,
-       "relative_ms": null,
-       "relative_place": null,
        "time_ms": 36600000
       }
      ],
-     "start_ms": null,
-     "status": "OK",
-     "system": null,
-     "time_ms": null
+     "status": "OK"
     }
    ],
    "time_accuracy": 0,
@@ -683,5 +357,5 @@
   }
  ],
  "schema": "sportorg-ng/oracle-results",
- "schema_version": 1
+ "schema_version": 2
 }

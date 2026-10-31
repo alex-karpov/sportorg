@@ -24,7 +24,13 @@ if TYPE_CHECKING:
 
     from typing_extensions import TypeGuard  # typing.TypeGuard is 3.10+; never imported at run time
 
-PROTOCOL = 1
+PROTOCOL = 2
+# The clock of a run: the last second of the day is never the falsy zero OTime and does not wrap
+# a time without a finish over midnight [мейнтейнер: 2026-11-01] (ADR-0009 T5).
+DEFAULT_NOW = "23:59:59"
+# What the oracle reproduces: every race recalculated in its own context, or what the GUI shows
+# after File > Open and a switch to each race (ADR-0009 T5, finding F6).
+STATES = ("recalculated", "after-open")
 EXIT_OK = 0
 EXIT_USAGE = 2
 EXIT_LEGACY_ERROR = 3

@@ -4,7 +4,7 @@ The file holds personal data (`[мейнтейнер: 2026-10-31]`, stage prompt
 
 | field | same | different | not stored |
 |---|---|---|---|
-| credit_ms | 2 | 0 | 0 |
+| credit_ms | 0 | 0 | 2 |
 | diff_ms | 1 | 1 | 0 |
 | diff_scores | 0 | 0 | 2 |
 | finish_ms | 0 | 0 | 2 |

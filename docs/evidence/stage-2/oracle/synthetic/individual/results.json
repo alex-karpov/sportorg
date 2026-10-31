@@ -342,7 +342,7 @@
      "credit_ms": null,
      "diff_ms": null,
      "diff_scores": 0,
-     "finish_ms": 0,
+     "finish_ms": 86399000,
      "group": "M21",
      "order": 0,
      "penalty_laps": 0,
@@ -359,7 +359,7 @@
      "start_ms": 36300000,
      "status": "DID_NOT_START",
      "system": "SPORTIDENT",
-     "time_ms": 50100000
+     "time_ms": 50099000
     },
     {
      "bib": 302,
@@ -547,5 +547,5 @@
   }
  ],
  "schema": "sportorg-ng/oracle-results",
- "schema_version": 1
+ "schema_version": 2
 }

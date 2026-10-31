@@ -76,7 +76,7 @@ def test_document_header_and_race_fields() -> None:
     doc = norm.normalize({"races": [_race([], [])]}, ENUMS)
 
     assert as_dict(doc)["schema"] == norm.SCHEMA
-    assert as_dict(doc)["schema_version"] == 1
+    assert as_dict(doc)["schema_version"] == 2
     race = _only_race(doc)
     assert race["race_id"] == "00000000-0000-4000-8000-000000000001"
     assert race["race_index"] == 0
@@ -306,3 +306,28 @@ def test_dumps_is_canonical_json_with_final_newline() -> None:
     text = norm.dumps({"b": 1, "a": [1, 2], "c": "ё"})
 
     assert text == '{\n "a": [\n  1,\n  2\n ],\n "b": 1,\n "c": "ё"\n}\n'
+
+
+def test_stored_snapshot_leaves_out_what_the_file_does_not_hold() -> None:
+    """``stored=True``: an absent raw key is left out; a null the file holds stays null."""
+    raw = _result("r1", "p1", penalty_time=None, splits=[{"code": "31", "time": 1000}])
+    del raw["result_msec"]
+    doc = norm.normalize({"races": [_race([raw], [_person("p1", 1, "g1")])]}, ENUMS, stored=True)
+
+    (result,) = _results(doc)
+    assert result["penalty_ms"] is None
+    assert result["status"] == "OK"
+    assert result["place"] == 0
+    for absent in ("time_ms", "diff_ms", "credit_ms", "rank"):
+        assert absent not in result
+    (split,) = as_list(result["splits"])
+    assert as_dict(split) == {"code": "31", "time_ms": 1000}
+
+
+def test_recalculated_snapshot_keeps_every_field() -> None:
+    raw = _result("r1", "p1")
+    doc = norm.normalize({"races": [_race([raw], [_person("p1", 1, "g1")])]}, ENUMS)
+
+    (result,) = _results(doc)
+    assert result["diff_ms"] is None
+    assert result["rank"] is None

@@ -1,14 +1,15 @@
 {
  "clock_dependent_results": 1,
  "current_race": 0,
- "driver_protocol": 1,
- "file_format": "text",
+ "driver_protocol": 2,
+ "file_format": "utf-8",
  "file_version": "v1.8.0b2",
  "input_sha256": "0279542b20fde6b4c4ba3d2daa2763a3e7cea87ed6325da1bbf54842802d1271",
  "legacy_pin": "b548c35ba18fe85e2526f96bbd3b4cf94f58b6f6",
  "legacy_version": "v1.8.0b2",
- "now_ms": 0,
+ "now_ms": 86399000,
  "otime": "PythonOTime",
  "python": "3.8.20",
- "schema_version": 1
+ "schema_version": 2,
+ "state": "recalculated"
 }

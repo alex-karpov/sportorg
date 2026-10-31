@@ -17,27 +17,27 @@
  "variants": {
   "a_legacy_sources": {
    "by_rule": {
-    "reportMissingTypeStubs": 6,
+    "reportMissingTypeStubs": 7,
     "reportUnknownArgumentType": 5,
-    "reportUnknownMemberType": 11,
-    "reportUnknownVariableType": 4
+    "reportUnknownMemberType": 15,
+    "reportUnknownVariableType": 5
    },
    "description": "(a) legacy sources and packages: the legacy 3.8 interpreter",
-   "errors": 26,
+   "errors": 32,
    "files": 4,
    "warnings": 0
   },
   "a_without_legacy": {
    "by_rule": {
     "reportAny": 1,
-    "reportMissingImports": 7,
+    "reportMissingImports": 8,
     "reportUnknownArgumentType": 13,
-    "reportUnknownMemberType": 40,
+    "reportUnknownMemberType": 46,
     "reportUnknownParameterType": 3,
-    "reportUnknownVariableType": 25
+    "reportUnknownVariableType": 28
    },
    "description": "(a') as (a) where no legacy exists (CI): the project interpreter",
-   "errors": 89,
+   "errors": 99,
    "files": 4,
    "warnings": 0
   },

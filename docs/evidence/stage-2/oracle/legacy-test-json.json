@@ -6,8 +6,8 @@
     "fields": {
      "credit_ms": {
       "different": 0,
-      "not_stored": 0,
-      "same": 2
+      "not_stored": 2,
+      "same": 0
      },
      "diff_ms": {
       "different": 1,
@@ -130,7 +130,6 @@
       "same": 0
      }
     },
-    "race_id": "97d1f039-7522-4286-9749-58f35465d503",
     "race_index": 0,
     "results": {
      "only_recalculated": 0,
@@ -144,10 +143,10 @@
  "input": "pysport@b548c35 tests/data/test.json",
  "input_sha256": "c0c323126ebd1470bb845c6c15c61c5517c4cec7caa0c3c57dd295cd4d03cacc",
  "outputs_sha256": {
-  "comparison.json": "259133a8d38ea9e219b8b99a37cd0466688bed01603d03add9606bc0a30531d8",
-  "results.json": "e4e35678984db5d1d84056b6d57c4e747a0174c017c7c1f9bf9a595585c41e4f",
-  "run.json": "201f67ab600d92c7fe888947513e31dbd906632186c5ea6d5642b4fbb8cc9178",
-  "stored.json": "070f2fd75485b51c1ae6f0a43a96051eefe4ffafbf6614d5e6e83034d4d50de3"
+  "comparison.json": "ddd974b3f7bf304036d2f63643f86f418e474678c336bcd246c8cb864172c52b",
+  "results.json": "2063efb6721baa57b12f9a78957930c1636d90e858771758025220d223e035e7",
+  "run.json": "27ee2cdfa7f683f87753ee44952e45c3a74eb8f3cd36bdb3e51c68242f4e71a5",
+  "stored.json": "ff4966b0be95e7b7123fe540bde9d1affde50d3ebf59fb2e4f865559f43ec30e"
  },
  "races": 1,
  "rerun_identical": true,
@@ -155,16 +154,17 @@
  "run": {
   "clock_dependent_results": 0,
   "current_race": 0,
-  "driver_protocol": 1,
-  "file_format": "text",
+  "driver_protocol": 2,
+  "file_format": "utf-8",
   "file_version": "1.0.0.0",
   "input_sha256": "c0c323126ebd1470bb845c6c15c61c5517c4cec7caa0c3c57dd295cd4d03cacc",
   "legacy_pin": "b548c35ba18fe85e2526f96bbd3b4cf94f58b6f6",
   "legacy_version": "v1.8.0b2",
-  "now_ms": 0,
+  "now_ms": 86399000,
   "otime": "PythonOTime",
   "python": "3.8.20",
-  "schema_version": 1
+  "schema_version": 2,
+  "state": "recalculated"
  },
  "second_lane_identical": true
 }

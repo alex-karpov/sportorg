@@ -12,7 +12,8 @@ Usage::
     uv run python scripts/oracle.py RACE_FILE              # normalized results on stdout
     uv run python scripts/oracle.py RACE_FILE --out DIR    # results, stored, comparison, run
     uv run python scripts/oracle.py RACE_FILE --venv .legacy-run/pysport/.venv-3.13   # second lane
-    uv run python scripts/oracle.py RACE_FILE --now 12:00:00   # the clock legacy reads
+    uv run python scripts/oracle.py RACE_FILE --now 12:00:00   # the clock (default 23:59:59)
+    uv run python scripts/oracle.py RACE_FILE --state after-open   # as the GUI shows it, no recheck
 
 Exit 0 ok; 1 the oracle failed (no legacy runtime, legacy error, crash); 2 usage error. A legacy
 error is shown as its type and stack frames, never with its message, and the driver's stderr is
@@ -35,7 +36,7 @@ from scripts._json import Json, as_dict, as_list, as_str, parse_json
 from scripts.legacy import ROOT, find_pin
 from scripts.legacy_env import clone_path, env_python, hermetic_env, templates_ru
 from scripts.oracle_compare import compare
-from scripts.oracle_driver.snapshot import PROTOCOL, parse_now
+from scripts.oracle_driver.snapshot import DEFAULT_NOW, PROTOCOL, STATES, parse_now
 from scripts.oracle_normalize import SCHEMA_VERSION, dumps, normalize
 
 if TYPE_CHECKING:
@@ -44,11 +45,25 @@ if TYPE_CHECKING:
 DRIVER_MODULE = "scripts.oracle_driver.driver"
 DRIVER_TIMEOUT: Final = 600
 OUTPUT_FILES: Final = ("results.json", "stored.json", "comparison.json", "run.json")
-DEFAULT_NOW: Final = "00:00:00"
 
 
 class OracleError(RuntimeError):
     """The driver did not produce a snapshot; the message holds no data from the race file."""
+
+
+@dataclass(frozen=True, slots=True)
+class RunSettings:
+    """How the driver runs: the clock, the state to reproduce (ADR-0009 T5), the module, stderr.
+
+    ``state``: ``recalculated`` (every race in its own context) or ``after-open`` (what the GUI
+    shows after File > Open and a switch to each race). ``main`` passes ``module`` explicitly, so
+    the tests can swap the driver.
+    """
+
+    now: str = DEFAULT_NOW
+    state: str = STATES[0]
+    module: str = DRIVER_MODULE
+    show_stderr: bool = False
 
 
 @dataclass(frozen=True, slots=True)
@@ -74,7 +89,7 @@ def _format_error(error: Json) -> str:
 
 
 def driver_command(
-    python_exe: Path, race_file: Path, raw: Path, *, now: str, module: str
+    python_exe: Path, race_file: Path, raw: Path, settings: RunSettings
 ) -> list[str]:
     """Driver command line with absolute paths: the driver runs in a temporary directory.
 
@@ -83,43 +98,49 @@ def driver_command(
     return [
         str(python_exe.absolute()),
         "-m",
-        module,
+        settings.module,
         str(race_file.absolute()),
         str(raw),
         "--now",
-        now,
+        settings.now,
+        "--state",
+        settings.state,
     ]
 
 
 def run_driver(
-    race_file: Path,
-    *,
-    python_exe: Path,
-    now: str = DEFAULT_NOW,
-    module: str = DRIVER_MODULE,
-    show_stderr: bool = False,
+    race_file: Path, *, python_exe: Path, settings: RunSettings | None = None
 ) -> dict[str, Json]:
     """Run the driver on ``race_file`` and return its raw payload."""
+    settings = settings or RunSettings()
     with tempfile.TemporaryDirectory(prefix="oracle-") as tmp:
         home = Path(tmp) / "home"
         (home / ".runtime").mkdir(parents=True, mode=0o700)
         env = hermetic_env(os.environ, home=home, qt_platform="offscreen", templates=templates_ru())
         env["PYTHONPATH"] = str(ROOT)
         raw = Path(tmp) / "raw.json"
-        cmd = driver_command(python_exe, race_file, raw, now=now, module=module)
-        done = subprocess.run(
-            cmd,
-            cwd=tmp,
-            env=env,
-            capture_output=True,
-            text=True,
-            encoding="utf-8",
-            errors="replace",
-            timeout=DRIVER_TIMEOUT,
-            check=False,
-        )
+        cmd = driver_command(python_exe, race_file, raw, settings)
+        try:
+            done = subprocess.run(
+                cmd,
+                cwd=tmp,
+                env=env,
+                capture_output=True,
+                text=True,
+                encoding="utf-8",
+                errors="replace",
+                timeout=DRIVER_TIMEOUT,
+                check=False,
+            )
+        except subprocess.TimeoutExpired:
+            # from None: the exception holds the driver's stderr, which may quote the race file
+            msg = f"the driver did not finish in {DRIVER_TIMEOUT} s; its stderr is hidden"
+            raise OracleError(msg) from None
+        except OSError as exc:
+            msg = f"cannot start the legacy interpreter {python_exe}: {exc.strerror or exc}"
+            raise OracleError(msg) from None
         data = as_dict(parse_json(raw.read_text(encoding="utf-8"))) if raw.exists() else {}
-    if show_stderr and done.stderr:
+    if settings.show_stderr and done.stderr:
         sys.stderr.write(done.stderr)
     if "error" in data:
         raise OracleError(_format_error(data["error"]))
@@ -135,26 +156,19 @@ def run_driver(
     return data
 
 
-def oracle(
-    race_file: Path,
-    *,
-    python_exe: Path,
-    now: str = DEFAULT_NOW,
-    module: str = DRIVER_MODULE,
-    show_stderr: bool = False,
-) -> OracleRun:
+def oracle(race_file: Path, *, python_exe: Path, settings: RunSettings | None = None) -> OracleRun:
     """Recalculate ``race_file`` in legacy and normalize what the driver returned."""
-    raw = run_driver(
-        race_file, python_exe=python_exe, now=now, module=module, show_stderr=show_stderr
-    )
+    settings = settings or RunSettings()
+    raw = run_driver(race_file, python_exe=python_exe, settings=settings)
     enums = as_dict(raw.get("enums"))
     results = normalize(raw.get("recalculated"), enums)
-    stored = normalize(raw.get("stored"), enums)
+    stored = normalize(raw.get("stored"), enums, stored=True)
     run: dict[str, Json] = {
         "schema_version": SCHEMA_VERSION,
         "driver_protocol": PROTOCOL,
         "legacy_pin": find_pin("pysport").commit,
         "input_sha256": hashlib.sha256(race_file.read_bytes()).hexdigest(),
+        "state": settings.state,
     }
     run |= as_dict(raw.get("meta"))
     return OracleRun(results, stored, compare(stored, results), run)
@@ -180,6 +194,7 @@ class Options(argparse.Namespace):
     out: Path | None = None
     venv: Path | None = None
     now: str = DEFAULT_NOW
+    state: str = STATES[0]
     show_stderr: bool = False
 
 
@@ -193,6 +208,12 @@ def parse_args(argv: Sequence[str] | None) -> Options:
     parser.add_argument("--out", type=Path, help="write results/stored/comparison/run .json here")
     parser.add_argument("--venv", type=Path, help="legacy environment (default: .venv of the copy)")
     parser.add_argument("--now", type=_now, default=DEFAULT_NOW, help="clock HH:MM:SS")
+    parser.add_argument(
+        "--state",
+        choices=STATES,
+        default=STATES[0],
+        help="recalculated: each race in its own context; after-open: as the GUI shows it",
+    )
     parser.add_argument("--show-stderr", action="store_true", help="pass the driver's stderr on")
     return parser.parse_args(argv, namespace=Options())
 
@@ -209,13 +230,10 @@ def main(argv: Sequence[str] | None = None) -> int:
         sys.stderr.write(f"{args.race_file}: no such file\n")
         return 1
     try:
-        run = oracle(
-            args.race_file,
-            python_exe=python_exe,
-            now=args.now,
-            module=DRIVER_MODULE,
-            show_stderr=args.show_stderr,
+        settings = RunSettings(
+            now=args.now, state=args.state, module=DRIVER_MODULE, show_stderr=args.show_stderr
         )
+        run = oracle(args.race_file, python_exe=python_exe, settings=settings)
     except OracleError as exc:
         sys.stderr.write(f"oracle: {exc}\n")
         return 1

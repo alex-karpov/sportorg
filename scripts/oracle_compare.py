@@ -1,8 +1,9 @@
 """Compare two normalized oracle documents result by result: stored in the file vs recalculated.
 
 A difference is reported, never resolved: stage rule 8 classifies it (legacy bug / local practice /
-rule gap) for the maintainer. A value that the file does not hold (``null`` on the stored side) is
-counted as ``not_stored``, not as a difference.
+rule gap) for the maintainer. A field that the file does not hold (left out of the stored side,
+``scripts/oracle_normalize.py``) is counted as ``not_stored``, not as a difference; a ``null`` the
+file holds is a value like any other.
 """
 
 from __future__ import annotations
@@ -50,10 +51,10 @@ def _tally(fields: dict[str, dict[str, int]], name: str, outcome: str) -> None:
     counts[outcome] += 1
 
 
-def _outcome(stored: Json | None, recalculated: Json | None) -> str:
-    if stored == recalculated:
-        return "same"
-    return "not_stored" if stored is None else "different"
+def _outcome(stored: Mapping[str, Json], recalculated: Mapping[str, Json], name: str) -> str:
+    if name not in stored:
+        return "not_stored"
+    return "same" if stored[name] == recalculated.get(name) else "different"
 
 
 def _by_id(items: Json | None, id_key: str) -> dict[str, dict[str, Json]]:
@@ -81,17 +82,17 @@ def _compare_splits(
     _tally(fields, SPLIT_COUNT, "same")
     for name in SPLIT_FIELDS:
         found = [
-            (index, a.get(name), b.get(name))
+            (index, a, b, outcome)
             for index, (a, b) in enumerate(zip(old, new, strict=True))
-            if _outcome(a.get(name), b.get(name)) != "same"
+            if (outcome := _outcome(a, b, name)) != "same"
         ]
-        outcomes = {_outcome(a, b) for _, a, b in found}
+        outcomes = {outcome for *_, outcome in found}
         outcome = "different" if "different" in outcomes else (outcomes.pop() if found else "same")
         _tally(fields, f"splits.{name}", outcome)
         differences.extend(
-            _diff(rid, f"splits[{index}].{name}", a, b)
-            for index, a, b in found
-            if _outcome(a, b) == "different"
+            _diff(rid, f"splits[{index}].{name}", a.get(name), b.get(name))
+            for index, a, b, outcome in found
+            if outcome == "different"
         )
 
 
@@ -104,7 +105,7 @@ def _compare_race(stored: Mapping[str, Json], recalculated: Mapping[str, Json]) 
     for rid in (r for r in order if isinstance(r, str) and r in old):
         a, b = old[rid], new[rid]
         for name in RESULT_FIELDS:
-            outcome = _outcome(a.get(name), b.get(name))
+            outcome = _outcome(a, b, name)
             _tally(fields, name, outcome)
             if outcome == "different":
                 differences.append(_diff(rid, name, a.get(name), b.get(name)))
@@ -124,7 +125,7 @@ def _compare_race(stored: Mapping[str, Json], recalculated: Mapping[str, Json]) 
 
 
 def compare(stored: Json, recalculated: Json) -> Json:
-    """Field-by-field report of ``stored`` against ``recalculated`` (both schema v1), per race."""
+    """Field-by-field report of ``stored`` against ``recalculated`` (schema v2), per race."""
     old_races = _by_id(as_dict(stored).get("races"), "race_id")
     races: list[Json] = []
     for race in (as_dict(r) for r in as_list(as_dict(recalculated).get("races"))):
@@ -136,9 +137,9 @@ def compare(stored: Json, recalculated: Json) -> Json:
 
 
 def counts_only(report: Json) -> Json:
-    """The report without the list of differences (ids and values): for data with personal data."""
+    """The report without ids and values (differences, race id): for data with personal data."""
     races: list[Json] = [
-        {k: v for k, v in as_dict(race).items() if k != "differences"}
+        {k: v for k, v in as_dict(race).items() if k not in {"differences", "race_id"}}
         for race in as_list(as_dict(report).get("races"))
     ]
     return {"different": as_dict(report).get("different"), "races": races}

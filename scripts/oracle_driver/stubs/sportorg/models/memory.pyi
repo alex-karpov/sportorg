@@ -73,7 +73,11 @@ class RelayTeam:  # :2665
     def get_correct_lap_count(self) -> int: ...
     def get_is_status_ok(self) -> bool: ...
 
+class RaceData:  # :1581
+    race_type: RaceType
+
 class Race:  # :1646
+    data: RaceData
     relay_teams: list[RelayTeam]
     def to_dict(self) -> dict[str, object]: ...
     def rebuild_indexes(

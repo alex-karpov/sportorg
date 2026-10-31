@@ -62,7 +62,7 @@ def test_changed_field_is_counted_and_listed() -> None:
 
 
 def test_value_missing_in_file_is_not_stored_not_different() -> None:
-    stored = _doc(_result("r1", time_ms=None))
+    stored = _doc({k: v for k, v in _result("r1").items() if k != "time_ms"})
     recalculated = _doc(_result("r1", time_ms=1000))
 
     report = oracle_compare.compare(stored, recalculated)
@@ -119,5 +119,30 @@ def test_counts_only_drops_values_and_ids() -> None:
     text = repr(oracle_compare.counts_only(oracle_compare.compare(stored, recalculated)))
 
     assert "r1" not in text
+    assert "race-1" not in text
     assert "differences" not in text
     assert "'different': 1" in text
+
+
+def test_stored_null_differs_from_a_recalculated_value() -> None:
+    """Legacy writes a zero time behind, penalty or credit as null; a file that holds null held 0.
+
+    [код: pysport@b548c35 sportorg/models/memory.py:612,614,615]
+    """
+    stored = _doc(_result("r1", penalty_ms=None, credit_ms=None, diff_ms=None))
+    recalculated = _doc(_result("r1", penalty_ms=60000, credit_ms=None, diff_ms=0))
+
+    report = oracle_compare.compare(stored, recalculated)
+
+    assert _field(report, "penalty_ms") == {"same": 0, "different": 1, "not_stored": 0}
+    assert _field(report, "credit_ms") == {"same": 1, "different": 0, "not_stored": 0}
+    assert _field(report, "diff_ms") == {"same": 0, "different": 1, "not_stored": 0}
+
+
+def test_split_value_missing_in_file_is_not_stored() -> None:
+    stored = _doc(_result("r1", splits=[{"code": "31"}]))
+    recalculated = _doc(_result("r1", splits=[{"code": "31", "leg_ms": 300}]))
+
+    report = oracle_compare.compare(stored, recalculated)
+
+    assert _field(report, "splits.leg_ms") == {"same": 0, "different": 0, "not_stored": 1}

@@ -4,7 +4,9 @@
 first lane (``.legacy-run/pysport/.venv``, CPython 3.8.20); a second run on the same lane and a run
 on the second lane (``.venv-3.13``) compared byte for byte; the canary (a later finish of one
 runner moves their place and time); legacy's ``tests/data/test.json``, which holds personal data
-(``[мейнтейнер: 2026-10-31]``), as counts and hashes only.
+(``[мейнтейнер: 2026-10-31]``), as counts and hashes only; for the inputs in ``AFTER_OPEN``, also
+the state the GUI shows after File > Open (``--state after-open``, finding F6) in
+``synthetic/<race>/after-open/``.
 
 ``typecheck``: how basedpyright sees the driver under three set-ups (ADR-0009 T3), each in a
 temporary copy: (a) legacy sources and packages from the legacy interpreter, (a') the same without
@@ -33,7 +35,7 @@ from scripts.archaeology.common import write_outputs
 from scripts.corpus import synth
 from scripts.legacy import ROOT, legacy_dir
 from scripts.legacy_env import clone_path, env_python
-from scripts.oracle_cli import OUTPUT_FILES, OracleRun, oracle, write_run
+from scripts.oracle_cli import OUTPUT_FILES, OracleRun, RunSettings, oracle, write_run
 from scripts.oracle_compare import counts_only
 from scripts.oracle_normalize import dumps
 
@@ -42,6 +44,7 @@ if TYPE_CHECKING:
 
 LANES: Final = {"first": ".venv", "second": ".venv-3.13"}
 CANARY_BIB: Final = 101
+AFTER_OPEN: Final = ("f6_two_races",)
 CANARY_DELAY_MS: Final = 3 * 60_000
 DRIVER_DIR: Final = ROOT / "scripts" / "oracle_driver"
 PY38_PROBE: Final = {
@@ -235,6 +238,12 @@ def run_command(out: Path) -> int:
         write_run(runs["first"], out / "synthetic" / name)
         rows.append(_lane_row(f"inputs/{name}.json", runs))
         individual = runs["first"] if name == "individual" else individual
+        if name in AFTER_OPEN:
+            after_open = RunSettings(state="after-open")
+            opened = oracle(
+                inputs / f"{name}.json", python_exe=pythons["first"], settings=after_open
+            )
+            write_run(opened, out / "synthetic" / name / "after-open")
     if individual is not None:
         _canary(out, individual, pythons["first"])
     _legacy_test_json(out, pythons)
