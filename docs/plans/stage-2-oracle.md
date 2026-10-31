@@ -199,26 +199,29 @@ driver must run on Python 3.8; second lane on 3.13.17 in its own environment, an
 between the two outputs is reported, not resolved. Headless with `QT_QPA_PLATFORM=offscreen` and the hermetic
 environment of `scripts/legacy_env.py: hermetic_env` (T2).
 
-**Decisions to make at the start of S2 (record in ADR-0009):**
-- How the driver is type-checked: (a) a basedpyright `executionEnvironments` entry for
-  `scripts/oracle_driver` with `extraPaths = [".legacy/pysport"]` and its Python, rule relaxations
-  listed with reasons; (b) exclude the driver and keep it under 100 lines with its own tests run
-  in the legacy env. Recommendation: (a) — nothing leaves the checker silently.
-- Driver protocol: raw JSON of the legacy objects on stdout (`Result.to_dict()` fields plus computed
-  `get_result_otime()`), normalization in project code.
+**Decisions made in S2 (ADR-0009 T3–T5, proposed; rulings in the session log):**
+- Type checking: (c) hand-written stubs of the legacy API (`scripts/oracle_driver/stubs/`) in a
+  basedpyright execution environment with `pythonVersion = 3.8`; (a) needs `.legacy` and the legacy
+  environment, which CI has not (measured in `oracle/typecheck.md`).
+- Driver protocol: whitelisted raw snapshot written to a temporary file (not stdout), personal data
+  filtered in the driver; errors as type and frames only.
+- Inputs that are not in the race file: the clock (`--now`), the startup tables (status comments,
+  ranking), recalculation of every race as the current one after `File.open`.
 
-**Interfaces:**
-- `uv run python scripts/oracle.py <race-file> --out <dir> [--no-recalc]` → `<dir>/results.json`
-  (normalized) and `<dir>/stored.json` (values stored in the file, read with
-  `get_races_from_file` — `load()` already recalculates `[код: pysport@b548c35 sportorg/modules/backup/json.py:34-47]`).
-- Recalculation: set the race as current (`new_event`, `set_current_race_index`) because
-  `_check_all` uses the global race `[код: pysport@b548c35 sportorg/models/result/result_tools.py:105]`,
-  then `recalculate_results(race_object=…)`.
-- Normalized schema (version 1, refine in S2 and copy into the evidence README): per race
-  `{race_id, sport/race type, results:[{person_id (uuid from file), result_id, group, bib, status
-  (ResultStatus name), time_ms, place, scores, splits:[{code, time_ms, leg_ms, is_correct}]}]}`;
-  canonical order: group name, place (0 = last), person_id; times in integer milliseconds; no names,
-  birth dates or chip numbers in the output.
+**Interfaces (as built):**
+- `uv run python scripts/oracle.py RACE_FILE [--out DIR] [--venv DIR] [--now HH:MM:SS]
+  [--show-stderr]` → stdout, or `DIR/{results,stored,comparison,run}.json`. `scripts/oracle.py` is a
+  file shim for `scripts/oracle_cli.py` (`oracle()`, `run_driver()`, `write_run()`, `OracleRun`,
+  `OracleError`). `--no-recalc` of the draft is dropped: `stored.json` is always written.
+- `python -m scripts.oracle_driver.driver RACE_FILE RAW_OUT [--now]` under the legacy interpreter
+  (`PYTHONPATH` = repository root); pure half `scripts/oracle_driver/snapshot.py` (`filter_race`,
+  `stored_races`, `clock_dependent`, `parse_now`, `error_report`, `guarded`, `PROTOCOL = 1`).
+- `scripts/oracle_normalize.py`: `normalize(snapshot, enums) -> Json`, `dumps()`, `SCHEMA`,
+  `SCHEMA_VERSION = 1`; `scripts/oracle_compare.py`: `compare(stored, recalculated)`,
+  `counts_only(report)`.
+- `scripts/corpus/synth.py`: `RACES = {individual, relay, rogaine}`, `--out DIR`.
+- `scripts/oracle_evidence.py run|typecheck --out DIR`; `scripts.legacy_env sync --env .venv-3.13`.
+- Schema v1 (final for S2): `docs/evidence/stage-2/oracle/README.md`.
 
 **Tests:** normalizer by TDD on synthetic raw dicts; `test_two_runs_byte_identical`;
 canary `test_finish_change_moves_place` (change one finish → time and place change).

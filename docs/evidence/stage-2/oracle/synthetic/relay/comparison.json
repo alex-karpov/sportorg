@@ -1,0 +1,186 @@
+{
+ "different": 7,
+ "races": [
+  {
+   "differences": [
+    {
+     "field": "place",
+     "recalculated": 1,
+     "result_id": "004a941c-f9ad-5648-b64b-e100560ed5e1",
+     "stored": 0
+    },
+    {
+     "field": "place",
+     "recalculated": 1,
+     "result_id": "4dc70d5e-8e24-58d8-86f9-fc5a41794237",
+     "stored": 0
+    },
+    {
+     "field": "place",
+     "recalculated": 2,
+     "result_id": "43952d81-ec04-5d42-95bf-5eee21fbdf32",
+     "stored": 0
+    },
+    {
+     "field": "place",
+     "recalculated": 2,
+     "result_id": "be9165da-4570-5c51-8546-668d459d9739",
+     "stored": 0
+    },
+    {
+     "field": "status",
+     "recalculated": "MISSING_PUNCH",
+     "result_id": "2d6834b3-8a58-56f9-a530-e5138807bade",
+     "stored": "OK"
+    },
+    {
+     "field": "place",
+     "recalculated": -1,
+     "result_id": "2d6834b3-8a58-56f9-a530-e5138807bade",
+     "stored": 0
+    },
+    {
+     "field": "place",
+     "recalculated": -1,
+     "result_id": "92b9b7cd-8e63-5120-acef-ce3ea15cd6df",
+     "stored": 0
+    }
+   ],
+   "fields": {
+    "credit_ms": {
+     "different": 0,
+     "not_stored": 0,
+     "same": 6
+    },
+    "diff_ms": {
+     "different": 0,
+     "not_stored": 0,
+     "same": 6
+    },
+    "diff_scores": {
+     "different": 0,
+     "not_stored": 6,
+     "same": 0
+    },
+    "finish_ms": {
+     "different": 0,
+     "not_stored": 6,
+     "same": 0
+    },
+    "order": {
+     "different": 0,
+     "not_stored": 6,
+     "same": 0
+    },
+    "penalty_laps": {
+     "different": 0,
+     "not_stored": 0,
+     "same": 6
+    },
+    "penalty_ms": {
+     "different": 0,
+     "not_stored": 0,
+     "same": 6
+    },
+    "place": {
+     "different": 6,
+     "not_stored": 0,
+     "same": 0
+    },
+    "rank": {
+     "different": 0,
+     "not_stored": 0,
+     "same": 6
+    },
+    "rogaine_penalty": {
+     "different": 0,
+     "not_stored": 6,
+     "same": 0
+    },
+    "rogaine_score": {
+     "different": 0,
+     "not_stored": 6,
+     "same": 0
+    },
+    "scores": {
+     "different": 0,
+     "not_stored": 0,
+     "same": 6
+    },
+    "scores_ardf": {
+     "different": 0,
+     "not_stored": 6,
+     "same": 0
+    },
+    "splits.code": {
+     "different": 0,
+     "not_stored": 0,
+     "same": 6
+    },
+    "splits.count": {
+     "different": 0,
+     "not_stored": 0,
+     "same": 6
+    },
+    "splits.course_index": {
+     "different": 0,
+     "not_stored": 6,
+     "same": 0
+    },
+    "splits.is_correct": {
+     "different": 0,
+     "not_stored": 6,
+     "same": 0
+    },
+    "splits.leg_ms": {
+     "different": 0,
+     "not_stored": 6,
+     "same": 0
+    },
+    "splits.leg_place": {
+     "different": 0,
+     "not_stored": 6,
+     "same": 0
+    },
+    "splits.relative_ms": {
+     "different": 0,
+     "not_stored": 6,
+     "same": 0
+    },
+    "splits.relative_place": {
+     "different": 0,
+     "not_stored": 6,
+     "same": 0
+    },
+    "splits.time_ms": {
+     "different": 0,
+     "not_stored": 0,
+     "same": 6
+    },
+    "start_ms": {
+     "different": 0,
+     "not_stored": 6,
+     "same": 0
+    },
+    "status": {
+     "different": 1,
+     "not_stored": 0,
+     "same": 5
+    },
+    "time_ms": {
+     "different": 0,
+     "not_stored": 6,
+     "same": 0
+    }
+   },
+   "race_id": "7f4d3477-03ce-5681-8a4f-991bea991d4c",
+   "race_index": 0,
+   "results": {
+    "only_recalculated": 0,
+    "only_stored": 0,
+    "recalculated": 6,
+    "stored": 6
+   }
+  }
+ ]
+}

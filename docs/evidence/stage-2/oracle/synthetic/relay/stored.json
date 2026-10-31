@@ -1,0 +1,277 @@
+{
+ "races": [
+  {
+   "processing_mode": null,
+   "race_id": "7f4d3477-03ce-5681-8a4f-991bea991d4c",
+   "race_index": 0,
+   "race_type": "RELAY",
+   "relay_teams": [],
+   "results": [
+    {
+     "bib": 1001,
+     "credit_ms": null,
+     "diff_ms": null,
+     "diff_scores": null,
+     "finish_ms": null,
+     "group": "Relay",
+     "order": null,
+     "penalty_laps": 0,
+     "penalty_ms": null,
+     "person_id": "223d52fe-a5cd-5c0e-8c8f-2ae079bb08b6",
+     "place": 0,
+     "rank": "NOT_QUALIFIED",
+     "result_id": "43952d81-ec04-5d42-95bf-5eee21fbdf32",
+     "rogaine_penalty": null,
+     "rogaine_score": null,
+     "scores": 0,
+     "scores_ardf": null,
+     "splits": [
+      {
+       "code": "31",
+       "course_index": null,
+       "is_correct": null,
+       "leg_ms": null,
+       "leg_place": null,
+       "relative_ms": null,
+       "relative_place": null,
+       "time_ms": 36300000
+      },
+      {
+       "code": "32",
+       "course_index": null,
+       "is_correct": null,
+       "leg_ms": null,
+       "leg_place": null,
+       "relative_ms": null,
+       "relative_place": null,
+       "time_ms": 36600000
+      }
+     ],
+     "start_ms": null,
+     "status": "OK",
+     "system": null,
+     "time_ms": null
+    },
+    {
+     "bib": 2002,
+     "credit_ms": null,
+     "diff_ms": null,
+     "diff_scores": null,
+     "finish_ms": null,
+     "group": "Relay",
+     "order": null,
+     "penalty_laps": 0,
+     "penalty_ms": null,
+     "person_id": "3fecfde2-87cb-5497-88fd-8cd2190e98b2",
+     "place": 0,
+     "rank": "NOT_QUALIFIED",
+     "result_id": "004a941c-f9ad-5648-b64b-e100560ed5e1",
+     "rogaine_penalty": null,
+     "rogaine_score": null,
+     "scores": 0,
+     "scores_ardf": null,
+     "splits": [
+      {
+       "code": "31",
+       "course_index": null,
+       "is_correct": null,
+       "leg_ms": null,
+       "leg_place": null,
+       "relative_ms": null,
+       "relative_place": null,
+       "time_ms": 37620000
+      },
+      {
+       "code": "32",
+       "course_index": null,
+       "is_correct": null,
+       "leg_ms": null,
+       "leg_place": null,
+       "relative_ms": null,
+       "relative_place": null,
+       "time_ms": 37920000
+      }
+     ],
+     "start_ms": null,
+     "status": "OK",
+     "system": null,
+     "time_ms": null
+    },
+    {
+     "bib": 2003,
+     "credit_ms": null,
+     "diff_ms": null,
+     "diff_scores": null,
+     "finish_ms": null,
+     "group": "Relay",
+     "order": null,
+     "penalty_laps": 0,
+     "penalty_ms": null,
+     "person_id": "647466b9-b56d-524f-94cd-ab75dc45912b",
+     "place": 0,
+     "rank": "NOT_QUALIFIED",
+     "result_id": "2d6834b3-8a58-56f9-a530-e5138807bade",
+     "rogaine_penalty": null,
+     "rogaine_score": null,
+     "scores": 0,
+     "scores_ardf": null,
+     "splits": [
+      {
+       "code": "31",
+       "course_index": null,
+       "is_correct": null,
+       "leg_ms": null,
+       "leg_place": null,
+       "relative_ms": null,
+       "relative_place": null,
+       "time_ms": 37380000
+      }
+     ],
+     "start_ms": null,
+     "status": "OK",
+     "system": null,
+     "time_ms": null
+    },
+    {
+     "bib": 1003,
+     "credit_ms": null,
+     "diff_ms": null,
+     "diff_scores": null,
+     "finish_ms": null,
+     "group": "Relay",
+     "order": null,
+     "penalty_laps": 0,
+     "penalty_ms": null,
+     "person_id": "9d4babca-81ed-510e-984d-10e8f5fdef36",
+     "place": 0,
+     "rank": "NOT_QUALIFIED",
+     "result_id": "92b9b7cd-8e63-5120-acef-ce3ea15cd6df",
+     "rogaine_penalty": null,
+     "rogaine_score": null,
+     "scores": 0,
+     "scores_ardf": null,
+     "splits": [
+      {
+       "code": "31",
+       "course_index": null,
+       "is_correct": null,
+       "leg_ms": null,
+       "leg_place": null,
+       "relative_ms": null,
+       "relative_place": null,
+       "time_ms": 36300000
+      },
+      {
+       "code": "32",
+       "course_index": null,
+       "is_correct": null,
+       "leg_ms": null,
+       "leg_place": null,
+       "relative_ms": null,
+       "relative_place": null,
+       "time_ms": 36600000
+      }
+     ],
+     "start_ms": null,
+     "status": "OK",
+     "system": null,
+     "time_ms": null
+    },
+    {
+     "bib": 2001,
+     "credit_ms": null,
+     "diff_ms": null,
+     "diff_scores": null,
+     "finish_ms": null,
+     "group": "Relay",
+     "order": null,
+     "penalty_laps": 0,
+     "penalty_ms": null,
+     "person_id": "f27f1d54-1c00-5663-bc9f-c6a949d785ab",
+     "place": 0,
+     "rank": "NOT_QUALIFIED",
+     "result_id": "be9165da-4570-5c51-8546-668d459d9739",
+     "rogaine_penalty": null,
+     "rogaine_score": null,
+     "scores": 0,
+     "scores_ardf": null,
+     "splits": [
+      {
+       "code": "31",
+       "course_index": null,
+       "is_correct": null,
+       "leg_ms": null,
+       "leg_place": null,
+       "relative_ms": null,
+       "relative_place": null,
+       "time_ms": 37500000
+      },
+      {
+       "code": "32",
+       "course_index": null,
+       "is_correct": null,
+       "leg_ms": null,
+       "leg_place": null,
+       "relative_ms": null,
+       "relative_place": null,
+       "time_ms": 37800000
+      }
+     ],
+     "start_ms": null,
+     "status": "OK",
+     "system": null,
+     "time_ms": null
+    },
+    {
+     "bib": 1002,
+     "credit_ms": null,
+     "diff_ms": null,
+     "diff_scores": null,
+     "finish_ms": null,
+     "group": "Relay",
+     "order": null,
+     "penalty_laps": 0,
+     "penalty_ms": null,
+     "person_id": "f97b7dbb-a40d-5e10-8d13-644e3225a5a9",
+     "place": 0,
+     "rank": "NOT_QUALIFIED",
+     "result_id": "4dc70d5e-8e24-58d8-86f9-fc5a41794237",
+     "rogaine_penalty": null,
+     "rogaine_score": null,
+     "scores": 0,
+     "scores_ardf": null,
+     "splits": [
+      {
+       "code": "31",
+       "course_index": null,
+       "is_correct": null,
+       "leg_ms": null,
+       "leg_place": null,
+       "relative_ms": null,
+       "relative_place": null,
+       "time_ms": 36300000
+      },
+      {
+       "code": "32",
+       "course_index": null,
+       "is_correct": null,
+       "leg_ms": null,
+       "leg_place": null,
+       "relative_ms": null,
+       "relative_place": null,
+       "time_ms": 36600000
+      }
+     ],
+     "start_ms": null,
+     "status": "OK",
+     "system": null,
+     "time_ms": null
+    }
+   ],
+   "time_accuracy": 0,
+   "time_rounding": "math"
+  }
+ ],
+ "schema": "sportorg-ng/oracle-results",
+ "schema_version": 1
+}

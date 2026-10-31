@@ -1,0 +1,14 @@
+# Run from the repository root. Needs the legacy runtime of ADR-0009 T1 (no network once synced):
+uv run python -m scripts.legacy_env sync --python 3.8
+uv run python -m scripts.legacy_env sync --python 3.13 --env .venv-3.13
+# Synthetic inputs, outputs of both lanes, determinism, canary, legacy test.json (counts and hashes only)
+uv run python -m scripts.oracle_evidence run --out docs/evidence/stage-2/oracle
+# How basedpyright sees the driver under (a), (a') and (c) (ADR-0009 T3)
+uv run python -m scripts.oracle_evidence typecheck --out docs/evidence/stage-2/oracle
+# The AC #1 command itself, on one input (results on stdout; --out DIR writes the four files)
+uv run python scripts/oracle.py docs/evidence/stage-2/oracle/inputs/individual.json
+# Tests: normalizer, comparison, driver whitelists, generator, CLI; the integration tests (canary,
+# byte-identical reruns, outcomes) run where the legacy runtime exists and are skipped elsewhere (CI)
+uv run pytest tests/scripts/oracle -q
+uv run python -m scripts.legacy_env status
+uv run python -m scripts.legacy verify

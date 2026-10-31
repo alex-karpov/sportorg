@@ -1,0 +1,27 @@
+{
+ "change": "finish of bib 101 + 180000 ms",
+ "fired": true,
+ "input": "inputs/individual.json",
+ "rows": [
+  {
+   "after": "OK, place 3, 1980000 ms",
+   "before": "OK, place 1, 1800000 ms",
+   "bib": 101
+  },
+  {
+   "after": "OK, place 1, 1920000 ms",
+   "before": "OK, place 2, 1920000 ms",
+   "bib": 102
+  },
+  {
+   "after": "OK, place 1, 1920000 ms",
+   "before": "OK, place 2, 1920000 ms",
+   "bib": 103
+  },
+  {
+   "after": "OK, place 4, 2100000 ms",
+   "before": "OK, place 4, 2100000 ms",
+   "bib": 107
+  }
+ ]
+}

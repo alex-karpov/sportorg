@@ -1,0 +1,174 @@
+{
+ "different": 5,
+ "races": [
+  {
+   "differences": [
+    {
+     "field": "place",
+     "recalculated": 1,
+     "result_id": "da5ed99d-7a38-54de-9800-55cae56216dd",
+     "stored": 0
+    },
+    {
+     "field": "place",
+     "recalculated": 2,
+     "result_id": "d3e3ac91-8924-5cd6-b067-d8170efe1664",
+     "stored": 0
+    },
+    {
+     "field": "place",
+     "recalculated": 3,
+     "result_id": "03178579-0004-5a1d-8b4e-91972d4080b6",
+     "stored": 0
+    },
+    {
+     "field": "place",
+     "recalculated": 3,
+     "result_id": "a986cc31-3e3f-5887-9d93-16946147c8b6",
+     "stored": 0
+    },
+    {
+     "field": "place",
+     "recalculated": 3,
+     "result_id": "73e39841-58e5-5d4f-9658-f9bbd19b9750",
+     "stored": 0
+    }
+   ],
+   "fields": {
+    "credit_ms": {
+     "different": 0,
+     "not_stored": 0,
+     "same": 5
+    },
+    "diff_ms": {
+     "different": 0,
+     "not_stored": 4,
+     "same": 1
+    },
+    "diff_scores": {
+     "different": 0,
+     "not_stored": 5,
+     "same": 0
+    },
+    "finish_ms": {
+     "different": 0,
+     "not_stored": 5,
+     "same": 0
+    },
+    "order": {
+     "different": 0,
+     "not_stored": 5,
+     "same": 0
+    },
+    "penalty_laps": {
+     "different": 0,
+     "not_stored": 0,
+     "same": 5
+    },
+    "penalty_ms": {
+     "different": 0,
+     "not_stored": 0,
+     "same": 5
+    },
+    "place": {
+     "different": 5,
+     "not_stored": 0,
+     "same": 0
+    },
+    "rank": {
+     "different": 0,
+     "not_stored": 0,
+     "same": 5
+    },
+    "rogaine_penalty": {
+     "different": 0,
+     "not_stored": 5,
+     "same": 0
+    },
+    "rogaine_score": {
+     "different": 0,
+     "not_stored": 5,
+     "same": 0
+    },
+    "scores": {
+     "different": 0,
+     "not_stored": 0,
+     "same": 5
+    },
+    "scores_ardf": {
+     "different": 0,
+     "not_stored": 5,
+     "same": 0
+    },
+    "splits.code": {
+     "different": 0,
+     "not_stored": 0,
+     "same": 5
+    },
+    "splits.count": {
+     "different": 0,
+     "not_stored": 0,
+     "same": 5
+    },
+    "splits.course_index": {
+     "different": 0,
+     "not_stored": 5,
+     "same": 0
+    },
+    "splits.is_correct": {
+     "different": 0,
+     "not_stored": 5,
+     "same": 0
+    },
+    "splits.leg_ms": {
+     "different": 0,
+     "not_stored": 5,
+     "same": 0
+    },
+    "splits.leg_place": {
+     "different": 0,
+     "not_stored": 5,
+     "same": 0
+    },
+    "splits.relative_ms": {
+     "different": 0,
+     "not_stored": 5,
+     "same": 0
+    },
+    "splits.relative_place": {
+     "different": 0,
+     "not_stored": 5,
+     "same": 0
+    },
+    "splits.time_ms": {
+     "different": 0,
+     "not_stored": 0,
+     "same": 5
+    },
+    "start_ms": {
+     "different": 0,
+     "not_stored": 5,
+     "same": 0
+    },
+    "status": {
+     "different": 0,
+     "not_stored": 0,
+     "same": 5
+    },
+    "time_ms": {
+     "different": 0,
+     "not_stored": 5,
+     "same": 0
+    }
+   },
+   "race_id": "6cc06b69-be9b-5743-b2ab-1c8ec7432d81",
+   "race_index": 0,
+   "results": {
+    "only_recalculated": 0,
+    "only_stored": 0,
+    "recalculated": 5,
+    "stored": 5
+   }
+  }
+ ]
+}

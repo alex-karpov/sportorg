@@ -1,0 +1,326 @@
+{
+ "current_race": 0,
+ "races": [
+  {
+   "courses": [],
+   "data": {
+    "chief_referee": "",
+    "description": "",
+    "end_datetime": null,
+    "location": "",
+    "race_type": 0,
+    "relay_leg_count": 3,
+    "secretary": "",
+    "short_title": "",
+    "start_datetime": null,
+    "title": "Synthetic rogaine",
+    "url": ""
+   },
+   "groups": [
+    {
+     "__type": null,
+     "course_id": null,
+     "first_number": 0,
+     "id": "1833d4f2-5a8f-50eb-9ef0-f5ba6fa3b25c",
+     "is_any_course": false,
+     "long_name": "",
+     "max_age": 0,
+     "max_time": 3600000,
+     "max_year": 0,
+     "min_age": 0,
+     "min_year": 0,
+     "name": "Open",
+     "object": "Group",
+     "order_in_corridor": 0,
+     "price": 0,
+     "ranking": null,
+     "relay_legs": 0,
+     "start_corridor": 0,
+     "start_interval": 0
+    }
+   ],
+   "id": "6cc06b69-be9b-5743-b2ab-1c8ec7432d81",
+   "object": "Race",
+   "organizations": [],
+   "persons": [
+    {
+     "bib": 1,
+     "birth_date": null,
+     "card_number": 0,
+     "comment": "",
+     "group_id": "1833d4f2-5a8f-50eb-9ef0-f5ba6fa3b25c",
+     "id": "157e6e1e-9b2d-5ec9-bb77-5c68727d8818",
+     "is_out_of_competition": false,
+     "is_paid": false,
+     "is_personal": false,
+     "is_rented_card": false,
+     "middle_name": "",
+     "name": "Synthetic",
+     "national_code": 0,
+     "object": "Person",
+     "organization_id": null,
+     "qual": 0,
+     "start_group": 0,
+     "start_time": 36000000,
+     "surname": "Runner 001",
+     "world_code": "",
+     "year": 0
+    },
+    {
+     "bib": 2,
+     "birth_date": null,
+     "card_number": 0,
+     "comment": "",
+     "group_id": "1833d4f2-5a8f-50eb-9ef0-f5ba6fa3b25c",
+     "id": "1b5d2e74-1cf2-5099-a43c-9d78388f724d",
+     "is_out_of_competition": false,
+     "is_paid": false,
+     "is_personal": false,
+     "is_rented_card": false,
+     "middle_name": "",
+     "name": "Synthetic",
+     "national_code": 0,
+     "object": "Person",
+     "organization_id": null,
+     "qual": 0,
+     "start_group": 0,
+     "start_time": 36000000,
+     "surname": "Runner 002",
+     "world_code": "",
+     "year": 0
+    },
+    {
+     "bib": 3,
+     "birth_date": null,
+     "card_number": 0,
+     "comment": "",
+     "group_id": "1833d4f2-5a8f-50eb-9ef0-f5ba6fa3b25c",
+     "id": "584eb564-be13-503d-afc2-540a56895eb0",
+     "is_out_of_competition": false,
+     "is_paid": false,
+     "is_personal": false,
+     "is_rented_card": false,
+     "middle_name": "",
+     "name": "Synthetic",
+     "national_code": 0,
+     "object": "Person",
+     "organization_id": null,
+     "qual": 0,
+     "start_group": 0,
+     "start_time": 36000000,
+     "surname": "Runner 003",
+     "world_code": "",
+     "year": 0
+    },
+    {
+     "bib": 4,
+     "birth_date": null,
+     "card_number": 0,
+     "comment": "",
+     "group_id": "1833d4f2-5a8f-50eb-9ef0-f5ba6fa3b25c",
+     "id": "a788730f-efb1-51e0-88d0-1fce075a4291",
+     "is_out_of_competition": false,
+     "is_paid": false,
+     "is_personal": false,
+     "is_rented_card": false,
+     "middle_name": "",
+     "name": "Synthetic",
+     "national_code": 0,
+     "object": "Person",
+     "organization_id": null,
+     "qual": 0,
+     "start_group": 0,
+     "start_time": 36000000,
+     "surname": "Runner 004",
+     "world_code": "",
+     "year": 0
+    },
+    {
+     "bib": 5,
+     "birth_date": null,
+     "card_number": 0,
+     "comment": "",
+     "group_id": "1833d4f2-5a8f-50eb-9ef0-f5ba6fa3b25c",
+     "id": "00ef7c31-b8f2-59cc-a144-4e81abfc1965",
+     "is_out_of_competition": false,
+     "is_paid": false,
+     "is_personal": false,
+     "is_rented_card": false,
+     "middle_name": "",
+     "name": "Synthetic",
+     "national_code": 0,
+     "object": "Person",
+     "organization_id": null,
+     "qual": 0,
+     "start_group": 0,
+     "start_time": 36000000,
+     "surname": "Runner 005",
+     "world_code": "",
+     "year": 0
+    }
+   ],
+   "results": [
+    {
+     "assigned_rank": 0,
+     "bib": 0,
+     "card_number": 0,
+     "credit_time": null,
+     "days": 0,
+     "finish_time": 39300000,
+     "id": "d3e3ac91-8924-5cd6-b067-d8170efe1664",
+     "object": "ResultSportident",
+     "penalty_laps": 0,
+     "penalty_time": null,
+     "person_id": "157e6e1e-9b2d-5ec9-bb77-5c68727d8818",
+     "place": 0,
+     "scores": 0,
+     "splits": [
+      {
+       "code": "31",
+       "time": 36300000
+      },
+      {
+       "code": "41",
+       "time": 36600000
+      },
+      {
+       "code": "52",
+       "time": 36900000
+      }
+     ],
+     "start_time": null,
+     "status": 1,
+     "status_comment": ""
+    },
+    {
+     "assigned_rank": 0,
+     "bib": 0,
+     "card_number": 0,
+     "credit_time": null,
+     "days": 0,
+     "finish_time": 39000000,
+     "id": "a986cc31-3e3f-5887-9d93-16946147c8b6",
+     "object": "ResultSportident",
+     "penalty_laps": 0,
+     "penalty_time": null,
+     "person_id": "1b5d2e74-1cf2-5099-a43c-9d78388f724d",
+     "place": 0,
+     "scores": 0,
+     "splits": [
+      {
+       "code": "31",
+       "time": 36300000
+      },
+      {
+       "code": "41",
+       "time": 36600000
+      }
+     ],
+     "start_time": null,
+     "status": 1,
+     "status_comment": ""
+    },
+    {
+     "assigned_rank": 0,
+     "bib": 0,
+     "card_number": 0,
+     "credit_time": null,
+     "days": 0,
+     "finish_time": 39750000,
+     "id": "da5ed99d-7a38-54de-9800-55cae56216dd",
+     "object": "ResultSportident",
+     "penalty_laps": 0,
+     "penalty_time": null,
+     "person_id": "584eb564-be13-503d-afc2-540a56895eb0",
+     "place": 0,
+     "scores": 0,
+     "splits": [
+      {
+       "code": "31",
+       "time": 36300000
+      },
+      {
+       "code": "41",
+       "time": 36600000
+      },
+      {
+       "code": "52",
+       "time": 36900000
+      },
+      {
+       "code": "61",
+       "time": 37200000
+      }
+     ],
+     "start_time": null,
+     "status": 1,
+     "status_comment": ""
+    },
+    {
+     "assigned_rank": 0,
+     "bib": 0,
+     "card_number": 0,
+     "credit_time": null,
+     "days": 0,
+     "finish_time": 39000000,
+     "id": "73e39841-58e5-5d4f-9658-f9bbd19b9750",
+     "object": "ResultSportident",
+     "penalty_laps": 0,
+     "penalty_time": null,
+     "person_id": "a788730f-efb1-51e0-88d0-1fce075a4291",
+     "place": 0,
+     "scores": 0,
+     "splits": [
+      {
+       "code": "31",
+       "time": 36300000
+      },
+      {
+       "code": "31",
+       "time": 36600000
+      },
+      {
+       "code": "41",
+       "time": 36900000
+      }
+     ],
+     "start_time": null,
+     "status": 1,
+     "status_comment": ""
+    },
+    {
+     "assigned_rank": 0,
+     "bib": 0,
+     "card_number": 0,
+     "credit_time": null,
+     "days": 0,
+     "finish_time": 39000000,
+     "id": "03178579-0004-5a1d-8b4e-91972d4080b6",
+     "object": "ResultSportident",
+     "penalty_laps": 0,
+     "penalty_time": null,
+     "person_id": "00ef7c31-b8f2-59cc-a144-4e81abfc1965",
+     "place": 0,
+     "scores": 0,
+     "splits": [
+      {
+       "code": "52",
+       "time": 36300000
+      }
+     ],
+     "start_time": null,
+     "status": 1,
+     "status_comment": ""
+    }
+   ],
+   "settings": {
+    "result_processing_mode": "scores",
+    "result_processing_score_mode": "rogain",
+    "result_processing_scores_minute_penalty": 1,
+    "time_accuracy": 0,
+    "time_rounding": "math"
+   }
+  }
+ ],
+ "version": "v1.8.0b2"
+}

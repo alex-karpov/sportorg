@@ -1,0 +1,222 @@
+{
+ "different": 13,
+ "races": [
+  {
+   "differences": [
+    {
+     "field": "place",
+     "recalculated": 1,
+     "result_id": "a2e52454-02f3-599a-8162-026f03f53aaf",
+     "stored": 0
+    },
+    {
+     "field": "place",
+     "recalculated": 2,
+     "result_id": "f58aa09d-1e65-5bdb-9718-138bbd9df666",
+     "stored": 0
+    },
+    {
+     "field": "place",
+     "recalculated": 2,
+     "result_id": "864634f7-3322-5c96-ac9d-3179bbdc96cd",
+     "stored": 0
+    },
+    {
+     "field": "place",
+     "recalculated": 4,
+     "result_id": "a98a7792-4253-50f9-9a72-bc2e3711d81c",
+     "stored": 0
+    },
+    {
+     "field": "status",
+     "recalculated": "MISSING_PUNCH",
+     "result_id": "fe63d283-a05c-5bf1-875f-ac704dcfc794",
+     "stored": "OK"
+    },
+    {
+     "field": "place",
+     "recalculated": -1,
+     "result_id": "fe63d283-a05c-5bf1-875f-ac704dcfc794",
+     "stored": 0
+    },
+    {
+     "field": "place",
+     "recalculated": -1,
+     "result_id": "1768c2ee-3ddd-5a9e-b4c9-16bb185cd732",
+     "stored": 0
+    },
+    {
+     "field": "place",
+     "recalculated": -1,
+     "result_id": "7bcb2415-1a8d-5056-8829-1030fe0982ac",
+     "stored": 0
+    },
+    {
+     "field": "place",
+     "recalculated": 1,
+     "result_id": "38a3b911-d30c-5fe7-84d5-29036c55a3a5",
+     "stored": 0
+    },
+    {
+     "field": "status",
+     "recalculated": "OVERTIME",
+     "result_id": "24583fdb-8da5-5dc6-a77a-07936f9275df",
+     "stored": "OK"
+    },
+    {
+     "field": "place",
+     "recalculated": -1,
+     "result_id": "24583fdb-8da5-5dc6-a77a-07936f9275df",
+     "stored": 0
+    },
+    {
+     "field": "place",
+     "recalculated": 1,
+     "result_id": "5a48e6dd-7552-54d7-80e4-1306f47881b4",
+     "stored": 0
+    },
+    {
+     "field": "place",
+     "recalculated": 2,
+     "result_id": "5021485a-580b-55fb-a09b-22c4c8db57b2",
+     "stored": 0
+    }
+   ],
+   "fields": {
+    "credit_ms": {
+     "different": 0,
+     "not_stored": 0,
+     "same": 11
+    },
+    "diff_ms": {
+     "different": 0,
+     "not_stored": 5,
+     "same": 6
+    },
+    "diff_scores": {
+     "different": 0,
+     "not_stored": 11,
+     "same": 0
+    },
+    "finish_ms": {
+     "different": 0,
+     "not_stored": 11,
+     "same": 0
+    },
+    "order": {
+     "different": 0,
+     "not_stored": 11,
+     "same": 0
+    },
+    "penalty_laps": {
+     "different": 0,
+     "not_stored": 0,
+     "same": 11
+    },
+    "penalty_ms": {
+     "different": 0,
+     "not_stored": 0,
+     "same": 11
+    },
+    "place": {
+     "different": 11,
+     "not_stored": 0,
+     "same": 0
+    },
+    "rank": {
+     "different": 0,
+     "not_stored": 0,
+     "same": 11
+    },
+    "rogaine_penalty": {
+     "different": 0,
+     "not_stored": 11,
+     "same": 0
+    },
+    "rogaine_score": {
+     "different": 0,
+     "not_stored": 11,
+     "same": 0
+    },
+    "scores": {
+     "different": 0,
+     "not_stored": 0,
+     "same": 11
+    },
+    "scores_ardf": {
+     "different": 0,
+     "not_stored": 11,
+     "same": 0
+    },
+    "splits.code": {
+     "different": 0,
+     "not_stored": 0,
+     "same": 11
+    },
+    "splits.count": {
+     "different": 0,
+     "not_stored": 0,
+     "same": 11
+    },
+    "splits.course_index": {
+     "different": 0,
+     "not_stored": 10,
+     "same": 1
+    },
+    "splits.is_correct": {
+     "different": 0,
+     "not_stored": 10,
+     "same": 1
+    },
+    "splits.leg_ms": {
+     "different": 0,
+     "not_stored": 10,
+     "same": 1
+    },
+    "splits.leg_place": {
+     "different": 0,
+     "not_stored": 10,
+     "same": 1
+    },
+    "splits.relative_ms": {
+     "different": 0,
+     "not_stored": 10,
+     "same": 1
+    },
+    "splits.relative_place": {
+     "different": 0,
+     "not_stored": 10,
+     "same": 1
+    },
+    "splits.time_ms": {
+     "different": 0,
+     "not_stored": 0,
+     "same": 11
+    },
+    "start_ms": {
+     "different": 0,
+     "not_stored": 11,
+     "same": 0
+    },
+    "status": {
+     "different": 2,
+     "not_stored": 0,
+     "same": 9
+    },
+    "time_ms": {
+     "different": 0,
+     "not_stored": 11,
+     "same": 0
+    }
+   },
+   "race_id": "d0efa68b-d823-5fd2-bec1-ef408275d771",
+   "race_index": 0,
+   "results": {
+    "only_recalculated": 0,
+    "only_stored": 0,
+    "recalculated": 11,
+    "stored": 11
+   }
+  }
+ ]
+}
