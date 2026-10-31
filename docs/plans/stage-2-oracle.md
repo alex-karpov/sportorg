@@ -255,6 +255,9 @@ each addition confirmed by the maintainer and committed with `Golden-Approved-By
 refuses symlinks. Corpus: local command, summary and hashes in `stage-2/golden/`. Masked fields only
 for known volatile values, each with a reason, listed in the report. Canary: a deliberate change in a
 `.legacy-run` copy (rounding rule) turns a golden test red.
+Golden master runs `--state recalculated` (ADR-0009 T5). Corpus files with several races that are
+not a multi-day event run also with `--state after-open`; the summary counts the files and results
+where the two states differ (F6, `[мейнтейнер: 2026-11-01]`).
 
 ## S5 — device simulators (AC #4)
 
@@ -464,5 +467,6 @@ AC #1 checked in TASK-8 after this pass (Q5 (b)); S9 verifies the stage again.
 Commits: `a476b8d`, `8558c25` (check files, answers), `74edb7a`, `113bf0d` (S1 fixes), `87d1ad5`
 (S2 fixes), and the commit with this log.
 
-Open for the maintainer: classification of F3 and F4; which state the oracle reproduces for F6
-(own context, as now, or `after-open`, or both).
+Answered the same day `[мейнтейнер: 2026-11-01]`: F3, F4 and F6 are legacy bugs; for F6 the oracle
+reproduces each race in its own context, and S4 runs corpus files with several races also in
+`after-open` (written into S4 above).

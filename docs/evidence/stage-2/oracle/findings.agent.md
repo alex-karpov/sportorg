@@ -73,7 +73,10 @@ recalculation, not findings.
   runners behind the leader are faster); `synthetic/f6_two_races/after-open/` (`--state
   after-open`, added after the review) the state right after open: no points, places by time.
 - F3, F4, F6 **confirmed in the GUI**: the maintainer's values match the oracle's, SportOrg at
-  `b548c35` on Python 3.13.5. Their classification (question 1) and the state the oracle should
-  reproduce for F6 (question 2) are still open.
+  `b548c35` on Python 3.13.5. All three are **legacy bugs**. For F6 the oracle reproduces each race
+  in its own context (question 2, option (a)), as built; in S4 the corpus files with several races
+  run also with `--state after-open`, to show how often F6 changes what an operator sees. As for
+  F2, the oracle keeps legacy's values and golden files will hold them; the new implementation
+  follows the answers.
 - Question 3: (b), the oracle reads a file that is neither gzip nor UTF-8 as cp1251 and records the
   format in `run.json`; the S3 manifest counts the formats.

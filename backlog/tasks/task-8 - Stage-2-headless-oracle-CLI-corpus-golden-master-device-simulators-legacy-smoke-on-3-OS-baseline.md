@@ -6,7 +6,7 @@ title: >-
 status: In Progress
 assignee: []
 created_date: 2026-10-24 12:06
-updated_date: '2026-10-31T20:14:00Z'
+updated_date: '2026-10-31T20:36:00Z'
 labels:
   - stage-2
 milestone: m-2
@@ -48,4 +48,6 @@ S2 (2026-11-01): oracle seam for AC #1: uv run python scripts/oracle.py RACE_FIL
 After S2 (2026-11-01): Fable reviews of S1 and S2 (exception to stage rule 10): with fixes, 0 critical, 3 important (commit-msg hook on a clean merge; crash path of legacy test runs untested; stored null counted as not_stored); fix pass awaits the maintainer. Maintainer: ADR-0009 T3-T5 accepted; F1 representation; F2 legacy bug (three ways to show out-of-competition runners); R22 formula files listed in the S3 manifest, run only with consent. F3/F4/F6 check files and guide docs/reports/stage-2-check-f3-f4-f6.md. Open: plan Session log 'After S2'.
 
 Fix pass (2026-11-01): review findings fixed by TDD (S1: commit-msg on merges, replace refs, env families, sync limit, crash-path test, CI GOLDEN_BASE; S2: schema v2 stored nulls, cp1251 files per Q3 (b) = ADR-0009 T6, default clock 23:59:59 = T5, --state after-open, OracleError on timeout/missing interpreter, main --out test). F3/F4/F6 confirmed in the GUI by the maintainer (b548c35, Python 3.13.5); classification of F3/F4 and the F6 state open. AC #1 checked per Q5 (b): after the fix pass, oracle evidence rerun identical, the AC command run (exit 0, stdout = committed results.json); also reproduced by the Fable review in a separate context. check.py green, 471 tests. Deferred: S1-9, S1-12 (S3). Plan Session log 'Fix pass'.
+
+Maintainer 2026-11-01: F3, F4, F6 are legacy bugs; for F6 the oracle reproduces each race in its own context (--state recalculated); S4 also runs corpus files with several races in --state after-open and counts where the states differ (plan S4).
 <!-- SECTION:NOTES:END -->
