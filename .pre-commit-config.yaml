@@ -5,7 +5,7 @@
 # Excluded: deliberately broken fixtures and frozen tool-output copies in docs/evidence (scripts/check.py does not
 # lint them either); needed here because pre-commit passes explicit file names.
 exclude: ^(scripts/typecheck_(fixtures|configs)/|docs/evidence/)
-default_install_hook_types: [pre-commit, pre-push]
+default_install_hook_types: [pre-commit, commit-msg, pre-push]
 repos:
   - repo: local
     hooks:
@@ -36,6 +36,19 @@ repos:
         language: system
         pass_filenames: false
         files: ^(pyproject\.toml|uv\.lock)$
+      - id: golden-commit-msg
+        name: golden files need the maintainer's trailer (ADR-0008)
+        entry: uv run --no-sync python -m scripts.golden_guard commit-msg
+        language: system
+        stages: [commit-msg]
+        always_run: true
+      - id: golden-range
+        name: golden guard over unpushed commits (on push)
+        entry: uv run --no-sync python scripts/check.py --only golden
+        language: system
+        pass_filenames: false
+        always_run: true
+        stages: [pre-push]
       - id: tests
         name: pytest (on push)
         entry: uv run --no-sync python scripts/check.py --only tests

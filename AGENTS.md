@@ -53,6 +53,9 @@ equivalent (Docker) for unattended agents and for hosts without WSL.
 4. **No silencing.** No `Any`, `cast`, `# type: ignore`, `# noqa` or skipped tests without an error code
    and a one-line reason; unused suppressions fail the build. Do not lower thresholds to pass.
 5. **Golden files** (`tests/golden/**`) change only with the maintainer's explicit confirmation.
+   The commit then carries the trailer `Golden-Approved-By: <maintainer>`, written only after that
+   confirmation; `scripts/golden_guard.py` fails `check.py` and CI on any golden change without it
+   (ADR-0008).
 6. **Tasks live in Backlog.md** (`backlog task create|edit|list`, files in `backlog/tasks/`).
    Plans and specs written by agent skills are working documents linked from a task; their
    checkboxes are not status. Status changes only in Backlog.md.

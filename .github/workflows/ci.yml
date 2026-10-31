@@ -20,6 +20,8 @@ jobs:
         python: ["3.14", "3.15"]   # 3.14 = development version and lower bound, 3.15 = early-warning lane (ADR-0001)
     steps:
       - uses: actions/checkout@93cb6efe18208431cddfb8368fd83d5badbf9bfd # v5.0.1
+        with:
+          fetch-depth: 0   # the golden guard reads the pushed commits and main (ADR-0008)
       - uses: astral-sh/setup-uv@07a047e608db84b3d8c06cd9a7c7dcc9c355c18e # v10.3.2
         with:
           enable-cache: true
@@ -28,6 +30,9 @@ jobs:
           uv python install ${{ matrix.python }}
           uv sync --locked --no-build --python ${{ matrix.python }}   # --no-build: never compile third-party sdists (ADR-0001)
       - name: Quality checks (same command as locally)
+        env:
+          # Golden guard (ADR-0008): also check the pushed commits on main itself.
+          GOLDEN_BASE: ${{ github.event.pull_request.base.sha || github.event.before }}
         run: uv run --no-sync python scripts/check.py --keep-going
       - name: Vulnerabilities
         run: uv audit --locked
