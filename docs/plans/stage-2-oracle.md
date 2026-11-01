@@ -236,8 +236,9 @@ evidence `stage-2/oracle/`.
 
 ## S3 — anonymization and corpus manifest (AC #2)
 
-`scripts/corpus/anonymize.py` (Д1 a + deterministic HMAC birthday in the same year; key from an
-environment variable, no key → error), `scripts/corpus/leakcheck.py` (no original name, chip or date in
+`scripts/corpus/anonymize.py` (Д1 a + deterministic HMAC birthday in the same year; key from the
+environment variable `SPORTORG_ANONYMIZATION_KEY`, no key → error; the corpus path from
+`SPORTORG_CORPUS`), `scripts/corpus/leakcheck.py` (no original name, chip or date in
 output), invariant test: oracle(anonymized) == oracle(original) on statuses, times, places;
 manifest (hash of original and anonymized copy, SportOrg version, sport, start format) is the only
 corpus file in the repository. Card number renumbered inside the same card-type range.
@@ -246,7 +247,17 @@ Added by the maintainer's answers of 2026-11-01: the manifest records each file'
 lists files with `scores_mode = formula` and their formulas, which run only with the maintainer's
 consent (R22). The leak check also scans every evidence file before it is committed, test ids of
 legacy test runs included (review finding S1-12).
-**Done when:** reproducible, leak check and invariant green on synthetic data and on the corpus if present.
+Locality `[мейнтейнер: 2026-11-01]`: replacing, editing or adding corpus files must not change the
+output for anything else. Requirements: a pseudonym is a function of the key and the normalized value
+only (HMAC, no shared table of names already given out; normalization rules for case, ё/е and spaces
+fixed and tested); a card number maps through a keyed bijection inside its card-type range (a
+permutation, so no collisions to resolve in visiting order); a file's neutral id comes from the
+directory id and the file's stable name, not from its position in a listing; no cross-file matching
+of persons (clustering by name and year). Tests: (1) changing or adding file B leaves the anonymized
+copy of file A byte-identical, and its manifest hashes unchanged; (2) changing one record of a file
+leaves every other record of that file anonymized as before.
+**Done when:** reproducible, locality tests green, leak check and invariant green on synthetic data
+and on the corpus if present.
 
 ## S4 — golden master (AC #3)
 
