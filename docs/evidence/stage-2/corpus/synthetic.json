@@ -196,10 +196,14 @@
     "sha256": "916add0cb90f2ab2a83b31848e0f6c3710d1efc2a5c109acde6305bedc6ecd71",
     "size": 71,
     "stats": {
+     "continuation_lines": 0,
      "levels": {
       "INFO": 1
      },
-     "lines": 1
+     "lines": 1,
+     "locations": {
+      "main_window.py:267": 1
+     }
     }
    }
   ],

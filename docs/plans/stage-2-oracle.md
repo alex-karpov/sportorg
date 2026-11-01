@@ -563,3 +563,9 @@ pre-commit hook for the leak check (recommended, later); 6 word matches in older
 F7 and F8 to classify; for S4: move the input copy of F7 into `scripts/oracle_cli.py`.
 
 Next: S4 (golden master), in a fresh session.
+
+Maintainer's answers of 2026-11-01, in the same session: questions 1, 2 and 4 as built (ADR-0009
+T7 decided); 5 → Backlog TASK-12 (local pre-commit hook for the leak check); 3 → a sub-agent
+(Sonnet, medium) studies from legacy's code what the logs hold (the maintainer: the log holds the
+raw byte exchange of readouts with the chip owner's name); the manifest now counts legacy's log by
+code location (`racefile.sportorg_log_stats`, TDD); 6 open.

@@ -34,7 +34,7 @@ Every `.json`/`.md` file here except `*.agent.md` is output of a script; the com
 - The passport: only values from the vocabulary of `docs/data-request.md`; free text as `filled`;
   `source` never; counts of unfilled cells.
 - Other files (protocols, notes, logs): kind, size and hash; a readout log adds counts of
-  readouts and punches, legacy's log counts of lines per level. Their content is not anonymized
+  readouts and punches, legacy's log counts of lines per level and per code location (`file:line`), never a message. Their content is not anonymized
   and not copied.
 - The leak check: `leak:` counts must be 0; `residual:` counts a sensitive value that also stands
   in a kept field of the same original (a group name, a setting legacy reads, a key of the schema),

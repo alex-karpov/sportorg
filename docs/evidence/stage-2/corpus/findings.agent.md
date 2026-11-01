@@ -62,3 +62,15 @@ legacy stack frames printed by the scripts of `commands.txt`.
    Options: (a) leave; (b) a stop list of common words for the scan. Recommendation: (a) now.
 7. **D2 (b) and R21** are untouched: the copies stay outside the repository; the manifest holds
    counts, hashes and neutral ids only.
+
+## Maintainer's answers `[мейнтейнер: 2026-11-01]`
+
+1. Pseudonyms of spelling variants: (a), as built.
+2. Protocols in the manifest: kind, size and SHA-256, as built.
+3. Logs: a sub-agent studies, from legacy's code only, what the logs hold; the maintainer notes
+   that the log holds the raw byte exchange of chip readouts, with the owner's name stored in the
+   chip. The manifest counts legacy's log by level and by code location (`file:line`), never a
+   message. Open until the study is read.
+4. Old tokens and hosts of the settings cleared: confirmed.
+5. A local pre-commit hook for the leak check: Backlog TASK-12.
+6. Answer later in this session.
