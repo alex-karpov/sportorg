@@ -592,3 +592,7 @@ code lines with name-like literals over `docs/` and `backlog/` is 0 after it. Th
 catch them: its sources are the corpus and legacy's `test.json`, not legacy's other test data
 (SFRX, WDB, CSV, IOF XML) or test code. The blocks stay in the history of `main` (`eb40eef`):
 whether to rewrite it is the maintainer's decision.
+Maintainer's answers `[мейнтейнер: 2026-11-01]`: the history of `main` stays (as for the surname
+before; legacy's test code is public in `sportorg/pysport`); AGENTS.md rule 8 now forbids quoting
+legacy's test code or test data, and TASK-12 gained a criterion: the hook refuses quoted code with
+name-like string literals in Markdown and text files.
