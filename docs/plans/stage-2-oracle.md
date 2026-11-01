@@ -307,6 +307,12 @@ socat / tty0tty; com0com and alternatives), ADR. Test: legacy reader (`sportiden
 `.legacy-run` reads a replayed card headless; canary: corrupted CRC byte. Hardware available
 `[мейнтейнер: 2026-10-31]`: BSM7-USB, BSF8, BSF8-SRR, SRR USB dongle; SI5, SI6, SI8, SI9, SIAC,
 pCard, tCard.
+Added by the maintainer's answer of 2026-11-01 (S3 question 3): logs of the corpus, option C1 of
+`docs/evidence/stage-2/corpus/logs.agent.md`: extract only the SportIdent frames and device lines of
+legacy's log into a dump, map card numbers by the S3 permutation, overwrite the owner bytes of the
+card blocks, recompute the CRC, drop every other message; the readout backup `si<date>.log` with
+cards mapped only. Tests first, as listed there; the maintainer checks the unmapped log locations
+(`winorient.py`, `orgeo.py`) by message prefix before a real log is processed.
 
 ## S6 — baseline, automatic part (AC #6 part)
 
@@ -569,3 +575,9 @@ T7 decided); 5 → Backlog TASK-12 (local pre-commit hook for the leak check); 3
 (Sonnet, medium) studies from legacy's code what the logs hold (the maintainer: the log holds the
 raw byte exchange of readouts with the chip owner's name); the manifest now counts legacy's log by
 code location (`racefile.sportorg_log_stats`, TDD); 6 open.
+Later the same day `[мейнтейнер: 2026-11-01]`: F7 is a legacy bug (checked on Windows: a read-only
+gzip file does not open, a read-only plain file opens but does not save and leaves `.json.tmp`);
+F8 confirmed in the GUI, its cause narrowed by new manifest counters to an empty part of a list
+template, parsed by `int()` since `0f3a0a8` (proposal: legacy bug, regression); question 3 → C1 in
+S5 (written into S5 above); question 6: the matched words written to a file outside the
+repository (`leakcheck scan --words-out`, TDD), decision pending.

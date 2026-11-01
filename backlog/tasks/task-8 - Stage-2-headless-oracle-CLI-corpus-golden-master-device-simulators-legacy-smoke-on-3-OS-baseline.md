@@ -6,7 +6,7 @@ title: >-
 status: In Progress
 assignee: []
 created_date: 2026-10-24 12:06
-updated_date: '2026-11-01T09:51:00Z'
+updated_date: '2026-11-01T10:37:00Z'
 labels:
   - stage-2
 milestone: m-2
@@ -52,4 +52,6 @@ Fix pass (2026-11-01): review findings fixed by TDD (S1: commit-msg on merges, r
 Maintainer 2026-11-01: F3, F4, F6 are legacy bugs; for F6 the oracle reproduces each race in its own context (--state recalculated); S4 also runs corpus files with several races in --state after-open and counts where the states differ (plan S4).
 
 S3 (2026-11-01): anonymization and corpus manifest for AC #2: scripts/corpus/{pseudonym,anonymize,racefile,leakcheck,catalog,invariant,evidence}.py by TDD (165 tests). Synthetic: rebuild byte-identical, locality (edit/add file, one record) holds, 0 leaks, invariant 6/6 (formula file not run, R22). Corpus as on disk: 25 dirs, 63 race files (28 gzip/29 utf-8/6 cp1251), 100 races, 24 distinct starts; no ARDF, no formula files; passport only id; copies 0 leaks; invariant 62/62 identical, 1 file legacy cannot open either way (F8). Findings F7 (legacy opens gzip r+b, read-only originals), F8; ADR-0009 T7 proposed. Evidence docs/evidence/stage-2/corpus. AC #2 unchecked: verdict synthetic full, corpus as of the run with limits; questions 1-6 in corpus/findings.agent.md. Next: S4.
+
+S3 follow-up (2026-11-01, maintainer): answers 1, 2, 4 as built (ADR-0009 T7 decided); 5 -> TASK-12; 3: code-only study of legacy's logs (corpus/logs.agent.md, Sonnet sub-agent), decided C1 in S5 (frame-only dump, mapped cards, owner bytes overwritten, CRC recomputed); F7 legacy bug (Windows: read-only gzip does not open, read-only plain file does not save, leaves .json.tmp); F8 confirmed in GUI, narrowed by new manifest counters to an empty part of a list template parsed by int() since 0f3a0a8 (proposal: legacy bug, regression); 6: matched words written outside the repo (leakcheck --words-out), decision pending.
 <!-- SECTION:NOTES:END -->

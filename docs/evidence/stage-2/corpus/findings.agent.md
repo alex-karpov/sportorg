@@ -19,6 +19,25 @@ legacy stack frames printed by the scripts of `commands.txt`.
 | F7 | First corpus run of the invariant: all 28 gzip files failed with `OSError`; `tests/scripts/corpus/test_invariant.py::test_a_read_only_gzip_original_runs` failed the same way on a synthetic gzip file with mode 0444 before the fix | legacy opens a gzip race file with mode `r+b` (read **and write**) also to read it: `mode = f"{mode}+b"` after `is_gzip_file` `[код: pysport@b548c35 sportorg/modules/backup/file.py:33-41]`. `raw/` of the corpus is read-only for the sandbox | legacy bug (candidate): an operator who follows `docs/data-request.md` («сразу получают атрибут „только чтение“») cannot open the gzip original in legacy `[допущение по коду: not tried on Windows]`; a discrepancy between the guide and legacy (rule 9). Done here: the invariant runs the oracle on copies in a temporary directory, so the original never sits behind a write handle. S4 runs the oracle on the corpus too: recommended to make the copy in `scripts/oracle_cli.py` itself (S2 code, so not changed in S3) |
 | F8 | `invariant.md`, `C02/b6306ffadea6` (version `1.3.0.0`, UTF-8): legacy fails on the original and on the copy alike: `ValueError at sportorg/models/memory.py:1155:check` | `ResultSportident.check` parses a course control template with a list `…(31,32,35-45)` and calls `int()` on the punch code and on the parts of the list `[код: pysport@b548c35 sportorg/models/memory.py:1147-1160]`; a code or a part that is not a whole number raises, and nothing catches it on the way from `File.open` | open: legacy bug (no guard for a template the GUI accepts) or a file legacy@b548c35 cannot read any more (saved by 1.3.0.0). Groups and courses are kept by Д1, so the copy fails the same way: the anonymization is not the cause. Check: open the file in legacy's GUI at `b548c35` |
 
+**F7, maintainer's check on Windows `[мейнтейнер: 2026-11-01]`: legacy bug.** A gzip file with the
+read-only flag: `File.open` fails with `PermissionError: [Errno 13]` (shown in the Logs tab). A
+file saved without gzip and flagged read-only opens, but saving fails silently (only an error in
+the Logs tab) and leaves `<file>.json.tmp` beside it: `save` writes `<file>.tmp` and then renames
+it over the original `[код: pysport@b548c35 sportorg/modules/backup/file.py:62-69]`, and the rename
+onto a read-only file fails `[допущение по коду и наблюдению мейнтейнера]`. The maintainer's
+traceback is not copied here: it names a local user directory.
+
+**F8, follow-up `[мейнтейнер: 2026-11-01]`:** confirmed in legacy's GUI: `ValueError: invalid
+literal for int() with base 10: ''`; running 1.3.0 needs its own environment, not tried. The
+manifest now counts, per race, list templates with a part `int()` refuses and punch codes that
+are not whole numbers (`list_templates_not_integer`, `punch_codes_not_integer`): only this file
+has any, 2 templates and 0 punch codes, so an empty part of a list template is the cause. History
+(read only): at 1.3.0.0 (`615049a`, `VERSION = Version(1, 3, 0, 0)`) a list matched by string,
+`str(cur_code) in template[…].split(',')`, so an empty part matched nothing and raised nothing
+`[код: pysport@615049a sportorg/models/memory.py:876-883]`; commit `0f3a0a8` (2019-11-26, "CP
+generic set e.g. '%(31,32,35-45)'") parses each part with `int()` `[история: pysport 0f3a0a8]`.
+Proposal: legacy bug (a regression in reading older files since `0f3a0a8`), to be classified.
+
 ## Questions (built as recommended, `[допущение]` until answered)
 
 1. **A pseudonym for a spelling variant.** The plan says "a pseudonym is a function of the key and
@@ -76,7 +95,11 @@ legacy stack frames printed by the scripts of `commands.txt`.
    reads reach the log; other records may hold names (`live.py:80`), file paths and server texts.
    Proposed: extract only the SportIdent frames into a dump, map card numbers by the same
    permutation, overwrite owner bytes, recompute the CRC, drop every other message (C1); the
-   readout backup keeps everything but the card number. Decision open.
+   readout backup keeps everything but the card number. Decided: C1, in session S5
+   `[мейнтейнер: 2026-11-01]`.
 4. Old tokens and hosts of the settings cleared: confirmed.
 5. A local pre-commit hook for the leak check: Backlog TASK-12.
-6. Answer later in this session.
+6. The maintainer asked for the list of words: written by `leakcheck scan docs backlog --words-out
+   ~/.cache/sportorg-stage2/leakcheck/old-docs-words.tsv` (91 matches over `docs/` and `backlog/`,
+   synthetic outputs included), outside the repository and not shown in the session: the words are
+   values of the corpus. Decision pending the maintainer's reading.
