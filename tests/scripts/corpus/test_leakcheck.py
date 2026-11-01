@@ -375,3 +375,158 @@ def test_a_value_that_is_legacys_own_text_is_not_searched() -> None:
     org["name"] = "Не заявлен"
     scan = leakcheck.scan_set([original])
     assert leakcheck.scan_text('"Не заявлен",', scan) == []
+
+
+# ---------------------------------------------------------------- fix pass after the re-review
+
+
+def _set_comment(doc: Json, index: int, which: int, comment: Json, multi_day: str) -> None:
+    result = _shape_results(doc, index)[which]
+    result["status_comment"] = comment
+    result["multi_day_results"] = multi_day
+
+
+def test_a_status_comment_cut_in_an_earlier_day_field_is_a_leak() -> None:
+    """The next day's time follows the cut text without a separator."""
+    original = synth.personal_legacy_shape()
+    leaked = _anonymized(original)
+    target = _shape_results(leaked, 0)[1]
+    target["multi_day_results"] = FREE[: synth.DAY_FIELD] + "0:32:00       "
+    assert _leaks(leakcheck.check_pair(original, leaked)) == {"leak:text": 1}
+    assert leakcheck.leak_paths(original, leaked) == {
+        "text in races[].results[].multi_day_results": 1
+    }
+
+
+def test_a_cut_free_hint_after_a_rule_clause_is_a_leak() -> None:
+    original = synth.personal_legacy_shape()
+    comment = "пп1 # Придумкин Пётр"
+    _set_comment(original, 0, 1, comment, f"{comment[: synth.DAY_FIELD]}0:32:00       ")
+    leaked = _anonymized(original)
+    _shape_results(leaked, 0)[1]["multi_day_results"] = f"{comment[: synth.DAY_FIELD]}0:32:00"
+    assert _leaks(leakcheck.check_pair(original, leaked)) == {"leak:text": 1}
+
+
+def test_a_non_string_status_comment_left_in_the_copy_is_a_leak() -> None:
+    original = synth.personal_legacy_shape()
+    listed: list[Json] = ["Снят по протесту Небылицкого"]
+    _set_comment(original, 0, 1, listed, "0:31:00       ")
+    leaked = _anonymized(original)
+    assert _leaks(leakcheck.check_pair(original, leaked)) == {}
+    _shape_results(leaked, 0)[1]["status_comment"] = listed
+    assert _leaks(leakcheck.check_pair(original, leaked)) == {"leak:text": 1}
+
+
+def test_an_unknown_race_level_key_is_sensitive_text() -> None:
+    """The anonymizer masks it, so a copy that keeps it leaks."""
+    original = copy.deepcopy(synth.personal_individual())
+    as_dict(racefile.races_of(original)[0])["notes"] = "Заметка про Небылицкого"
+    leaked = _anonymized(original)
+    assert _leaks(leakcheck.check_pair(original, leaked)) == {}
+    as_dict(racefile.races_of(leaked)[0])["notes"] = "Заметка про Небылицкого"
+    assert _leaks(leakcheck.check_pair(original, leaked)) == {"leak:text": 1}
+
+
+def test_scan_finds_the_surname_of_a_referee(scan_set: leakcheck.ScanSet) -> None:
+    assert leakcheck.scan_text("главный судья Придумов П. П.", scan_set) == [(1, "surname")]
+
+
+def test_scan_finds_a_birth_date_written_as_a_number() -> None:
+    original = copy.deepcopy(synth.personal_individual())
+    _persons(original)[0]["birth_date"] = 19_900_517
+    scan = leakcheck.scan_set([original])
+    assert leakcheck.scan_text("born 19900517", scan) == [(1, "birth_date")]
+    assert leakcheck.scan_text("born 19900518", scan) == []
+
+
+def test_scan_finds_a_card_written_in_groups(scan_set: leakcheck.ScanSet) -> None:
+    text = "card 8 123 456 read\ncard 8'123'456\ncard 8 123 456\nnot 8 123 4567"
+    assert leakcheck.scan_text(text, scan_set) == [(1, "card"), (2, "card"), (3, "card")]
+
+
+# ---------------------------------------------------------------- fix pass after the Opus review
+
+
+@pytest.mark.parametrize(
+    "comment",
+    [
+        "пп6.6.4 # не стартовал",
+        "пп1 # не прошел КП 5",
+        "пп6.6.4 # спортсмен сошел с трассы на КП 5",
+    ],
+)
+def test_a_cut_hint_the_anonymizer_keeps_is_not_a_leak(comment: str) -> None:
+    """The cut of a legacy hint is legacy's own text: the anonymizer keeps it, so must the check."""
+    cut = comment[: synth.DAY_FIELD]
+    assert anonymize.status_comment(KEY, cut, cut=True)[1] == "kept"
+    original = synth.personal_legacy_shape()
+    _set_comment(original, 0, 1, comment, f"{cut}0:32:00       ")
+    assert _leaks(leakcheck.check_pair(original, _anonymized(original))) == {}
+
+
+def test_a_comment_in_a_day_field_not_on_a_field_boundary_is_a_leak() -> None:
+    original = synth.personal_legacy_shape()
+    comment = "Заметка про Небылицкого"
+    _set_comment(original, 0, 1, comment, "0:31:00       ")
+    leaked = _anonymized(original)
+    _shape_results(leaked, 0)[1]["multi_day_results"] = f"0:31:00 {comment}"
+    assert _leaks(leakcheck.check_pair(original, leaked)) == {"leak:text": 1}
+
+
+def test_an_unknown_file_level_key_is_sensitive_text() -> None:
+    original = copy.deepcopy(synth.personal_individual())
+    wrapped: dict[str, Json] = {"version": 1, "races": [original], "notes": "Заметка о Небылицком"}
+    leaked = _anonymized(wrapped)
+    assert _leaks(leakcheck.check_pair(wrapped, leaked)) == {}
+    as_dict(leaked)["notes"] = "Заметка о Небылицком"
+    assert _leaks(leakcheck.check_pair(wrapped, leaked)) == {"leak:text": 1}
+
+
+@pytest.mark.parametrize("birth_date", [19_900_517, 19_900_517.0, "19900517"])
+def test_scan_finds_a_birth_date_written_as_eight_digits(birth_date: Json) -> None:
+    original = copy.deepcopy(synth.personal_individual())
+    _persons(original)[0]["birth_date"] = birth_date
+    scan = leakcheck.scan_set([original])
+    assert leakcheck.scan_text("born 19900517", scan) == [(1, "birth_date")]
+
+
+@pytest.mark.parametrize("birth_date", [1990, 0, 123_456_789])
+def test_scan_ignores_a_number_that_is_not_a_date_of_eight_digits(birth_date: int) -> None:
+    original = copy.deepcopy(synth.personal_individual())
+    _persons(original)[0]["birth_date"] = birth_date
+    scan = leakcheck.scan_set([original])
+    assert leakcheck.scan_text("in 1990, 0 errors, 123456789", scan) == []
+
+
+@pytest.mark.parametrize(
+    "line",
+    [
+        "8,123,456",
+        "8.123.456",
+        "8 123 456",
+        "card 08 123 456",
+        "КП 31 212 345",  # a number before the card is not part of it
+    ],
+)
+def test_scan_finds_a_card_in_more_groupings(scan_set: leakcheck.ScanSet, line: str) -> None:
+    assert leakcheck.scan_text(line, scan_set) == [(1, "card")]
+
+
+REFEREE_FORMATS = (
+    "Придумов П. П.",
+    "Придумов П.",
+    "П. П. Придумов",
+    "П. Придумов",
+    "Придумов П.П.",
+    "П.П. Придумов",
+)
+
+
+@pytest.mark.parametrize("referee", REFEREE_FORMATS)
+def test_a_referee_is_searched_by_the_surname_not_by_the_initials(referee: str) -> None:
+    """The initials are single letters: only the surname is a word of four letters or more."""
+    original = copy.deepcopy(synth.personal_individual())
+    as_dict(as_dict(racefile.races_of(original)[0])["data"])["chief_referee"] = referee
+    scan = leakcheck.scan_set([original])
+    assert leakcheck.scan_text("главный судья Придумов", scan) == [(1, "surname")]
+    assert leakcheck.scan_text("П. П. судья", scan) == []

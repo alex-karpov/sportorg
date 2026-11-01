@@ -68,4 +68,24 @@ Every `.json`/`.md` file here except `*.agent.md` is output of a script; the com
 - Not addressed: keys of objects inside unknown fields stay (M5; legacy writes no personal data
   as keys); `special_cases` of the passport and setting values that match a safe pattern are
   printed as written (M9; maintainer-controlled or legacy enumerations).
+- Referees' surnames (`chief_referee`, `secretary`) are searched in free text like participants'
+  surnames: every word of four letters or more of the field, initials (one letter) excluded, so
+  `Фамилия И. О.`, `Фамилия И.`, `И. О. Фамилия`, `И. Фамилия`, `Фамилия И.О.` and `И.О. Фамилия`
+  `[мейнтейнер: 2026-11-01]`. A field with a full given name or a title adds those words, too. Free text itself (status comments, comments of persons, operator notes) holds no
+  searched category: a name or a phone of a non-participant in it is not found in evidence or
+  commit messages `[мейнтейнер: 2026-11-01]`; `check_pair` still compares such text by field.
+- `result`, `result_relay` and `result_current` are masked only when equal to the
+  `status_comment` of their result, as legacy writes them. A file in which they differ (a hand
+  edit) keeps the stale text; the leak check does not search it either (neither kept nor a
+  source) `[мейнтейнер: 2026-11-01]`.
+- Numbers inside text or unknown fields (`"comment": 79001234567`) are kept and not checked:
+  legacy writes such fields as strings, so only a hand-edited file holds one.
+- A day field of `multi_day_results` that is a time is told by shape (`h:mm:ss`, a decimal tail
+  allowed, any number of hours); legacy writes neither the tail (accuracy 0) nor a time over a
+  day. A negative time (`-1:59:00`, no clamp in legacy) is masked as text. A numeric code
+  below 1 (negative) is neither masked nor checked.
+- A day field of `multi_day_results` cut at 14 characters inside a clause and a free hint may
+  keep up to the first ten letters of the hint if they are the start of one of legacy's hints
+  (`пп1 # Непрохож` from a surname); the leak check searches the cut hint, but a name that begins
+  like a legacy hint is not told from it.
 - Logs and protocols are counted, not anonymized (questions in `findings.agent.md`).

@@ -134,3 +134,44 @@ Scan of this pass: the new categories first matched words of the schema (old fil
 `address` and similar as contact and place values), counter lines of the manifest
 (`"values:card_number": 844`) and a few words of this pass's code. Fixed in the scan, by TDD: values that also stand in a kept field of their file or in legacy's own
 texts are not searched, short cards only as a field value, middle names not searched.
+
+## Re-review of `aceedf4` and its fix pass (2026-11-01)
+
+A second Fable sub-agent reviewed `aceedf4` on synthetic data only (adversarial inputs it made
+itself; 252 tests passed, synthetic evidence byte-identical under two hash seeds). No critical
+finding: no input of a shape legacy writes left personal data in a copy with a silent check. Four
+important, ten minor. Maintainer's decisions `[мейнтейнер: 2026-11-01]`: fix 1–4, 6, 8, 9, 11–13
+by TDD (RED run first); 5, 7, 10, 14 to README «Limits». Not run on the corpus: the sandbox
+withholds it; the corpus part of the evidence (`commands.txt`) is for the maintainer to rerun.
+
+| # | Finding | Done |
+|---|---|---|
+| 1 | the check did not find a free comment cut to 14 characters in a day field other than the last of `multi_day_results` (the next time follows without a separator) | the copy is searched field by field (`_copy_strings`, `_nodes`) |
+| 2 | `scan` did not search surnames of `chief_referee`, `secretary` | added to the scanned surnames |
+| 3 | a day field of digits, `:`, `.`, `,` was kept as a time: a numeric comment (phone, date, card) stayed in `multi_day_results`; non-ASCII digits too | a time is `h:mm:ss[.f]` in ASCII digits or empty |
+| 4 | a numeric code written as a whole float was not masked | renumbered as a float, like cards |
+| 6 | an unknown race-level key was kept text in the check, masked text in the anonymizer | the check treats it as sensitive text |
+| 8 | a non-string `status_comment` was kept text in the check | sensitive text, like in the anonymizer |
+| 9 | a clause with a free hint: the hint cut into a day field was not searched | the cut hint is searched |
+| 11 | a birth date written as a number was not in the `scan` set | scanned as a word (not `…0101`) |
+| 12 | `scan` found a card only as one token | also in groups of three (`8 123 456`, `8'123'456`, no-break spaces) |
+| 13 | `пп 12345678` was kept as a rule clause | a clause number has up to three digits |
+| 5, 7, 10, 14 | derived strings equal to the comment only; numbers in text fields; a name starting like a legacy hint; no free-text category in `scan` | not changed; in README «Limits» |
+
+### Opus review of that fix pass (2026-11-01)
+
+An Opus sub-agent reviewed the uncommitted pass on synthetic data only: nothing critical, two
+important, eight minor. Maintainer's decisions `[мейнтейнер: 2026-11-01]`: fix I-1, I-2, M-1, M-2,
+M-5, M-8, then M-3, M-4; M-6 and M-7 to README «Limits». Each fix by TDD (RED run first).
+
+| # | Finding | Done |
+|---|---|---|
+| I-1 | the check searched the cut of a legacy hint, which the anonymizer keeps → `leak:text` on a correct copy (`пп6.6.4 # не с`) | the cut is searched as the anonymizer masks it (`status_comment_free_text(cut, cut=True)`); a clause or the start of a legacy hint is not |
+| I-2 | the words of a referee field were all searched as surnames | by the maintainer's six formats (`Фамилия И. О.`, `Фамилия И.`, `И. О. Фамилия`, `И. Фамилия`, `Фамилия И.О.`, `И.О. Фамилия`) the surname is the only word of four letters or more; the code did that already, the tests now pin the formats and README names the rule |
+| M-1 | a text not starting on a 14-character boundary was missed | the whole string is searched with the fields |
+| M-2 | any int was a birth date in `scan` (`1990`, `0`); `"19900517"`, `19900517.0` missing | only `YYYYMMDD` other than 1 January, as an int, a whole float or ASCII digits |
+| M-3 | unknown file-level keys invisible to the check | sensitive text, like in the anonymizer |
+| M-4 | cards in groups with `,`, `.`, thin space, leading zero, a number before the card | all of these; the leading groups may be another number |
+| M-5 | a dotted number with many groups was a rule clause | three to four numbers of one or two digits, as legacy's clauses |
+| M-6, M-7 | time shape wider than legacy's; negative codes | not changed; README «Limits» |
+| M-8 | README: eight letters of a cut hint | ten (no spaces around `#`) |

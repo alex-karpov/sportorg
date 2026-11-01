@@ -170,8 +170,12 @@ LEGACY_HINTS: Final = frozenset(
     )
 )
 # ``п.п.6.6.4``, ``пп6.6.4``, ``п. п. 6.6.4`` [мейнтейнер: 2026-11-01]
-_CLAUSE = re.compile(r"п\.?\s?п\.?\s?\d+(?:\.\d+)*\.?", re.IGNORECASE)
-_TIME_FIELD = re.compile(r"[\d:.,]*")
+# legacy's clauses have three to four numbers of one or two digits
+# [код: pysport@b548c35 sportorg/data/configs/status_comments.txt]: a longer run of digits or of
+# groups is a phone or a card number
+_CLAUSE = re.compile(r"п\.?\s?п\.?\s?[0-9]{1,2}(?:\.[0-9]{1,2}){0,4}\.?", re.IGNORECASE)
+# a day field of ``multi_day_results`` that is a time (``0:31:00``, ``1:02:03.5``) or empty
+_TIME_FIELD = re.compile(r"(?:[0-9]+:[0-9]{2}:[0-9]{2}(?:[.,][0-9]+)?)?")
 ORG_KEPT: Final = frozenset({"object", "id", "count_person", "count_finished", "sex"})
 ORG_TEXT: Final[dict[str, Kind]] = {
     "name": "org",
@@ -281,6 +285,8 @@ class _Masker:
             return value
         if isinstance(value, int):
             return pseudonym.number_code(self.key, value)
+        if isinstance(value, float) and value.is_integer():
+            return float(pseudonym.number_code(self.key, int(value)))
         return self.deep("code", value)
 
     def birth(self, person: dict[str, Json], out: dict[str, Json]) -> None:

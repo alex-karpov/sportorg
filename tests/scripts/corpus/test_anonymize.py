@@ -437,3 +437,48 @@ def test_the_status_titles_are_legacys_own() -> None:
     text = po.read_text(encoding="utf-8")
     russian = [text.split(f'msgid "{t}"\nmsgstr "', 1)[1].split('"', 1)[0] for t in english]
     assert set(anonymize.LEGACY_STATUS_TITLES) == set(english) | set(russian)
+
+
+# ---------------------------------------------------------------- fix pass after the re-review
+
+
+def _day_field_after(comment: str) -> str:
+    """Day 2 of a multi-day result whose status comment (and day field) is ``comment``."""
+    doc = synth.personal_legacy_shape()
+    result = _items(_race(doc, 1), "results")[1]
+    result["status_comment"] = comment
+    result["multi_day_results"] = "0:31:00       " + f"{comment:<14}"[:14]
+    new = _items(_race(_run(doc).doc, 1), "results")[1]
+    return as_str(new["multi_day_results"])[synth.DAY_FIELD :]
+
+
+@pytest.mark.parametrize("comment", ["89001234567", "01.02.1990", "500,123", "١٢٣٤٥", "12:34"])
+def test_a_status_comment_of_digits_is_masked_in_the_day_field(comment: str) -> None:
+    assert comment not in _day_field_after(comment)
+
+
+@pytest.mark.parametrize("time", ["0:31:00", "10:31:00.5", "1:02:03,25", ""])
+def test_a_time_stays_in_the_day_field(time: str) -> None:
+    assert _day_field_after(time).rstrip(" ") == time
+
+
+def test_a_numeric_code_written_as_a_float_is_renumbered_as_a_float() -> None:
+    new, _ = _shaped("national_code", 1_234_567.0)
+    assert new["national_code"] == float(pseudonym.number_code(KEY, 1_234_567))
+
+
+@pytest.mark.parametrize("comment", ["пп 12345678", "п.п.89001234567", "пп1234"])
+def test_a_long_digit_run_is_not_a_rule_clause(comment: str) -> None:
+    assert anonymize.status_comment(KEY, comment)[1] == "masked"
+
+
+@pytest.mark.parametrize(
+    "comment", ["пп8.900.123.45.67", "п.п.123.456.789", "пп 8.123.456", "пп1.2.3.4.5.6"]
+)
+def test_a_dotted_number_that_is_not_a_clause_of_the_rules_is_masked(comment: str) -> None:
+    assert anonymize.status_comment(KEY, comment)[1] == "masked"
+
+
+@pytest.mark.parametrize("comment", ["п.п.4.6.12.7", "п.п.3.13.12.2", "пп4.3.6.6"])
+def test_the_clauses_legacy_offers_are_kept(comment: str) -> None:
+    assert anonymize.status_comment(KEY, comment)[1] == "kept"

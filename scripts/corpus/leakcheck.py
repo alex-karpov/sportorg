@@ -16,14 +16,15 @@ Two uses:
   global search would report coincidences.
 - ``scan``: text files (evidence, the repository) and commit messages against the sensitive
   values of every race file in the corpus and of legacy's ``tests/data/test.json``, which holds
-  personal data ``[мейнтейнер: 2026-10-31]``: surnames (words of four letters or more),
-  organization names and places (five or more), contacts and codes (whole values), card numbers
-  and numeric codes of six digits or more anywhere, shorter card numbers (SI5) only as the value
-  of a card field (``"card_number": 12345``), birth dates other than 1 January (the date legacy
-  stores for a year only [код: pysport@b548c35 sportorg/models/memory.py:1379-1399]). Given
-  names and middle names (formed from given names) are not searched: too common to tell a leak
-  from a word. Five-digit numbers in free text are not searched either: with thousands of SI5
-  cards in the corpus most such numbers would match by chance ``[мейнтейнер: 2026-11-01]``.
+  personal data ``[мейнтейнер: 2026-10-31]``: surnames (words of four letters or more,
+  referees' too), organization names and places (five or more), contacts and codes (whole
+  values), card numbers and numeric codes of six digits or more anywhere, shorter card numbers
+  (SI5) only as the value of a card field (``"card_number": 12345``), birth dates other than
+  1 January (the date legacy stores for a year only
+  [код: pysport@b548c35 sportorg/models/memory.py:1379-1399]). Given names and middle names
+  (formed from given names) are not searched: too common to tell a leak from a word.
+  Five-digit numbers in free text are not searched either: with thousands of SI5 cards in the
+  corpus most such numbers would match by chance ``[мейнтейнер: 2026-11-01]``.
   A value that also stands in a kept field of its file (a key of the schema, a group name) or in
   legacy's own texts (status titles, the hints of rule clauses) is not searched: its presence
   in the repository says nothing about the corpus.
@@ -76,6 +77,8 @@ MIN_VALUE: Final = 3  # letters and digits; shorter values (a thread id "17") ma
 MIN_SURNAME: Final = 4
 MIN_ORG: Final = 5
 MIN_CARD: Final = 100_000
+DATE_NUMBERS: Final = range(10_000_000, 100_000_000)  # YYYYMMDD
+JAN_FIRST: Final = 101  # MMDD of 1 January
 SECRET_SETTINGS: Final = anonymize.CLEARED_SETTINGS | anonymize.TEXT_SETTINGS
 PERSON_WORDS: Final = frozenset({"name", "surname", "middle_name"})
 ORG_FIELDS: Final[dict[str, str]] = {
@@ -113,6 +116,31 @@ def _strings(value: Json) -> Iterator[str]:
             yield from _strings(item)
 
 
+def _searched(key: str, value: str) -> str:
+    """The text searched for one value: ``multi_day_results`` is one field of 14 characters per day.
+
+    The next day's time follows a cut text with no separator, so the fields are searched apart,
+    and the whole string too (a text that does not start on a field boundary).
+    """
+    if key != anonymize.MULTI_DAY:
+        return value
+    size = anonymize.DAY_FIELD
+    return "\n".join([value, *(value[i : i + size] for i in range(0, len(value), size))])
+
+
+def _copy_strings(value: Json, key: str = "") -> Iterator[str]:
+    """Like ``_strings``, with day fields apart: the strings searched in an anonymized copy."""
+    if isinstance(value, str):
+        yield _searched(key, value)
+    elif isinstance(value, list):
+        for item in value:
+            yield from _copy_strings(item, key)
+    elif isinstance(value, dict):
+        for name, item in value.items():
+            yield name
+            yield from _copy_strings(item, name)
+
+
 def _values(value: Json) -> Iterator[str]:
     """Strings inside ``value``, without the keys of nested objects."""
     if isinstance(value, str):
@@ -138,6 +166,19 @@ def iso_date(text: str) -> str | None:
     if match[1]:
         return f"{match[1]}-{match[2]}-{match[3]}"
     return f"{match[6]}-{match[5]}-{match[4]}"
+
+
+def _whole_number(value: Json) -> int | None:
+    """An int, a whole float, or ASCII digits as an int; ``None`` for anything else."""
+    if isinstance(value, bool):
+        return None
+    if isinstance(value, int):
+        return value
+    if isinstance(value, float) and value.is_integer():
+        return int(value)
+    if isinstance(value, str) and value.isascii() and value.isdigit():
+        return int(value)
+    return None
 
 
 class _Extractor:
@@ -183,8 +224,8 @@ class _Extractor:
         """A date by record; a date written as a number (``19900517``) too."""
         if isinstance(value, str) and (date := iso_date(value)):
             self.found.dates[record] = date
-        elif isinstance(value, int) and not isinstance(value, bool):
-            self.found.numbers[record] = ("birth_date", value)
+        elif (number := _whole_number(value)) is not None:
+            self.found.numbers[record] = ("birth_date", number)
 
     def person(self, item: Json) -> None:
         person = as_dict(item)
@@ -205,13 +246,18 @@ class _Extractor:
 
     def status_comment(self, value: Json) -> None:
         """A rule clause is kept; the free part is sensitive, and as cut into a day field."""
-        free = anonymize.status_comment_free_text(value) if isinstance(value, str) else None
+        if not isinstance(value, str):
+            self.value("text", value)  # the anonymizer masks every string of it
+            return
+        free = anonymize.status_comment_free_text(value)
         if free is None:
             self.kept("status_comment", value)
             return
         self.value("text", free)
-        if free == value and len(free.strip()) > anonymize.DAY_FIELD:
-            self.value("text", free[: anonymize.DAY_FIELD].rstrip(" "))
+        if len(value.strip()) > anonymize.DAY_FIELD:  # as cut into a day field
+            cut = anonymize.status_comment_free_text(value[: anonymize.DAY_FIELD], cut=True)
+            if cut is not None:  # None: a clause, or a start of legacy's hint, which stays
+                self.value("text", cut.rstrip(" "))
 
     def result(self, item: Json) -> None:
         result = as_dict(item)
@@ -243,6 +289,8 @@ class _Extractor:
                 self.value("race", value)
             elif name in anonymize.DATA_PERSON:
                 self.words(value)
+                for text in _values(value):
+                    self.found.surnames.add(normalize(text))
             elif name in anonymize.DATA_KEPT:
                 self.kept(name, value)
             else:
@@ -271,8 +319,10 @@ class _Extractor:
                 self.data(value)
             elif name == "settings":
                 self.settings(value)
-            else:
+            elif name in anonymize.RACE_KEPT:
                 self.kept(name, value)
+            else:
+                self.value("text", value)  # the anonymizer masks an unknown key as text
 
 
 def _keys(value: Json) -> Iterator[str]:
@@ -293,6 +343,10 @@ def extract(doc: Json) -> Sensitive:
     extractor = _Extractor()
     for race in racefile.races_of(doc):
         extractor.race(race)
+    if isinstance(doc, dict) and "races" in doc:  # the anonymizer masks other keys as text
+        for name, value in doc.items():
+            if name not in anonymize.FILE_KEPT and name != "races":
+                extractor.value("text", value)
     extractor.found.kept.extend(sorted(set(_keys(doc))))
     extractor.found.kept.extend(anonymize.LEGACY_STATUS_TITLES)
     return extractor.found
@@ -326,7 +380,7 @@ class _Hits:
 
 
 def _text_hits(sensitive: Sensitive, anonymized: Json) -> _Hits:
-    out_text = "\n".join(normalize(s) for s in _strings(anonymized))
+    out_text = "\n".join(normalize(s) for s in _copy_strings(anonymized))
     out_tokens = set(tokens(out_text))
     kept_text = "\n".join(normalize(s) for s in sensitive.kept)
     kept_tokens = set(tokens(kept_text))
@@ -369,19 +423,19 @@ def check_pair(original: Json, anonymized: Json) -> dict[str, int]:
     return dict(sorted(counts.items()))
 
 
-def _nodes(value: Json, path: str) -> Iterator[tuple[str, str]]:
+def _nodes(value: Json, path: str, key: str = "") -> Iterator[tuple[str, str]]:
     """``(path, string)`` of every string and key; list indexes folded to ``[]``."""
     if isinstance(value, str):
-        yield path, value
+        yield path, _searched(key, value)
     elif isinstance(value, list):
         for item in value:
-            yield from _nodes(item, f"{path}[]")
+            yield from _nodes(item, f"{path}[]", key)
     elif isinstance(value, dict):
-        for key, item in value.items():
-            name = key if _KEY.fullmatch(key) else "(other)"
-            child = f"{path}.{name}" if path else name
-            yield f"{child} (key)", key
-            yield from _nodes(item, child)
+        for name, item in value.items():
+            label = name if _KEY.fullmatch(name) else "(other)"
+            child = f"{path}.{label}" if path else label
+            yield f"{child} (key)", name
+            yield from _nodes(item, child, name)
 
 
 def leak_paths(original: Json, anonymized: Json) -> dict[str, int]:
@@ -420,6 +474,7 @@ class ScanSet:
     cards: set[str] = field(default_factory=set[str])
     short_cards: set[str] = field(default_factory=set[str])
     dates: set[str] = field(default_factory=set[str])
+    birth_numbers: set[str] = field(default_factory=set[str])
 
 
 SCAN_CATEGORIES: Final = ("surname", "org", "place", "contact", "code", "card", "birth_date")
@@ -428,9 +483,25 @@ SCAN_CATEGORIES: Final = ("surname", "org", "place", "contact", "code", "card", 
 _CARD_VALUE = re.compile(
     r"(?<![\w:.])[\"']?(?:card_number|sportident_card)[\"']?\s*[:=]\s*[\"']?([0-9]+)"
 )
+# digits in groups of three: ``8 123 456``, ``8'123'456``, with no-break spaces too
+_GROUPED_DIGITS = re.compile(r"(?<!\w)[0-9]{1,3}(?:[ '.,\u00a0\u2009\u202f][0-9]{3})+(?!\w)")
 _LEGACY_TEXT: Final = "\n".join(
     [normalize(t) for t in anonymize.LEGACY_STATUS_TITLES] + sorted(anonymize.LEGACY_HINTS)
 )
+
+
+def _group_numbers(grouped: str) -> set[str]:
+    """What digits in groups can be: all of them, or all but the leading groups (``КП 31 212 345``).
+
+    Without leading zeros, as card numbers are written.
+    """
+    groups = re.split(r"[^0-9]", grouped)
+    return {str(int("".join(groups[i:]))) for i in range(len(groups) - 1)}
+
+
+def _is_date_number(number: int) -> bool:
+    """``YYYYMMDD`` other than 1 January: a shorter or longer number is no date to search."""
+    return DATE_NUMBERS.start <= number < DATE_NUMBERS.stop and number % 10_000 != JAN_FIRST
 
 
 def _date_forms(iso: str) -> list[str]:
@@ -463,6 +534,8 @@ def scan_set(docs: Iterable[Json]) -> ScanSet:
                 scan.codes.add(str(number))
             elif category == "card":
                 (scan.cards if number >= MIN_CARD else scan.short_cards).add(str(number))
+            elif category == "birth_date" and _is_date_number(number):
+                scan.birth_numbers.add(str(number))
         for date in found.dates.values():
             if not date.endswith("-01-01"):
                 scan.dates.update(_date_forms(date))
@@ -484,11 +557,15 @@ def scan_words(text: str, scan: ScanSet) -> list[tuple[int, str, str]]:
         ):
             found = sorted(v for v in values if set(tokens(v)) <= words and _bounded(normalized, v))
             hits.extend((number, category, v) for v in found)
-        cards = (words & scan.cards) | (
-            {m[1] for m in _CARD_VALUE.finditer(line)} & scan.short_cards
+        grouped = {n for m in _GROUPED_DIGITS.finditer(line) for n in _group_numbers(m[0])}
+        cards = (
+            (words & scan.cards)
+            | (grouped & scan.cards)
+            | ({m[1] for m in _CARD_VALUE.finditer(line)} & scan.short_cards)
         )
         hits.extend((number, "card", c) for c in sorted(cards))
         hits.extend((number, "birth_date", d) for d in sorted(d for d in scan.dates if d in line))
+        hits.extend((number, "birth_date", n) for n in sorted(words & scan.birth_numbers))
     return hits
 
 
@@ -612,7 +689,7 @@ def scan_command(args: Options) -> int:
         f"{len(scan.orgs)} organizations, "
         f"{len(scan.places)} places, {len(scan.contacts)} contacts, {len(scan.codes)} codes, "
         f"{len(scan.cards)} cards, {len(scan.short_cards)} short cards, "
-        f"{len(scan.dates)} dates); "
+        f"{len(scan.dates) + len(scan.birth_numbers)} dates); "
         f"scanned {files} files and {len(commits)} commit messages; findings: {findings}; "
         f"in synthetic outputs: {chance}; not text: {skipped['not text']}"
     )
