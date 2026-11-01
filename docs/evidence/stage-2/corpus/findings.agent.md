@@ -104,3 +104,33 @@ Classified: legacy bug `[мейнтейнер: 2026-11-01]` (a regression in rea
    ~/.cache/sportorg-stage2/leakcheck/old-docs-words.tsv` (91 matches over `docs/` and `backlog/`,
    synthetic outputs included), outside the repository and not shown in the session: the words are
    values of the corpus. Decision pending the maintainer's reading.
+
+## Review of S3 and the fix pass (2026-11-01)
+
+A sub-agent (Fable, at the maintainer's request) reviewed `74105e5..HEAD` on synthetic data only:
+1 critical, 4 important, 9 minor findings. Decisions `[мейнтейнер: 2026-11-01]`: C1 option (в)
+with `пп` without dots as a valid clause; I3 the three points on SI5 numbers; the rest as
+recommended. Each fix by TDD (the RED run before the code); outputs in this directory.
+
+| # | Finding | Done |
+|---|---|---|
+| C1 | legacy copies `status_comment` into `result`, `result_relay`, `result_current` and the 14-character day fields of `multi_day_results` `[код: pysport@b548c35 sportorg/models/memory.py:480-490,702-747,969-973]`; the anonymizer kept them, the leak check called them residual | a rule clause (`п.п.6.6.4`, `пп6.6.4`, alone or with one of legacy's hints) is kept; a free hint after a clause is masked; any other comment is masked, also in the four derived strings (legacy never reads them back, `memory.py:650-700`). The leak check treats the derived strings as neither kept nor a source and searches a masked comment also as cut to 14 characters; `leak_paths` names residual paths too. Synthetic file `personal_legacy_shape` (legacy's shape). Corpus: 5312 comments kept as rule clauses, 6 masked, 0 with a free hint; `residual:text` 176 → 12 |
+| — | first corpus run after C1: 1 leak (`leak:org`, one file, 12 derived strings) | without a comment legacy writes the status title `[код: pysport@b548c35 sportorg/models/memory.py:52-53,702-706; ru_RU sportorg.po]`, and a value of that file equals a title `[допущение по коду: the value was not read; the fix below turned exactly this leak into one residual and changed nothing else]`. Legacy's status titles (English and Russian, checked against legacy by a test) count as kept text |
+| I1 | a file with a BOM, NBSP, ZWSP or soft hyphen was classed binary and skipped by `scan` | such text is text; `normalize` drops format marks; `scan` reads every decodable file (logs too) and prints `not text: N` |
+| I2 | a card as `212345.0` or `"212 345"`, a numeric `birth_date`, a `birthday` without `birth_date` passed unmasked and unseen | a whole float is renumbered as a float, any other shape becomes 0 (counted); a non-string birth date becomes `null`; `birthday` always follows `birth_date` or is blanked; the leak check reads numbers in every shape and `birthday` by record |
+| I3 | `scan` missed contacts, codes, middle names, places, SI5 cards | contacts and codes (whole values), places (five letters or more) searched; card numbers under 100 000 only as the value of a card field; the manifest counts person cards by card type (corpus: SI5 290, SI5 series 2–4 115 of 28 681 persons). Not done as proposed: middle names are not searched in text, as given names (formed from them, too common) |
+| I4 | the S3 log and the message of the first S3 commit told which invented value of an S2 test had matched the corpus | the 9 unpushed commits after `74105e5` were rewritten (`git filter-branch`): the sentence removed from the message and from the plan and this file; the same commit now changes an invented card number of that test too |
+| M1 | text after a birth date was written back | a date with any text after it (but a time of day) is unparsed → `null` |
+| M2 | `isdigit()` accepts `²`, then `int()` raises with the value | ASCII digits only (anonymizer, leak check, passport) |
+| M3 | Latin directory names up to 16 characters were printed | only the guide's ids `[A-Z]{1,2}[0-9]{1,3}[a-z]?` are printed, any other name as `dir-<hash>` |
+| M4 | gzip bytes depend on the zlib build | the manifest also holds `anonymized_text_sha256` of the decoded copy |
+| M5 | keys inside unknown structures are kept | not changed (legacy writes no personal data as keys); in README «Limits» |
+| M6 | mask counters were partial | organizations, race data, settings (`clear:` and `mask:`), cards and codes counted |
+| M7 | tests | the weak year assertion fixed; a legacy-shaped fixture and negative tests added (C1, I1–I3) |
+| M8 | README wording on residuals | rewritten |
+| M9 | `special_cases` and setting values matching a safe pattern are printed | not changed; in README «Limits» |
+
+Scan of this pass: the new categories first matched words of the schema (old files hold
+`address` and similar as contact and place values), counter lines of the manifest
+(`"values:card_number": 844`) and a few words of this pass's code. Fixed in the scan, by TDD: values that also stand in a kept field of their file or in legacy's own
+texts are not searched, short cards only as a field value, middle names not searched.

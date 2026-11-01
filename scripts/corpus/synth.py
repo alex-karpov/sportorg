@@ -600,10 +600,77 @@ def personal_old_format() -> Json:
     return old
 
 
+MISSING_PUNCH, DID_NOT_FINISH, OVERTIME = 4, 5, 8  # [код: pysport@b548c35 memory.py:74-93]
+DAY_FIELD: Final = 14  # [код: pysport@b548c35 sportorg/models/memory.py:480-490,969-973]
+# (bib, surname, (status, status_comment) of day 1, of day 2); invented, rule clauses as legacy
+# offers them [код: pysport@b548c35 sportorg/data/configs/status_comments.txt:1-21]
+SHAPE_PEOPLE: Final[tuple[tuple[int, str, tuple[int, str], tuple[int, str]], ...]] = (
+    (1, "Выдумкин", (OK, ""), (OK, "")),
+    (2, "Небывалова", (OK, ""), (DISQUALIFIED, "Снят по протесту Выдумкина")),
+    (3, "Придумова", (DID_NOT_FINISH, "п.п.6.6.4"), (OK, "")),
+    (
+        4,
+        "Небыльцев",
+        (MISSING_PUNCH, "пп3.13.12.2 # нарушение порядка прохождения КП"),
+        (DID_NOT_FINISH, "пп6.6.4 # спортсмен сошёл с трассы"),
+    ),
+    (5, "Ежиков", (OVERTIME, "п.п.5.4.7 # Ежиков ждал Небывалову"), (OK, "")),
+)
+
+
+def _shown(status: int, comment: str, minutes: int) -> str:
+    """``get_result()`` as legacy writes it: the time, or the status comment if not OK."""
+    return f"0:{minutes:02}:00" if status == OK else comment
+
+
+def personal_legacy_shape() -> Json:
+    """Two days of a multi-day event whose results carry the strings legacy derives on save.
+
+    Legacy writes ``result``, ``result_relay``, ``result_current`` and ``multi_day_results``
+    beside ``status_comment`` and copies the comment into them for a status other than OK;
+    ``multi_day_results`` holds one field of 14 characters per day, the comment cut to fit
+    [код: pysport@b548c35 sportorg/models/memory.py:480-490,601-647,702-746,969-973]. Legacy never
+    reads them back [код: pysport@b548c35 sportorg/models/memory.py:650-700]. Comments: free text,
+    rule clauses with and without legacy's hint, and a clause with a free hint.
+    """
+    days: list[Json] = []
+    shown: dict[int, list[str]] = {}
+    for day in (1, 2):
+        race = RaceBuilder(f"legacy_shape_{day}", MULTI_DAY, {"time_accuracy": 0})
+        race.data = {"title": f"Выдуманная многодневка, день {day}"}
+        group = race.group("М21", race.course("A", ["31", "32"]))
+        for index, (bib, surname, *outcomes) in enumerate(SHAPE_PEOPLE):
+            status, comment = outcomes[day - 1]
+            start, minutes = START + index * MIN, 30 + index
+            extra = _person_extra(surname, "Ян", 500_100 + bib, "2000-06-15")
+            pid = race.person(bib, group, start=start, extra=extra)
+            text = _shown(status, comment, minutes)
+            shown.setdefault(bib, []).append(text)
+            derived: dict[str, Json] = {
+                "card_number": 500_100 + bib,
+                "status_comment": comment,
+                "result": text,
+                "result_relay": text,
+                "result_current": text,
+            }
+            punches = _at(start, ("31", 5), ("32", 10))
+            race.result(
+                pid, finish=start + minutes * MIN, punches=punches, status=status, extra=derived
+            )
+        days.append(as_list(as_dict(race.document())["races"])[0])
+    for race in days:
+        for result in map(as_dict, as_list(as_dict(race)["results"])):
+            bib = next(b for b, *_ in SHAPE_PEOPLE if result["card_number"] == 500_100 + b)
+            fields = (f"{text}{' ' * DAY_FIELD}"[:DAY_FIELD] for text in shown[bib])
+            result["multi_day_results"] = "".join(fields)
+    return {"version": LEGACY_VERSION, "current_race": 0, "races": days}
+
+
 PERSONAL: Final[dict[str, Callable[[], Json]]] = {
     "personal_individual": personal_individual,
     "personal_multi_day": personal_multi_day,
     "personal_old_format": personal_old_format,
+    "personal_legacy_shape": personal_legacy_shape,
 }
 
 

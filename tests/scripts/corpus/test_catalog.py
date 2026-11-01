@@ -297,3 +297,55 @@ def test_templates_and_punch_codes_legacy_cannot_read_are_counted(tmp_path: Path
     facts = as_dict(as_list(_race_files(_build(root, tmp_path))[0]["races"])[0])
     assert facts["list_templates_not_integer"] == 1
     assert facts["punch_codes_not_integer"] == 1
+
+
+@pytest.mark.parametrize(("value", "shown"), [("12", "12"), ("²", "(other)"), ("١٢", "(other)")])
+def test_a_passport_number_is_shown_only_in_ascii_digits(value: str, shown: str) -> None:
+    assert catalog.passport_value("persons", value) == shown
+
+
+def test_race_facts_count_person_cards_by_card_type() -> None:
+    race = racefile.races_of(synth.personal_individual())[0]
+    facts = catalog.race_facts(race, 0, b"synthetic test key, not the corpus key")
+    assert facts["cards_by_class"] == {
+        "SI5": 1,
+        "SI5 series 2": 1,
+        "SI6": 1,
+        "SI8": 1,
+        "SI10": 1,
+        "SIAC1": 1,
+        "pCard": 1,
+        "tCard": 1,
+        "gap": 1,
+        "none": 1,
+    }
+
+
+def test_totals_count_person_cards_by_card_type(tmp_path: Path) -> None:
+    manifest = _build(_corpus(tmp_path), tmp_path)
+    races = [as_dict(r) for f in _race_files(manifest) for r in as_list(f["races"])]
+    expected: dict[str, int] = {}
+    for race in races:
+        for label, count in as_dict(race["cards_by_class"]).items():
+            expected[label] = expected.get(label, 0) + int(str(count))
+    assert as_dict(manifest["totals"])["cards_by_class"] == dict(sorted(expected.items()))
+    assert sum(expected.values()) == sum(int(str(r["persons"])) for r in races)
+
+
+@pytest.mark.parametrize("name", ["MskCup2019", "Moscow-Open", "c01", "C0001", "ABC1"])
+def test_a_latin_directory_name_off_the_scheme_is_shown_by_a_hash(
+    tmp_path: Path, name: str
+) -> None:
+    root = _corpus(tmp_path)
+    _write_race(root / "raw" / name / "a.json", synth.individual())
+    ids = [as_str(as_dict(d)["id"]) for d in as_list(_build(root, tmp_path)["directories"])]
+    assert name not in ids
+
+
+def test_the_manifest_hashes_the_decoded_text_of_each_copy(tmp_path: Path) -> None:
+    paths: dict[str, tuple[Path, Path]] = {}
+    manifest = catalog.build(_corpus(tmp_path), tmp_path / "cache", key=KEY, paths=paths)
+    for entry in _race_files(manifest):
+        copy = paths[as_str(entry["file_id"])][1]
+        text = racefile.decode(copy.read_bytes())[0]
+        assert entry["anonymized_text_sha256"] == hashlib.sha256(text.encode("utf-8")).hexdigest()

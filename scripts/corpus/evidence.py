@@ -99,6 +99,7 @@ def synthetic_corpus(root: Path) -> Path:
     _write(s02 / "sportorg.log", log.encode("cp1251"))
     _race(s03 / "рогейн с формулой.json", _formula_race())
     _race(s03 / "индивидуальная.json", synth.individual(), "gzip")
+    _race(s03 / "многодневка.json", synth.personal_legacy_shape(), "gzip")
     inventory = f"{INVENTORY_HEADER}\nS01,ориентирование{',' * 14}\nS02{',' * 15}\nS03{',' * 15}\n"
     _write(root / "inventory.csv", inventory.encode())
     return root
@@ -219,6 +220,7 @@ def manifest_tables(manifest: Json) -> str:
         for kind in ("leak", "residual")
     }
     residual = {k: v for k, v in counts.items() if k.startswith("residual:")}
+    masked = as_dict(totals["masked"])
     lines = [
         (
             f"Key id `{data['key_id']}`. {totals['directories']} directories, "
@@ -228,11 +230,18 @@ def manifest_tables(manifest: Json) -> str:
         ),
         "",
         f"- kinds of files: {_join(totals['kinds'])}",
+        f"- person cards by card type: {_join(totals['cards_by_class'])}",
         f"- race file formats: {_join(totals['formats'])}",
         f"- SportOrg versions of the last save: {_join(totals['versions'])}",
         f"- races with `result_processing_mode = ardf`: {data['ardf_races']}",
         f"- files with `scores_mode = formula` (R22): {len(as_list(data['formulas']))}",
         f"- leak check of the copies: {_join(leaks)} (residual by category: {_join(residual)})",
+        (
+            "- status comments (C1): rule clause kept "
+            f"{masked.get('kept:result.status_comment', 0)}, clause kept and hint masked "
+            f"{masked.get('mask:result.status_comment_hint', 0)}, masked "
+            f"{masked.get('mask:result.status_comment', 0)}"
+        ),
         "",
         DIRECTORY_HEADER,
         "|---|---|---|---|",

@@ -6,7 +6,7 @@ title: >-
 status: In Progress
 assignee: []
 created_date: 2026-10-24 12:06
-updated_date: '2026-11-01T10:53:00Z'
+updated_date: '2026-11-01T12:04:00Z'
 labels:
   - stage-2
 milestone: m-2
@@ -56,4 +56,6 @@ S3 (2026-11-01): anonymization and corpus manifest for AC #2: scripts/corpus/{ps
 S3 follow-up (2026-11-01, maintainer): answers 1, 2, 4 as built (ADR-0009 T7 decided); 5 -> TASK-12; 3: code-only study of legacy's logs (corpus/logs.agent.md, Sonnet sub-agent), decided C1 in S5 (frame-only dump, mapped cards, owner bytes overwritten, CRC recomputed); F7 legacy bug (Windows: read-only gzip does not open, read-only plain file does not save, leaves .json.tmp); F8 confirmed in GUI, narrowed by new manifest counters to an empty part of a list template parsed by int() since 0f3a0a8 (proposal: legacy bug, regression); 6: matched words written outside the repo (leakcheck --words-out), decision pending.
 
 S3 follow-up 2 (2026-11-01): F8 classified legacy bug. Question 6: the maintainer found personal data (a name and a club) in docs/evidence/stage-0/legacy-fix-candidates.md, a quoted legacy test diff; all 11 test-diff blocks of that file removed from the tree, replaced by the git show command; they stay in main's history (eb40eef), rewrite is the maintainer's decision. Fable review of S3 (exception to stage rule 10 by the maintainer's word) running.
+
+S3 review fix pass (2026-11-01): Fable review of S3 (1 critical, 4 important, 9 minor) fixed by TDD per the maintainer's decisions: C1 (в) status comments that are rule clauses kept, other text masked also in legacy's derived result strings; I1 BOM/NBSP files scanned; I2 card and birth-date shapes; I3 contacts, codes, places scanned, short cards only as card field values, card types counted (middle names not searched, as given names); I4 unpushed branch rewritten (filter-branch); M1-M4, M6-M8; M5, M9 in README Limits. Legacy status titles count as kept text (turned the one new corpus leak into a residual). Synthetic and corpus evidence rebuilt twice, byte-identical: corpus 0 leaks, 29 residual, invariant 62/62; check.py green. Table in corpus/findings.agent.md; plan Session log 'S3 review and fix pass'. AC #2 unchanged. Next: S4.
 <!-- SECTION:NOTES:END -->

@@ -13,20 +13,22 @@ Fictional data in the layout of the real corpus (`scripts/corpus/evidence.py: sy
 
 ## Manifest of the synthetic corpus
 
-Key id `737280f2c208`. 3 directories, 7 race files, 8 races, 6 distinct starts (races that share a race id or the same persons count once).
+Key id `737280f2c208`. 3 directories, 8 race files, 10 races, 8 distinct starts (races that share a race id or the same persons count once).
 
-- kinds of files: pdf 1, race 7, readout-log 1, sportorg-log 1, text 2
-- race file formats: cp1251 1, gzip 2, utf-8 4
-- SportOrg versions of the last save: (none) 1, v1.8.0b2 6
+- kinds of files: pdf 1, race 8, readout-log 1, sportorg-log 1, text 2
+- person cards by card type: SI10 1, SI5 2, SI5 series 2 1, SI6 29, SI8 1, SIAC1 2, gap 1, none 17, pCard 1, tCard 1
+- race file formats: cp1251 1, gzip 3, utf-8 4
+- SportOrg versions of the last save: (none) 1, v1.8.0b2 7
 - races with `result_processing_mode = ardf`: 0
 - files with `scores_mode = formula` (R22): 1
 - leak check of the copies: leak 0, residual 0 (residual by category: —)
+- status comments (C1): rule clause kept 3, clause kept and hint masked 1, masked 2
 
 | directory | kinds | files.tsv: listed / matched / missing on disk / not listed / other hash | passport |
 |---|---|---|---|
 | S01 | pdf 1, race 2, text 1 | 3 / 2 / 1 / 2 / 0 | sport ориентирование |
 | S02 | race 3, readout-log 1, sportorg-log 1, text 1 | — | — |
-| S03 | race 2 | — | — |
+| S03 | race 3 | — | — |
 
 | race file | format | shape | version | races: type / mode / persons / results | same start as | leaks |
 |---|---|---|---|---|---|---|
@@ -36,13 +38,14 @@ Key id `737280f2c208`. 3 directories, 7 race files, 8 races, 6 distinct starts (
 | S02/5f00dec11b5f | utf-8 | races | v1.8.0b2 | MULTI_DAY_RACE / time / 5 / 5 | 1 | 0 |
 | S02/9a6113e14444 | utf-8 | races | v1.8.0b2 | MULTI_DAY_RACE / time / 4 / 4 | 1 | 0 |
 | S03/2c45119473a3 | gzip | races | v1.8.0b2 | INDIVIDUAL_RACE / time / 11 / 11 | 0 | 0 |
+| S03/005fa8971956 | gzip | races | v1.8.0b2 | MULTI_DAY_RACE / time / 5 / 5; MULTI_DAY_RACE / time / 5 / 5 | 0 | 0 |
 | S03/0fd67593e806 | utf-8 | races | v1.8.0b2 | INDIVIDUAL_RACE / scores / 5 / 5 | 0 | 0 |
 
 Passport (`inventory.csv`): unfilled cells per column: days 3, edits_after_print 3, may_share 3, persons 3, processing_mode 3, protocol_kind 3, protocol_matches_file 3, protocol_signed 3, punch_system 3, race_type 3, resaved_after_race 3, source 3, special_cases 3, sport 2, version_race_day 3.
 
 ## Invariant: the oracle before and after
 
-Lane `.venv`: 6 files ran, 6 identical, 0 different, 1 not run.
+Lane `.venv`: 7 files ran, 7 identical, 0 different, 1 not run.
 
 | race file | identical | not identical: paths and counts |
 |---|---|---|
@@ -52,4 +55,5 @@ Lane `.venv`: 6 files ran, 6 identical, 0 different, 1 not run.
 | S02/5f00dec11b5f | True | — |
 | S02/9a6113e14444 | True | — |
 | S03/2c45119473a3 | True | — |
+| S03/005fa8971956 | True | — |
 | S03/0fd67593e806 | None | scores_mode = formula (R22) |

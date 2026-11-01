@@ -17,9 +17,16 @@ Two uses:
 - ``scan``: text files (evidence, the repository) and commit messages against the sensitive
   values of every race file in the corpus and of legacy's ``tests/data/test.json``, which holds
   personal data ``[мейнтейнер: 2026-10-31]``: surnames (words of four letters or more),
-  organization names, card numbers of six digits or more, birth dates other than 1 January (the
-  date legacy stores for a year only [код: pysport@b548c35 sportorg/models/memory.py:1379-1399]).
-  Given names alone are not searched: too common to tell a leak from a word.
+  organization names and places (five or more), contacts and codes (whole values), card numbers
+  and numeric codes of six digits or more anywhere, shorter card numbers (SI5) only as the value
+  of a card field (``"card_number": 12345``), birth dates other than 1 January (the date legacy
+  stores for a year only [код: pysport@b548c35 sportorg/models/memory.py:1379-1399]). Given
+  names and middle names (formed from given names) are not searched: too common to tell a leak
+  from a word. Five-digit numbers in free text are not searched either: with thousands of SI5
+  cards in the corpus most such numbers would match by chance ``[мейнтейнер: 2026-11-01]``.
+  A value that also stands in a kept field of its file (a key of the schema, a group name) or in
+  legacy's own texts (status titles, the hints of rule clauses) is not searched: its presence
+  in the repository says nothing about the corpus.
 
 Output is counts, categories, file names and line numbers, never the value found: a leak check
 that printed its findings would itself send them to the model (``docs/data-request.md``, «Д3 на
@@ -62,6 +69,7 @@ if TYPE_CHECKING:
 CORPUS_ENV: Final = "SPORTORG_CORPUS"
 _TOKEN = re.compile(r"\w+")
 _KEY = re.compile(r"[A-Za-z_][A-Za-z0-9_]{0,40}")
+_SPACED_DIGITS = re.compile(r"[0-9]+(?: [0-9]+)*")
 _DATE = re.compile(r"(\d{4})-(\d{2})-(\d{2})|(\d{2})\.(\d{2})\.(\d{4})")
 MIN_TOKEN: Final = 2
 MIN_VALUE: Final = 3  # letters and digits; shorter values (a thread id "17") match by chance
@@ -151,36 +159,59 @@ class _Extractor:
         self.found.kept.extend(_strings(value))
 
     def number(self, record: str, category: str, value: Json) -> None:
+        """A number in any shape: an int, a whole float, digits with spaces (``212 345``)."""
         if isinstance(value, bool):
             return
-        if isinstance(value, int) and value > 0:
-            self.found.numbers[record] = (category, value)
-        elif isinstance(value, str) and value.strip().isdigit() and int(value) > 0:
-            self.found.numbers[record] = (category, int(value))
+        number = 0
+        if isinstance(value, int):
+            number = value
+        elif isinstance(value, float) and value.is_integer():
+            number = int(value)
+        elif isinstance(value, str) and _SPACED_DIGITS.fullmatch(value.strip()):
+            number = int("".join(value.split()))
+        if number > 0:
+            self.found.numbers[record] = (category, number)
         elif category == "code":
             self.value("code", value)
+
+    def name_words(self, name: str, value: Json) -> None:
+        self.words(value)
+        if name == "surname":
+            self.found.surnames.add(normalize(as_str(value)))
+
+    def birth(self, record: str, value: Json) -> None:
+        """A date by record; a date written as a number (``19900517``) too."""
+        if isinstance(value, str) and (date := iso_date(value)):
+            self.found.dates[record] = date
+        elif isinstance(value, int) and not isinstance(value, bool):
+            self.found.numbers[record] = ("birth_date", value)
 
     def person(self, item: Json) -> None:
         person = as_dict(item)
         pid = as_str(person.get("id"))
         for name, value in person.items():
             if name in PERSON_WORDS:
-                self.words(value)
-                if name == "surname":
-                    self.found.surnames.add(normalize(as_str(value)))
+                self.name_words(name, value)
             elif name in anonymize.CARD_KEYS:
                 self.number(f"person:{pid}:{name}", "card", value)
             elif name in anonymize.CODE_KEYS:
                 self.number(f"person:{pid}:{name}", "code", value)
-            elif name == "birth_date":
-                if isinstance(value, str) and (date := iso_date(value)):
-                    self.found.dates[f"person:{pid}"] = date
-            elif name == "birthday":
-                pass
+            elif name in {"birth_date", "birthday"}:
+                self.birth(f"person:{pid}:{name}", value)
             elif name in anonymize.PERSON_KEPT:
                 self.kept(name, value)
             else:
                 self.value("text", value)
+
+    def status_comment(self, value: Json) -> None:
+        """A rule clause is kept; the free part is sensitive, and as cut into a day field."""
+        free = anonymize.status_comment_free_text(value) if isinstance(value, str) else None
+        if free is None:
+            self.kept("status_comment", value)
+            return
+        self.value("text", free)
+        if free == value and len(free.strip()) > anonymize.DAY_FIELD:
+            self.value("text", free[: anonymize.DAY_FIELD].rstrip(" "))
 
     def result(self, item: Json) -> None:
         result = as_dict(item)
@@ -188,6 +219,10 @@ class _Extractor:
         for name, value in result.items():
             if name in anonymize.CARD_KEYS:
                 self.number(f"result:{rid}:{name}", "card", value)
+            elif name == "status_comment":
+                self.status_comment(value)
+            elif name in anonymize.RESULT_DERIVED:
+                pass  # legacy's copies of the comment and the times: neither kept nor a source
             elif name in anonymize.RESULT_KEPT:
                 self.kept(name, value)
             else:
@@ -251,11 +286,15 @@ def _keys(value: Json) -> Iterator[str]:
 
 
 def extract(doc: Json) -> Sensitive:
-    """Every key of the file counts as kept text: keys are the schema, not data."""
+    """Every key of the file counts as kept text: keys are the schema, not data.
+
+    So do legacy's status titles, which it writes into the derived result strings.
+    """
     extractor = _Extractor()
     for race in racefile.races_of(doc):
         extractor.race(race)
     extractor.found.kept.extend(sorted(set(_keys(doc))))
+    extractor.found.kept.extend(anonymize.LEGACY_STATUS_TITLES)
     return extractor.found
 
 
@@ -282,6 +321,8 @@ class _Hits:
     counts: Counter[str]
     tokens: set[str]
     values: dict[str, set[str]]
+    residual_tokens: set[str] = field(default_factory=set[str])
+    residual_values: dict[str, set[str]] = field(default_factory=dict[str, set[str]])
 
 
 def _text_hits(sensitive: Sensitive, anonymized: Json) -> _Hits:
@@ -294,6 +335,7 @@ def _text_hits(sensitive: Sensitive, anonymized: Json) -> _Hits:
     for token in sensitive.tokens & out_tokens:
         if token in kept_tokens:
             hits.counts["residual:person"] += 1
+            hits.residual_tokens.add(token)
         else:
             hits.counts["leak:person"] += 1
             hits.tokens.add(token)
@@ -304,6 +346,7 @@ def _text_hits(sensitive: Sensitive, anonymized: Json) -> _Hits:
                 continue
             if _bounded(kept_text, value):
                 hits.counts[f"residual:{category}"] += 1
+                hits.residual_values.setdefault(category, set()).add(value)
             else:
                 hits.counts[f"leak:{category}"] += 1
                 hits.values.setdefault(category, set()).add(value)
@@ -342,16 +385,25 @@ def _nodes(value: Json, path: str) -> Iterator[tuple[str, str]]:
 
 
 def leak_paths(original: Json, anonymized: Json) -> dict[str, int]:
-    """Where in the copy each text leak stands: ``<category> in <JSON path>``; never the value."""
+    """Where in the copy each text leak stands: ``<category> in <JSON path>``; never the value.
+
+    A residual is reported as ``residual <category> in <JSON path>``.
+    """
     hits = _text_hits(extract(original), anonymized)
     found: Counter[str] = Counter()
+    kinds = (
+        ("", hits.tokens, hits.values),
+        ("residual ", hits.residual_tokens, hits.residual_values),
+    )
     for path, text in _nodes(anonymized, "races[]" if not isinstance(anonymized, dict) else ""):
         normalized = normalize(text)
-        if hits.tokens & set(tokens(normalized)):
-            found[f"person in {path}"] += 1
-        for category, values in hits.values.items():
-            if any(_bounded(normalized, value) for value in values):
-                found[f"{category} in {path}"] += 1
+        words = set(tokens(normalized))
+        for prefix, person, values in kinds:
+            if person & words:
+                found[f"{prefix}person in {path}"] += 1
+            for category, texts in values.items():
+                if any(_bounded(normalized, value) for value in texts):
+                    found[f"{prefix}{category} in {path}"] += 1
     return dict(sorted(found.items()))
 
 
@@ -362,13 +414,38 @@ def leak_paths(original: Json, anonymized: Json) -> dict[str, int]:
 class ScanSet:
     surnames: set[str] = field(default_factory=set[str])
     orgs: set[str] = field(default_factory=set[str])
+    places: set[str] = field(default_factory=set[str])
+    contacts: set[str] = field(default_factory=set[str])
+    codes: set[str] = field(default_factory=set[str])
     cards: set[str] = field(default_factory=set[str])
+    short_cards: set[str] = field(default_factory=set[str])
     dates: set[str] = field(default_factory=set[str])
+
+
+SCAN_CATEGORIES: Final = ("surname", "org", "place", "contact", "code", "card", "birth_date")
+# the value of a card field: ``"card_number": 12345``, ``card_number=12345``; not a counter name
+# such as ``"values:card_number": 844`` or ``"mask:person.card_number": 291``
+_CARD_VALUE = re.compile(
+    r"(?<![\w:.])[\"']?(?:card_number|sportident_card)[\"']?\s*[:=]\s*[\"']?([0-9]+)"
+)
+_LEGACY_TEXT: Final = "\n".join(
+    [normalize(t) for t in anonymize.LEGACY_STATUS_TITLES] + sorted(anonymize.LEGACY_HINTS)
+)
 
 
 def _date_forms(iso: str) -> list[str]:
     year, month, day = iso.split("-")
     return [iso, f"{day}.{month}.{year}"]
+
+
+def _own_values(found: Sensitive, category: str, shortest: int) -> set[str]:
+    """Values of ``category`` in no kept field of the file and not in legacy's own text."""
+    kept = "\n".join(normalize(s) for s in found.kept)
+    return {
+        v
+        for v in found.values.get(category, set())
+        if len(v) >= shortest and not _bounded(kept, v) and not _bounded(_LEGACY_TEXT, v)
+    }
 
 
 def scan_set(docs: Iterable[Json]) -> ScanSet:
@@ -377,12 +454,15 @@ def scan_set(docs: Iterable[Json]) -> ScanSet:
         found = extract(doc)
         for surname in found.surnames:
             scan.surnames.update(t for t in tokens(surname) if len(t) >= MIN_SURNAME)
-        scan.orgs.update(v for v in found.values.get("org", set()) if len(v) >= MIN_ORG)
-        scan.cards.update(
-            str(number)
-            for category, number in found.numbers.values()
-            if category == "card" and number >= MIN_CARD
-        )
+        scan.orgs.update(_own_values(found, "org", MIN_ORG))
+        scan.places.update(_own_values(found, "place", MIN_ORG))
+        scan.contacts.update(_own_values(found, "contact", MIN_VALUE))
+        scan.codes.update(_own_values(found, "code", MIN_VALUE))
+        for category, number in found.numbers.values():
+            if category == "code" and number >= MIN_CARD:
+                scan.codes.add(str(number))
+            elif category == "card":
+                (scan.cards if number >= MIN_CARD else scan.short_cards).add(str(number))
         for date in found.dates.values():
             if not date.endswith("-01-01"):
                 scan.dates.update(_date_forms(date))
@@ -396,18 +476,26 @@ def scan_words(text: str, scan: ScanSet) -> list[tuple[int, str, str]]:
         normalized = normalize(line)
         words = set(tokens(normalized))
         hits.extend((number, "surname", w) for w in sorted(words & scan.surnames))
-        orgs = sorted(o for o in scan.orgs if set(tokens(o)) <= words and _bounded(normalized, o))
-        hits.extend((number, "org", o) for o in orgs)
-        hits.extend((number, "card", c) for c in sorted(words & scan.cards))
+        for category, values in (
+            ("org", scan.orgs),
+            ("place", scan.places),
+            ("contact", scan.contacts),
+            ("code", scan.codes),
+        ):
+            found = sorted(v for v in values if set(tokens(v)) <= words and _bounded(normalized, v))
+            hits.extend((number, category, v) for v in found)
+        cards = (words & scan.cards) | (
+            {m[1] for m in _CARD_VALUE.finditer(line)} & scan.short_cards
+        )
+        hits.extend((number, "card", c) for c in sorted(cards))
         hits.extend((number, "birth_date", d) for d in sorted(d for d in scan.dates if d in line))
     return hits
 
 
 def scan_text(text: str, scan: ScanSet) -> list[tuple[int, str]]:
     """``(line number, category)`` of each line holding a sensitive value; never the value."""
-    order = ("surname", "org", "card", "birth_date")
     found = {(line, category) for line, category, _ in scan_words(text, scan)}
-    return sorted(found, key=lambda hit: (hit[0], order.index(hit[1])))
+    return sorted(found, key=lambda hit: (hit[0], SCAN_CATEGORIES.index(hit[1])))
 
 
 # ---------------------------------------------------------------- sources and targets
@@ -423,14 +511,19 @@ def race_docs(paths: Iterable[Path]) -> Iterator[Json]:
                 yield parse_json(racefile.decode(raw)[0])
 
 
-def _text_files(paths: Iterable[Path]) -> Iterator[tuple[Path, str]]:
-    """Text files among ``paths``; a path that does not exist (deleted on the branch) is skipped."""
+def _text_files(paths: Iterable[Path], skipped: Counter[str]) -> Iterator[tuple[Path, str]]:
+    """Text files among ``paths`` (logs included); the others are counted in ``skipped``.
+
+    A path that does not exist (deleted on the branch) is skipped.
+    """
     for path in (p for p in paths if p.exists()):
         files = sorted(p for p in path.rglob("*") if p.is_file()) if path.is_dir() else [path]
         for file in files:
             raw = file.read_bytes()
-            if racefile.kind(raw) in {"text", "json", "html", "race"}:
-                yield file, racefile.decode(raw)[0]
+            if racefile.kind(raw) in racefile.NOT_TEXT:
+                skipped["not text"] += 1
+                continue
+            yield file, racefile.decode(raw)[0]
 
 
 def _commits(revisions: str) -> list[tuple[str, str]]:
@@ -497,7 +590,8 @@ def scan_command(args: Options) -> int:
     findings = chance = files = 0
     synthetic = [p.resolve() for p in args.synthetic]
     words: list[str] = []
-    for path, text in _text_files(args.paths):
+    skipped: Counter[str] = Counter()
+    for path, text in _text_files(args.paths, skipped):
         files += 1
         hits = scan_text(text, scan)
         if args.words_out is not None:
@@ -515,9 +609,12 @@ def scan_command(args: Options) -> int:
             print(f"commit {sha}:{line}: {category}")
     print(
         f"leakcheck: {len(docs)} source race files ({len(scan.surnames)} surnames, "
-        f"{len(scan.orgs)} organizations, {len(scan.cards)} cards, {len(scan.dates)} dates); "
+        f"{len(scan.orgs)} organizations, "
+        f"{len(scan.places)} places, {len(scan.contacts)} contacts, {len(scan.codes)} codes, "
+        f"{len(scan.cards)} cards, {len(scan.short_cards)} short cards, "
+        f"{len(scan.dates)} dates); "
         f"scanned {files} files and {len(commits)} commit messages; findings: {findings}; "
-        f"in synthetic outputs: {chance}"
+        f"in synthetic outputs: {chance}; not text: {skipped['not text']}"
     )
     if args.words_out is not None:
         args.words_out.parent.mkdir(parents=True, exist_ok=True)

@@ -72,8 +72,11 @@ CARD_CLASSES: Final[tuple[tuple[int, int, str], ...]] = (
     (15_000_000, 16_711_679, "gap"),
     (16_711_680, SI6_STAR_MAX, "SI6*"),
 )
-_ISO = re.compile(r"(\d{4})-(\d{2})-(\d{2})(.*)", re.DOTALL)
-_DMY = re.compile(r"(\d{2})\.(\d{2})\.(\d{4})(.*)", re.DOTALL)
+# a date, then nothing or a time of day (``2008-03-03T00:00:00``); any other text after it makes
+# the value unparsed, so nothing but the date is written back
+_TIME_OF_DAY = r"((?:T\d{2}:\d{2}:\d{2}(?:\.\d+)?)?)"
+_ISO = re.compile(r"([0-9]{4})-([0-9]{2})-([0-9]{2})" + _TIME_OF_DAY)
+_DMY = re.compile(r"([0-9]{2})\.([0-9]{2})\.([0-9]{4})" + _TIME_OF_DAY)
 _WORD_SEPARATORS = re.compile(r"([ -])")
 
 
@@ -107,8 +110,13 @@ def key_id(key: bytes) -> str:
 
 
 def normalize(value: str) -> str:
-    """NFC, case folded, ё → е, whitespace runs to one space, no leading or trailing space."""
-    folded = unicodedata.normalize("NFC", unicodedata.normalize("NFC", value).casefold())
+    """NFC, case folded, ё → е, format marks dropped, one space between words.
+
+    Format marks (Unicode ``Cf``: a BOM, a soft hyphen, ZWSP) are invisible; whitespace runs,
+    a no-break space among them, become one space; no leading or trailing space.
+    """
+    visible = "".join(c for c in value if unicodedata.category(c) != "Cf")
+    folded = unicodedata.normalize("NFC", unicodedata.normalize("NFC", visible).casefold())
     return " ".join(folded.replace("ё", "е").split())
 
 

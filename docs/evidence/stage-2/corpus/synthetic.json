@@ -71,16 +71,26 @@
     "identical": true
    },
    {
+    "differences": {},
+    "file_id": "S03/005fa8971956",
+    "files": {
+     "comparison.json": true,
+     "results.json": true,
+     "stored.json": true
+    },
+    "identical": true
+   },
+   {
     "file_id": "S03/0fd67593e806",
     "identical": null,
     "skipped": "scores_mode = formula (R22)"
    }
   ],
-  "identical": 6,
+  "identical": 7,
   "lane": ".venv",
   "legacy_failed_alike": 0,
   "not_run": 1,
-  "ran": 6
+  "ran": 7
  },
  "key": "synthetic (SYNTHETIC_KEY in scripts/corpus/evidence.py)",
  "manifest": {
@@ -122,7 +132,7 @@
     "id": "S03",
     "in_inventory": true,
     "kinds": {
-     "race": 2
+     "race": 3
     },
     "passport": {}
    }
@@ -211,6 +221,7 @@
    {
     "anonymized_path": "anonymized/S01/bdeea896cc01.json",
     "anonymized_sha256": "eceb7e9e10283a7f976acc471945c205ec38f6570b6ae636d4b030a3dd6220e9",
+    "anonymized_text_sha256": "eceb7e9e10283a7f976acc471945c205ec38f6570b6ae636d4b030a3dd6220e9",
     "file_id": "S01/bdeea896cc01",
     "format": "utf-8",
     "leak_paths": {},
@@ -225,14 +236,37 @@
      "values:place": 2,
      "values:race": 5,
      "values:secret": 4,
-     "values:text": 6
+     "values:text": 7
     },
     "masked": {
+     "clear:settings.live_url": 1,
+     "clear:settings.live_urls": 1,
+     "clear:settings.telegram_chat_id": 1,
+     "clear:settings.telegram_thread_id": 1,
+     "mask:data.chief_referee": 1,
+     "mask:data.description": 1,
+     "mask:data.location": 1,
+     "mask:data.secretary": 1,
+     "mask:data.short_title": 1,
+     "mask:data.title": 1,
+     "mask:data.url": 1,
+     "mask:organization.code": 2,
+     "mask:organization.contact": 2,
+     "mask:organization.country": 2,
+     "mask:organization.name": 2,
+     "mask:organization.region": 2,
      "mask:person.birth_date": 9,
+     "mask:person.card_number": 10,
      "mask:person.comment": 10,
      "mask:person.middle_name": 10,
      "mask:person.name": 10,
+     "mask:person.national_code": 10,
      "mask:person.surname": 10,
+     "mask:person.world_code": 10,
+     "mask:result.card_number": 10,
+     "mask:result.status_comment": 1,
+     "mask:settings.split_template": 1,
+     "mask:settings.telegram_template": 1,
      "unknown:person.contact": 1,
      "unknown:result.operator_note": 1,
      "unknown:settings.operator_note": 1
@@ -240,6 +274,18 @@
     "races": [
      {
       "any_course_groups": 0,
+      "cards_by_class": {
+       "SI10": 1,
+       "SI5": 1,
+       "SI5 series 2": 1,
+       "SI6": 1,
+       "SI8": 1,
+       "SIAC1": 1,
+       "gap": 1,
+       "none": 1,
+       "pCard": 1,
+       "tCard": 1
+      },
       "courses": 1,
       "groups": 2,
       "index": 0,
@@ -276,6 +322,7 @@
    {
     "anonymized_path": "anonymized/S01/9ac0179a6f69.json",
     "anonymized_sha256": "d016ff734085124b35f30da65434124cbb47fb1b353201e7cf130c6fe897807e",
+    "anonymized_text_sha256": "7fd68d0e6ee63043fc587f58404fc83d7e8b01be7ab19183325716995e69e574",
     "file_id": "S01/9ac0179a6f69",
     "format": "cp1251",
     "leak_paths": {},
@@ -288,14 +335,35 @@
      "values:race": 5
     },
     "masked": {
+     "mask:data.chief_referee": 1,
+     "mask:data.description": 1,
+     "mask:data.location": 1,
+     "mask:data.secretary": 1,
+     "mask:data.short_title": 1,
+     "mask:data.title": 1,
+     "mask:data.url": 1,
+     "mask:organization.address": 1,
+     "mask:organization.contact": 1,
+     "mask:organization.country": 1,
+     "mask:organization.name": 1,
+     "mask:organization.region": 1,
      "mask:person.comment": 2,
      "mask:person.middle_name": 2,
      "mask:person.name": 2,
-     "mask:person.surname": 2
+     "mask:person.national_code": 2,
+     "mask:person.sportident_card": 2,
+     "mask:person.surname": 2,
+     "mask:person.world_code": 2,
+     "mask:result.card_number": 2,
+     "mask:result.sportident_card": 2
     },
     "races": [
      {
       "any_course_groups": 0,
+      "cards_by_class": {
+       "SI5": 1,
+       "SIAC1": 1
+      },
       "courses": 1,
       "groups": 1,
       "index": 0,
@@ -331,6 +399,7 @@
    {
     "anonymized_path": "anonymized/S02/fee3f0fc8ba6.json.gz",
     "anonymized_sha256": "4161b920d2053837b7463cb3c83bf56153adadec6ada882e43e814edcc025a0d",
+    "anonymized_text_sha256": "161755477c8a94dc3e504b6cf9df04416550baa72d48b2980e3cc4a1c151011b",
     "file_id": "S02/fee3f0fc8ba6",
     "format": "gzip",
     "leak_paths": {},
@@ -341,15 +410,29 @@
      "values:race": 2
     },
     "masked": {
+     "mask:data.chief_referee": 2,
+     "mask:data.description": 2,
+     "mask:data.location": 2,
+     "mask:data.secretary": 2,
+     "mask:data.short_title": 2,
+     "mask:data.title": 2,
+     "mask:data.url": 2,
      "mask:person.birth_date": 9,
+     "mask:person.card_number": 9,
      "mask:person.comment": 9,
      "mask:person.middle_name": 9,
      "mask:person.name": 9,
-     "mask:person.surname": 9
+     "mask:person.national_code": 9,
+     "mask:person.surname": 9,
+     "mask:person.world_code": 9,
+     "mask:result.card_number": 9
     },
     "races": [
      {
       "any_course_groups": 0,
+      "cards_by_class": {
+       "SI6": 5
+      },
       "courses": 1,
       "groups": 1,
       "index": 0,
@@ -379,6 +462,9 @@
      },
      {
       "any_course_groups": 0,
+      "cards_by_class": {
+       "SI6": 4
+      },
       "courses": 1,
       "groups": 1,
       "index": 1,
@@ -416,6 +502,7 @@
    {
     "anonymized_path": "anonymized/S02/5f00dec11b5f.json",
     "anonymized_sha256": "d4b4af2171f1f1b2a3becbcb31788a8fb415a18073b33d0590f493f9a20ad27f",
+    "anonymized_text_sha256": "d4b4af2171f1f1b2a3becbcb31788a8fb415a18073b33d0590f493f9a20ad27f",
     "file_id": "S02/5f00dec11b5f",
     "format": "utf-8",
     "leak_paths": {},
@@ -426,15 +513,29 @@
      "values:race": 1
     },
     "masked": {
+     "mask:data.chief_referee": 1,
+     "mask:data.description": 1,
+     "mask:data.location": 1,
+     "mask:data.secretary": 1,
+     "mask:data.short_title": 1,
+     "mask:data.title": 1,
+     "mask:data.url": 1,
      "mask:person.birth_date": 5,
+     "mask:person.card_number": 5,
      "mask:person.comment": 5,
      "mask:person.middle_name": 5,
      "mask:person.name": 5,
-     "mask:person.surname": 5
+     "mask:person.national_code": 5,
+     "mask:person.surname": 5,
+     "mask:person.world_code": 5,
+     "mask:result.card_number": 5
     },
     "races": [
      {
       "any_course_groups": 0,
+      "cards_by_class": {
+       "SI6": 5
+      },
       "courses": 1,
       "groups": 1,
       "index": 0,
@@ -472,6 +573,7 @@
    {
     "anonymized_path": "anonymized/S02/9a6113e14444.json",
     "anonymized_sha256": "df6ec80534d042b7065ca6cddca4ed07ca517c27133e56123fa076d18647abb7",
+    "anonymized_text_sha256": "df6ec80534d042b7065ca6cddca4ed07ca517c27133e56123fa076d18647abb7",
     "file_id": "S02/9a6113e14444",
     "format": "utf-8",
     "leak_paths": {},
@@ -482,15 +584,29 @@
      "values:race": 1
     },
     "masked": {
+     "mask:data.chief_referee": 1,
+     "mask:data.description": 1,
+     "mask:data.location": 1,
+     "mask:data.secretary": 1,
+     "mask:data.short_title": 1,
+     "mask:data.title": 1,
+     "mask:data.url": 1,
      "mask:person.birth_date": 4,
+     "mask:person.card_number": 4,
      "mask:person.comment": 4,
      "mask:person.middle_name": 4,
      "mask:person.name": 4,
-     "mask:person.surname": 4
+     "mask:person.national_code": 4,
+     "mask:person.surname": 4,
+     "mask:person.world_code": 4,
+     "mask:result.card_number": 4
     },
     "races": [
      {
       "any_course_groups": 0,
+      "cards_by_class": {
+       "SI6": 4
+      },
       "courses": 1,
       "groups": 1,
       "index": 0,
@@ -528,6 +644,7 @@
    {
     "anonymized_path": "anonymized/S03/2c45119473a3.json.gz",
     "anonymized_sha256": "dc722779af1abd2b0fd43d1d389c1a0eb13528e90bd98acc3503fb7d495d5337",
+    "anonymized_text_sha256": "439c4a5f00e922e0cbf93a9d3a44e2b755d0e96dab9aea25bd26b0176a8374fa",
     "file_id": "S03/2c45119473a3",
     "format": "gzip",
     "leak_paths": {},
@@ -536,14 +653,28 @@
      "values:race": 1
     },
     "masked": {
+     "mask:data.chief_referee": 1,
+     "mask:data.description": 1,
+     "mask:data.location": 1,
+     "mask:data.secretary": 1,
+     "mask:data.short_title": 1,
+     "mask:data.title": 1,
+     "mask:data.url": 1,
+     "mask:person.card_number": 11,
      "mask:person.comment": 11,
      "mask:person.middle_name": 11,
      "mask:person.name": 11,
-     "mask:person.surname": 11
+     "mask:person.national_code": 11,
+     "mask:person.surname": 11,
+     "mask:person.world_code": 11,
+     "mask:result.card_number": 11
     },
     "races": [
      {
       "any_course_groups": 0,
+      "cards_by_class": {
+       "none": 11
+      },
       "courses": 2,
       "groups": 3,
       "index": 0,
@@ -578,8 +709,121 @@
     "version": "v1.8.0b2"
    },
    {
+    "anonymized_path": "anonymized/S03/005fa8971956.json.gz",
+    "anonymized_sha256": "5b216ddad3041f1911d437fd763794389c8c2c6361d82cd943518f4dc9ab6657",
+    "anonymized_text_sha256": "b9d5387db570fd1bde58519eb7c2724b622393cb98dcfc283e358bbcfa9cab9e",
+    "file_id": "S03/005fa8971956",
+    "format": "gzip",
+    "leak_paths": {},
+    "leaks": {
+     "values:birth_date": 10,
+     "values:card_number": 20,
+     "values:person": 6,
+     "values:race": 2,
+     "values:text": 3
+    },
+    "masked": {
+     "kept:result.status_comment": 3,
+     "mask:data.chief_referee": 2,
+     "mask:data.description": 2,
+     "mask:data.location": 2,
+     "mask:data.secretary": 2,
+     "mask:data.short_title": 2,
+     "mask:data.title": 2,
+     "mask:data.url": 2,
+     "mask:person.birth_date": 10,
+     "mask:person.card_number": 10,
+     "mask:person.comment": 10,
+     "mask:person.middle_name": 10,
+     "mask:person.name": 10,
+     "mask:person.national_code": 10,
+     "mask:person.surname": 10,
+     "mask:person.world_code": 10,
+     "mask:result.card_number": 10,
+     "mask:result.multi_day_results": 4,
+     "mask:result.result": 2,
+     "mask:result.result_current": 2,
+     "mask:result.result_relay": 2,
+     "mask:result.status_comment": 1,
+     "mask:result.status_comment_hint": 1
+    },
+    "races": [
+     {
+      "any_course_groups": 0,
+      "cards_by_class": {
+       "SI6": 5
+      },
+      "courses": 1,
+      "groups": 1,
+      "index": 0,
+      "list_templates_not_integer": 0,
+      "marked_route_mode": "off",
+      "organizations": 0,
+      "out_of_competition": 0,
+      "persons": 5,
+      "persons_key": "3527c5f751c3",
+      "processing_mode": "time",
+      "punch_codes_not_integer": 0,
+      "race_key": "a62420567737",
+      "race_type": "MULTI_DAY_RACE",
+      "result_objects": {
+       "ResultSportident": 5
+      },
+      "results": 5,
+      "same_as": [],
+      "score_mode": null,
+      "scores_mode": "off",
+      "statuses": {
+       "DID_NOT_FINISH": 1,
+       "MISSING_PUNCH": 1,
+       "OK": 2,
+       "OVERTIME": 1
+      },
+      "time_accuracy": 0
+     },
+     {
+      "any_course_groups": 0,
+      "cards_by_class": {
+       "SI6": 5
+      },
+      "courses": 1,
+      "groups": 1,
+      "index": 1,
+      "list_templates_not_integer": 0,
+      "marked_route_mode": "off",
+      "organizations": 0,
+      "out_of_competition": 0,
+      "persons": 5,
+      "persons_key": "47c8d73c5e08",
+      "processing_mode": "time",
+      "punch_codes_not_integer": 0,
+      "race_key": "ca4fb57a1f0f",
+      "race_type": "MULTI_DAY_RACE",
+      "result_objects": {
+       "ResultSportident": 5
+      },
+      "results": 5,
+      "same_as": [],
+      "score_mode": null,
+      "scores_mode": "off",
+      "statuses": {
+       "DID_NOT_FINISH": 1,
+       "DISQUALIFIED": 1,
+       "OK": 3
+      },
+      "time_accuracy": 0
+     }
+    ],
+    "runnable": true,
+    "sha256": "70ca56e5e6ef83603db3ee2d01e6defbff9af56aa9814e1c03c429191ddd6b99",
+    "shape": "races",
+    "size": 2263,
+    "version": "v1.8.0b2"
+   },
+   {
     "anonymized_path": "anonymized/S03/0fd67593e806.json",
     "anonymized_sha256": "1e522aea2c207911f2c62a8d193aeeb9ca81e936f23f63772505a0779d27c921",
+    "anonymized_text_sha256": "1e522aea2c207911f2c62a8d193aeeb9ca81e936f23f63772505a0779d27c921",
     "file_id": "S03/0fd67593e806",
     "format": "utf-8",
     "leak_paths": {},
@@ -588,14 +832,28 @@
      "values:race": 1
     },
     "masked": {
+     "mask:data.chief_referee": 1,
+     "mask:data.description": 1,
+     "mask:data.location": 1,
+     "mask:data.secretary": 1,
+     "mask:data.short_title": 1,
+     "mask:data.title": 1,
+     "mask:data.url": 1,
+     "mask:person.card_number": 5,
      "mask:person.comment": 5,
      "mask:person.middle_name": 5,
      "mask:person.name": 5,
-     "mask:person.surname": 5
+     "mask:person.national_code": 5,
+     "mask:person.surname": 5,
+     "mask:person.world_code": 5,
+     "mask:result.card_number": 5
     },
     "races": [
      {
       "any_course_groups": 0,
+      "cards_by_class": {
+       "none": 5
+      },
       "courses": 0,
       "groups": 1,
       "index": 0,
@@ -632,51 +890,95 @@
   "schema": "sportorg-ng/corpus-manifest",
   "schema_version": 1,
   "starts": {
-   "distinct": 6,
-   "races": 8
+   "distinct": 8,
+   "races": 10
   },
   "totals": {
+   "cards_by_class": {
+    "SI10": 1,
+    "SI5": 2,
+    "SI5 series 2": 1,
+    "SI6": 29,
+    "SI8": 1,
+    "SIAC1": 2,
+    "gap": 1,
+    "none": 17,
+    "pCard": 1,
+    "tCard": 1
+   },
    "directories": 3,
    "formats": {
     "cp1251": 1,
-    "gzip": 2,
+    "gzip": 3,
     "utf-8": 4
    },
    "kinds": {
     "pdf": 1,
-    "race": 7,
+    "race": 8,
     "readout-log": 1,
     "sportorg-log": 1,
     "text": 2
    },
    "leaks": {
-    "values:birth_date": 27,
-    "values:card_number": 59,
+    "values:birth_date": 37,
+    "values:card_number": 79,
     "values:code": 4,
     "values:code_number": 1,
     "values:contact": 4,
     "values:org": 3,
-    "values:person": 61,
+    "values:person": 67,
     "values:place": 5,
-    "values:race": 16,
+    "values:race": 18,
     "values:secret": 4,
-    "values:text": 6
+    "values:text": 10
    },
    "masked": {
-    "mask:person.birth_date": 27,
-    "mask:person.comment": 46,
-    "mask:person.middle_name": 46,
-    "mask:person.name": 46,
-    "mask:person.surname": 46,
+    "clear:settings.live_url": 1,
+    "clear:settings.live_urls": 1,
+    "clear:settings.telegram_chat_id": 1,
+    "clear:settings.telegram_thread_id": 1,
+    "kept:result.status_comment": 3,
+    "mask:data.chief_referee": 10,
+    "mask:data.description": 10,
+    "mask:data.location": 10,
+    "mask:data.secretary": 10,
+    "mask:data.short_title": 10,
+    "mask:data.title": 10,
+    "mask:data.url": 10,
+    "mask:organization.address": 1,
+    "mask:organization.code": 2,
+    "mask:organization.contact": 3,
+    "mask:organization.country": 3,
+    "mask:organization.name": 3,
+    "mask:organization.region": 3,
+    "mask:person.birth_date": 37,
+    "mask:person.card_number": 54,
+    "mask:person.comment": 56,
+    "mask:person.middle_name": 56,
+    "mask:person.name": 56,
+    "mask:person.national_code": 56,
+    "mask:person.sportident_card": 2,
+    "mask:person.surname": 56,
+    "mask:person.world_code": 56,
+    "mask:result.card_number": 56,
+    "mask:result.multi_day_results": 4,
+    "mask:result.result": 2,
+    "mask:result.result_current": 2,
+    "mask:result.result_relay": 2,
+    "mask:result.sportident_card": 2,
+    "mask:result.status_comment": 2,
+    "mask:result.status_comment_hint": 1,
+    "mask:settings.split_template": 1,
+    "mask:settings.telegram_template": 1,
     "unknown:person.contact": 1,
     "unknown:result.operator_note": 1,
     "unknown:settings.operator_note": 1
    },
-   "race_files": 7,
-   "races": 8,
+   "race_files": 8,
+   "races": 10,
    "versions": {
     "(none)": 1,
-    "v1.8.0b2": 6
+    "v1.8.0b2": 7
    }
   }
  }

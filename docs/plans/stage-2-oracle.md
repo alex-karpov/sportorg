@@ -596,3 +596,37 @@ Maintainer's answers `[мейнтейнер: 2026-11-01]`: the history of `main`
 before; legacy's test code is public in `sportorg/pysport`); AGENTS.md rule 8 now forbids quoting
 legacy's test code or test data, and TASK-12 gained a criterion: the hook refuses quoted code with
 name-like string literals in Markdown and text files.
+
+### S3 review and fix pass — 2026-11-01 (Claude Code, Opus 5.5)
+
+Review: a Fable sub-agent at the maintainer's request (synthetic data only): 1 critical, 4
+important, 9 minor; table of findings and what was done in `corpus/findings.agent.md`
+(«Review of S3 and the fix pass»). Maintainer's decisions `[мейнтейнер: 2026-11-01]`: C1 (в) —
+status comments that are rule clauses (`п.п.6.6.4`, `пп6.6.4`, with or without legacy's hint)
+kept, any other text masked, also where legacy copies it into the derived result strings; I3 —
+short card numbers only as card field values, card types counted in the manifest, the limit in
+README; I4 — the unpushed branch rewritten; the rest as recommended.
+- I4: the 9 commits after `74105e5` rewritten with `git filter-branch` (tree and message filters;
+  new HEAD before this pass `80aa62f`); oracle tests green after it. Rule for later sessions: an
+  invented value that matched the corpus is changed together with other invented values, and no
+  text says which category matched.
+- Fixes by TDD: C1, I1, I2, I3 (middle names not searched in text, as given names: deviation from
+  the review's proposal), M1–M4, M6, M7 (year assertion), M8; M5 and M9 described in README
+  «Limits». A corpus run after C1 showed one new leak: legacy's status title in the derived
+  strings of one file, equal to a value of that file; legacy's titles now count as kept text
+  (checked against legacy's enum and Russian translation by a test), which turned that leak into
+  one residual and changed nothing else.
+- Another agent edited `scripts/corpus/anonymize.py` in the same tree during the pass; at the
+  maintainer's request it reverted its change; the state was checked by diff and one lost branch
+  (float card numbers) restored. Its other uncommitted edits (`AGENTS.md`, ADR-0004, TASK-3, 4,
+  10) are not part of this pass's commit.
+- Evidence: `corpus/synthetic.*` rebuilt twice, byte-identical: 0 leaks, invariant 7 of 7 (the
+  formula file not run), status comments 3 kept, 1 hint masked, 2 masked. Corpus rebuilt twice,
+  byte-identical: 0 leaks, 29 residual (all keys of the schema, group names, one setting, the
+  status title), invariant 62 of 62 identical (F8 unchanged); status comments 5312 kept as rule
+  clauses, 6 masked. `check.py` green. Leak check over the stage evidence, the files changed
+  since `74105e5` and new files, and 31 commit messages: 0 findings in this pass's files; 2 in
+  another agent's uncommitted ADR-0004 text (not committed here, reported to the maintainer).
+
+Verdict AC #2 unchanged: synthetic — full; corpus — as it stood at the run, with its limits.
+Next: S4 (golden master), in a fresh session.

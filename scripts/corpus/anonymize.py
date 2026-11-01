@@ -9,7 +9,13 @@
   digits), empty stays empty; ``card_number`` and the old ``sportident_card`` → another number of
   the same card type; ``birth_date`` → another day of the same year (``birthday`` follows it);
   ``year`` kept.
-- result: ``card_number``/``sportident_card`` as for persons; ``status_comment`` → text.
+- result: ``card_number``/``sportident_card`` as for persons; ``status_comment`` kept when it is
+  a rule clause (``п.п.6.6.4``, ``пп6.6.4``), alone or with one of legacy's hints after ``#``; a
+  clause with any other hint keeps the clause and masks the hint; anything else → text
+  ``[мейнтейнер: 2026-11-01]``. Legacy copies the comment into ``result``, ``result_relay``,
+  ``result_current`` and, cut to 14 characters per day, ``multi_day_results``, and never reads
+  them back [код: pysport@b548c35 sportorg/models/memory.py:480-490,650-747,969-973]: they get
+  the masked comment where they hold it, times and kept comments stay.
 - organization: ``name`` → org; ``country``, ``region`` and the old ``address`` → place;
   ``contact`` → contact; ``code`` → code.
 - race data: ``title``, ``short_title``, ``description``, ``location``, ``url`` → the neutral id
@@ -106,12 +112,66 @@ RESULT_KEPT: Final = frozenset(
         "object", "id", "bib", "system_type", "person_id", "days", "start_time", "finish_time",
         "diff", "diff_scores", "penalty_time", "credit_time", "status", "penalty_laps", "place",
         "assigned_rank", "splits", "card_battery_level", "speed", "scores", "rogaine_score",
-        "rogaine_penalty", "scores_ardf", "created_at", "result", "result_relay",
-        "result_current", "start_msec", "finish_msec", "result_msec", "result_relay_msec",
-        "result_current_msec", "can_win_count", "final_result_time", "order",
-        "multi_day_results",
+        "rogaine_penalty", "scores_ardf", "created_at", "start_msec", "finish_msec",
+        "result_msec", "result_relay_msec", "result_current_msec", "can_win_count",
+        "final_result_time", "order",
     }
 )  # fmt: skip
+# strings legacy derives from the status comment on save and never reads
+RESULT_SHOWN: Final = frozenset({"result", "result_relay", "result_current"})
+MULTI_DAY: Final = "multi_day_results"
+RESULT_DERIVED: Final = RESULT_SHOWN | {MULTI_DAY}
+DAY_FIELD: Final = 14  # [код: pysport@b548c35 sportorg/models/memory.py:969-973]
+# what legacy writes into ``result`` for a status other than OK without a comment: the status
+# title, in English or translated [код: pysport@b548c35 sportorg/models/memory.py:45-53,74-93,
+# 702-706; sportorg/data/languages/ru_RU/LC_MESSAGES/sportorg.po], checked by a test
+LEGACY_STATUS_TITLES: Final = (
+    "None", "Ok", "Finished", "Disqualified", "Missing punch", "Did not finish", "Active",
+    "Inactive", "Overtime", "Sporting withdrawal", "Not competing", "Moved", "Moved up",
+    "Did not start", "Did not enter", "Cancelled", "Restored", "Miss penalty lap",
+    "Multi day issue",
+    "-", "Оk", "Финишировал", "ДИСКВ.", "Непр. отметка", "СОШЕЛ", "Активный", "Неактивный",
+    "ПРЕВЫШЕНО КВ", "Проведена жеребьевка", "Вне конкурса", "Перемещен", "Перемещен наверх",
+    "НЕ СТАРТ.", "Не заявлен", "Заявка отменена", "Восстановлен", "Пропущен штрафной круг",
+    "Не все дни",
+)  # fmt: skip
+# the hints legacy offers after a rule clause, normalized
+# [код: pysport@b548c35 sportorg/data/configs/status_comments.txt:1-21]
+LEGACY_HINTS: Final = frozenset(
+    pseudonym.normalize(hint)
+    for hint in (
+        "нарушение порядка прохождения КП",
+        "непрохождение имеющихся на трассе обозначенных участков",
+        "не произвел считывание информации на финише",
+        "получил преимущество в занятом месте от неаккуратной отметки",
+        "контрольная карточка показывает, что нарушил заданный порядок прохождения КП",
+        "не сдал на финише контрольную карточку",
+        "спортсмен покинул зону изоляции до установленного времени",
+        (
+            "тренер или специалист, работающий с командой, покинул зону изоляции до "
+            "установленного времени"
+        ),
+        "не начал прохождение трассы по ВБ с начального КП",
+        "не прошел через последний (финишный) обязательный КП",
+        "взял меньшее число КП, чем задано для возрастной категории",
+        "не прошел назначенное число штрафных кругов",
+        "хотя бы одна отметка на базовом КП отсутствует (МТ вариант А)",
+        "хотя бы одна отметка на базовом КП отсутствует (МТ вариант Б)",
+        (
+            "хотя бы одна отметка крестом соответствующего цвета или специальным компостером "
+            "отсутствует"
+        ),
+        "отсутствует отметка хотя бы на одной ТПР",
+        "отсутствует отметка хотя бы одного истинного КП",
+        "превышение контрольного времени",
+        "нарушение целостности защиты оборотной стороны спортивной карты",
+        "спортсмен сошел с трассы",
+        "спортсмен не стартовал",
+    )
+)
+# ``п.п.6.6.4``, ``пп6.6.4``, ``п. п. 6.6.4`` [мейнтейнер: 2026-11-01]
+_CLAUSE = re.compile(r"п\.?\s?п\.?\s?\d+(?:\.\d+)*\.?", re.IGNORECASE)
+_TIME_FIELD = re.compile(r"[\d:.,]*")
 ORG_KEPT: Final = frozenset({"object", "id", "count_person", "count_finished", "sex"})
 ORG_TEXT: Final[dict[str, Kind]] = {
     "name": "org",
@@ -129,7 +189,37 @@ FILE_KEPT: Final = frozenset({"version", "current_race"})
 CARD_KEYS: Final = frozenset({"card_number", "sportident_card"})
 CODE_KEYS: Final = frozenset({"world_code", "national_code"})
 _IDENTIFIER = re.compile(r"[a-z_][a-z0-9_]{0,40}")
-_ISO_DATE = re.compile(r"(\d{4})-(\d{2})-(\d{2})")
+_ISO_DATE = re.compile(r"([0-9]{4})-([0-9]{2})-([0-9]{2})")
+_ASCII_DIGITS = re.compile(r"[0-9]+")
+
+
+def status_comment_free_text(value: str, *, cut: bool = False) -> str | None:
+    """The part of a status comment to mask: ``None`` (a rule clause), the hint, or all of it.
+
+    ``cut``: ``value`` is a day field of ``multi_day_results``, so a hint may be cut short.
+    """
+    clause, sharp, hint = value.partition("#")
+    if not value.strip():
+        return None
+    if not _CLAUSE.fullmatch(clause.strip()):
+        return value
+    if not sharp or not hint.strip():
+        return None
+    known = pseudonym.normalize(hint)
+    if known in LEGACY_HINTS or (cut and any(h.startswith(known) for h in LEGACY_HINTS)):
+        return None
+    return hint
+
+
+def status_comment(key: bytes, value: str, *, cut: bool = False) -> tuple[str, str]:
+    """``(new value, outcome)``; outcome ``kept``, ``hint`` (clause kept) or ``masked``."""
+    free = status_comment_free_text(value, cut=cut)
+    if free is None:
+        return value, "kept"
+    if free == value:
+        return pseudonym.pseudonym(key, "text", value), "masked"
+    clause = value.partition("#")[0]
+    return f"{clause}# {pseudonym.pseudonym(key, 'text', free.strip())}", "hint"
 
 
 class _Unowned:
@@ -174,15 +264,17 @@ class _Masker:
         return value
 
     def card(self, value: Json) -> Json:
-        if isinstance(value, bool):
+        """Another number in the shape legacy reads (``int(value)``); any other shape → 0."""
+        if isinstance(value, bool) or value is None or value == "":
             return value
         if isinstance(value, int):
             return pseudonym.card_number(self.key, value)
-        if isinstance(value, str) and value.strip().isdigit():
+        if isinstance(value, float) and value.is_integer():
+            return float(pseudonym.card_number(self.key, int(value)))
+        if isinstance(value, str) and _ASCII_DIGITS.fullmatch(value.strip()):
             return str(pseudonym.card_number(self.key, int(value)))
-        if value not in (None, ""):
-            self.stats["unparsed:card_number"] += 1
-        return value
+        self.stats["unparsed:card_number"] += 1
+        return 0
 
     def code(self, value: Json) -> Json:
         if isinstance(value, bool):
@@ -192,17 +284,20 @@ class _Masker:
         return self.deep("code", value)
 
     def birth(self, person: dict[str, Json], out: dict[str, Json]) -> None:
+        """``birth_date`` moved within its year; ``birthday`` (written, never read) follows it."""
         value = person.get("birth_date")
-        if not isinstance(value, str) or not value:
-            return
-        new = pseudonym.birth_date(self.key, value)
-        if new is None:
+        new: str | None = None
+        if isinstance(value, str) and value:
+            new = pseudonym.birth_date(self.key, value)
+            self.stats["mask:person.birth_date"] += 1
+        if value not in (None, "") and new is None:
             self.stats["unparsed:birth_date"] += 1
-        out["birth_date"] = new
+        if "birth_date" in person:
+            out["birth_date"] = new if value not in (None, "") else value
         if "birthday" in person:
             match = _ISO_DATE.match(new or "")
             out["birthday"] = f"{match[3]}.{match[2]}.{match[1]}" if match else ""
-        self.stats["mask:person.birth_date"] += 1
+            self.stats["mask:person.birthday"] += 1
 
     def unknown(self, where: str, name: str, value: Json) -> Json:
         label = name if _IDENTIFIER.fullmatch(name) else "(other)"
@@ -234,8 +329,10 @@ class _Masker:
                 self.stats[f"mask:person.{name}"] += 1
                 return self.deep(PERSON_TEXT[name], value)
             if name in CARD_KEYS:
+                self.stats[f"mask:person.{name}"] += 1
                 return self.card(value)
             if name in CODE_KEYS:
+                self.stats[f"mask:person.{name}"] += 1
                 return self.code(value)
             if name in {"birth_date", "birthday"}:
                 return value  # replaced by ``birth`` below
@@ -245,27 +342,63 @@ class _Masker:
         self.birth(as_dict(item), out)
         return out
 
+    def day_field(self, field: str) -> str:
+        text = field.rstrip(" ")
+        if _TIME_FIELD.fullmatch(text):
+            return field
+        new, outcome = status_comment(self.key, text, cut=True)
+        return field if outcome == "kept" else f"{new}{' ' * DAY_FIELD}"[:DAY_FIELD]
+
+    def derived(self, name: str, value: Json, comment: tuple[str, str] | None) -> Json:
+        if not isinstance(value, str):
+            return value
+        if name == MULTI_DAY:
+            fields = (value[i : i + DAY_FIELD] for i in range(0, len(value), DAY_FIELD))
+            new = "".join(self.day_field(field) for field in fields)
+        else:
+            new = comment[1] if comment and value == comment[0] else value
+        if new != value:
+            self.stats[f"mask:result.{name}"] += 1
+        return new
+
     def result(self, item: Json) -> Json:
+        original = as_dict(item).get("status_comment")
+        comment: tuple[str, str] | None = None
+        if isinstance(original, str) and original.strip():
+            new, outcome = status_comment(self.key, original)
+            prefix = "kept" if outcome == "kept" else "mask"
+            suffix = "_hint" if outcome == "hint" else ""
+            self.stats[f"{prefix}:result.status_comment{suffix}"] += 1
+            comment = (original, new)
+
         def handle(name: str, value: Json) -> Json | _Unowned:
             if name in CARD_KEYS:
+                self.stats[f"mask:result.{name}"] += 1
                 return self.card(value)
             if name == "status_comment":
-                return self.deep("text", value)
+                return comment[1] if comment else self.deep("text", value)
+            if name in RESULT_DERIVED:
+                return self.derived(name, value, comment)
             return _UNOWNED
 
         return self._fields("result", item, RESULT_KEPT, handle)
 
     def organization(self, item: Json) -> Json:
         def handle(name: str, value: Json) -> Json | _Unowned:
-            return self.deep(ORG_TEXT[name], value) if name in ORG_TEXT else _UNOWNED
+            if name not in ORG_TEXT:
+                return _UNOWNED
+            self.stats[f"mask:organization.{name}"] += 1
+            return self.deep(ORG_TEXT[name], value)
 
         return self._fields("organization", item, ORG_KEPT, handle)
 
     def data(self, item: Json, index: int) -> Json:
         def handle(name: str, value: Json) -> Json | _Unowned:
             if name in DATA_NEUTRAL:
+                self.stats[f"mask:data.{name}"] += 1
                 return f"{self.neutral_id}/{index}" if value else value
             if name in DATA_PERSON:
+                self.stats[f"mask:data.{name}"] += 1
                 return self.deep("person", value)
             return _UNOWNED
 
@@ -274,8 +407,10 @@ class _Masker:
     def settings(self, item: Json) -> Json:
         def handle(name: str, value: Json) -> Json | _Unowned:
             if name in CLEARED_SETTINGS:
+                self.stats[f"clear:settings.{name}"] += 1
                 return _empty_like(value)
             if name in TEXT_SETTINGS:
+                self.stats[f"mask:settings.{name}"] += 1
                 return self.deep("text", value)
             return _UNOWNED
 

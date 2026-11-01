@@ -54,3 +54,11 @@ def test_synthetic_invariant_holds(tmp_path: Path) -> None:
     assert all(r["identical"] is True for r in ran)
     skipped = next(r for r in rows if r["identical"] is None)
     assert "formula" in str(skipped["skipped"])
+
+
+def test_synthetic_corpus_holds_status_comments_as_legacy_writes_them(tmp_path: Path) -> None:
+    assert evidence.main(["synthetic", "--out", str(tmp_path), "--skip-invariant"]) == 0
+    text = (tmp_path / "synthetic.md").read_text(encoding="utf-8")
+    assert (
+        "status comments (C1): rule clause kept 3, clause kept and hint masked 1, masked 2" in text
+    )

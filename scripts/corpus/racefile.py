@@ -11,6 +11,7 @@ from __future__ import annotations
 import gzip
 import json
 import re
+import unicodedata
 import zlib
 from collections import Counter
 from typing import Final
@@ -41,6 +42,8 @@ _MAGIC: Final = (
     (b"GIF8", "image"),
 )
 _TEXT_CONTROLS: Final = frozenset("\t\n\r\f")
+_TEXT_CATEGORIES: Final = frozenset({"Cf", "Zs", "Zl", "Zp"})
+NOT_TEXT: Final = frozenset({"pdf", "zip", "image", "binary"})
 # legacy's own log [код: pysport@b548c35 sportorg/config.py:114,130]
 # level, asctime, threadName (may hold spaces), filename, lineno
 _SPORTORG_LOG_LINE = re.compile(
@@ -112,7 +115,16 @@ def _is_race_file(doc: Json) -> bool:
 
 
 def _is_text(text: str) -> bool:
-    return all(char.isprintable() or char in _TEXT_CONTROLS for char in text)
+    """Printable characters, ordinary controls, format marks and Unicode spaces only.
+
+    Format marks: a BOM, a soft hyphen, ZWSP; spaces: a no-break space, a line separator.
+    """
+    return all(
+        char.isprintable()
+        or char in _TEXT_CONTROLS
+        or unicodedata.category(char) in _TEXT_CATEGORIES
+        for char in text
+    )
 
 
 def _is_readout_log(text: str) -> bool:

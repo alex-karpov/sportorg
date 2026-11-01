@@ -13,8 +13,11 @@ import pytest
 
 from scripts._json import as_dict, as_list, as_str
 from scripts.corpus import anonymize, pseudonym, racefile, synth
+from scripts.legacy import legacy_dir
 
 if TYPE_CHECKING:
+    from collections import Counter
+
     from scripts._json import Json
 
 KEY = b"synthetic test key, not the corpus key"
@@ -265,3 +268,172 @@ def test_old_tokens_and_hosts_of_the_settings_are_cleared() -> None:
     new = as_dict(_race(_run(doc).doc)["settings"])
     assert new["live_token"] == new["teamwork_token"] == new["teamwork_host"] == ""
     assert new["teamwork_port"] == 50010
+
+
+# ---------------------------------------------------------------- status comments (C1, в)
+
+
+@pytest.mark.parametrize(
+    "comment",
+    [
+        "п.п.6.6.4",
+        "пп6.6.4",
+        "П.п. 3.13.12.2",
+        "пп3.13.12.2 # нарушение порядка прохождения КП",
+        "пп6.6.4 # спортсмен сошёл с трассы",
+        "",
+    ],
+)
+def test_a_rule_clause_status_comment_is_kept(comment: str) -> None:
+    assert anonymize.status_comment(KEY, comment) == (comment, "kept")
+
+
+@pytest.mark.parametrize(
+    "comment", ["Снят по протесту Выдумкина", "6.6.4", "п.п.6.6.4, 3.4.6", "п.п. по протесту"]
+)
+def test_any_other_status_comment_is_masked(comment: str) -> None:
+    masked = pseudonym.pseudonym(KEY, "text", comment)
+    assert anonymize.status_comment(KEY, comment) == (masked, "masked")
+
+
+def test_a_free_hint_after_a_rule_clause_is_masked_and_the_clause_kept() -> None:
+    new, outcome = anonymize.status_comment(KEY, "п.п.5.4.7 # Ежиков ждал Небывалову")
+    assert outcome == "hint"
+    assert new == "п.п.5.4.7 # " + pseudonym.pseudonym(KEY, "text", "Ежиков ждал Небывалову")
+
+
+def _shape_results() -> list[tuple[dict[str, Json], dict[str, Json]]]:
+    doc = synth.personal_legacy_shape()
+    out = _run(doc).doc
+    pairs: list[tuple[dict[str, Json], dict[str, Json]]] = []
+    for index in (0, 1):
+        pairs += zip(
+            _items(_race(doc, index), "results"), _items(_race(out, index), "results"), strict=True
+        )
+    return pairs
+
+
+DERIVED = ("result", "result_relay", "result_current")
+
+
+def test_a_masked_status_comment_is_masked_in_the_derived_result_strings() -> None:
+    old, new = next(
+        p for p in _shape_results() if p[0]["status_comment"] == synth.SHAPE_PEOPLE[1][3][1]
+    )
+    masked = pseudonym.pseudonym(KEY, "text", as_str(old["status_comment"]))
+    assert new["status_comment"] == masked
+    assert [new[key] for key in DERIVED] == [masked] * 3
+
+
+def test_kept_comments_and_times_stay_in_the_derived_result_strings() -> None:
+    for old, new in _shape_results():
+        if old["status_comment"] in {"", "п.п.6.6.4", "пп6.6.4 # спортсмен сошёл с трассы"}:
+            assert [new[key] for key in DERIVED] == [old[key] for key in DERIVED]
+
+
+def test_multi_day_results_mask_each_day_field_that_is_not_kept() -> None:
+    field = synth.DAY_FIELD
+    for old, new in _shape_results():
+        before, after = as_str(old["multi_day_results"]), as_str(new["multi_day_results"])
+        assert len(after) == len(before)
+        for day in range(len(before) // field):
+            was, now = (
+                before[day * field : (day + 1) * field],
+                after[day * field : (day + 1) * field],
+            )
+            if was.startswith(("Снят", "п.п.5.4.7 # Еж")):
+                assert now != was
+                assert now.startswith(("T", "п.п.5.4.7 # T"))
+            else:
+                assert now == was
+
+
+def test_status_comments_are_counted_by_outcome() -> None:
+    stats = _run(synth.personal_legacy_shape()).stats
+    assert stats["kept:result.status_comment"] == 3
+    assert stats["mask:result.status_comment"] == 1
+    assert stats["mask:result.status_comment_hint"] == 1
+    assert stats["mask:result.result"] == 2
+
+
+HINTS_FILE = legacy_dir() / "pysport" / "sportorg" / "data" / "configs" / "status_comments.txt"
+
+
+@pytest.mark.skipif(not HINTS_FILE.exists(), reason="legacy not fetched: scripts.legacy fetch")
+def test_the_kept_hints_are_legacys_own() -> None:
+    lines = HINTS_FILE.read_text(encoding="utf-8").splitlines()
+    hints = {pseudonym.normalize(line.partition("#")[2]) for line in lines if "#" in line}
+    assert hints == anonymize.LEGACY_HINTS
+
+
+# ---------------------------------------------------------------- other shapes (I2)
+
+
+def _shaped(field: str, value: Json, index: int = 1) -> tuple[dict[str, Json], Counter[str]]:
+    doc = synth.personal_individual()
+    person = _items(_race(doc), "persons")[index]
+    if value is None:
+        person.pop(field)
+    else:
+        person[field] = value
+    result = _run(doc)
+    return _items(_race(result.doc), "persons")[index], result.stats
+
+
+def test_a_card_written_as_a_float_is_renumbered_as_a_float() -> None:
+    new, _ = _shaped("card_number", 212_345.0)
+    assert new["card_number"] == float(pseudonym.card_number(KEY, 212_345))
+
+
+@pytest.mark.parametrize("card", ["212 345", "²", 212_345.5, "C212345"])
+def test_a_card_in_a_shape_legacy_cannot_read_becomes_zero(card: Json) -> None:
+    new, stats = _shaped("card_number", card)
+    assert new["card_number"] == 0
+    assert stats["unparsed:card_number"] == 1
+
+
+def test_a_birth_date_that_is_not_a_string_is_dropped() -> None:
+    new, stats = _shaped("birth_date", 19_900_517)
+    assert new["birth_date"] is None
+    assert stats["unparsed:birth_date"] == 1
+
+
+@pytest.mark.parametrize("birth_date", ["", None])
+def test_birthday_is_blanked_without_a_birth_date(birth_date: str | None) -> None:
+    doc = synth.personal_individual()
+    person = _items(_race(doc), "persons")[1]
+    person["birthday"] = "17.05.1990"
+    if birth_date is None:
+        person.pop("birth_date")
+    else:
+        person["birth_date"] = birth_date
+    new = _items(_race(_run(doc).doc), "persons")[1]
+    assert new["birthday"] == ""
+
+
+def test_every_masked_field_is_counted() -> None:
+    stats = _run(synth.personal_individual()).stats
+    assert stats["mask:organization.name"] == 2
+    assert stats["mask:organization.region"] == 2
+    assert stats["mask:data.title"] == 1
+    assert stats["mask:data.chief_referee"] == 1
+    assert stats["mask:settings.telegram_template"] == 1
+    assert stats["clear:settings.live_urls"] == 1
+    assert stats["mask:person.card_number"] == 10
+    assert stats["mask:result.card_number"] == 10
+    assert stats["mask:person.world_code"] == 10
+
+
+LEGACY_SOURCE = legacy_dir() / "pysport" / "sportorg"
+
+
+@pytest.mark.skipif(not LEGACY_SOURCE.exists(), reason="legacy not fetched: scripts.legacy fetch")
+def test_the_status_titles_are_legacys_own() -> None:
+    models = (LEGACY_SOURCE / "models" / "memory.py").read_text(encoding="utf-8")
+    block = models.split("class ResultStatus(_TitleType):\n", 1)[1].split("\n\n", 1)[0]
+    names = [line.split("=")[0].strip() for line in block.splitlines() if "=" in line]
+    english = [name.lower().capitalize().replace("_", " ") for name in names]
+    po = LEGACY_SOURCE / "data" / "languages" / "ru_RU" / "LC_MESSAGES" / "sportorg.po"
+    text = po.read_text(encoding="utf-8")
+    russian = [text.split(f'msgid "{t}"\nmsgstr "', 1)[1].split('"', 1)[0] for t in english]
+    assert set(anonymize.LEGACY_STATUS_TITLES) == set(english) | set(russian)

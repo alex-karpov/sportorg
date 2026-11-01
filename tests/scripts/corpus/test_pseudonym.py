@@ -205,8 +205,15 @@ def test_birth_date_keeps_year_and_format_and_moves_the_day(text: str) -> None:
     assert new is not None
     assert new != text
     assert len(new) == len(text)
-    assert "2010" in new or "2012" in new
+    year = text[6:10] if "." in text[:3] else text[:4]
+    assert (new[6:10] if "." in new[:3] else new[:4]) == year
+    assert new[len("2010-05-17") :] == text[len("2010-05-17") :]  # the time part, if any
     assert new == ps.birth_date(KEY, text)
+
+
+@pytest.mark.parametrize("text", ["1990-05-17 Выдумкин", "17.05.1990 (approx)", "1990-05-17T"])
+def test_text_after_a_birth_date_makes_it_unparsed(text: str) -> None:
+    assert ps.birth_date(KEY, text) is None
 
 
 def test_birth_date_is_a_valid_date_of_the_same_year() -> None:
@@ -223,3 +230,7 @@ def test_national_code_number_keeps_its_digit_count() -> None:
     new = ps.number_code(KEY, 1_234_567)
     assert new != 1_234_567
     assert len(str(new)) == 7
+
+
+def test_normalize_drops_invisible_format_characters() -> None:
+    assert ps.normalize("\ufeffПриду\u00adмкин\u200b") == "придумкин"

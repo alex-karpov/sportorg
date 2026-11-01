@@ -44,7 +44,8 @@ if TYPE_CHECKING:
 SCHEMA: Final = "sportorg-ng/corpus-manifest"
 SCHEMA_VERSION: Final = 1
 FILES_TSV: Final = "files.tsv"
-_NEUTRAL_DIR = re.compile(r"[A-Za-z0-9][A-Za-z0-9_-]{0,15}")
+# the corpus guide's ids (C01, N04b, Q2, R1); any other name is shown by a keyed hash
+_NEUTRAL_DIR = re.compile(r"[A-Z]{1,2}[0-9]{1,3}[a-z]?")
 _SAFE_WORD = re.compile(r"[A-Za-z0-9_.\- ]{1,40}")
 _SAFE_FORMULA = re.compile(r"[A-Za-z0-9_ +\-*/%().,<>=!]{0,200}")
 _VERSION = re.compile(r"v?\d+(\.\d+)*[a-z0-9]*")
@@ -94,12 +95,12 @@ def sha256_of(path: Path) -> str:
 # ---------------------------------------------------------------- passport
 
 
-def _passport_value(column: str, value: str) -> str:
+def passport_value(column: str, value: str) -> str:
     if column in VOCABULARY:
         first = value.split(maxsplit=1)[0] if column == "resaved_after_race" else value
         return first if first in VOCABULARY[column] else "(other)"
     if column in NUMBER_COLUMNS:
-        return value if value.isdigit() else "(other)"
+        return value if value.isascii() and value.isdigit() else "(other)"
     if column == "version_race_day":
         return value if _VERSION.fullmatch(value) else "(other)"
     if column == "special_cases":
@@ -124,7 +125,7 @@ def read_inventory(path: Path) -> tuple[dict[str, dict[str, str]], dict[str, Jso
             if not value:
                 unfilled[column] += 1
             elif column not in NEVER_COPIED:
-                passport[column] = _passport_value(column, value)
+                passport[column] = passport_value(column, value)
         passports[directory] = passport
     counts: dict[str, Json] = {
         "present": True,
@@ -218,6 +219,32 @@ def _template_not_integer(code: Json) -> bool:
     return any(not _is_int(bound) for bound in bounds)
 
 
+def _sum_counts(parts: Iterable[Json]) -> dict[str, Json]:
+    total: Counter[str] = Counter()
+    for part in parts:
+        for label, count in as_dict(part).items():
+            if isinstance(count, int):
+                total[label] += count
+    return dict[str, Json](sorted(total.items()))
+
+
+def _card_type(person: dict[str, Json]) -> str:
+    """The card type of a person's card (``pseudonym.CARD_CLASSES``), never the number."""
+    value = person.get("card_number", person.get("sportident_card"))
+    number = -1
+    if isinstance(value, bool) or value is None or value == "":
+        number = 0
+    elif isinstance(value, int):
+        number = value
+    elif (isinstance(value, float) and value.is_integer()) or (
+        isinstance(value, str) and value.strip().isascii() and value.strip().isdigit()
+    ):
+        number = int(value)
+    if number == 0:
+        return "none"
+    return pseudonym.card_class(number)[2] if number > 0 else "(other)"
+
+
 def race_facts(race: Json, index: int, key: bytes) -> dict[str, Json]:
     """What chooses the calculation, and counts; no name, title or value of a person."""
     item = as_dict(race)
@@ -255,6 +282,7 @@ def race_facts(race: Json, index: int, key: bytes) -> dict[str, Json]:
             if not _is_int(str(as_dict(split).get("code")))
         ),
         "statuses": _counts(_status(r.get("status")) for r in results),
+        "cards_by_class": _counts(_card_type(p) for p in persons),
         "result_objects": _counts(as_str(_safe(r.get("object"))) for r in results),
         "race_key": pseudonym.keyed_hash(key, "race-id", as_str(item.get("id"))),
         "persons_key": (
@@ -311,7 +339,7 @@ class _Build:
         leaks = leakcheck.check_pair(doc, masked_doc)
         where = (
             leakcheck.leak_paths(doc, masked_doc)
-            if any(v for k, v in leaks.items() if k.startswith("leak:"))
+            if any(v for k, v in leaks.items() if k.startswith(("leak:", "residual:")))
             else {}
         )
         formulas = [f for i, r in enumerate(races) if (f := _formula(file_id, i, r))]
@@ -329,6 +357,8 @@ class _Build:
                 "sha256": _sha(raw),
                 "anonymized_path": relative,
                 "anonymized_sha256": _sha(out),
+                # gzip bytes depend on the zlib build; the text does not
+                "anonymized_text_sha256": _sha(racefile.decode(out)[0].encode("utf-8")),
                 "races": [race_facts(r, i, self.key) for i, r in enumerate(races)],
                 "runnable": not formulas,
                 "masked": dict[str, Json](sorted(stats.items())),
@@ -466,6 +496,7 @@ def build(
             "formats": _counts(as_str(f["format"]) for f in state.race_files),
             "versions": _counts(as_str(f["version"] or "(none)") for f in state.race_files),
             "kinds": _counts(all_kinds.elements()),
+            "cards_by_class": _sum_counts(r["cards_by_class"] for r in races),
             "masked": dict[str, Json](sorted(state.masked.items())),
             "leaks": dict[str, Json](sorted(state.leaks.items())),
         },

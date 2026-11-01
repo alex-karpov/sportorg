@@ -5,11 +5,13 @@ Built by `scripts/corpus/catalog.py` on `$SPORTORG_CORPUS/raw` and `inventory.cs
 Key id `98e603834506`. 25 directories, 63 race files, 100 races, 24 distinct starts (races that share a race id or the same persons count once).
 
 - kinds of files: html 110, pdf 33, race 63, readout-log 1, sportorg-log 1, text 26
+- person cards by card type: 8 digits 10, SI10 297, SI11 196, SI5 290, SI5 series 2 99, SI5 series 3 15, SI5 series 4 1, SI6 593, SI8 2282, SI9 3661, SIAC1 18952, gap 13, none 861, pCard 1190, tCard 221
 - race file formats: cp1251 6, gzip 28, utf-8 29
 - SportOrg versions of the last save: (none) 1, 0.11.0.0 1, 1.3.0.0 2, 1.4.0.0 1, 1.5.0.0 4, 1.6.0.0 18, v1.7.1 16, v1.7.2 1, v1.8.0b1 13, v1.8.0b2 6
 - races with `result_processing_mode = ardf`: 0
 - files with `scores_mode = formula` (R22): 0
-- leak check of the copies: leak 0, residual 193 (residual by category: residual:contact 5, residual:org 1, residual:person 1, residual:place 10, residual:text 176)
+- leak check of the copies: leak 0, residual 29 (residual by category: residual:contact 5, residual:org 1, residual:person 1, residual:place 10, residual:text 12)
+- status comments (C1): rule clause kept 5312, clause kept and hint masked 0, masked 6
 
 | directory | kinds | files.tsv: listed / matched / missing on disk / not listed / other hash | passport |
 |---|---|---|---|

@@ -107,3 +107,8 @@ def test_sportorg_log_counts_lines_by_level_and_code_location_only() -> None:
         "levels": {"ERROR": 1, "INFO": 2},
         "locations": {"(other)": 1, "main_window.py:267": 1, "sireader.py:120": 1},
     }
+
+
+@pytest.mark.parametrize("char", ["\ufeff", "\u00a0", "\u200b", "\u00ad", "\u2028"])
+def test_text_with_a_bom_or_an_invisible_space_is_text(char: str) -> None:
+    assert racefile.kind(f"{char}a line{char}of text\n".encode()) == "text"
