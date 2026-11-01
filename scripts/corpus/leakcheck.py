@@ -29,6 +29,9 @@ Files that scripts make only from synthetic inputs (``--synthetic``; their rerun
 byte for byte without the corpus) can hold a number equal to a card by chance: such hits are
 counted apart and do not fail the check.
 
+``--words-out FILE`` writes the matched words themselves, for the maintainer to read locally: the
+file must lie outside the repository, and the console still shows only counts and its path.
+
 Usage::
 
     uv run python -m scripts.corpus.leakcheck scan docs/evidence/stage-2 --commits main..HEAD
@@ -386,20 +389,25 @@ def scan_set(docs: Iterable[Json]) -> ScanSet:
     return scan
 
 
-def scan_text(text: str, scan: ScanSet) -> list[tuple[int, str]]:
-    """``(line number, category)`` of each line holding a sensitive value; never the value."""
-    hits: list[tuple[int, str]] = []
+def scan_words(text: str, scan: ScanSet) -> list[tuple[int, str, str]]:
+    """``(line number, category, matched word)``: for the maintainer's local file only."""
+    hits: list[tuple[int, str, str]] = []
     for number, line in enumerate(text.splitlines(), start=1):
         normalized = normalize(line)
         words = set(tokens(normalized))
-        found = {
-            "surname": bool(words & scan.surnames),
-            "org": any(set(tokens(o)) <= words and _bounded(normalized, o) for o in scan.orgs),
-            "card": bool(words & scan.cards),
-            "birth_date": any(d in line for d in scan.dates),
-        }
-        hits.extend((number, category) for category, hit in found.items() if hit)
+        hits.extend((number, "surname", w) for w in sorted(words & scan.surnames))
+        orgs = sorted(o for o in scan.orgs if set(tokens(o)) <= words and _bounded(normalized, o))
+        hits.extend((number, "org", o) for o in orgs)
+        hits.extend((number, "card", c) for c in sorted(words & scan.cards))
+        hits.extend((number, "birth_date", d) for d in sorted(d for d in scan.dates if d in line))
     return hits
+
+
+def scan_text(text: str, scan: ScanSet) -> list[tuple[int, str]]:
+    """``(line number, category)`` of each line holding a sensitive value; never the value."""
+    order = ("surname", "org", "card", "birth_date")
+    found = {(line, category) for line, category, _ in scan_words(text, scan)}
+    return sorted(found, key=lambda hit: (hit[0], order.index(hit[1])))
 
 
 # ---------------------------------------------------------------- sources and targets
@@ -450,6 +458,7 @@ class Options(argparse.Namespace):
     no_legacy_test_data: bool = False
     commits: str | None = None
     synthetic: tuple[Path, ...] = ()
+    words_out: Path | None = None
 
 
 def _sources(args: Options) -> tuple[list[Path], str | None]:
@@ -471,7 +480,14 @@ def _show(path: Path) -> str:
         return path.name
 
 
+def _inside_repository(path: Path) -> bool:
+    return path.resolve().is_relative_to(ROOT.resolve())
+
+
 def scan_command(args: Options) -> int:
+    if args.words_out is not None and _inside_repository(args.words_out):
+        print("leakcheck: --words-out must be outside the repository (it lists corpus values)")
+        return 2
     sources, error = _sources(args)
     if error:
         print(f"leakcheck: {error}")
@@ -480,9 +496,12 @@ def scan_command(args: Options) -> int:
     scan = scan_set(docs)
     findings = chance = files = 0
     synthetic = [p.resolve() for p in args.synthetic]
+    words: list[str] = []
     for path, text in _text_files(args.paths):
         files += 1
         hits = scan_text(text, scan)
+        if args.words_out is not None:
+            words.extend(f"{_show(path)}\t{n}\t{c}\t{w}" for n, c, w in scan_words(text, scan))
         if any(path.resolve().is_relative_to(s) for s in synthetic):
             chance += len(hits)
             continue
@@ -500,6 +519,13 @@ def scan_command(args: Options) -> int:
         f"scanned {files} files and {len(commits)} commit messages; findings: {findings}; "
         f"in synthetic outputs: {chance}"
     )
+    if args.words_out is not None:
+        args.words_out.parent.mkdir(parents=True, exist_ok=True)
+        lines = ["path\tline\tcategory\tword", *words]
+        args.words_out.write_text("\n".join(lines) + "\n", encoding="utf-8")
+        print(
+            f"leakcheck: {len(words)} matched words written to {args.words_out} (open it locally)"
+        )
     return 1 if findings else 0
 
 
@@ -520,6 +546,11 @@ def main(argv: Sequence[str] | None = None) -> int:
         type=Path,
         default=[],
         help="outputs made only from synthetic inputs: hits there are counted apart, as chance",
+    )
+    scan.add_argument(
+        "--words-out",
+        type=Path,
+        help="write the matched words (corpus values) to this file outside the repository",
     )
     args = parser.parse_args(argv, namespace=Options())
     return scan_command(args)

@@ -12,6 +12,7 @@ import pytest
 
 from scripts._json import as_dict, as_list
 from scripts.corpus import anonymize, leakcheck, racefile, synth
+from scripts.legacy import ROOT
 
 if TYPE_CHECKING:
     from pathlib import Path
@@ -169,3 +170,31 @@ def test_a_path_that_is_gone_is_skipped(tmp_path: Path) -> None:
     source.write_text(synth.dumps(synth.personal_individual()), encoding="utf-8")
     gone = tmp_path / "deleted.md"
     assert leakcheck.main(["scan", str(gone), "--source", str(source), "--no-corpus"]) == 0
+
+
+def test_words_out_lists_matches_in_a_file_outside_the_repository(
+    tmp_path: Path, capsys: pytest.CaptureFixture[str]
+) -> None:
+    """The maintainer reads the matched words locally; the console shows counts and the path."""
+    source = tmp_path / "race.json"
+    source.write_text(synth.dumps(synth.personal_individual()), encoding="utf-8")
+    doc = tmp_path / "old.md"
+    doc.write_text("intro\nа Придумкин здесь\n", encoding="utf-8")
+    words = tmp_path / "words.tsv"
+    args = ["scan", str(doc), "--source", str(source), "--no-corpus", "--words-out", str(words)]
+    assert leakcheck.main(args) == 1
+    assert words.read_text(encoding="utf-8").splitlines() == [
+        "path\tline\tcategory\tword",
+        f"{doc.name}\t2\tsurname\tпридумкин",
+    ]
+    out = capsys.readouterr().out
+    assert "Придумкин" not in out
+    assert "придумкин" not in out
+    assert str(words) in out
+
+
+def test_words_out_refuses_a_path_inside_the_repository() -> None:
+    target = ROOT / "words.tsv"
+    args = ["scan", "--no-corpus", "--no-legacy-test-data", "--words-out", str(target)]
+    assert leakcheck.main(args) == 2
+    assert not target.exists()

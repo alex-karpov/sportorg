@@ -279,3 +279,21 @@ def test_logs_are_counted_by_kind_without_their_content(tmp_path: Path) -> None:
     text = json.dumps(manifest, ensure_ascii=False)
     assert "8000001" not in text
     assert "Выдумкин" not in text
+
+
+def test_templates_and_punch_codes_legacy_cannot_read_are_counted(tmp_path: Path) -> None:
+    """F8: ``int()`` on list parts of a control template and on punch codes.
+
+    [код: pysport@b548c35 sportorg/models/memory.py:1142-1160]
+    """
+    doc = as_dict(synth.individual())
+    race = as_dict(as_list(doc["races"])[0])
+    controls = [as_dict(c) for c in as_list(as_dict(as_list(race["courses"])[0])["controls"])]
+    controls[0]["code"], controls[1]["code"] = "%(31,,32)", "%(31-35)"
+    split = as_dict(as_list(as_dict(as_list(race["results"])[0])["splits"])[0])
+    split["code"] = ""
+    root = tmp_path / "corpus"
+    _write_race(root / "raw" / "S01" / "a.json", doc)
+    facts = as_dict(as_list(_race_files(_build(root, tmp_path))[0]["races"])[0])
+    assert facts["list_templates_not_integer"] == 1
+    assert facts["punch_codes_not_integer"] == 1

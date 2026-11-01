@@ -191,6 +191,33 @@ def _status(value: Json) -> str:
     return STATUSES[value] if isinstance(value, int) and 0 <= value < len(STATUSES) else "(other)"
 
 
+_LIST_PART = re.compile(r"\s*,\s*")
+_RANGE = re.compile(r"\s*-\s*")
+
+
+def _is_int(text: str) -> bool:
+    """What Python's ``int()`` accepts for a decimal string."""
+    try:
+        int(text)
+    except ValueError:
+        return False
+    return True
+
+
+def _template_not_integer(code: Json) -> bool:
+    """A list template ``…(a,b-c)`` with a part ``int()`` refuses, as legacy splits it.
+
+    [код: pysport@b548c35 sportorg/models/memory.py:1142-1160]
+    """
+    template = str(code)
+    begin, end = template.find("("), template.find(")")
+    if not (begin > 0 and end > 0):
+        return False
+    parts = _LIST_PART.split(template[begin + 1 : end])
+    bounds = [bound for part in parts for bound in (_RANGE.split(part)[0], _RANGE.split(part)[-1])]
+    return any(not _is_int(bound) for bound in bounds)
+
+
 def race_facts(race: Json, index: int, key: bytes) -> dict[str, Json]:
     """What chooses the calculation, and counts; no name, title or value of a person."""
     item = as_dict(race)
@@ -215,6 +242,18 @@ def race_facts(race: Json, index: int, key: bytes) -> dict[str, Json]:
         "courses": len(as_list(item.get("courses"))),
         "organizations": len(as_list(item.get("organizations"))),
         "out_of_competition": sum(1 for p in persons if p.get("is_out_of_competition") is True),
+        "list_templates_not_integer": sum(
+            1
+            for course in as_list(item.get("courses"))
+            for control in as_list(as_dict(course).get("controls"))
+            if _template_not_integer(as_dict(control).get("code"))
+        ),
+        "punch_codes_not_integer": sum(
+            1
+            for result in results
+            for split in as_list(result.get("splits"))
+            if not _is_int(str(as_dict(split).get("code")))
+        ),
         "statuses": _counts(_status(r.get("status")) for r in results),
         "result_objects": _counts(as_str(_safe(r.get("object"))) for r in results),
         "race_key": pseudonym.keyed_hash(key, "race-id", as_str(item.get("id"))),
