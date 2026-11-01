@@ -51,8 +51,51 @@ that reads as GPL-3.0-or-later `[допущение]`, so code and templates der
 distributed under version 3 or any later version, and option (b) is not needed. The dependency
 allowlist of row 7 is the same set for both.
 
+**Precision of the correction, 2026-11-01.** The filled-in notice is not a separate statement. The
+About dialog embeds the whole GPLv3 text under the label "GPL v3 License". The notice is the sample
+in its appendix "How to Apply These Terms", after the sentence "To do so, attach the following
+notices to the program". History:
+- `f74877e` (2018-07-25, "Changed license") replaced the MIT `LICENSE` and pasted the same GPLv3 text
+  into `about.py`, with the placeholders unfilled `[история: pysport f74877e]`;
+- `eaa4843` (2018-11-09) filled the placeholders with "SportOrg / Copyright (C) 2018 SportOrg team"
+  in both files `[история: pysport eaa4843]`.
+
+At `b548c35` the About text equals `LICENSE` except one year. No own source file of legacy carries
+the notice; only the four vendored libraries do. So the "or later" reading rests on a filled-in sample
+inside the licence document, not on a notice attached to the program. That is weaker than the
+paragraph above suggests `[допущение]`. The decision stays the maintainer's (TASK-10).
+
+The licence text does not decide it. SPDX `GPL-3.0-only` and `GPL-3.0-or-later` have byte-identical
+`licenseText` (34 509 characters, with the same "or later" sample in the appendix). They differ only
+in `standardLicenseHeader`: "…as published by the Free Software Foundation, version 3." against
+"…either version 3 of the License, or (at your option) any later version." The deprecated bare
+`GPL-3.0` is named "GNU General Public License v3.0 only" (spdx.org/licenses/*.json, read
+2026-11-01). The `LICENSE` of `f74877e` is gnu.org `gpl-3.0.md` with changed heading levels and
+"Copyright (C) 2018 SportOrg" added to the title. So "GPL v3 License" with this text names version 3
+and states no "or later".
+
+Decision `[мейнтейнер: 2026-11-01]`, on these data: **GPL-3.0-or-later stays** until the pysport
+authors answer (TASK-10).
+
 Revisit: the maintainer asks the pysport authors (c) (Backlog TASK-10); if they state that version 3
 only was meant, the project switches to GPL-3.0-only (`pyproject.toml`, README, this section).
+
+**Authors' answer, 2026-10-25 (private correspondence, no public link)** `[мейнтейнер: 2026-11-01]`.
+One of the pysport authors, who also maintains `sportorg/sireader`, wrote, in paraphrase:
+- he would like MIT if the other libraries allow it;
+- SportOrg is under GPL because of Qt, which at the time allowed only GPL or LGPL;
+- this may have changed since.
+
+The maintainer did not ask about the About dialog. So:
+- The question of (c) is still open: the answer gives no version and does not mention "or later".
+  It does say that GPL was chosen because of Qt, not to exclude later versions. Nothing in it argues
+  for GPL-3.0-only, so the decision above stands.
+- The author prefers MIT if the dependencies allow it. A change of the project licence is not
+  proposed here. It would need a separate decision with its own data. The project is derived from
+  legacy code with many copyright holders, so "SportOrg team" consent is needed, not one author's
+  `[допущение]`. Qt itself does not force GPL: legacy moved from PyQt5 to PySide2 in 2018, and the
+  Qt modules it uses are LGPLv3. What keeps legacy under GPL is its own code and the vendored GPL
+  files. Facts, restrictions and proposals: `docs/evidence/licences/pyside6.agent.md`.
 
 ## Licence exceptions for row 7 (2026-10-25)
 Decision `[мейнтейнер: 2026-10-25]` (Stage 1 report, question 4):
@@ -66,6 +109,13 @@ Decision `[мейнтейнер: 2026-10-25]` (Stage 1 report, question 4):
   - Any other version needs the same check again.
   - The attribution of the original copyright holders of `sireader` is kept if this code is used
     (question in TASK-10).
+  - Answer of the `sportorg/sireader` maintainer, 2026-10-25 (private
+    correspondence, no public link) `[мейнтейнер: 2026-11-01]`, in paraphrase: the code has been
+    practically rewritten, so only a thank-you to the original authors remains. It explains why commit `d209fef` removed the
+    copyright lines. It does not say whether they can be restored. The claim that the code was
+    rewritten was not compared with `gaudenz/sireader` `[допущение]`. The rule above does not
+    change: if the project uses this code, it keeps the attribution of the original `sireader`
+    copyright holders (named in `licence-sources.agent.md`).
 - **`Unicode-3.0`** goes into the allowlist when Rust enters the project, with a line here. FSF lists
   it as GPL-compatible (same evidence file). Today the project has no Rust, so nothing changes.
 

@@ -1,0 +1,639 @@
+{
+ "different": 0,
+ "files": [
+  {
+   "differences": {},
+   "file_id": "C01/2c64d3d295c1",
+   "files": {
+    "comparison.json": true,
+    "results.json": true,
+    "stored.json": true
+   },
+   "identical": true
+  },
+  {
+   "differences": {},
+   "file_id": "C01/492aeefcee2f",
+   "files": {
+    "comparison.json": true,
+    "results.json": true,
+    "stored.json": true
+   },
+   "identical": true
+  },
+  {
+   "errors": {
+    "anonymized": "ValueError at sportorg/models/memory.py:1155:check",
+    "original": "ValueError at sportorg/models/memory.py:1155:check"
+   },
+   "file_id": "C02/b6306ffadea6",
+   "identical": null,
+   "same_error": true
+  },
+  {
+   "differences": {},
+   "file_id": "C03/3c9fb767a32f",
+   "files": {
+    "comparison.json": true,
+    "results.json": true,
+    "stored.json": true
+   },
+   "identical": true
+  },
+  {
+   "differences": {},
+   "file_id": "C03/db66b1180b9a",
+   "files": {
+    "comparison.json": true,
+    "results.json": true,
+    "stored.json": true
+   },
+   "identical": true
+  },
+  {
+   "differences": {},
+   "file_id": "C03/9725bb6dbdd2",
+   "files": {
+    "comparison.json": true,
+    "results.json": true,
+    "stored.json": true
+   },
+   "identical": true
+  },
+  {
+   "differences": {},
+   "file_id": "C04/6fd5e5494153",
+   "files": {
+    "comparison.json": true,
+    "results.json": true,
+    "stored.json": true
+   },
+   "identical": true
+  },
+  {
+   "differences": {},
+   "file_id": "C05/5e5549beccc9",
+   "files": {
+    "comparison.json": true,
+    "results.json": true,
+    "stored.json": true
+   },
+   "identical": true
+  },
+  {
+   "differences": {},
+   "file_id": "C05/ce7cda5435ac",
+   "files": {
+    "comparison.json": true,
+    "results.json": true,
+    "stored.json": true
+   },
+   "identical": true
+  },
+  {
+   "differences": {},
+   "file_id": "C05/39731ac7e971",
+   "files": {
+    "comparison.json": true,
+    "results.json": true,
+    "stored.json": true
+   },
+   "identical": true
+  },
+  {
+   "differences": {},
+   "file_id": "C05/164cd631c6dc",
+   "files": {
+    "comparison.json": true,
+    "results.json": true,
+    "stored.json": true
+   },
+   "identical": true
+  },
+  {
+   "differences": {},
+   "file_id": "C05/abaa6d477530",
+   "files": {
+    "comparison.json": true,
+    "results.json": true,
+    "stored.json": true
+   },
+   "identical": true
+  },
+  {
+   "differences": {},
+   "file_id": "C05/522fd2552cdb",
+   "files": {
+    "comparison.json": true,
+    "results.json": true,
+    "stored.json": true
+   },
+   "identical": true
+  },
+  {
+   "differences": {},
+   "file_id": "C05b/487b8e321b36",
+   "files": {
+    "comparison.json": true,
+    "results.json": true,
+    "stored.json": true
+   },
+   "identical": true
+  },
+  {
+   "differences": {},
+   "file_id": "C05b/724a195e6cba",
+   "files": {
+    "comparison.json": true,
+    "results.json": true,
+    "stored.json": true
+   },
+   "identical": true
+  },
+  {
+   "differences": {},
+   "file_id": "C05b/cab8253f25e1",
+   "files": {
+    "comparison.json": true,
+    "results.json": true,
+    "stored.json": true
+   },
+   "identical": true
+  },
+  {
+   "differences": {},
+   "file_id": "C06/0a23103384e5",
+   "files": {
+    "comparison.json": true,
+    "results.json": true,
+    "stored.json": true
+   },
+   "identical": true
+  },
+  {
+   "differences": {},
+   "file_id": "C06/42790523ed5a",
+   "files": {
+    "comparison.json": true,
+    "results.json": true,
+    "stored.json": true
+   },
+   "identical": true
+  },
+  {
+   "differences": {},
+   "file_id": "C07/2b07e2e56182",
+   "files": {
+    "comparison.json": true,
+    "results.json": true,
+    "stored.json": true
+   },
+   "identical": true
+  },
+  {
+   "differences": {},
+   "file_id": "C07/e6e75e52cfda",
+   "files": {
+    "comparison.json": true,
+    "results.json": true,
+    "stored.json": true
+   },
+   "identical": true
+  },
+  {
+   "differences": {},
+   "file_id": "N01/03087790dcb5",
+   "files": {
+    "comparison.json": true,
+    "results.json": true,
+    "stored.json": true
+   },
+   "identical": true
+  },
+  {
+   "differences": {},
+   "file_id": "N01/7bbcd6387a3d",
+   "files": {
+    "comparison.json": true,
+    "results.json": true,
+    "stored.json": true
+   },
+   "identical": true
+  },
+  {
+   "differences": {},
+   "file_id": "N01/f5c58ec1fc2e",
+   "files": {
+    "comparison.json": true,
+    "results.json": true,
+    "stored.json": true
+   },
+   "identical": true
+  },
+  {
+   "differences": {},
+   "file_id": "N01/788db7fe5835",
+   "files": {
+    "comparison.json": true,
+    "results.json": true,
+    "stored.json": true
+   },
+   "identical": true
+  },
+  {
+   "differences": {},
+   "file_id": "N01/7e5a1d85271d",
+   "files": {
+    "comparison.json": true,
+    "results.json": true,
+    "stored.json": true
+   },
+   "identical": true
+  },
+  {
+   "differences": {},
+   "file_id": "N02/17283244e1e3",
+   "files": {
+    "comparison.json": true,
+    "results.json": true,
+    "stored.json": true
+   },
+   "identical": true
+  },
+  {
+   "differences": {},
+   "file_id": "N02/efcdaafdd365",
+   "files": {
+    "comparison.json": true,
+    "results.json": true,
+    "stored.json": true
+   },
+   "identical": true
+  },
+  {
+   "differences": {},
+   "file_id": "N02/29b4e3001635",
+   "files": {
+    "comparison.json": true,
+    "results.json": true,
+    "stored.json": true
+   },
+   "identical": true
+  },
+  {
+   "differences": {},
+   "file_id": "N02/d063a2da9d84",
+   "files": {
+    "comparison.json": true,
+    "results.json": true,
+    "stored.json": true
+   },
+   "identical": true
+  },
+  {
+   "differences": {},
+   "file_id": "N03/74e2e412b83f",
+   "files": {
+    "comparison.json": true,
+    "results.json": true,
+    "stored.json": true
+   },
+   "identical": true
+  },
+  {
+   "differences": {},
+   "file_id": "N03/bd1e19c8c656",
+   "files": {
+    "comparison.json": true,
+    "results.json": true,
+    "stored.json": true
+   },
+   "identical": true
+  },
+  {
+   "differences": {},
+   "file_id": "N03/7b6ca1a77523",
+   "files": {
+    "comparison.json": true,
+    "results.json": true,
+    "stored.json": true
+   },
+   "identical": true
+  },
+  {
+   "differences": {},
+   "file_id": "N03/1ad41def7986",
+   "files": {
+    "comparison.json": true,
+    "results.json": true,
+    "stored.json": true
+   },
+   "identical": true
+  },
+  {
+   "differences": {},
+   "file_id": "N04/44778e16e4d4",
+   "files": {
+    "comparison.json": true,
+    "results.json": true,
+    "stored.json": true
+   },
+   "identical": true
+  },
+  {
+   "differences": {},
+   "file_id": "N04/d65244b424c4",
+   "files": {
+    "comparison.json": true,
+    "results.json": true,
+    "stored.json": true
+   },
+   "identical": true
+  },
+  {
+   "differences": {},
+   "file_id": "N04/fb692407121a",
+   "files": {
+    "comparison.json": true,
+    "results.json": true,
+    "stored.json": true
+   },
+   "identical": true
+  },
+  {
+   "differences": {},
+   "file_id": "N04b/88de9a368511",
+   "files": {
+    "comparison.json": true,
+    "results.json": true,
+    "stored.json": true
+   },
+   "identical": true
+  },
+  {
+   "differences": {},
+   "file_id": "N04b/35f5404dbbe8",
+   "files": {
+    "comparison.json": true,
+    "results.json": true,
+    "stored.json": true
+   },
+   "identical": true
+  },
+  {
+   "differences": {},
+   "file_id": "N05/8e7ae32c0d31",
+   "files": {
+    "comparison.json": true,
+    "results.json": true,
+    "stored.json": true
+   },
+   "identical": true
+  },
+  {
+   "differences": {},
+   "file_id": "N06/6975e0478084",
+   "files": {
+    "comparison.json": true,
+    "results.json": true,
+    "stored.json": true
+   },
+   "identical": true
+  },
+  {
+   "differences": {},
+   "file_id": "N07/d33becb09434",
+   "files": {
+    "comparison.json": true,
+    "results.json": true,
+    "stored.json": true
+   },
+   "identical": true
+  },
+  {
+   "differences": {},
+   "file_id": "N08/ae9fe5fc3fb4",
+   "files": {
+    "comparison.json": true,
+    "results.json": true,
+    "stored.json": true
+   },
+   "identical": true
+  },
+  {
+   "differences": {},
+   "file_id": "N09/c0f7f8d166b9",
+   "files": {
+    "comparison.json": true,
+    "results.json": true,
+    "stored.json": true
+   },
+   "identical": true
+  },
+  {
+   "differences": {},
+   "file_id": "N09/75229e81d712",
+   "files": {
+    "comparison.json": true,
+    "results.json": true,
+    "stored.json": true
+   },
+   "identical": true
+  },
+  {
+   "differences": {},
+   "file_id": "N10/d32263a3fbee",
+   "files": {
+    "comparison.json": true,
+    "results.json": true,
+    "stored.json": true
+   },
+   "identical": true
+  },
+  {
+   "differences": {},
+   "file_id": "N12/8a95ffde6b10",
+   "files": {
+    "comparison.json": true,
+    "results.json": true,
+    "stored.json": true
+   },
+   "identical": true
+  },
+  {
+   "differences": {},
+   "file_id": "N12/07525bcd7ac3",
+   "files": {
+    "comparison.json": true,
+    "results.json": true,
+    "stored.json": true
+   },
+   "identical": true
+  },
+  {
+   "differences": {},
+   "file_id": "N12/23992aac7105",
+   "files": {
+    "comparison.json": true,
+    "results.json": true,
+    "stored.json": true
+   },
+   "identical": true
+  },
+  {
+   "differences": {},
+   "file_id": "N13/f67f346c8323",
+   "files": {
+    "comparison.json": true,
+    "results.json": true,
+    "stored.json": true
+   },
+   "identical": true
+  },
+  {
+   "differences": {},
+   "file_id": "N13/d587580e8882",
+   "files": {
+    "comparison.json": true,
+    "results.json": true,
+    "stored.json": true
+   },
+   "identical": true
+  },
+  {
+   "differences": {},
+   "file_id": "N13/8e1452ad8a37",
+   "files": {
+    "comparison.json": true,
+    "results.json": true,
+    "stored.json": true
+   },
+   "identical": true
+  },
+  {
+   "differences": {},
+   "file_id": "N13/8e3c32a7b2bd",
+   "files": {
+    "comparison.json": true,
+    "results.json": true,
+    "stored.json": true
+   },
+   "identical": true
+  },
+  {
+   "differences": {},
+   "file_id": "N14/2e9b3817e401",
+   "files": {
+    "comparison.json": true,
+    "results.json": true,
+    "stored.json": true
+   },
+   "identical": true
+  },
+  {
+   "differences": {},
+   "file_id": "N14/86c18f6f05e9",
+   "files": {
+    "comparison.json": true,
+    "results.json": true,
+    "stored.json": true
+   },
+   "identical": true
+  },
+  {
+   "differences": {},
+   "file_id": "N15/a05829ab5422",
+   "files": {
+    "comparison.json": true,
+    "results.json": true,
+    "stored.json": true
+   },
+   "identical": true
+  },
+  {
+   "differences": {},
+   "file_id": "Q2/766475f2834f",
+   "files": {
+    "comparison.json": true,
+    "results.json": true,
+    "stored.json": true
+   },
+   "identical": true
+  },
+  {
+   "differences": {},
+   "file_id": "Q2/8195d26c95ba",
+   "files": {
+    "comparison.json": true,
+    "results.json": true,
+    "stored.json": true
+   },
+   "identical": true
+  },
+  {
+   "differences": {},
+   "file_id": "Q2/68690c30de67",
+   "files": {
+    "comparison.json": true,
+    "results.json": true,
+    "stored.json": true
+   },
+   "identical": true
+  },
+  {
+   "differences": {},
+   "file_id": "Q2/f21a8a2906be",
+   "files": {
+    "comparison.json": true,
+    "results.json": true,
+    "stored.json": true
+   },
+   "identical": true
+  },
+  {
+   "differences": {},
+   "file_id": "R1/009b442d5599",
+   "files": {
+    "comparison.json": true,
+    "results.json": true,
+    "stored.json": true
+   },
+   "identical": true
+  },
+  {
+   "differences": {},
+   "file_id": "R1/50fed5d890c3",
+   "files": {
+    "comparison.json": true,
+    "results.json": true,
+    "stored.json": true
+   },
+   "identical": true
+  },
+  {
+   "differences": {},
+   "file_id": "R1/d7dd47952e76",
+   "files": {
+    "comparison.json": true,
+    "results.json": true,
+    "stored.json": true
+   },
+   "identical": true
+  },
+  {
+   "differences": {},
+   "file_id": "R1/06ac0f7b7377",
+   "files": {
+    "comparison.json": true,
+    "results.json": true,
+    "stored.json": true
+   },
+   "identical": true
+  }
+ ],
+ "identical": 62,
+ "lane": ".venv",
+ "legacy_failed_alike": 1,
+ "not_run": 1,
+ "ran": 62
+}

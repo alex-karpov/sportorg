@@ -495,8 +495,8 @@ SECRETS: dict[str, Json] = {
     "middle_name": "Secretmiddle",
     "comment": "Secretcomment",
     "world_code": "SecretWRE",
-    "birth_date": "2011-03-04",
-    "card_number": 7654321,
+    "birth_date": "1900-03-04",
+    "card_number": 7000123,
 }
 
 
@@ -516,7 +516,7 @@ def _with_secrets(doc: dict[str, Json]) -> None:
         person.update(SECRETS)
         person["organization_id"] = club["id"]
     for result in map(as_dict, as_list(race["results"])):
-        result.update({"card_number": 7654321, "status_comment": "Secretstatus"})
+        result.update({"card_number": 7000123, "status_comment": "Secretstatus"})
 
 
 @requires_legacy
@@ -525,7 +525,7 @@ def test_no_personal_data_reaches_any_output(synth_dir: Path, tmp_path: Path) ->
     run = _legacy(race_file)
 
     texts = [dumps(doc) for doc in (run.results, run.stored, run.comparison, run.run)]
-    secrets = ["Secret", "7654321", "2011"]
+    secrets = ["Secret", "7000123", "1900-03"]
     assert [s for s in secrets for text in texts if s in text] == []
     assert _outcome(_by_bib(run)[101])[:2] == ("OK", 1)  # the race itself is unchanged
 
@@ -534,7 +534,7 @@ def test_no_personal_data_reaches_any_output(synth_dir: Path, tmp_path: Path) ->
 def test_a_legacy_error_is_sanitized_end_to_end(synth_dir: Path, tmp_path: Path) -> None:
     def bad_status(doc: dict[str, Json]) -> None:
         race = as_dict(as_list(doc["races"])[0])
-        as_dict(as_list(race["results"])[0])["status"] = "Secretsurname-7654321"
+        as_dict(as_list(race["results"])[0])["status"] = "Secretsurname-7000123"
 
     race_file = _edited(synth_dir / "individual.json", tmp_path / "bad.json", bad_status)
     with pytest.raises(oracle_cli.OracleError) as info:
@@ -544,7 +544,7 @@ def test_a_legacy_error_is_sanitized_end_to_end(synth_dir: Path, tmp_path: Path)
     assert "ValueError" in text
     assert "sportorg/models/memory.py" in text
     assert "Secret" not in text
-    assert "7654321" not in text
+    assert "7000123" not in text
 
 
 @requires_legacy

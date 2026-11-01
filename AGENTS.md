@@ -62,10 +62,14 @@ equivalent (Docker) for unattended agents and for hosts without WSL.
 7. **Decisions are ADRs** in `docs/adr/` (options, data, decision, revisit condition). "Like legacy"
    and "by default" are not arguments. New dependency = first use + ADR line.
 8. **Personal data** of participants never enters the repository (see `docs/data-request.md`).
+   Never quote legacy's test code or test data (`tests/` of `.legacy/pysport`): they copy personal
+   data of legacy's test files. Cite the commit and path instead
+   (`git -C .legacy/pysport show <rev> -- tests/`).
 9. **Discrepancies** between code, rules and protocols are not fixed silently: classify
    (legacy bug / local practice / rule gap) and raise to the maintainer.
 10. Code, comments, commits (Conventional Commits), ADRs and tasks are in English. Documents addressed
-    to the maintainer (`docs/brief.md`, `docs/reports/`, `docs/data-request.md`) are in Russian.
+    to the maintainer (`docs/brief.md`, `docs/reports/`, `docs/data-request.md`) and assignments the
+    maintainer hands to volunteers (`docs/assignments/`) are in Russian.
 
 ## Agent environments
 - Claude Code: `CLAUDE.md` (plugins, hooks, deny rules). Codex and others: `docs/agents/environments.md`.

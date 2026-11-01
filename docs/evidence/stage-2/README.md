@@ -10,3 +10,4 @@ Opus 5.5), not script output and not reviewed by a human.
 | `golden-guard/` | #7 | scenario matrix of protection mechanisms, canary, facts (ADR-0008) | S1 |
 | `legacy-env/` | (#1, #5, #6 prerequisite) | Python for the legacy runtime, legacy test results headless (ADR-0009) | S1 |
 | `oracle/` | #1 | headless oracle on synthetic races and legacy `test.json` (counts only), both lanes, canary, driver type checking (ADR-0009 T3–T5) | S2 |
+| `corpus/` | #2 | anonymization on a synthetic corpus (rebuild, locality, leak check, invariant), the corpus manifest (counts, hashes, neutral ids), the invariant on the corpus, findings F7–F8 | S3 |

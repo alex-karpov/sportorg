@@ -236,8 +236,9 @@ evidence `stage-2/oracle/`.
 
 ## S3 — anonymization and corpus manifest (AC #2)
 
-`scripts/corpus/anonymize.py` (Д1 a + deterministic HMAC birthday in the same year; key from an
-environment variable, no key → error), `scripts/corpus/leakcheck.py` (no original name, chip or date in
+`scripts/corpus/anonymize.py` (Д1 a + deterministic HMAC birthday in the same year; key from the
+environment variable `SPORTORG_ANONYMIZATION_KEY`, no key → error; the corpus path from
+`SPORTORG_CORPUS`), `scripts/corpus/leakcheck.py` (no original name, chip or date in
 output), invariant test: oracle(anonymized) == oracle(original) on statuses, times, places;
 manifest (hash of original and anonymized copy, SportOrg version, sport, start format) is the only
 corpus file in the repository. Card number renumbered inside the same card-type range.
@@ -246,7 +247,46 @@ Added by the maintainer's answers of 2026-11-01: the manifest records each file'
 lists files with `scores_mode = formula` and their formulas, which run only with the maintainer's
 consent (R22). The leak check also scans every evidence file before it is committed, test ids of
 legacy test runs included (review finding S1-12).
-**Done when:** reproducible, leak check and invariant green on synthetic data and on the corpus if present.
+Locality `[мейнтейнер: 2026-11-01]`: replacing, editing or adding corpus files must not change the
+output for anything else. Requirements: a pseudonym is a function of the key and the normalized value
+only (HMAC, no shared table of names already given out; normalization rules for case, ё/е and spaces
+fixed and tested); a card number maps through a keyed bijection inside its card-type range (a
+permutation, so no collisions to resolve in visiting order); a file's neutral id comes from the
+directory id and the file's stable name, not from its position in a listing; no cross-file matching
+of persons (clustering by name and year). Tests: (1) changing or adding file B leaves the anonymized
+copy of file A byte-identical, and its manifest hashes unchanged; (2) changing one record of a file
+leaves every other record of that file anonymized as before.
+**Done when:** reproducible, locality tests green, leak check and invariant green on synthetic data
+and on the corpus if present.
+
+**Interfaces (as built, S3 of 2026-11-01):**
+- `scripts/corpus/pseudonym.py`: `load_key(environ)` (`MissingKeyError`, the value never in a
+  message), `key_id`, `keyed_hash`, `normalize`, `is_plain`, `pseudonym(key, kind, value)` (kinds
+  person, org, place, contact, code, text), `Permutation(key, label, size)` (`forward`,
+  `inverse`, `cycle`), `CARD_CLASSES`, `card_class`, `card_number`, `number_code`, `birth_date`.
+- `scripts/corpus/anonymize.py`: `anonymize(doc, *, key, neutral_id) -> Anonymized(doc, stats)`,
+  `anonymize_bytes(raw, …) -> (bytes, format, stats)`; field lists `LEGACY_SETTINGS`,
+  `CLEARED_SETTINGS`, `TEXT_SETTINGS`, `PERSON_KEPT`, `RESULT_KEPT`, `ORG_KEPT`, `DATA_*`.
+- `scripts/corpus/racefile.py`: `decode`, `encode` (gzip with `mtime=0`), `dumps` (legacy's
+  indent), `races_of`, `kind` (`KINDS`), `readout_log_stats`.
+- `scripts/corpus/leakcheck.py`: `extract`, `check_pair`, `leak_paths`, `scan_set`, `scan_text`;
+  CLI `scan PATHS… [--source] [--no-corpus] [--no-legacy-test-data] [--commits RANGE]
+  [--synthetic PATH]`.
+- `scripts/corpus/catalog.py`: `build(corpus, cache, *, key, paths=None) -> manifest`,
+  `read_inventory`, `files_tsv_counts`, `race_facts`; cache `MANIFEST.json`.
+- `scripts/corpus/invariant.py`: `diff_counts`, `compare_runs`, `check(original, anonymized, *,
+  python_exe)` on copies in a temporary directory (F7), errors per side as `<kind> at <frame>`.
+- `scripts/corpus/evidence.py synthetic|corpus --out DIR [--invariant] [--allow-formula ID]`;
+  `scripts/corpus/synth.py --personal` (`PERSONAL`: individual, multi-day, old format; fictional).
+
+Rulings (deviations from the draft above): a pseudonym is the HMAC of the normalized value plus a
+suffix from the exact value when it is not in the plain form, because legacy compares names
+exactly (question 1 of `corpus/findings.agent.md`, ADR-0009 T7); card numbers and birth days by a
+keyed one-cycle permutation, so no value maps to itself and the leak check compares records, not
+the whole text; the invariant compares whole files (`results.json`, `stored.json`,
+`comparison.json`), not only statuses, times and places; the leak check also scans commit
+messages and every file changed on the branch; logs found in the corpus are counted, not
+anonymized.
 
 ## S4 — golden master (AC #3)
 
@@ -267,6 +307,12 @@ socat / tty0tty; com0com and alternatives), ADR. Test: legacy reader (`sportiden
 `.legacy-run` reads a replayed card headless; canary: corrupted CRC byte. Hardware available
 `[мейнтейнер: 2026-10-31]`: BSM7-USB, BSF8, BSF8-SRR, SRR USB dongle; SI5, SI6, SI8, SI9, SIAC,
 pCard, tCard.
+Added by the maintainer's answer of 2026-11-01 (S3 question 3): logs of the corpus, option C1 of
+`docs/evidence/stage-2/corpus/logs.agent.md`: extract only the SportIdent frames and device lines of
+legacy's log into a dump, map card numbers by the S3 permutation, overwrite the owner bytes of the
+card blocks, recompute the CRC, drop every other message; the readout backup `si<date>.log` with
+cards mapped only. Tests first, as listed there; the maintainer checks the unmapped log locations
+(`winorient.py`, `orgeo.py`) by message prefix before a real log is processed.
 
 ## S6 — baseline, automatic part (AC #6 part)
 
@@ -470,3 +516,117 @@ Commits: `a476b8d`, `8558c25` (check files, answers), `74edb7a`, `113bf0d` (S1 f
 Answered the same day `[мейнтейнер: 2026-11-01]`: F3, F4 and F6 are legacy bugs; for F6 the oracle
 reproduces each race in its own context, and S4 runs corpus files with several races also in
 `after-open` (written into S4 above).
+
+### S3 — 2026-11-01 (Claude Code, Opus 5.5)
+
+Done (AC #2):
+- `scripts/corpus/` by TDD: `pseudonym.py` (key from `SPORTORG_ANONYMIZATION_KEY`, normalization,
+  HMAC pseudonyms with a variant suffix, keyed one-cycle permutations for cards and birth days),
+  `anonymize.py` (Д1 field by field, old field names, unknown keys → text, counted), `racefile.py`
+  (formats as the oracle, kinds by content incl. legacy's readout backup and log), `leakcheck.py`
+  (pair check by field and by record, leak paths, scan of text files and commit messages),
+  `catalog.py` (walk, copies, manifest, `files.tsv`, passport, starts, R22, ARDF), `invariant.py`,
+  `evidence.py`; `synth.py --personal` (fictional individual, multi-day with spelling variants, old
+  format). Tests: 165 in `tests/scripts/corpus`, the locality tests of the plan among them
+  (`test_locality_one_changed_record_leaves_the_others_as_before`,
+  `test_locality_another_file_does_not_change_this_one[edit|add]`).
+- Synthetic (`corpus/synthetic.md`): rebuild byte-identical; locality (edit another file, add a
+  file, one record) holds; 0 leaks; invariant 6 of 6 identical, the formula file not run (R22).
+- Corpus (`corpus/manifest.md`, `corpus/invariant.md`, as on disk at the run): 25 directories, 63
+  race files (28 gzip, 29 UTF-8, 6 cp1251), 100 races, 24 distinct starts; versions 0.11.0.0 to
+  v1.8.0b2; no ARDF race, no `scores_mode = formula`; passport: only `id` filled; `files.tsv`: N04
+  two listed files missing on disk, N13 one file not listed (and `source.txt` not listed anywhere);
+  N07 logs added during the session counted (readout backup 148 readouts, legacy log 4598 lines).
+  Leak check of the copies: 0 leaks, 193 residual (values that also stand in kept fields or keys).
+  Invariant: 62 of 62 files legacy opens identical before and after; one file legacy cannot open
+  either way (F8).
+- Findings F7 (legacy opens gzip `r+b`: a read-only original cannot be opened; the invariant runs
+  on copies) and F8 (`ValueError` in `ResultSportident.check` on one 1.3.0.0 file) in
+  `corpus/findings.agent.md`; ADR-0009 T7 (anonymization primitives) proposed.
+- The first leak check found 15 hits in five old files: all in JSON keys (old files hold schema
+  words such as `address` as values). Keys now count as kept text (test
+  `test_a_value_that_is_also_a_key_name_is_residual`). An ad-hoc diagnostic run on the corpus was
+  refused by the auto-mode classifier; the location of a legacy failure is now printed by the
+  invariant itself (`<kind> at <frame>`).
+- Evidence: golden-guard, legacy-env and oracle rerun with an empty diff; `corpus/` run twice,
+  byte-identical. `check.py` green, 636 tests. `scripts.legacy verify` ok, `.legacy-run` restored.
+- Leak check before the commits (`corpus/commands.txt`): 0 findings over the stage evidence, the
+  files changed since `74105e5`, new files and 22 commit messages; 2 chance hits in synthetic
+  outputs. Invented values in
+  tests were changed before the commits.
+- TDD exception: `test_logs_are_counted_by_kind_without_their_content` was written after the code
+  it tests and passed at once (the log kinds of `racefile.py` had their own RED test first).
+
+Verdict AC #2 (agent's, not checked in TASK-8): synthetic — full (reproducible, locality, leak
+check, invariant); corpus — as it stood at the run, with its limits: being assembled, passport
+empty, no ARDF, no formula files, one file legacy cannot open, logs and protocols not anonymized.
+"Corpus in repo only after the personal-data decision": held, D2 (a); only the manifest entered.
+
+Open questions for the maintainer (`corpus/findings.agent.md`): 1 variant suffix of pseudonyms
+(recommended: keep); 2 protocols as kind + hash (recommended); 3 logs: anonymize the readout log
+later (recommended), legacy's log counts only; 4 old tokens and hosts cleared (confirm); 5 a local
+pre-commit hook for the leak check (recommended, later); 6 word matches in older reports (leave);
+F7 and F8 to classify; for S4: move the input copy of F7 into `scripts/oracle_cli.py`.
+
+Next: S4 (golden master), in a fresh session.
+
+Maintainer's answers of 2026-11-01, in the same session: questions 1, 2 and 4 as built (ADR-0009
+T7 decided); 5 → Backlog TASK-12 (local pre-commit hook for the leak check); 3 → a sub-agent
+(Sonnet, medium) studies from legacy's code what the logs hold (the maintainer: the log holds the
+raw byte exchange of readouts with the chip owner's name); the manifest now counts legacy's log by
+code location (`racefile.sportorg_log_stats`, TDD); 6 open.
+Later the same day `[мейнтейнер: 2026-11-01]`: F7 is a legacy bug (checked on Windows: a read-only
+gzip file does not open, a read-only plain file opens but does not save and leaves `.json.tmp`);
+F8 confirmed in the GUI, its cause narrowed by new manifest counters to an empty part of a list
+template, parsed by `int()` since `0f3a0a8`, classified a legacy bug (regression); question 3 → C1 in
+S5 (written into S5 above); question 6: the matched words written to a file outside the
+repository (`leakcheck scan --words-out`, TDD), decision pending.
+
+Question 6, answered `[мейнтейнер: 2026-11-01]`: of the matched words, one line is personal data
+(a name and a club): `docs/evidence/stage-0/legacy-fix-candidates.md`, a test diff of legacy quoted
+in Stage 0 (C3, `3b55fe8b0`); the rest is safe. That file quoted the first 80 lines of the test diff
+of each of its 11 candidates; legacy's test code copies names from legacy's test files with
+personal data. All 11 test-diff blocks are removed from the tree (without reading them; each
+replaced by the command that reproduces it from the pinned clone); a heuristic count of quoted
+code lines with name-like literals over `docs/` and `backlog/` is 0 after it. The leak check did not
+catch them: its sources are the corpus and legacy's `test.json`, not legacy's other test data
+(SFRX, WDB, CSV, IOF XML) or test code. The blocks stay in the history of `main` (`eb40eef`):
+whether to rewrite it is the maintainer's decision.
+Maintainer's answers `[мейнтейнер: 2026-11-01]`: the history of `main` stays (as for the surname
+before; legacy's test code is public in `sportorg/pysport`); AGENTS.md rule 8 now forbids quoting
+legacy's test code or test data, and TASK-12 gained a criterion: the hook refuses quoted code with
+name-like string literals in Markdown and text files.
+
+### S3 review and fix pass — 2026-11-01 (Claude Code, Opus 5.5)
+
+Review: a Fable sub-agent at the maintainer's request (synthetic data only): 1 critical, 4
+important, 9 minor; table of findings and what was done in `corpus/findings.agent.md`
+(«Review of S3 and the fix pass»). Maintainer's decisions `[мейнтейнер: 2026-11-01]`: C1 (в) —
+status comments that are rule clauses (`п.п.6.6.4`, `пп6.6.4`, with or without legacy's hint)
+kept, any other text masked, also where legacy copies it into the derived result strings; I3 —
+short card numbers only as card field values, card types counted in the manifest, the limit in
+README; I4 — the unpushed branch rewritten; the rest as recommended.
+- I4: the 9 commits after `74105e5` rewritten with `git filter-branch` (tree and message filters;
+  new HEAD before this pass `80aa62f`); oracle tests green after it. Rule for later sessions: an
+  invented value that matched the corpus is changed together with other invented values, and no
+  text says which category matched.
+- Fixes by TDD: C1, I1, I2, I3 (middle names not searched in text, as given names: deviation from
+  the review's proposal), M1–M4, M6, M7 (year assertion), M8; M5 and M9 described in README
+  «Limits». A corpus run after C1 showed one new leak: legacy's status title in the derived
+  strings of one file, equal to a value of that file; legacy's titles now count as kept text
+  (checked against legacy's enum and Russian translation by a test), which turned that leak into
+  one residual and changed nothing else.
+- Another agent edited `scripts/corpus/anonymize.py` in the same tree during the pass; at the
+  maintainer's request it reverted its change; the state was checked by diff and one lost branch
+  (float card numbers) restored. Its other uncommitted edits (`AGENTS.md`, ADR-0004, TASK-3, 4,
+  10) are not part of this pass's commit.
+- Evidence: `corpus/synthetic.*` rebuilt twice, byte-identical: 0 leaks, invariant 7 of 7 (the
+  formula file not run), status comments 3 kept, 1 hint masked, 2 masked. Corpus rebuilt twice,
+  byte-identical: 0 leaks, 29 residual (all keys of the schema, group names, one setting, the
+  status title), invariant 62 of 62 identical (F8 unchanged); status comments 5312 kept as rule
+  clauses, 6 masked. `check.py` green. Leak check over the stage evidence, the files changed
+  since `74105e5` and new files, and 31 commit messages: 0 findings in this pass's files; 2 in
+  another agent's uncommitted ADR-0004 text (not committed here, reported to the maintainer).
+
+Verdict AC #2 unchanged: synthetic — full; corpus — as it stood at the run, with its limits.
+Next: S4 (golden master), in a fresh session.
