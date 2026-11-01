@@ -1,0 +1,11 @@
+# Run from the repository root. Outputs: scenarios.{json,md}, canary.json, facts.json.
+# Scenario matrix: offline, temporary repositories; the (c) columns need ssh-keygen with -Y (OpenSSH >= 8.1).
+uv run python -m scripts.golden_probe scenarios --out docs/evidence/stage-2/golden-guard
+# Canary: a golden commit on a clone of this repository, with and without the trailer.
+uv run python -m scripts.golden_probe canary --out docs/evidence/stage-2/golden-guard
+# Facts: history counts at the branch base of stage-2; GitHub settings through `gh api` (network: api.github.com).
+# Raw responses are cached with MANIFEST.json; a rerun reads the cache and does not touch the network.
+uv run python -m scripts.golden_probe facts --out docs/evidence/stage-2/golden-guard --repo alex-karpov/sportorg --rev aeb6cb752161cd6c62e419a3c8405223d35c2574 --cache ~/.cache/sportorg-stage2/github
+# Tests of the guard and the canary (also run in CI on three OS)
+uv run pytest tests/scripts/test_golden_guard.py tests/scripts/test_golden_probe.py -q
+uv run python scripts/check.py --only golden

@@ -1,0 +1,9 @@
+# [код: pysport@b548c35 sportorg/models/constant.py:160-192,225-275]
+# Both are wrapped in @singleton (sportorg/common/singleton.py:22): the name is a factory that
+# returns the one instance, so the driver calls them like classes, as the GUI does.
+class StatusComments:
+    def set(self, items: list[str]) -> None: ...
+    def set_default_statuses(self, items: list[str]) -> None: ...
+
+class RankingTable:
+    def set_table(self, items: list[list[str]], table_type: str = "default") -> None: ...

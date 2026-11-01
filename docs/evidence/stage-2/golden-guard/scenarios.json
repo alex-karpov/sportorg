@@ -1,0 +1,105 @@
+{
+ "matches_expected": {
+  "a_trailer": 8,
+  "c1_manifest_signers_in_repo": 8,
+  "c2_manifest_signer_pinned_outside": 9
+ },
+ "mechanisms": [
+  "a_trailer",
+  "c1_manifest_signers_in_repo",
+  "c2_manifest_signer_pinned_outside"
+ ],
+ "scenarios": [
+  {
+   "description": "new golden file, no approval",
+   "expected": "detected",
+   "results": {
+    "a_trailer": "detected",
+    "c1_manifest_signers_in_repo": "detected",
+    "c2_manifest_signer_pinned_outside": "detected"
+   },
+   "scenario": "add"
+  },
+  {
+   "description": "golden file edited, no approval",
+   "expected": "detected",
+   "results": {
+    "a_trailer": "detected",
+    "c1_manifest_signers_in_repo": "detected",
+    "c2_manifest_signer_pinned_outside": "detected"
+   },
+   "scenario": "modify"
+  },
+  {
+   "description": "golden file deleted, no approval",
+   "expected": "detected",
+   "results": {
+    "a_trailer": "detected",
+    "c1_manifest_signers_in_repo": "detected",
+    "c2_manifest_signer_pinned_outside": "detected"
+   },
+   "scenario": "delete"
+  },
+  {
+   "description": "golden file moved out of tests/golden/",
+   "expected": "detected",
+   "results": {
+    "a_trailer": "detected",
+    "c1_manifest_signers_in_repo": "detected",
+    "c2_manifest_signer_pinned_outside": "detected"
+   },
+   "scenario": "rename_out"
+  },
+  {
+   "description": "golden file changed only in a merge resolution",
+   "expected": "detected",
+   "results": {
+    "a_trailer": "detected",
+    "c1_manifest_signers_in_repo": "detected",
+    "c2_manifest_signer_pinned_outside": "detected"
+   },
+   "scenario": "evil_merge"
+  },
+  {
+   "description": "golden file edited with maintainer approval",
+   "expected": "passed",
+   "results": {
+    "a_trailer": "passed",
+    "c1_manifest_signers_in_repo": "passed",
+    "c2_manifest_signer_pinned_outside": "passed"
+   },
+   "scenario": "approved"
+  },
+  {
+   "description": "code change only",
+   "expected": "passed",
+   "results": {
+    "a_trailer": "passed",
+    "c1_manifest_signers_in_repo": "passed",
+    "c2_manifest_signer_pinned_outside": "passed"
+   },
+   "scenario": "non_golden"
+  },
+  {
+   "description": "approval words in the body, not a trailer",
+   "expected": "detected",
+   "results": {
+    "a_trailer": "detected",
+    "c1_manifest_signers_in_repo": "detected",
+    "c2_manifest_signer_pinned_outside": "detected"
+   },
+   "scenario": "text_in_body"
+  },
+  {
+   "description": "the committer (an agent) writes the approval itself",
+   "expected": "detected",
+   "results": {
+    "a_trailer": "passed",
+    "c1_manifest_signers_in_repo": "passed",
+    "c2_manifest_signer_pinned_outside": "detected"
+   },
+   "scenario": "forged"
+  }
+ ],
+ "ssh": "OpenSSH_10.2p1 Ubuntu-2ubuntu3.8, OpenSSL 3.5.5 27 Jan 2026"
+}

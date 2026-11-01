@@ -1,0 +1,52 @@
+{
+ "basedpyright": "basedpyright 1.40.2 based on pyright 1.1.414",
+ "py38_probe": [
+  {
+   "construct": "str.removeprefix (3.9)",
+   "flagged": false
+  },
+  {
+   "construct": "dict[...] at run time (3.9)",
+   "flagged": true
+  },
+  {
+   "construct": "dict | dict (3.9)",
+   "flagged": false
+  }
+ ],
+ "variants": {
+  "a_legacy_sources": {
+   "by_rule": {
+    "reportMissingTypeStubs": 7,
+    "reportUnknownArgumentType": 5,
+    "reportUnknownMemberType": 15,
+    "reportUnknownVariableType": 5
+   },
+   "description": "(a) legacy sources and packages: the legacy 3.8 interpreter",
+   "errors": 32,
+   "files": 4,
+   "warnings": 0
+  },
+  "a_without_legacy": {
+   "by_rule": {
+    "reportAny": 1,
+    "reportMissingImports": 8,
+    "reportUnknownArgumentType": 13,
+    "reportUnknownMemberType": 46,
+    "reportUnknownParameterType": 3,
+    "reportUnknownVariableType": 28
+   },
+   "description": "(a') as (a) where no legacy exists (CI): the project interpreter",
+   "errors": 99,
+   "files": 4,
+   "warnings": 0
+  },
+  "c_stubs": {
+   "by_rule": {},
+   "description": "(c) hand-written stubs, the project interpreter",
+   "errors": 0,
+   "files": 4,
+   "warnings": 0
+  }
+ }
+}

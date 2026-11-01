@@ -1,0 +1,104 @@
+{
+ "inputs": [
+  {
+   "input": "inputs/individual.json",
+   "outputs_sha256": {
+    "comparison.json": "45553e812fbdc8e3b22bf7a42499418a04bafba0bf560a3c7900aa3a8e05b5e5",
+    "results.json": "979a5a2d07165715650afada532d999737711fb4c0f5e5fdc5b0cc9399ec9210",
+    "run.json": "91d59e358de1141cd9589a08bab7831de3e75dceee906e1ada5dfd8bdea98c80",
+    "stored.json": "067c777bdcc16e6d62072a9ca8d89ee55e154ef18e661f5316ef9c692e81ea66"
+   },
+   "python": {
+    "first": "3.8.20",
+    "rerun": "3.8.20",
+    "second": "3.13.17"
+   },
+   "rerun_identical": true,
+   "second_lane_identical": true
+  },
+  {
+   "input": "inputs/relay.json",
+   "outputs_sha256": {
+    "comparison.json": "63236073782fd93bcb70e5cd00d3cc7208785658a0687ffc9629dc6c2c0ad10f",
+    "results.json": "182977d8059166fe5dd41d9b8f2fd1574593ae277aed6ac8167fc57c2e66d111",
+    "run.json": "097eb9c85039bc5451e1a6c68845235b55226dd4f7e7a446bba0a83684b6035a",
+    "stored.json": "1cd033f6852874f42669aa346c9a2f7e5fa000bb93253de914a53433221ac5e7"
+   },
+   "python": {
+    "first": "3.8.20",
+    "rerun": "3.8.20",
+    "second": "3.13.17"
+   },
+   "rerun_identical": true,
+   "second_lane_identical": true
+  },
+  {
+   "input": "inputs/rogaine.json",
+   "outputs_sha256": {
+    "comparison.json": "c2460902602e05bf4a76cc5940151024b41e863160d29200f05dee8b82bc6c3e",
+    "results.json": "7666d98f1d56741d11877b4d3563ae23424043479c39b3118c8c48ee36c0d3c3",
+    "run.json": "df2151d1a24714c7f4715005fde31c3ff54ea55fab5ea1dcd2ea0e11642bcfd1",
+    "stored.json": "12616e6fd14ceaaf3ca7d0fb6263763015c891ad9c25026e494ec777bd863dfd"
+   },
+   "python": {
+    "first": "3.8.20",
+    "rerun": "3.8.20",
+    "second": "3.13.17"
+   },
+   "rerun_identical": true,
+   "second_lane_identical": true
+  },
+  {
+   "input": "inputs/f3_rogaine_tie.json",
+   "outputs_sha256": {
+    "comparison.json": "50a89d05f346e0668f243c1d90754251372e259c15ce87de2bfd4989a058ac62",
+    "results.json": "824d0e1a01dc1ac2b335376d1e86a599e5a9d9913d9c7eb0e0ffa89220cd30e5",
+    "run.json": "dd22853556ed2f7c0c3d2aafcd047c1cb5d6646e4cdbd1664d7a827e83768120",
+    "stored.json": "43472dbbc79a375864d9b530608088efb00c9b11fec68499f94789ebbeec7fcf"
+   },
+   "python": {
+    "first": "3.8.20",
+    "rerun": "3.8.20",
+    "second": "3.13.17"
+   },
+   "rerun_identical": true,
+   "second_lane_identical": true
+  },
+  {
+   "input": "inputs/f4_slow_leader.json",
+   "outputs_sha256": {
+    "comparison.json": "3608e61e7c247697baea71b3a5275699f8a3f0ebc31362aa0dccb3fc30d0651c",
+    "results.json": "37a12a0c4d66ea094ccff6d9d92a9b943ea7ad824b117fb552cea38eda1f1030",
+    "run.json": "f59f570e1d988b984922e2c069ef74157048476fa4b1b4743fca5deb41336033",
+    "stored.json": "73b5767d8b8621a0276c63f1703aedf754be067d30f4c7a9a3f5c378dbe6d541"
+   },
+   "python": {
+    "first": "3.8.20",
+    "rerun": "3.8.20",
+    "second": "3.13.17"
+   },
+   "rerun_identical": true,
+   "second_lane_identical": true
+  },
+  {
+   "input": "inputs/f6_two_races.json",
+   "outputs_sha256": {
+    "comparison.json": "35ac58416abd546650807c9896fb85f62322d783bc914989f2e4253230dc798c",
+    "results.json": "fd50be1eec3dce370db50782607f9af8c536f079cbec625e0a919861b1cba561",
+    "run.json": "33d0e5bb6db6738f35936f479e7fe6b9dc1ac2bfdc3b0fef450bc4c92656bb2c",
+    "stored.json": "441f20b95e15fcdf076b6b6681f7dcbd1f9afde0c70f960fb90e136086a6f6d0"
+   },
+   "python": {
+    "first": "3.8.20",
+    "rerun": "3.8.20",
+    "second": "3.13.17"
+   },
+   "rerun_identical": true,
+   "second_lane_identical": true
+  }
+ ],
+ "lanes": {
+  "first": ".venv",
+  "second": ".venv-3.13"
+ }
+}

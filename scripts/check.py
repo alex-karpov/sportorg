@@ -23,7 +23,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 CHECKED_DIRS = ("src", "tests", "scripts")
-STEP_ORDER = ("format", "lint", "types", "imports", "tests")
+STEP_ORDER = ("format", "lint", "types", "imports", "golden", "tests")
 FILE_LEVEL_STEPS = ("format", "lint", "types")
 
 
@@ -53,6 +53,9 @@ def step_command(step: str, *, fix: bool = False, files: list[str] | None = None
         return [_tool("basedpyright"), *targets]
     if step == "imports":
         return [_tool("lint-imports")]
+    if step == "golden":
+        # Committed history against main (+ $GOLDEN_BASE in CI): AGENTS.md rule 5, ADR-0008.
+        return [sys.executable, "-m", "scripts.golden_guard", "range"]
     if step == "tests":
         return [_tool("pytest"), "-q", *(files or [])]
     msg = f"unknown step {step!r}; known: {', '.join(STEP_ORDER)}"

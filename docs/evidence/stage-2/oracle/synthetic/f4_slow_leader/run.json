@@ -1,0 +1,15 @@
+{
+ "clock_dependent_results": 0,
+ "current_race": 0,
+ "driver_protocol": 2,
+ "file_format": "utf-8",
+ "file_version": "v1.8.0b2",
+ "input_sha256": "295a115ad39e728eb4af80ce9435fd3250371af60c3dfa06d7caf5bae9a477ca",
+ "legacy_pin": "b548c35ba18fe85e2526f96bbd3b4cf94f58b6f6",
+ "legacy_version": "v1.8.0b2",
+ "now_ms": 86399000,
+ "otime": "PythonOTime",
+ "python": "3.8.20",
+ "schema_version": 2,
+ "state": "recalculated"
+}
