@@ -1,0 +1,13 @@
+# Run from the repository root. The invariant needs the legacy runtime of oracle/commands.txt.
+# Synthetic part: no corpus, no key (a fixed synthetic key); reproducible anywhere legacy runs.
+uv run python -m scripts.corpus.evidence synthetic --out docs/evidence/stage-2/corpus
+# Corpus part: $SPORTORG_CORPUS (raw/ and inventory.csv readable by scripts, D3 (a)) and
+# $SPORTORG_ANONYMIZATION_KEY; anonymized copies go to ~/.cache/sportorg-stage2/corpus with MANIFEST.json
+uv run python -m scripts.corpus.evidence corpus --out docs/evidence/stage-2/corpus --invariant
+# Leak check before each commit: stage evidence, files changed since the start of S3 (74105e5) and
+# new files, every commit message of the branch. Older documents: question 6 of findings.agent.md.
+# Outputs made only from synthetic inputs are counted apart (numbers equal to a card by chance).
+uv run python -m scripts.corpus.leakcheck scan docs/evidence/stage-2 $(git diff --name-only 74105e5) $(git ls-files --others --exclude-standard scripts tests docs backlog) --commits main..HEAD --synthetic docs/evidence/stage-2/oracle/inputs --synthetic docs/evidence/stage-2/oracle/synthetic --synthetic docs/evidence/stage-2/corpus/synthetic.json --synthetic docs/evidence/stage-2/corpus/synthetic.md
+# Tests: pseudonyms, card and birth-date permutations, anonymizer by field, locality, leak check,
+# catalog and manifest; invariant tests run where the legacy runtime exists
+uv run pytest tests/scripts/corpus -q

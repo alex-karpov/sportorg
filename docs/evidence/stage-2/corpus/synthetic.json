@@ -1,0 +1,663 @@
+{
+ "checks": {
+  "leaks": 0,
+  "locality_add_file": true,
+  "locality_edit_changes_the_edited_file": true,
+  "locality_edit_other_file": true,
+  "locality_one_record": true,
+  "rebuild_identical": true
+ },
+ "invariant": {
+  "different": 0,
+  "files": [
+   {
+    "differences": {},
+    "file_id": "S01/bdeea896cc01",
+    "files": {
+     "comparison.json": true,
+     "results.json": true,
+     "stored.json": true
+    },
+    "identical": true
+   },
+   {
+    "differences": {},
+    "file_id": "S01/9ac0179a6f69",
+    "files": {
+     "comparison.json": true,
+     "results.json": true,
+     "stored.json": true
+    },
+    "identical": true
+   },
+   {
+    "differences": {},
+    "file_id": "S02/fee3f0fc8ba6",
+    "files": {
+     "comparison.json": true,
+     "results.json": true,
+     "stored.json": true
+    },
+    "identical": true
+   },
+   {
+    "differences": {},
+    "file_id": "S02/5f00dec11b5f",
+    "files": {
+     "comparison.json": true,
+     "results.json": true,
+     "stored.json": true
+    },
+    "identical": true
+   },
+   {
+    "differences": {},
+    "file_id": "S02/9a6113e14444",
+    "files": {
+     "comparison.json": true,
+     "results.json": true,
+     "stored.json": true
+    },
+    "identical": true
+   },
+   {
+    "differences": {},
+    "file_id": "S03/2c45119473a3",
+    "files": {
+     "comparison.json": true,
+     "results.json": true,
+     "stored.json": true
+    },
+    "identical": true
+   },
+   {
+    "file_id": "S03/0fd67593e806",
+    "identical": null,
+    "skipped": "scores_mode = formula (R22)"
+   }
+  ],
+  "identical": 6,
+  "lane": ".venv",
+  "legacy_failed_alike": 0,
+  "not_run": 1,
+  "ran": 6
+ },
+ "key": "synthetic (SYNTHETIC_KEY in scripts/corpus/evidence.py)",
+ "manifest": {
+  "ardf_races": 0,
+  "directories": [
+   {
+    "files_tsv": {
+     "listed": 3,
+     "matched": 2,
+     "missing_on_disk": 1,
+     "not_listed": 2,
+     "sha256_differs": 0
+    },
+    "id": "S01",
+    "in_inventory": true,
+    "kinds": {
+     "pdf": 1,
+     "race": 2,
+     "text": 1
+    },
+    "passport": {
+     "sport": "ориентирование"
+    }
+   },
+   {
+    "files_tsv": null,
+    "id": "S02",
+    "in_inventory": true,
+    "kinds": {
+     "race": 3,
+     "readout-log": 1,
+     "sportorg-log": 1,
+     "text": 1
+    },
+    "passport": {}
+   },
+   {
+    "files_tsv": null,
+    "id": "S03",
+    "in_inventory": true,
+    "kinds": {
+     "race": 2
+    },
+    "passport": {}
+   }
+  ],
+  "formulas": [
+   {
+    "file_id": "S03/0fd67593e806",
+    "formula": "max(0, 100 - time // 60000)",
+    "formula_sha256": "6ffbcb32c927d61eb49d1e23a180b834adf45fae698ad5d5d8703ff4d86595dd",
+    "race": 0
+   }
+  ],
+  "inventory": {
+   "columns": 15,
+   "present": true,
+   "rows": 3,
+   "rows_without_directory": 0,
+   "unfilled": {
+    "days": 3,
+    "edits_after_print": 3,
+    "may_share": 3,
+    "persons": 3,
+    "processing_mode": 3,
+    "protocol_kind": 3,
+    "protocol_matches_file": 3,
+    "protocol_signed": 3,
+    "punch_system": 3,
+    "race_type": 3,
+    "resaved_after_race": 3,
+    "source": 3,
+    "special_cases": 3,
+    "sport": 2,
+    "version_race_day": 3
+   }
+  },
+  "key_id": "737280f2c208",
+  "other_files": [
+   {
+    "file_id": "S01/1f80a9c76372",
+    "kind": "pdf",
+    "sha256": "2cc990a46a29286066ac0544f225066743ab1f9f792b13950792c75972f730ec",
+    "size": 28
+   },
+   {
+    "file_id": "S01/7ac64684372b",
+    "kind": "text",
+    "sha256": "3ddc94e7c003eb391ae129f3bfe051361074fad6f17ec69dc395f5f6f18b1a41",
+    "size": 29
+   },
+   {
+    "file_id": "S02/d3a495256d3a",
+    "kind": "text",
+    "sha256": "5d89e40a57e3db4fd5dde579a3bc3f89060da36db99295ccd30e819462bae001",
+    "size": 17
+   },
+   {
+    "file_id": "S02/8e998ccf22cf",
+    "kind": "readout-log",
+    "sha256": "1ee7f21b69d4e0a2cb6f00fcc670b68ddaecc41e148357d60e67175158ca904c",
+    "size": 69,
+    "stats": {
+     "punches": 1,
+     "readouts": 1,
+     "unparsed_lines": 0,
+     "without_start": 0
+    }
+   },
+   {
+    "file_id": "S02/eda3f1f9ae41",
+    "kind": "sportorg-log",
+    "sha256": "916add0cb90f2ab2a83b31848e0f6c3710d1efc2a5c109acde6305bedc6ecd71",
+    "size": 71,
+    "stats": {
+     "levels": {
+      "INFO": 1
+     },
+     "lines": 1
+    }
+   }
+  ],
+  "race_files": [
+   {
+    "anonymized_path": "anonymized/S01/bdeea896cc01.json",
+    "anonymized_sha256": "eceb7e9e10283a7f976acc471945c205ec38f6570b6ae636d4b030a3dd6220e9",
+    "file_id": "S01/bdeea896cc01",
+    "format": "utf-8",
+    "leak_paths": {},
+    "leaks": {
+     "values:birth_date": 9,
+     "values:card_number": 19,
+     "values:code": 4,
+     "values:code_number": 1,
+     "values:contact": 2,
+     "values:org": 2,
+     "values:person": 20,
+     "values:place": 2,
+     "values:race": 5,
+     "values:secret": 4,
+     "values:text": 6
+    },
+    "masked": {
+     "mask:person.birth_date": 9,
+     "mask:person.comment": 10,
+     "mask:person.middle_name": 10,
+     "mask:person.name": 10,
+     "mask:person.surname": 10,
+     "unknown:person.contact": 1,
+     "unknown:result.operator_note": 1,
+     "unknown:settings.operator_note": 1
+    },
+    "races": [
+     {
+      "any_course_groups": 0,
+      "courses": 1,
+      "groups": 2,
+      "index": 0,
+      "marked_route_mode": "off",
+      "organizations": 2,
+      "out_of_competition": 1,
+      "persons": 10,
+      "persons_key": "20f1ff10e199",
+      "processing_mode": "time",
+      "race_key": "a2550859483c",
+      "race_type": "INDIVIDUAL_RACE",
+      "result_objects": {
+       "ResultSportident": 10
+      },
+      "results": 10,
+      "same_as": [],
+      "score_mode": null,
+      "scores_mode": "off",
+      "statuses": {
+       "DISQUALIFIED": 1,
+       "OK": 9
+      },
+      "time_accuracy": 0
+     }
+    ],
+    "runnable": true,
+    "sha256": "3c40274bd4840e7d2a08b2582ee3f09ffd1db59562f9df0741ed7cf040c6aae9",
+    "shape": "races",
+    "size": 16651,
+    "version": "v1.8.0b2"
+   },
+   {
+    "anonymized_path": "anonymized/S01/9ac0179a6f69.json",
+    "anonymized_sha256": "d016ff734085124b35f30da65434124cbb47fb1b353201e7cf130c6fe897807e",
+    "file_id": "S01/9ac0179a6f69",
+    "format": "cp1251",
+    "leak_paths": {},
+    "leaks": {
+     "values:card_number": 4,
+     "values:contact": 2,
+     "values:org": 1,
+     "values:person": 4,
+     "values:place": 3,
+     "values:race": 5
+    },
+    "masked": {
+     "mask:person.comment": 2,
+     "mask:person.middle_name": 2,
+     "mask:person.name": 2,
+     "mask:person.surname": 2
+    },
+    "races": [
+     {
+      "any_course_groups": 0,
+      "courses": 1,
+      "groups": 1,
+      "index": 0,
+      "marked_route_mode": "off",
+      "organizations": 1,
+      "out_of_competition": 0,
+      "persons": 2,
+      "persons_key": "fdbcb1be1e93",
+      "processing_mode": "time",
+      "race_key": "7355fa5e0bcb",
+      "race_type": "INDIVIDUAL_RACE",
+      "result_objects": {
+       "ResultSportident": 2
+      },
+      "results": 2,
+      "same_as": [],
+      "score_mode": null,
+      "scores_mode": "off",
+      "statuses": {
+       "OK": 2
+      },
+      "time_accuracy": 0
+     }
+    ],
+    "runnable": true,
+    "sha256": "6d908ab3d8cd35dc5a1ced879c022dd53309d8e6ff68f065a266e70c961eba66",
+    "shape": "single race",
+    "size": 4127,
+    "version": null
+   },
+   {
+    "anonymized_path": "anonymized/S02/fee3f0fc8ba6.json.gz",
+    "anonymized_sha256": "4161b920d2053837b7463cb3c83bf56153adadec6ada882e43e814edcc025a0d",
+    "file_id": "S02/fee3f0fc8ba6",
+    "format": "gzip",
+    "leak_paths": {},
+    "leaks": {
+     "values:birth_date": 9,
+     "values:card_number": 18,
+     "values:person": 6,
+     "values:race": 2
+    },
+    "masked": {
+     "mask:person.birth_date": 9,
+     "mask:person.comment": 9,
+     "mask:person.middle_name": 9,
+     "mask:person.name": 9,
+     "mask:person.surname": 9
+    },
+    "races": [
+     {
+      "any_course_groups": 0,
+      "courses": 1,
+      "groups": 1,
+      "index": 0,
+      "marked_route_mode": "off",
+      "organizations": 0,
+      "out_of_competition": 0,
+      "persons": 5,
+      "persons_key": "639f75c7d73c",
+      "processing_mode": "time",
+      "race_key": "1517913aa7ed",
+      "race_type": "MULTI_DAY_RACE",
+      "result_objects": {
+       "ResultSportident": 5
+      },
+      "results": 5,
+      "same_as": [
+       "S02/5f00dec11b5f#0"
+      ],
+      "score_mode": null,
+      "scores_mode": "off",
+      "statuses": {
+       "OK": 5
+      },
+      "time_accuracy": 0
+     },
+     {
+      "any_course_groups": 0,
+      "courses": 1,
+      "groups": 1,
+      "index": 1,
+      "marked_route_mode": "off",
+      "organizations": 0,
+      "out_of_competition": 0,
+      "persons": 4,
+      "persons_key": "de75c9d0b501",
+      "processing_mode": "time",
+      "race_key": "fc7bf9ff052a",
+      "race_type": "MULTI_DAY_RACE",
+      "result_objects": {
+       "ResultSportident": 4
+      },
+      "results": 4,
+      "same_as": [
+       "S02/9a6113e14444#0"
+      ],
+      "score_mode": null,
+      "scores_mode": "off",
+      "statuses": {
+       "OK": 4
+      },
+      "time_accuracy": 0
+     }
+    ],
+    "runnable": true,
+    "sha256": "60b4fd8cc92f96f1b2709e5e57adf3b5d7a28ce7724266aafa863958953ba687",
+    "shape": "races",
+    "size": 1857,
+    "version": "v1.8.0b2"
+   },
+   {
+    "anonymized_path": "anonymized/S02/5f00dec11b5f.json",
+    "anonymized_sha256": "d4b4af2171f1f1b2a3becbcb31788a8fb415a18073b33d0590f493f9a20ad27f",
+    "file_id": "S02/5f00dec11b5f",
+    "format": "utf-8",
+    "leak_paths": {},
+    "leaks": {
+     "values:birth_date": 5,
+     "values:card_number": 10,
+     "values:person": 6,
+     "values:race": 1
+    },
+    "masked": {
+     "mask:person.birth_date": 5,
+     "mask:person.comment": 5,
+     "mask:person.middle_name": 5,
+     "mask:person.name": 5,
+     "mask:person.surname": 5
+    },
+    "races": [
+     {
+      "any_course_groups": 0,
+      "courses": 1,
+      "groups": 1,
+      "index": 0,
+      "marked_route_mode": "off",
+      "organizations": 0,
+      "out_of_competition": 0,
+      "persons": 5,
+      "persons_key": "639f75c7d73c",
+      "processing_mode": "time",
+      "race_key": "1517913aa7ed",
+      "race_type": "MULTI_DAY_RACE",
+      "result_objects": {
+       "ResultSportident": 5
+      },
+      "results": 5,
+      "same_as": [
+       "S02/fee3f0fc8ba6#0"
+      ],
+      "score_mode": null,
+      "scores_mode": "off",
+      "statuses": {
+       "OK": 5
+      },
+      "time_accuracy": 0
+     }
+    ],
+    "runnable": true,
+    "sha256": "1cbf5a824e32943c392a9f52f7d4cf9df0bb4484f45bb16ae016466008b217ae",
+    "shape": "races",
+    "size": 7533,
+    "version": "v1.8.0b2"
+   },
+   {
+    "anonymized_path": "anonymized/S02/9a6113e14444.json",
+    "anonymized_sha256": "df6ec80534d042b7065ca6cddca4ed07ca517c27133e56123fa076d18647abb7",
+    "file_id": "S02/9a6113e14444",
+    "format": "utf-8",
+    "leak_paths": {},
+    "leaks": {
+     "values:birth_date": 4,
+     "values:card_number": 8,
+     "values:person": 5,
+     "values:race": 1
+    },
+    "masked": {
+     "mask:person.birth_date": 4,
+     "mask:person.comment": 4,
+     "mask:person.middle_name": 4,
+     "mask:person.name": 4,
+     "mask:person.surname": 4
+    },
+    "races": [
+     {
+      "any_course_groups": 0,
+      "courses": 1,
+      "groups": 1,
+      "index": 0,
+      "marked_route_mode": "off",
+      "organizations": 0,
+      "out_of_competition": 0,
+      "persons": 4,
+      "persons_key": "de75c9d0b501",
+      "processing_mode": "time",
+      "race_key": "fc7bf9ff052a",
+      "race_type": "MULTI_DAY_RACE",
+      "result_objects": {
+       "ResultSportident": 4
+      },
+      "results": 4,
+      "same_as": [
+       "S02/fee3f0fc8ba6#1"
+      ],
+      "score_mode": null,
+      "scores_mode": "off",
+      "statuses": {
+       "OK": 4
+      },
+      "time_accuracy": 0
+     }
+    ],
+    "runnable": true,
+    "sha256": "d10de5fa4cf9981b124eab2a5a42a5391a44ea9a184a184e0836a077ab06e411",
+    "shape": "races",
+    "size": 6329,
+    "version": "v1.8.0b2"
+   },
+   {
+    "anonymized_path": "anonymized/S03/2c45119473a3.json.gz",
+    "anonymized_sha256": "dc722779af1abd2b0fd43d1d389c1a0eb13528e90bd98acc3503fb7d495d5337",
+    "file_id": "S03/2c45119473a3",
+    "format": "gzip",
+    "leak_paths": {},
+    "leaks": {
+     "values:person": 13,
+     "values:race": 1
+    },
+    "masked": {
+     "mask:person.comment": 11,
+     "mask:person.middle_name": 11,
+     "mask:person.name": 11,
+     "mask:person.surname": 11
+    },
+    "races": [
+     {
+      "any_course_groups": 0,
+      "courses": 2,
+      "groups": 3,
+      "index": 0,
+      "marked_route_mode": "off",
+      "organizations": 0,
+      "out_of_competition": 1,
+      "persons": 11,
+      "persons_key": "c56c334b1bff",
+      "processing_mode": "time",
+      "race_key": "5351b69fd6ae",
+      "race_type": "INDIVIDUAL_RACE",
+      "result_objects": {
+       "ResultSportident": 11
+      },
+      "results": 11,
+      "same_as": [],
+      "score_mode": null,
+      "scores_mode": "off",
+      "statuses": {
+       "DID_NOT_START": 1,
+       "OK": 10
+      },
+      "time_accuracy": 0
+     }
+    ],
+    "runnable": true,
+    "sha256": "bf7945610536b81d898709e683facc2cf139a21b43d16618eb9d8b624c3f7a30",
+    "shape": "races",
+    "size": 1956,
+    "version": "v1.8.0b2"
+   },
+   {
+    "anonymized_path": "anonymized/S03/0fd67593e806.json",
+    "anonymized_sha256": "1e522aea2c207911f2c62a8d193aeeb9ca81e936f23f63772505a0779d27c921",
+    "file_id": "S03/0fd67593e806",
+    "format": "utf-8",
+    "leak_paths": {},
+    "leaks": {
+     "values:person": 7,
+     "values:race": 1
+    },
+    "masked": {
+     "mask:person.comment": 5,
+     "mask:person.middle_name": 5,
+     "mask:person.name": 5,
+     "mask:person.surname": 5
+    },
+    "races": [
+     {
+      "any_course_groups": 0,
+      "courses": 0,
+      "groups": 1,
+      "index": 0,
+      "marked_route_mode": "off",
+      "organizations": 0,
+      "out_of_competition": 0,
+      "persons": 5,
+      "persons_key": "fbe91e50c27c",
+      "processing_mode": "scores",
+      "race_key": "3dd095768766",
+      "race_type": "INDIVIDUAL_RACE",
+      "result_objects": {
+       "ResultSportident": 5
+      },
+      "results": 5,
+      "same_as": [],
+      "score_mode": "rogain",
+      "scores_mode": "formula",
+      "statuses": {
+       "OK": 5
+      },
+      "time_accuracy": 0
+     }
+    ],
+    "runnable": false,
+    "sha256": "5f772d46b4f0517f6bc7b0287a26628db0f07492bf8e9e5dc60cff7b9a4f5513",
+    "shape": "races",
+    "size": 7387,
+    "version": "v1.8.0b2"
+   }
+  ],
+  "schema": "sportorg-ng/corpus-manifest",
+  "schema_version": 1,
+  "starts": {
+   "distinct": 6,
+   "races": 8
+  },
+  "totals": {
+   "directories": 3,
+   "formats": {
+    "cp1251": 1,
+    "gzip": 2,
+    "utf-8": 4
+   },
+   "kinds": {
+    "pdf": 1,
+    "race": 7,
+    "readout-log": 1,
+    "sportorg-log": 1,
+    "text": 2
+   },
+   "leaks": {
+    "values:birth_date": 27,
+    "values:card_number": 59,
+    "values:code": 4,
+    "values:code_number": 1,
+    "values:contact": 4,
+    "values:org": 3,
+    "values:person": 61,
+    "values:place": 5,
+    "values:race": 16,
+    "values:secret": 4,
+    "values:text": 6
+   },
+   "masked": {
+    "mask:person.birth_date": 27,
+    "mask:person.comment": 46,
+    "mask:person.middle_name": 46,
+    "mask:person.name": 46,
+    "mask:person.surname": 46,
+    "unknown:person.contact": 1,
+    "unknown:result.operator_note": 1,
+    "unknown:settings.operator_note": 1
+   },
+   "race_files": 7,
+   "races": 8,
+   "versions": {
+    "(none)": 1,
+    "v1.8.0b2": 6
+   }
+  }
+ }
+}
