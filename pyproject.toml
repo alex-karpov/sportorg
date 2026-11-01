@@ -58,6 +58,9 @@ suppress-none-returning = false
 # Stage 1 archaeology matches Russian legacy text: Cyrillic letters in strings are data, not look-alikes.
 "scripts/archaeology/**" = ["RUF001"]
 "tests/scripts/archaeology/**" = ["RUF001"]
+# Corpus anonymization handles Russian names: Cyrillic letters in strings are data, not look-alikes (Stage 2 S3).
+"scripts/corpus/**" = ["RUF001", "RUF002"]
+"tests/scripts/corpus/**" = ["RUF001", "RUF002"]
 
 [tool.ruff.lint.pydocstyle]
 convention = "google"

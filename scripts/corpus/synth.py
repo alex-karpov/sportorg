@@ -53,6 +53,7 @@ class RaceBuilder:
         self.settings: dict[str, Json] = settings
         self.relay_leg_count: int = 3
         self.short_title: str = ""
+        self.data: dict[str, Json] = {}
         self.organizations: list[Json] = []
         self.courses: list[Json] = []
         self.groups: list[Json] = []
@@ -62,11 +63,16 @@ class RaceBuilder:
     def id(self, kind: str, key: str) -> str:
         return str(uuid.uuid5(NAMESPACE, f"{self.name}/{kind}/{key}"))
 
-    def organization(self, name: str) -> str:
+    def organization(self, name: str, extra: Mapping[str, Json] | None = None) -> str:
         oid = self.id("organization", name)
-        self.organizations.append(
-            {"object": "Organization", "id": oid, "name": name, "country": "", "region": ""}
-        )
+        organization: dict[str, Json] = {
+            "object": "Organization",
+            "id": oid,
+            "name": name,
+            "country": "",
+            "region": "",
+        }
+        self.organizations.append(organization | dict(extra or {}))
         return oid
 
     def course(self, name: str, codes: Sequence[str], length: int = 0) -> str:
@@ -122,34 +128,34 @@ class RaceBuilder:
         *,
         start: int,
         out_of_competition: bool = False,
-        organization_id: str | None = None,
+        extra: Mapping[str, Json] | None = None,
     ) -> str:
+        """A person; ``extra`` overrides or adds fields (``organization_id`` among them)."""
         pid = self.id("person", str(bib))
-        self.persons.append(
-            {
-                "object": "Person",
-                "id": pid,
-                "name": "Synthetic",
-                "surname": f"Runner {bib:03}",
-                "middle_name": "",
-                "card_number": 0,
-                "bib": bib,
-                "birth_date": None,
-                "year": 0,
-                "group_id": group_id,
-                "organization_id": organization_id,
-                "world_code": "",
-                "national_code": 0,
-                "qual": 0,
-                "is_out_of_competition": out_of_competition,
-                "is_paid": False,
-                "is_rented_card": False,
-                "is_personal": False,
-                "comment": "",
-                "start_time": start or None,
-                "start_group": 0,
-            }
-        )
+        person: dict[str, Json] = {
+            "object": "Person",
+            "id": pid,
+            "name": "Synthetic",
+            "surname": f"Runner {bib:03}",
+            "middle_name": "",
+            "card_number": 0,
+            "bib": bib,
+            "birth_date": None,
+            "year": 0,
+            "group_id": group_id,
+            "organization_id": None,
+            "world_code": "",
+            "national_code": 0,
+            "qual": 0,
+            "is_out_of_competition": out_of_competition,
+            "is_paid": False,
+            "is_rented_card": False,
+            "is_personal": False,
+            "comment": "",
+            "start_time": start or None,
+            "start_group": 0,
+        }
+        self.persons.append(person | dict(extra or {}))
         return pid
 
     def result(
@@ -159,30 +165,30 @@ class RaceBuilder:
         finish: int | None,
         punches: Sequence[tuple[str, int]] = (),
         status: int = OK,
+        extra: Mapping[str, Json] | None = None,
     ) -> str:
         rid = self.id("result", person_id)
         splits: list[Json] = [{"code": code, "time": time} for code, time in punches]
-        self.results.append(
-            {
-                "object": "ResultSportident",
-                "id": rid,
-                "person_id": person_id,
-                "bib": 0,
-                "days": 0,
-                "card_number": 0,
-                "status": status,
-                "status_comment": "",
-                "penalty_laps": 0,
-                "penalty_time": None,
-                "credit_time": None,
-                "scores": 0,
-                "place": 0,
-                "assigned_rank": 0,
-                "start_time": None,
-                "finish_time": finish,
-                "splits": splits,
-            }
-        )
+        result: dict[str, Json] = {
+            "object": "ResultSportident",
+            "id": rid,
+            "person_id": person_id,
+            "bib": 0,
+            "days": 0,
+            "card_number": 0,
+            "status": status,
+            "status_comment": "",
+            "penalty_laps": 0,
+            "penalty_time": None,
+            "credit_time": None,
+            "scores": 0,
+            "place": 0,
+            "assigned_rank": 0,
+            "start_time": None,
+            "finish_time": finish,
+            "splits": splits,
+        }
+        self.results.append(result | dict(extra or {}))
         return rid
 
     def document(self) -> Json:
@@ -201,7 +207,8 @@ class RaceBuilder:
                 "start_datetime": None,
                 "end_datetime": None,
                 "relay_leg_count": self.relay_leg_count,
-            },
+            }
+            | self.data,
             "settings": self.settings,
             "organizations": self.organizations,
             "courses": self.courses,
@@ -277,9 +284,9 @@ def relay() -> Json:
         3: (18, 40, ("31",)),
     }.items():
         club = race.organization(f"Synthetic Club {team}")
-        first = race.person(1000 + team, group, start=START, organization_id=club)
+        first = race.person(1000 + team, group, start=START, extra={"organization_id": club})
         race.result(first, finish=START + leg1 * MIN, punches=_at(START, ("31", 5), ("32", 10)))
-        second = race.person(2000 + team, group, start=0, organization_id=club)
+        second = race.person(2000 + team, group, start=0, extra={"organization_id": club})
         punches = [(code, START + (leg1 + 5 * (i + 1)) * MIN) for i, code in enumerate(leg2_codes)]
         race.result(second, finish=START + leg2 * MIN, punches=punches)
     return race.document()
@@ -373,6 +380,233 @@ def f6_two_races() -> Json:
     return {"version": LEGACY_VERSION, "current_race": 0, "races": races}
 
 
+# ---------------------------------------------------------------- fictional personal data (S3)
+#
+# Invented names, clubs, places, contacts, card numbers and birth dates, so that every field the
+# anonymization masks (Д1) holds a value. Nothing here belongs to a real person; the surnames are
+# made-up words, listed in INVENTED_SURNAMES so a test can check that no other surname slips in.
+
+INVENTED_SURNAMES: Final = (
+    "Выдумкин",
+    "Выдумкина",
+    "Небывалова",
+    "Небывалов",
+    "НЕБЫВАЛОВ",
+    "Придумова",
+    "ЁЖИКОВ",
+    "Ёжиков",
+    "Ежиков",
+    "Выдумкина-Придумова",
+    "Небыльцев",
+    "Небыльцев ",
+    "Придумкин",
+    "Выдумщиков",
+)
+MULTI_DAY = 6  # [код: pysport@b548c35 sportorg/models/memory.py:67-71]
+DISQUALIFIED = 3  # [код: pysport@b548c35 sportorg/models/memory.py:74-93]
+NOTE_BIB, OUT_OF_COMPETITION_BIB, DISQUALIFIED_BIB, RESULT_CARD_ONLY_BIB = 101, 105, 106, 110
+_SECRET_SETTINGS: Final[dict[str, Json]] = {
+    "live_urls": ["https://live.example.invalid/synthetic-token"],
+    "live_url": "https://live.example.invalid/synthetic-token",
+    "telegram_chat_id": "-100000000001",
+    "telegram_thread_id": "17",
+    "telegram_template": "Выдумкин: {result}",
+    "split_template": "C:\\Users\\Vydumkin\\split.html",
+    "operator_note": "Небывалова Анна, +7 000 000-00-09",
+}
+_DATA: Final[dict[str, Json]] = {
+    "title": "Выдуманный кубок Небывальска",
+    "short_title": "ВКН",
+    "description": "Синтетическое описание старта",
+    "location": "Небывальск, Выдуманный лес",
+    "chief_referee": "Придумов П. П.",
+    "secretary": "Небывалова А. А.",
+    "url": "https://example.invalid/race",
+}
+
+
+def _club(race: RaceBuilder, name: str, number: int) -> str:
+    extra: dict[str, Json] = {
+        "country": "Выдуманная страна",
+        "region": "Небывальская область",
+        "contact": f"+7 000 000-00-{number:02}",
+        "code": f"VYD{number}",
+    }
+    return race.organization(name, extra)
+
+
+def _person_extra(
+    surname: str, name: str, card: int, birth: str | None, **more: Json
+) -> dict[str, Json]:
+    return {"surname": surname, "name": name, "card_number": card, "birth_date": birth} | more
+
+
+def personal_individual() -> Json:
+    """Individual race with every masked field filled; cards of ten card types and a gap.
+
+    Card ranges [код: sportident 1.2.8 sportident.py:755-778]. Bibs 104 and 105 are one spelling
+    apart (ЁЖИКОВ, Ежиков); bib 110 has no card of its own but a card in its result.
+    """
+    settings: dict[str, Json] = {"time_accuracy": 0, "time_rounding": "math"} | _SECRET_SETTINGS
+    race = RaceBuilder("personal_individual", INDIVIDUAL, settings)
+    race.data = dict(_DATA)
+    course = race.course("A", ["31", "32", "33"], length=3000)
+    men, women = race.group("М21", course), race.group("Ж21", course)
+    clubs = [_club(race, "СК Выдумка", 1), _club(race, "Клуб Небыль", 2)]
+    contact: list[Json] = [{"name": "phone", "value": "+7 000 000-00-08"}]
+    people: list[tuple[int, str, dict[str, Json]]] = [
+        (
+            101,
+            men,
+            _person_extra(
+                "Выдумкин",
+                "Пётр",
+                12_345,
+                "1990-05-17",
+                middle_name="Петрович",
+                comment="оплатил наличными",
+                world_code="WRE-000001",
+                contact=contact,
+            ),
+        ),
+        (
+            102,
+            women,
+            _person_extra("Небывалова", "Анна", 212_345, "2012-02-29", national_code=1_234_567),
+        ),
+        (
+            103,
+            women,
+            _person_extra("Придумова", "Ёлка", 512_345, "17.05.2010", national_code="NC-77"),
+        ),
+        (104, men, _person_extra("ЁЖИКОВ", "Иван", 2_345_678, "2005-01-01")),
+        (105, men, _person_extra("Ежиков", "Иван", 8_123_456, None, year=2001)),
+        (106, men, _person_extra("Небывалов", "Ян", 7_123_456, "2008-03-03T00:00:00")),
+        (107, women, _person_extra("Выдумкина-Придумова", "Мария", 4_123_456, "1975-12-31")),
+        (108, men, _person_extra("Небыльцев", "Лев", 6_123_456, "1960-07-07")),
+        (109, men, _person_extra("Придумкин", "Олег", 3_500_000, "1999-09-09")),
+        (110, men, _person_extra("Выдумщиков", "Глеб", 0, "2011-11-11")),
+    ]
+    full = (("31", 5), ("32", 15), ("33", 25))
+    for index, (bib, group, extra) in enumerate(people):
+        start = START + index * MIN
+        pid = race.person(
+            bib,
+            group,
+            start=start,
+            out_of_competition=bib == OUT_OF_COMPETITION_BIB,
+            extra=extra | {"organization_id": clubs[index % 2]},
+        )
+        card = 1_234_567 if bib == RESULT_CARD_ONLY_BIB else extra["card_number"]
+        result_extra: dict[str, Json] = {"card_number": card}
+        status = OK
+        if bib == DISQUALIFIED_BIB:
+            status = DISQUALIFIED
+            result_extra["status_comment"] = "Снят по протесту Выдумкина"
+        if bib == NOTE_BIB:
+            result_extra["operator_note"] = "Выдумкин звонил"
+        finish = start + (30 + index) * MIN
+        race.result(
+            pid, finish=finish, punches=_at(start, *full), status=status, extra=result_extra
+        )
+    return race.document()
+
+
+def _day(name: str, day: int, people: Sequence[tuple[int, str, int]]) -> Json:
+    """One day of a multi-day event: (bib, surname, minutes) in group М21, all with the name Ян."""
+    race = RaceBuilder(name, MULTI_DAY, {"time_accuracy": 0, "time_rounding": "math"})
+    race.data = {"title": f"Выдуманная многодневка, день {day}"}
+    course = race.course("A", ["31", "32"])
+    group = race.group("М21", course)
+    for index, (bib, surname, minutes) in enumerate(people):
+        start = START + index * MIN
+        extra = _person_extra(surname, "Ян", 500_000 + bib, "2000-06-15")
+        pid = race.person(bib, group, start=start, extra=extra)
+        punches = _at(start, ("31", 5), ("32", 10))
+        race.result(
+            pid, finish=start + minutes * MIN, punches=punches, extra={"card_number": 500_000 + bib}
+        )
+    return as_list(as_dict(race.document())["races"])[0]
+
+
+def personal_multi_day() -> Json:
+    """Multi-day event, two days; legacy joins the days by the exact ``surname name group``.
+
+    [код: pysport@b548c35 sportorg/models/memory.py:830-845,1401-1422]. Выдумкин runs both days
+    alike; Ёжиков/Ежиков, НЕБЫВАЛОВ/Небывалов and "Небыльцев "/Небыльцев are spelled differently on
+    day 2, so legacy does not join them; Придумова misses day 2.
+    """
+    day1 = _day(
+        "multi_day_1",
+        1,
+        [
+            (1, "Выдумкин", 30),
+            (2, "Ёжиков", 31),
+            (3, "НЕБЫВАЛОВ", 32),
+            (4, "Небыльцев ", 33),
+            (5, "Придумова", 29),
+        ],
+    )
+    day2 = _day(
+        "multi_day_2",
+        2,
+        [(1, "Выдумкин", 40), (2, "Ежиков", 41), (3, "Небывалов", 39), (4, "Небыльцев", 38)],
+    )
+    return {"version": LEGACY_VERSION, "current_race": 0, "races": [day1, day2]}
+
+
+def personal_old_format() -> Json:
+    """A single race dict without ``races`` and with the old field names legacy migrates.
+
+    [код: pysport@b548c35 sportorg/modules/backup/json.py:55-60,84-118]: ``sportident_card``,
+    ``is_rented_sportident_card``, an organization ``address`` and ``contact`` as objects, a
+    ``sportident_port`` setting; one person has only ``year``.
+    """
+    race = RaceBuilder("personal_old_format", INDIVIDUAL, {"sportident_port": "COM3"})
+    race.data = dict(_DATA)
+    course = race.course("A", ["31", "32"])
+    group = race.group("М21", course)
+    address: dict[str, Json] = {
+        "country": {"name": "Выдуманная страна"},
+        "state": "Небывальская область",
+        "city": "Небывальск",
+    }
+    club = race.organization(
+        "СК Выдумка",
+        {"address": address, "contact": {"type": "phone", "value": "+7 000 000-00-03"}},
+    )
+    for index, (bib, surname, card) in enumerate(
+        ((1, "Выдумкин", 12_345), (2, "Небывалова", 8_765_432))
+    ):
+        start = START + index * MIN
+        extra = _person_extra(
+            surname,
+            "Анна",
+            0,
+            None,
+            year=1999,
+            sportident_card=card,
+            is_rented_sportident_card=False,
+        )
+        pid = race.person(bib, group, start=start, extra=extra | {"organization_id": club})
+        punches = _at(start, ("31", 5), ("32", 10))
+        race.result(
+            pid, finish=start + (20 + index) * MIN, punches=punches, extra={"sportident_card": card}
+        )
+    old = as_list(as_dict(race.document())["races"])[0]
+    persons = as_list(as_dict(old)["persons"])
+    for person in map(as_dict, persons):
+        person.pop("card_number")
+    return old
+
+
+PERSONAL: Final[dict[str, Callable[[], Json]]] = {
+    "personal_individual": personal_individual,
+    "personal_multi_day": personal_multi_day,
+    "personal_old_format": personal_old_format,
+}
+
+
 RACES: Final[dict[str, Callable[[], Json]]] = {
     "individual": individual,
     "relay": relay,
@@ -389,6 +623,7 @@ def dumps(doc: Json) -> str:
 
 class Options(argparse.Namespace):
     out: Path = Path()
+    personal: bool = False
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -396,9 +631,12 @@ def main(argv: list[str] | None = None) -> int:
         description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter
     )
     parser.add_argument("--out", type=Path, required=True)
+    parser.add_argument(
+        "--personal", action="store_true", help="the races with fictional personal data (S3)"
+    )
     args = parser.parse_args(argv, namespace=Options())
     args.out.mkdir(parents=True, exist_ok=True)
-    for name, build in RACES.items():
+    for name, build in (PERSONAL if args.personal else RACES).items():
         (args.out / f"{name}.json").write_text(dumps(build()), encoding="utf-8", newline="\n")
     return 0
 
