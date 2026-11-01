@@ -578,6 +578,17 @@ code location (`racefile.sportorg_log_stats`, TDD); 6 open.
 Later the same day `[мейнтейнер: 2026-11-01]`: F7 is a legacy bug (checked on Windows: a read-only
 gzip file does not open, a read-only plain file opens but does not save and leaves `.json.tmp`);
 F8 confirmed in the GUI, its cause narrowed by new manifest counters to an empty part of a list
-template, parsed by `int()` since `0f3a0a8` (proposal: legacy bug, regression); question 3 → C1 in
+template, parsed by `int()` since `0f3a0a8`, classified a legacy bug (regression); question 3 → C1 in
 S5 (written into S5 above); question 6: the matched words written to a file outside the
 repository (`leakcheck scan --words-out`, TDD), decision pending.
+
+Question 6, answered `[мейнтейнер: 2026-11-01]`: of the matched words, one line is personal data
+(a name and a club): `docs/evidence/stage-0/legacy-fix-candidates.md`, a test diff of legacy quoted
+in Stage 0 (C3, `3b55fe8b0`); the rest is safe. That file quoted the first 80 lines of the test diff
+of each of its 11 candidates; legacy's test code copies names from legacy's test files with
+personal data. All 11 test-diff blocks are removed from the tree (without reading them; each
+replaced by the command that reproduces it from the pinned clone); a heuristic count of quoted
+code lines with name-like literals over `docs/` and `backlog/` is 0 after it. The leak check did not
+catch them: its sources are the corpus and legacy's `test.json`, not legacy's other test data
+(SFRX, WDB, CSV, IOF XML) or test code. The blocks stay in the history of `main` (`eb40eef`):
+whether to rewrite it is the maintainer's decision.

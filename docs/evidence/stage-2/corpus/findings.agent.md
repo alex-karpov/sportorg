@@ -36,7 +36,8 @@ has any, 2 templates and 0 punch codes, so an empty part of a list template is t
 `str(cur_code) in template[…].split(',')`, so an empty part matched nothing and raised nothing
 `[код: pysport@615049a sportorg/models/memory.py:876-883]`; commit `0f3a0a8` (2019-11-26, "CP
 generic set e.g. '%(31,32,35-45)'") parses each part with `int()` `[история: pysport 0f3a0a8]`.
-Proposal: legacy bug (a regression in reading older files since `0f3a0a8`), to be classified.
+Classified: legacy bug `[мейнтейнер: 2026-11-01]` (a regression in reading older files since
+`0f3a0a8`).
 
 ## Questions (built as recommended, `[допущение]` until answered)
 

@@ -66,90 +66,7 @@ Files changed (`git show --stat`):
  3 files changed, 155 insertions(+), 29 deletions(-)
 ```
 
-Test diff (`git show <hash> -- tests/`, first 80 lines):
-```diff
-diff --git a/tests/test_result_checking.py b/tests/test_result_checking.py
-index 6d835ef..34364c7 100644
---- a/tests/test_result_checking.py
-+++ b/tests/test_result_checking.py
-@@ -10,11 +10,14 @@ from sportorg.models.memory import (
-     Group,
-     Person,
-     Race,
-+    RaceType,
-     ResultSportident,
-+    ResultStatus,
-     Split,
-     create,
-     new_event,
-     race,
-+    set_current_race_index,
- )
- from sportorg.models.result.result_checker import ResultChecker
- 
-@@ -508,6 +511,7 @@ def create_race():
-     result = ResultSportident()
-     result.person = person
-     new_event([create(Race)])
-+    set_current_race_index(0)
-     race().courses.append(course)
-     race().groups.append(group)
-     race().persons.append(person)
-@@ -564,3 +568,118 @@ def split_and_course_repr(course: List[Union[int, str]], splits: List[int]) -> s
-     spl = splits
-     crs = course
-     return '\n'.join([f'{s:3}  {c}' for s, c in zip_longest(spl, crs, fillvalue='')])
-+
-+
-+def test_overtime_multi_day_race_current_day_exceeds_max_time():
-+    course = create(Course)
-+
-+    # Day 1 — current race, 45 min result
-+    group1 = create(Group, course=course)
-+    group1.name = "M21"
-+    group1.race_type = RaceType.INDIVIDUAL_RACE
-+    person1 = create(Person, group=group1)
-+    person1.name = "Athlete"
-+    person1.start_time = OTime(0, 10, 0, 0)
-+    result1 = ResultSportident()
-+    result1.person = person1
-+    result1.finish_time = OTime(0, 10, 45, 0)
-+    day1 = create(Race)
-+    day1.groups.append(group1)
-+    day1.persons.append(person1)
-+    day1.results.append(result1)
-+
-+    # Day 2 — same athlete (matched by multi_day_id), 65 min result
-+    group2 = create(Group, course=course)
-+    group2.name = "M21"
-+    group2.race_type = RaceType.MULTI_DAY_RACE
-+    group2.max_time = OTime(0, 1, 0, 0)
-+    person2 = create(Person, group=group2)
-+    person2.name = "Athlete"
-+    person2.start_time = OTime(0, 10, 0, 0)
-+    result2 = ResultSportident()
-+    result2.person = person2
-+    result2.finish_time = OTime(0, 11, 5, 0)
-+    day2 = create(Race)
-+    day2.groups.append(group2)
-+    day2.persons.append(person2)
-+    day2.results.append(result2)
-+
-+    new_event([day1, day2])
-+    set_current_race_index(1) # day2 is current (index 1)
-+
-+    ResultChecker.check_overtime(result2)
-+
-+    assert result2.status == ResultStatus.OVERTIME
-+
-+
-+def test_overtime_multi_day_race_current_day_within_max_time():
-+    """MULTI_DAY_RACE: OK when today's time is within max_time.
-+
-+    Cumulative result (45 + 55 = 100 min) exceeds max_time (60 min),
-+    but only the current-day time (55 min) should be compared.
-... [trimmed, 146 lines total]
-```
+Test diff: removed on 2026-11-01, legacy test code quotes personal data of legacy's test files `[мейнтейнер: 2026-11-01]`; reproduce with `git -C .legacy/pysport show 57ac99d04 -- tests/ ':!tests/data' | head -80`.
 
 **TASK DESCRIPTION:** A multi-day event is configured so that the group on day 2 has race type 'multi-day' and a maximum time of 60 minutes. An athlete ran 45 minutes on day 1 and 55 minutes on day 2, so the cumulative time is 100 minutes but today's time is within the limit. When the result of day 2 is checked, the athlete is marked as overtime even though today's run is within the limit. Conversely, an athlete who ran 65 minutes on day 2 must still be marked as overtime. The overtime decision for multi-day groups should depend only on the time of the current day, while individual-race groups keep using their normal result time.
 
@@ -173,34 +90,7 @@ Files changed (`git show --stat`):
  4 files changed, 53 insertions(+), 4 deletions(-)
 ```
 
-Test diff (`git show <hash> -- tests/`, first 80 lines):
-```diff
-diff --git a/tests/test_qualification.py b/tests/test_qualification.py
-new file mode 100644
-index 0000000..39850d3
---- /dev/null
-+++ b/tests/test_qualification.py
-@@ -0,0 +1,19 @@
-+from sportorg.models.memory import Qualification
-+
-+
-+def test_get_qual_by_name_is_case_insensitive_for_kms_and_ms():
-+    assert Qualification.get_qual_by_name("кмс") == Qualification.KMS
-+    assert Qualification.get_qual_by_name("мс") == Qualification.MS
-+
-+
-+def test_get_qual_by_name_supports_common_aliases():
-+    assert Qualification.get_qual_by_name("I") == Qualification.I
-+    assert Qualification.get_qual_by_name("ii") == Qualification.II
-+    assert Qualification.get_qual_by_name("3") == Qualification.III
-+    assert Qualification.get_qual_by_name("1р") == Qualification.I
-+    assert Qualification.get_qual_by_name("2Р") == Qualification.II
-+    assert Qualification.get_qual_by_name("3р") == Qualification.III
-+    assert Qualification.get_qual_by_name("1ю") == Qualification.I_Y
-+    assert Qualification.get_qual_by_name("IIIЮ") == Qualification.III_Y
-+    assert Qualification.get_qual_by_name("IIIю") == Qualification.III_Y
-+    assert Qualification.get_qual_by_name("б.р.") == Qualification.NOT_QUALIFIED
-```
+Test diff: removed on 2026-11-01, legacy test code quotes personal data of legacy's test files `[мейнтейнер: 2026-11-01]`; reproduce with `git -C .legacy/pysport show 2b316380f -- tests/ ':!tests/data' | head -80`.
 
 **TASK DESCRIPTION:** When qualification names come from outside (imported tables, entry files), values such as 'кмс' or 'мс' in lower case, 'I', 'ii', '3', '1р', '2Р', '3р', '1ю', 'IIIЮ', 'IIIю' or 'б.р.' are not recognized and the athlete ends up with no qualification (or the wrong one). Case, surrounding spaces, dots and the common short forms (digit only, digit plus 'р' or 'ю', Roman numerals) should all map to the same qualification as the canonical title. Unknown strings should still give 'no qualification'.
 
@@ -224,90 +114,7 @@ Files changed (`git show --stat`):
  4 files changed, 192 insertions(+), 51 deletions(-)
 ```
 
-Test diff (`git show <hash> -- tests/`, first 80 lines):
-```diff
-diff --git a/tests/test_sfrx.py b/tests/test_sfrx.py
-index b58e32c..73b40fb 100644
---- a/tests/test_sfrx.py
-+++ b/tests/test_sfrx.py
-@@ -5,20 +5,112 @@ from sportorg.models.memory import (
-     Person,
-     Qualification,
-     find,
--    race,
-+    ResultStatus,
-+    races,
- )
-+from sportorg.utils.time import hhmmss_to_time
- 
- 
- def test_import_sfrx():
-     sfrximporter.import_sfrx("tests/data/sfrx_file.sfrx")
--    person = find(race().persons, name="СЕМЕН", surname="НИКИТИН")
--    assert isinstance(person, Person), "Not person"
--    assert isinstance(person.group, Group), "Not group"
--    assert person.group.name == "М14", "Group name error"
--    assert isinstance(person.organization, Organization), "Not organization"
--    assert person.organization.name == "СДЮСШ Балт. берег Peterhof", (
--        "Organization name error"
--    )
--    assert person.get_year() == 2009, "Year error"
--    assert person.card_number == 0, "Card number error"
--    assert person.qual == Qualification.I_Y, "Qualification error"
-+    assert len(races()) == 2, "Count races error"
-+
-+    test_cases = [
-+        {
-+            "person": {"name": "Имя1", "surname": "Фамилия1", "bib": 101},
-+            "expected": {
-+                "middle_name": "Отчество1",
-+                "group_name": "Группа1",
-+                "org_name": "Команда1",
-+                "year": 2001,
-+                "birthday": "05.05.2001",
-+                "card_number": 0,
-+                "qual": Qualification.I,
-+                "day_data": [
-+                    {  # Day 0
-+                        "course_name": "Дист1",
-+                        "start": "12:01:00",
-+                        "finish": "13:01:00",
-+                        "status": ResultStatus.OK,
-+                        "split_code": "31",
-+                    },
-+                    {  # Day 1
-+                        "course_name": "Финал",
-+                        "start": "15:01:00",
-+                        "finish": "17:01:00",
-+                        "status": ResultStatus.OK,
-+                        "split_code": "41",
-+                    },
-+                ],
-+            },
-+        },
-+        {
-+            "person": {"name": "Имя2", "surname": "Фамилия2", "bib": 201},
-+            "expected": {
-+                "middle_name": "Отчество2",
-+                "group_name": "Группа2",
-+                "org_name": "Команда2",
-+                "year": 2002,
-+                "birthday": "01.01.2002",
-+                "card_number": 0,
-+                "qual": Qualification.II,
-+                "day_data": [
-+                    {  # Day 0
-+                        "course_name": "Дист2",
-+                        "start": "12:02:00",
-+                        "finish": "14:02:00",
-+                        "status": ResultStatus.OK,
-+                        "split_code": "52",
-+                    },
-+                    {  # Day 1
-+                        "course_name": "Полуфинал",
-+                        "start": "15:04:00",
-... [trimmed, 129 lines total]
-```
+Test diff: removed on 2026-11-01, legacy test code quotes personal data of legacy's test files `[мейнтейнер: 2026-11-01]`; reproduce with `git -C .legacy/pysport show 3b55fe8b0 -- tests/ ':!tests/data' | head -80`.
 
 **TASK DESCRIPTION:** A multi-day SFR (.sfrx) file defines groups whose distance (course) differs by day, for example group 'Группа1' runs 'Дист1' on day 1 and 'Финал' on day 2. After importing the file, the second day's race does not get the course that belongs to that day for the group, so the athlete's course, splits and results on day 2 are wrong or the import fails. Importing should create two races and assign to each group the course defined for that specific day, together with the correct start/finish times, statuses and first split codes.
 
@@ -332,90 +139,7 @@ Files changed (`git show --stat`):
  5 files changed, 505 insertions(+), 145 deletions(-)
 ```
 
-Test diff (`git show <hash> -- tests/`, first 80 lines):
-```diff
-diff --git a/tests/test_race_partial.py b/tests/test_race_partial.py
-new file mode 100644
-index 0000000..186b11a
---- /dev/null
-+++ b/tests/test_race_partial.py
-@@ -0,0 +1,372 @@
-+from typing import List
-+
-+import pytest
-+
-+from sportorg.models.memory import (
-+    Course,
-+    CourseControl,
-+    Group,
-+    Organization,
-+    Person,
-+    Race,
-+    ResultManual,
-+    new_event,
-+    race,
-+    set_current_race_index,
-+)
-+
-+
-+@pytest.fixture
-+def r() -> Race:
-+    """Race with 2 courses, 3 groups, 2 orgs, 4 persons, 4 results.
-+
-+    Layout:
-+      courses:  [C1, C2]
-+      groups:   [M21→C1, W21→C2, M35→no course]
-+      orgs:     [Org1, Org2]
-+      persons:  [p0(M21/Org1), p1(M21/Org1), p2(W21/Org2), p3(M35/Org1)]
-+      results:  [res0..res3] mapped 1-to-1 to persons in same order
-+    """
-+    new_event([Race()])
-+    set_current_race_index(0)
-+    obj = race()
-+
-+    c1, c2 = Course(), Course()
-+    c1.name, c2.name = "C1", "C2"
-+    # Add a control to c2 to make it distinct from c1 (since Course.__eq__ checks controls)
-+    c2_control = CourseControl()
-+    c2_control.code = "31"
-+    c2.controls.append(c2_control)
-+    obj.courses.extend([c1, c2])
-+
-+    g1, g2, g3 = Group(), Group(), Group()
-+    g1.name, g2.name, g3.name = "M21", "W21", "M35"
-+    g1.course, g2.course = c1, c2  # g3 intentionally has no course
-+    obj.groups.extend([g1, g2, g3])
-+
-+    o1, o2 = Organization(), Organization()
-+    o1.name, o2.name = "Org1", "Org2"
-+    obj.organizations.extend([o1, o2])
-+
-+    p0, p1, p2, p3 = Person(), Person(), Person(), Person()
-+    p0.group, p0.organization = g1, o1
-+    p1.group, p1.organization = g1, o1
-+    p2.group, p2.organization = g2, o2
-+    p3.group, p3.organization = g3, o1
-+    obj.persons.extend([p0, p1, p2, p3])
-+
-+    for p in obj.persons:
-+        res = ResultManual()
-+        res.person = p
-+        obj.results.append(res)
-+
-+    return obj
-+
-+
-+# --- _build_partial ---
-+
-+
-+def test_build_partial_empty_returns_none(r: Race) -> None:
-+    assert r._build_partial([]) is None
-+
-+
-+def test_build_partial_groups_in_model_order(r: Race) -> None:
-+    # Supply persons from W21 (index 1) then M21 (index 0) — reversed group order
-... [trimmed, 378 lines total]
-```
+Test diff: removed on 2026-11-01, legacy test code quotes personal data of legacy's test files `[мейнтейнер: 2026-11-01]`; reproduce with `git -C .legacy/pysport show b0391dd14 -- tests/ ':!tests/data' | head -80`.
 
 **TASK DESCRIPTION:** In the report dialog, 'Send selected' builds a partial copy of the race from the selected persons, groups, courses, organizations or results. The groups, courses, organizations, results and persons in that partial copy do not follow the order of the main race model, and selecting by results can include results that were not selected for the same person. For multi-day races, selecting an athlete on one day should also include the same athlete (matched by multi-day id) from the other days, and a selection with no matches should still give a valid, empty structure. An empty selection must produce no data at all.
 
@@ -474,90 +198,7 @@ Files changed (`git show --stat`):
  39 files changed, 2152 insertions(+), 1465 deletions(-)
 ```
 
-Test diff (`git show <hash> -- tests/`, first 80 lines):
-```diff
-diff --git a/tests/test_penalty_checking.py b/tests/test_penalty_checking.py
-index ac3f2a2..7741ec2 100644
---- a/tests/test_penalty_checking.py
-+++ b/tests/test_penalty_checking.py
-@@ -363,7 +363,6 @@ def check(
-     result = race().results[0]
-     result.splits = make_splits(splits)
-     ResultChecker.checking(result)
--    ResultChecker.calculate_penalty(result)
-     result_penalty = get_penalty(result)
- 
-     check_result = result.status == result_status, result_penalty == penalty
-@@ -489,6 +488,6 @@ def split_and_course_repr(course: List[Union[int, str]], splits: List[int]) -> s
-     str
-         Строка со сравнением отметок и дистанции
-     """
--    spl = ['Spl'] + splits
--    crs = ['Crs'] + course
-+    spl = splits
-+    crs = course
-     return '\n'.join([f'{s:3}  {c}' for s, c in zip_longest(spl, crs, fillvalue='')])
-diff --git a/tests/test_result_checking.py b/tests/test_result_checking.py
-index 490f6d7..f702a5b 100644
---- a/tests/test_result_checking.py
-+++ b/tests/test_result_checking.py
-@@ -85,11 +85,11 @@ def test_controls_with_optional_code_ranges():
- 
- 
- def test_free_course_order_unique_controls():
--    '''Возможность задать «любой контрольный пункт» ['*'] или
-+    """Возможность задать «любой контрольный пункт» ['*'] или
-     «любой контрольный пункт из списка» ['*(31,32,33)'].
-     Такие контрольные пункты будут приняты как правильные.
-     Осуществляется проверка на уникальность.
--    '''
-+    """
-     assert ok(course=['*'], splits=[31])
-     assert ok(course=['*'], splits=[71])
- 
-@@ -159,9 +159,9 @@ def test_free_course_order_any_controls():
- 
- 
- def test_course_pre_ordered():
--    '''Дистанция в заданном направлении. Спортсмену необходимо пройти
-+    """Дистанция в заданном направлении. Спортсмену необходимо пройти
-     контрольные пункты в заданном порядке. Лишние КП не учитываются.
--    '''
-+    """
-     assert ok(course=[31, 32, 33], splits=[31, 32, 33])
- 
-     # Лишний КП
-@@ -190,11 +190,11 @@ def test_course_pre_ordered():
- 
- 
- def test_course_free_order():
--    '''Дистанция по выбору — спортсмену необходимо собрать определённое количество КП
-+    """Дистанция по выбору — спортсмену необходимо собрать определённое количество КП
-     в свободном порядке. Повторно взятые КП не засчитываются. Иногда на дистанции могут
-     быть обязательные первый и/или последний КП, обязательный КП в середине дистанции,
-     переворот карты.
--    '''
-+    """
- 
-     # Выбор — 3 различных КП
-     c = ['*', '*', '*']
-@@ -272,7 +272,7 @@ def test_course_free_order():
- 
- 
- def test_course_butterfly():
--    '''Рассев «бабочка» — спортсмен сначала пробегает одно крыло бабочки, затем другое'''
-+    """Рассев «бабочка» — спортсмен сначала пробегает одно крыло бабочки, затем другое"""
-     # Классическая бабочка — центральный КП32 необходимо взять три раза
-     c = [31, 32, '*(41,51)', '*(42,52)', 32, '*(51,41)', '*(52,42)', 32, 39]
-     assert ok(c, [31, 32, 41, 42, 32, 51, 52, 32, 39])
-@@ -363,9 +363,9 @@ def test_course_butterfly():
- 
- 
- def test_non_obvious_behavior():
--    '''Неочевидное поведение при проверке дистанции. Не всегда это некорректная работа
-+    """Неочевидное поведение при проверке дистанции. Не всегда это некорректная работа
-... [trimmed, 128 lines total]
-```
+Test diff: removed on 2026-11-01, legacy test code quotes personal data of legacy's test files `[мейнтейнер: 2026-11-01]`; reproduce with `git -C .legacy/pysport show 5170d6c31 -- tests/ ':!tests/data' | head -80`.
 
 **TASK DESCRIPTION:** In marked-route races with penalty laps, the status and penalty count for a result can be wrong after a plain result check: penalty laps are only produced if a second, separate penalty calculation step is also invoked. Checking a result with the normal check call alone should already set the status (OK / missing punch / penalty-lap related) and the penalty value consistently. This affects marked-route courses with extra or missing punches and penalty-lap station punches.
 
@@ -581,24 +222,7 @@ Files changed (`git show --stat`):
  4 files changed, 25 insertions(+), 25 deletions(-)
 ```
 
-Test diff (`git show <hash> -- tests/`, first 80 lines):
-```diff
-diff --git a/tests/test_otime.py b/tests/test_otime.py
-index 9c4e3ec..7835e00 100644
---- a/tests/test_otime.py
-+++ b/tests/test_otime.py
-@@ -3,9 +3,7 @@ import pytest
- from sportorg.common.otime import OTime, PythonOTime, TimeRounding, parse_time_rounding
- 
- 
--OTIME_IMPLEMENTATIONS = (
--    (PythonOTime,) if OTime is PythonOTime else (PythonOTime, OTime)
--)
-+OTIME_IMPLEMENTATIONS = (PythonOTime,) if OTime is PythonOTime else (PythonOTime, OTime)
- 
- 
- @pytest.fixture(params=OTIME_IMPLEMENTATIONS, ids=lambda cls: cls.__name__)
-```
+Test diff: removed on 2026-11-01, legacy test code quotes personal data of legacy's test files `[мейнтейнер: 2026-11-01]`; reproduce with `git -C .legacy/pysport show 393b6303b -- tests/ ':!tests/data' | head -80`.
 
 **TASK DESCRIPTION:** Fresh result objects hold 'no value' for start time, penalty time, credit time, diff and final result time instead of a zero time value. Code that uses these fields (arithmetic, comparisons, export to IOF XML) has to special-case the missing values, and some paths fail or print nothing for a new result. A new result should behave as if these times were zero.
 
@@ -623,26 +247,7 @@ Files changed (`git show --stat`):
  5 files changed, 8 insertions(+), 6 deletions(-)
 ```
 
-Test diff (`git show <hash> -- tests/`, first 80 lines):
-```diff
-diff --git a/tests/test_sfrx.py b/tests/test_sfrx.py
-index b58e32c..f0bbaeb 100644
---- a/tests/test_sfrx.py
-+++ b/tests/test_sfrx.py
-@@ -16,9 +16,9 @@ def test_import_sfrx():
-     assert isinstance(person.group, Group), "Not group"
-     assert person.group.name == "М14", "Group name error"
-     assert isinstance(person.organization, Organization), "Not organization"
--    assert person.organization.name == "СДЮСШ Балт. берег Peterhof", (
--        "Organization name error"
--    )
-+    assert (
-+        person.organization.name == "СДЮСШ Балт. берег Peterhof"
-+    ), "Organization name error"
-     assert person.get_year() == 2009, "Year error"
-     assert person.card_number == 0, "Card number error"
-     assert person.qual == Qualification.I_Y, "Qualification error"
-```
+Test diff: removed on 2026-11-01, legacy test code quotes personal data of legacy's test files `[мейнтейнер: 2026-11-01]`; reproduce with `git -C .legacy/pysport show c8761e709 -- tests/ ':!tests/data' | head -80`.
 
 **TASK DESCRIPTION:** The 'autosave interval' option is changed in the settings dialog and the application is restarted, but the value is not found in settings.json, so the option reverts to its default. The settings file is also written with non-ASCII text escaped. The saved settings file should contain the interval and keep Cyrillic text readable.
 
@@ -665,22 +270,7 @@ Files changed (`git show --stat`):
  3 files changed, 40 insertions(+), 27 deletions(-)
 ```
 
-Test diff (`git show <hash> -- tests/`, first 80 lines):
-```diff
-diff --git a/tests/test_gzip.py b/tests/test_gzip.py
-index 4a17125..f1e8b50 100644
---- a/tests/test_gzip.py
-+++ b/tests/test_gzip.py
-@@ -13,7 +13,7 @@ def use_gzip():
-     Config().configuration.set("save_in_gzip", old_value)
- 
- 
--@pytest.mark.usefixtures('use_gzip')
-+@pytest.mark.usefixtures("use_gzip")
- def test_save_and_open_gzip():
-     File("tests/data/test.json").open()
-     File("tests/data/test.json.tmp").save()
-```
+Test diff: removed on 2026-11-01, legacy test code quotes personal data of legacy's test files `[мейнтейнер: 2026-11-01]`; reproduce with `git -C .legacy/pysport show 42e806a58 -- tests/ ':!tests/data' | head -80`.
 
 **TASK DESCRIPTION:** Opening a saved event file from the menu reads it with the wrong settings when the file is gzip-compressed but the current 'save in gzip' option is off (or the reverse). The loader should detect compression from the file contents, not from the option, and read the file regardless of the current save settings.
 
@@ -705,22 +295,7 @@ Files changed (`git show --stat`):
  5 files changed, 79 insertions(+), 104 deletions(-)
 ```
 
-Test diff (`git show <hash> -- tests/`, first 80 lines):
-```diff
-diff --git a/tests/test_teamwork.py b/tests/test_teamwork.py
-index bfb4ed0..51d897b 100644
---- a/tests/test_teamwork.py
-+++ b/tests/test_teamwork.py
-@@ -33,7 +33,7 @@ def test_teamwork():
-             'Create',
-         )
-     )
--    result = client_out_queue.get(timeout=5)
-+    result = client_out_queue.get(timeout=10)
-     assert result.data == {
-         'object': 'Person',
-         'id': 'c24eef6c-a33b-4581-a6d1-78294711aef1',
-```
+Test diff: removed on 2026-11-01, legacy test code quotes personal data of legacy's test files `[мейнтейнер: 2026-11-01]`; reproduce with `git -C .legacy/pysport show aee1e994e -- tests/ ':!tests/data' | head -80`.
 
 **TASK DESCRIPTION:** In teamwork mode, a client connected to a server does not reliably deliver objects created on the client side (for example a new Person) to the server queue and back; the client code contains invalid calls. The client should send a created object to the server and receive the echoed message within a reasonable time.
 
@@ -744,26 +319,7 @@ Files changed (`git show --stat`):
  4 files changed, 27 insertions(+), 81 deletions(-)
 ```
 
-Test diff (`git show <hash> -- tests/`, first 80 lines):
-```diff
-diff --git a/tests/test_json.py b/tests/test_json.py
-index 7cb1cc8..1ba98e6 100644
---- a/tests/test_json.py
-+++ b/tests/test_json.py
-@@ -1,11 +1,9 @@
--import logging
--
- from sportorg.models.memory import Group, Organization, Person, race
- from sportorg.modules.backup.file import File
- 
- 
- def test_main():
--    File('tests/data/test.json', logging.root, File.JSON).open()
-+    File('tests/data/test.json').open()
-     r = race()
-     person = None
-     for p in r.persons:
-```
+Test diff: removed on 2026-11-01, legacy test code quotes personal data of legacy's test files `[мейнтейнер: 2026-11-01]`; reproduce with `git -C .legacy/pysport show ab72a7987 -- tests/ ':!tests/data' | head -80`.
 
 **TASK DESCRIPTION:** Event files are saved and opened through a File helper that accepts a file name only; the legacy binary backup format and the logger/format arguments are removed. Opening 'tests/data/test.json' with just a path must load the event with the expected organization, group and person.
 
@@ -858,26 +414,7 @@ Files changed (`git show --stat`):
  75 files changed, 1264 insertions(+), 324 deletions(-)
 ```
 
-Test diff (`git show <hash> -- tests/`, first 80 lines):
-```diff
-diff --git a/tests/test_sfrx.py b/tests/test_sfrx.py
-index f0bbaeb..b58e32c 100644
---- a/tests/test_sfrx.py
-+++ b/tests/test_sfrx.py
-@@ -16,9 +16,9 @@ def test_import_sfrx():
-     assert isinstance(person.group, Group), "Not group"
-     assert person.group.name == "М14", "Group name error"
-     assert isinstance(person.organization, Organization), "Not organization"
--    assert (
--        person.organization.name == "СДЮСШ Балт. берег Peterhof"
--    ), "Organization name error"
-+    assert person.organization.name == "СДЮСШ Балт. берег Peterhof", (
-+        "Organization name error"
-+    )
-     assert person.get_year() == 2009, "Year error"
-     assert person.card_number == 0, "Card number error"
-     assert person.qual == Qualification.I_Y, "Qualification error"
-```
+Test diff: removed on 2026-11-01, legacy test code quotes personal data of legacy's test files `[мейнтейнер: 2026-11-01]`; reproduce with `git -C .legacy/pysport show ef983f3e9 -- tests/ ':!tests/data' | head -80`.
 
 **TASK DESCRIPTION:** A large May-2025 batch: middle name and birth date usage in imports and dialogs plus assorted fixes. There is no single observable bug; the test change in the commit is only a wrapping change of an assertion.
 
