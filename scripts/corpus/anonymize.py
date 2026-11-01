@@ -15,7 +15,10 @@
   ``[мейнтейнер: 2026-11-01]``. Legacy copies the comment into ``result``, ``result_relay``,
   ``result_current`` and, cut to 14 characters per day, ``multi_day_results``, and never reads
   them back [код: pysport@b548c35 sportorg/models/memory.py:480-490,650-747,969-973]: they get
-  the masked comment where they hold it, times and kept comments stay.
+  the masked comment where they hold it, times and kept comments stay. A day field is told whole
+  or cut by its length without the space padding: shorter than 14, the comment is whole and only
+  a whole legacy hint or a clause stays; a full field may be cut, so the start of a legacy hint
+  stays. A cut that ends in a space looks padded, so legacy's own cut text may be masked.
 - organization: ``name`` → org; ``country``, ``region`` and the old ``address`` → place;
   ``contact`` → contact; ``code`` → code.
 - race data: ``title``, ``short_title``, ``description``, ``location``, ``url`` → the neutral id
@@ -170,7 +173,7 @@ LEGACY_HINTS: Final = frozenset(
     )
 )
 # ``п.п.6.6.4``, ``пп6.6.4``, ``п. п. 6.6.4`` [мейнтейнер: 2026-11-01]
-# legacy's clauses have three to four numbers of one or two digits
+# legacy's clauses have three to four numbers of one or two digits (up to five allowed)
 # [код: pysport@b548c35 sportorg/data/configs/status_comments.txt]: a longer run of digits or of
 # groups is a phone or a card number
 _CLAUSE = re.compile(r"п\.?\s?п\.?\s?[0-9]{1,2}(?:\.[0-9]{1,2}){0,4}\.?", re.IGNORECASE)
@@ -195,6 +198,7 @@ CODE_KEYS: Final = frozenset({"world_code", "national_code"})
 _IDENTIFIER = re.compile(r"[a-z_][a-z0-9_]{0,40}")
 _ISO_DATE = re.compile(r"([0-9]{4})-([0-9]{2})-([0-9]{2})")
 _ASCII_DIGITS = re.compile(r"[0-9]+")
+MAX_DIGITS: Final = 18  # a longer run of digits is no number: no card, no date
 
 
 def status_comment_free_text(value: str, *, cut: bool = False) -> str | None:
@@ -275,8 +279,9 @@ class _Masker:
             return pseudonym.card_number(self.key, value)
         if isinstance(value, float) and value.is_integer():
             return float(pseudonym.card_number(self.key, int(value)))
-        if isinstance(value, str) and _ASCII_DIGITS.fullmatch(value.strip()):
-            return str(pseudonym.card_number(self.key, int(value)))
+        text = value.strip() if isinstance(value, str) else ""
+        if _ASCII_DIGITS.fullmatch(text) and len(text) <= MAX_DIGITS:
+            return str(pseudonym.card_number(self.key, int(text)))
         self.stats["unparsed:card_number"] += 1
         return 0
 
@@ -352,7 +357,8 @@ class _Masker:
         text = field.rstrip(" ")
         if _TIME_FIELD.fullmatch(text):
             return field
-        new, outcome = status_comment(self.key, text, cut=True)
+        # a full field may hold a comment cut short; a padded one holds the comment whole
+        new, outcome = status_comment(self.key, text, cut=len(text) >= DAY_FIELD)
         return field if outcome == "kept" else f"{new}{' ' * DAY_FIELD}"[:DAY_FIELD]
 
     def derived(self, name: str, value: Json, comment: tuple[str, str] | None) -> Json:

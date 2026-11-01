@@ -79,6 +79,7 @@ MIN_ORG: Final = 5
 MIN_CARD: Final = 100_000
 DATE_NUMBERS: Final = range(10_000_000, 100_000_000)  # YYYYMMDD
 JAN_FIRST: Final = 101  # MMDD of 1 January
+MAX_DIGITS: Final = anonymize.MAX_DIGITS  # a longer run of digits is no number to compare
 SECRET_SETTINGS: Final = anonymize.CLEARED_SETTINGS | anonymize.TEXT_SETTINGS
 PERSON_WORDS: Final = frozenset({"name", "surname", "middle_name"})
 ORG_FIELDS: Final[dict[str, str]] = {
@@ -176,7 +177,7 @@ def _whole_number(value: Json) -> int | None:
         return value
     if isinstance(value, float) and value.is_integer():
         return int(value)
-    if isinstance(value, str) and value.isascii() and value.isdigit():
+    if isinstance(value, str) and value.isascii() and value.isdigit() and len(value) <= MAX_DIGITS:
         return int(value)
     return None
 
@@ -209,7 +210,8 @@ class _Extractor:
         elif isinstance(value, float) and value.is_integer():
             number = int(value)
         elif isinstance(value, str) and _SPACED_DIGITS.fullmatch(value.strip()):
-            number = int("".join(value.split()))
+            digits = "".join(value.split())
+            number = int(digits) if len(digits) <= MAX_DIGITS else 0
         if number > 0:
             self.found.numbers[record] = (category, number)
         elif category == "code":
@@ -253,11 +255,18 @@ class _Extractor:
         if free is None:
             self.kept("status_comment", value)
             return
-        self.value("text", free)
-        if len(value.strip()) > anonymize.DAY_FIELD:  # as cut into a day field
-            cut = anonymize.status_comment_free_text(value[: anonymize.DAY_FIELD], cut=True)
-            if cut is not None:  # None: a clause, or a start of legacy's hint, which stays
-                self.value("text", cut.rstrip(" "))
+        size = anonymize.DAY_FIELD
+        # legacy pads with spaces, and the anonymizer measures a day field without them only
+        if len(value.rstrip(" ")) < size:  # padded in the day field: whole, so masked whole
+            self.value("text", free)
+            return
+        # The comment fills a day field, cut or not: the anonymizer keeps there what starts
+        # one of legacy's hints, so that is no leak (``None``: a clause or such a start).
+        cut = anonymize.status_comment_free_text(value[:size], cut=True)
+        if cut is not None:
+            self.value("text", cut.rstrip(" "))
+        if len(value.rstrip()) > size or cut is not None:
+            self.value("text", free)
 
     def result(self, item: Json) -> None:
         result = as_dict(item)
@@ -483,19 +492,24 @@ SCAN_CATEGORIES: Final = ("surname", "org", "place", "contact", "code", "card", 
 _CARD_VALUE = re.compile(
     r"(?<![\w:.])[\"']?(?:card_number|sportident_card)[\"']?\s*[:=]\s*[\"']?([0-9]+)"
 )
-# digits in groups of three: ``8 123 456``, ``8'123'456``, with no-break spaces too
-_GROUPED_DIGITS = re.compile(r"(?<!\w)[0-9]{1,3}(?:[ '.,\u00a0\u2009\u202f][0-9]{3})+(?!\w)")
+# digits in groups of three: with spaces (no-break and thin too) or ``'``, two groups are enough
+# (``8 123 456``, ``8'123'456``); with ``,`` or ``.`` three are needed: ``137,601`` is a pair of
+# numbers in a line reference, ``123.456`` a decimal [допущение]
+_GROUPED_DIGITS = re.compile(r"(?<!\w)[0-9]{1,3}(?:[ '\u00a0\u2009\u202f][0-9]{3})+(?!\w)")
+_DOTTED_DIGITS = re.compile(r"(?<!\w)[0-9]{1,3}(?:[.,][0-9]{3}){2,}(?!\w)")
+MAX_CARD_GROUPS: Final = 3  # a card has at most nine digits: a lead group and two of three
 _LEGACY_TEXT: Final = "\n".join(
     [normalize(t) for t in anonymize.LEGACY_STATUS_TITLES] + sorted(anonymize.LEGACY_HINTS)
 )
 
 
 def _group_numbers(grouped: str) -> set[str]:
-    """What digits in groups can be: all of them, or all but the leading groups (``КП 31 212 345``).
+    """What the last groups can be: all of the last three, or two (``КП 31 212 345``).
 
-    Without leading zeros, as card numbers are written.
+    Without leading zeros, as card numbers are written. The groups before are no part of a card,
+    and a long run is no number to turn into an int.
     """
-    groups = re.split(r"[^0-9]", grouped)
+    groups = re.split(r"[^0-9]", grouped)[-MAX_CARD_GROUPS:]
     return {str(int("".join(groups[i:]))) for i in range(len(groups) - 1)}
 
 
@@ -558,6 +572,10 @@ def scan_words(text: str, scan: ScanSet) -> list[tuple[int, str, str]]:
             found = sorted(v for v in values if set(tokens(v)) <= words and _bounded(normalized, v))
             hits.extend((number, category, v) for v in found)
         grouped = {n for m in _GROUPED_DIGITS.finditer(line) for n in _group_numbers(m[0])}
+        for m in _DOTTED_DIGITS.finditer(line):  # the whole run, if it is short enough for a card
+            digits = re.sub(r"[^0-9]", "", m[0])
+            if len(digits) <= MAX_DIGITS:
+                grouped.add(str(int(digits)))
         cards = (
             (words & scan.cards)
             | (grouped & scan.cards)

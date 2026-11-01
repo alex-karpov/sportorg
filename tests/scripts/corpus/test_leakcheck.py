@@ -530,3 +530,100 @@ def test_a_referee_is_searched_by_the_surname_not_by_the_initials(referee: str) 
     scan = leakcheck.scan_set([original])
     assert leakcheck.scan_text("главный судья Придумов", scan) == [(1, "surname")]
     assert leakcheck.scan_text("П. П. судья", scan) == []
+
+
+# ---------------------------------------------------------------- second Opus review
+
+
+@pytest.mark.parametrize("stem", ["пп1 # не прошел КП 5", "пп6.6.4 # спортсмен сошел с трассы"])
+@pytest.mark.parametrize("length", range(7, 21))
+def test_a_correct_copy_never_leaks_whatever_the_length_of_the_hint(stem: str, length: int) -> None:
+    """Short, exactly 14 and longer comments: the check mirrors what the anonymizer keeps."""
+    comment = stem[:length]
+    original = synth.personal_legacy_shape()
+    _set_comment(original, 0, 1, comment, f"0:31:00       {comment[: synth.DAY_FIELD]:<14}")
+    assert _leaks(leakcheck.check_pair(original, _anonymized(original))) == {}
+
+
+def test_the_cut_of_a_comment_with_leading_spaces_is_searched() -> None:
+    comment = "   Небылицкий П"  # 15 characters, 12 without the spaces
+    original = synth.personal_legacy_shape()
+    _set_comment(original, 0, 1, comment, "0:31:00       ")
+    leaked = _anonymized(original)
+    _shape_results(leaked, 0)[1]["multi_day_results"] = "0:31:00       " + comment[:14]
+    assert _leaks(leakcheck.check_pair(original, leaked)) == {"leak:text": 1}
+
+
+def test_scan_ignores_one_january_as_a_number() -> None:
+    original = copy.deepcopy(synth.personal_individual())
+    _persons(original)[0]["birth_date"] = 19_900_101
+    scan = leakcheck.scan_set([original])
+    assert leakcheck.scan_text("born 19900101", scan) == []
+
+
+@pytest.mark.parametrize(
+    "line",
+    [
+        "[код: pysport@b548c35 sportorg/models/memory.py:96-137,601-700]",
+        "see file.py:120,135 and file.py:120.135",
+        "took 123.456 s",
+        "rgba(255,255,255,0.5)",
+        "sizes 255, 255 and 137.601",
+    ],
+)
+def test_scan_does_not_read_a_pair_of_groups_with_a_comma_or_a_dot_as_a_card(line: str) -> None:
+    original = copy.deepcopy(synth.personal_individual())
+    for person, card in zip(_persons(original), (137_601, 120_135, 123_456, 255_255), strict=False):
+        person["card_number"] = card
+    assert leakcheck.scan_text(line, leakcheck.scan_set([original])) == []
+
+
+def test_scan_survives_a_very_long_run_of_digit_groups(scan_set: leakcheck.ScanSet) -> None:
+    assert leakcheck.scan_text(" ".join(["123"] * 2000), scan_set) == []
+
+
+def test_a_huge_number_as_a_birth_date_does_not_crash_the_extraction() -> None:
+    original = copy.deepcopy(synth.personal_individual())
+    _persons(original)[0]["birth_date"] = "9" * 5000
+    assert leakcheck.scan_text("born 19900517", leakcheck.scan_set([original])) == []
+
+
+# ---------------------------------------------------------------- third Opus review
+
+
+@pytest.mark.parametrize(
+    "comment",
+    [
+        "пп1 # не сдал\t",
+        "пп1 # не сдал\xa0",
+        "пп1 # не сдал\n",
+        "пп1 # не про\t\t",
+        "пп1 # не про\xa0\xa0",
+    ],
+)
+def test_a_comment_ending_in_other_whitespace_than_spaces_is_measured_like_the_anonymizer(
+    comment: str,
+) -> None:
+    """Legacy pads with spaces: the anonymizer measures a day field without spaces only."""
+    original = synth.personal_legacy_shape()
+    _set_comment(original, 0, 1, comment, f"0:31:00       {comment[: synth.DAY_FIELD]:<14}")
+    assert _leaks(leakcheck.check_pair(original, _anonymized(original))) == {}
+
+
+def test_a_card_after_a_long_run_of_groups_is_found() -> None:
+    original = copy.deepcopy(synth.personal_individual())
+    _persons(original)[1]["card_number"] = 212_345
+    scan = leakcheck.scan_set([original])
+    assert leakcheck.scan_text("100 200 300 400 212 345", scan) == [(1, "card")]
+    assert leakcheck.scan_text("1 " + "100 " * 40 + "212 345", scan) == [(1, "card")]
+
+
+@pytest.mark.parametrize("key", ["card_number", "national_code"])
+@pytest.mark.parametrize("digits", ["1" * 5000, " ".join(["1" * 10] * 500)])
+def test_a_huge_number_in_a_card_or_code_does_not_crash_extraction_or_scan(
+    key: str, digits: str
+) -> None:
+    original = copy.deepcopy(synth.personal_individual())
+    _persons(original)[0][key] = digits
+    leakcheck.check_pair(original, original)
+    assert leakcheck.scan_text("born 19900517", leakcheck.scan_set([original])) == []

@@ -482,3 +482,16 @@ def test_a_dotted_number_that_is_not_a_clause_of_the_rules_is_masked(comment: st
 @pytest.mark.parametrize("comment", ["п.п.4.6.12.7", "п.п.3.13.12.2", "пп4.3.6.6"])
 def test_the_clauses_legacy_offers_are_kept(comment: str) -> None:
     assert anonymize.status_comment(KEY, comment)[1] == "kept"
+
+
+@pytest.mark.parametrize("comment", ["пп1 # не сдал", "пп1 # не прош"])
+def test_a_short_hint_that_starts_a_legacy_hint_is_masked_in_the_day_field(comment: str) -> None:
+    """The field is padded, so the comment is whole, not cut: only a whole legacy hint stays."""
+    assert comment not in _day_field_after(comment)
+
+
+@pytest.mark.parametrize("digits", ["1" * 5000, "007" * 2000])
+def test_a_card_of_thousands_of_digits_becomes_zero_and_is_counted(digits: str) -> None:
+    new, stats = _shaped("card_number", digits)
+    assert new["card_number"] == 0
+    assert stats["unparsed:card_number"] == 1

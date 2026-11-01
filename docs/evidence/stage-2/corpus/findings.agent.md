@@ -172,6 +172,40 @@ M-5, M-8, then M-3, M-4; M-6 and M-7 to README «Limits». Each fix by TDD (RED 
 | M-2 | any int was a birth date in `scan` (`1990`, `0`); `"19900517"`, `19900517.0` missing | only `YYYYMMDD` other than 1 January, as an int, a whole float or ASCII digits |
 | M-3 | unknown file-level keys invisible to the check | sensitive text, like in the anonymizer |
 | M-4 | cards in groups with `,`, `.`, thin space, leading zero, a number before the card | all of these; the leading groups may be another number |
-| M-5 | a dotted number with many groups was a rule clause | three to four numbers of one or two digits, as legacy's clauses |
+| M-5 | a dotted number with many groups was a rule clause | one to five numbers of one or two digits (legacy's clauses have three or four) |
 | M-6, M-7 | time shape wider than legacy's; negative codes | not changed; README «Limits» |
 | M-8 | README: eight letters of a cut hint | ten (no spaces around `#`) |
+
+### Second Opus review (2026-11-01)
+
+Nothing critical, two important, nine minor; all eight claimed fixes of the pass before verified
+by reverting each production change. Maintainer's decisions `[мейнтейнер: 2026-11-01]`: fix 1, 2,
+3, 6, 7, 8; the rest to README «Limits». Each fix by TDD (RED run first); the January test is
+checked by mutation (without the `JAN_FIRST` condition it fails).
+
+| # | Finding | Done |
+|---|---|---|
+| 1 | a comment of a clause and the start of a legacy hint that fits in a day field (`пп1 # не сдал`) was kept there by the anonymizer, as if cut, yet masked in `status_comment`; the check called that a leak | `day_field` treats a field with padding as a whole comment (`cut` only for a full field); the check mirrors it for every length of a comment padded with spaces (a test runs lengths 7–20 of two hint stems); other trailing whitespace, see the third review |
+| 2 | cards in groups matched ordinary text (`file.py:96-137,601-700`, `rgba(255,255,255,0.5)`, `123.456 s`): 99 new candidates in the repository | spaces and `'`: two groups, with the endings of the run as before; `,` and `.`: three groups or more, the whole run only |
+| 3 | more than 4300 digits (a run of groups, a numeric birth date) raised `ValueError` | numbers of up to 18 digits; superseded by the third review (cards and codes, last three groups) |
+| 6 | M-5 text said three to four numbers; README said legacy writes no time over a day | corrected |
+| 7 | removing the `1 January` condition failed no test | test added, mutation-checked |
+| 8 | the cut of a comment with leading spaces was not searched (`strip()`) | `rstrip()` |
+| 4, 5, 9, 10, 11 | a comment shaped like a time; some numbers kept as clauses; a day-first date with a leading zero as a number; whitespace-only comment, non-whole float code; `8 123 456 100` | not changed; README «Limits» |
+
+### Third Opus review (2026-11-01)
+
+Nothing critical, two important, five minor; 452 536 synthetic comments through the anonymizer
+and the check (0 false positives for comments without trailing tab or no-break space, apart from
+the classes below), scan flooding down to chance level, every new test fails without its change.
+Maintainer's decisions `[мейнтейнер: 2026-11-01]`: fix 1, 2, 3; documents of 5 and 6; 4, 5, 7 to
+«Limits». Each fix by TDD (RED run first).
+
+| # | Finding | Done |
+|---|---|---|
+| 1 | a comment ending in a tab, a no-break space or a line break failed the check on a correct copy (`rstrip()` against the anonymizer's `rstrip(" ")`) | the extractor measures the comment like the anonymizer (spaces only) |
+| 2 | `int()` of 4300+ digits crashed `anonymize` (card) and `extract`, `scan_set` (card, code, spaced groups) | strings of more than 18 digits are no numbers: a card becomes 0 (counted), a code stays text |
+| 3 | the cap of four groups left a blind spot (`100 200 300 400 212 345`) and the docs described it wrongly | no cap on the run; only its last three groups are tried; a dotted run is a card only up to 18 digits |
+| 5 | docs: «kept comments stay», "a padded one holds the comment whole" | module docstring and README say how a field is told whole or cut; legacy's cut that ends in a space is masked (over-masking, 107 of 2100 combinations) |
+| 6 | README: «a longer one is masked» | `status_comment` is masked, the cut in a day field can be kept |
+| 4, 5, 7 | cross-record false positive on a kept cut; over-masking of a cut ending in a space; format marks in a hint | not changed; README «Limits» |

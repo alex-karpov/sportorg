@@ -81,9 +81,33 @@ Every `.json`/`.md` file here except `*.agent.md` is output of a script; the com
 - Numbers inside text or unknown fields (`"comment": 79001234567`) are kept and not checked:
   legacy writes such fields as strings, so only a hand-edited file holds one.
 - A day field of `multi_day_results` that is a time is told by shape (`h:mm:ss`, a decimal tail
-  allowed, any number of hours); legacy writes neither the tail (accuracy 0) nor a time over a
-  day. A negative time (`-1:59:00`, no clamp in legacy) is masked as text. A numeric code
-  below 1 (negative) is neither masked nor checked.
+  allowed, any number of hours); legacy writes hours over 24 (days are added as 24 hours) but
+  no tail with the default accuracy 0. A negative time (`-1:59:00`, no clamp in legacy) is masked
+  as text; a status comment shaped like a time (`0:31:00`) is kept as one, and the leak check
+  calls that a leak. A numeric code below 1 (negative) and a code that is a non-whole float are
+  neither masked nor checked. A comment of whitespace only is masked, although legacy reads it.
+- A clause of the rules is `пп`/`п.п.` and one to five numbers of one or two digits: legacy's own
+  have three or four, so a phone written as `пп12.34.56.78.90` or `пп 17.05.90` is kept. The
+  whole comment of a longer phone is masked in `status_comment`, but a day field cuts it to 14
+  characters, and the cut (`пп12.34.56.78.`, eight digits) can look like a clause and is kept
+  there; the leak check does not search it.
+- A day-first date with a leading zero as a number (`05011990`) is not scanned. Digits in groups
+  are searched as a card only with spaces or `'` (two groups or more) or with `,` or `.` (three
+  groups or more, the whole run if it has up to 18 digits); of a run with spaces only its last
+  three groups are tried, as a card ends the run, so `8 123 456 100` is not found. Numbers of
+  more than 18 digits (a card or a code) are not numbers: a card becomes 0 and is counted as
+  `unparsed:card_number`.
+- A day field is told whole or cut by its length without the space padding. A cut of legacy's
+  own text that ends in a space (`п.п.3.4.6 #не `) looks padded and is masked: over-masking, no
+  leak (107 of 2100 combinations of a clause, a separator and a hint in the review). A comment
+  that ends in a tab, a no-break space or a line break is a full field, and is measured so.
+- A day field cut of a record that the anonymizer keeps (the start of a legacy hint, `пп6.6.4 # спор`)
+  is in neither the kept text nor the searched sources of the check; a short free comment of
+  another record that equals the word fragment at its end (`спор`) is reported as a leak
+  (a false positive).
+- A hint made only of format marks (Unicode `Cf`, e.g. tag characters) normalizes to the empty
+  string, which counts as the start of every legacy hint: such a full field is kept and the
+  check does not search it. Needs a hand-edited file.
 - A day field of `multi_day_results` cut at 14 characters inside a clause and a free hint may
   keep up to the first ten letters of the hint if they are the start of one of legacy's hints
   (`пп1 # Непрохож` from a surname); the leak check searches the cut hint, but a name that begins
