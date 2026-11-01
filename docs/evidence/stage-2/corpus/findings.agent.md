@@ -70,7 +70,13 @@ legacy stack frames printed by the scripts of `commands.txt`.
 3. Logs: a sub-agent studies, from legacy's code only, what the logs hold; the maintainer notes
    that the log holds the raw byte exchange of chip readouts, with the owner's name stored in the
    chip. The manifest counts legacy's log by level and by code location (`file:line`), never a
-   message. Open until the study is read.
+   message. The study is `logs.agent.md`: the log was written by a build of 2025-06 after the
+   v1.7.1 tag (`fd98887` or a neighbour); the SportIdent frames are logged whole in hex
+   (`sportident.py:974,1047`), so card numbers and the owner bytes of the card blocks that legacy
+   reads reach the log; other records may hold names (`live.py:80`), file paths and server texts.
+   Proposed: extract only the SportIdent frames into a dump, map card numbers by the same
+   permutation, overwrite owner bytes, recompute the CRC, drop every other message (C1); the
+   readout backup keeps everything but the card number. Decision open.
 4. Old tokens and hosts of the settings cleared: confirmed.
 5. A local pre-commit hook for the leak check: Backlog TASK-12.
 6. Answer later in this session.

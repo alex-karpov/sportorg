@@ -10,6 +10,7 @@ Every `.json`/`.md` file here except `*.agent.md` is output of a script; the com
 | `manifest.{json,md}` | the corpus manifest: per directory the kinds of files, `files.tsv` against the disk, the passport; per race file format, shape, version, hashes of the original and the copy, per race the settings that choose the calculation and counts, the leak check of the copy; races that are one start; `scores_mode = formula` files (R22); ARDF races |
 | `invariant.{json,md}` | the oracle (first lane, CPython 3.8.20) on every runnable corpus file and its anonymized copy |
 | `findings.agent.md` | the agent's findings and questions for the maintainer |
+| `logs.agent.md` | a sub-agent's study, from code only, of what legacy's two logs hold and how to anonymize them |
 
 ## Scripts
 
