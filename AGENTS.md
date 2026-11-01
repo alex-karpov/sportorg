@@ -68,7 +68,8 @@ equivalent (Docker) for unattended agents and for hosts without WSL.
 9. **Discrepancies** between code, rules and protocols are not fixed silently: classify
    (legacy bug / local practice / rule gap) and raise to the maintainer.
 10. Code, comments, commits (Conventional Commits), ADRs and tasks are in English. Documents addressed
-    to the maintainer (`docs/brief.md`, `docs/reports/`, `docs/data-request.md`) are in Russian.
+    to the maintainer (`docs/brief.md`, `docs/reports/`, `docs/data-request.md`) and assignments the
+    maintainer hands to volunteers (`docs/assignments/`) are in Russian.
 
 ## Agent environments
 - Claude Code: `CLAUDE.md` (plugins, hooks, deny rules). Codex and others: `docs/agents/environments.md`.
