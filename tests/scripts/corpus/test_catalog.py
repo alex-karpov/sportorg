@@ -270,7 +270,12 @@ def test_logs_are_counted_by_kind_without_their_content(tmp_path: Path) -> None:
     assert kinds["readout-log"] == kinds["sportorg-log"] == 1
     logs = {as_str(as_dict(f)["kind"]): as_dict(f) for f in as_list(manifest["other_files"])}
     assert as_dict(logs["readout-log"]["stats"])["readouts"] == 1
-    assert as_dict(logs["sportorg-log"]["stats"]) == {"lines": 1, "levels": {"INFO": 1}}
+    assert as_dict(logs["sportorg-log"]["stats"]) == {
+        "lines": 1,
+        "continuation_lines": 0,
+        "levels": {"INFO": 1},
+        "locations": {"main_window.py:267": 1},
+    }
     text = json.dumps(manifest, ensure_ascii=False)
     assert "8000001" not in text
     assert "Выдумкин" not in text

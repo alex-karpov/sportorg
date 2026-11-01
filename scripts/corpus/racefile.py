@@ -12,12 +12,10 @@ import gzip
 import json
 import re
 import zlib
-from typing import TYPE_CHECKING, Final
+from collections import Counter
+from typing import Final
 
-from scripts._json import as_dict, as_list, parse_json
-
-if TYPE_CHECKING:
-    from scripts._json import Json
+from scripts._json import Json, as_dict, as_list, parse_json
 
 FORMATS: Final = ("gzip", "utf-8", "cp1251")
 KINDS: Final = (
@@ -44,9 +42,12 @@ _MAGIC: Final = (
 )
 _TEXT_CONTROLS: Final = frozenset("\t\n\r\f")
 # legacy's own log [код: pysport@b548c35 sportorg/config.py:114,130]
+# level, asctime, threadName (may hold spaces), filename, lineno
 _SPORTORG_LOG_LINE = re.compile(
-    r"(DEBUG|INFO|WARNING|ERROR|CRITICAL) \d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2},\d{3} \S+@\S+:\d+ "
+    r"(DEBUG|INFO|WARNING|ERROR|CRITICAL) \d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2},\d{3} "
+    r".*?@(\S+):(\d+) "
 )
+_MODULE_FILE = re.compile(r"[A-Za-z0-9_]+\.py")
 _LOG_PROBE_LINES: Final = 20
 
 
@@ -127,6 +128,30 @@ def _is_readout_log(text: str) -> bool:
 def _is_sportorg_log(text: str) -> bool:
     lines = text.splitlines()[:_LOG_PROBE_LINES]
     return any(_SPORTORG_LOG_LINE.match(line) for line in lines)
+
+
+def sportorg_log_stats(text: str) -> dict[str, Json]:
+    """Lines of legacy's log by level and by the code location that wrote them, never a message.
+
+    ``%(filename)s:%(lineno)d`` names legacy's code [код: pysport@b548c35 sportorg/config.py:114];
+    a line that does not start a record (a traceback, a multi-line message) is a continuation.
+    """
+    lines = text.splitlines()
+    levels: Counter[str] = Counter()
+    locations: Counter[str] = Counter()
+    for line in lines:
+        match = _SPORTORG_LOG_LINE.match(line)
+        if match is None:
+            continue
+        levels[match[1]] += 1
+        module = match[2]
+        locations[f"{module}:{match[3]}" if _MODULE_FILE.fullmatch(module) else "(other)"] += 1
+    return {
+        "lines": len(lines),
+        "continuation_lines": len(lines) - sum(levels.values()),
+        "levels": dict[str, Json](sorted(levels.items())),
+        "locations": dict[str, Json](sorted(locations.items())),
+    }
 
 
 def readout_log_stats(text: str) -> dict[str, int]:

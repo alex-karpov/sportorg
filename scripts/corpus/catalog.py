@@ -48,7 +48,6 @@ _NEUTRAL_DIR = re.compile(r"[A-Za-z0-9][A-Za-z0-9_-]{0,15}")
 _SAFE_WORD = re.compile(r"[A-Za-z0-9_.\- ]{1,40}")
 _SAFE_FORMULA = re.compile(r"[A-Za-z0-9_ +\-*/%().,<>=!]{0,200}")
 _VERSION = re.compile(r"v?\d+(\.\d+)*[a-z0-9]*")
-_LOG_LEVEL = re.compile(r"(DEBUG|INFO|WARNING|ERROR|CRITICAL) \d{4}-")
 # [код: pysport@b548c35 sportorg/models/memory.py:67-93]
 RACE_TYPES: Final = {0: "INDIVIDUAL_RACE", 2: "PURSUIT", 3: "RELAY", 6: "MULTI_DAY_RACE"}
 STATUSES: Final = (
@@ -310,9 +309,7 @@ class _Build:
         if kind == "readout-log":
             entry["stats"] = dict[str, Json](racefile.readout_log_stats(racefile.decode(raw)[0]))
         elif kind == "sportorg-log":
-            lines = racefile.decode(raw)[0].splitlines()
-            levels = (m[1] for line in lines if (m := _LOG_LEVEL.match(line)))
-            entry["stats"] = {"lines": len(lines), "levels": _counts(levels)}
+            entry["stats"] = racefile.sportorg_log_stats(racefile.decode(raw)[0])
         self.other_files.append(entry)
 
 

@@ -96,3 +96,14 @@ def test_readout_log_counts_blocks_and_punches_only() -> None:
         "without_start": 1,
         "unparsed_lines": 1,
     }
+
+
+def test_sportorg_log_counts_lines_by_level_and_code_location_only() -> None:
+    """[код: pysport@b548c35 sportorg/config.py:114]: ``%(filename)s:%(lineno)d`` is code."""
+    text = SPORTORG_LOG + "INFO 2025-06-22 10:00:02,000 Thread-2 (run)@../x.py:7 Выдумкин\n"
+    assert racefile.sportorg_log_stats(text) == {
+        "lines": 4,
+        "continuation_lines": 1,
+        "levels": {"ERROR": 1, "INFO": 2},
+        "locations": {"(other)": 1, "main_window.py:267": 1, "sireader.py:120": 1},
+    }
