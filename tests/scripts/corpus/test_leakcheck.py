@@ -162,8 +162,18 @@ def test_scan_cli_prints_places_not_values(
     clean, dirty = tmp_path / "clean.md", tmp_path / "dirty.md"
     clean.write_text("counts only: 10 results\n", encoding="utf-8")
     dirty.write_text("line one\nВыдумщиков was here\n", encoding="utf-8")
-    assert leakcheck.main(["scan", str(clean), "--source", str(source), "--no-corpus"]) == 0
-    assert leakcheck.main(["scan", str(dirty), "--source", str(source), "--no-corpus"]) == 1
+    assert (
+        leakcheck.main(
+            ["scan", str(clean), "--source", str(source), "--no-corpus", "--no-legacy-test-data"]
+        )
+        == 0
+    )
+    assert (
+        leakcheck.main(
+            ["scan", str(dirty), "--source", str(source), "--no-corpus", "--no-legacy-test-data"]
+        )
+        == 1
+    )
     out = capsys.readouterr().out
     assert "dirty.md:2: surname" in out
     assert "Выдумщиков" not in out
@@ -196,7 +206,7 @@ def test_hits_in_synthetic_outputs_are_counted_apart(
     generated = tmp_path / "synthetic" / "results.json"
     generated.parent.mkdir()
     generated.write_text('{"time_ms": 8123456}\n', encoding="utf-8")
-    args = ["scan", str(generated), "--source", str(source), "--no-corpus"]
+    args = ["scan", str(generated), "--source", str(source), "--no-corpus", "--no-legacy-test-data"]
     assert leakcheck.main([*args, "--synthetic", str(tmp_path / "synthetic")]) == 0
     out = capsys.readouterr().out
     assert "results.json:1" not in out
@@ -208,7 +218,12 @@ def test_a_path_that_is_gone_is_skipped(tmp_path: Path) -> None:
     source = tmp_path / "race.json"
     source.write_text(synth.dumps(synth.personal_individual()), encoding="utf-8")
     gone = tmp_path / "deleted.md"
-    assert leakcheck.main(["scan", str(gone), "--source", str(source), "--no-corpus"]) == 0
+    assert (
+        leakcheck.main(
+            ["scan", str(gone), "--source", str(source), "--no-corpus", "--no-legacy-test-data"]
+        )
+        == 0
+    )
 
 
 def test_words_out_lists_matches_in_a_file_outside_the_repository(
@@ -220,7 +235,16 @@ def test_words_out_lists_matches_in_a_file_outside_the_repository(
     doc = tmp_path / "old.md"
     doc.write_text("intro\nа Придумкин здесь\n", encoding="utf-8")
     words = tmp_path / "words.tsv"
-    args = ["scan", str(doc), "--source", str(source), "--no-corpus", "--words-out", str(words)]
+    args = [
+        "scan",
+        str(doc),
+        "--source",
+        str(source),
+        "--no-corpus",
+        "--no-legacy-test-data",
+        "--words-out",
+        str(words),
+    ]
     assert leakcheck.main(args) == 1
     assert words.read_text(encoding="utf-8").splitlines() == [
         "path\tline\tcategory\tword",
@@ -247,7 +271,12 @@ def test_scan_reads_a_file_with_a_bom_or_a_no_break_space(
     source.write_text(synth.dumps(synth.personal_individual()), encoding="utf-8")
     note = tmp_path / "note.md"
     note.write_text(text, encoding="utf-8")
-    assert leakcheck.main(["scan", str(note), "--source", str(source), "--no-corpus"]) == 1
+    assert (
+        leakcheck.main(
+            ["scan", str(note), "--source", str(source), "--no-corpus", "--no-legacy-test-data"]
+        )
+        == 1
+    )
     assert "note.md:1: surname" in capsys.readouterr().out
 
 
@@ -260,7 +289,12 @@ def test_scan_says_how_many_files_it_could_not_read_as_text(
     scanned.mkdir()
     (scanned / "blob.bin").write_bytes(b"\x00\x01\x02\xff\xfe")
     (scanned / "log.txt").write_text("start\ncard\n\n\nsplit_start\nsplit_end\nend\n")
-    assert leakcheck.main(["scan", str(scanned), "--source", str(source), "--no-corpus"]) == 0
+    assert (
+        leakcheck.main(
+            ["scan", str(scanned), "--source", str(source), "--no-corpus", "--no-legacy-test-data"]
+        )
+        == 0
+    )
     out = capsys.readouterr().out
     assert "scanned 1 files" in out  # the readout log
     assert "not text: 1" in out
