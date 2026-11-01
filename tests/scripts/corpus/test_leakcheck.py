@@ -627,3 +627,21 @@ def test_a_huge_number_in_a_card_or_code_does_not_crash_extraction_or_scan(
     _persons(original)[0][key] = digits
     leakcheck.check_pair(original, original)
     assert leakcheck.scan_text("born 19900517", leakcheck.scan_set([original])) == []
+
+
+# ---------------------------------------------------------------- phone numbers are no cards
+
+
+def test_digits_of_a_phone_number_in_groups_are_not_a_card() -> None:
+    """A phone starts with ``+``; its groups of three digits ("+7 000 000-00-08") read as a card."""
+    original = copy.deepcopy(synth.personal_individual())
+    for person, card in zip(_persons(original), (7_654_321, 345_678), strict=False):
+        person["card_number"] = card
+    scan = leakcheck.scan_set([original])
+    parts = ("7", "654", "321")  # joined, so the text holds no number to scan for
+    seven = " ".join(parts)
+    assert leakcheck.scan_text(f"phone +{seven}-00-08", scan) == []
+    assert leakcheck.scan_text("phone +7 912 345 678", scan) == []
+    assert leakcheck.scan_text("phone +7 (912) 345 678", scan) == []
+    assert leakcheck.scan_text(f"card {seven}", scan) == [(1, "card")]
+    assert leakcheck.scan_text("card " + "345 678", scan) == [(1, "card")]

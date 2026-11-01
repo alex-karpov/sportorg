@@ -209,3 +209,14 @@ Maintainer's decisions `[мейнтейнер: 2026-11-01]`: fix 1, 2, 3; docume
 | 5 | docs: «kept comments stay», "a padded one holds the comment whole" | module docstring and README say how a field is told whole or cut; legacy's cut that ends in a space is masked (over-masking, 107 of 2100 combinations) |
 | 6 | README: «a longer one is masked» | `status_comment` is masked, the cut in a day field can be kept |
 | 4, 5, 7 | cross-record false positive on a kept cut; over-masking of a cut ending in a space; format marks in a hint | not changed; README «Limits» |
+
+### Corpus run after the third review (2026-11-01, the maintainer's run of `commands.txt`)
+
+`corpus --invariant`: manifest 63 race files, leaks 0; invariant 62 of 62 identical. `leakcheck
+scan`: 10 findings of category `card`, all on the invented phone numbers of `synth.py` and of the
+tests (new with the digits-in-groups search, which read the groups of digits after the country
+code as a card number). Cause from the code, not from the corpus: the same prefix in every line.
+Fixed by TDD (RED run first): a number starting with `+` is not searched as a card, whatever its
+groups; the invented phones stay as they are. The rerun of `scan` then found this section and the
+message of the fix commit, which had written the digits down: both rewritten without them (rule:
+no text says which invented value matched).

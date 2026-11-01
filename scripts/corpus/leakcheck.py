@@ -497,6 +497,8 @@ _CARD_VALUE = re.compile(
 # numbers in a line reference, ``123.456`` a decimal [допущение]
 _GROUPED_DIGITS = re.compile(r"(?<!\w)[0-9]{1,3}(?:[ '\u00a0\u2009\u202f][0-9]{3})+(?!\w)")
 _DOTTED_DIGITS = re.compile(r"(?<!\w)[0-9]{1,3}(?:[.,][0-9]{3}){2,}(?!\w)")
+# a phone number: ``+7 000 000-00-08``, ``+7 (912) 345 678``; its digits are no card
+_PHONE = re.compile(r"\+[0-9][0-9 ()\-.\u00a0\u2009\u202f]{5,}")
 MAX_CARD_GROUPS: Final = 3  # a card has at most nine digits: a lead group and two of three
 _LEGACY_TEXT: Final = "\n".join(
     [normalize(t) for t in anonymize.LEGACY_STATUS_TITLES] + sorted(anonymize.LEGACY_HINTS)
@@ -571,8 +573,11 @@ def scan_words(text: str, scan: ScanSet) -> list[tuple[int, str, str]]:
         ):
             found = sorted(v for v in values if set(tokens(v)) <= words and _bounded(normalized, v))
             hits.extend((number, category, v) for v in found)
-        grouped = {n for m in _GROUPED_DIGITS.finditer(line) for n in _group_numbers(m[0])}
-        for m in _DOTTED_DIGITS.finditer(line):  # the whole run, if it is short enough for a card
+        digits_line = _PHONE.sub(" ", line)  # a phone is searched as a contact, not as a card
+        grouped = {n for m in _GROUPED_DIGITS.finditer(digits_line) for n in _group_numbers(m[0])}
+        for m in _DOTTED_DIGITS.finditer(
+            digits_line
+        ):  # the whole run, if it is short enough for a card
             digits = re.sub(r"[^0-9]", "", m[0])
             if len(digits) <= MAX_DIGITS:
                 grouped.add(str(int(digits)))

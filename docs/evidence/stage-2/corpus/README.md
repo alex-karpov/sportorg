@@ -94,7 +94,8 @@ Every `.json`/`.md` file here except `*.agent.md` is output of a script; the com
 - A day-first date with a leading zero as a number (`05011990`) is not scanned. Digits in groups
   are searched as a card only with spaces or `'` (two groups or more) or with `,` or `.` (three
   groups or more, the whole run if it has up to 18 digits); of a run with spaces only its last
-  three groups are tried, as a card ends the run, so `8 123 456 100` is not found. Numbers of
+  three groups are tried, as a card ends the run, so `8 123 456 100` is not found. A number that starts with `+` (a phone, `+7 000 000-00-08`) is
+  searched as a contact, never as a card. Numbers of
   more than 18 digits (a card or a code) are not numbers: a card becomes 0 and is counted as
   `unparsed:card_number`.
 - A day field is told whole or cut by its length without the space padding. A cut of legacy's
